@@ -14,22 +14,25 @@ reads the guest ID so that can be supplied as well.
 
 [docs-virtual-machine-resource]: /docs/providers/vsphere/r/virtual_machine.html
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = pulumi.output(vsphere.getDatacenter({
+const datacenter = vsphere.getDatacenter({
     name: "dc1",
-}, { async: true }));
-const template = datacenter.apply(datacenter => vsphere.getVirtualMachine({
+});
+const template = vsphere.getVirtualMachine({
     datacenterId: datacenter.id,
     name: "test-vm-template",
-}, { async: true }));
+});
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/d/virtual_machine.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -51,13 +54,13 @@ const template = datacenter.apply(datacenter => vsphere.getVirtualMachine({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualMachine<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#GetVirtualMachineArgs">GetVirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#LookupVirtualMachineResult">LookupVirtualMachineResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVirtualMachine<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#GetVirtualMachineArgs">GetVirtualMachineArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#LookupVirtualMachineResult">LookupVirtualMachineResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVirtualMachine </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.GetVirtualMachineResult.html">GetVirtualMachineResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.GetVirtualMachineArgs.html">GetVirtualMachineArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.GetVirtualMachineResult.html">GetVirtualMachineResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.GetVirtualMachineArgs.html">GetVirtualMachineArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -70,11 +73,21 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine. This can be a name or
+path.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Datacenter<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the datacenter the virtual machine is located in.
@@ -83,21 +96,11 @@ For default datacenters, use the `id` attribute from an empty
 `vsphere..Datacenter` data source.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the virtual machine. This can be a name or
-path.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Scsi<wbr>Controller<wbr>Scan<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of SCSI controllers to
 scan for disk attributes and controller types on. Default: `1`.
@@ -110,11 +113,21 @@ scan for disk attributes and controller types on. Default: `1`.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine. This can be a name or
+path.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Datacenter<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the datacenter the virtual machine is located in.
@@ -123,21 +136,11 @@ For default datacenters, use the `id` attribute from an empty
 `vsphere..Datacenter` data source.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the virtual machine. This can be a name or
-path.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Scsi<wbr>Controller<wbr>Scan<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of SCSI controllers to
 scan for disk attributes and controller types on. Default: `1`.
@@ -150,11 +153,21 @@ scan for disk attributes and controller types on. Default: `1`.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine. This can be a name or
+path.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>datacenter<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the datacenter the virtual machine is located in.
@@ -163,21 +176,11 @@ For default datacenters, use the `id` attribute from an empty
 `vsphere..Datacenter` data source.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the virtual machine. This can be a name or
-path.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>scsi<wbr>Controller<wbr>Scan<wbr>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of SCSI controllers to
 scan for disk attributes and controller types on. Default: `1`.
@@ -190,11 +193,21 @@ scan for disk attributes and controller types on. Default: `1`.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the virtual machine. This can be a name or
+path.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>datacenter_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the datacenter the virtual machine is located in.
@@ -203,21 +216,11 @@ For default datacenters, use the `id` attribute from an empty
 `vsphere..Datacenter` data source.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the virtual machine. This can be a name or
-path.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>scsi_<wbr>controller_<wbr>scan_<wbr>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of SCSI controllers to
 scan for disk attributes and controller types on. Default: `1`.
@@ -247,7 +250,7 @@ The following output properties are available:
             title="">
         <span>Alternate<wbr>Guest<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The alternate guest name of the virtual machine when
 guest_id is a non-specific operating system, like `otherGuest`.
@@ -255,17 +258,9 @@ guest_id is a non-specific operating system, like `otherGuest`.
 
     <dt class="property-"
             title="">
-        <span>Datacenter<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Disks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvirtualmachinedisk">List&lt;Get<wbr>Virtual<wbr>Machine<wbr>Disk&gt;</a></span>
+        <span class="property-type"><a href="#getvirtualmachinedisk">List&lt;Pulumi.<wbr>VSphere.<wbr>Outputs.<wbr>Get<wbr>Virtual<wbr>Machine<wbr>Disk&gt;</a></span>
     </dt>
     <dd>{{% md %}}Information about each of the disks on this virtual machine or
 template. These are sorted by bus and unit number so that they can be applied
@@ -281,7 +276,7 @@ are scanned for disks. The sub-attributes are:
             title="">
         <span>Firmware</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The firmware type for this virtual machine. Can be `bios` or `efi`.
 {{% /md %}}</dd>
@@ -290,7 +285,7 @@ are scanned for disks. The sub-attributes are:
             title="">
         <span>Guest<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The guest ID of the virtual machine or template.
 {{% /md %}}</dd>
@@ -299,7 +294,7 @@ are scanned for disks. The sub-attributes are:
             title="">
         <span>Guest<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of IP addresses as reported by VMWare tools.
 {{% /md %}}</dd>
@@ -308,7 +303,7 @@ are scanned for disks. The sub-attributes are:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -317,7 +312,7 @@ are scanned for disks. The sub-attributes are:
             title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -325,7 +320,7 @@ are scanned for disks. The sub-attributes are:
             title="">
         <span>Network<wbr>Interface<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The network interface types for each network
 interface found on the virtual machine, in device bus order. Will be one of
@@ -336,7 +331,7 @@ interface found on the virtual machine, in device bus order. Will be one of
             title="">
         <span>Scsi<wbr>Bus<wbr>Sharing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Mode for sharing the SCSI bus. The modes are
 physicalSharing, virtualSharing, and noSharing. Only the first number of
@@ -345,17 +340,9 @@ controllers defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
-        <span>Scsi<wbr>Controller<wbr>Scan<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Scsi<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The common type of all SCSI controllers on this virtual machine.
 Will be one of `lsilogic` (LSI Logic Parallel), `lsilogic-sas` (LSI Logic
@@ -363,6 +350,22 @@ SAS), `pvscsi` (VMware Paravirtual), `buslogic` (BusLogic), or `mixed` when
 there are multiple controller types. Only the first number of controllers
 defined by `scsi_controller_scan_count` are scanned.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Datacenter<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Scsi<wbr>Controller<wbr>Scan<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -375,19 +378,11 @@ defined by `scsi_controller_scan_count` are scanned.
             title="">
         <span>Alternate<wbr>Guest<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The alternate guest name of the virtual machine when
 guest_id is a non-specific operating system, like `otherGuest`.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Datacenter<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -409,7 +404,7 @@ are scanned for disks. The sub-attributes are:
             title="">
         <span>Firmware</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The firmware type for this virtual machine. Can be `bios` or `efi`.
 {{% /md %}}</dd>
@@ -418,7 +413,7 @@ are scanned for disks. The sub-attributes are:
             title="">
         <span>Guest<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The guest ID of the virtual machine or template.
 {{% /md %}}</dd>
@@ -427,7 +422,7 @@ are scanned for disks. The sub-attributes are:
             title="">
         <span>Guest<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of IP addresses as reported by VMWare tools.
 {{% /md %}}</dd>
@@ -436,7 +431,7 @@ are scanned for disks. The sub-attributes are:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -445,7 +440,7 @@ are scanned for disks. The sub-attributes are:
             title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -453,7 +448,7 @@ are scanned for disks. The sub-attributes are:
             title="">
         <span>Network<wbr>Interface<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The network interface types for each network
 interface found on the virtual machine, in device bus order. Will be one of
@@ -464,7 +459,7 @@ interface found on the virtual machine, in device bus order. Will be one of
             title="">
         <span>Scsi<wbr>Bus<wbr>Sharing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Mode for sharing the SCSI bus. The modes are
 physicalSharing, virtualSharing, and noSharing. Only the first number of
@@ -473,17 +468,9 @@ controllers defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
-        <span>Scsi<wbr>Controller<wbr>Scan<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Scsi<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The common type of all SCSI controllers on this virtual machine.
 Will be one of `lsilogic` (LSI Logic Parallel), `lsilogic-sas` (LSI Logic
@@ -491,6 +478,22 @@ SAS), `pvscsi` (VMware Paravirtual), `buslogic` (BusLogic), or `mixed` when
 there are multiple controller types. Only the first number of controllers
 defined by `scsi_controller_scan_count` are scanned.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Datacenter<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Scsi<wbr>Controller<wbr>Scan<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -503,19 +506,11 @@ defined by `scsi_controller_scan_count` are scanned.
             title="">
         <span>alternate<wbr>Guest<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The alternate guest name of the virtual machine when
 guest_id is a non-specific operating system, like `otherGuest`.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>datacenter<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -537,7 +532,7 @@ are scanned for disks. The sub-attributes are:
             title="">
         <span>firmware</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The firmware type for this virtual machine. Can be `bios` or `efi`.
 {{% /md %}}</dd>
@@ -546,7 +541,7 @@ are scanned for disks. The sub-attributes are:
             title="">
         <span>guest<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The guest ID of the virtual machine or template.
 {{% /md %}}</dd>
@@ -555,7 +550,7 @@ are scanned for disks. The sub-attributes are:
             title="">
         <span>guest<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP addresses as reported by VMWare tools.
 {{% /md %}}</dd>
@@ -564,7 +559,7 @@ are scanned for disks. The sub-attributes are:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -573,7 +568,7 @@ are scanned for disks. The sub-attributes are:
             title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -581,7 +576,7 @@ are scanned for disks. The sub-attributes are:
             title="">
         <span>network<wbr>Interface<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The network interface types for each network
 interface found on the virtual machine, in device bus order. Will be one of
@@ -592,7 +587,7 @@ interface found on the virtual machine, in device bus order. Will be one of
             title="">
         <span>scsi<wbr>Bus<wbr>Sharing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Mode for sharing the SCSI bus. The modes are
 physicalSharing, virtualSharing, and noSharing. Only the first number of
@@ -601,17 +596,9 @@ controllers defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
-        <span>scsi<wbr>Controller<wbr>Scan<wbr>Count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>scsi<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The common type of all SCSI controllers on this virtual machine.
 Will be one of `lsilogic` (LSI Logic Parallel), `lsilogic-sas` (LSI Logic
@@ -619,6 +606,22 @@ SAS), `pvscsi` (VMware Paravirtual), `buslogic` (BusLogic), or `mixed` when
 there are multiple controller types. Only the first number of controllers
 defined by `scsi_controller_scan_count` are scanned.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>datacenter<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>scsi<wbr>Controller<wbr>Scan<wbr>Count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -631,19 +634,11 @@ defined by `scsi_controller_scan_count` are scanned.
             title="">
         <span>alternate_<wbr>guest_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The alternate guest name of the virtual machine when
 guest_id is a non-specific operating system, like `otherGuest`.
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>datacenter_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -665,7 +660,7 @@ are scanned for disks. The sub-attributes are:
             title="">
         <span>firmware</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The firmware type for this virtual machine. Can be `bios` or `efi`.
 {{% /md %}}</dd>
@@ -674,7 +669,7 @@ are scanned for disks. The sub-attributes are:
             title="">
         <span>guest_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The guest ID of the virtual machine or template.
 {{% /md %}}</dd>
@@ -683,7 +678,7 @@ are scanned for disks. The sub-attributes are:
             title="">
         <span>guest_<wbr>ip_<wbr>addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of IP addresses as reported by VMWare tools.
 {{% /md %}}</dd>
@@ -692,7 +687,7 @@ are scanned for disks. The sub-attributes are:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -701,7 +696,7 @@ are scanned for disks. The sub-attributes are:
             title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -709,7 +704,7 @@ are scanned for disks. The sub-attributes are:
             title="">
         <span>network_<wbr>interface_<wbr>types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The network interface types for each network
 interface found on the virtual machine, in device bus order. Will be one of
@@ -720,7 +715,7 @@ interface found on the virtual machine, in device bus order. Will be one of
             title="">
         <span>scsi_<wbr>bus_<wbr>sharing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Mode for sharing the SCSI bus. The modes are
 physicalSharing, virtualSharing, and noSharing. Only the first number of
@@ -729,17 +724,9 @@ controllers defined by `scsi_controller_scan_count` are scanned.
 
     <dt class="property-"
             title="">
-        <span>scsi_<wbr>controller_<wbr>scan_<wbr>count</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>scsi_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The common type of all SCSI controllers on this virtual machine.
 Will be one of `lsilogic` (LSI Logic Parallel), `lsilogic-sas` (LSI Logic
@@ -747,6 +734,22 @@ SAS), `pvscsi` (VMware Paravirtual), `buslogic` (BusLogic), or `mixed` when
 there are multiple controller types. Only the first number of controllers
 defined by `scsi_controller_scan_count` are scanned.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>datacenter_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>scsi_<wbr>controller_<wbr>scan_<wbr>count</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -766,7 +769,7 @@ defined by `scsi_controller_scan_count` are scanned.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#GetVirtualMachineDisk">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#GetVirtualMachineDisk">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -779,7 +782,7 @@ defined by `scsi_controller_scan_count` are scanned.
             title="Required">
         <span>Eagerly<wbr>Scrub</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` if the disk has been eager zeroed.
 {{% /md %}}</dd>
@@ -788,7 +791,7 @@ defined by `scsi_controller_scan_count` are scanned.
             title="Required">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the disk, in GIB.
 {{% /md %}}</dd>
@@ -797,7 +800,7 @@ defined by `scsi_controller_scan_count` are scanned.
             title="Required">
         <span>Thin<wbr>Provisioned</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` if the disk has been thin provisioned.
 {{% /md %}}</dd>
@@ -813,7 +816,7 @@ defined by `scsi_controller_scan_count` are scanned.
             title="Required">
         <span>Eagerly<wbr>Scrub</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` if the disk has been eager zeroed.
 {{% /md %}}</dd>
@@ -822,7 +825,7 @@ defined by `scsi_controller_scan_count` are scanned.
             title="Required">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the disk, in GIB.
 {{% /md %}}</dd>
@@ -831,7 +834,7 @@ defined by `scsi_controller_scan_count` are scanned.
             title="Required">
         <span>Thin<wbr>Provisioned</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` if the disk has been thin provisioned.
 {{% /md %}}</dd>
@@ -847,7 +850,7 @@ defined by `scsi_controller_scan_count` are scanned.
             title="Required">
         <span>eagerly<wbr>Scrub</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` if the disk has been eager zeroed.
 {{% /md %}}</dd>
@@ -856,7 +859,7 @@ defined by `scsi_controller_scan_count` are scanned.
             title="Required">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The size of the disk, in GIB.
 {{% /md %}}</dd>
@@ -865,7 +868,7 @@ defined by `scsi_controller_scan_count` are scanned.
             title="Required">
         <span>thin<wbr>Provisioned</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` if the disk has been thin provisioned.
 {{% /md %}}</dd>
@@ -881,7 +884,7 @@ defined by `scsi_controller_scan_count` are scanned.
             title="Required">
         <span>eagerly<wbr>Scrub</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` if the disk has been eager zeroed.
 {{% /md %}}</dd>
@@ -890,7 +893,7 @@ defined by `scsi_controller_scan_count` are scanned.
             title="Required">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The size of the disk, in GIB.
 {{% /md %}}</dd>
@@ -899,7 +902,7 @@ defined by `scsi_controller_scan_count` are scanned.
             title="Required">
         <span>thin<wbr>Provisioned</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Set to `true` if the disk has been thin provisioned.
 {{% /md %}}</dd>

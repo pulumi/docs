@@ -33,8 +33,6 @@ To get more information about RegionDisk, see:
 state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_region_disk.html.markdown.
-
 
 
 ## Create a RegionDisk Resource
@@ -42,7 +40,7 @@ state as plain-text.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionDisk">RegionDisk</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionDiskArgs">RegionDiskArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionDisk">RegionDisk</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#RegionDiskArgs">RegionDiskArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -50,7 +48,7 @@ state as plain-text.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRegionDisk<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionDiskArgs">RegionDiskArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionDisk">RegionDisk</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRegionDisk<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionDiskArgs">RegionDiskArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionDisk">RegionDisk</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -146,11 +144,20 @@ state as plain-text.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Replica<wbr>Zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}URLs of the zones where the disk should be replicated to.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
 {{% /md %}}</dd>
@@ -159,7 +166,7 @@ state as plain-text.
             title="Optional">
         <span>Disk<wbr>Encryption<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regiondiskdiskencryptionkey">Region<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regiondiskdiskencryptionkey">Region<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypts the disk using a customer-supplied encryption key. After you encrypt a disk with a customer-supplied key, you
 must provide the same key if you use the disk later (e.g. to create a disk snapshot or an image, or to attach the disk
@@ -172,7 +179,7 @@ and you do not need to provide a key to use the disk later.
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk. A list of key->value pairs.
 {{% /md %}}</dd>
@@ -181,7 +188,7 @@ and you do not need to provide a key to use the disk later.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -193,7 +200,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>Physical<wbr>Block<wbr>Size<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Physical block size of the persistent disk, in bytes. If not present in a request, a default value is used. Currently
 supported sizes are 4096 and 16384, other sizes may be added in the future. If an unsupported value is requested, the
@@ -204,7 +211,7 @@ error message will list the supported values for the caller's project.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -214,25 +221,16 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A reference to the region where the disk resides.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Replica<wbr>Zones</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}URLs of the zones where the disk should be replicated to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the persistent disk, specified in GB. You can specify this field when creating a persistent disk using the
 sourceImage or sourceSnapshot parameter, or specify it alone to create an empty persistent disk. If you specify this
@@ -244,7 +242,7 @@ the size of the snapshot.
             title="Optional">
         <span>Snapshot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The source snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For
 example, the following are valid values: *
@@ -256,7 +254,7 @@ example, the following are valid values: *
             title="Optional">
         <span>Source<wbr>Snapshot<wbr>Encryption<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regiondisksourcesnapshotencryptionkey">Region<wbr>Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regiondisksourcesnapshotencryptionkey">Region<wbr>Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
 customer-supplied encryption key.
@@ -266,7 +264,7 @@ customer-supplied encryption key.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}URL of the disk type resource describing which disk type to use to create the disk. Provide this when creating the disk.
 {{% /md %}}</dd>
@@ -278,11 +276,20 @@ customer-supplied encryption key.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Replica<wbr>Zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}URLs of the zones where the disk should be replicated to.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
 {{% /md %}}</dd>
@@ -291,7 +298,7 @@ customer-supplied encryption key.
             title="Optional">
         <span>Disk<wbr>Encryption<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regiondiskdiskencryptionkey">*Region<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
+        <span class="property-type"><a href="#regiondiskdiskencryptionkey">Region<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}Encrypts the disk using a customer-supplied encryption key. After you encrypt a disk with a customer-supplied key, you
 must provide the same key if you use the disk later (e.g. to create a disk snapshot or an image, or to attach the disk
@@ -313,7 +320,7 @@ and you do not need to provide a key to use the disk later.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -325,7 +332,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>Physical<wbr>Block<wbr>Size<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Physical block size of the persistent disk, in bytes. If not present in a request, a default value is used. Currently
 supported sizes are 4096 and 16384, other sizes may be added in the future. If an unsupported value is requested, the
@@ -336,7 +343,7 @@ error message will list the supported values for the caller's project.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -346,25 +353,16 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A reference to the region where the disk resides.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Replica<wbr>Zones</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}URLs of the zones where the disk should be replicated to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the persistent disk, specified in GB. You can specify this field when creating a persistent disk using the
 sourceImage or sourceSnapshot parameter, or specify it alone to create an empty persistent disk. If you specify this
@@ -376,7 +374,7 @@ the size of the snapshot.
             title="Optional">
         <span>Snapshot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The source snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For
 example, the following are valid values: *
@@ -388,7 +386,7 @@ example, the following are valid values: *
             title="Optional">
         <span>Source<wbr>Snapshot<wbr>Encryption<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regiondisksourcesnapshotencryptionkey">*Region<wbr>Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key</a></span>
+        <span class="property-type"><a href="#regiondisksourcesnapshotencryptionkey">Region<wbr>Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
 customer-supplied encryption key.
@@ -398,7 +396,7 @@ customer-supplied encryption key.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}URL of the disk type resource describing which disk type to use to create the disk. Provide this when creating the disk.
 {{% /md %}}</dd>
@@ -410,11 +408,20 @@ customer-supplied encryption key.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>replica<wbr>Zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}URLs of the zones where the disk should be replicated to.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
 {{% /md %}}</dd>
@@ -423,7 +430,7 @@ customer-supplied encryption key.
             title="Optional">
         <span>disk<wbr>Encryption<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regiondiskdiskencryptionkey">Region<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key?</a></span>
+        <span class="property-type"><a href="#regiondiskdiskencryptionkey">Region<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}Encrypts the disk using a customer-supplied encryption key. After you encrypt a disk with a customer-supplied key, you
 must provide the same key if you use the disk later (e.g. to create a disk snapshot or an image, or to attach the disk
@@ -436,7 +443,7 @@ and you do not need to provide a key to use the disk later.
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk. A list of key->value pairs.
 {{% /md %}}</dd>
@@ -445,7 +452,7 @@ and you do not need to provide a key to use the disk later.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -457,7 +464,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>physical<wbr>Block<wbr>Size<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Physical block size of the persistent disk, in bytes. If not present in a request, a default value is used. Currently
 supported sizes are 4096 and 16384, other sizes may be added in the future. If an unsupported value is requested, the
@@ -468,7 +475,7 @@ error message will list the supported values for the caller's project.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -478,25 +485,16 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A reference to the region where the disk resides.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>replica<wbr>Zones</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}URLs of the zones where the disk should be replicated to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Size of the persistent disk, specified in GB. You can specify this field when creating a persistent disk using the
 sourceImage or sourceSnapshot parameter, or specify it alone to create an empty persistent disk. If you specify this
@@ -508,7 +506,7 @@ the size of the snapshot.
             title="Optional">
         <span>snapshot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The source snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For
 example, the following are valid values: *
@@ -520,7 +518,7 @@ example, the following are valid values: *
             title="Optional">
         <span>source<wbr>Snapshot<wbr>Encryption<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regiondisksourcesnapshotencryptionkey">Region<wbr>Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key?</a></span>
+        <span class="property-type"><a href="#regiondisksourcesnapshotencryptionkey">Region<wbr>Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
 customer-supplied encryption key.
@@ -530,7 +528,7 @@ customer-supplied encryption key.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}URL of the disk type resource describing which disk type to use to create the disk. Provide this when creating the disk.
 {{% /md %}}</dd>
@@ -542,11 +540,20 @@ customer-supplied encryption key.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>replica_<wbr>zones</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}URLs of the zones where the disk should be replicated to.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
 {{% /md %}}</dd>
@@ -577,7 +584,7 @@ and you do not need to provide a key to use the disk later.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -589,7 +596,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>physical_<wbr>block_<wbr>size_<wbr>bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Physical block size of the persistent disk, in bytes. If not present in a request, a default value is used. Currently
 supported sizes are 4096 and 16384, other sizes may be added in the future. If an unsupported value is requested, the
@@ -600,7 +607,7 @@ error message will list the supported values for the caller's project.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -610,25 +617,16 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A reference to the region where the disk resides.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>replica_<wbr>zones</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}URLs of the zones where the disk should be replicated to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Size of the persistent disk, specified in GB. You can specify this field when creating a persistent disk using the
 sourceImage or sourceSnapshot parameter, or specify it alone to create an empty persistent disk. If you specify this
@@ -640,7 +638,7 @@ the size of the snapshot.
             title="Optional">
         <span>snapshot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The source snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For
 example, the following are valid values: *
@@ -662,7 +660,7 @@ customer-supplied encryption key.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}URL of the disk type resource describing which disk type to use to create the disk. Provide this when creating the disk.
 {{% /md %}}</dd>
@@ -690,56 +688,25 @@ The following output properties are available:
             title="">
         <span>Creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disk<wbr>Encryption<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regiondiskdiskencryptionkey">Region<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key?</a></span>
-    </dt>
-    <dd>{{% md %}}Encrypts the disk using a customer-supplied encryption key. After you encrypt a disk with a customer-supplied key, you
-must provide the same key if you use the disk later (e.g. to create a disk snapshot or an image, or to attach the disk
-to a virtual machine). Customer-supplied encryption keys do not protect access to metadata of the disk. If you do not
-provide an encryption key when creating the disk, then the disk will be encrypted using an automatically generated key
-and you do not need to provide a key to use the disk later.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Label<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}Labels to apply to this disk. A list of key->value pairs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Last<wbr>Attach<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Last attach timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -748,110 +715,25 @@ and you do not need to provide a key to use the disk later.
             title="">
         <span>Last<wbr>Detach<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Last detach timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Physical<wbr>Block<wbr>Size<wbr>Bytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Physical block size of the persistent disk, in bytes. If not present in a request, a default value is used. Currently
-supported sizes are 4096 and 16384, other sizes may be added in the future. If an unsupported value is requested, the
-error message will list the supported values for the caller's project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A reference to the region where the disk resides.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Replica<wbr>Zones</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}URLs of the zones where the disk should be replicated to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Size of the persistent disk, specified in GB. You can specify this field when creating a persistent disk using the
-sourceImage or sourceSnapshot parameter, or specify it alone to create an empty persistent disk. If you specify this
-field along with sourceImage or sourceSnapshot, the value of sizeGb must not be less than the size of the sourceImage or
-the size of the snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Snapshot</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The source snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For
-example, the following are valid values: *
-'https://www.googleapis.com/compute/v1/projects/project/global/snapshots/snapshot' *
-'projects/project/global/snapshots/snapshot' * 'global/snapshots/snapshot' * 'snapshot'
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Source<wbr>Snapshot<wbr>Encryption<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regiondisksourcesnapshotencryptionkey">Region<wbr>Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key?</a></span>
-    </dt>
-    <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
-customer-supplied encryption key.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Source<wbr>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
 this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
@@ -860,18 +742,9 @@ recreated under the same name, the source snapshot ID would identify the exact v
 
     <dt class="property-"
             title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URL of the disk type resource describing which disk type to use to create the disk. Provide this when creating the disk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
 {{% /md %}}</dd>
@@ -887,56 +760,25 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="">
         <span>Creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disk<wbr>Encryption<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regiondiskdiskencryptionkey">*Region<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
-    </dt>
-    <dd>{{% md %}}Encrypts the disk using a customer-supplied encryption key. After you encrypt a disk with a customer-supplied key, you
-must provide the same key if you use the disk later (e.g. to create a disk snapshot or an image, or to attach the disk
-to a virtual machine). Customer-supplied encryption keys do not protect access to metadata of the disk. If you do not
-provide an encryption key when creating the disk, then the disk will be encrypted using an automatically generated key
-and you do not need to provide a key to use the disk later.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Label<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Labels to apply to this disk. A list of key->value pairs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Last<wbr>Attach<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Last attach timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -945,110 +787,25 @@ and you do not need to provide a key to use the disk later.
             title="">
         <span>Last<wbr>Detach<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Last detach timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Physical<wbr>Block<wbr>Size<wbr>Bytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Physical block size of the persistent disk, in bytes. If not present in a request, a default value is used. Currently
-supported sizes are 4096 and 16384, other sizes may be added in the future. If an unsupported value is requested, the
-error message will list the supported values for the caller's project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A reference to the region where the disk resides.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Replica<wbr>Zones</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}URLs of the zones where the disk should be replicated to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Size of the persistent disk, specified in GB. You can specify this field when creating a persistent disk using the
-sourceImage or sourceSnapshot parameter, or specify it alone to create an empty persistent disk. If you specify this
-field along with sourceImage or sourceSnapshot, the value of sizeGb must not be less than the size of the sourceImage or
-the size of the snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Snapshot</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The source snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For
-example, the following are valid values: *
-'https://www.googleapis.com/compute/v1/projects/project/global/snapshots/snapshot' *
-'projects/project/global/snapshots/snapshot' * 'global/snapshots/snapshot' * 'snapshot'
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Source<wbr>Snapshot<wbr>Encryption<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regiondisksourcesnapshotencryptionkey">*Region<wbr>Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key</a></span>
-    </dt>
-    <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
-customer-supplied encryption key.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Source<wbr>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
 this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
@@ -1057,18 +814,9 @@ recreated under the same name, the source snapshot ID would identify the exact v
 
     <dt class="property-"
             title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}URL of the disk type resource describing which disk type to use to create the disk. Provide this when creating the disk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
 {{% /md %}}</dd>
@@ -1084,56 +832,25 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="">
         <span>creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disk<wbr>Encryption<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regiondiskdiskencryptionkey">Region<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key?</a></span>
-    </dt>
-    <dd>{{% md %}}Encrypts the disk using a customer-supplied encryption key. After you encrypt a disk with a customer-supplied key, you
-must provide the same key if you use the disk later (e.g. to create a disk snapshot or an image, or to attach the disk
-to a virtual machine). Customer-supplied encryption keys do not protect access to metadata of the disk. If you do not
-provide an encryption key when creating the disk, then the disk will be encrypted using an automatically generated key
-and you do not need to provide a key to use the disk later.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>label<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}Labels to apply to this disk. A list of key->value pairs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>last<wbr>Attach<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Last attach timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1142,110 +859,25 @@ and you do not need to provide a key to use the disk later.
             title="">
         <span>last<wbr>Detach<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Last detach timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>physical<wbr>Block<wbr>Size<wbr>Bytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Physical block size of the persistent disk, in bytes. If not present in a request, a default value is used. Currently
-supported sizes are 4096 and 16384, other sizes may be added in the future. If an unsupported value is requested, the
-error message will list the supported values for the caller's project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A reference to the region where the disk resides.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>replica<wbr>Zones</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}URLs of the zones where the disk should be replicated to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Size of the persistent disk, specified in GB. You can specify this field when creating a persistent disk using the
-sourceImage or sourceSnapshot parameter, or specify it alone to create an empty persistent disk. If you specify this
-field along with sourceImage or sourceSnapshot, the value of sizeGb must not be less than the size of the sourceImage or
-the size of the snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>snapshot</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The source snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For
-example, the following are valid values: *
-'https://www.googleapis.com/compute/v1/projects/project/global/snapshots/snapshot' *
-'projects/project/global/snapshots/snapshot' * 'global/snapshots/snapshot' * 'snapshot'
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>source<wbr>Snapshot<wbr>Encryption<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regiondisksourcesnapshotencryptionkey">Region<wbr>Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key?</a></span>
-    </dt>
-    <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
-customer-supplied encryption key.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>source<wbr>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
 this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
@@ -1254,18 +886,9 @@ recreated under the same name, the source snapshot ID would identify the exact v
 
     <dt class="property-"
             title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URL of the disk type resource describing which disk type to use to create the disk. Provide this when creating the disk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
 {{% /md %}}</dd>
@@ -1281,56 +904,25 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="">
         <span>creation_<wbr>timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disk_<wbr>encryption_<wbr>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regiondiskdiskencryptionkey">Dict[Region<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key]</a></span>
-    </dt>
-    <dd>{{% md %}}Encrypts the disk using a customer-supplied encryption key. After you encrypt a disk with a customer-supplied key, you
-must provide the same key if you use the disk later (e.g. to create a disk snapshot or an image, or to attach the disk
-to a virtual machine). Customer-supplied encryption keys do not protect access to metadata of the disk. If you do not
-provide an encryption key when creating the disk, then the disk will be encrypted using an automatically generated key
-and you do not need to provide a key to use the disk later.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>label_<wbr>fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}Labels to apply to this disk. A list of key->value pairs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>last_<wbr>attach_<wbr>timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Last attach timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1339,110 +931,25 @@ and you do not need to provide a key to use the disk later.
             title="">
         <span>last_<wbr>detach_<wbr>timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Last detach timestamp in RFC3339 text format.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
-comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
-'[a-z]([-a-z0-9]*[a-z0-9])?' which means the first character must be a lowercase letter, and all following characters
-must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>physical_<wbr>block_<wbr>size_<wbr>bytes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Physical block size of the persistent disk, in bytes. If not present in a request, a default value is used. Currently
-supported sizes are 4096 and 16384, other sizes may be added in the future. If an unsupported value is requested, the
-error message will list the supported values for the caller's project.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A reference to the region where the disk resides.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>replica_<wbr>zones</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}URLs of the zones where the disk should be replicated to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Size of the persistent disk, specified in GB. You can specify this field when creating a persistent disk using the
-sourceImage or sourceSnapshot parameter, or specify it alone to create an empty persistent disk. If you specify this
-field along with sourceImage or sourceSnapshot, the value of sizeGb must not be less than the size of the sourceImage or
-the size of the snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>snapshot</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The source snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For
-example, the following are valid values: *
-'https://www.googleapis.com/compute/v1/projects/project/global/snapshots/snapshot' *
-'projects/project/global/snapshots/snapshot' * 'global/snapshots/snapshot' * 'snapshot'
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>source_<wbr>snapshot_<wbr>encryption_<wbr>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regiondisksourcesnapshotencryptionkey">Dict[Region<wbr>Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key]</a></span>
-    </dt>
-    <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
-customer-supplied encryption key.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>source_<wbr>snapshot_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
 this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
@@ -1451,18 +958,9 @@ recreated under the same name, the source snapshot ID would identify the exact v
 
     <dt class="property-"
             title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}URL of the disk type resource describing which disk type to use to create the disk. Provide this when creating the disk.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
 {{% /md %}}</dd>
@@ -1492,7 +990,7 @@ Get an existing RegionDisk resource's state with the given name, ID, and optiona
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegionDisk<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionDiskState">RegionDiskState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionDisk">RegionDisk</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRegionDisk<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionDiskState">RegionDiskState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionDisk">RegionDisk</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1606,7 +1104,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1615,7 +1113,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
 {{% /md %}}</dd>
@@ -1624,7 +1122,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Disk<wbr>Encryption<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regiondiskdiskencryptionkey">Region<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regiondiskdiskencryptionkey">Region<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Encrypts the disk using a customer-supplied encryption key. After you encrypt a disk with a customer-supplied key, you
 must provide the same key if you use the disk later (e.g. to create a disk snapshot or an image, or to attach the disk
@@ -1637,7 +1135,7 @@ and you do not need to provide a key to use the disk later.
             title="Optional">
         <span>Label<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
 {{% /md %}}</dd>
@@ -1646,7 +1144,7 @@ and you do not need to provide a key to use the disk later.
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk. A list of key->value pairs.
 {{% /md %}}</dd>
@@ -1655,7 +1153,7 @@ and you do not need to provide a key to use the disk later.
             title="Optional">
         <span>Last<wbr>Attach<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Last attach timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1664,7 +1162,7 @@ and you do not need to provide a key to use the disk later.
             title="Optional">
         <span>Last<wbr>Detach<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Last detach timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1673,7 +1171,7 @@ and you do not need to provide a key to use the disk later.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -1685,7 +1183,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>Physical<wbr>Block<wbr>Size<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Physical block size of the persistent disk, in bytes. If not present in a request, a default value is used. Currently
 supported sizes are 4096 and 16384, other sizes may be added in the future. If an unsupported value is requested, the
@@ -1696,7 +1194,7 @@ error message will list the supported values for the caller's project.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1706,7 +1204,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A reference to the region where the disk resides.
 {{% /md %}}</dd>
@@ -1715,7 +1213,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Replica<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}URLs of the zones where the disk should be replicated to.
 {{% /md %}}</dd>
@@ -1724,7 +1222,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -1733,7 +1231,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the persistent disk, specified in GB. You can specify this field when creating a persistent disk using the
 sourceImage or sourceSnapshot parameter, or specify it alone to create an empty persistent disk. If you specify this
@@ -1745,7 +1243,7 @@ the size of the snapshot.
             title="Optional">
         <span>Snapshot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The source snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For
 example, the following are valid values: *
@@ -1757,7 +1255,7 @@ example, the following are valid values: *
             title="Optional">
         <span>Source<wbr>Snapshot<wbr>Encryption<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regiondisksourcesnapshotencryptionkey">Region<wbr>Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key<wbr>Args?</a></span>
+        <span class="property-type"><a href="#regiondisksourcesnapshotencryptionkey">Region<wbr>Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
 customer-supplied encryption key.
@@ -1767,7 +1265,7 @@ customer-supplied encryption key.
             title="Optional">
         <span>Source<wbr>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
 this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
@@ -1778,7 +1276,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}URL of the disk type resource describing which disk type to use to create the disk. Provide this when creating the disk.
 {{% /md %}}</dd>
@@ -1787,7 +1285,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
 {{% /md %}}</dd>
@@ -1803,7 +1301,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>Creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1812,7 +1310,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
 {{% /md %}}</dd>
@@ -1821,7 +1319,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>Disk<wbr>Encryption<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regiondiskdiskencryptionkey">*Region<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
+        <span class="property-type"><a href="#regiondiskdiskencryptionkey">Region<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}Encrypts the disk using a customer-supplied encryption key. After you encrypt a disk with a customer-supplied key, you
 must provide the same key if you use the disk later (e.g. to create a disk snapshot or an image, or to attach the disk
@@ -1834,7 +1332,7 @@ and you do not need to provide a key to use the disk later.
             title="Optional">
         <span>Label<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
 {{% /md %}}</dd>
@@ -1852,7 +1350,7 @@ and you do not need to provide a key to use the disk later.
             title="Optional">
         <span>Last<wbr>Attach<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Last attach timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1861,7 +1359,7 @@ and you do not need to provide a key to use the disk later.
             title="Optional">
         <span>Last<wbr>Detach<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Last detach timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -1870,7 +1368,7 @@ and you do not need to provide a key to use the disk later.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -1882,7 +1380,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>Physical<wbr>Block<wbr>Size<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Physical block size of the persistent disk, in bytes. If not present in a request, a default value is used. Currently
 supported sizes are 4096 and 16384, other sizes may be added in the future. If an unsupported value is requested, the
@@ -1893,7 +1391,7 @@ error message will list the supported values for the caller's project.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1903,7 +1401,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A reference to the region where the disk resides.
 {{% /md %}}</dd>
@@ -1912,7 +1410,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Replica<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}URLs of the zones where the disk should be replicated to.
 {{% /md %}}</dd>
@@ -1921,7 +1419,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -1930,7 +1428,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Size of the persistent disk, specified in GB. You can specify this field when creating a persistent disk using the
 sourceImage or sourceSnapshot parameter, or specify it alone to create an empty persistent disk. If you specify this
@@ -1942,7 +1440,7 @@ the size of the snapshot.
             title="Optional">
         <span>Snapshot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The source snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For
 example, the following are valid values: *
@@ -1954,7 +1452,7 @@ example, the following are valid values: *
             title="Optional">
         <span>Source<wbr>Snapshot<wbr>Encryption<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regiondisksourcesnapshotencryptionkey">*Region<wbr>Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key</a></span>
+        <span class="property-type"><a href="#regiondisksourcesnapshotencryptionkey">Region<wbr>Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
 customer-supplied encryption key.
@@ -1964,7 +1462,7 @@ customer-supplied encryption key.
             title="Optional">
         <span>Source<wbr>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
 this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
@@ -1975,7 +1473,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}URL of the disk type resource describing which disk type to use to create the disk. Provide this when creating the disk.
 {{% /md %}}</dd>
@@ -1984,7 +1482,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
 {{% /md %}}</dd>
@@ -2000,7 +1498,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>creation<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -2009,7 +1507,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
 {{% /md %}}</dd>
@@ -2018,7 +1516,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>disk<wbr>Encryption<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regiondiskdiskencryptionkey">Region<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key?</a></span>
+        <span class="property-type"><a href="#regiondiskdiskencryptionkey">Region<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}Encrypts the disk using a customer-supplied encryption key. After you encrypt a disk with a customer-supplied key, you
 must provide the same key if you use the disk later (e.g. to create a disk snapshot or an image, or to attach the disk
@@ -2031,7 +1529,7 @@ and you do not need to provide a key to use the disk later.
             title="Optional">
         <span>label<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
 {{% /md %}}</dd>
@@ -2040,7 +1538,7 @@ and you do not need to provide a key to use the disk later.
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Labels to apply to this disk. A list of key->value pairs.
 {{% /md %}}</dd>
@@ -2049,7 +1547,7 @@ and you do not need to provide a key to use the disk later.
             title="Optional">
         <span>last<wbr>Attach<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Last attach timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -2058,7 +1556,7 @@ and you do not need to provide a key to use the disk later.
             title="Optional">
         <span>last<wbr>Detach<wbr>Timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Last detach timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -2067,7 +1565,7 @@ and you do not need to provide a key to use the disk later.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -2079,7 +1577,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>physical<wbr>Block<wbr>Size<wbr>Bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Physical block size of the persistent disk, in bytes. If not present in a request, a default value is used. Currently
 supported sizes are 4096 and 16384, other sizes may be added in the future. If an unsupported value is requested, the
@@ -2090,7 +1588,7 @@ error message will list the supported values for the caller's project.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2100,7 +1598,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A reference to the region where the disk resides.
 {{% /md %}}</dd>
@@ -2109,7 +1607,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>replica<wbr>Zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}URLs of the zones where the disk should be replicated to.
 {{% /md %}}</dd>
@@ -2118,7 +1616,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>self<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -2127,7 +1625,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Size of the persistent disk, specified in GB. You can specify this field when creating a persistent disk using the
 sourceImage or sourceSnapshot parameter, or specify it alone to create an empty persistent disk. If you specify this
@@ -2139,7 +1637,7 @@ the size of the snapshot.
             title="Optional">
         <span>snapshot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The source snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For
 example, the following are valid values: *
@@ -2151,7 +1649,7 @@ example, the following are valid values: *
             title="Optional">
         <span>source<wbr>Snapshot<wbr>Encryption<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#regiondisksourcesnapshotencryptionkey">Region<wbr>Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key?</a></span>
+        <span class="property-type"><a href="#regiondisksourcesnapshotencryptionkey">Region<wbr>Disk<wbr>Source<wbr>Snapshot<wbr>Encryption<wbr>Key</a></span>
     </dt>
     <dd>{{% md %}}The customer-supplied encryption key of the source snapshot. Required if the source snapshot is protected by a
 customer-supplied encryption key.
@@ -2161,7 +1659,7 @@ customer-supplied encryption key.
             title="Optional">
         <span>source<wbr>Snapshot<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
 this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
@@ -2172,7 +1670,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}URL of the disk type resource describing which disk type to use to create the disk. Provide this when creating the disk.
 {{% /md %}}</dd>
@@ -2181,7 +1679,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
 {{% /md %}}</dd>
@@ -2197,7 +1695,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>creation_<wbr>timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -2206,7 +1704,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource. Provide this property when you create the resource.
 {{% /md %}}</dd>
@@ -2228,7 +1726,7 @@ and you do not need to provide a key to use the disk later.
             title="Optional">
         <span>label_<wbr>fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The fingerprint used for optimistic locking of this resource. Used internally during updates.
 {{% /md %}}</dd>
@@ -2246,7 +1744,7 @@ and you do not need to provide a key to use the disk later.
             title="Optional">
         <span>last_<wbr>attach_<wbr>timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Last attach timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -2255,7 +1753,7 @@ and you do not need to provide a key to use the disk later.
             title="Optional">
         <span>last_<wbr>detach_<wbr>timestamp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Last detach timestamp in RFC3339 text format.
 {{% /md %}}</dd>
@@ -2264,7 +1762,7 @@ and you do not need to provide a key to use the disk later.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource. Provided by the client when the resource is created. The name must be 1-63 characters long, and
 comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression
@@ -2276,7 +1774,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
             title="Optional">
         <span>physical_<wbr>block_<wbr>size_<wbr>bytes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Physical block size of the persistent disk, in bytes. If not present in a request, a default value is used. Currently
 supported sizes are 4096 and 16384, other sizes may be added in the future. If an unsupported value is requested, the
@@ -2287,7 +1785,7 @@ error message will list the supported values for the caller's project.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -2297,7 +1795,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A reference to the region where the disk resides.
 {{% /md %}}</dd>
@@ -2306,7 +1804,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>replica_<wbr>zones</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}URLs of the zones where the disk should be replicated to.
 {{% /md %}}</dd>
@@ -2315,7 +1813,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URI of the created resource.
 {{% /md %}}</dd>
@@ -2324,7 +1822,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Size of the persistent disk, specified in GB. You can specify this field when creating a persistent disk using the
 sourceImage or sourceSnapshot parameter, or specify it alone to create an empty persistent disk. If you specify this
@@ -2336,7 +1834,7 @@ the size of the snapshot.
             title="Optional">
         <span>snapshot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The source snapshot used to create this disk. You can provide this as a partial or full URL to the resource. For
 example, the following are valid values: *
@@ -2358,7 +1856,7 @@ customer-supplied encryption key.
             title="Optional">
         <span>source_<wbr>snapshot_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The unique ID of the snapshot used to create this disk. This value identifies the exact snapshot that was used to create
 this persistent disk. For example, if you created the persistent disk from a snapshot that was later deleted and
@@ -2369,7 +1867,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}URL of the disk type resource describing which disk type to use to create the disk. Provide this when creating the disk.
 {{% /md %}}</dd>
@@ -2378,7 +1876,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Links to the users of the disk (attached instances) in form: project/zones/zone/instances/instance
 {{% /md %}}</dd>
@@ -2403,7 +1901,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionDiskDiskEncryptionKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionDiskDiskEncryptionKeyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionDiskDiskEncryptionKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionDiskDiskEncryptionKeyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2416,7 +1914,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>Kms<wbr>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2424,7 +1922,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>Raw<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2432,7 +1930,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>Sha256</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2447,7 +1945,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>Kms<wbr>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2455,7 +1953,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>Raw<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2463,7 +1961,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>Sha256</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2478,7 +1976,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>kms<wbr>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2486,7 +1984,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>raw<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2494,7 +1992,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>sha256</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2509,7 +2007,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>kms_<wbr>key_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2517,7 +2015,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>raw<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2525,7 +2023,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>sha256</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2542,7 +2040,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionDiskSourceSnapshotEncryptionKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#RegionDiskSourceSnapshotEncryptionKeyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionDiskSourceSnapshotEncryptionKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#RegionDiskSourceSnapshotEncryptionKeyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2555,7 +2053,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>Kms<wbr>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2563,7 +2061,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>Raw<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2571,7 +2069,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>Sha256</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2586,7 +2084,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>Kms<wbr>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2594,7 +2092,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>Raw<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2602,7 +2100,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>Sha256</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2617,7 +2115,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>kms<wbr>Key<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2625,7 +2123,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>raw<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2633,7 +2131,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>sha256</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2648,7 +2146,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>kms_<wbr>key_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2656,7 +2154,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>raw<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2664,7 +2162,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
             title="Optional">
         <span>sha256</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2685,6 +2183,7 @@ recreated under the same name, the source snapshot ID would identify the exact v
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

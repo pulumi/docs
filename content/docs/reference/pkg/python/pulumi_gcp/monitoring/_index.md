@@ -28,9 +28,6 @@ about this state.</p>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/monitoring_alert_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/monitoring_alert_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -50,6 +47,8 @@ characters.</p></li>
 new violations occur on an already opened incident. Each element of this array corresponds to the name field in each of
 the NotificationChannel objects that are returned from the notificationChannels.list method. The syntax of the entries
 in this field is ‘projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]’</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>user_labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – This field is intended to be used for organizing and identifying the AlertPolicy objects.The field can contain up to 64
 entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
 can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.</p></li>
@@ -238,6 +237,13 @@ in this field is ‘projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]’</
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.monitoring.AlertPolicy.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.AlertPolicy.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.monitoring.AlertPolicy.user_labels">
 <code class="sig-name descname">user_labels</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.AlertPolicy.user_labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>This field is intended to be used for organizing and identifying the AlertPolicy objects.The field can contain up to 64
@@ -273,6 +279,8 @@ characters.</p></li>
 new violations occur on an already opened incident. Each element of this array corresponds to the name field in each of
 the NotificationChannel objects that are returned from the notificationChannels.list method. The syntax of the entries
 in this field is ‘projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]’</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>user_labels</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – This field is intended to be used for organizing and identifying the AlertPolicy objects.The field can contain up to 64
 entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
 can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.</p></li>
@@ -396,6 +404,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_gcp.monitoring.AwaitableGetUptimeCheckIPsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">AwaitableGetUptimeCheckIPsResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">uptime_check_ips=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.AwaitableGetUptimeCheckIPsResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gcp.monitoring.GetNotificationChannelResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">GetNotificationChannelResult</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">sensitive_labels=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">user_labels=None</em>, <em class="sig-param">verification_status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.GetNotificationChannelResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getNotificationChannel.</p>
@@ -451,6 +464,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_gcp.monitoring.GetUptimeCheckIPsResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">GetUptimeCheckIPsResult</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">uptime_check_ips=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.GetUptimeCheckIPsResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getUptimeCheckIPs.</p>
+<dl class="attribute">
+<dt id="pulumi_gcp.monitoring.GetUptimeCheckIPsResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.monitoring.GetUptimeCheckIPsResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_gcp.monitoring.Group">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">Group</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">filter=None</em>, <em class="sig-param">is_cluster=None</em>, <em class="sig-param">parent_name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.Group" title="Permalink to this definition">¶</a></dt>
 <dd><p>The description of a dynamic collection of monitored resources. Each group
@@ -466,9 +491,6 @@ resource, then that resource is a member of that group.</p>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/monitoring_group.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/monitoring_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -614,9 +636,6 @@ This provides the channel type and all of the required labels that must be passe
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/monitoring_notification_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/monitoring_notification_channel.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -861,9 +880,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/monitoring_uptime_check_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/monitoring_uptime_check_config.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1163,9 +1179,6 @@ like authentication tokens or contact info are only partially populated on retri
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_monitoring_notification_channel.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_monitoring_notification_channel.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1184,9 +1197,6 @@ If it is not provided, the provider project is used.</p></li>
 <dt id="pulumi_gcp.monitoring.get_secret_version">
 <code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">get_secret_version</code><span class="sig-paren">(</span><em class="sig-param">project=None</em>, <em class="sig-param">secret=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.get_secret_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a Secret Manager secret’s version. For more information see the <a class="reference external" href="https://cloud.google.com/secret-manager/docs/">official documentation</a> and <a class="reference external" href="https://cloud.google.com/secret-manager/docs/reference/rest/v1beta1/projects.secrets.versions">API</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_google_secret_manager_secret_version.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_google_secret_manager_secret_version.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1198,6 +1208,12 @@ is not provided, the latest version is retrieved.</p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_gcp.monitoring.get_uptime_check_i_ps">
+<code class="sig-prename descclassname">pulumi_gcp.monitoring.</code><code class="sig-name descname">get_uptime_check_i_ps</code><span class="sig-paren">(</span><em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.monitoring.get_uptime_check_i_ps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
 </dd></dl>
 
 </div>

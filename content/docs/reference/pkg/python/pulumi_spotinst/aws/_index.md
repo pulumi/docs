@@ -17,9 +17,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_spotinst.aws.Beanstalk">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.aws.</code><code class="sig-name descname">Beanstalk</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">beanstalk_environment_id=None</em>, <em class="sig-param">beanstalk_environment_name=None</em>, <em class="sig-param">deployment_preferences=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">instance_types_spots=None</em>, <em class="sig-param">maintenance=None</em>, <em class="sig-param">managed_actions=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">product=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">scheduled_tasks=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.Beanstalk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Spotinst AWS group resource using Elastic Beanstalk.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_aws_beanstalk.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_aws_beanstalk.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -277,9 +274,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_spotinst.aws.Elastigroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.aws.</code><code class="sig-name descname">Elastigroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">availability_zones=None</em>, <em class="sig-param">block_devices_mode=None</em>, <em class="sig-param">capacity_unit=None</em>, <em class="sig-param">cpu_credits=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">draining_timeout=None</em>, <em class="sig-param">ebs_block_devices=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">elastic_ips=None</em>, <em class="sig-param">elastic_load_balancers=None</em>, <em class="sig-param">enable_monitoring=None</em>, <em class="sig-param">ephemeral_block_devices=None</em>, <em class="sig-param">fallback_to_ondemand=None</em>, <em class="sig-param">health_check_grace_period=None</em>, <em class="sig-param">health_check_type=None</em>, <em class="sig-param">health_check_unhealthy_duration_before_replacement=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">instance_types_ondemand=None</em>, <em class="sig-param">instance_types_preferred_spots=None</em>, <em class="sig-param">instance_types_spots=None</em>, <em class="sig-param">instance_types_weights=None</em>, <em class="sig-param">integration_beanstalk=None</em>, <em class="sig-param">integration_codedeploy=None</em>, <em class="sig-param">integration_docker_swarm=None</em>, <em class="sig-param">integration_ecs=None</em>, <em class="sig-param">integration_gitlab=None</em>, <em class="sig-param">integration_kubernetes=None</em>, <em class="sig-param">integration_mesosphere=None</em>, <em class="sig-param">integration_multai_runtime=None</em>, <em class="sig-param">integration_nomad=None</em>, <em class="sig-param">integration_rancher=None</em>, <em class="sig-param">integration_route53=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">lifetime_period=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">multai_target_sets=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">ondemand_count=None</em>, <em class="sig-param">orientation=None</em>, <em class="sig-param">persist_block_devices=None</em>, <em class="sig-param">persist_private_ip=None</em>, <em class="sig-param">persist_root_device=None</em>, <em class="sig-param">placement_tenancy=None</em>, <em class="sig-param">preferred_availability_zones=None</em>, <em class="sig-param">private_ips=None</em>, <em class="sig-param">product=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">revert_to_spot=None</em>, <em class="sig-param">scaling_down_policies=None</em>, <em class="sig-param">scaling_strategies=None</em>, <em class="sig-param">scaling_target_policies=None</em>, <em class="sig-param">scaling_up_policies=None</em>, <em class="sig-param">scheduled_tasks=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">shutdown_script=None</em>, <em class="sig-param">signals=None</em>, <em class="sig-param">spot_percentage=None</em>, <em class="sig-param">stateful_deallocation=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_group_arns=None</em>, <em class="sig-param">update_policy=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">utilize_reserved_instances=None</em>, <em class="sig-param">wait_for_capacity=None</em>, <em class="sig-param">wait_for_capacity_timeout=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.Elastigroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Spotinst AWS group resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_aws.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1443,9 +1437,6 @@ Default: ts-123456</p></li>
 </pre></div>
 </div>
 <p><span class="raw-html-m2r"><a id="route53"></a></span></p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/managed_instance_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/managed_instance_aws.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1918,6 +1909,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">job_flow_role</span></code> - (Optional) The IAM role that was specified when the job flow was launched. The EC2 instances of the job flow assume this role.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">termination_protected</span></code> - (Optional) Specifies whether the Amazon EC2 instances in the cluster are protected from termination by API calls, user intervention, or in the event of a job-flow error.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">keep_job_flow_alive</span></code> - (Optional) Specifies whether the cluster should remain available after completing all steps.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">retries</span></code> - (Optional) Specifies the maximum number of times a capacity provisioning should be retried if the provisioning timeout is exceeded.</p></li>
 </ul>
 <p><span class="raw-html-m2r"><a id="task-group"></a></span></p>
 <ul class="simple">
@@ -2074,9 +2066,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">min_capacity</span></code> - (Optional) New min capacity for the elastigroup.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">max_capacity</span></code> - (Optional) New max capacity for the elastigroup.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/mrscaler_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/mrscaler_aws.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2483,11 +2472,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_spotinst.aws.Ocean">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.aws.</code><code class="sig-name descname">Ocean</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">associate_public_ip_address=None</em>, <em class="sig-param">autoscaler=None</em>, <em class="sig-param">blacklists=None</em>, <em class="sig-param">controller_id=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">draining_timeout=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">fallback_to_ondemand=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">load_balancers=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">root_volume_size=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">spot_percentage=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">update_policy=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">utilize_reserved_instances=None</em>, <em class="sig-param">whitelists=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.Ocean" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.aws.</code><code class="sig-name descname">Ocean</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">associate_public_ip_address=None</em>, <em class="sig-param">autoscaler=None</em>, <em class="sig-param">blacklists=None</em>, <em class="sig-param">controller_id=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">draining_timeout=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">fallback_to_ondemand=None</em>, <em class="sig-param">grace_period=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">load_balancers=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">root_volume_size=None</em>, <em class="sig-param">scheduled_tasks=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">spot_percentage=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">update_policy=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">utilize_reserved_instances=None</em>, <em class="sig-param">whitelists=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.Ocean" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Spotinst Ocean AWS resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_aws.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_aws.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2501,6 +2487,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>draining_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.</p></li>
 <li><p><strong>ebs_optimized</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.</p></li>
 <li><p><strong>fallback_to_ondemand</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If not Spot instance markets are available, enable Ocean to launch On-Demand instances instead.</p></li>
+<li><p><strong>grace_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time, in seconds, after the instance has launched to start checking its health.</p></li>
 <li><p><strong>iam_instance_profile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance profile iam role.</p></li>
 <li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the image used to launch the instances.</p></li>
 <li><p><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The key pair to attach the instances.</p></li>
@@ -2515,7 +2502,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region the cluster will run in.</p></li>
 <li><p><strong>root_volume_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size (in Gb) to allocate for the root volume. Minimum <code class="docutils literal notranslate"><span class="pre">20</span></code>.</p></li>
 <li><p><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more security group ids.</p></li>
-<li><p><strong>spot_percentage</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The percentage of Spot instances the cluster should maintain. Min 0, max 100.</p></li>
 <li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optionally adds tags to instances launched in an Ocean cluster.</p></li>
 <li><p><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Base64-encoded MIME user data to make available to the instances.</p></li>
@@ -2526,6 +2512,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <p>The <strong>autoscaler</strong> object supports the following:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoHeadroomPercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Set the auto headroom percentage (a number in the range [0, 200]) which controls the percentage of headroom from the cluster. Relevant only when <code class="docutils literal notranslate"><span class="pre">isAutoConfig</span></code> toggled on.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">autoscaleCooldown</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Cooldown period between scaling actions.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">autoscaleDown</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Auto Scaling scale down operations.</p>
 <ul>
@@ -2556,6 +2543,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Required if type is set to CLASSIC</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Can be set to CLASSIC or TARGET_GROUP</p></li>
 </ul>
+<p>The <strong>scheduled_tasks</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">shutdownHours</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeWindows</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tasks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cronExpression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">taskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
+</ul>
 <p>The <strong>tags</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The tag key.</p></li>
@@ -2581,6 +2584,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-name descname">autoscaler</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.Ocean.autoscaler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Describes the Ocean Kubernetes autoscaler.</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoHeadroomPercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Set the auto headroom percentage (a number in the range [0, 200]) which controls the percentage of headroom from the cluster. Relevant only when <code class="docutils literal notranslate"><span class="pre">isAutoConfig</span></code> toggled on.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">autoscaleCooldown</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Cooldown period between scaling actions.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">autoscaleDown</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Auto Scaling scale down operations.</p>
 <ul>
@@ -2641,6 +2645,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_spotinst.aws.Ocean.fallback_to_ondemand">
 <code class="sig-name descname">fallback_to_ondemand</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.Ocean.fallback_to_ondemand" title="Permalink to this definition">¶</a></dt>
 <dd><p>If not Spot instance markets are available, enable Ocean to launch On-Demand instances instead.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_spotinst.aws.Ocean.grace_period">
+<code class="sig-name descname">grace_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.Ocean.grace_period" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amount of time, in seconds, after the instance has launched to start checking its health.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2718,12 +2728,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
-<dt id="pulumi_spotinst.aws.Ocean.spot_percentage">
-<code class="sig-name descname">spot_percentage</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.Ocean.spot_percentage" title="Permalink to this definition">¶</a></dt>
-<dd><p>The percentage of Spot instances the cluster should maintain. Min 0, max 100.</p>
-</dd></dl>
-
-<dl class="attribute">
 <dt id="pulumi_spotinst.aws.Ocean.subnet_ids">
 <code class="sig-name descname">subnet_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.Ocean.subnet_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.</p>
@@ -2759,7 +2763,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_spotinst.aws.Ocean.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">associate_public_ip_address=None</em>, <em class="sig-param">autoscaler=None</em>, <em class="sig-param">blacklists=None</em>, <em class="sig-param">controller_id=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">draining_timeout=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">fallback_to_ondemand=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">load_balancers=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">root_volume_size=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">spot_percentage=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">update_policy=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">utilize_reserved_instances=None</em>, <em class="sig-param">whitelists=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.Ocean.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">associate_public_ip_address=None</em>, <em class="sig-param">autoscaler=None</em>, <em class="sig-param">blacklists=None</em>, <em class="sig-param">controller_id=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">draining_timeout=None</em>, <em class="sig-param">ebs_optimized=None</em>, <em class="sig-param">fallback_to_ondemand=None</em>, <em class="sig-param">grace_period=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">load_balancers=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">root_volume_size=None</em>, <em class="sig-param">scheduled_tasks=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">spot_percentage=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">update_policy=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">utilize_reserved_instances=None</em>, <em class="sig-param">whitelists=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.Ocean.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Ocean resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2776,6 +2780,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>draining_timeout</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The time in seconds, the instance is allowed to run while detached from the ELB. This is to allow the instance time to be drained from incoming TCP connections before terminating it, during a scale down operation.</p></li>
 <li><p><strong>ebs_optimized</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable EBS optimized for cluster. Flag will enable optimized capacity for high bandwidth connectivity to the EB service for non EBS optimized instance types. For instances that are EBS optimized this flag will be ignored.</p></li>
 <li><p><strong>fallback_to_ondemand</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If not Spot instance markets are available, enable Ocean to launch On-Demand instances instead.</p></li>
+<li><p><strong>grace_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The amount of time, in seconds, after the instance has launched to start checking its health.</p></li>
 <li><p><strong>iam_instance_profile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The instance profile iam role.</p></li>
 <li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the image used to launch the instances.</p></li>
 <li><p><strong>key_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The key pair to attach the instances.</p></li>
@@ -2790,7 +2795,6 @@ properties used to qualify the lookup.</p>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region the cluster will run in.</p></li>
 <li><p><strong>root_volume_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The size (in Gb) to allocate for the root volume. Minimum <code class="docutils literal notranslate"><span class="pre">20</span></code>.</p></li>
 <li><p><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – One or more security group ids.</p></li>
-<li><p><strong>spot_percentage</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The percentage of Spot instances the cluster should maintain. Min 0, max 100.</p></li>
 <li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A comma-separated list of subnet identifiers for the Ocean cluster. Subnet IDs should be configured with auto assign public ip.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optionally adds tags to instances launched in an Ocean cluster.</p></li>
 <li><p><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Base64-encoded MIME user data to make available to the instances.</p></li>
@@ -2801,6 +2805,7 @@ properties used to qualify the lookup.</p>
 </dl>
 <p>The <strong>autoscaler</strong> object supports the following:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">autoHeadroomPercentage</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Set the auto headroom percentage (a number in the range [0, 200]) which controls the percentage of headroom from the cluster. Relevant only when <code class="docutils literal notranslate"><span class="pre">isAutoConfig</span></code> toggled on.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">autoscaleCooldown</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Cooldown period between scaling actions.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">autoscaleDown</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Auto Scaling scale down operations.</p>
 <ul>
@@ -2830,6 +2835,22 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Required if type is set to TARGET_GROUP</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Required if type is set to CLASSIC</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Can be set to CLASSIC or TARGET_GROUP</p></li>
+</ul>
+<p>The <strong>scheduled_tasks</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">shutdownHours</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">timeWindows</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tasks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">cronExpression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">taskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+</ul>
+</li>
 </ul>
 <p>The <strong>tags</strong> object supports the following:</p>
 <ul class="simple">
@@ -2887,11 +2908,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_spotinst.aws.OceanLaunchSpec">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.aws.</code><code class="sig-name descname">OceanLaunchSpec</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscale_headrooms=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">ocean_id=None</em>, <em class="sig-param">root_volume_size=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">taints=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.OceanLaunchSpec" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.aws.</code><code class="sig-name descname">OceanLaunchSpec</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscale_headrooms=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ocean_id=None</em>, <em class="sig-param">root_volume_size=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">taints=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.OceanLaunchSpec" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a custom Spotinst Ocean AWS Launch Spec resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_aws_launch_spec.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_aws_launch_spec.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2901,10 +2919,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>iam_instance_profile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN or name of an IAM instance profile to associate with launched instances.</p></li>
 <li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the image used to launch the instances.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optionally adds labels to instances launched in an Ocean cluster.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set Launch Specification name</p></li>
 <li><p><strong>ocean_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ocean cluster you wish to</p></li>
 <li><p><strong>root_volume_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Set root volume size (in GB).</p></li>
 <li><p><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optionally adds security group IDs.</p></li>
 <li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Set subnets in launchSpec. Each element in array should be subnet ID.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A key/value mapping of tags to assign to the resource.</p></li>
 <li><p><strong>taints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optionally adds labels to instances launched in an Ocean cluster.</p></li>
 <li><p><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Base64-encoded MIME user data to make available to the instances.</p></li>
 </ul>
@@ -2918,6 +2938,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">numOfUnits</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of units to retain as headroom, where each unit has the defined headroom CPU, memory and GPU.</p></li>
 </ul>
 <p>The <strong>labels</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The tag key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The tag value.</p></li>
+</ul>
+<p>The <strong>tags</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The tag key.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The tag value.</p></li>
@@ -2963,6 +2988,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_spotinst.aws.OceanLaunchSpec.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.OceanLaunchSpec.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set Launch Specification name</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_spotinst.aws.OceanLaunchSpec.ocean_id">
 <code class="sig-name descname">ocean_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.OceanLaunchSpec.ocean_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ocean cluster you wish to</p>
@@ -2987,6 +3018,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_spotinst.aws.OceanLaunchSpec.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.OceanLaunchSpec.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A key/value mapping of tags to assign to the resource.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The tag key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The tag value.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_spotinst.aws.OceanLaunchSpec.taints">
 <code class="sig-name descname">taints</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_spotinst.aws.OceanLaunchSpec.taints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Optionally adds labels to instances launched in an Ocean cluster.</p>
@@ -3005,7 +3046,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_spotinst.aws.OceanLaunchSpec.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscale_headrooms=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">ocean_id=None</em>, <em class="sig-param">root_volume_size=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">taints=None</em>, <em class="sig-param">user_data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.OceanLaunchSpec.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscale_headrooms=None</em>, <em class="sig-param">iam_instance_profile=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ocean_id=None</em>, <em class="sig-param">root_volume_size=None</em>, <em class="sig-param">security_groups=None</em>, <em class="sig-param">subnet_ids=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">taints=None</em>, <em class="sig-param">user_data=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.aws.OceanLaunchSpec.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing OceanLaunchSpec resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -3018,10 +3059,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>iam_instance_profile</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN or name of an IAM instance profile to associate with launched instances.</p></li>
 <li><p><strong>image_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – ID of the image used to launch the instances.</p></li>
 <li><p><strong>labels</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optionally adds labels to instances launched in an Ocean cluster.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Set Launch Specification name</p></li>
 <li><p><strong>ocean_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ocean cluster you wish to</p></li>
 <li><p><strong>root_volume_size</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Set root volume size (in GB).</p></li>
 <li><p><strong>security_groups</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optionally adds security group IDs.</p></li>
 <li><p><strong>subnet_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Set subnets in launchSpec. Each element in array should be subnet ID.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A key/value mapping of tags to assign to the resource.</p></li>
 <li><p><strong>taints</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Optionally adds labels to instances launched in an Ocean cluster.</p></li>
 <li><p><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Base64-encoded MIME user data to make available to the instances.</p></li>
 </ul>
@@ -3035,6 +3078,11 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">numOfUnits</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of units to retain as headroom, where each unit has the defined headroom CPU, memory and GPU.</p></li>
 </ul>
 <p>The <strong>labels</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The tag key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The tag value.</p></li>
+</ul>
+<p>The <strong>tags</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The tag key.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The tag value.</p></li>

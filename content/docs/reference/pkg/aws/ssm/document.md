@@ -71,7 +71,7 @@ The permissions mapping supports the following:
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#Document">Document</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#DocumentArgs">DocumentArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#Document">Document</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ssm/#DocumentArgs">DocumentArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -79,7 +79,7 @@ The permissions mapping supports the following:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDocument<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ssm?tab=doc#DocumentArgs">DocumentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ssm?tab=doc#Document">Document</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDocument<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#DocumentArgs">DocumentArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#Document">Document</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -175,47 +175,47 @@ The permissions mapping supports the following:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Attachments<wbr>Sources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentattachmentssource">List&lt;Document<wbr>Attachments<wbr>Source<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more configuration blocks describing attachments sources to a version of a document. Defined below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Content</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The JSON or YAML content of the document.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Document<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The format of the document. Valid document types include: `JSON` and `YAML`
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Document<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the document. Valid document types include: `Automation`, `Command`, `Package`, `Policy`, and `Session`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Attachments<wbr>Sources</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#documentattachmentssource">List&lt;Document<wbr>Attachments<wbr>Source<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more configuration blocks describing attachments sources to a version of a document. Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Document<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The format of the document. Valid document types include: `JSON` and `YAML`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the document.
 {{% /md %}}</dd>
@@ -224,7 +224,7 @@ The permissions mapping supports the following:
             title="Optional">
         <span>Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentpermissions">Document<wbr>Permissions<wbr>Args?</a></span>
+        <span class="property-type"><a href="#documentpermissions">Document<wbr>Permissions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional Permissions to attach to the document. See Permissions below for details.
 {{% /md %}}</dd>
@@ -233,7 +233,7 @@ The permissions mapping supports the following:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the object.
 {{% /md %}}</dd>
@@ -242,7 +242,7 @@ The permissions mapping supports the following:
             title="Optional">
         <span>Target<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The target type which defines the kinds of resources the document can run on. For example, /AWS::EC2::Instance. For a list of valid resource types, see AWS Resource Types Reference (http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
 {{% /md %}}</dd>
@@ -254,6 +254,24 @@ The permissions mapping supports the following:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Content</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The JSON or YAML content of the document.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Document<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the document. Valid document types include: `Automation`, `Command`, `Package`, `Policy`, and `Session`
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Attachments<wbr>Sources</span>
@@ -263,38 +281,20 @@ The permissions mapping supports the following:
     <dd>{{% md %}}One or more configuration blocks describing attachments sources to a version of a document. Defined below.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Content</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The JSON or YAML content of the document.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Document<wbr>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The format of the document. Valid document types include: `JSON` and `YAML`
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Document<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the document. Valid document types include: `Automation`, `Command`, `Package`, `Policy`, and `Session`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the document.
 {{% /md %}}</dd>
@@ -303,7 +303,7 @@ The permissions mapping supports the following:
             title="Optional">
         <span>Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentpermissions">*Document<wbr>Permissions</a></span>
+        <span class="property-type"><a href="#documentpermissions">Document<wbr>Permissions</a></span>
     </dt>
     <dd>{{% md %}}Additional Permissions to attach to the document. See Permissions below for details.
 {{% /md %}}</dd>
@@ -321,7 +321,7 @@ The permissions mapping supports the following:
             title="Optional">
         <span>Target<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The target type which defines the kinds of resources the document can run on. For example, /AWS::EC2::Instance. For a list of valid resource types, see AWS Resource Types Reference (http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
 {{% /md %}}</dd>
@@ -333,47 +333,47 @@ The permissions mapping supports the following:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>attachments<wbr>Sources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentattachmentssource">Document<wbr>Attachments<wbr>Source[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more configuration blocks describing attachments sources to a version of a document. Defined below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>content</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The JSON or YAML content of the document.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>document<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The format of the document. Valid document types include: `JSON` and `YAML`
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>document<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the document. Valid document types include: `Automation`, `Command`, `Package`, `Policy`, and `Session`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>attachments<wbr>Sources</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#documentattachmentssource">Document<wbr>Attachments<wbr>Source[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more configuration blocks describing attachments sources to a version of a document. Defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>document<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The format of the document. Valid document types include: `JSON` and `YAML`
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the document.
 {{% /md %}}</dd>
@@ -382,7 +382,7 @@ The permissions mapping supports the following:
             title="Optional">
         <span>permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentpermissions">Document<wbr>Permissions?</a></span>
+        <span class="property-type"><a href="#documentpermissions">Document<wbr>Permissions</a></span>
     </dt>
     <dd>{{% md %}}Additional Permissions to attach to the document. See Permissions below for details.
 {{% /md %}}</dd>
@@ -391,7 +391,7 @@ The permissions mapping supports the following:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the object.
 {{% /md %}}</dd>
@@ -400,7 +400,7 @@ The permissions mapping supports the following:
             title="Optional">
         <span>target<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The target type which defines the kinds of resources the document can run on. For example, /AWS::EC2::Instance. For a list of valid resource types, see AWS Resource Types Reference (http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
 {{% /md %}}</dd>
@@ -412,6 +412,24 @@ The permissions mapping supports the following:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>content</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The JSON or YAML content of the document.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>document_<wbr>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the document. Valid document types include: `Automation`, `Command`, `Package`, `Policy`, and `Session`
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>attachments_<wbr>sources</span>
@@ -421,38 +439,20 @@ The permissions mapping supports the following:
     <dd>{{% md %}}One or more configuration blocks describing attachments sources to a version of a document. Defined below.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>content</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The JSON or YAML content of the document.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>document_<wbr>format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The format of the document. Valid document types include: `JSON` and `YAML`
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>document_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of the document. Valid document types include: `Automation`, `Command`, `Package`, `Policy`, and `Session`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the document.
 {{% /md %}}</dd>
@@ -479,7 +479,7 @@ The permissions mapping supports the following:
             title="Optional">
         <span>target_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The target type which defines the kinds of resources the document can run on. For example, /AWS::EC2::Instance. For a list of valid resource types, see AWS Resource Types Reference (http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
 {{% /md %}}</dd>
@@ -507,33 +507,15 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Attachments<wbr>Sources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentattachmentssource">List&lt;Document<wbr>Attachments<wbr>Source&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more configuration blocks describing attachments sources to a version of a document. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Content</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The JSON or YAML content of the document.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Created<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The date the document was created.
 {{% /md %}}</dd>
@@ -542,7 +524,7 @@ The following output properties are available:
             title="">
         <span>Default<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The default version of the document.
 {{% /md %}}</dd>
@@ -551,34 +533,16 @@ The following output properties are available:
             title="">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the document.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Document<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The format of the document. Valid document types include: `JSON` and `YAML`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Document<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the document. Valid document types include: `Automation`, `Command`, `Package`, `Policy`, and `Session`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The sha1 or sha256 of the document content
 {{% /md %}}</dd>
@@ -587,7 +551,7 @@ The following output properties are available:
             title="">
         <span>Hash<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}"Sha1" "Sha256". The hashing algorithm used when hashing the content.
 {{% /md %}}</dd>
@@ -596,25 +560,16 @@ The following output properties are available:
             title="">
         <span>Latest<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The latest version of the document.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the document.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS user account of the person who created the document.
 {{% /md %}}</dd>
@@ -630,18 +585,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Permissions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentpermissions">Document<wbr>Permissions?</a></span>
-    </dt>
-    <dd>{{% md %}}Additional Permissions to attach to the document. See Permissions below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Platform<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of OS platforms compatible with this SSM document, either "Windows" or "Linux".
 {{% /md %}}</dd>
@@ -650,7 +596,7 @@ The following output properties are available:
             title="">
         <span>Schema<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The schema version of the document.
 {{% /md %}}</dd>
@@ -659,27 +605,9 @@ The following output properties are available:
             title="">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}"Creating", "Active" or "Deleting". The current status of the document.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The target type which defines the kinds of resources the document can run on. For example, /AWS::EC2::Instance. For a list of valid resource types, see AWS Resource Types Reference (http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
 {{% /md %}}</dd>
 
 </dl>
@@ -693,33 +621,15 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Attachments<wbr>Sources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentattachmentssource">[]Document<wbr>Attachments<wbr>Source</a></span>
-    </dt>
-    <dd>{{% md %}}One or more configuration blocks describing attachments sources to a version of a document. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Content</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The JSON or YAML content of the document.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Created<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the document was created.
 {{% /md %}}</dd>
@@ -728,7 +638,7 @@ The following output properties are available:
             title="">
         <span>Default<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The default version of the document.
 {{% /md %}}</dd>
@@ -737,34 +647,16 @@ The following output properties are available:
             title="">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the document.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Document<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The format of the document. Valid document types include: `JSON` and `YAML`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Document<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the document. Valid document types include: `Automation`, `Command`, `Package`, `Policy`, and `Session`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The sha1 or sha256 of the document content
 {{% /md %}}</dd>
@@ -773,7 +665,7 @@ The following output properties are available:
             title="">
         <span>Hash<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}"Sha1" "Sha256". The hashing algorithm used when hashing the content.
 {{% /md %}}</dd>
@@ -782,25 +674,16 @@ The following output properties are available:
             title="">
         <span>Latest<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The latest version of the document.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the document.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS user account of the person who created the document.
 {{% /md %}}</dd>
@@ -816,18 +699,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Permissions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentpermissions">*Document<wbr>Permissions</a></span>
-    </dt>
-    <dd>{{% md %}}Additional Permissions to attach to the document. See Permissions below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Platform<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of OS platforms compatible with this SSM document, either "Windows" or "Linux".
 {{% /md %}}</dd>
@@ -836,7 +710,7 @@ The following output properties are available:
             title="">
         <span>Schema<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The schema version of the document.
 {{% /md %}}</dd>
@@ -845,27 +719,9 @@ The following output properties are available:
             title="">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}"Creating", "Active" or "Deleting". The current status of the document.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The target type which defines the kinds of resources the document can run on. For example, /AWS::EC2::Instance. For a list of valid resource types, see AWS Resource Types Reference (http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
 {{% /md %}}</dd>
 
 </dl>
@@ -879,33 +735,15 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>attachments<wbr>Sources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentattachmentssource">Document<wbr>Attachments<wbr>Source[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more configuration blocks describing attachments sources to a version of a document. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>content</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The JSON or YAML content of the document.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>created<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the document was created.
 {{% /md %}}</dd>
@@ -914,7 +752,7 @@ The following output properties are available:
             title="">
         <span>default<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The default version of the document.
 {{% /md %}}</dd>
@@ -923,34 +761,16 @@ The following output properties are available:
             title="">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the document.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>document<wbr>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The format of the document. Valid document types include: `JSON` and `YAML`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>document<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of the document. Valid document types include: `Automation`, `Command`, `Package`, `Policy`, and `Session`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The sha1 or sha256 of the document content
 {{% /md %}}</dd>
@@ -959,7 +779,7 @@ The following output properties are available:
             title="">
         <span>hash<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}"Sha1" "Sha256". The hashing algorithm used when hashing the content.
 {{% /md %}}</dd>
@@ -968,25 +788,16 @@ The following output properties are available:
             title="">
         <span>latest<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The latest version of the document.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the document.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS user account of the person who created the document.
 {{% /md %}}</dd>
@@ -1002,18 +813,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>permissions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentpermissions">Document<wbr>Permissions?</a></span>
-    </dt>
-    <dd>{{% md %}}Additional Permissions to attach to the document. See Permissions below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>platform<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of OS platforms compatible with this SSM document, either "Windows" or "Linux".
 {{% /md %}}</dd>
@@ -1022,7 +824,7 @@ The following output properties are available:
             title="">
         <span>schema<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The schema version of the document.
 {{% /md %}}</dd>
@@ -1031,27 +833,9 @@ The following output properties are available:
             title="">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}"Creating", "Active" or "Deleting". The current status of the document.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The target type which defines the kinds of resources the document can run on. For example, /AWS::EC2::Instance. For a list of valid resource types, see AWS Resource Types Reference (http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
 {{% /md %}}</dd>
 
 </dl>
@@ -1065,33 +849,15 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>attachments_<wbr>sources</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentattachmentssource">List[Document<wbr>Attachments<wbr>Source]</a></span>
-    </dt>
-    <dd>{{% md %}}One or more configuration blocks describing attachments sources to a version of a document. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>content</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The JSON or YAML content of the document.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>created_<wbr>date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The date the document was created.
 {{% /md %}}</dd>
@@ -1100,7 +866,7 @@ The following output properties are available:
             title="">
         <span>default_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The default version of the document.
 {{% /md %}}</dd>
@@ -1109,34 +875,16 @@ The following output properties are available:
             title="">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The description of the document.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>document_<wbr>format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The format of the document. Valid document types include: `JSON` and `YAML`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>document_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of the document. Valid document types include: `Automation`, `Command`, `Package`, `Policy`, and `Session`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The sha1 or sha256 of the document content
 {{% /md %}}</dd>
@@ -1145,7 +893,7 @@ The following output properties are available:
             title="">
         <span>hash_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}"Sha1" "Sha256". The hashing algorithm used when hashing the content.
 {{% /md %}}</dd>
@@ -1154,25 +902,16 @@ The following output properties are available:
             title="">
         <span>latest_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The latest version of the document.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the document.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The AWS user account of the person who created the document.
 {{% /md %}}</dd>
@@ -1188,18 +927,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>permissions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentpermissions">Dict[Document<wbr>Permissions]</a></span>
-    </dt>
-    <dd>{{% md %}}Additional Permissions to attach to the document. See Permissions below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>platform_<wbr>types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of OS platforms compatible with this SSM document, either "Windows" or "Linux".
 {{% /md %}}</dd>
@@ -1208,7 +938,7 @@ The following output properties are available:
             title="">
         <span>schema_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The schema version of the document.
 {{% /md %}}</dd>
@@ -1217,27 +947,9 @@ The following output properties are available:
             title="">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}"Creating", "Active" or "Deleting". The current status of the document.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the object.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The target type which defines the kinds of resources the document can run on. For example, /AWS::EC2::Instance. For a list of valid resource types, see AWS Resource Types Reference (http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
 {{% /md %}}</dd>
 
 </dl>
@@ -1265,7 +977,7 @@ Get an existing Document resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDocument<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ssm?tab=doc#DocumentState">DocumentState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ssm?tab=doc#Document">Document</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDocument<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#DocumentState">DocumentState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#Document">Document</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1379,7 +1091,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1387,7 +1099,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Attachments<wbr>Sources</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentattachmentssource">List&lt;Document<wbr>Attachments<wbr>Source<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#documentattachmentssource">List&lt;Document<wbr>Attachments<wbr>Source<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks describing attachments sources to a version of a document. Defined below.
 {{% /md %}}</dd>
@@ -1396,7 +1108,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Content</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The JSON or YAML content of the document.
 {{% /md %}}</dd>
@@ -1405,7 +1117,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The date the document was created.
 {{% /md %}}</dd>
@@ -1414,7 +1126,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The default version of the document.
 {{% /md %}}</dd>
@@ -1423,7 +1135,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the document.
 {{% /md %}}</dd>
@@ -1432,7 +1144,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Document<wbr>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The format of the document. Valid document types include: `JSON` and `YAML`
 {{% /md %}}</dd>
@@ -1441,7 +1153,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Document<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the document. Valid document types include: `Automation`, `Command`, `Package`, `Policy`, and `Session`
 {{% /md %}}</dd>
@@ -1450,7 +1162,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The sha1 or sha256 of the document content
 {{% /md %}}</dd>
@@ -1459,7 +1171,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hash<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}"Sha1" "Sha256". The hashing algorithm used when hashing the content.
 {{% /md %}}</dd>
@@ -1468,7 +1180,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Latest<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The latest version of the document.
 {{% /md %}}</dd>
@@ -1477,7 +1189,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the document.
 {{% /md %}}</dd>
@@ -1486,7 +1198,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS user account of the person who created the document.
 {{% /md %}}</dd>
@@ -1495,7 +1207,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentparameter">List&lt;Document<wbr>Parameter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#documentparameter">List&lt;Document<wbr>Parameter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The parameters that are available to this document.
 {{% /md %}}</dd>
@@ -1504,7 +1216,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentpermissions">Document<wbr>Permissions<wbr>Args?</a></span>
+        <span class="property-type"><a href="#documentpermissions">Document<wbr>Permissions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Additional Permissions to attach to the document. See Permissions below for details.
 {{% /md %}}</dd>
@@ -1513,7 +1225,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Platform<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of OS platforms compatible with this SSM document, either "Windows" or "Linux".
 {{% /md %}}</dd>
@@ -1522,7 +1234,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Schema<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The schema version of the document.
 {{% /md %}}</dd>
@@ -1531,7 +1243,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}"Creating", "Active" or "Deleting". The current status of the document.
 {{% /md %}}</dd>
@@ -1540,7 +1252,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the object.
 {{% /md %}}</dd>
@@ -1549,7 +1261,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The target type which defines the kinds of resources the document can run on. For example, /AWS::EC2::Instance. For a list of valid resource types, see AWS Resource Types Reference (http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
 {{% /md %}}</dd>
@@ -1565,7 +1277,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1582,7 +1294,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Content</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The JSON or YAML content of the document.
 {{% /md %}}</dd>
@@ -1591,7 +1303,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Created<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the document was created.
 {{% /md %}}</dd>
@@ -1600,7 +1312,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The default version of the document.
 {{% /md %}}</dd>
@@ -1609,7 +1321,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the document.
 {{% /md %}}</dd>
@@ -1618,7 +1330,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Document<wbr>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The format of the document. Valid document types include: `JSON` and `YAML`
 {{% /md %}}</dd>
@@ -1627,7 +1339,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Document<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the document. Valid document types include: `Automation`, `Command`, `Package`, `Policy`, and `Session`
 {{% /md %}}</dd>
@@ -1636,7 +1348,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The sha1 or sha256 of the document content
 {{% /md %}}</dd>
@@ -1645,7 +1357,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hash<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}"Sha1" "Sha256". The hashing algorithm used when hashing the content.
 {{% /md %}}</dd>
@@ -1654,7 +1366,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Latest<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The latest version of the document.
 {{% /md %}}</dd>
@@ -1663,7 +1375,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the document.
 {{% /md %}}</dd>
@@ -1672,7 +1384,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS user account of the person who created the document.
 {{% /md %}}</dd>
@@ -1690,7 +1402,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentpermissions">*Document<wbr>Permissions</a></span>
+        <span class="property-type"><a href="#documentpermissions">Document<wbr>Permissions</a></span>
     </dt>
     <dd>{{% md %}}Additional Permissions to attach to the document. See Permissions below for details.
 {{% /md %}}</dd>
@@ -1699,7 +1411,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Platform<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of OS platforms compatible with this SSM document, either "Windows" or "Linux".
 {{% /md %}}</dd>
@@ -1708,7 +1420,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Schema<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The schema version of the document.
 {{% /md %}}</dd>
@@ -1717,7 +1429,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}"Creating", "Active" or "Deleting". The current status of the document.
 {{% /md %}}</dd>
@@ -1735,7 +1447,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The target type which defines the kinds of resources the document can run on. For example, /AWS::EC2::Instance. For a list of valid resource types, see AWS Resource Types Reference (http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
 {{% /md %}}</dd>
@@ -1751,7 +1463,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1759,7 +1471,7 @@ The following state arguments are supported:
             title="Optional">
         <span>attachments<wbr>Sources</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentattachmentssource">Document<wbr>Attachments<wbr>Source[]?</a></span>
+        <span class="property-type"><a href="#documentattachmentssource">Document<wbr>Attachments<wbr>Source[]</a></span>
     </dt>
     <dd>{{% md %}}One or more configuration blocks describing attachments sources to a version of a document. Defined below.
 {{% /md %}}</dd>
@@ -1768,7 +1480,7 @@ The following state arguments are supported:
             title="Optional">
         <span>content</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The JSON or YAML content of the document.
 {{% /md %}}</dd>
@@ -1777,7 +1489,7 @@ The following state arguments are supported:
             title="Optional">
         <span>created<wbr>Date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the document was created.
 {{% /md %}}</dd>
@@ -1786,7 +1498,7 @@ The following state arguments are supported:
             title="Optional">
         <span>default<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The default version of the document.
 {{% /md %}}</dd>
@@ -1795,7 +1507,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the document.
 {{% /md %}}</dd>
@@ -1804,7 +1516,7 @@ The following state arguments are supported:
             title="Optional">
         <span>document<wbr>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The format of the document. Valid document types include: `JSON` and `YAML`
 {{% /md %}}</dd>
@@ -1813,7 +1525,7 @@ The following state arguments are supported:
             title="Optional">
         <span>document<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the document. Valid document types include: `Automation`, `Command`, `Package`, `Policy`, and `Session`
 {{% /md %}}</dd>
@@ -1822,7 +1534,7 @@ The following state arguments are supported:
             title="Optional">
         <span>hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The sha1 or sha256 of the document content
 {{% /md %}}</dd>
@@ -1831,7 +1543,7 @@ The following state arguments are supported:
             title="Optional">
         <span>hash<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}"Sha1" "Sha256". The hashing algorithm used when hashing the content.
 {{% /md %}}</dd>
@@ -1840,7 +1552,7 @@ The following state arguments are supported:
             title="Optional">
         <span>latest<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The latest version of the document.
 {{% /md %}}</dd>
@@ -1849,7 +1561,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the document.
 {{% /md %}}</dd>
@@ -1858,7 +1570,7 @@ The following state arguments are supported:
             title="Optional">
         <span>owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The AWS user account of the person who created the document.
 {{% /md %}}</dd>
@@ -1867,7 +1579,7 @@ The following state arguments are supported:
             title="Optional">
         <span>parameters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentparameter">Document<wbr>Parameter[]?</a></span>
+        <span class="property-type"><a href="#documentparameter">Document<wbr>Parameter[]</a></span>
     </dt>
     <dd>{{% md %}}The parameters that are available to this document.
 {{% /md %}}</dd>
@@ -1876,7 +1588,7 @@ The following state arguments are supported:
             title="Optional">
         <span>permissions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#documentpermissions">Document<wbr>Permissions?</a></span>
+        <span class="property-type"><a href="#documentpermissions">Document<wbr>Permissions</a></span>
     </dt>
     <dd>{{% md %}}Additional Permissions to attach to the document. See Permissions below for details.
 {{% /md %}}</dd>
@@ -1885,7 +1597,7 @@ The following state arguments are supported:
             title="Optional">
         <span>platform<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of OS platforms compatible with this SSM document, either "Windows" or "Linux".
 {{% /md %}}</dd>
@@ -1894,7 +1606,7 @@ The following state arguments are supported:
             title="Optional">
         <span>schema<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The schema version of the document.
 {{% /md %}}</dd>
@@ -1903,7 +1615,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}"Creating", "Active" or "Deleting". The current status of the document.
 {{% /md %}}</dd>
@@ -1912,7 +1624,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the object.
 {{% /md %}}</dd>
@@ -1921,7 +1633,7 @@ The following state arguments are supported:
             title="Optional">
         <span>target<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The target type which defines the kinds of resources the document can run on. For example, /AWS::EC2::Instance. For a list of valid resource types, see AWS Resource Types Reference (http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
 {{% /md %}}</dd>
@@ -1937,7 +1649,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1954,7 +1666,7 @@ The following state arguments are supported:
             title="Optional">
         <span>content</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The JSON or YAML content of the document.
 {{% /md %}}</dd>
@@ -1963,7 +1675,7 @@ The following state arguments are supported:
             title="Optional">
         <span>created_<wbr>date</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The date the document was created.
 {{% /md %}}</dd>
@@ -1972,7 +1684,7 @@ The following state arguments are supported:
             title="Optional">
         <span>default_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The default version of the document.
 {{% /md %}}</dd>
@@ -1981,7 +1693,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The description of the document.
 {{% /md %}}</dd>
@@ -1990,7 +1702,7 @@ The following state arguments are supported:
             title="Optional">
         <span>document_<wbr>format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The format of the document. Valid document types include: `JSON` and `YAML`
 {{% /md %}}</dd>
@@ -1999,7 +1711,7 @@ The following state arguments are supported:
             title="Optional">
         <span>document_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of the document. Valid document types include: `Automation`, `Command`, `Package`, `Policy`, and `Session`
 {{% /md %}}</dd>
@@ -2008,7 +1720,7 @@ The following state arguments are supported:
             title="Optional">
         <span>hash</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The sha1 or sha256 of the document content
 {{% /md %}}</dd>
@@ -2017,7 +1729,7 @@ The following state arguments are supported:
             title="Optional">
         <span>hash_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}"Sha1" "Sha256". The hashing algorithm used when hashing the content.
 {{% /md %}}</dd>
@@ -2026,7 +1738,7 @@ The following state arguments are supported:
             title="Optional">
         <span>latest_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The latest version of the document.
 {{% /md %}}</dd>
@@ -2035,7 +1747,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the document.
 {{% /md %}}</dd>
@@ -2044,7 +1756,7 @@ The following state arguments are supported:
             title="Optional">
         <span>owner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The AWS user account of the person who created the document.
 {{% /md %}}</dd>
@@ -2071,7 +1783,7 @@ The following state arguments are supported:
             title="Optional">
         <span>platform_<wbr>types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of OS platforms compatible with this SSM document, either "Windows" or "Linux".
 {{% /md %}}</dd>
@@ -2080,7 +1792,7 @@ The following state arguments are supported:
             title="Optional">
         <span>schema_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The schema version of the document.
 {{% /md %}}</dd>
@@ -2089,7 +1801,7 @@ The following state arguments are supported:
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}"Creating", "Active" or "Deleting". The current status of the document.
 {{% /md %}}</dd>
@@ -2107,7 +1819,7 @@ The following state arguments are supported:
             title="Optional">
         <span>target_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The target type which defines the kinds of resources the document can run on. For example, /AWS::EC2::Instance. For a list of valid resource types, see AWS Resource Types Reference (http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
 {{% /md %}}</dd>
@@ -2132,7 +1844,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ssm?tab=doc#DocumentAttachmentsSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ssm?tab=doc#DocumentAttachmentsSourceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#DocumentAttachmentsSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#DocumentAttachmentsSourceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2145,7 +1857,15 @@ The following state arguments are supported:
             title="Required">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Values</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2153,18 +1873,10 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the document.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Values</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2177,7 +1889,15 @@ The following state arguments are supported:
             title="Required">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Values</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2185,18 +1905,10 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the document.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Values</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2209,7 +1921,15 @@ The following state arguments are supported:
             title="Required">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>values</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2217,18 +1937,10 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the document.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>values</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2241,7 +1953,15 @@ The following state arguments are supported:
             title="Required">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>values</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2249,18 +1969,10 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the document.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>values</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -2275,7 +1987,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ssm?tab=doc#DocumentParameterOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#DocumentParameterOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2288,7 +2000,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2296,7 +2008,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the document.
 {{% /md %}}</dd>
@@ -2305,7 +2017,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the document.
 {{% /md %}}</dd>
@@ -2314,7 +2026,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2329,7 +2041,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2337,7 +2049,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the document.
 {{% /md %}}</dd>
@@ -2346,7 +2058,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the document.
 {{% /md %}}</dd>
@@ -2355,7 +2067,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2370,7 +2082,7 @@ The following state arguments are supported:
             title="Optional">
         <span>default<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2378,7 +2090,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the document.
 {{% /md %}}</dd>
@@ -2387,7 +2099,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the document.
 {{% /md %}}</dd>
@@ -2396,7 +2108,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2411,7 +2123,7 @@ The following state arguments are supported:
             title="Optional">
         <span>default_<wbr>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2419,7 +2131,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The description of the document.
 {{% /md %}}</dd>
@@ -2428,7 +2140,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the document.
 {{% /md %}}</dd>
@@ -2437,7 +2149,7 @@ The following state arguments are supported:
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2454,7 +2166,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ssm?tab=doc#DocumentPermissionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ssm?tab=doc#DocumentPermissionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#DocumentPermissionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ssm?tab=doc#DocumentPermissionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2467,7 +2179,7 @@ The following state arguments are supported:
             title="Required">
         <span>Account<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2475,7 +2187,7 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2490,7 +2202,7 @@ The following state arguments are supported:
             title="Required">
         <span>Account<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2498,7 +2210,7 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2513,7 +2225,7 @@ The following state arguments are supported:
             title="Required">
         <span>account<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2521,7 +2233,7 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2536,7 +2248,7 @@ The following state arguments are supported:
             title="Required">
         <span>account_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2544,7 +2256,7 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

@@ -8,7 +8,9 @@ block_external_search_index: true
 
 Manages a V2 L7 Rule resource within OpenStack.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -50,7 +52,8 @@ const l7rule1 = new openstack.loadbalancer.L7RuleV2("l7rule_1", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/lb_l7rule_v2.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -59,7 +62,7 @@ const l7rule1 = new openstack.loadbalancer.L7RuleV2("l7rule_1", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/loadbalancer/#L7RuleV2">L7RuleV2</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/loadbalancer/#L7RuleV2Args">L7RuleV2Args</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/loadbalancer/#L7RuleV2">L7RuleV2</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/loadbalancer/#L7RuleV2Args">L7RuleV2Args</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -67,11 +70,11 @@ const l7rule1 = new openstack.loadbalancer.L7RuleV2("l7rule_1", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewL7RuleV2<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/loadbalancer?tab=doc#L7RuleV2Args">L7RuleV2Args</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/loadbalancer?tab=doc#L7RuleV2">L7RuleV2</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewL7RuleV2<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/loadbalancer?tab=doc#L7RuleV2Args">L7RuleV2Args</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/loadbalancer?tab=doc#L7RuleV2">L7RuleV2</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Loadbalancer.L7RuleV2.html">L7RuleV2</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.LoadBalancer.L7RuleV2Args.html">L7RuleV2Args</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.LoadBalancer.L7RuleV2.html">L7RuleV2</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.LoadBalancer.L7RuleV2Args.html">L7RuleV2Args</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -163,31 +166,61 @@ const l7rule1 = new openstack.loadbalancer.L7RuleV2("l7rule_1", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}The administrative state of the L7 Rule.
-A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Compare<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The comparison type for the L7 rule - can either be
 CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>L7policy<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the L7 Policy to query. Changing this creates a new
+L7 Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The L7 Rule type - can either be COOKIE, FILE\_TYPE, HEADER,
+HOST\_NAME or PATH.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value to use for the comparison. For example, the file type to
+compare.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Admin<wbr>State<wbr>Up</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The administrative state of the L7 Rule.
+A valid value is true (UP) or false (DOWN).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Invert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}When true the logic of the rule is inverted. For example, with invert
 true, equal to would become not equal to. Default is false.
@@ -197,27 +230,17 @@ true, equal to would become not equal to. Default is false.
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The key to use for the comparison. For example, the name of the cookie to
 evaluate. Valid when `type` is set to COOKIE or HEADER.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>L7policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the L7 Policy to query. Changing this creates a new
-L7 Rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an . If omitted, the
@@ -229,31 +252,11 @@ L7 Rule.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the L7 Rule.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new L7 Rule.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The L7 Rule type - can either be COOKIE, FILE\_TYPE, HEADER,
-HOST\_NAME or PATH.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value to use for the comparison. For example, the file type to
-compare.
 {{% /md %}}</dd>
 
 </dl>
@@ -263,31 +266,61 @@ compare.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}The administrative state of the L7 Rule.
-A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Compare<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The comparison type for the L7 rule - can either be
 CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>L7policy<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the L7 Policy to query. Changing this creates a new
+L7 Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The L7 Rule type - can either be COOKIE, FILE\_TYPE, HEADER,
+HOST\_NAME or PATH.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value to use for the comparison. For example, the file type to
+compare.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Admin<wbr>State<wbr>Up</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The administrative state of the L7 Rule.
+A valid value is true (UP) or false (DOWN).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Invert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}When true the logic of the rule is inverted. For example, with invert
 true, equal to would become not equal to. Default is false.
@@ -297,27 +330,17 @@ true, equal to would become not equal to. Default is false.
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The key to use for the comparison. For example, the name of the cookie to
 evaluate. Valid when `type` is set to COOKIE or HEADER.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>L7policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the L7 Policy to query. Changing this creates a new
-L7 Rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an . If omitted, the
@@ -329,31 +352,11 @@ L7 Rule.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the L7 Rule.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new L7 Rule.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The L7 Rule type - can either be COOKIE, FILE\_TYPE, HEADER,
-HOST\_NAME or PATH.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value to use for the comparison. For example, the file type to
-compare.
 {{% /md %}}</dd>
 
 </dl>
@@ -363,31 +366,61 @@ compare.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}The administrative state of the L7 Rule.
-A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>compare<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The comparison type for the L7 rule - can either be
 CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>l7policy<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the L7 Policy to query. Changing this creates a new
+L7 Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The L7 Rule type - can either be COOKIE, FILE\_TYPE, HEADER,
+HOST\_NAME or PATH.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The value to use for the comparison. For example, the file type to
+compare.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>admin<wbr>State<wbr>Up</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}The administrative state of the L7 Rule.
+A valid value is true (UP) or false (DOWN).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>invert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}When true the logic of the rule is inverted. For example, with invert
 true, equal to would become not equal to. Default is false.
@@ -397,27 +430,17 @@ true, equal to would become not equal to. Default is false.
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The key to use for the comparison. For example, the name of the cookie to
 evaluate. Valid when `type` is set to COOKIE or HEADER.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>l7policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the L7 Policy to query. Changing this creates a new
-L7 Rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an . If omitted, the
@@ -429,31 +452,11 @@ L7 Rule.
             title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the L7 Rule.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new L7 Rule.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The L7 Rule type - can either be COOKIE, FILE\_TYPE, HEADER,
-HOST\_NAME or PATH.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value to use for the comparison. For example, the file type to
-compare.
 {{% /md %}}</dd>
 
 </dl>
@@ -463,31 +466,61 @@ compare.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>admin_<wbr>state_<wbr>up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}The administrative state of the L7 Rule.
-A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>compare_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The comparison type for the L7 rule - can either be
 CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>l7policy_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the L7 Policy to query. Changing this creates a new
+L7 Rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The L7 Rule type - can either be COOKIE, FILE\_TYPE, HEADER,
+HOST\_NAME or PATH.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>value</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The value to use for the comparison. For example, the file type to
+compare.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>admin_<wbr>state_<wbr>up</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}The administrative state of the L7 Rule.
+A valid value is true (UP) or false (DOWN).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>invert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}When true the logic of the rule is inverted. For example, with invert
 true, equal to would become not equal to. Default is false.
@@ -497,27 +530,17 @@ true, equal to would become not equal to. Default is false.
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The key to use for the comparison. For example, the name of the cookie to
 evaluate. Valid when `type` is set to COOKIE or HEADER.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>l7policy_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the L7 Policy to query. Changing this creates a new
-L7 Rule.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an . If omitted, the
@@ -529,31 +552,11 @@ L7 Rule.
             title="Optional">
         <span>tenant_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the L7 Rule.  Only administrative users can specify a tenant UUID
 other than their own. Changing this creates a new L7 Rule.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The L7 Rule type - can either be COOKIE, FILE\_TYPE, HEADER,
-HOST\_NAME or PATH.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The value to use for the comparison. For example, the file type to
-compare.
 {{% /md %}}</dd>
 
 </dl>
@@ -577,104 +580,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}The administrative state of the L7 Rule.
-A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Compare<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The comparison type for the L7 rule - can either be
-CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Invert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}When true the logic of the rule is inverted. For example, with invert
-true, equal to would become not equal to. Default is false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The key to use for the comparison. For example, the name of the cookie to
-evaluate. Valid when `type` is set to COOKIE or HEADER.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>L7policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the L7 Policy to query. Changing this creates a new
-L7 Rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Listener<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Listener owning this resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an . If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-L7 Rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
-the L7 Rule.  Only administrative users can specify a tenant UUID
-other than their own. Changing this creates a new L7 Rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The L7 Rule type - can either be COOKIE, FILE\_TYPE, HEADER,
-HOST\_NAME or PATH.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value to use for the comparison. For example, the file type to
-compare.
 {{% /md %}}</dd>
 
 </dl>
@@ -686,104 +596,11 @@ compare.
 
     <dt class="property-"
             title="">
-        <span>Admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}The administrative state of the L7 Rule.
-A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Compare<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The comparison type for the L7 rule - can either be
-CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Invert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}When true the logic of the rule is inverted. For example, with invert
-true, equal to would become not equal to. Default is false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The key to use for the comparison. For example, the name of the cookie to
-evaluate. Valid when `type` is set to COOKIE or HEADER.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>L7policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the L7 Policy to query. Changing this creates a new
-L7 Rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Listener<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Listener owning this resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an . If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-L7 Rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
-the L7 Rule.  Only administrative users can specify a tenant UUID
-other than their own. Changing this creates a new L7 Rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The L7 Rule type - can either be COOKIE, FILE\_TYPE, HEADER,
-HOST\_NAME or PATH.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value to use for the comparison. For example, the file type to
-compare.
 {{% /md %}}</dd>
 
 </dl>
@@ -795,104 +612,11 @@ compare.
 
     <dt class="property-"
             title="">
-        <span>admin<wbr>State<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}The administrative state of the L7 Rule.
-A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>compare<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The comparison type for the L7 rule - can either be
-CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>invert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}When true the logic of the rule is inverted. For example, with invert
-true, equal to would become not equal to. Default is false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The key to use for the comparison. For example, the name of the cookie to
-evaluate. Valid when `type` is set to COOKIE or HEADER.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>l7policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the L7 Policy to query. Changing this creates a new
-L7 Rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>listener<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Listener owning this resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an . If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-L7 Rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
-the L7 Rule.  Only administrative users can specify a tenant UUID
-other than their own. Changing this creates a new L7 Rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The L7 Rule type - can either be COOKIE, FILE\_TYPE, HEADER,
-HOST\_NAME or PATH.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The value to use for the comparison. For example, the file type to
-compare.
 {{% /md %}}</dd>
 
 </dl>
@@ -904,104 +628,11 @@ compare.
 
     <dt class="property-"
             title="">
-        <span>admin_<wbr>state_<wbr>up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}The administrative state of the L7 Rule.
-A valid value is true (UP) or false (DOWN).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>compare_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The comparison type for the L7 rule - can either be
-CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>invert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When true the logic of the rule is inverted. For example, with invert
-true, equal to would become not equal to. Default is false.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The key to use for the comparison. For example, the name of the cookie to
-evaluate. Valid when `type` is set to COOKIE or HEADER.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>l7policy_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the L7 Policy to query. Changing this creates a new
-L7 Rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>listener_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Listener owning this resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create an . If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-L7 Rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tenant_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
-the L7 Rule.  Only administrative users can specify a tenant UUID
-other than their own. Changing this creates a new L7 Rule.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The L7 Rule type - can either be COOKIE, FILE\_TYPE, HEADER,
-HOST\_NAME or PATH.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The value to use for the comparison. For example, the file type to
-compare.
 {{% /md %}}</dd>
 
 </dl>
@@ -1029,11 +660,11 @@ Get an existing L7RuleV2 resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetL7RuleV2<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/loadbalancer?tab=doc#L7RuleV2State">L7RuleV2State</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/loadbalancer?tab=doc#L7RuleV2">L7RuleV2</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetL7RuleV2<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/loadbalancer?tab=doc#L7RuleV2State">L7RuleV2State</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/loadbalancer?tab=doc#L7RuleV2">L7RuleV2</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Loadbalancer.L7RuleV2.html">L7RuleV2</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Loadbalancer.L7RuleV2State.html">L7RuleV2State</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.LoadBalancer.L7RuleV2.html">L7RuleV2</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.LoadBalancer.L7RuleV2State.html">L7RuleV2State</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1143,7 +774,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the L7 Rule.
 A valid value is true (UP) or false (DOWN).
@@ -1153,7 +784,7 @@ A valid value is true (UP) or false (DOWN).
             title="Optional">
         <span>Compare<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The comparison type for the L7 rule - can either be
 CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
@@ -1163,7 +794,7 @@ CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
             title="Optional">
         <span>Invert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}When true the logic of the rule is inverted. For example, with invert
 true, equal to would become not equal to. Default is false.
@@ -1173,7 +804,7 @@ true, equal to would become not equal to. Default is false.
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The key to use for the comparison. For example, the name of the cookie to
 evaluate. Valid when `type` is set to COOKIE or HEADER.
@@ -1183,7 +814,7 @@ evaluate. Valid when `type` is set to COOKIE or HEADER.
             title="Optional">
         <span>L7policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the L7 Policy to query. Changing this creates a new
 L7 Rule.
@@ -1193,7 +824,7 @@ L7 Rule.
             title="Optional">
         <span>Listener<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Listener owning this resource.
 {{% /md %}}</dd>
@@ -1202,7 +833,7 @@ L7 Rule.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an . If omitted, the
@@ -1214,7 +845,7 @@ L7 Rule.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the L7 Rule.  Only administrative users can specify a tenant UUID
@@ -1225,7 +856,7 @@ other than their own. Changing this creates a new L7 Rule.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The L7 Rule type - can either be COOKIE, FILE\_TYPE, HEADER,
 HOST\_NAME or PATH.
@@ -1235,7 +866,7 @@ HOST\_NAME or PATH.
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The value to use for the comparison. For example, the file type to
 compare.
@@ -1252,7 +883,7 @@ compare.
             title="Optional">
         <span>Admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the L7 Rule.
 A valid value is true (UP) or false (DOWN).
@@ -1262,7 +893,7 @@ A valid value is true (UP) or false (DOWN).
             title="Optional">
         <span>Compare<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The comparison type for the L7 rule - can either be
 CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
@@ -1272,7 +903,7 @@ CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
             title="Optional">
         <span>Invert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}When true the logic of the rule is inverted. For example, with invert
 true, equal to would become not equal to. Default is false.
@@ -1282,7 +913,7 @@ true, equal to would become not equal to. Default is false.
             title="Optional">
         <span>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The key to use for the comparison. For example, the name of the cookie to
 evaluate. Valid when `type` is set to COOKIE or HEADER.
@@ -1292,7 +923,7 @@ evaluate. Valid when `type` is set to COOKIE or HEADER.
             title="Optional">
         <span>L7policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the L7 Policy to query. Changing this creates a new
 L7 Rule.
@@ -1302,7 +933,7 @@ L7 Rule.
             title="Optional">
         <span>Listener<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Listener owning this resource.
 {{% /md %}}</dd>
@@ -1311,7 +942,7 @@ L7 Rule.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an . If omitted, the
@@ -1323,7 +954,7 @@ L7 Rule.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the L7 Rule.  Only administrative users can specify a tenant UUID
@@ -1334,7 +965,7 @@ other than their own. Changing this creates a new L7 Rule.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The L7 Rule type - can either be COOKIE, FILE\_TYPE, HEADER,
 HOST\_NAME or PATH.
@@ -1344,7 +975,7 @@ HOST\_NAME or PATH.
             title="Optional">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The value to use for the comparison. For example, the file type to
 compare.
@@ -1361,7 +992,7 @@ compare.
             title="Optional">
         <span>admin<wbr>State<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the L7 Rule.
 A valid value is true (UP) or false (DOWN).
@@ -1371,7 +1002,7 @@ A valid value is true (UP) or false (DOWN).
             title="Optional">
         <span>compare<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The comparison type for the L7 rule - can either be
 CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
@@ -1381,7 +1012,7 @@ CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
             title="Optional">
         <span>invert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}When true the logic of the rule is inverted. For example, with invert
 true, equal to would become not equal to. Default is false.
@@ -1391,7 +1022,7 @@ true, equal to would become not equal to. Default is false.
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The key to use for the comparison. For example, the name of the cookie to
 evaluate. Valid when `type` is set to COOKIE or HEADER.
@@ -1401,7 +1032,7 @@ evaluate. Valid when `type` is set to COOKIE or HEADER.
             title="Optional">
         <span>l7policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the L7 Policy to query. Changing this creates a new
 L7 Rule.
@@ -1411,7 +1042,7 @@ L7 Rule.
             title="Optional">
         <span>listener<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Listener owning this resource.
 {{% /md %}}</dd>
@@ -1420,7 +1051,7 @@ L7 Rule.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an . If omitted, the
@@ -1432,7 +1063,7 @@ L7 Rule.
             title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the L7 Rule.  Only administrative users can specify a tenant UUID
@@ -1443,7 +1074,7 @@ other than their own. Changing this creates a new L7 Rule.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The L7 Rule type - can either be COOKIE, FILE\_TYPE, HEADER,
 HOST\_NAME or PATH.
@@ -1453,7 +1084,7 @@ HOST\_NAME or PATH.
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The value to use for the comparison. For example, the file type to
 compare.
@@ -1470,7 +1101,7 @@ compare.
             title="Optional">
         <span>admin_<wbr>state_<wbr>up</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the L7 Rule.
 A valid value is true (UP) or false (DOWN).
@@ -1480,7 +1111,7 @@ A valid value is true (UP) or false (DOWN).
             title="Optional">
         <span>compare_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The comparison type for the L7 rule - can either be
 CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
@@ -1490,7 +1121,7 @@ CONTAINS, STARTS\_WITH, ENDS_WITH, EQUAL_TO or REGEX
             title="Optional">
         <span>invert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}When true the logic of the rule is inverted. For example, with invert
 true, equal to would become not equal to. Default is false.
@@ -1500,7 +1131,7 @@ true, equal to would become not equal to. Default is false.
             title="Optional">
         <span>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The key to use for the comparison. For example, the name of the cookie to
 evaluate. Valid when `type` is set to COOKIE or HEADER.
@@ -1510,7 +1141,7 @@ evaluate. Valid when `type` is set to COOKIE or HEADER.
             title="Optional">
         <span>l7policy_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the L7 Policy to query. Changing this creates a new
 L7 Rule.
@@ -1520,7 +1151,7 @@ L7 Rule.
             title="Optional">
         <span>listener_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Listener owning this resource.
 {{% /md %}}</dd>
@@ -1529,7 +1160,7 @@ L7 Rule.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create an . If omitted, the
@@ -1541,7 +1172,7 @@ L7 Rule.
             title="Optional">
         <span>tenant_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Required for admins. The UUID of the tenant who owns
 the L7 Rule.  Only administrative users can specify a tenant UUID
@@ -1552,7 +1183,7 @@ other than their own. Changing this creates a new L7 Rule.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The L7 Rule type - can either be COOKIE, FILE\_TYPE, HEADER,
 HOST\_NAME or PATH.
@@ -1562,7 +1193,7 @@ HOST\_NAME or PATH.
             title="Optional">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The value to use for the comparison. For example, the file type to
 compare.
@@ -1587,6 +1218,7 @@ compare.
 	<dd><a href="https://github.com/pulumi/pulumi-openstack">https://github.com/pulumi/pulumi-openstack</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
 </dl>
 

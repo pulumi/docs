@@ -19,7 +19,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Manages a HPC Cache.</p>
 <blockquote>
 <div><p><strong>Note</strong>: During the first several months of the GA release, a request must be made to the Azure HPC Cache team to add your subscription to the access list before it can be used to create a cache instance. Fill out <a class="reference external" href="https://aka.ms/onboard-hpc-cache">this form</a> to request access.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hpc_cache.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hpc_cache.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -142,9 +141,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.hpc.CacheBlobTarget">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.hpc.</code><code class="sig-name descname">CacheBlobTarget</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cache_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_path=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">storage_container_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.CacheBlobTarget" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a Blob Target within a HPC Cache.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hpc_cache_blob_target.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hpc_cache_blob_target.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -251,9 +247,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azure.hpc.CacheNfsTarget">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.hpc.</code><code class="sig-name descname">CacheNfsTarget</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cache_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_junctions=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">target_host_name=None</em>, <em class="sig-param">usage_model=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.hpc.CacheNfsTarget" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a NFS Target within a HPC Cache.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hpc_cache_nfs_target.html.markdown">https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/hpc_cache_nfs_target.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

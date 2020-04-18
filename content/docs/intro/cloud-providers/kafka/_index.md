@@ -13,7 +13,7 @@ menu:
 The Kafka provider for Pulumi can be used to provision any of the resources available for Kafka.
 The Kafka provider must be configured with credentials to deploy and update resources in Kafka.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/kafka" >}}) for complete details of the available Kafka provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/kafka" >}}) for complete details of the available Kafka provider APIs.
 
 ## Setup
 

@@ -19,9 +19,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Manages a Github Auth mount in a Vault server. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/github.html">Vault
 documentation</a> for more
 information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_auth_backend.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_auth_backend.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -58,11 +55,8 @@ value of this field. Specified in seconds.</p></li>
 on the auth method, this list may be supplemented by user/group/other values.</p></li>
 <li><p><strong>token_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – (Optional) The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.</p></li>
-<li><p><strong>token_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Optional) The type of token that should be generated. Can be <code class="docutils literal notranslate"><span class="pre">service</span></code>,
-<code class="docutils literal notranslate"><span class="pre">batch</span></code>, or <code class="docutils literal notranslate"><span class="pre">default</span></code> to use the mount’s tuned default (which unless changed will be
-<code class="docutils literal notranslate"><span class="pre">service</span></code> tokens). For token store roles, there are two additional possibilities:
-<code class="docutils literal notranslate"><span class="pre">default-service</span></code> and <code class="docutils literal notranslate"><span class="pre">default-batch</span></code> which specify the type to return unless the client
-requests a different type at generation time.</p></li>
+<li><p><strong>token_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of tokens that should be returned by
+the mount. Valid values are “default-service”, “default-batch”, “service”, “batch”.</p></li>
 <li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>(Optional; Deprecated, use <code class="docutils literal notranslate"><span class="pre">token_ttl</span></code> instead if you are running Vault &gt;= 1.2) The TTL period of tokens issued
 using this role. This must be a valid <a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">duration string</a>.</p>
 </p></li>
@@ -71,18 +65,24 @@ using this role. This must be a valid <a class="reference external" href="https:
 </dl>
 <p>The <strong>tune</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedResponseHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">auditNonHmacRequestKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">auditNonHmacResponseKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultLeaseTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">listing_visibility</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxLeaseTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">passthroughRequestHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">token_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Optional) The type of token that should be generated. Can be <code class="docutils literal notranslate"><span class="pre">service</span></code>,
-<code class="docutils literal notranslate"><span class="pre">batch</span></code>, or <code class="docutils literal notranslate"><span class="pre">default</span></code> to use the mount’s tuned default (which unless changed will be
-<code class="docutils literal notranslate"><span class="pre">service</span></code> tokens). For token store roles, there are two additional possibilities:
-<code class="docutils literal notranslate"><span class="pre">default-service</span></code> and <code class="docutils literal notranslate"><span class="pre">default-batch</span></code> which specify the type to return unless the client
-requests a different type at generation time.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedResponseHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of headers to whitelist and allowing
+a plugin to include them in the response.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auditNonHmacRequestKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the list of keys that will
+not be HMAC’d by audit devices in the request data object.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auditNonHmacResponseKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the list of keys that will
+not be HMAC’d by audit devices in the response data object.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultLeaseTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the default time-to-live.
+If set, this overrides the global default.
+Must be a valid <a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">duration string</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">listing_visibility</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether to show this mount in
+the UI-specific listing endpoint. Valid values are “unauth” or “hidden”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxLeaseTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the maximum time-to-live.
+If set, this overrides the global default.
+Must be a valid <a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">duration string</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">passthroughRequestHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of headers to whitelist and
+pass from the request to the backend.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">token_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of tokens that should be returned by
+the mount. Valid values are “default-service”, “default-batch”, “service”, “batch”.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_vault.github.AuthBackend.accessor">
@@ -189,11 +189,8 @@ Its current value will be referenced at renewal time.</p>
 <dl class="attribute">
 <dt id="pulumi_vault.github.AuthBackend.token_type">
 <code class="sig-name descname">token_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.github.AuthBackend.token_type" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Optional) The type of token that should be generated. Can be <code class="docutils literal notranslate"><span class="pre">service</span></code>,
-<code class="docutils literal notranslate"><span class="pre">batch</span></code>, or <code class="docutils literal notranslate"><span class="pre">default</span></code> to use the mount’s tuned default (which unless changed will be
-<code class="docutils literal notranslate"><span class="pre">service</span></code> tokens). For token store roles, there are two additional possibilities:
-<code class="docutils literal notranslate"><span class="pre">default-service</span></code> and <code class="docutils literal notranslate"><span class="pre">default-batch</span></code> which specify the type to return unless the client
-requests a different type at generation time.</p>
+<dd><p>Specifies the type of tokens that should be returned by
+the mount. Valid values are “default-service”, “default-batch”, “service”, “batch”.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -250,11 +247,8 @@ value of this field. Specified in seconds.</p></li>
 on the auth method, this list may be supplemented by user/group/other values.</p></li>
 <li><p><strong>token_ttl</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – (Optional) The incremental lifetime for generated tokens in number of seconds.
 Its current value will be referenced at renewal time.</p></li>
-<li><p><strong>token_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Optional) The type of token that should be generated. Can be <code class="docutils literal notranslate"><span class="pre">service</span></code>,
-<code class="docutils literal notranslate"><span class="pre">batch</span></code>, or <code class="docutils literal notranslate"><span class="pre">default</span></code> to use the mount’s tuned default (which unless changed will be
-<code class="docutils literal notranslate"><span class="pre">service</span></code> tokens). For token store roles, there are two additional possibilities:
-<code class="docutils literal notranslate"><span class="pre">default-service</span></code> and <code class="docutils literal notranslate"><span class="pre">default-batch</span></code> which specify the type to return unless the client
-requests a different type at generation time.</p></li>
+<li><p><strong>token_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies the type of tokens that should be returned by
+the mount. Valid values are “default-service”, “default-batch”, “service”, “batch”.</p></li>
 <li><p><strong>ttl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>(Optional; Deprecated, use <code class="docutils literal notranslate"><span class="pre">token_ttl</span></code> instead if you are running Vault &gt;= 1.2) The TTL period of tokens issued
 using this role. This must be a valid <a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">duration string</a>.</p>
 </p></li>
@@ -263,18 +257,24 @@ using this role. This must be a valid <a class="reference external" href="https:
 </dl>
 <p>The <strong>tune</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allowedResponseHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">auditNonHmacRequestKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">auditNonHmacResponseKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">defaultLeaseTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">listing_visibility</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">maxLeaseTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">passthroughRequestHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">token_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - (Optional) The type of token that should be generated. Can be <code class="docutils literal notranslate"><span class="pre">service</span></code>,
-<code class="docutils literal notranslate"><span class="pre">batch</span></code>, or <code class="docutils literal notranslate"><span class="pre">default</span></code> to use the mount’s tuned default (which unless changed will be
-<code class="docutils literal notranslate"><span class="pre">service</span></code> tokens). For token store roles, there are two additional possibilities:
-<code class="docutils literal notranslate"><span class="pre">default-service</span></code> and <code class="docutils literal notranslate"><span class="pre">default-batch</span></code> which specify the type to return unless the client
-requests a different type at generation time.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowedResponseHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of headers to whitelist and allowing
+a plugin to include them in the response.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auditNonHmacRequestKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the list of keys that will
+not be HMAC’d by audit devices in the request data object.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">auditNonHmacResponseKeys</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Specifies the list of keys that will
+not be HMAC’d by audit devices in the response data object.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultLeaseTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the default time-to-live.
+If set, this overrides the global default.
+Must be a valid <a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">duration string</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">listing_visibility</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether to show this mount in
+the UI-specific listing endpoint. Valid values are “unauth” or “hidden”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxLeaseTtl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the maximum time-to-live.
+If set, this overrides the global default.
+Must be a valid <a class="reference external" href="https://golang.org/pkg/time/#ParseDuration">duration string</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">passthroughRequestHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - List of headers to whitelist and
+pass from the request to the backend.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">token_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the type of tokens that should be returned by
+the mount. Valid values are “default-service”, “default-batch”, “service”, “batch”.</p></li>
 </ul>
 </dd></dl>
 
@@ -322,9 +322,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages policy mappings for Github Teams authenticated via Github. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/github.html">Vault
 documentation</a> for more
 information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_team.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_team.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -495,9 +492,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages policy mappings for Github Users authenticated via Github. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/github.html">Vault
 documentation</a> for more
 information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_user.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/github_user.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

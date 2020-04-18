@@ -21,7 +21,9 @@ connections.
 
 > **NOTE:** vSphere DRS requires a vSphere Enterprise Plus license.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 The example below creates a virtual machine in a cluster using the
 [`vsphere..VirtualMachine`][tf-vsphere-vm-resource] resource, creating the
@@ -42,25 +44,25 @@ machine, ensuring that it does not move.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const dc = pulumi.output(vsphere.getDatacenter({
+const dc = vsphere.getDatacenter({
     name: "dc1",
-}, { async: true }));
-const datastore = dc.apply(dc => vsphere.getDatastore({
+});
+const datastore = vsphere.getDatastore({
     datacenterId: dc.id,
     name: "datastore1",
-}, { async: true }));
-const cluster = dc.apply(dc => vsphere.getComputeCluster({
+});
+const cluster = vsphere.getComputeCluster({
     datacenterId: dc.id,
     name: "cluster1",
-}, { async: true }));
-const host = dc.apply(dc => vsphere.getHost({
+});
+const host = vsphere.getHost({
     datacenterId: dc.id,
     name: "esxi1",
-}, { async: true }));
-const network = dc.apply(dc => vsphere.getNetwork({
+});
+const network = vsphere.getNetwork({
     datacenterId: dc.id,
     name: "network1",
-}, { async: true }));
+});
 const vm = new vsphere.VirtualMachine("vm", {
     datastoreId: datastore.id,
     disks: [{
@@ -83,7 +85,8 @@ const drsVmOverride = new vsphere.DrsVmOverride("drs_vm_override", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-vsphere/blob/master/website/docs/r/drs_vm_override.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -92,7 +95,7 @@ const drsVmOverride = new vsphere.DrsVmOverride("drs_vm_override", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DrsVmOverride">DrsVmOverride</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DrsVmOverrideArgs">DrsVmOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DrsVmOverride">DrsVmOverride</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vsphere/#DrsVmOverrideArgs">DrsVmOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -100,11 +103,11 @@ const drsVmOverride = new vsphere.DrsVmOverride("drs_vm_override", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDrsVmOverride<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#DrsVmOverrideArgs">DrsVmOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#DrsVmOverride">DrsVmOverride</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDrsVmOverride<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DrsVmOverrideArgs">DrsVmOverrideArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DrsVmOverride">DrsVmOverride</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..DrsVmOverride.html">DrsVmOverride</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.DrsVmOverrideArgs.html">DrsVmOverrideArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.DrsVmOverride.html">DrsVmOverride</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.VSphere.DrsVmOverrideArgs.html">DrsVmOverrideArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -200,18 +203,28 @@ const drsVmOverride = new vsphere.DrsVmOverride("drs_vm_override", {
             title="Required">
         <span>Compute<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Virtual<wbr>Machine<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The UUID of the virtual machine to create
+the override for.  Forces a new resource if changed.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Drs<wbr>Automation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Overrides the automation level for this virtual
 machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
@@ -222,20 +235,10 @@ machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
             title="Optional">
         <span>Drs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Overrides the default DRS setting for this virtual
 machine. Can be either `true` or `false`. Default: `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the virtual machine to create
-the override for.  Forces a new resource if changed.
 {{% /md %}}</dd>
 
 </dl>
@@ -249,18 +252,28 @@ the override for.  Forces a new resource if changed.
             title="Required">
         <span>Compute<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Virtual<wbr>Machine<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The UUID of the virtual machine to create
+the override for.  Forces a new resource if changed.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Drs<wbr>Automation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Overrides the automation level for this virtual
 machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
@@ -271,20 +284,10 @@ machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
             title="Optional">
         <span>Drs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Overrides the default DRS setting for this virtual
 machine. Can be either `true` or `false`. Default: `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the virtual machine to create
-the override for.  Forces a new resource if changed.
 {{% /md %}}</dd>
 
 </dl>
@@ -298,18 +301,28 @@ the override for.  Forces a new resource if changed.
             title="Required">
         <span>compute<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
 resource if changed.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>virtual<wbr>Machine<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The UUID of the virtual machine to create
+the override for.  Forces a new resource if changed.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>drs<wbr>Automation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Overrides the automation level for this virtual
 machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
@@ -320,20 +333,10 @@ machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
             title="Optional">
         <span>drs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Overrides the default DRS setting for this virtual
 machine. Can be either `true` or `false`. Default: `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>virtual<wbr>Machine<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the virtual machine to create
-the override for.  Forces a new resource if changed.
 {{% /md %}}</dd>
 
 </dl>
@@ -347,254 +350,48 @@ the override for.  Forces a new resource if changed.
             title="Required">
         <span>compute_<wbr>cluster_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
 resource if changed.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>drs_<wbr>automation_<wbr>level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Overrides the automation level for this virtual
-machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
-`fullyAutomated`. Default: `manual`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>drs_<wbr>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Overrides the default DRS setting for this virtual
-machine. Can be either `true` or `false`. Default: `false`.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>virtual_<wbr>machine_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## DrsVmOverride Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Compute<wbr>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
-resource if changed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Drs<wbr>Automation<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Overrides the automation level for this virtual
-machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
-`fullyAutomated`. Default: `manual`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Drs<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Overrides the default DRS setting for this virtual
-machine. Can be either `true` or `false`. Default: `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the virtual machine to create
-the override for.  Forces a new resource if changed.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Compute<wbr>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
-resource if changed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Drs<wbr>Automation<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Overrides the automation level for this virtual
-machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
-`fullyAutomated`. Default: `manual`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Drs<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Overrides the default DRS setting for this virtual
-machine. Can be either `true` or `false`. Default: `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Virtual<wbr>Machine<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the virtual machine to create
-the override for.  Forces a new resource if changed.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>compute<wbr>Cluster<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
-resource if changed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>drs<wbr>Automation<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Overrides the automation level for this virtual
-machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
-`fullyAutomated`. Default: `manual`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>drs<wbr>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Overrides the default DRS setting for this virtual
-machine. Can be either `true` or `false`. Default: `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>virtual<wbr>Machine<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the virtual machine to create
-the override for.  Forces a new resource if changed.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>compute_<wbr>cluster_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The [managed object reference
-ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
-resource if changed.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>drs_<wbr>automation_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Overrides the automation level for this virtual
 machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
 `fullyAutomated`. Default: `manual`.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>drs_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Overrides the default DRS setting for this virtual
 machine. Can be either `true` or `false`. Default: `false`.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>virtual_<wbr>machine_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the virtual machine to create
-the override for.  Forces a new resource if changed.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -618,11 +415,11 @@ Get an existing DrsVmOverride resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDrsVmOverride<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#DrsVmOverrideState">DrsVmOverrideState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/go/vsphere/?tab=doc#DrsVmOverride">DrsVmOverride</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDrsVmOverride<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DrsVmOverrideState">DrsVmOverrideState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vsphere/sdk/v2/go/vsphere/?tab=doc#DrsVmOverride">DrsVmOverride</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..DrsVmOverride.html">DrsVmOverride</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..DrsVmOverrideState.html">DrsVmOverrideState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere.DrsVmOverride.html">DrsVmOverride</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vsphere/Pulumi.Vsphere..DrsVmOverrideState.html">DrsVmOverrideState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -732,7 +529,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Compute<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
@@ -743,7 +540,7 @@ resource if changed.
             title="Optional">
         <span>Drs<wbr>Automation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Overrides the automation level for this virtual
 machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
@@ -754,7 +551,7 @@ machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
             title="Optional">
         <span>Drs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Overrides the default DRS setting for this virtual
 machine. Can be either `true` or `false`. Default: `false`.
@@ -764,7 +561,7 @@ machine. Can be either `true` or `false`. Default: `false`.
             title="Optional">
         <span>Virtual<wbr>Machine<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
@@ -781,7 +578,7 @@ the override for.  Forces a new resource if changed.
             title="Optional">
         <span>Compute<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
@@ -792,7 +589,7 @@ resource if changed.
             title="Optional">
         <span>Drs<wbr>Automation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Overrides the automation level for this virtual
 machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
@@ -803,7 +600,7 @@ machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
             title="Optional">
         <span>Drs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Overrides the default DRS setting for this virtual
 machine. Can be either `true` or `false`. Default: `false`.
@@ -813,7 +610,7 @@ machine. Can be either `true` or `false`. Default: `false`.
             title="Optional">
         <span>Virtual<wbr>Machine<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
@@ -830,7 +627,7 @@ the override for.  Forces a new resource if changed.
             title="Optional">
         <span>compute<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
@@ -841,7 +638,7 @@ resource if changed.
             title="Optional">
         <span>drs<wbr>Automation<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Overrides the automation level for this virtual
 machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
@@ -852,7 +649,7 @@ machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
             title="Optional">
         <span>drs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Overrides the default DRS setting for this virtual
 machine. Can be either `true` or `false`. Default: `false`.
@@ -862,7 +659,7 @@ machine. Can be either `true` or `false`. Default: `false`.
             title="Optional">
         <span>virtual<wbr>Machine<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
@@ -879,7 +676,7 @@ the override for.  Forces a new resource if changed.
             title="Optional">
         <span>compute_<wbr>cluster_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The [managed object reference
 ID][docs-about-morefs] of the cluster to put the override in.  Forces a new
@@ -890,7 +687,7 @@ resource if changed.
             title="Optional">
         <span>drs_<wbr>automation_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Overrides the automation level for this virtual
 machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
@@ -901,7 +698,7 @@ machine in the cluster. Can be one of `manual`, `partiallyAutomated`, or
             title="Optional">
         <span>drs_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Overrides the default DRS setting for this virtual
 machine. Can be either `true` or `false`. Default: `false`.
@@ -911,7 +708,7 @@ machine. Can be either `true` or `false`. Default: `false`.
             title="Optional">
         <span>virtual_<wbr>machine_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The UUID of the virtual machine to create
 the override for.  Forces a new resource if changed.
@@ -936,6 +733,7 @@ the override for.  Forces a new resource if changed.
 	<dd><a href="https://github.com/pulumi/pulumi-vsphere">https://github.com/pulumi/pulumi-vsphere</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
 </dl>
 

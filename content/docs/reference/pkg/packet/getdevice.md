@@ -12,7 +12,9 @@ Provides a Packet device datasource.
  the raw state as plain-text.
 [Read more about sensitive data in state](https://www.terraform.io/docs/state/sensitive-data.html).
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-packet/blob/master/website/docs/d/device.html.markdown.
+
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -34,7 +36,7 @@ Provides a Packet device datasource.
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDevice<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#GetDeviceArgs">GetDeviceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#LookupDeviceResult">LookupDeviceResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupDevice<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#GetDeviceArgs">GetDeviceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#LookupDeviceResult">LookupDeviceResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -57,7 +59,7 @@ The following arguments are supported:
             title="Optional">
         <span>Device<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Device ID
 {{% /md %}}</dd>
@@ -66,7 +68,7 @@ The following arguments are supported:
             title="Optional">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The device name
 {{% /md %}}</dd>
@@ -75,7 +77,7 @@ The following arguments are supported:
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the project in which the devices exists
 {{% /md %}}</dd>
@@ -91,7 +93,7 @@ The following arguments are supported:
             title="Optional">
         <span>Device<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Device ID
 {{% /md %}}</dd>
@@ -100,7 +102,7 @@ The following arguments are supported:
             title="Optional">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The device name
 {{% /md %}}</dd>
@@ -109,7 +111,7 @@ The following arguments are supported:
             title="Optional">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the project in which the devices exists
 {{% /md %}}</dd>
@@ -125,7 +127,7 @@ The following arguments are supported:
             title="Optional">
         <span>device<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Device ID
 {{% /md %}}</dd>
@@ -134,7 +136,7 @@ The following arguments are supported:
             title="Optional">
         <span>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The device name
 {{% /md %}}</dd>
@@ -143,7 +145,7 @@ The following arguments are supported:
             title="Optional">
         <span>project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the project in which the devices exists
 {{% /md %}}</dd>
@@ -159,7 +161,7 @@ The following arguments are supported:
             title="Optional">
         <span>device_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Device ID
 {{% /md %}}</dd>
@@ -168,7 +170,7 @@ The following arguments are supported:
             title="Optional">
         <span>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The device name
 {{% /md %}}</dd>
@@ -177,7 +179,7 @@ The following arguments are supported:
             title="Optional">
         <span>project_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The id of the project in which the devices exists
 {{% /md %}}</dd>
@@ -206,7 +208,7 @@ The following output properties are available:
             title="">
         <span>Access<wbr>Private<wbr>Ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
 {{% /md %}}</dd>
@@ -215,7 +217,7 @@ The following output properties are available:
             title="">
         <span>Access<wbr>Public<wbr>Ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv4 management IP assigned to the device
 {{% /md %}}</dd>
@@ -224,7 +226,7 @@ The following output properties are available:
             title="">
         <span>Access<wbr>Public<wbr>Ipv6</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv6 management IP assigned to the device
 {{% /md %}}</dd>
@@ -233,7 +235,7 @@ The following output properties are available:
             title="">
         <span>Always<wbr>Pxe</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -241,7 +243,7 @@ The following output properties are available:
             title="">
         <span>Billing<wbr>Cycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The billing cycle of the device (monthly or hourly)
 {{% /md %}}</dd>
@@ -250,7 +252,7 @@ The following output properties are available:
             title="">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Description string for the device
 {{% /md %}}</dd>
@@ -259,7 +261,7 @@ The following output properties are available:
             title="">
         <span>Device<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -267,7 +269,7 @@ The following output properties are available:
             title="">
         <span>Facility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
 {{% /md %}}</dd>
@@ -276,7 +278,7 @@ The following output properties are available:
             title="">
         <span>Hardware<wbr>Reservation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The id of hardware reservation which this device occupies
 {{% /md %}}</dd>
@@ -285,7 +287,7 @@ The following output properties are available:
             title="">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -293,7 +295,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -302,7 +304,7 @@ The following output properties are available:
             title="">
         <span>Ipxe<wbr>Script<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -310,7 +312,7 @@ The following output properties are available:
             title="">
         <span>Network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}L2 network type of the device, one of "layer3", "layer2-bonded", "layer2-individual", "hybrid"
 {{% /md %}}</dd>
@@ -333,7 +335,7 @@ The fields of the network attributes are:
             title="">
         <span>Operating<wbr>System</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The operating system running on the device
 {{% /md %}}</dd>
@@ -342,7 +344,7 @@ The fields of the network attributes are:
             title="">
         <span>Plan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The hardware config of the device
 {{% /md %}}</dd>
@@ -360,7 +362,7 @@ The fields of the network attributes are:
             title="">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -368,7 +370,7 @@ The fields of the network attributes are:
             title="">
         <span>Public<wbr>Ipv4Subnet<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -376,7 +378,7 @@ The fields of the network attributes are:
             title="">
         <span>Root<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Root password to the server (if still available)
 {{% /md %}}</dd>
@@ -385,7 +387,7 @@ The fields of the network attributes are:
             title="">
         <span>Ssh<wbr>Key<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user or project SSH keys
 {{% /md %}}</dd>
@@ -394,7 +396,7 @@ The fields of the network attributes are:
             title="">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the device
 {{% /md %}}</dd>
@@ -403,7 +405,7 @@ The fields of the network attributes are:
             title="">
         <span>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -411,7 +413,7 @@ The fields of the network attributes are:
             title="">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
 {{% /md %}}</dd>
@@ -427,7 +429,7 @@ The fields of the network attributes are:
             title="">
         <span>Access<wbr>Private<wbr>Ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
 {{% /md %}}</dd>
@@ -436,7 +438,7 @@ The fields of the network attributes are:
             title="">
         <span>Access<wbr>Public<wbr>Ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv4 management IP assigned to the device
 {{% /md %}}</dd>
@@ -445,7 +447,7 @@ The fields of the network attributes are:
             title="">
         <span>Access<wbr>Public<wbr>Ipv6</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv6 management IP assigned to the device
 {{% /md %}}</dd>
@@ -454,7 +456,7 @@ The fields of the network attributes are:
             title="">
         <span>Always<wbr>Pxe</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -462,7 +464,7 @@ The fields of the network attributes are:
             title="">
         <span>Billing<wbr>Cycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The billing cycle of the device (monthly or hourly)
 {{% /md %}}</dd>
@@ -471,7 +473,7 @@ The fields of the network attributes are:
             title="">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Description string for the device
 {{% /md %}}</dd>
@@ -480,7 +482,7 @@ The fields of the network attributes are:
             title="">
         <span>Device<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -488,7 +490,7 @@ The fields of the network attributes are:
             title="">
         <span>Facility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
 {{% /md %}}</dd>
@@ -497,7 +499,7 @@ The fields of the network attributes are:
             title="">
         <span>Hardware<wbr>Reservation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The id of hardware reservation which this device occupies
 {{% /md %}}</dd>
@@ -506,7 +508,7 @@ The fields of the network attributes are:
             title="">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -514,7 +516,7 @@ The fields of the network attributes are:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -523,7 +525,7 @@ The fields of the network attributes are:
             title="">
         <span>Ipxe<wbr>Script<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -531,7 +533,7 @@ The fields of the network attributes are:
             title="">
         <span>Network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}L2 network type of the device, one of "layer3", "layer2-bonded", "layer2-individual", "hybrid"
 {{% /md %}}</dd>
@@ -554,7 +556,7 @@ The fields of the network attributes are:
             title="">
         <span>Operating<wbr>System</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The operating system running on the device
 {{% /md %}}</dd>
@@ -563,7 +565,7 @@ The fields of the network attributes are:
             title="">
         <span>Plan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The hardware config of the device
 {{% /md %}}</dd>
@@ -581,7 +583,7 @@ The fields of the network attributes are:
             title="">
         <span>Project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -589,7 +591,7 @@ The fields of the network attributes are:
             title="">
         <span>Public<wbr>Ipv4Subnet<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -597,7 +599,7 @@ The fields of the network attributes are:
             title="">
         <span>Root<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Root password to the server (if still available)
 {{% /md %}}</dd>
@@ -606,7 +608,7 @@ The fields of the network attributes are:
             title="">
         <span>Ssh<wbr>Key<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user or project SSH keys
 {{% /md %}}</dd>
@@ -615,7 +617,7 @@ The fields of the network attributes are:
             title="">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the device
 {{% /md %}}</dd>
@@ -624,7 +626,7 @@ The fields of the network attributes are:
             title="">
         <span>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -632,7 +634,7 @@ The fields of the network attributes are:
             title="">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
 {{% /md %}}</dd>
@@ -648,7 +650,7 @@ The fields of the network attributes are:
             title="">
         <span>access<wbr>Private<wbr>Ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
 {{% /md %}}</dd>
@@ -657,7 +659,7 @@ The fields of the network attributes are:
             title="">
         <span>access<wbr>Public<wbr>Ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv4 management IP assigned to the device
 {{% /md %}}</dd>
@@ -666,7 +668,7 @@ The fields of the network attributes are:
             title="">
         <span>access<wbr>Public<wbr>Ipv6</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ipv6 management IP assigned to the device
 {{% /md %}}</dd>
@@ -675,7 +677,7 @@ The fields of the network attributes are:
             title="">
         <span>always<wbr>Pxe</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -683,7 +685,7 @@ The fields of the network attributes are:
             title="">
         <span>billing<wbr>Cycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The billing cycle of the device (monthly or hourly)
 {{% /md %}}</dd>
@@ -692,7 +694,7 @@ The fields of the network attributes are:
             title="">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Description string for the device
 {{% /md %}}</dd>
@@ -701,7 +703,7 @@ The fields of the network attributes are:
             title="">
         <span>device<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -709,7 +711,7 @@ The fields of the network attributes are:
             title="">
         <span>facility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
 {{% /md %}}</dd>
@@ -718,7 +720,7 @@ The fields of the network attributes are:
             title="">
         <span>hardware<wbr>Reservation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The id of hardware reservation which this device occupies
 {{% /md %}}</dd>
@@ -727,7 +729,7 @@ The fields of the network attributes are:
             title="">
         <span>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -735,7 +737,7 @@ The fields of the network attributes are:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -744,7 +746,7 @@ The fields of the network attributes are:
             title="">
         <span>ipxe<wbr>Script<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -752,7 +754,7 @@ The fields of the network attributes are:
             title="">
         <span>network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}L2 network type of the device, one of "layer3", "layer2-bonded", "layer2-individual", "hybrid"
 {{% /md %}}</dd>
@@ -775,7 +777,7 @@ The fields of the network attributes are:
             title="">
         <span>operating<wbr>System</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The operating system running on the device
 {{% /md %}}</dd>
@@ -784,7 +786,7 @@ The fields of the network attributes are:
             title="">
         <span>plan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The hardware config of the device
 {{% /md %}}</dd>
@@ -802,7 +804,7 @@ The fields of the network attributes are:
             title="">
         <span>project<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -810,7 +812,7 @@ The fields of the network attributes are:
             title="">
         <span>public<wbr>Ipv4Subnet<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -818,7 +820,7 @@ The fields of the network attributes are:
             title="">
         <span>root<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Root password to the server (if still available)
 {{% /md %}}</dd>
@@ -827,7 +829,7 @@ The fields of the network attributes are:
             title="">
         <span>ssh<wbr>Key<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user or project SSH keys
 {{% /md %}}</dd>
@@ -836,7 +838,7 @@ The fields of the network attributes are:
             title="">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The state of the device
 {{% /md %}}</dd>
@@ -845,7 +847,7 @@ The fields of the network attributes are:
             title="">
         <span>storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -853,7 +855,7 @@ The fields of the network attributes are:
             title="">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
 {{% /md %}}</dd>
@@ -869,7 +871,7 @@ The fields of the network attributes are:
             title="">
         <span>access_<wbr>private_<wbr>ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ipv4 private IP assigned to the device
 {{% /md %}}</dd>
@@ -878,7 +880,7 @@ The fields of the network attributes are:
             title="">
         <span>access_<wbr>public_<wbr>ipv4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ipv4 management IP assigned to the device
 {{% /md %}}</dd>
@@ -887,7 +889,7 @@ The fields of the network attributes are:
             title="">
         <span>access_<wbr>public_<wbr>ipv6</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ipv6 management IP assigned to the device
 {{% /md %}}</dd>
@@ -896,7 +898,7 @@ The fields of the network attributes are:
             title="">
         <span>always_<wbr>pxe</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -904,7 +906,7 @@ The fields of the network attributes are:
             title="">
         <span>billing_<wbr>cycle</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The billing cycle of the device (monthly or hourly)
 {{% /md %}}</dd>
@@ -913,7 +915,7 @@ The fields of the network attributes are:
             title="">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Description string for the device
 {{% /md %}}</dd>
@@ -922,7 +924,7 @@ The fields of the network attributes are:
             title="">
         <span>device_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -930,7 +932,7 @@ The fields of the network attributes are:
             title="">
         <span>facility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
 {{% /md %}}</dd>
@@ -939,7 +941,7 @@ The fields of the network attributes are:
             title="">
         <span>hardware_<wbr>reservation_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The id of hardware reservation which this device occupies
 {{% /md %}}</dd>
@@ -948,7 +950,7 @@ The fields of the network attributes are:
             title="">
         <span>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -956,7 +958,7 @@ The fields of the network attributes are:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -965,7 +967,7 @@ The fields of the network attributes are:
             title="">
         <span>ipxe_<wbr>script_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -973,7 +975,7 @@ The fields of the network attributes are:
             title="">
         <span>network_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}L2 network type of the device, one of "layer3", "layer2-bonded", "layer2-individual", "hybrid"
 {{% /md %}}</dd>
@@ -996,7 +998,7 @@ The fields of the network attributes are:
             title="">
         <span>operating_<wbr>system</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The operating system running on the device
 {{% /md %}}</dd>
@@ -1005,7 +1007,7 @@ The fields of the network attributes are:
             title="">
         <span>plan</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The hardware config of the device
 {{% /md %}}</dd>
@@ -1023,7 +1025,7 @@ The fields of the network attributes are:
             title="">
         <span>project_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1031,7 +1033,7 @@ The fields of the network attributes are:
             title="">
         <span>public_<wbr>ipv4_<wbr>subnet_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1039,7 +1041,7 @@ The fields of the network attributes are:
             title="">
         <span>root_<wbr>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Root password to the server (if still available)
 {{% /md %}}</dd>
@@ -1048,7 +1050,7 @@ The fields of the network attributes are:
             title="">
         <span>ssh_<wbr>key_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}List of IDs of SSH keys deployed in the device, can be both user or project SSH keys
 {{% /md %}}</dd>
@@ -1057,7 +1059,7 @@ The fields of the network attributes are:
             title="">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The state of the device
 {{% /md %}}</dd>
@@ -1066,7 +1068,7 @@ The fields of the network attributes are:
             title="">
         <span>storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1074,7 +1076,7 @@ The fields of the network attributes are:
             title="">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Tags attached to the device
 {{% /md %}}</dd>
@@ -1097,7 +1099,7 @@ The fields of the network attributes are:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#GetDeviceNetwork">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#GetDeviceNetwork">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1110,7 +1112,7 @@ The fields of the network attributes are:
             title="Required">
         <span>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address string
 {{% /md %}}</dd>
@@ -1119,7 +1121,7 @@ The fields of the network attributes are:
             title="Required">
         <span>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Bit length of the network mask of the address
 {{% /md %}}</dd>
@@ -1128,7 +1130,7 @@ The fields of the network attributes are:
             title="Required">
         <span>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}IP version - "4" or "6"
 {{% /md %}}</dd>
@@ -1137,7 +1139,7 @@ The fields of the network attributes are:
             title="Required">
         <span>Gateway</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Address of router
 {{% /md %}}</dd>
@@ -1146,7 +1148,7 @@ The fields of the network attributes are:
             title="Required">
         <span>Public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the address is routable from the Internet
 {{% /md %}}</dd>
@@ -1162,7 +1164,7 @@ The fields of the network attributes are:
             title="Required">
         <span>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address string
 {{% /md %}}</dd>
@@ -1171,7 +1173,7 @@ The fields of the network attributes are:
             title="Required">
         <span>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Bit length of the network mask of the address
 {{% /md %}}</dd>
@@ -1180,7 +1182,7 @@ The fields of the network attributes are:
             title="Required">
         <span>Family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}IP version - "4" or "6"
 {{% /md %}}</dd>
@@ -1189,7 +1191,7 @@ The fields of the network attributes are:
             title="Required">
         <span>Gateway</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Address of router
 {{% /md %}}</dd>
@@ -1198,7 +1200,7 @@ The fields of the network attributes are:
             title="Required">
         <span>Public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the address is routable from the Internet
 {{% /md %}}</dd>
@@ -1214,7 +1216,7 @@ The fields of the network attributes are:
             title="Required">
         <span>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address string
 {{% /md %}}</dd>
@@ -1223,7 +1225,7 @@ The fields of the network attributes are:
             title="Required">
         <span>cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Bit length of the network mask of the address
 {{% /md %}}</dd>
@@ -1232,7 +1234,7 @@ The fields of the network attributes are:
             title="Required">
         <span>family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}IP version - "4" or "6"
 {{% /md %}}</dd>
@@ -1241,7 +1243,7 @@ The fields of the network attributes are:
             title="Required">
         <span>gateway</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Address of router
 {{% /md %}}</dd>
@@ -1250,7 +1252,7 @@ The fields of the network attributes are:
             title="Required">
         <span>public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the address is routable from the Internet
 {{% /md %}}</dd>
@@ -1266,7 +1268,7 @@ The fields of the network attributes are:
             title="Required">
         <span>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}IPv4 or IPv6 address string
 {{% /md %}}</dd>
@@ -1275,7 +1277,7 @@ The fields of the network attributes are:
             title="Required">
         <span>cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Bit length of the network mask of the address
 {{% /md %}}</dd>
@@ -1284,7 +1286,7 @@ The fields of the network attributes are:
             title="Required">
         <span>family</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}IP version - "4" or "6"
 {{% /md %}}</dd>
@@ -1293,7 +1295,7 @@ The fields of the network attributes are:
             title="Required">
         <span>gateway</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Address of router
 {{% /md %}}</dd>
@@ -1302,7 +1304,7 @@ The fields of the network attributes are:
             title="Required">
         <span>public</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the address is routable from the Internet
 {{% /md %}}</dd>
@@ -1320,7 +1322,7 @@ The fields of the network attributes are:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/go/packet/?tab=doc#GetDevicePort">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-packet/sdk/v2/go/packet/?tab=doc#GetDevicePort">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1333,7 +1335,7 @@ The fields of the network attributes are:
             title="Required">
         <span>Bonded</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether this port is part of a bond in bonded network setup
 {{% /md %}}</dd>
@@ -1342,7 +1344,7 @@ The fields of the network attributes are:
             title="Required">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the port
 {{% /md %}}</dd>
@@ -1351,7 +1353,7 @@ The fields of the network attributes are:
             title="Required">
         <span>Mac</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}MAC address assigned to the port
 {{% /md %}}</dd>
@@ -1360,7 +1362,7 @@ The fields of the network attributes are:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the port (e.g. `eth0`, or `bond0`)
 {{% /md %}}</dd>
@@ -1369,7 +1371,7 @@ The fields of the network attributes are:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Type of the port (e.g. `NetworkPort` or `NetworkBondPort`)
 {{% /md %}}</dd>
@@ -1385,7 +1387,7 @@ The fields of the network attributes are:
             title="Required">
         <span>Bonded</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether this port is part of a bond in bonded network setup
 {{% /md %}}</dd>
@@ -1394,7 +1396,7 @@ The fields of the network attributes are:
             title="Required">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the port
 {{% /md %}}</dd>
@@ -1403,7 +1405,7 @@ The fields of the network attributes are:
             title="Required">
         <span>Mac</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}MAC address assigned to the port
 {{% /md %}}</dd>
@@ -1412,7 +1414,7 @@ The fields of the network attributes are:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the port (e.g. `eth0`, or `bond0`)
 {{% /md %}}</dd>
@@ -1421,7 +1423,7 @@ The fields of the network attributes are:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of the port (e.g. `NetworkPort` or `NetworkBondPort`)
 {{% /md %}}</dd>
@@ -1437,7 +1439,7 @@ The fields of the network attributes are:
             title="Required">
         <span>bonded</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether this port is part of a bond in bonded network setup
 {{% /md %}}</dd>
@@ -1446,7 +1448,7 @@ The fields of the network attributes are:
             title="Required">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the port
 {{% /md %}}</dd>
@@ -1455,7 +1457,7 @@ The fields of the network attributes are:
             title="Required">
         <span>mac</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}MAC address assigned to the port
 {{% /md %}}</dd>
@@ -1464,7 +1466,7 @@ The fields of the network attributes are:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the port (e.g. `eth0`, or `bond0`)
 {{% /md %}}</dd>
@@ -1473,7 +1475,7 @@ The fields of the network attributes are:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of the port (e.g. `NetworkPort` or `NetworkBondPort`)
 {{% /md %}}</dd>
@@ -1489,7 +1491,7 @@ The fields of the network attributes are:
             title="Required">
         <span>bonded</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether this port is part of a bond in bonded network setup
 {{% /md %}}</dd>
@@ -1498,7 +1500,7 @@ The fields of the network attributes are:
             title="Required">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the port
 {{% /md %}}</dd>
@@ -1507,7 +1509,7 @@ The fields of the network attributes are:
             title="Required">
         <span>mac</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}MAC address assigned to the port
 {{% /md %}}</dd>
@@ -1516,7 +1518,7 @@ The fields of the network attributes are:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the port (e.g. `eth0`, or `bond0`)
 {{% /md %}}</dd>
@@ -1525,7 +1527,7 @@ The fields of the network attributes are:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Type of the port (e.g. `NetworkPort` or `NetworkBondPort`)
 {{% /md %}}</dd>

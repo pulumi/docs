@@ -8,7 +8,9 @@ block_external_search_index: true
 
 Creates a routing entry on a OpenStack V2 router.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -33,16 +35,16 @@ const routerRoute1 = new openstack.networking.RouterRoute("router_route_1", {
     destinationCidr: "10.0.1.0/24",
     nextHop: "192.168.199.254",
     routerId: router1.id,
-}, { dependsOn: [int1] });
+}, {dependsOn: [int1]});
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## Notes
 
 The `next_hop` IP address must be directly reachable from the router at the ``openstack.networking.RouterRoute``
 resource creation time.  You can ensure that by explicitly specifying a dependency on the ``openstack.networking.RouterInterface``
 resource that connects the next hop to the router, as in the example above.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_router_route_v2.html.markdown.
 
 
 
@@ -51,7 +53,7 @@ resource that connects the next hop to the router, as in the example above.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#RouterRoute">RouterRoute</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#RouterRouteArgs">RouterRouteArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#RouterRoute">RouterRoute</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#RouterRouteArgs">RouterRouteArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -59,11 +61,11 @@ resource that connects the next hop to the router, as in the example above.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRouterRoute<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#RouterRouteArgs">RouterRouteArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#RouterRoute">RouterRoute</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewRouterRoute<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#RouterRouteArgs">RouterRouteArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#RouterRoute">RouterRoute</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Networking.RouterRoute.html">RouterRoute</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Networking.RouterRouteArgs.html">RouterRouteArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Networking.RouterRoute.html">RouterRoute</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Networking.RouterRouteArgs.html">RouterRouteArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -159,7 +161,7 @@ resource that connects the next hop to the router, as in the example above.
             title="Required">
         <span>Destination<wbr>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}CIDR block to match on the packet’s destination IP. Changing
 this creates a new routing entry.
@@ -169,9 +171,19 @@ this creates a new routing entry.
             title="Required">
         <span>Next<wbr>Hop</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}IP address of the next hop gateway.  Changing
+this creates a new routing entry.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Router<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}ID of the router this routing entry belongs to. Changing
 this creates a new routing entry.
 {{% /md %}}</dd>
 
@@ -179,22 +191,12 @@ this creates a new routing entry.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to configure a routing entry on a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 routing entry.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Router<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the router this routing entry belongs to. Changing
-this creates a new routing entry.
 {{% /md %}}</dd>
 
 </dl>
@@ -208,7 +210,7 @@ this creates a new routing entry.
             title="Required">
         <span>Destination<wbr>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}CIDR block to match on the packet’s destination IP. Changing
 this creates a new routing entry.
@@ -218,9 +220,19 @@ this creates a new routing entry.
             title="Required">
         <span>Next<wbr>Hop</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}IP address of the next hop gateway.  Changing
+this creates a new routing entry.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Router<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ID of the router this routing entry belongs to. Changing
 this creates a new routing entry.
 {{% /md %}}</dd>
 
@@ -228,22 +240,12 @@ this creates a new routing entry.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to configure a routing entry on a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 routing entry.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Router<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the router this routing entry belongs to. Changing
-this creates a new routing entry.
 {{% /md %}}</dd>
 
 </dl>
@@ -257,7 +259,7 @@ this creates a new routing entry.
             title="Required">
         <span>destination<wbr>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}CIDR block to match on the packet’s destination IP. Changing
 this creates a new routing entry.
@@ -267,9 +269,19 @@ this creates a new routing entry.
             title="Required">
         <span>next<wbr>Hop</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}IP address of the next hop gateway.  Changing
+this creates a new routing entry.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>router<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ID of the router this routing entry belongs to. Changing
 this creates a new routing entry.
 {{% /md %}}</dd>
 
@@ -277,22 +289,12 @@ this creates a new routing entry.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to configure a routing entry on a router. If omitted, the
 `region` argument of the provider is used. Changing this creates a new
 routing entry.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>router<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the router this routing entry belongs to. Changing
-this creates a new routing entry.
 {{% /md %}}</dd>
 
 </dl>
@@ -306,7 +308,7 @@ this creates a new routing entry.
             title="Required">
         <span>destination_<wbr>cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}CIDR block to match on the packet’s destination IP. Changing
 this creates a new routing entry.
@@ -316,9 +318,19 @@ this creates a new routing entry.
             title="Required">
         <span>next_<wbr>hop</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}IP address of the next hop gateway.  Changing
+this creates a new routing entry.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>router_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}ID of the router this routing entry belongs to. Changing
 this creates a new routing entry.
 {{% /md %}}</dd>
 
@@ -326,7 +338,7 @@ this creates a new routing entry.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to configure a routing entry on a router. If omitted, the
@@ -334,226 +346,10 @@ A networking client is needed to configure a routing entry on a router. If omitt
 routing entry.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>router_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the router this routing entry belongs to. Changing
-this creates a new routing entry.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## RouterRoute Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Destination<wbr>Cidr</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}CIDR block to match on the packet’s destination IP. Changing
-this creates a new routing entry.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Next<wbr>Hop</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}IP address of the next hop gateway.  Changing
-this creates a new routing entry.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to configure a routing entry on a router. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-routing entry.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Router<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the router this routing entry belongs to. Changing
-this creates a new routing entry.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Destination<wbr>Cidr</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}CIDR block to match on the packet’s destination IP. Changing
-this creates a new routing entry.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Next<wbr>Hop</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}IP address of the next hop gateway.  Changing
-this creates a new routing entry.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to configure a routing entry on a router. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-routing entry.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Router<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the router this routing entry belongs to. Changing
-this creates a new routing entry.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>destination<wbr>Cidr</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}CIDR block to match on the packet’s destination IP. Changing
-this creates a new routing entry.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>next<wbr>Hop</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}IP address of the next hop gateway.  Changing
-this creates a new routing entry.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to configure a routing entry on a router. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-routing entry.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>router<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}ID of the router this routing entry belongs to. Changing
-this creates a new routing entry.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>destination_<wbr>cidr</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}CIDR block to match on the packet’s destination IP. Changing
-this creates a new routing entry.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>next_<wbr>hop</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}IP address of the next hop gateway.  Changing
-this creates a new routing entry.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 networking client.
-A networking client is needed to configure a routing entry on a router. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-routing entry.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>router_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the router this routing entry belongs to. Changing
-this creates a new routing entry.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -577,7 +373,7 @@ Get an existing RouterRoute resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRouterRoute<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#RouterRouteState">RouterRouteState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#RouterRoute">RouterRoute</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetRouterRoute<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#RouterRouteState">RouterRouteState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#RouterRoute">RouterRoute</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -691,7 +487,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Destination<wbr>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}CIDR block to match on the packet’s destination IP. Changing
 this creates a new routing entry.
@@ -701,7 +497,7 @@ this creates a new routing entry.
             title="Optional">
         <span>Next<wbr>Hop</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}IP address of the next hop gateway.  Changing
 this creates a new routing entry.
@@ -711,7 +507,7 @@ this creates a new routing entry.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to configure a routing entry on a router. If omitted, the
@@ -723,7 +519,7 @@ routing entry.
             title="Optional">
         <span>Router<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the router this routing entry belongs to. Changing
 this creates a new routing entry.
@@ -740,7 +536,7 @@ this creates a new routing entry.
             title="Optional">
         <span>Destination<wbr>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}CIDR block to match on the packet’s destination IP. Changing
 this creates a new routing entry.
@@ -750,7 +546,7 @@ this creates a new routing entry.
             title="Optional">
         <span>Next<wbr>Hop</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}IP address of the next hop gateway.  Changing
 this creates a new routing entry.
@@ -760,7 +556,7 @@ this creates a new routing entry.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to configure a routing entry on a router. If omitted, the
@@ -772,7 +568,7 @@ routing entry.
             title="Optional">
         <span>Router<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the router this routing entry belongs to. Changing
 this creates a new routing entry.
@@ -789,7 +585,7 @@ this creates a new routing entry.
             title="Optional">
         <span>destination<wbr>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}CIDR block to match on the packet’s destination IP. Changing
 this creates a new routing entry.
@@ -799,7 +595,7 @@ this creates a new routing entry.
             title="Optional">
         <span>next<wbr>Hop</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}IP address of the next hop gateway.  Changing
 this creates a new routing entry.
@@ -809,7 +605,7 @@ this creates a new routing entry.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to configure a routing entry on a router. If omitted, the
@@ -821,7 +617,7 @@ routing entry.
             title="Optional">
         <span>router<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the router this routing entry belongs to. Changing
 this creates a new routing entry.
@@ -838,7 +634,7 @@ this creates a new routing entry.
             title="Optional">
         <span>destination_<wbr>cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}CIDR block to match on the packet’s destination IP. Changing
 this creates a new routing entry.
@@ -848,7 +644,7 @@ this creates a new routing entry.
             title="Optional">
         <span>next_<wbr>hop</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}IP address of the next hop gateway.  Changing
 this creates a new routing entry.
@@ -858,7 +654,7 @@ this creates a new routing entry.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 networking client.
 A networking client is needed to configure a routing entry on a router. If omitted, the
@@ -870,7 +666,7 @@ routing entry.
             title="Optional">
         <span>router_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the router this routing entry belongs to. Changing
 this creates a new routing entry.
@@ -895,6 +691,7 @@ this creates a new routing entry.
 	<dd><a href="https://github.com/pulumi/pulumi-openstack">https://github.com/pulumi/pulumi-openstack</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
 </dl>
 

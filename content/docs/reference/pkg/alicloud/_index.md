@@ -11,11 +11,6 @@ menu:
 
 A Pulumi package for creating and managing AliCloud resources.
 
-> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud)
-> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
-> first check the [`pulumi/pulumi-alicloud` repo](https://github.com/pulumi/pulumi-alicloud/issues); however, if that doesn't turn up anything,
-> please consult the source [`terraform-providers/terraform-provider-alicloud` repo](https://github.com/terraform-providers/terraform-provider-alicloud/issues).
-
 <h3>Modules</h3>
 <ul class="api">
     <li><a href="actiontrail/" title="actiontrail"><span class="symbol module"></span>actiontrail</a></li>
@@ -82,6 +77,9 @@ A Pulumi package for creating and managing AliCloud resources.
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
+	<dt>Version</dt>
+	<dd>2.0.0</dd>
 </dl>
 

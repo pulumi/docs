@@ -35,7 +35,7 @@ VPC.
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpc<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupVpcArgs">LookupVpcArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LookupVpcResult">LookupVpcResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpc<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LookupVpcArgs">LookupVpcArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#LookupVpcResult">LookupVpcResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -58,7 +58,7 @@ The following arguments are supported:
             title="Optional">
         <span>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The cidr block of the desired VPC.
 {{% /md %}}</dd>
@@ -67,7 +67,7 @@ The following arguments are supported:
             title="Optional">
         <span>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean constraint on whether the desired VPC is
 the default VPC for the region.
@@ -77,7 +77,7 @@ the default VPC for the region.
             title="Optional">
         <span>Dhcp<wbr>Options<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The DHCP options id of the desired VPC.
 {{% /md %}}</dd>
@@ -86,7 +86,7 @@ the default VPC for the region.
             title="Optional">
         <span>Filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcfilter">List&lt;Get<wbr>Vpc<wbr>Filter<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getvpcfilter">List&lt;Get<wbr>Vpc<wbr>Filter<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
 {{% /md %}}</dd>
@@ -95,7 +95,7 @@ the default VPC for the region.
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the specific VPC to retrieve.
 {{% /md %}}</dd>
@@ -104,7 +104,7 @@ the default VPC for the region.
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The current state of the desired VPC.
 Can be either `"pending"` or `"available"`.
@@ -114,7 +114,7 @@ Can be either `"pending"` or `"available"`.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags, each pair of which must exactly match
 a pair on the desired VPC.
@@ -131,7 +131,7 @@ a pair on the desired VPC.
             title="Optional">
         <span>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The cidr block of the desired VPC.
 {{% /md %}}</dd>
@@ -140,7 +140,7 @@ a pair on the desired VPC.
             title="Optional">
         <span>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean constraint on whether the desired VPC is
 the default VPC for the region.
@@ -150,7 +150,7 @@ the default VPC for the region.
             title="Optional">
         <span>Dhcp<wbr>Options<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The DHCP options id of the desired VPC.
 {{% /md %}}</dd>
@@ -168,7 +168,7 @@ the default VPC for the region.
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the specific VPC to retrieve.
 {{% /md %}}</dd>
@@ -177,7 +177,7 @@ the default VPC for the region.
             title="Optional">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The current state of the desired VPC.
 Can be either `"pending"` or `"available"`.
@@ -204,7 +204,7 @@ a pair on the desired VPC.
             title="Optional">
         <span>cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The cidr block of the desired VPC.
 {{% /md %}}</dd>
@@ -213,7 +213,7 @@ a pair on the desired VPC.
             title="Optional">
         <span>default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Boolean constraint on whether the desired VPC is
 the default VPC for the region.
@@ -223,7 +223,7 @@ the default VPC for the region.
             title="Optional">
         <span>dhcp<wbr>Options<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The DHCP options id of the desired VPC.
 {{% /md %}}</dd>
@@ -232,7 +232,7 @@ the default VPC for the region.
             title="Optional">
         <span>filters</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcfilter">Get<wbr>Vpc<wbr>Filter[]?</a></span>
+        <span class="property-type"><a href="#getvpcfilter">Get<wbr>Vpc<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}Custom filter block as described below.
 {{% /md %}}</dd>
@@ -241,7 +241,7 @@ the default VPC for the region.
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the specific VPC to retrieve.
 {{% /md %}}</dd>
@@ -250,7 +250,7 @@ the default VPC for the region.
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The current state of the desired VPC.
 Can be either `"pending"` or `"available"`.
@@ -260,7 +260,7 @@ Can be either `"pending"` or `"available"`.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags, each pair of which must exactly match
 a pair on the desired VPC.
@@ -277,7 +277,7 @@ a pair on the desired VPC.
             title="Optional">
         <span>cidr_<wbr>block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The cidr block of the desired VPC.
 {{% /md %}}</dd>
@@ -286,7 +286,7 @@ a pair on the desired VPC.
             title="Optional">
         <span>default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean constraint on whether the desired VPC is
 the default VPC for the region.
@@ -296,7 +296,7 @@ the default VPC for the region.
             title="Optional">
         <span>dhcp_<wbr>options_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The DHCP options id of the desired VPC.
 {{% /md %}}</dd>
@@ -314,7 +314,7 @@ the default VPC for the region.
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The id of the specific VPC to retrieve.
 {{% /md %}}</dd>
@@ -323,7 +323,7 @@ the default VPC for the region.
             title="Optional">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The current state of the desired VPC.
 Can be either `"pending"` or `"available"`.
@@ -363,7 +363,7 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of VPC
 {{% /md %}}</dd>
@@ -372,7 +372,7 @@ The following output properties are available:
             title="">
         <span>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The CIDR block for the association.
 {{% /md %}}</dd>
@@ -389,7 +389,7 @@ The following output properties are available:
             title="">
         <span>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -397,7 +397,7 @@ The following output properties are available:
             title="">
         <span>Dhcp<wbr>Options<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -405,7 +405,7 @@ The following output properties are available:
             title="">
         <span>Enable<wbr>Dns<wbr>Hostnames</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the VPC has DNS hostname support
 {{% /md %}}</dd>
@@ -414,24 +414,16 @@ The following output properties are available:
             title="">
         <span>Enable<wbr>Dns<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the VPC has DNS support
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcfilter">List&lt;Get<wbr>Vpc<wbr>Filter&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -439,7 +431,7 @@ The following output properties are available:
             title="">
         <span>Instance<wbr>Tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The allowed tenancy of instances launched into the
 selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
@@ -449,7 +441,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>Ipv6Association<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
 {{% /md %}}</dd>
@@ -458,7 +450,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>Ipv6Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR block.
 {{% /md %}}</dd>
@@ -467,7 +459,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>Main<wbr>Route<wbr>Table<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with this VPC.
 {{% /md %}}</dd>
@@ -476,7 +468,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the VPC.
 {{% /md %}}</dd>
@@ -485,7 +477,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The State of the association.
 {{% /md %}}</dd>
@@ -494,7 +486,15 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpcfilter">List&lt;Get<wbr>Vpc<wbr>Filter&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -509,7 +509,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of VPC
 {{% /md %}}</dd>
@@ -518,7 +518,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The CIDR block for the association.
 {{% /md %}}</dd>
@@ -535,7 +535,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -543,7 +543,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>Dhcp<wbr>Options<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -551,7 +551,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>Enable<wbr>Dns<wbr>Hostnames</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the VPC has DNS hostname support
 {{% /md %}}</dd>
@@ -560,24 +560,16 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>Enable<wbr>Dns<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the VPC has DNS support
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcfilter">[]Get<wbr>Vpc<wbr>Filter</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -585,7 +577,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>Instance<wbr>Tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The allowed tenancy of instances launched into the
 selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
@@ -595,7 +587,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>Ipv6Association<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
 {{% /md %}}</dd>
@@ -604,7 +596,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>Ipv6Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR block.
 {{% /md %}}</dd>
@@ -613,7 +605,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>Main<wbr>Route<wbr>Table<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with this VPC.
 {{% /md %}}</dd>
@@ -622,7 +614,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the VPC.
 {{% /md %}}</dd>
@@ -631,7 +623,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The State of the association.
 {{% /md %}}</dd>
@@ -641,6 +633,14 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span>Tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpcfilter">[]Get<wbr>Vpc<wbr>Filter</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -655,7 +655,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of VPC
 {{% /md %}}</dd>
@@ -664,7 +664,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The CIDR block for the association.
 {{% /md %}}</dd>
@@ -681,7 +681,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -689,7 +689,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>dhcp<wbr>Options<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -697,7 +697,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>enable<wbr>Dns<wbr>Hostnames</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the VPC has DNS hostname support
 {{% /md %}}</dd>
@@ -706,24 +706,16 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>enable<wbr>Dns<wbr>Support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the VPC has DNS support
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcfilter">Get<wbr>Vpc<wbr>Filter[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -731,7 +723,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>instance<wbr>Tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The allowed tenancy of instances launched into the
 selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
@@ -741,7 +733,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>ipv6Association<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
 {{% /md %}}</dd>
@@ -750,7 +742,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>ipv6Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR block.
 {{% /md %}}</dd>
@@ -759,7 +751,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>main<wbr>Route<wbr>Table<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with this VPC.
 {{% /md %}}</dd>
@@ -768,7 +760,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the VPC.
 {{% /md %}}</dd>
@@ -777,7 +769,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The State of the association.
 {{% /md %}}</dd>
@@ -787,6 +779,14 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span>tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpcfilter">Get<wbr>Vpc<wbr>Filter[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -801,7 +801,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of VPC
 {{% /md %}}</dd>
@@ -810,7 +810,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>cidr_<wbr>block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CIDR block for the association.
 {{% /md %}}</dd>
@@ -827,7 +827,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -835,7 +835,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>dhcp_<wbr>options_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -843,7 +843,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>enable_<wbr>dns_<wbr>hostnames</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the VPC has DNS hostname support
 {{% /md %}}</dd>
@@ -852,24 +852,16 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>enable_<wbr>dns_<wbr>support</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the VPC has DNS support
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>filters</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getvpcfilter">List[Get<wbr>Vpc<wbr>Filter]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -877,7 +869,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>instance_<wbr>tenancy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The allowed tenancy of instances launched into the
 selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
@@ -887,7 +879,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>ipv6_<wbr>association_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
 {{% /md %}}</dd>
@@ -896,7 +888,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>ipv6_<wbr>cidr_<wbr>block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 CIDR block.
 {{% /md %}}</dd>
@@ -905,7 +897,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>main_<wbr>route_<wbr>table_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the main route table associated with this VPC.
 {{% /md %}}</dd>
@@ -914,7 +906,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>owner_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the VPC.
 {{% /md %}}</dd>
@@ -923,7 +915,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The State of the association.
 {{% /md %}}</dd>
@@ -933,6 +925,14 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
         <span>tags</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>filters</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getvpcfilter">List[Get<wbr>Vpc<wbr>Filter]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -954,7 +954,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#GetVpcCidrBlockAssociation">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetVpcCidrBlockAssociation">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -967,7 +967,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="Required">
         <span>Association<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The association ID for the the IPv4 CIDR block.
 {{% /md %}}</dd>
@@ -976,7 +976,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="Required">
         <span>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The cidr block of the desired VPC.
 {{% /md %}}</dd>
@@ -985,7 +985,7 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
             title="Required">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The current state of the desired VPC.
 Can be either `"pending"` or `"available"`.
@@ -1002,7 +1002,7 @@ Can be either `"pending"` or `"available"`.
             title="Required">
         <span>Association<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The association ID for the the IPv4 CIDR block.
 {{% /md %}}</dd>
@@ -1011,7 +1011,7 @@ Can be either `"pending"` or `"available"`.
             title="Required">
         <span>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The cidr block of the desired VPC.
 {{% /md %}}</dd>
@@ -1020,7 +1020,7 @@ Can be either `"pending"` or `"available"`.
             title="Required">
         <span>State</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The current state of the desired VPC.
 Can be either `"pending"` or `"available"`.
@@ -1037,7 +1037,7 @@ Can be either `"pending"` or `"available"`.
             title="Required">
         <span>association<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The association ID for the the IPv4 CIDR block.
 {{% /md %}}</dd>
@@ -1046,7 +1046,7 @@ Can be either `"pending"` or `"available"`.
             title="Required">
         <span>cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The cidr block of the desired VPC.
 {{% /md %}}</dd>
@@ -1055,7 +1055,7 @@ Can be either `"pending"` or `"available"`.
             title="Required">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The current state of the desired VPC.
 Can be either `"pending"` or `"available"`.
@@ -1072,7 +1072,7 @@ Can be either `"pending"` or `"available"`.
             title="Required">
         <span>association_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The association ID for the the IPv4 CIDR block.
 {{% /md %}}</dd>
@@ -1081,7 +1081,7 @@ Can be either `"pending"` or `"available"`.
             title="Required">
         <span>cidr_<wbr>block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The cidr block of the desired VPC.
 {{% /md %}}</dd>
@@ -1090,7 +1090,7 @@ Can be either `"pending"` or `"available"`.
             title="Required">
         <span>state</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The current state of the desired VPC.
 Can be either `"pending"` or `"available"`.
@@ -1109,7 +1109,7 @@ Can be either `"pending"` or `"available"`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#GetVpcFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#GetVpcFilter">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetVpcFilterArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#GetVpcFilter">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1122,7 +1122,7 @@ Can be either `"pending"` or `"available"`.
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the field to filter by, as defined by
 [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeVpcs.html).
@@ -1132,7 +1132,7 @@ Can be either `"pending"` or `"available"`.
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given field.
 A VPC will be selected if any one of the given values matches.
@@ -1149,7 +1149,7 @@ A VPC will be selected if any one of the given values matches.
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the field to filter by, as defined by
 [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeVpcs.html).
@@ -1159,7 +1159,7 @@ A VPC will be selected if any one of the given values matches.
             title="Required">
         <span>Values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given field.
 A VPC will be selected if any one of the given values matches.
@@ -1176,7 +1176,7 @@ A VPC will be selected if any one of the given values matches.
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the field to filter by, as defined by
 [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeVpcs.html).
@@ -1186,7 +1186,7 @@ A VPC will be selected if any one of the given values matches.
             title="Required">
         <span>values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given field.
 A VPC will be selected if any one of the given values matches.
@@ -1203,7 +1203,7 @@ A VPC will be selected if any one of the given values matches.
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the field to filter by, as defined by
 [the underlying AWS API](http://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeVpcs.html).
@@ -1213,7 +1213,7 @@ A VPC will be selected if any one of the given values matches.
             title="Required">
         <span>values</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of values that are accepted for the given field.
 A VPC will be selected if any one of the given values matches.

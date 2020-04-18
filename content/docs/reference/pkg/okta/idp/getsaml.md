@@ -8,18 +8,21 @@ block_external_search_index: true
 
 Use this data source to retrieve a SAML IdP from Okta.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
-const example = pulumi.output(okta.idp.getSaml({
+const example = okta.idp.getSaml({
     label: "Example App",
-}, { async: true }));
+});
 ```
 
-> This content is derived from https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/idp_saml.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -41,7 +44,7 @@ const example = pulumi.output(okta.idp.getSaml({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSaml<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/idp?tab=doc#LookupSamlArgs">LookupSamlArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/go/okta/idp?tab=doc#LookupSamlResult">LookupSamlResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupSaml<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/idp?tab=doc#LookupSamlArgs">LookupSamlArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-okta/sdk/v2/go/okta/idp?tab=doc#LookupSamlResult">LookupSamlResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -64,7 +67,7 @@ The following arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the idp to retrieve, conflicts with `name`.
 {{% /md %}}</dd>
@@ -73,7 +76,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the idp to retrieve, conflicts with `id`.
 {{% /md %}}</dd>
@@ -89,7 +92,7 @@ The following arguments are supported:
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the idp to retrieve, conflicts with `name`.
 {{% /md %}}</dd>
@@ -98,7 +101,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the idp to retrieve, conflicts with `id`.
 {{% /md %}}</dd>
@@ -114,7 +117,7 @@ The following arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the idp to retrieve, conflicts with `name`.
 {{% /md %}}</dd>
@@ -123,7 +126,7 @@ The following arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the idp to retrieve, conflicts with `id`.
 {{% /md %}}</dd>
@@ -139,7 +142,7 @@ The following arguments are supported:
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The id of the idp to retrieve, conflicts with `name`.
 {{% /md %}}</dd>
@@ -148,7 +151,7 @@ The following arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the idp to retrieve, conflicts with `id`.
 {{% /md %}}</dd>
@@ -177,7 +180,7 @@ The following output properties are available:
             title="">
         <span>Acs<wbr>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}HTTP binding used to receive a SAMLResponse message from the IdP.
 {{% /md %}}</dd>
@@ -186,7 +189,7 @@ The following output properties are available:
             title="">
         <span>Acs<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Determines whether to publish an instance-specific (trust) or organization (shared) ACS endpoint in the SAML metadata.
 {{% /md %}}</dd>
@@ -195,25 +198,16 @@ The following output properties are available:
             title="">
         <span>Audience</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}URI that identifies the target Okta IdP instance (SP)
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}id of idp.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Issuer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}URI that identifies the issuer (IdP).
 {{% /md %}}</dd>
@@ -222,7 +216,7 @@ The following output properties are available:
             title="">
         <span>Issuer<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}indicates whether Okta uses the original Okta org domain URL, or a custom domain URL in the request to the IdP.
 {{% /md %}}</dd>
@@ -231,25 +225,16 @@ The following output properties are available:
             title="">
         <span>Kid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Key ID reference to the IdP's X.509 signature certificate.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}name of the idp.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Sso<wbr>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}single sign on binding.
 {{% /md %}}</dd>
@@ -258,7 +243,7 @@ The following output properties are available:
             title="">
         <span>Sso<wbr>Destination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}SSO request binding, HTTP-POST or HTTP-REDIRECT.
 {{% /md %}}</dd>
@@ -267,7 +252,7 @@ The following output properties are available:
             title="">
         <span>Sso<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}single sign on url.
 {{% /md %}}</dd>
@@ -276,7 +261,7 @@ The following output properties are available:
             title="">
         <span>Subject<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}regular expression pattern used to filter untrusted IdP usernames.
 {{% /md %}}</dd>
@@ -285,7 +270,7 @@ The following output properties are available:
             title="">
         <span>Subject<wbr>Formats</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Expression to generate or transform a unique username for the IdP user.
 {{% /md %}}</dd>
@@ -294,9 +279,27 @@ The following output properties are available:
             title="">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}type of idp.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}id of idp.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}name of the idp.
 {{% /md %}}</dd>
 
 </dl>
@@ -310,7 +313,7 @@ The following output properties are available:
             title="">
         <span>Acs<wbr>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}HTTP binding used to receive a SAMLResponse message from the IdP.
 {{% /md %}}</dd>
@@ -319,7 +322,7 @@ The following output properties are available:
             title="">
         <span>Acs<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Determines whether to publish an instance-specific (trust) or organization (shared) ACS endpoint in the SAML metadata.
 {{% /md %}}</dd>
@@ -328,25 +331,16 @@ The following output properties are available:
             title="">
         <span>Audience</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}URI that identifies the target Okta IdP instance (SP)
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}id of idp.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Issuer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}URI that identifies the issuer (IdP).
 {{% /md %}}</dd>
@@ -355,7 +349,7 @@ The following output properties are available:
             title="">
         <span>Issuer<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}indicates whether Okta uses the original Okta org domain URL, or a custom domain URL in the request to the IdP.
 {{% /md %}}</dd>
@@ -364,25 +358,16 @@ The following output properties are available:
             title="">
         <span>Kid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Key ID reference to the IdP's X.509 signature certificate.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}name of the idp.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Sso<wbr>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}single sign on binding.
 {{% /md %}}</dd>
@@ -391,7 +376,7 @@ The following output properties are available:
             title="">
         <span>Sso<wbr>Destination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}SSO request binding, HTTP-POST or HTTP-REDIRECT.
 {{% /md %}}</dd>
@@ -400,7 +385,7 @@ The following output properties are available:
             title="">
         <span>Sso<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}single sign on url.
 {{% /md %}}</dd>
@@ -409,7 +394,7 @@ The following output properties are available:
             title="">
         <span>Subject<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}regular expression pattern used to filter untrusted IdP usernames.
 {{% /md %}}</dd>
@@ -418,7 +403,7 @@ The following output properties are available:
             title="">
         <span>Subject<wbr>Formats</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Expression to generate or transform a unique username for the IdP user.
 {{% /md %}}</dd>
@@ -427,9 +412,27 @@ The following output properties are available:
             title="">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}type of idp.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}id of idp.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}name of the idp.
 {{% /md %}}</dd>
 
 </dl>
@@ -443,7 +446,7 @@ The following output properties are available:
             title="">
         <span>acs<wbr>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}HTTP binding used to receive a SAMLResponse message from the IdP.
 {{% /md %}}</dd>
@@ -452,7 +455,7 @@ The following output properties are available:
             title="">
         <span>acs<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Determines whether to publish an instance-specific (trust) or organization (shared) ACS endpoint in the SAML metadata.
 {{% /md %}}</dd>
@@ -461,25 +464,16 @@ The following output properties are available:
             title="">
         <span>audience</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}URI that identifies the target Okta IdP instance (SP)
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}id of idp.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>issuer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}URI that identifies the issuer (IdP).
 {{% /md %}}</dd>
@@ -488,7 +482,7 @@ The following output properties are available:
             title="">
         <span>issuer<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}indicates whether Okta uses the original Okta org domain URL, or a custom domain URL in the request to the IdP.
 {{% /md %}}</dd>
@@ -497,25 +491,16 @@ The following output properties are available:
             title="">
         <span>kid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Key ID reference to the IdP's X.509 signature certificate.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}name of the idp.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>sso<wbr>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}single sign on binding.
 {{% /md %}}</dd>
@@ -524,7 +509,7 @@ The following output properties are available:
             title="">
         <span>sso<wbr>Destination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}SSO request binding, HTTP-POST or HTTP-REDIRECT.
 {{% /md %}}</dd>
@@ -533,7 +518,7 @@ The following output properties are available:
             title="">
         <span>sso<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}single sign on url.
 {{% /md %}}</dd>
@@ -542,7 +527,7 @@ The following output properties are available:
             title="">
         <span>subject<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}regular expression pattern used to filter untrusted IdP usernames.
 {{% /md %}}</dd>
@@ -551,7 +536,7 @@ The following output properties are available:
             title="">
         <span>subject<wbr>Formats</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Expression to generate or transform a unique username for the IdP user.
 {{% /md %}}</dd>
@@ -560,9 +545,27 @@ The following output properties are available:
             title="">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}type of idp.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}id of idp.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}name of the idp.
 {{% /md %}}</dd>
 
 </dl>
@@ -576,7 +579,7 @@ The following output properties are available:
             title="">
         <span>acs_<wbr>binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}HTTP binding used to receive a SAMLResponse message from the IdP.
 {{% /md %}}</dd>
@@ -585,7 +588,7 @@ The following output properties are available:
             title="">
         <span>acs_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Determines whether to publish an instance-specific (trust) or organization (shared) ACS endpoint in the SAML metadata.
 {{% /md %}}</dd>
@@ -594,25 +597,16 @@ The following output properties are available:
             title="">
         <span>audience</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}URI that identifies the target Okta IdP instance (SP)
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}id of idp.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>issuer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}URI that identifies the issuer (IdP).
 {{% /md %}}</dd>
@@ -621,7 +615,7 @@ The following output properties are available:
             title="">
         <span>issuer_<wbr>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}indicates whether Okta uses the original Okta org domain URL, or a custom domain URL in the request to the IdP.
 {{% /md %}}</dd>
@@ -630,25 +624,16 @@ The following output properties are available:
             title="">
         <span>kid</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Key ID reference to the IdP's X.509 signature certificate.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}name of the idp.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>sso_<wbr>binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}single sign on binding.
 {{% /md %}}</dd>
@@ -657,7 +642,7 @@ The following output properties are available:
             title="">
         <span>sso_<wbr>destination</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}SSO request binding, HTTP-POST or HTTP-REDIRECT.
 {{% /md %}}</dd>
@@ -666,7 +651,7 @@ The following output properties are available:
             title="">
         <span>sso_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}single sign on url.
 {{% /md %}}</dd>
@@ -675,7 +660,7 @@ The following output properties are available:
             title="">
         <span>subject_<wbr>filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}regular expression pattern used to filter untrusted IdP usernames.
 {{% /md %}}</dd>
@@ -684,7 +669,7 @@ The following output properties are available:
             title="">
         <span>subject_<wbr>formats</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Expression to generate or transform a unique username for the IdP user.
 {{% /md %}}</dd>
@@ -693,9 +678,27 @@ The following output properties are available:
             title="">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}type of idp.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}id of idp.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}name of the idp.
 {{% /md %}}</dd>
 
 </dl>

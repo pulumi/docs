@@ -79,7 +79,7 @@ const exampleJob = new aws.glue.Job("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#Job">Job</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#JobArgs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#Job">Job</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/glue/#JobArgs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -87,7 +87,7 @@ const exampleJob = new aws.glue.Job("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewJob<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/glue?tab=doc#JobArgs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/glue?tab=doc#Job">Job</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewJob<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#JobArgs">JobArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#Job">Job</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -183,15 +183,6 @@ const exampleJob = new aws.glue.Job("example", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>Allocated<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED** (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use attribute `max_capacity&#39; instead. This attribute might be removed in future releases.{{% /md %}}</p></dd>
-
     <dt class="property-required"
             title="Required">
         <span>Command</span>
@@ -201,11 +192,29 @@ const exampleJob = new aws.glue.Job("example", {
     <dd>{{% md %}}The command of the job. Defined below.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role associated with this job.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>Allocated<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}**DEPRECATED** (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use attribute `max_capacity&#39; instead. This attribute might be removed in future releases.{{% /md %}}</p></dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Connections</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of connections used for this job.
 {{% /md %}}</dd>
@@ -214,7 +223,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>Default<wbr>Arguments</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The map of default arguments for this job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the [Calling AWS Glue APIs in Python](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html) topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the [Special Parameters Used by AWS Glue](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-glue-arguments.html) topic in the developer guide.
 {{% /md %}}</dd>
@@ -223,7 +232,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the job.
 {{% /md %}}</dd>
@@ -232,7 +241,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>Execution<wbr>Property</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobexecutionproperty">Job<wbr>Execution<wbr>Property<wbr>Args?</a></span>
+        <span class="property-type"><a href="#jobexecutionproperty">Job<wbr>Execution<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Execution property of the job. Defined below.
 {{% /md %}}</dd>
@@ -241,7 +250,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>Glue<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
 {{% /md %}}</dd>
@@ -250,7 +259,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>Max<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`.
 {{% /md %}}</dd>
@@ -259,7 +268,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>Max<wbr>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of times to retry this job if it fails.
 {{% /md %}}</dd>
@@ -268,7 +277,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name you assign to this job. It must be unique in your account.
 {{% /md %}}</dd>
@@ -277,7 +286,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>Notification<wbr>Property</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobnotificationproperty">Job<wbr>Notification<wbr>Property<wbr>Args?</a></span>
+        <span class="property-type"><a href="#jobnotificationproperty">Job<wbr>Notification<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Notification property of the job. Defined below.
 {{% /md %}}</dd>
@@ -286,25 +295,16 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>Number<wbr>Of<wbr>Workers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined workerType that are allocated when a job runs.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Role<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the IAM role associated with this job.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Security<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Security Configuration to be associated with the job.
 {{% /md %}}</dd>
@@ -313,7 +313,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
@@ -322,7 +322,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The job timeout in minutes. The default is 2880 minutes (48 hours).
 {{% /md %}}</dd>
@@ -331,7 +331,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>Worker<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, or G.2X.
 {{% /md %}}</dd>
@@ -343,15 +343,6 @@ const exampleJob = new aws.glue.Job("example", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>Allocated<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED** (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use attribute `max_capacity&#39; instead. This attribute might be removed in future releases.{{% /md %}}</p></dd>
-
     <dt class="property-required"
             title="Required">
         <span>Command</span>
@@ -361,11 +352,29 @@ const exampleJob = new aws.glue.Job("example", {
     <dd>{{% md %}}The command of the job. Defined below.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role associated with this job.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>Allocated<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}**DEPRECATED** (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use attribute `max_capacity&#39; instead. This attribute might be removed in future releases.{{% /md %}}</p></dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Connections</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The list of connections used for this job.
 {{% /md %}}</dd>
@@ -383,7 +392,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the job.
 {{% /md %}}</dd>
@@ -392,7 +401,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>Execution<wbr>Property</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobexecutionproperty">*Job<wbr>Execution<wbr>Property</a></span>
+        <span class="property-type"><a href="#jobexecutionproperty">Job<wbr>Execution<wbr>Property</a></span>
     </dt>
     <dd>{{% md %}}Execution property of the job. Defined below.
 {{% /md %}}</dd>
@@ -401,7 +410,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>Glue<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
 {{% /md %}}</dd>
@@ -410,7 +419,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>Max<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`.
 {{% /md %}}</dd>
@@ -419,7 +428,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>Max<wbr>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of times to retry this job if it fails.
 {{% /md %}}</dd>
@@ -428,7 +437,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name you assign to this job. It must be unique in your account.
 {{% /md %}}</dd>
@@ -437,7 +446,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>Notification<wbr>Property</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobnotificationproperty">*Job<wbr>Notification<wbr>Property</a></span>
+        <span class="property-type"><a href="#jobnotificationproperty">Job<wbr>Notification<wbr>Property</a></span>
     </dt>
     <dd>{{% md %}}Notification property of the job. Defined below.
 {{% /md %}}</dd>
@@ -446,25 +455,16 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>Number<wbr>Of<wbr>Workers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined workerType that are allocated when a job runs.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Role<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the IAM role associated with this job.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Security<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Security Configuration to be associated with the job.
 {{% /md %}}</dd>
@@ -482,7 +482,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The job timeout in minutes. The default is 2880 minutes (48 hours).
 {{% /md %}}</dd>
@@ -491,7 +491,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>Worker<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, or G.2X.
 {{% /md %}}</dd>
@@ -503,15 +503,6 @@ const exampleJob = new aws.glue.Job("example", {
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>allocated<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED** (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use attribute `max_capacity&#39; instead. This attribute might be removed in future releases.{{% /md %}}</p></dd>
-
     <dt class="property-required"
             title="Required">
         <span>command</span>
@@ -521,11 +512,29 @@ const exampleJob = new aws.glue.Job("example", {
     <dd>{{% md %}}The command of the job. Defined below.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>role<wbr>Arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role associated with this job.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>allocated<wbr>Capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}**DEPRECATED** (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use attribute `max_capacity&#39; instead. This attribute might be removed in future releases.{{% /md %}}</p></dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>connections</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The list of connections used for this job.
 {{% /md %}}</dd>
@@ -534,7 +543,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>default<wbr>Arguments</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The map of default arguments for this job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the [Calling AWS Glue APIs in Python](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html) topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the [Special Parameters Used by AWS Glue](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-glue-arguments.html) topic in the developer guide.
 {{% /md %}}</dd>
@@ -543,7 +552,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the job.
 {{% /md %}}</dd>
@@ -552,7 +561,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>execution<wbr>Property</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobexecutionproperty">Job<wbr>Execution<wbr>Property?</a></span>
+        <span class="property-type"><a href="#jobexecutionproperty">Job<wbr>Execution<wbr>Property</a></span>
     </dt>
     <dd>{{% md %}}Execution property of the job. Defined below.
 {{% /md %}}</dd>
@@ -561,7 +570,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>glue<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
 {{% /md %}}</dd>
@@ -570,7 +579,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>max<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`.
 {{% /md %}}</dd>
@@ -579,7 +588,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>max<wbr>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of times to retry this job if it fails.
 {{% /md %}}</dd>
@@ -588,7 +597,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name you assign to this job. It must be unique in your account.
 {{% /md %}}</dd>
@@ -597,7 +606,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>notification<wbr>Property</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobnotificationproperty">Job<wbr>Notification<wbr>Property?</a></span>
+        <span class="property-type"><a href="#jobnotificationproperty">Job<wbr>Notification<wbr>Property</a></span>
     </dt>
     <dd>{{% md %}}Notification property of the job. Defined below.
 {{% /md %}}</dd>
@@ -606,25 +615,16 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>number<wbr>Of<wbr>Workers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined workerType that are allocated when a job runs.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>role<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the IAM role associated with this job.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>security<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Security Configuration to be associated with the job.
 {{% /md %}}</dd>
@@ -633,7 +633,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
@@ -642,7 +642,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The job timeout in minutes. The default is 2880 minutes (48 hours).
 {{% /md %}}</dd>
@@ -651,7 +651,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>worker<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, or G.2X.
 {{% /md %}}</dd>
@@ -663,15 +663,6 @@ const exampleJob = new aws.glue.Job("example", {
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional property-deprecated"
-            title="Optional, Deprecated">
-        <span>allocated_<wbr>capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED** (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use attribute `max_capacity&#39; instead. This attribute might be removed in future releases.{{% /md %}}</p></dd>
-
     <dt class="property-required"
             title="Required">
         <span>command</span>
@@ -681,11 +672,29 @@ const exampleJob = new aws.glue.Job("example", {
     <dd>{{% md %}}The command of the job. Defined below.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>role_<wbr>arn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ARN of the IAM role associated with this job.
+{{% /md %}}</dd>
+
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
+        <span>allocated_<wbr>capacity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}**DEPRECATED** (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use attribute `max_capacity&#39; instead. This attribute might be removed in future releases.{{% /md %}}</p></dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>connections</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of connections used for this job.
 {{% /md %}}</dd>
@@ -703,7 +712,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Description of the job.
 {{% /md %}}</dd>
@@ -721,7 +730,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>glue_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
 {{% /md %}}</dd>
@@ -730,7 +739,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>max_<wbr>capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`.
 {{% /md %}}</dd>
@@ -739,7 +748,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>max_<wbr>retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of times to retry this job if it fails.
 {{% /md %}}</dd>
@@ -748,7 +757,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name you assign to this job. It must be unique in your account.
 {{% /md %}}</dd>
@@ -766,25 +775,16 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>number_<wbr>of_<wbr>workers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined workerType that are allocated when a job runs.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>role_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the IAM role associated with this job.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>security_<wbr>configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Security Configuration to be associated with the job.
 {{% /md %}}</dd>
@@ -802,7 +802,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The job timeout in minutes. The default is 2880 minutes (48 hours).
 {{% /md %}}</dd>
@@ -811,7 +811,7 @@ const exampleJob = new aws.glue.Job("example", {
             title="Optional">
         <span>worker_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, or G.2X.
 {{% /md %}}</dd>
@@ -835,166 +835,13 @@ The following output properties are available:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Allocated<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED** (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use attribute `max_capacity&#39; instead. This attribute might be removed in future releases.{{% /md %}}</p></dd>
-
     <dt class="property-"
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Job
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Command</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcommand">Job<wbr>Command</a></span>
-    </dt>
-    <dd>{{% md %}}The command of the job. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Connections</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The list of connections used for this job.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Arguments</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}The map of default arguments for this job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the [Calling AWS Glue APIs in Python](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html) topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the [Special Parameters Used by AWS Glue](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-glue-arguments.html) topic in the developer guide.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the job.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Execution<wbr>Property</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobexecutionproperty">Job<wbr>Execution<wbr>Property</a></span>
-    </dt>
-    <dd>{{% md %}}Execution property of the job. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Glue<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">double</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Retries</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of times to retry this job if it fails.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name you assign to this job. It must be unique in your account.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Notification<wbr>Property</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobnotificationproperty">Job<wbr>Notification<wbr>Property</a></span>
-    </dt>
-    <dd>{{% md %}}Notification property of the job. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Number<wbr>Of<wbr>Workers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The number of workers of a defined workerType that are allocated when a job runs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the IAM role associated with this job.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the Security Configuration to be associated with the job.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The job timeout in minutes. The default is 2880 minutes (48 hours).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Worker<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, or G.2X.
 {{% /md %}}</dd>
 
 </dl>
@@ -1004,166 +851,13 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Allocated<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED** (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use attribute `max_capacity&#39; instead. This attribute might be removed in future releases.{{% /md %}}</p></dd>
-
     <dt class="property-"
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Job
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Command</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcommand">Job<wbr>Command</a></span>
-    </dt>
-    <dd>{{% md %}}The command of the job. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Connections</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The list of connections used for this job.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Arguments</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}The map of default arguments for this job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the [Calling AWS Glue APIs in Python](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html) topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the [Special Parameters Used by AWS Glue](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-glue-arguments.html) topic in the developer guide.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Description of the job.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Execution<wbr>Property</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobexecutionproperty">Job<wbr>Execution<wbr>Property</a></span>
-    </dt>
-    <dd>{{% md %}}Execution property of the job. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Glue<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Retries</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of times to retry this job if it fails.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name you assign to this job. It must be unique in your account.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Notification<wbr>Property</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobnotificationproperty">Job<wbr>Notification<wbr>Property</a></span>
-    </dt>
-    <dd>{{% md %}}Notification property of the job. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Number<wbr>Of<wbr>Workers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The number of workers of a defined workerType that are allocated when a job runs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the IAM role associated with this job.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Security Configuration to be associated with the job.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The job timeout in minutes. The default is 2880 minutes (48 hours).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Worker<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, or G.2X.
 {{% /md %}}</dd>
 
 </dl>
@@ -1173,166 +867,13 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>allocated<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED** (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use attribute `max_capacity&#39; instead. This attribute might be removed in future releases.{{% /md %}}</p></dd>
-
     <dt class="property-"
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Job
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>command</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcommand">Job<wbr>Command</a></span>
-    </dt>
-    <dd>{{% md %}}The command of the job. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>connections</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The list of connections used for this job.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>default<wbr>Arguments</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}The map of default arguments for this job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the [Calling AWS Glue APIs in Python](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html) topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the [Special Parameters Used by AWS Glue](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-glue-arguments.html) topic in the developer guide.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Description of the job.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>execution<wbr>Property</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobexecutionproperty">Job<wbr>Execution<wbr>Property</a></span>
-    </dt>
-    <dd>{{% md %}}Execution property of the job. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>glue<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max<wbr>Capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max<wbr>Retries</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of times to retry this job if it fails.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name you assign to this job. It must be unique in your account.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>notification<wbr>Property</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobnotificationproperty">Job<wbr>Notification<wbr>Property</a></span>
-    </dt>
-    <dd>{{% md %}}Notification property of the job. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>number<wbr>Of<wbr>Workers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The number of workers of a defined workerType that are allocated when a job runs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>role<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the IAM role associated with this job.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the Security Configuration to be associated with the job.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The job timeout in minutes. The default is 2880 minutes (48 hours).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>worker<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, or G.2X.
 {{% /md %}}</dd>
 
 </dl>
@@ -1342,166 +883,13 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>allocated_<wbr>capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}**DEPRECATED** (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use attribute `max_capacity&#39; instead. This attribute might be removed in future releases.{{% /md %}}</p></dd>
-
     <dt class="property-"
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Job
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>command</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcommand">Dict[Job<wbr>Command]</a></span>
-    </dt>
-    <dd>{{% md %}}The command of the job. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>connections</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The list of connections used for this job.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>default_<wbr>arguments</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}The map of default arguments for this job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the [Calling AWS Glue APIs in Python](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html) topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the [Special Parameters Used by AWS Glue](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-glue-arguments.html) topic in the developer guide.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Description of the job.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>execution_<wbr>property</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobexecutionproperty">Dict[Job<wbr>Execution<wbr>Property]</a></span>
-    </dt>
-    <dd>{{% md %}}Execution property of the job. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>glue_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max_<wbr>capacity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max_<wbr>retries</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The maximum number of times to retry this job if it fails.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name you assign to this job. It must be unique in your account.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>notification_<wbr>property</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobnotificationproperty">Dict[Job<wbr>Notification<wbr>Property]</a></span>
-    </dt>
-    <dd>{{% md %}}Notification property of the job. Defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>number_<wbr>of_<wbr>workers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The number of workers of a defined workerType that are allocated when a job runs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>role_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the IAM role associated with this job.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security_<wbr>configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Security Configuration to be associated with the job.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Key-value mapping of resource tags
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The job timeout in minutes. The default is 2880 minutes (48 hours).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>worker_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, or G.2X.
 {{% /md %}}</dd>
 
 </dl>
@@ -1529,7 +917,7 @@ Get an existing Job resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetJob<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/glue?tab=doc#JobState">JobState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/glue?tab=doc#Job">Job</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetJob<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#JobState">JobState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#Job">Job</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1643,7 +1031,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>Allocated<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}**DEPRECATED** (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use attribute `max_capacity&#39; instead. This attribute might be removed in future releases.{{% /md %}}</p></dd>
@@ -1652,7 +1040,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Job
 {{% /md %}}</dd>
@@ -1661,7 +1049,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Command</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcommand">Job<wbr>Command<wbr>Args?</a></span>
+        <span class="property-type"><a href="#jobcommand">Job<wbr>Command<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The command of the job. Defined below.
 {{% /md %}}</dd>
@@ -1670,7 +1058,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Connections</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of connections used for this job.
 {{% /md %}}</dd>
@@ -1679,7 +1067,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Arguments</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The map of default arguments for this job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the [Calling AWS Glue APIs in Python](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html) topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the [Special Parameters Used by AWS Glue](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-glue-arguments.html) topic in the developer guide.
 {{% /md %}}</dd>
@@ -1688,7 +1076,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the job.
 {{% /md %}}</dd>
@@ -1697,7 +1085,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Execution<wbr>Property</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobexecutionproperty">Job<wbr>Execution<wbr>Property<wbr>Args?</a></span>
+        <span class="property-type"><a href="#jobexecutionproperty">Job<wbr>Execution<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Execution property of the job. Defined below.
 {{% /md %}}</dd>
@@ -1706,7 +1094,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Glue<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
 {{% /md %}}</dd>
@@ -1715,7 +1103,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`.
 {{% /md %}}</dd>
@@ -1724,7 +1112,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of times to retry this job if it fails.
 {{% /md %}}</dd>
@@ -1733,7 +1121,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name you assign to this job. It must be unique in your account.
 {{% /md %}}</dd>
@@ -1742,7 +1130,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Notification<wbr>Property</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobnotificationproperty">Job<wbr>Notification<wbr>Property<wbr>Args?</a></span>
+        <span class="property-type"><a href="#jobnotificationproperty">Job<wbr>Notification<wbr>Property<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Notification property of the job. Defined below.
 {{% /md %}}</dd>
@@ -1751,7 +1139,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Number<wbr>Of<wbr>Workers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined workerType that are allocated when a job runs.
 {{% /md %}}</dd>
@@ -1760,7 +1148,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role associated with this job.
 {{% /md %}}</dd>
@@ -1769,7 +1157,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Security<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Security Configuration to be associated with the job.
 {{% /md %}}</dd>
@@ -1778,7 +1166,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
@@ -1787,7 +1175,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The job timeout in minutes. The default is 2880 minutes (48 hours).
 {{% /md %}}</dd>
@@ -1796,7 +1184,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Worker<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, or G.2X.
 {{% /md %}}</dd>
@@ -1812,7 +1200,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>Allocated<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}**DEPRECATED** (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use attribute `max_capacity&#39; instead. This attribute might be removed in future releases.{{% /md %}}</p></dd>
@@ -1821,7 +1209,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Job
 {{% /md %}}</dd>
@@ -1830,7 +1218,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Command</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcommand">*Job<wbr>Command</a></span>
+        <span class="property-type"><a href="#jobcommand">Job<wbr>Command</a></span>
     </dt>
     <dd>{{% md %}}The command of the job. Defined below.
 {{% /md %}}</dd>
@@ -1839,7 +1227,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Connections</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The list of connections used for this job.
 {{% /md %}}</dd>
@@ -1857,7 +1245,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the job.
 {{% /md %}}</dd>
@@ -1866,7 +1254,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Execution<wbr>Property</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobexecutionproperty">*Job<wbr>Execution<wbr>Property</a></span>
+        <span class="property-type"><a href="#jobexecutionproperty">Job<wbr>Execution<wbr>Property</a></span>
     </dt>
     <dd>{{% md %}}Execution property of the job. Defined below.
 {{% /md %}}</dd>
@@ -1875,7 +1263,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Glue<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
 {{% /md %}}</dd>
@@ -1884,7 +1272,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`.
 {{% /md %}}</dd>
@@ -1893,7 +1281,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of times to retry this job if it fails.
 {{% /md %}}</dd>
@@ -1902,7 +1290,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name you assign to this job. It must be unique in your account.
 {{% /md %}}</dd>
@@ -1911,7 +1299,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Notification<wbr>Property</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobnotificationproperty">*Job<wbr>Notification<wbr>Property</a></span>
+        <span class="property-type"><a href="#jobnotificationproperty">Job<wbr>Notification<wbr>Property</a></span>
     </dt>
     <dd>{{% md %}}Notification property of the job. Defined below.
 {{% /md %}}</dd>
@@ -1920,7 +1308,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Number<wbr>Of<wbr>Workers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined workerType that are allocated when a job runs.
 {{% /md %}}</dd>
@@ -1929,7 +1317,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role associated with this job.
 {{% /md %}}</dd>
@@ -1938,7 +1326,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Security<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Security Configuration to be associated with the job.
 {{% /md %}}</dd>
@@ -1956,7 +1344,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The job timeout in minutes. The default is 2880 minutes (48 hours).
 {{% /md %}}</dd>
@@ -1965,7 +1353,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Worker<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, or G.2X.
 {{% /md %}}</dd>
@@ -1981,7 +1369,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>allocated<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}**DEPRECATED** (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use attribute `max_capacity&#39; instead. This attribute might be removed in future releases.{{% /md %}}</p></dd>
@@ -1990,7 +1378,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Job
 {{% /md %}}</dd>
@@ -1999,7 +1387,7 @@ The following state arguments are supported:
             title="Optional">
         <span>command</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobcommand">Job<wbr>Command?</a></span>
+        <span class="property-type"><a href="#jobcommand">Job<wbr>Command</a></span>
     </dt>
     <dd>{{% md %}}The command of the job. Defined below.
 {{% /md %}}</dd>
@@ -2008,7 +1396,7 @@ The following state arguments are supported:
             title="Optional">
         <span>connections</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The list of connections used for this job.
 {{% /md %}}</dd>
@@ -2017,7 +1405,7 @@ The following state arguments are supported:
             title="Optional">
         <span>default<wbr>Arguments</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The map of default arguments for this job. You can specify arguments here that your own job-execution script consumes, as well as arguments that AWS Glue itself consumes. For information about how to specify and consume your own Job arguments, see the [Calling AWS Glue APIs in Python](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-calling.html) topic in the developer guide. For information about the key-value pairs that AWS Glue consumes to set up your job, see the [Special Parameters Used by AWS Glue](http://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-python-glue-arguments.html) topic in the developer guide.
 {{% /md %}}</dd>
@@ -2026,7 +1414,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Description of the job.
 {{% /md %}}</dd>
@@ -2035,7 +1423,7 @@ The following state arguments are supported:
             title="Optional">
         <span>execution<wbr>Property</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobexecutionproperty">Job<wbr>Execution<wbr>Property?</a></span>
+        <span class="property-type"><a href="#jobexecutionproperty">Job<wbr>Execution<wbr>Property</a></span>
     </dt>
     <dd>{{% md %}}Execution property of the job. Defined below.
 {{% /md %}}</dd>
@@ -2044,7 +1432,7 @@ The following state arguments are supported:
             title="Optional">
         <span>glue<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
 {{% /md %}}</dd>
@@ -2053,7 +1441,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`.
 {{% /md %}}</dd>
@@ -2062,7 +1450,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of times to retry this job if it fails.
 {{% /md %}}</dd>
@@ -2071,7 +1459,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name you assign to this job. It must be unique in your account.
 {{% /md %}}</dd>
@@ -2080,7 +1468,7 @@ The following state arguments are supported:
             title="Optional">
         <span>notification<wbr>Property</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobnotificationproperty">Job<wbr>Notification<wbr>Property?</a></span>
+        <span class="property-type"><a href="#jobnotificationproperty">Job<wbr>Notification<wbr>Property</a></span>
     </dt>
     <dd>{{% md %}}Notification property of the job. Defined below.
 {{% /md %}}</dd>
@@ -2089,7 +1477,7 @@ The following state arguments are supported:
             title="Optional">
         <span>number<wbr>Of<wbr>Workers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined workerType that are allocated when a job runs.
 {{% /md %}}</dd>
@@ -2098,7 +1486,7 @@ The following state arguments are supported:
             title="Optional">
         <span>role<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role associated with this job.
 {{% /md %}}</dd>
@@ -2107,7 +1495,7 @@ The following state arguments are supported:
             title="Optional">
         <span>security<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Security Configuration to be associated with the job.
 {{% /md %}}</dd>
@@ -2116,7 +1504,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Key-value mapping of resource tags
 {{% /md %}}</dd>
@@ -2125,7 +1513,7 @@ The following state arguments are supported:
             title="Optional">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The job timeout in minutes. The default is 2880 minutes (48 hours).
 {{% /md %}}</dd>
@@ -2134,7 +1522,7 @@ The following state arguments are supported:
             title="Optional">
         <span>worker<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, or G.2X.
 {{% /md %}}</dd>
@@ -2150,7 +1538,7 @@ The following state arguments are supported:
             title="Optional, Deprecated">
         <span>allocated_<wbr>capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}**DEPRECATED** (Optional) The number of AWS Glue data processing units (DPUs) to allocate to this Job. At least 2 DPUs need to be allocated; the default is 10. A DPU is a relative measure of processing power that consists of 4 vCPUs of compute capacity and 16 GB of memory.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please use attribute `max_capacity&#39; instead. This attribute might be removed in future releases.{{% /md %}}</p></dd>
@@ -2159,7 +1547,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Job
 {{% /md %}}</dd>
@@ -2177,7 +1565,7 @@ The following state arguments are supported:
             title="Optional">
         <span>connections</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of connections used for this job.
 {{% /md %}}</dd>
@@ -2195,7 +1583,7 @@ The following state arguments are supported:
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Description of the job.
 {{% /md %}}</dd>
@@ -2213,7 +1601,7 @@ The following state arguments are supported:
             title="Optional">
         <span>glue_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The version of glue to use, for example "1.0". For information about available versions, see the [AWS Glue Release Notes](https://docs.aws.amazon.com/glue/latest/dg/release-notes.html).
 {{% /md %}}</dd>
@@ -2222,7 +1610,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max_<wbr>capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of AWS Glue data processing units (DPUs) that can be allocated when this job runs. `Required` when `pythonshell` is set, accept either `0.0625` or `1.0`.
 {{% /md %}}</dd>
@@ -2231,7 +1619,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max_<wbr>retries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of times to retry this job if it fails.
 {{% /md %}}</dd>
@@ -2240,7 +1628,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name you assign to this job. It must be unique in your account.
 {{% /md %}}</dd>
@@ -2258,7 +1646,7 @@ The following state arguments are supported:
             title="Optional">
         <span>number_<wbr>of_<wbr>workers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of workers of a defined workerType that are allocated when a job runs.
 {{% /md %}}</dd>
@@ -2267,7 +1655,7 @@ The following state arguments are supported:
             title="Optional">
         <span>role_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the IAM role associated with this job.
 {{% /md %}}</dd>
@@ -2276,7 +1664,7 @@ The following state arguments are supported:
             title="Optional">
         <span>security_<wbr>configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Security Configuration to be associated with the job.
 {{% /md %}}</dd>
@@ -2294,7 +1682,7 @@ The following state arguments are supported:
             title="Optional">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The job timeout in minutes. The default is 2880 minutes (48 hours).
 {{% /md %}}</dd>
@@ -2303,7 +1691,7 @@ The following state arguments are supported:
             title="Optional">
         <span>worker_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of predefined worker that is allocated when a job runs. Accepts a value of Standard, G.1X, or G.2X.
 {{% /md %}}</dd>
@@ -2328,7 +1716,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/glue?tab=doc#JobCommandArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/glue?tab=doc#JobCommandOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#JobCommandArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#JobCommandOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2337,11 +1725,20 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Script<wbr>Location</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the S3 path to a script that executes a job.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python Shell Job Type, `max_capacity` needs to be set if `pythonshell` is chosen.
 {{% /md %}}</dd>
@@ -2350,18 +1747,9 @@ The following state arguments are supported:
             title="Optional">
         <span>Python<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Python version being used to execute a Python shell job. Allowed values are 2 or 3.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Script<wbr>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the S3 path to a script that executes a job.
 {{% /md %}}</dd>
 
 </dl>
@@ -2371,11 +1759,20 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Script<wbr>Location</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the S3 path to a script that executes a job.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python Shell Job Type, `max_capacity` needs to be set if `pythonshell` is chosen.
 {{% /md %}}</dd>
@@ -2384,18 +1781,9 @@ The following state arguments are supported:
             title="Optional">
         <span>Python<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Python version being used to execute a Python shell job. Allowed values are 2 or 3.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Script<wbr>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the S3 path to a script that executes a job.
 {{% /md %}}</dd>
 
 </dl>
@@ -2405,11 +1793,20 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>script<wbr>Location</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the S3 path to a script that executes a job.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python Shell Job Type, `max_capacity` needs to be set if `pythonshell` is chosen.
 {{% /md %}}</dd>
@@ -2418,18 +1815,9 @@ The following state arguments are supported:
             title="Optional">
         <span>python<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Python version being used to execute a Python shell job. Allowed values are 2 or 3.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>script<wbr>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the S3 path to a script that executes a job.
 {{% /md %}}</dd>
 
 </dl>
@@ -2439,11 +1827,20 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>script<wbr>Location</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the S3 path to a script that executes a job.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the job command. Defaults to `glueetl`. Use `pythonshell` for Python Shell Job Type, `max_capacity` needs to be set if `pythonshell` is chosen.
 {{% /md %}}</dd>
@@ -2452,18 +1849,9 @@ The following state arguments are supported:
             title="Optional">
         <span>python<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Python version being used to execute a Python shell job. Allowed values are 2 or 3.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>script<wbr>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the S3 path to a script that executes a job.
 {{% /md %}}</dd>
 
 </dl>
@@ -2479,7 +1867,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/glue?tab=doc#JobExecutionPropertyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/glue?tab=doc#JobExecutionPropertyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#JobExecutionPropertyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#JobExecutionPropertyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2492,7 +1880,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Concurrent<wbr>Runs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent runs allowed for a job. The default is 1.
 {{% /md %}}</dd>
@@ -2508,7 +1896,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Concurrent<wbr>Runs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent runs allowed for a job. The default is 1.
 {{% /md %}}</dd>
@@ -2524,7 +1912,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Concurrent<wbr>Runs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent runs allowed for a job. The default is 1.
 {{% /md %}}</dd>
@@ -2540,7 +1928,7 @@ The following state arguments are supported:
             title="Optional">
         <span>max<wbr>Concurrent<wbr>Runs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of concurrent runs allowed for a job. The default is 1.
 {{% /md %}}</dd>
@@ -2558,7 +1946,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/glue?tab=doc#JobNotificationPropertyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/glue?tab=doc#JobNotificationPropertyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#JobNotificationPropertyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/glue?tab=doc#JobNotificationPropertyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2571,7 +1959,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Notify<wbr>Delay<wbr>After</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}After a job run starts, the number of minutes to wait before sending a job run delay notification.
 {{% /md %}}</dd>
@@ -2587,7 +1975,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Notify<wbr>Delay<wbr>After</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}After a job run starts, the number of minutes to wait before sending a job run delay notification.
 {{% /md %}}</dd>
@@ -2603,7 +1991,7 @@ The following state arguments are supported:
             title="Optional">
         <span>notify<wbr>Delay<wbr>After</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}After a job run starts, the number of minutes to wait before sending a job run delay notification.
 {{% /md %}}</dd>
@@ -2619,7 +2007,7 @@ The following state arguments are supported:
             title="Optional">
         <span>notify<wbr>Delay<wbr>After</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}After a job run starts, the number of minutes to wait before sending a job run delay notification.
 {{% /md %}}</dd>

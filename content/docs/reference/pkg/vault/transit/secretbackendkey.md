@@ -6,6 +6,30 @@ block_external_search_index: true
 
 
 
+Creates an Encryption Keyring on a Transit Secret Backend for Vault.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vault from "@pulumi/vault";
+
+const transit = new vault.Mount("transit", {
+    defaultLeaseTtlSeconds: 3600,
+    description: "Example description",
+    maxLeaseTtlSeconds: 86400,
+    path: "transit",
+    type: "transit",
+});
+const key = new vault.transit.SecretBackendKey("key", {
+    backend: transit.path,
+});
+```
+
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -14,7 +38,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/transit/#SecretBackendKey">SecretBackendKey</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/transit/#SecretBackendKeyArgs">SecretBackendKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/transit/#SecretBackendKey">SecretBackendKey</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/transit/#SecretBackendKeyArgs">SecretBackendKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,7 +46,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSecretBackendKey<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/transit?tab=doc#SecretBackendKeyArgs">SecretBackendKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/transit?tab=doc#SecretBackendKey">SecretBackendKey</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSecretBackendKey<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/transit?tab=doc#SecretBackendKeyArgs">SecretBackendKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/transit?tab=doc#SecretBackendKey">SecretBackendKey</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -118,39 +142,39 @@ block_external_search_index: true
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Allow<wbr>Plaintext<wbr>Backup</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If set, enables taking backup of named key in the plaintext format. Once set, this cannot be disabled.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Transit secret backend the resource belongs to.
+    <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`s.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Allow<wbr>Plaintext<wbr>Backup</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enables taking backup of entire keyring in the plaintext format. Once set, this cannot be disabled.
+* Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api/secret/transit/index.html#backup-key)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Convergent<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires
-derived to be set to true.
+    <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires `derived` to be set to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Deletion<wbr>Allowed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies if the key is allowed to be deleted.
 {{% /md %}}</dd>
@@ -159,27 +183,25 @@ derived to be set to true.
             title="Optional">
         <span>Derived</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context
-which is used for key derivation.
+    <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context which is used for key derivation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Exportable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enables keys to be exportable. This allows for all the valid keys in the key ring to be exported. Once set, this cannot
-be disabled.
+    <dd>{{% md %}}Enables keys to be exportable. This allows for all valid private keys in the keyring to be exported. Once set, this cannot be disabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Min<wbr>Decryption<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for decryption.
 {{% /md %}}</dd>
@@ -188,7 +210,7 @@ be disabled.
             title="Optional">
         <span>Min<wbr>Encryption<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for encryption
 {{% /md %}}</dd>
@@ -197,19 +219,19 @@ be disabled.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the encryption key to create.
+    <dd>{{% md %}}The name to identify this key within the backend. Must be unique within the backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: aes128-gcm96, aes256-gcm96, chacha20-poly1305,
-ed25519, ecdsa-p256, ecdsa-p384, ecdsa-p521, rsa-2048, rsa-4096
+    <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: `aes256-gcm96` (default), `chacha20-poly1305`, `ed25519`, `ecdsa-p256`, `rsa-2048` and `rsa-4096`. 
+* Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit/index.html#key-types)
 {{% /md %}}</dd>
 
 </dl>
@@ -219,39 +241,39 @@ ed25519, ecdsa-p256, ecdsa-p384, ecdsa-p521, rsa-2048, rsa-4096
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Allow<wbr>Plaintext<wbr>Backup</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If set, enables taking backup of named key in the plaintext format. Once set, this cannot be disabled.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Transit secret backend the resource belongs to.
+    <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`s.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Allow<wbr>Plaintext<wbr>Backup</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enables taking backup of entire keyring in the plaintext format. Once set, this cannot be disabled.
+* Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api/secret/transit/index.html#backup-key)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Convergent<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires
-derived to be set to true.
+    <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires `derived` to be set to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Deletion<wbr>Allowed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies if the key is allowed to be deleted.
 {{% /md %}}</dd>
@@ -260,27 +282,25 @@ derived to be set to true.
             title="Optional">
         <span>Derived</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context
-which is used for key derivation.
+    <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context which is used for key derivation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Exportable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enables keys to be exportable. This allows for all the valid keys in the key ring to be exported. Once set, this cannot
-be disabled.
+    <dd>{{% md %}}Enables keys to be exportable. This allows for all valid private keys in the keyring to be exported. Once set, this cannot be disabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Min<wbr>Decryption<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for decryption.
 {{% /md %}}</dd>
@@ -289,7 +309,7 @@ be disabled.
             title="Optional">
         <span>Min<wbr>Encryption<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for encryption
 {{% /md %}}</dd>
@@ -298,19 +318,19 @@ be disabled.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the encryption key to create.
+    <dd>{{% md %}}The name to identify this key within the backend. Must be unique within the backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: aes128-gcm96, aes256-gcm96, chacha20-poly1305,
-ed25519, ecdsa-p256, ecdsa-p384, ecdsa-p521, rsa-2048, rsa-4096
+    <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: `aes256-gcm96` (default), `chacha20-poly1305`, `ed25519`, `ecdsa-p256`, `rsa-2048` and `rsa-4096`. 
+* Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit/index.html#key-types)
 {{% /md %}}</dd>
 
 </dl>
@@ -320,39 +340,39 @@ ed25519, ecdsa-p256, ecdsa-p384, ecdsa-p521, rsa-2048, rsa-4096
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>allow<wbr>Plaintext<wbr>Backup</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If set, enables taking backup of named key in the plaintext format. Once set, this cannot be disabled.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Transit secret backend the resource belongs to.
+    <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`s.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>allow<wbr>Plaintext<wbr>Backup</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enables taking backup of entire keyring in the plaintext format. Once set, this cannot be disabled.
+* Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api/secret/transit/index.html#backup-key)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>convergent<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires
-derived to be set to true.
+    <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires `derived` to be set to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>deletion<wbr>Allowed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies if the key is allowed to be deleted.
 {{% /md %}}</dd>
@@ -361,27 +381,25 @@ derived to be set to true.
             title="Optional">
         <span>derived</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context
-which is used for key derivation.
+    <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context which is used for key derivation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>exportable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Enables keys to be exportable. This allows for all the valid keys in the key ring to be exported. Once set, this cannot
-be disabled.
+    <dd>{{% md %}}Enables keys to be exportable. This allows for all valid private keys in the keyring to be exported. Once set, this cannot be disabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>min<wbr>Decryption<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for decryption.
 {{% /md %}}</dd>
@@ -390,7 +408,7 @@ be disabled.
             title="Optional">
         <span>min<wbr>Encryption<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for encryption
 {{% /md %}}</dd>
@@ -399,19 +417,19 @@ be disabled.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the encryption key to create.
+    <dd>{{% md %}}The name to identify this key within the backend. Must be unique within the backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: aes128-gcm96, aes256-gcm96, chacha20-poly1305,
-ed25519, ecdsa-p256, ecdsa-p384, ecdsa-p521, rsa-2048, rsa-4096
+    <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: `aes256-gcm96` (default), `chacha20-poly1305`, `ed25519`, `ecdsa-p256`, `rsa-2048` and `rsa-4096`. 
+* Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit/index.html#key-types)
 {{% /md %}}</dd>
 
 </dl>
@@ -421,39 +439,39 @@ ed25519, ecdsa-p256, ecdsa-p384, ecdsa-p521, rsa-2048, rsa-4096
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>allow_<wbr>plaintext_<wbr>backup</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set, enables taking backup of named key in the plaintext format. Once set, this cannot be disabled.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Transit secret backend the resource belongs to.
+    <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`s.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>allow_<wbr>plaintext_<wbr>backup</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enables taking backup of entire keyring in the plaintext format. Once set, this cannot be disabled.
+* Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api/secret/transit/index.html#backup-key)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>convergent_<wbr>encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires
-derived to be set to true.
+    <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires `derived` to be set to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>deletion_<wbr>allowed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies if the key is allowed to be deleted.
 {{% /md %}}</dd>
@@ -462,27 +480,25 @@ derived to be set to true.
             title="Optional">
         <span>derived</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context
-which is used for key derivation.
+    <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context which is used for key derivation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>exportable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enables keys to be exportable. This allows for all the valid keys in the key ring to be exported. Once set, this cannot
-be disabled.
+    <dd>{{% md %}}Enables keys to be exportable. This allows for all valid private keys in the keyring to be exported. Once set, this cannot be disabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>min_<wbr>decryption_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for decryption.
 {{% /md %}}</dd>
@@ -491,7 +507,7 @@ be disabled.
             title="Optional">
         <span>min_<wbr>encryption_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for encryption
 {{% /md %}}</dd>
@@ -500,19 +516,19 @@ be disabled.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the encryption key to create.
+    <dd>{{% md %}}The name to identify this key within the backend. Must be unique within the backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: aes128-gcm96, aes256-gcm96, chacha20-poly1305,
-ed25519, ecdsa-p256, ecdsa-p384, ecdsa-p521, rsa-2048, rsa-4096
+    <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: `aes256-gcm96` (default), `chacha20-poly1305`, `ed25519`, `ecdsa-p256`, `rsa-2048` and `rsa-4096`. 
+* Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit/index.html#key-types)
 {{% /md %}}</dd>
 
 </dl>
@@ -536,120 +552,38 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Allow<wbr>Plaintext<wbr>Backup</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If set, enables taking backup of named key in the plaintext format. Once set, this cannot be disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Transit secret backend the resource belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Convergent<wbr>Encryption</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires
-derived to be set to true.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Deletion<wbr>Allowed</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Specifies if the key is allowed to be deleted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Derived</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context
-which is used for key derivation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Exportable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Enables keys to be exportable. This allows for all the valid keys in the key ring to be exported. Once set, this cannot
-be disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<ImmutableDictionary<string, object>></span>
+        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}List of key versions in the keyring.
+    <dd>{{% md %}}List of key versions in the keyring. This attribute is zero-indexed and will contain a map of values depending on the `type` of the encryption key.
+* for key types `aes256-gcm96` and `chacha20-poly1305`, each key version will be a map of a single value `id` which is just a hash of the key's metadata.
+* for key types `ed25519`, `ecdsa-p256`, `rsa-2048` and `rsa-4096`, each key version will be a map of the following:
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>Latest<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Latest key version in use in the keyring
+    <dd>{{% md %}}Latest key version available. This value is 1-indexed, so if `latest_version` is `1`, then the key's information can be referenced from `keys` by selecting element `0`
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>Min<wbr>Available<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Minimum key version available for use.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Min<wbr>Decryption<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Minimum key version to use for decryption.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Min<wbr>Encryption<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Minimum key version to use for encryption
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the encryption key to create.
+    <dd>{{% md %}}Minimum key version available for use. If keys have been archived by increasing `min_decryption_version`, this attribute will reflect that change.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>Supports<wbr>Decryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports decryption, based on key type.
 {{% /md %}}</dd>
@@ -658,7 +592,7 @@ be disabled.
             title="">
         <span>Supports<wbr>Derivation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports derivation, based on key type.
 {{% /md %}}</dd>
@@ -667,7 +601,7 @@ be disabled.
             title="">
         <span>Supports<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports encryption, based on key type.
 {{% /md %}}</dd>
@@ -676,19 +610,9 @@ be disabled.
             title="">
         <span>Supports<wbr>Signing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports signing, based on key type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: aes128-gcm96, aes256-gcm96, chacha20-poly1305,
-ed25519, ecdsa-p256, ecdsa-p384, ecdsa-p521, rsa-2048, rsa-4096
 {{% /md %}}</dd>
 
 </dl>
@@ -700,120 +624,38 @@ ed25519, ecdsa-p256, ecdsa-p384, ecdsa-p521, rsa-2048, rsa-4096
 
     <dt class="property-"
             title="">
-        <span>Allow<wbr>Plaintext<wbr>Backup</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If set, enables taking backup of named key in the plaintext format. Once set, this cannot be disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Transit secret backend the resource belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Convergent<wbr>Encryption</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires
-derived to be set to true.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Deletion<wbr>Allowed</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies if the key is allowed to be deleted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Derived</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context
-which is used for key derivation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Exportable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Enables keys to be exportable. This allows for all the valid keys in the key ring to be exported. Once set, this cannot
-be disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Keys</span>
         <span class="property-indicator"></span>
         <span class="property-type">[]map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}List of key versions in the keyring.
+    <dd>{{% md %}}List of key versions in the keyring. This attribute is zero-indexed and will contain a map of values depending on the `type` of the encryption key.
+* for key types `aes256-gcm96` and `chacha20-poly1305`, each key version will be a map of a single value `id` which is just a hash of the key's metadata.
+* for key types `ed25519`, `ecdsa-p256`, `rsa-2048` and `rsa-4096`, each key version will be a map of the following:
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>Latest<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Latest key version in use in the keyring
+    <dd>{{% md %}}Latest key version available. This value is 1-indexed, so if `latest_version` is `1`, then the key's information can be referenced from `keys` by selecting element `0`
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>Min<wbr>Available<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Minimum key version available for use.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Min<wbr>Decryption<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Minimum key version to use for decryption.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Min<wbr>Encryption<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Minimum key version to use for encryption
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the encryption key to create.
+    <dd>{{% md %}}Minimum key version available for use. If keys have been archived by increasing `min_decryption_version`, this attribute will reflect that change.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>Supports<wbr>Decryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports decryption, based on key type.
 {{% /md %}}</dd>
@@ -822,7 +664,7 @@ be disabled.
             title="">
         <span>Supports<wbr>Derivation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports derivation, based on key type.
 {{% /md %}}</dd>
@@ -831,7 +673,7 @@ be disabled.
             title="">
         <span>Supports<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports encryption, based on key type.
 {{% /md %}}</dd>
@@ -840,19 +682,9 @@ be disabled.
             title="">
         <span>Supports<wbr>Signing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports signing, based on key type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: aes128-gcm96, aes256-gcm96, chacha20-poly1305,
-ed25519, ecdsa-p256, ecdsa-p384, ecdsa-p521, rsa-2048, rsa-4096
 {{% /md %}}</dd>
 
 </dl>
@@ -864,120 +696,38 @@ ed25519, ecdsa-p256, ecdsa-p384, ecdsa-p521, rsa-2048, rsa-4096
 
     <dt class="property-"
             title="">
-        <span>allow<wbr>Plaintext<wbr>Backup</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If set, enables taking backup of named key in the plaintext format. Once set, this cannot be disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Transit secret backend the resource belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>convergent<wbr>Encryption</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires
-derived to be set to true.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>deletion<wbr>Allowed</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Specifies if the key is allowed to be deleted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>derived</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context
-which is used for key derivation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>exportable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Enables keys to be exportable. This allows for all the valid keys in the key ring to be exported. Once set, this cannot
-be disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>keys</span>
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}[]</span>
     </dt>
-    <dd>{{% md %}}List of key versions in the keyring.
+    <dd>{{% md %}}List of key versions in the keyring. This attribute is zero-indexed and will contain a map of values depending on the `type` of the encryption key.
+* for key types `aes256-gcm96` and `chacha20-poly1305`, each key version will be a map of a single value `id` which is just a hash of the key's metadata.
+* for key types `ed25519`, `ecdsa-p256`, `rsa-2048` and `rsa-4096`, each key version will be a map of the following:
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>latest<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Latest key version in use in the keyring
+    <dd>{{% md %}}Latest key version available. This value is 1-indexed, so if `latest_version` is `1`, then the key's information can be referenced from `keys` by selecting element `0`
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>min<wbr>Available<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Minimum key version available for use.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>min<wbr>Decryption<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Minimum key version to use for decryption.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>min<wbr>Encryption<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Minimum key version to use for encryption
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the encryption key to create.
+    <dd>{{% md %}}Minimum key version available for use. If keys have been archived by increasing `min_decryption_version`, this attribute will reflect that change.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>supports<wbr>Decryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports decryption, based on key type.
 {{% /md %}}</dd>
@@ -986,7 +736,7 @@ be disabled.
             title="">
         <span>supports<wbr>Derivation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports derivation, based on key type.
 {{% /md %}}</dd>
@@ -995,7 +745,7 @@ be disabled.
             title="">
         <span>supports<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports encryption, based on key type.
 {{% /md %}}</dd>
@@ -1004,19 +754,9 @@ be disabled.
             title="">
         <span>supports<wbr>Signing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports signing, based on key type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: aes128-gcm96, aes256-gcm96, chacha20-poly1305,
-ed25519, ecdsa-p256, ecdsa-p384, ecdsa-p521, rsa-2048, rsa-4096
 {{% /md %}}</dd>
 
 </dl>
@@ -1028,120 +768,38 @@ ed25519, ecdsa-p256, ecdsa-p384, ecdsa-p521, rsa-2048, rsa-4096
 
     <dt class="property-"
             title="">
-        <span>allow_<wbr>plaintext_<wbr>backup</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If set, enables taking backup of named key in the plaintext format. Once set, this cannot be disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Transit secret backend the resource belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>convergent_<wbr>encryption</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires
-derived to be set to true.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>deletion_<wbr>allowed</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies if the key is allowed to be deleted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>derived</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context
-which is used for key derivation.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>exportable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Enables keys to be exportable. This allows for all the valid keys in the key ring to be exported. Once set, this cannot
-be disabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>keys</span>
         <span class="property-indicator"></span>
         <span class="property-type">List[Any>]</span>
     </dt>
-    <dd>{{% md %}}List of key versions in the keyring.
+    <dd>{{% md %}}List of key versions in the keyring. This attribute is zero-indexed and will contain a map of values depending on the `type` of the encryption key.
+* for key types `aes256-gcm96` and `chacha20-poly1305`, each key version will be a map of a single value `id` which is just a hash of the key's metadata.
+* for key types `ed25519`, `ecdsa-p256`, `rsa-2048` and `rsa-4096`, each key version will be a map of the following:
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>latest_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Latest key version in use in the keyring
+    <dd>{{% md %}}Latest key version available. This value is 1-indexed, so if `latest_version` is `1`, then the key's information can be referenced from `keys` by selecting element `0`
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>min_<wbr>available_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Minimum key version available for use.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>min_<wbr>decryption_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Minimum key version to use for decryption.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>min_<wbr>encryption_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Minimum key version to use for encryption
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the encryption key to create.
+    <dd>{{% md %}}Minimum key version available for use. If keys have been archived by increasing `min_decryption_version`, this attribute will reflect that change.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>supports_<wbr>decryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports decryption, based on key type.
 {{% /md %}}</dd>
@@ -1150,7 +808,7 @@ be disabled.
             title="">
         <span>supports_<wbr>derivation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports derivation, based on key type.
 {{% /md %}}</dd>
@@ -1159,7 +817,7 @@ be disabled.
             title="">
         <span>supports_<wbr>encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports encryption, based on key type.
 {{% /md %}}</dd>
@@ -1168,19 +826,9 @@ be disabled.
             title="">
         <span>supports_<wbr>signing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports signing, based on key type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: aes128-gcm96, aes256-gcm96, chacha20-poly1305,
-ed25519, ecdsa-p256, ecdsa-p384, ecdsa-p521, rsa-2048, rsa-4096
 {{% /md %}}</dd>
 
 </dl>
@@ -1208,7 +856,7 @@ Get an existing SecretBackendKey resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackendKey<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/transit?tab=doc#SecretBackendKeyState">SecretBackendKeyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/transit?tab=doc#SecretBackendKey">SecretBackendKey</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackendKey<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/transit?tab=doc#SecretBackendKeyState">SecretBackendKeyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/transit?tab=doc#SecretBackendKey">SecretBackendKey</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1322,35 +970,35 @@ The following state arguments are supported:
             title="Optional">
         <span>Allow<wbr>Plaintext<wbr>Backup</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set, enables taking backup of named key in the plaintext format. Once set, this cannot be disabled.
+    <dd>{{% md %}}Enables taking backup of entire keyring in the plaintext format. Once set, this cannot be disabled.
+* Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api/secret/transit/index.html#backup-key)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Transit secret backend the resource belongs to.
+    <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Convergent<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires
-derived to be set to true.
+    <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires `derived` to be set to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Deletion<wbr>Allowed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies if the key is allowed to be deleted.
 {{% /md %}}</dd>
@@ -1359,54 +1007,54 @@ derived to be set to true.
             title="Optional">
         <span>Derived</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context
-which is used for key derivation.
+    <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context which is used for key derivation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Exportable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enables keys to be exportable. This allows for all the valid keys in the key ring to be exported. Once set, this cannot
-be disabled.
+    <dd>{{% md %}}Enables keys to be exportable. This allows for all valid private keys in the keyring to be exported. Once set, this cannot be disabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<ImmutableDictionary<string, object>>?</span>
+        <span class="property-type">List&lt;Immutable<wbr>Dictionary&lt;string, object&gt;&gt;</span>
     </dt>
-    <dd>{{% md %}}List of key versions in the keyring.
+    <dd>{{% md %}}List of key versions in the keyring. This attribute is zero-indexed and will contain a map of values depending on the `type` of the encryption key.
+* for key types `aes256-gcm96` and `chacha20-poly1305`, each key version will be a map of a single value `id` which is just a hash of the key's metadata.
+* for key types `ed25519`, `ecdsa-p256`, `rsa-2048` and `rsa-4096`, each key version will be a map of the following:
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Latest<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Latest key version in use in the keyring
+    <dd>{{% md %}}Latest key version available. This value is 1-indexed, so if `latest_version` is `1`, then the key's information can be referenced from `keys` by selecting element `0`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Min<wbr>Available<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Minimum key version available for use.
+    <dd>{{% md %}}Minimum key version available for use. If keys have been archived by increasing `min_decryption_version`, this attribute will reflect that change.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Min<wbr>Decryption<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for decryption.
 {{% /md %}}</dd>
@@ -1415,7 +1063,7 @@ be disabled.
             title="Optional">
         <span>Min<wbr>Encryption<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for encryption
 {{% /md %}}</dd>
@@ -1424,16 +1072,16 @@ be disabled.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the encryption key to create.
+    <dd>{{% md %}}The name to identify this key within the backend. Must be unique within the backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Supports<wbr>Decryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports decryption, based on key type.
 {{% /md %}}</dd>
@@ -1442,7 +1090,7 @@ be disabled.
             title="Optional">
         <span>Supports<wbr>Derivation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports derivation, based on key type.
 {{% /md %}}</dd>
@@ -1451,7 +1099,7 @@ be disabled.
             title="Optional">
         <span>Supports<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports encryption, based on key type.
 {{% /md %}}</dd>
@@ -1460,7 +1108,7 @@ be disabled.
             title="Optional">
         <span>Supports<wbr>Signing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports signing, based on key type.
 {{% /md %}}</dd>
@@ -1469,10 +1117,10 @@ be disabled.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: aes128-gcm96, aes256-gcm96, chacha20-poly1305,
-ed25519, ecdsa-p256, ecdsa-p384, ecdsa-p521, rsa-2048, rsa-4096
+    <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: `aes256-gcm96` (default), `chacha20-poly1305`, `ed25519`, `ecdsa-p256`, `rsa-2048` and `rsa-4096`. 
+* Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit/index.html#key-types)
 {{% /md %}}</dd>
 
 </dl>
@@ -1486,35 +1134,35 @@ ed25519, ecdsa-p256, ecdsa-p384, ecdsa-p521, rsa-2048, rsa-4096
             title="Optional">
         <span>Allow<wbr>Plaintext<wbr>Backup</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set, enables taking backup of named key in the plaintext format. Once set, this cannot be disabled.
+    <dd>{{% md %}}Enables taking backup of entire keyring in the plaintext format. Once set, this cannot be disabled.
+* Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api/secret/transit/index.html#backup-key)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Transit secret backend the resource belongs to.
+    <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Convergent<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires
-derived to be set to true.
+    <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires `derived` to be set to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Deletion<wbr>Allowed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies if the key is allowed to be deleted.
 {{% /md %}}</dd>
@@ -1523,20 +1171,18 @@ derived to be set to true.
             title="Optional">
         <span>Derived</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context
-which is used for key derivation.
+    <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context which is used for key derivation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Exportable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enables keys to be exportable. This allows for all the valid keys in the key ring to be exported. Once set, this cannot
-be disabled.
+    <dd>{{% md %}}Enables keys to be exportable. This allows for all valid private keys in the keyring to be exported. Once set, this cannot be disabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1545,32 +1191,34 @@ be disabled.
         <span class="property-indicator"></span>
         <span class="property-type">[]map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}List of key versions in the keyring.
+    <dd>{{% md %}}List of key versions in the keyring. This attribute is zero-indexed and will contain a map of values depending on the `type` of the encryption key.
+* for key types `aes256-gcm96` and `chacha20-poly1305`, each key version will be a map of a single value `id` which is just a hash of the key's metadata.
+* for key types `ed25519`, `ecdsa-p256`, `rsa-2048` and `rsa-4096`, each key version will be a map of the following:
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Latest<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Latest key version in use in the keyring
+    <dd>{{% md %}}Latest key version available. This value is 1-indexed, so if `latest_version` is `1`, then the key's information can be referenced from `keys` by selecting element `0`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Min<wbr>Available<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Minimum key version available for use.
+    <dd>{{% md %}}Minimum key version available for use. If keys have been archived by increasing `min_decryption_version`, this attribute will reflect that change.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Min<wbr>Decryption<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for decryption.
 {{% /md %}}</dd>
@@ -1579,7 +1227,7 @@ be disabled.
             title="Optional">
         <span>Min<wbr>Encryption<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for encryption
 {{% /md %}}</dd>
@@ -1588,16 +1236,16 @@ be disabled.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the encryption key to create.
+    <dd>{{% md %}}The name to identify this key within the backend. Must be unique within the backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Supports<wbr>Decryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports decryption, based on key type.
 {{% /md %}}</dd>
@@ -1606,7 +1254,7 @@ be disabled.
             title="Optional">
         <span>Supports<wbr>Derivation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports derivation, based on key type.
 {{% /md %}}</dd>
@@ -1615,7 +1263,7 @@ be disabled.
             title="Optional">
         <span>Supports<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports encryption, based on key type.
 {{% /md %}}</dd>
@@ -1624,7 +1272,7 @@ be disabled.
             title="Optional">
         <span>Supports<wbr>Signing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports signing, based on key type.
 {{% /md %}}</dd>
@@ -1633,10 +1281,10 @@ be disabled.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: aes128-gcm96, aes256-gcm96, chacha20-poly1305,
-ed25519, ecdsa-p256, ecdsa-p384, ecdsa-p521, rsa-2048, rsa-4096
+    <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: `aes256-gcm96` (default), `chacha20-poly1305`, `ed25519`, `ecdsa-p256`, `rsa-2048` and `rsa-4096`. 
+* Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit/index.html#key-types)
 {{% /md %}}</dd>
 
 </dl>
@@ -1650,35 +1298,35 @@ ed25519, ecdsa-p256, ecdsa-p384, ecdsa-p521, rsa-2048, rsa-4096
             title="Optional">
         <span>allow<wbr>Plaintext<wbr>Backup</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If set, enables taking backup of named key in the plaintext format. Once set, this cannot be disabled.
+    <dd>{{% md %}}Enables taking backup of entire keyring in the plaintext format. Once set, this cannot be disabled.
+* Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api/secret/transit/index.html#backup-key)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Transit secret backend the resource belongs to.
+    <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>convergent<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires
-derived to be set to true.
+    <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires `derived` to be set to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>deletion<wbr>Allowed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies if the key is allowed to be deleted.
 {{% /md %}}</dd>
@@ -1687,54 +1335,54 @@ derived to be set to true.
             title="Optional">
         <span>derived</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context
-which is used for key derivation.
+    <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context which is used for key derivation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>exportable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Enables keys to be exportable. This allows for all the valid keys in the key ring to be exported. Once set, this cannot
-be disabled.
+    <dd>{{% md %}}Enables keys to be exportable. This allows for all valid private keys in the keyring to be exported. Once set, this cannot be disabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}[]?</span>
+        <span class="property-type">{[key: string]: any}[]</span>
     </dt>
-    <dd>{{% md %}}List of key versions in the keyring.
+    <dd>{{% md %}}List of key versions in the keyring. This attribute is zero-indexed and will contain a map of values depending on the `type` of the encryption key.
+* for key types `aes256-gcm96` and `chacha20-poly1305`, each key version will be a map of a single value `id` which is just a hash of the key's metadata.
+* for key types `ed25519`, `ecdsa-p256`, `rsa-2048` and `rsa-4096`, each key version will be a map of the following:
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>latest<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Latest key version in use in the keyring
+    <dd>{{% md %}}Latest key version available. This value is 1-indexed, so if `latest_version` is `1`, then the key's information can be referenced from `keys` by selecting element `0`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>min<wbr>Available<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Minimum key version available for use.
+    <dd>{{% md %}}Minimum key version available for use. If keys have been archived by increasing `min_decryption_version`, this attribute will reflect that change.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>min<wbr>Decryption<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for decryption.
 {{% /md %}}</dd>
@@ -1743,7 +1391,7 @@ be disabled.
             title="Optional">
         <span>min<wbr>Encryption<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for encryption
 {{% /md %}}</dd>
@@ -1752,16 +1400,16 @@ be disabled.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the encryption key to create.
+    <dd>{{% md %}}The name to identify this key within the backend. Must be unique within the backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>supports<wbr>Decryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports decryption, based on key type.
 {{% /md %}}</dd>
@@ -1770,7 +1418,7 @@ be disabled.
             title="Optional">
         <span>supports<wbr>Derivation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports derivation, based on key type.
 {{% /md %}}</dd>
@@ -1779,7 +1427,7 @@ be disabled.
             title="Optional">
         <span>supports<wbr>Encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports encryption, based on key type.
 {{% /md %}}</dd>
@@ -1788,7 +1436,7 @@ be disabled.
             title="Optional">
         <span>supports<wbr>Signing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports signing, based on key type.
 {{% /md %}}</dd>
@@ -1797,10 +1445,10 @@ be disabled.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: aes128-gcm96, aes256-gcm96, chacha20-poly1305,
-ed25519, ecdsa-p256, ecdsa-p384, ecdsa-p521, rsa-2048, rsa-4096
+    <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: `aes256-gcm96` (default), `chacha20-poly1305`, `ed25519`, `ecdsa-p256`, `rsa-2048` and `rsa-4096`. 
+* Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit/index.html#key-types)
 {{% /md %}}</dd>
 
 </dl>
@@ -1814,35 +1462,35 @@ ed25519, ecdsa-p256, ecdsa-p384, ecdsa-p521, rsa-2048, rsa-4096
             title="Optional">
         <span>allow_<wbr>plaintext_<wbr>backup</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If set, enables taking backup of named key in the plaintext format. Once set, this cannot be disabled.
+    <dd>{{% md %}}Enables taking backup of entire keyring in the plaintext format. Once set, this cannot be disabled.
+* Refer to Vault API documentation on key backups for more information: [Backup Key](https://www.vaultproject.io/api/secret/transit/index.html#backup-key)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Transit secret backend the resource belongs to.
+    <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>convergent_<wbr>encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires
-derived to be set to true.
+    <dd>{{% md %}}Whether or not to support convergent encryption, where the same plaintext creates the same ciphertext. This requires `derived` to be set to `true`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>deletion_<wbr>allowed</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies if the key is allowed to be deleted.
 {{% /md %}}</dd>
@@ -1851,20 +1499,18 @@ derived to be set to true.
             title="Optional">
         <span>derived</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context
-which is used for key derivation.
+    <dd>{{% md %}}Specifies if key derivation is to be used. If enabled, all encrypt/decrypt requests to this key must provide a context which is used for key derivation.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>exportable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Enables keys to be exportable. This allows for all the valid keys in the key ring to be exported. Once set, this cannot
-be disabled.
+    <dd>{{% md %}}Enables keys to be exportable. This allows for all valid private keys in the keyring to be exported. Once set, this cannot be disabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1873,32 +1519,34 @@ be disabled.
         <span class="property-indicator"></span>
         <span class="property-type">List[Any>]</span>
     </dt>
-    <dd>{{% md %}}List of key versions in the keyring.
+    <dd>{{% md %}}List of key versions in the keyring. This attribute is zero-indexed and will contain a map of values depending on the `type` of the encryption key.
+* for key types `aes256-gcm96` and `chacha20-poly1305`, each key version will be a map of a single value `id` which is just a hash of the key's metadata.
+* for key types `ed25519`, `ecdsa-p256`, `rsa-2048` and `rsa-4096`, each key version will be a map of the following:
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>latest_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Latest key version in use in the keyring
+    <dd>{{% md %}}Latest key version available. This value is 1-indexed, so if `latest_version` is `1`, then the key's information can be referenced from `keys` by selecting element `0`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>min_<wbr>available_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Minimum key version available for use.
+    <dd>{{% md %}}Minimum key version available for use. If keys have been archived by increasing `min_decryption_version`, this attribute will reflect that change.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>min_<wbr>decryption_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for decryption.
 {{% /md %}}</dd>
@@ -1907,7 +1555,7 @@ be disabled.
             title="Optional">
         <span>min_<wbr>encryption_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Minimum key version to use for encryption
 {{% /md %}}</dd>
@@ -1916,16 +1564,16 @@ be disabled.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the encryption key to create.
+    <dd>{{% md %}}The name to identify this key within the backend. Must be unique within the backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>supports_<wbr>decryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports decryption, based on key type.
 {{% /md %}}</dd>
@@ -1934,7 +1582,7 @@ be disabled.
             title="Optional">
         <span>supports_<wbr>derivation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports derivation, based on key type.
 {{% /md %}}</dd>
@@ -1943,7 +1591,7 @@ be disabled.
             title="Optional">
         <span>supports_<wbr>encryption</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports encryption, based on key type.
 {{% /md %}}</dd>
@@ -1952,7 +1600,7 @@ be disabled.
             title="Optional">
         <span>supports_<wbr>signing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the key supports signing, based on key type.
 {{% /md %}}</dd>
@@ -1961,10 +1609,10 @@ be disabled.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: aes128-gcm96, aes256-gcm96, chacha20-poly1305,
-ed25519, ecdsa-p256, ecdsa-p384, ecdsa-p521, rsa-2048, rsa-4096
+    <dd>{{% md %}}Specifies the type of key to create. The currently-supported types are: `aes256-gcm96` (default), `chacha20-poly1305`, `ed25519`, `ecdsa-p256`, `rsa-2048` and `rsa-4096`. 
+* Refer to the Vault documentation on transit key types for more information: [Key Types](https://www.vaultproject.io/docs/secrets/transit/index.html#key-types)
 {{% /md %}}</dd>
 
 </dl>
@@ -1986,6 +1634,7 @@ ed25519, ecdsa-p256, ecdsa-p384, ecdsa-p521, rsa-2048, rsa-4096
 	<dd><a href="https://github.com/pulumi/pulumi-vault">https://github.com/pulumi/pulumi-vault</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
 </dl>
 

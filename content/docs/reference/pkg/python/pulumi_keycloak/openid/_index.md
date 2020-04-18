@@ -26,9 +26,6 @@ mapped to the ID of a pre-existing client.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_id_token</span></code> - (Optional) Indicates if the audience should be included in the <code class="docutils literal notranslate"><span class="pre">aud</span></code> claim for the id token. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_access_token</span></code> - (Optional) Indicates if the audience should be included in the <code class="docutils literal notranslate"><span class="pre">aud</span></code> claim for the id token. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_audience_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_audience_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -212,9 +209,6 @@ is set to <code class="docutils literal notranslate"><span class="pre">true</spa
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">service_account_user_id</span></code> - When service accounts are enabled for this client, this attribute is the unique ID for the Keycloak user that represents this service account.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_client.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_client.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -928,9 +922,6 @@ claims or roles for a user based on the OAuth 2.0 <code class="docutils literal 
 authenticating to clients with this scope attached. The consent screen will display the string
 value of this attribute.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_client_scope.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_client_scope.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1252,9 +1243,6 @@ be shared between multiple different clients.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_access_token</span></code> - (Optional) Indicates if the user’s full name should be added as a claim to the access token. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_userinfo</span></code> - (Optional) Indicates if the user’s full name should be added as a claim to the UserInfo response body. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_full_name_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_full_name_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1406,9 +1394,6 @@ different clients.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_access_token</span></code> - (Optional) Indicates if the property should be added as a claim to the access token. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_userinfo</span></code> - (Optional) Indicates if the property should be added as a claim to the UserInfo response body. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_group_membership_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_group_membership_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1525,9 +1510,6 @@ clients.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_access_token</span></code> - (Optional) Indicates if the property should be added as a claim to the access token. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_userinfo</span></code> - (Optional) Indicates if the property should be added as a claim to the UserInfo response body. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_hardcoded_claim_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_hardcoded_claim_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1672,9 +1654,6 @@ which can be shared between multiple different clients.</p>
 GUI.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">role_id</span></code> - (Required) The ID of the role to map to an access token.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_hardcoded_role_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_hardcoded_role_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1792,9 +1771,6 @@ can be shared between multiple different clients.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_access_token</span></code> - (Optional) Indicates if the attribute should be added as a claim to the access token. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_userinfo</span></code> - (Optional) Indicates if the attribute should be added as a claim to the UserInfo response body. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_user_attribute_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_user_attribute_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1951,9 +1927,6 @@ can be shared between multiple different clients.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_access_token</span></code> - (Optional) Indicates if the property should be added as a claim to the access token. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_userinfo</span></code> - (Optional) Indicates if the property should be added as a claim to the UserInfo response body. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_user_property_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_user_property_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2103,9 +2076,6 @@ clients.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_access_token</span></code> - (Optional) Indicates if the property should be added as a claim to the access token. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">add_to_userinfo</span></code> - (Optional) Indicates if the property should be added as a claim to the UserInfo response body. Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_user_realm_role_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_openid_user_realm_role_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2258,9 +2228,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">client_id</span></code> - (Required) The client id.</p></li>
 </ul>
 <p>See the docs for the <code class="docutils literal notranslate"><span class="pre">openid.Client</span></code> resource for details on the exported attributes.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/d/keycloak_openid_client.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/d/keycloak_openid_client.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">

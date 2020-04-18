@@ -22,9 +22,6 @@ the official documentation for
 <p>There are many types of Dataflow jobs.  Some Dataflow jobs run constantly, getting new data from (e.g.) a GCS bucket, and outputting data continuously.  Some jobs process a set amount of data then terminate.  All jobs can fail while running due to programming errors or other issues.  In this way, Dataflow jobs are different from most other Google resources.</p>
 <p>The Dataflow resource is considered ‘existing’ while it is in a nonterminal state.  If it reaches a terminal state (e.g. ‘FAILED’, ‘COMPLETE’, ‘CANCELLED’), it will be recreated on the next ‘apply’.  This is as expected for jobs which run continuously, but may surprise users who use this resource for other kinds of Dataflow jobs.</p>
 <p>A Dataflow job which is ‘destroyed’ may be “cancelled” or “drained”.  If “cancelled”, the job terminates - any data written remains where it is, but no new data will be processed.  If “drained”, no new data will enter the pipeline, but any data currently in the pipeline will finish being processed.  The default is “cancelled”, but if a user sets <code class="docutils literal notranslate"><span class="pre">on_delete</span></code> to <code class="docutils literal notranslate"><span class="pre">&quot;drain&quot;</span></code> in the configuration, you may experience a long wait for your <code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">destroy</span></code> to complete.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataflow_job.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dataflow_job.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

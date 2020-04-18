@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/okta/#AuthBackend">AuthBackend</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/okta/#AuthBackendArgs">AuthBackendArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/okta/#AuthBackend">AuthBackend</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/okta/#AuthBackendArgs">AuthBackendArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,7 +22,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAuthBackend<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/okta?tab=doc#AuthBackendArgs">AuthBackendArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/okta?tab=doc#AuthBackend">AuthBackend</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAuthBackend<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/okta?tab=doc#AuthBackendArgs">AuthBackendArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/okta?tab=doc#AuthBackend">AuthBackend</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -118,30 +118,38 @@ block_external_search_index: true
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Organization</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Okta organization. This will be the first part of the url `https://XXX.okta.com`
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Base<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Okta url. Examples: oktapreview.com, okta.com (default)
+    <dd>{{% md %}}The Okta url. Examples: oktapreview.com, okta.com
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Bypass<wbr>Okta<wbr>Mfa</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}When true, requests by Okta for a MFA check will be bypassed. This also disallows certain status checks on the account,
-such as whether the password is expired.
+    <dd>{{% md %}}When true, requests by Okta for a MFA check will be bypassed. This also disallows certain status checks on the account, such as whether the password is expired.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the auth backend
 {{% /md %}}</dd>
@@ -150,63 +158,60 @@ such as whether the password is expired.
             title="Optional">
         <span>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackendgroup">List&lt;Auth<wbr>Backend<wbr>Group<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#authbackendgroup">List&lt;Auth<wbr>Backend<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Associate Okta groups with policies within Vault.
+See below for more details.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Max<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Maximum duration after which authentication will be expired
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Organization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Okta organization. This will be the first part of the url https://XXX.okta.com.
+[See the documentation for info on valid duration formats](https://golang.org/pkg/time/#ParseDuration).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}path to mount the backend
+    <dd>{{% md %}}Path to mount the Okta auth backend
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Okta API token. This is required to query Okta for user group membership. If this is not supplied only locally
-configured groups will be enabled.
+    <dd>{{% md %}}The Okta API token. This is required to query Okta for user group membership.
+If this is not supplied only locally configured groups will be enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Duration after which authentication will be expired
+    <dd>{{% md %}}Duration after which authentication will be expired.
+[See the documentation for info on valid duration formats](https://golang.org/pkg/time/#ParseDuration).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackenduser">List&lt;Auth<wbr>Backend<wbr>User<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#authbackenduser">List&lt;Auth<wbr>Backend<wbr>User<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Associate Okta users with groups or policies within Vault.
+See below for more details.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -215,30 +220,38 @@ configured groups will be enabled.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Organization</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Okta organization. This will be the first part of the url `https://XXX.okta.com`
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Base<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Okta url. Examples: oktapreview.com, okta.com (default)
+    <dd>{{% md %}}The Okta url. Examples: oktapreview.com, okta.com
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Bypass<wbr>Okta<wbr>Mfa</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}When true, requests by Okta for a MFA check will be bypassed. This also disallows certain status checks on the account,
-such as whether the password is expired.
+    <dd>{{% md %}}When true, requests by Okta for a MFA check will be bypassed. This also disallows certain status checks on the account, such as whether the password is expired.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the auth backend
 {{% /md %}}</dd>
@@ -249,52 +262,47 @@ such as whether the password is expired.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authbackendgroup">[]Auth<wbr>Backend<wbr>Group<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Associate Okta groups with policies within Vault.
+See below for more details.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Max<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Maximum duration after which authentication will be expired
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Organization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Okta organization. This will be the first part of the url https://XXX.okta.com.
+[See the documentation for info on valid duration formats](https://golang.org/pkg/time/#ParseDuration).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}path to mount the backend
+    <dd>{{% md %}}Path to mount the Okta auth backend
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Okta API token. This is required to query Okta for user group membership. If this is not supplied only locally
-configured groups will be enabled.
+    <dd>{{% md %}}The Okta API token. This is required to query Okta for user group membership.
+If this is not supplied only locally configured groups will be enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Duration after which authentication will be expired
+    <dd>{{% md %}}Duration after which authentication will be expired.
+[See the documentation for info on valid duration formats](https://golang.org/pkg/time/#ParseDuration).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -303,7 +311,9 @@ configured groups will be enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authbackenduser">[]Auth<wbr>Backend<wbr>User<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Associate Okta users with groups or policies within Vault.
+See below for more details.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -312,30 +322,38 @@ configured groups will be enabled.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>organization</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Okta organization. This will be the first part of the url `https://XXX.okta.com`
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>base<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Okta url. Examples: oktapreview.com, okta.com (default)
+    <dd>{{% md %}}The Okta url. Examples: oktapreview.com, okta.com
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>bypass<wbr>Okta<wbr>Mfa</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}When true, requests by Okta for a MFA check will be bypassed. This also disallows certain status checks on the account,
-such as whether the password is expired.
+    <dd>{{% md %}}When true, requests by Okta for a MFA check will be bypassed. This also disallows certain status checks on the account, such as whether the password is expired.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the auth backend
 {{% /md %}}</dd>
@@ -344,63 +362,60 @@ such as whether the password is expired.
             title="Optional">
         <span>groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackendgroup">Auth<wbr>Backend<wbr>Group[]?</a></span>
+        <span class="property-type"><a href="#authbackendgroup">Auth<wbr>Backend<wbr>Group[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Associate Okta groups with policies within Vault.
+See below for more details.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>max<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Maximum duration after which authentication will be expired
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>organization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Okta organization. This will be the first part of the url https://XXX.okta.com.
+[See the documentation for info on valid duration formats](https://golang.org/pkg/time/#ParseDuration).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}path to mount the backend
+    <dd>{{% md %}}Path to mount the Okta auth backend
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Okta API token. This is required to query Okta for user group membership. If this is not supplied only locally
-configured groups will be enabled.
+    <dd>{{% md %}}The Okta API token. This is required to query Okta for user group membership.
+If this is not supplied only locally configured groups will be enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Duration after which authentication will be expired
+    <dd>{{% md %}}Duration after which authentication will be expired.
+[See the documentation for info on valid duration formats](https://golang.org/pkg/time/#ParseDuration).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>users</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackenduser">Auth<wbr>Backend<wbr>User[]?</a></span>
+        <span class="property-type"><a href="#authbackenduser">Auth<wbr>Backend<wbr>User[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Associate Okta users with groups or policies within Vault.
+See below for more details.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -409,30 +424,38 @@ configured groups will be enabled.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>organization</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Okta organization. This will be the first part of the url `https://XXX.okta.com`
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>base_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Okta url. Examples: oktapreview.com, okta.com (default)
+    <dd>{{% md %}}The Okta url. Examples: oktapreview.com, okta.com
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>bypass_<wbr>okta_<wbr>mfa</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}When true, requests by Okta for a MFA check will be bypassed. This also disallows certain status checks on the account,
-such as whether the password is expired.
+    <dd>{{% md %}}When true, requests by Okta for a MFA check will be bypassed. This also disallows certain status checks on the account, such as whether the password is expired.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The description of the auth backend
 {{% /md %}}</dd>
@@ -443,52 +466,47 @@ such as whether the password is expired.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authbackendgroup">List[Auth<wbr>Backend<wbr>Group]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Associate Okta groups with policies within Vault.
+See below for more details.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>max_<wbr>ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Maximum duration after which authentication will be expired
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>organization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Okta organization. This will be the first part of the url https://XXX.okta.com.
+[See the documentation for info on valid duration formats](https://golang.org/pkg/time/#ParseDuration).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}path to mount the backend
+    <dd>{{% md %}}Path to mount the Okta auth backend
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Okta API token. This is required to query Okta for user group membership. If this is not supplied only locally
-configured groups will be enabled.
+    <dd>{{% md %}}The Okta API token. This is required to query Okta for user group membership.
+If this is not supplied only locally configured groups will be enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Duration after which authentication will be expired
+    <dd>{{% md %}}Duration after which authentication will be expired.
+[See the documentation for info on valid duration formats](https://golang.org/pkg/time/#ParseDuration).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -497,7 +515,9 @@ configured groups will be enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authbackenduser">List[Auth<wbr>Backend<wbr>User]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Associate Okta users with groups or policies within Vault.
+See below for more details.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -522,100 +542,10 @@ The following output properties are available:
             title="">
         <span>Accessor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The mount accessor related to the auth mount.
+    <dd>{{% md %}}The mount accessor related to the auth mount. It is useful for integration with [Identity Secrets Engine](https://www.vaultproject.io/docs/secrets/identity/index.html).
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Base<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Okta url. Examples: oktapreview.com, okta.com (default)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Bypass<wbr>Okta<wbr>Mfa</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}When true, requests by Okta for a MFA check will be bypassed. This also disallows certain status checks on the account,
-such as whether the password is expired.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the auth backend
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackendgroup">List&lt;Auth<wbr>Backend<wbr>Group&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Maximum duration after which authentication will be expired
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Organization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Okta organization. This will be the first part of the url https://XXX.okta.com.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}path to mount the backend
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Okta API token. This is required to query Okta for user group membership. If this is not supplied only locally
-configured groups will be enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Duration after which authentication will be expired
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackenduser">List&lt;Auth<wbr>Backend<wbr>User&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -628,100 +558,10 @@ configured groups will be enabled.
             title="">
         <span>Accessor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The mount accessor related to the auth mount.
+    <dd>{{% md %}}The mount accessor related to the auth mount. It is useful for integration with [Identity Secrets Engine](https://www.vaultproject.io/docs/secrets/identity/index.html).
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Base<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Okta url. Examples: oktapreview.com, okta.com (default)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Bypass<wbr>Okta<wbr>Mfa</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}When true, requests by Okta for a MFA check will be bypassed. This also disallows certain status checks on the account,
-such as whether the password is expired.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description of the auth backend
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackendgroup">[]Auth<wbr>Backend<wbr>Group<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Maximum duration after which authentication will be expired
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Organization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Okta organization. This will be the first part of the url https://XXX.okta.com.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}path to mount the backend
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Okta API token. This is required to query Okta for user group membership. If this is not supplied only locally
-configured groups will be enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Duration after which authentication will be expired
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackenduser">[]Auth<wbr>Backend<wbr>User<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -734,100 +574,10 @@ configured groups will be enabled.
             title="">
         <span>accessor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The mount accessor related to the auth mount.
+    <dd>{{% md %}}The mount accessor related to the auth mount. It is useful for integration with [Identity Secrets Engine](https://www.vaultproject.io/docs/secrets/identity/index.html).
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>base<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Okta url. Examples: oktapreview.com, okta.com (default)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>bypass<wbr>Okta<wbr>Mfa</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}When true, requests by Okta for a MFA check will be bypassed. This also disallows certain status checks on the account,
-such as whether the password is expired.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the auth backend
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackendgroup">Auth<wbr>Backend<wbr>Group[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max<wbr>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Maximum duration after which authentication will be expired
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>organization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Okta organization. This will be the first part of the url https://XXX.okta.com.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}path to mount the backend
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Okta API token. This is required to query Okta for user group membership. If this is not supplied only locally
-configured groups will be enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Duration after which authentication will be expired
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackenduser">Auth<wbr>Backend<wbr>User[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -840,100 +590,10 @@ configured groups will be enabled.
             title="">
         <span>accessor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The mount accessor related to the auth mount.
+    <dd>{{% md %}}The mount accessor related to the auth mount. It is useful for integration with [Identity Secrets Engine](https://www.vaultproject.io/docs/secrets/identity/index.html).
 {{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>base_<wbr>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Okta url. Examples: oktapreview.com, okta.com (default)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>bypass_<wbr>okta_<wbr>mfa</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}When true, requests by Okta for a MFA check will be bypassed. This also disallows certain status checks on the account,
-such as whether the password is expired.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the auth backend
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>groups</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackendgroup">List[Auth<wbr>Backend<wbr>Group]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max_<wbr>ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Maximum duration after which authentication will be expired
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>organization</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Okta organization. This will be the first part of the url https://XXX.okta.com.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}path to mount the backend
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>token</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Okta API token. This is required to query Okta for user group membership. If this is not supplied only locally
-configured groups will be enabled.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Duration after which authentication will be expired
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>users</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackenduser">List[Auth<wbr>Backend<wbr>User]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -960,7 +620,7 @@ Get an existing AuthBackend resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackend<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/okta?tab=doc#AuthBackendState">AuthBackendState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/okta?tab=doc#AuthBackend">AuthBackend</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackend<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/okta?tab=doc#AuthBackendState">AuthBackendState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/okta?tab=doc#AuthBackend">AuthBackend</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1074,35 +734,34 @@ The following state arguments are supported:
             title="Optional">
         <span>Accessor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The mount accessor related to the auth mount.
+    <dd>{{% md %}}The mount accessor related to the auth mount. It is useful for integration with [Identity Secrets Engine](https://www.vaultproject.io/docs/secrets/identity/index.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Base<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Okta url. Examples: oktapreview.com, okta.com (default)
+    <dd>{{% md %}}The Okta url. Examples: oktapreview.com, okta.com
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Bypass<wbr>Okta<wbr>Mfa</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}When true, requests by Okta for a MFA check will be bypassed. This also disallows certain status checks on the account,
-such as whether the password is expired.
+    <dd>{{% md %}}When true, requests by Okta for a MFA check will be bypassed. This also disallows certain status checks on the account, such as whether the password is expired.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the auth backend
 {{% /md %}}</dd>
@@ -1111,63 +770,69 @@ such as whether the password is expired.
             title="Optional">
         <span>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackendgroup">List&lt;Auth<wbr>Backend<wbr>Group<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#authbackendgroup">List&lt;Auth<wbr>Backend<wbr>Group<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Associate Okta groups with policies within Vault.
+See below for more details.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Max<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Maximum duration after which authentication will be expired
+[See the documentation for info on valid duration formats](https://golang.org/pkg/time/#ParseDuration).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Organization</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Okta organization. This will be the first part of the url https://XXX.okta.com.
+    <dd>{{% md %}}The Okta organization. This will be the first part of the url `https://XXX.okta.com`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}path to mount the backend
+    <dd>{{% md %}}Path to mount the Okta auth backend
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Okta API token. This is required to query Okta for user group membership. If this is not supplied only locally
-configured groups will be enabled.
+    <dd>{{% md %}}The Okta API token. This is required to query Okta for user group membership.
+If this is not supplied only locally configured groups will be enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Duration after which authentication will be expired
+    <dd>{{% md %}}Duration after which authentication will be expired.
+[See the documentation for info on valid duration formats](https://golang.org/pkg/time/#ParseDuration).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackenduser">List&lt;Auth<wbr>Backend<wbr>User<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#authbackenduser">List&lt;Auth<wbr>Backend<wbr>User<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Associate Okta users with groups or policies within Vault.
+See below for more details.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1180,35 +845,34 @@ configured groups will be enabled.
             title="Optional">
         <span>Accessor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The mount accessor related to the auth mount.
+    <dd>{{% md %}}The mount accessor related to the auth mount. It is useful for integration with [Identity Secrets Engine](https://www.vaultproject.io/docs/secrets/identity/index.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Base<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Okta url. Examples: oktapreview.com, okta.com (default)
+    <dd>{{% md %}}The Okta url. Examples: oktapreview.com, okta.com
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Bypass<wbr>Okta<wbr>Mfa</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}When true, requests by Okta for a MFA check will be bypassed. This also disallows certain status checks on the account,
-such as whether the password is expired.
+    <dd>{{% md %}}When true, requests by Okta for a MFA check will be bypassed. This also disallows certain status checks on the account, such as whether the password is expired.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the auth backend
 {{% /md %}}</dd>
@@ -1219,52 +883,56 @@ such as whether the password is expired.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authbackendgroup">[]Auth<wbr>Backend<wbr>Group<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Associate Okta groups with policies within Vault.
+See below for more details.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Max<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Maximum duration after which authentication will be expired
+[See the documentation for info on valid duration formats](https://golang.org/pkg/time/#ParseDuration).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Organization</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Okta organization. This will be the first part of the url https://XXX.okta.com.
+    <dd>{{% md %}}The Okta organization. This will be the first part of the url `https://XXX.okta.com`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}path to mount the backend
+    <dd>{{% md %}}Path to mount the Okta auth backend
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Okta API token. This is required to query Okta for user group membership. If this is not supplied only locally
-configured groups will be enabled.
+    <dd>{{% md %}}The Okta API token. This is required to query Okta for user group membership.
+If this is not supplied only locally configured groups will be enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Duration after which authentication will be expired
+    <dd>{{% md %}}Duration after which authentication will be expired.
+[See the documentation for info on valid duration formats](https://golang.org/pkg/time/#ParseDuration).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1273,7 +941,9 @@ configured groups will be enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authbackenduser">[]Auth<wbr>Backend<wbr>User<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Associate Okta users with groups or policies within Vault.
+See below for more details.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1286,35 +956,34 @@ configured groups will be enabled.
             title="Optional">
         <span>accessor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The mount accessor related to the auth mount.
+    <dd>{{% md %}}The mount accessor related to the auth mount. It is useful for integration with [Identity Secrets Engine](https://www.vaultproject.io/docs/secrets/identity/index.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>base<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Okta url. Examples: oktapreview.com, okta.com (default)
+    <dd>{{% md %}}The Okta url. Examples: oktapreview.com, okta.com
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>bypass<wbr>Okta<wbr>Mfa</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}When true, requests by Okta for a MFA check will be bypassed. This also disallows certain status checks on the account,
-such as whether the password is expired.
+    <dd>{{% md %}}When true, requests by Okta for a MFA check will be bypassed. This also disallows certain status checks on the account, such as whether the password is expired.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the auth backend
 {{% /md %}}</dd>
@@ -1323,63 +992,69 @@ such as whether the password is expired.
             title="Optional">
         <span>groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackendgroup">Auth<wbr>Backend<wbr>Group[]?</a></span>
+        <span class="property-type"><a href="#authbackendgroup">Auth<wbr>Backend<wbr>Group[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Associate Okta groups with policies within Vault.
+See below for more details.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>max<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Maximum duration after which authentication will be expired
+[See the documentation for info on valid duration formats](https://golang.org/pkg/time/#ParseDuration).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>organization</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Okta organization. This will be the first part of the url https://XXX.okta.com.
+    <dd>{{% md %}}The Okta organization. This will be the first part of the url `https://XXX.okta.com`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}path to mount the backend
+    <dd>{{% md %}}Path to mount the Okta auth backend
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Okta API token. This is required to query Okta for user group membership. If this is not supplied only locally
-configured groups will be enabled.
+    <dd>{{% md %}}The Okta API token. This is required to query Okta for user group membership.
+If this is not supplied only locally configured groups will be enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Duration after which authentication will be expired
+    <dd>{{% md %}}Duration after which authentication will be expired.
+[See the documentation for info on valid duration formats](https://golang.org/pkg/time/#ParseDuration).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>users</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackenduser">Auth<wbr>Backend<wbr>User[]?</a></span>
+        <span class="property-type"><a href="#authbackenduser">Auth<wbr>Backend<wbr>User[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Associate Okta users with groups or policies within Vault.
+See below for more details.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1392,35 +1067,34 @@ configured groups will be enabled.
             title="Optional">
         <span>accessor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The mount accessor related to the auth mount.
+    <dd>{{% md %}}The mount accessor related to the auth mount. It is useful for integration with [Identity Secrets Engine](https://www.vaultproject.io/docs/secrets/identity/index.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>base_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Okta url. Examples: oktapreview.com, okta.com (default)
+    <dd>{{% md %}}The Okta url. Examples: oktapreview.com, okta.com
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>bypass_<wbr>okta_<wbr>mfa</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}When true, requests by Okta for a MFA check will be bypassed. This also disallows certain status checks on the account,
-such as whether the password is expired.
+    <dd>{{% md %}}When true, requests by Okta for a MFA check will be bypassed. This also disallows certain status checks on the account, such as whether the password is expired.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The description of the auth backend
 {{% /md %}}</dd>
@@ -1431,52 +1105,56 @@ such as whether the password is expired.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authbackendgroup">List[Auth<wbr>Backend<wbr>Group]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Associate Okta groups with policies within Vault.
+See below for more details.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>max_<wbr>ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Maximum duration after which authentication will be expired
+[See the documentation for info on valid duration formats](https://golang.org/pkg/time/#ParseDuration).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>organization</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Okta organization. This will be the first part of the url https://XXX.okta.com.
+    <dd>{{% md %}}The Okta organization. This will be the first part of the url `https://XXX.okta.com`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}path to mount the backend
+    <dd>{{% md %}}Path to mount the Okta auth backend
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Okta API token. This is required to query Okta for user group membership. If this is not supplied only locally
-configured groups will be enabled.
+    <dd>{{% md %}}The Okta API token. This is required to query Okta for user group membership.
+If this is not supplied only locally configured groups will be enabled.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Duration after which authentication will be expired
+    <dd>{{% md %}}Duration after which authentication will be expired.
+[See the documentation for info on valid duration formats](https://golang.org/pkg/time/#ParseDuration).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1485,7 +1163,9 @@ configured groups will be enabled.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authbackenduser">List[Auth<wbr>Backend<wbr>User]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Associate Okta users with groups or policies within Vault.
+See below for more details.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1507,7 +1187,7 @@ configured groups will be enabled.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/okta?tab=doc#AuthBackendGroupTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/okta?tab=doc#AuthBackendGroupTypeOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/okta?tab=doc#AuthBackendGroupTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/okta?tab=doc#AuthBackendGroupTypeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1520,17 +1200,19 @@ configured groups will be enabled.
             title="Required">
         <span>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the group within the Okta
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of Vault policies to associate with this user
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1543,17 +1225,19 @@ configured groups will be enabled.
             title="Required">
         <span>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the group within the Okta
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of Vault policies to associate with this user
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1566,17 +1250,19 @@ configured groups will be enabled.
             title="Required">
         <span>group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the group within the Okta
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of Vault policies to associate with this user
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1589,17 +1275,19 @@ configured groups will be enabled.
             title="Required">
         <span>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the group within the Okta
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of Vault policies to associate with this user
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1614,7 +1302,7 @@ configured groups will be enabled.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/okta?tab=doc#AuthBackendUserTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/okta?tab=doc#AuthBackendUserTypeOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/okta?tab=doc#AuthBackendUserTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/okta?tab=doc#AuthBackendUserTypeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1627,25 +1315,28 @@ configured groups will be enabled.
             title="Required">
         <span>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of Okta groups to associate with this user
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the user within Okta
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Policies</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of Vault policies to associate with this user
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1658,25 +1349,28 @@ configured groups will be enabled.
             title="Required">
         <span>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of Okta groups to associate with this user
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the user within Okta
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Policies</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of Vault policies to associate with this user
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1689,25 +1383,28 @@ configured groups will be enabled.
             title="Required">
         <span>groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of Okta groups to associate with this user
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the user within Okta
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>policies</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Vault policies to associate with this user
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1720,25 +1417,28 @@ configured groups will be enabled.
             title="Required">
         <span>groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>policies</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of Okta groups to associate with this user
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the user within Okta
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>policies</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Vault policies to associate with this user
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1757,6 +1457,7 @@ configured groups will be enabled.
 	<dd><a href="https://github.com/pulumi/pulumi-vault">https://github.com/pulumi/pulumi-vault</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
 </dl>
 

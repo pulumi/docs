@@ -70,7 +70,7 @@ const tfTestSubnet = new aws.ec2.Subnet("tf_test_subnet", {
     cidrBlock: "10.0.0.0/24",
     mapPublicIpOnLaunch: true,
     vpcId: defaultVpc.id,
-}, { dependsOn: [gw] });
+}, {dependsOn: [gw]});
 const foo = new aws.ec2.Instance("foo", {
     // us-west-2
     ami: "ami-5189a661",
@@ -82,7 +82,7 @@ const bar = new aws.ec2.Eip("bar", {
     associateWithPrivateIp: "10.0.0.12",
     instance: foo.id,
     vpc: true,
-}, { dependsOn: [gw] });
+}, {dependsOn: [gw]});
 ```
 
 Allocating EIP from the BYOIP pool:
@@ -107,7 +107,7 @@ const byoip_ip = new aws.ec2.Eip("byoip-ip", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Eip">Eip</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#EipArgs">EipArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Eip">Eip</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#EipArgs">EipArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -115,7 +115,7 @@ const byoip_ip = new aws.ec2.Eip("byoip-ip", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewEip<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#EipArgs">EipArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#Eip">Eip</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewEip<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#EipArgs">EipArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#Eip">Eip</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -215,7 +215,7 @@ const byoip_ip = new aws.ec2.Eip("byoip-ip", {
             title="Optional">
         <span>Associate<wbr>With<wbr>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A user specified primary or secondary private IP address to
 associate with the Elastic IP address. If no private IP address is specified,
@@ -226,7 +226,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}EC2 instance ID.
 {{% /md %}}</dd>
@@ -235,7 +235,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Network<wbr>Interface</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Network interface ID to associate with.
 {{% /md %}}</dd>
@@ -244,7 +244,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Public<wbr>Ipv4Pool</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}EC2 IPv4 address pool identifier or `amazon`. This option is only available for VPC EIPs.
 {{% /md %}}</dd>
@@ -253,7 +253,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -262,7 +262,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean if the EIP is in a VPC or not.
 {{% /md %}}</dd>
@@ -278,7 +278,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Associate<wbr>With<wbr>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A user specified primary or secondary private IP address to
 associate with the Elastic IP address. If no private IP address is specified,
@@ -289,7 +289,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}EC2 instance ID.
 {{% /md %}}</dd>
@@ -298,7 +298,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Network<wbr>Interface</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Network interface ID to associate with.
 {{% /md %}}</dd>
@@ -307,7 +307,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Public<wbr>Ipv4Pool</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}EC2 IPv4 address pool identifier or `amazon`. This option is only available for VPC EIPs.
 {{% /md %}}</dd>
@@ -325,7 +325,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean if the EIP is in a VPC or not.
 {{% /md %}}</dd>
@@ -341,7 +341,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>associate<wbr>With<wbr>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A user specified primary or secondary private IP address to
 associate with the Elastic IP address. If no private IP address is specified,
@@ -352,7 +352,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}EC2 instance ID.
 {{% /md %}}</dd>
@@ -361,7 +361,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>network<wbr>Interface</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Network interface ID to associate with.
 {{% /md %}}</dd>
@@ -370,7 +370,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>public<wbr>Ipv4Pool</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}EC2 IPv4 address pool identifier or `amazon`. This option is only available for VPC EIPs.
 {{% /md %}}</dd>
@@ -379,7 +379,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -388,7 +388,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Boolean if the EIP is in a VPC or not.
 {{% /md %}}</dd>
@@ -404,7 +404,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>associate_<wbr>with_<wbr>private_<wbr>ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A user specified primary or secondary private IP address to
 associate with the Elastic IP address. If no private IP address is specified,
@@ -415,7 +415,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}EC2 instance ID.
 {{% /md %}}</dd>
@@ -424,7 +424,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>network_<wbr>interface</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Network interface ID to associate with.
 {{% /md %}}</dd>
@@ -433,7 +433,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>public_<wbr>ipv4_<wbr>pool</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}EC2 IPv4 address pool identifier or `amazon`. This option is only available for VPC EIPs.
 {{% /md %}}</dd>
@@ -451,7 +451,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean if the EIP is in a VPC or not.
 {{% /md %}}</dd>
@@ -479,26 +479,15 @@ The following output properties are available:
             title="">
         <span>Allocation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Associate<wbr>With<wbr>Private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A user specified primary or secondary private IP address to
-associate with the Elastic IP address. If no private IP address is specified,
-the Elastic IP address is associated with the primary private IP address.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Association<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -506,33 +495,15 @@ the Elastic IP address is associated with the primary private IP address.
             title="">
         <span>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Instance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}EC2 instance ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Interface</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Network interface ID to associate with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Private<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Private DNS associated with the Elastic IP address (if in VPC).
 {{% /md %}}</dd>
@@ -541,7 +512,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Contains the private IP address (if in VPC).
 {{% /md %}}</dd>
@@ -550,7 +521,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="">
         <span>Public<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Public DNS associated with the Elastic IP address.
 {{% /md %}}</dd>
@@ -559,36 +530,9 @@ the Elastic IP address is associated with the primary private IP address.
             title="">
         <span>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Contains the public IP address.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Public<wbr>Ipv4Pool</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}EC2 IPv4 address pool identifier or `amazon`. This option is only available for VPC EIPs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Boolean if the EIP is in a VPC or not.
 {{% /md %}}</dd>
 
 </dl>
@@ -602,26 +546,15 @@ the Elastic IP address is associated with the primary private IP address.
             title="">
         <span>Allocation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Associate<wbr>With<wbr>Private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A user specified primary or secondary private IP address to
-associate with the Elastic IP address. If no private IP address is specified,
-the Elastic IP address is associated with the primary private IP address.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Association<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -629,33 +562,15 @@ the Elastic IP address is associated with the primary private IP address.
             title="">
         <span>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Instance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}EC2 instance ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Interface</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Network interface ID to associate with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Private<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Private DNS associated with the Elastic IP address (if in VPC).
 {{% /md %}}</dd>
@@ -664,7 +579,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Contains the private IP address (if in VPC).
 {{% /md %}}</dd>
@@ -673,7 +588,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="">
         <span>Public<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Public DNS associated with the Elastic IP address.
 {{% /md %}}</dd>
@@ -682,36 +597,9 @@ the Elastic IP address is associated with the primary private IP address.
             title="">
         <span>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Contains the public IP address.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Public<wbr>Ipv4Pool</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}EC2 IPv4 address pool identifier or `amazon`. This option is only available for VPC EIPs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Boolean if the EIP is in a VPC or not.
 {{% /md %}}</dd>
 
 </dl>
@@ -725,26 +613,15 @@ the Elastic IP address is associated with the primary private IP address.
             title="">
         <span>allocation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>associate<wbr>With<wbr>Private<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A user specified primary or secondary private IP address to
-associate with the Elastic IP address. If no private IP address is specified,
-the Elastic IP address is associated with the primary private IP address.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>association<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -752,33 +629,15 @@ the Elastic IP address is associated with the primary private IP address.
             title="">
         <span>domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>instance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}EC2 instance ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network<wbr>Interface</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Network interface ID to associate with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>private<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Private DNS associated with the Elastic IP address (if in VPC).
 {{% /md %}}</dd>
@@ -787,7 +646,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="">
         <span>private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Contains the private IP address (if in VPC).
 {{% /md %}}</dd>
@@ -796,7 +655,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="">
         <span>public<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Public DNS associated with the Elastic IP address.
 {{% /md %}}</dd>
@@ -805,36 +664,9 @@ the Elastic IP address is associated with the primary private IP address.
             title="">
         <span>public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Contains the public IP address.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>public<wbr>Ipv4Pool</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}EC2 IPv4 address pool identifier or `amazon`. This option is only available for VPC EIPs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Boolean if the EIP is in a VPC or not.
 {{% /md %}}</dd>
 
 </dl>
@@ -848,26 +680,15 @@ the Elastic IP address is associated with the primary private IP address.
             title="">
         <span>allocation_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>associate_<wbr>with_<wbr>private_<wbr>ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A user specified primary or secondary private IP address to
-associate with the Elastic IP address. If no private IP address is specified,
-the Elastic IP address is associated with the primary private IP address.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>association_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -875,33 +696,15 @@ the Elastic IP address is associated with the primary private IP address.
             title="">
         <span>domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>instance</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}EC2 instance ID.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network_<wbr>interface</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Network interface ID to associate with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>private_<wbr>dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Private DNS associated with the Elastic IP address (if in VPC).
 {{% /md %}}</dd>
@@ -910,7 +713,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="">
         <span>private_<wbr>ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Contains the private IP address (if in VPC).
 {{% /md %}}</dd>
@@ -919,7 +722,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="">
         <span>public_<wbr>dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Public DNS associated with the Elastic IP address.
 {{% /md %}}</dd>
@@ -928,36 +731,9 @@ the Elastic IP address is associated with the primary private IP address.
             title="">
         <span>public_<wbr>ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Contains the public IP address.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>public_<wbr>ipv4_<wbr>pool</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}EC2 IPv4 address pool identifier or `amazon`. This option is only available for VPC EIPs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Boolean if the EIP is in a VPC or not.
 {{% /md %}}</dd>
 
 </dl>
@@ -985,7 +761,7 @@ Get an existing Eip resource's state with the given name, ID, and optional extra
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEip<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#EipState">EipState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#Eip">Eip</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetEip<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#EipState">EipState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#Eip">Eip</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1099,7 +875,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allocation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1107,7 +883,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Associate<wbr>With<wbr>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A user specified primary or secondary private IP address to
 associate with the Elastic IP address. If no private IP address is specified,
@@ -1118,7 +894,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Association<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1126,7 +902,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1134,7 +910,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}EC2 instance ID.
 {{% /md %}}</dd>
@@ -1143,7 +919,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Network<wbr>Interface</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Network interface ID to associate with.
 {{% /md %}}</dd>
@@ -1152,7 +928,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Private<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Private DNS associated with the Elastic IP address (if in VPC).
 {{% /md %}}</dd>
@@ -1161,7 +937,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Contains the private IP address (if in VPC).
 {{% /md %}}</dd>
@@ -1170,7 +946,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Public<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Public DNS associated with the Elastic IP address.
 {{% /md %}}</dd>
@@ -1179,7 +955,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Contains the public IP address.
 {{% /md %}}</dd>
@@ -1188,7 +964,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Public<wbr>Ipv4Pool</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}EC2 IPv4 address pool identifier or `amazon`. This option is only available for VPC EIPs.
 {{% /md %}}</dd>
@@ -1197,7 +973,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1206,7 +982,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean if the EIP is in a VPC or not.
 {{% /md %}}</dd>
@@ -1222,7 +998,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Allocation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1230,7 +1006,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Associate<wbr>With<wbr>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A user specified primary or secondary private IP address to
 associate with the Elastic IP address. If no private IP address is specified,
@@ -1241,7 +1017,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Association<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1249,7 +1025,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1257,7 +1033,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}EC2 instance ID.
 {{% /md %}}</dd>
@@ -1266,7 +1042,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Network<wbr>Interface</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Network interface ID to associate with.
 {{% /md %}}</dd>
@@ -1275,7 +1051,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Private<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Private DNS associated with the Elastic IP address (if in VPC).
 {{% /md %}}</dd>
@@ -1284,7 +1060,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Contains the private IP address (if in VPC).
 {{% /md %}}</dd>
@@ -1293,7 +1069,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Public<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Public DNS associated with the Elastic IP address.
 {{% /md %}}</dd>
@@ -1302,7 +1078,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Contains the public IP address.
 {{% /md %}}</dd>
@@ -1311,7 +1087,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Public<wbr>Ipv4Pool</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}EC2 IPv4 address pool identifier or `amazon`. This option is only available for VPC EIPs.
 {{% /md %}}</dd>
@@ -1329,7 +1105,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>Vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean if the EIP is in a VPC or not.
 {{% /md %}}</dd>
@@ -1345,7 +1121,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>allocation<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1353,7 +1129,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>associate<wbr>With<wbr>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A user specified primary or secondary private IP address to
 associate with the Elastic IP address. If no private IP address is specified,
@@ -1364,7 +1140,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>association<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1372,7 +1148,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1380,7 +1156,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}EC2 instance ID.
 {{% /md %}}</dd>
@@ -1389,7 +1165,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>network<wbr>Interface</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Network interface ID to associate with.
 {{% /md %}}</dd>
@@ -1398,7 +1174,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>private<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Private DNS associated with the Elastic IP address (if in VPC).
 {{% /md %}}</dd>
@@ -1407,7 +1183,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Contains the private IP address (if in VPC).
 {{% /md %}}</dd>
@@ -1416,7 +1192,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>public<wbr>Dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Public DNS associated with the Elastic IP address.
 {{% /md %}}</dd>
@@ -1425,7 +1201,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>public<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Contains the public IP address.
 {{% /md %}}</dd>
@@ -1434,7 +1210,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>public<wbr>Ipv4Pool</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}EC2 IPv4 address pool identifier or `amazon`. This option is only available for VPC EIPs.
 {{% /md %}}</dd>
@@ -1443,7 +1219,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1452,7 +1228,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Boolean if the EIP is in a VPC or not.
 {{% /md %}}</dd>
@@ -1468,7 +1244,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>allocation_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1476,7 +1252,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>associate_<wbr>with_<wbr>private_<wbr>ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A user specified primary or secondary private IP address to
 associate with the Elastic IP address. If no private IP address is specified,
@@ -1487,7 +1263,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>association_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1495,7 +1271,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1503,7 +1279,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>instance</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}EC2 instance ID.
 {{% /md %}}</dd>
@@ -1512,7 +1288,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>network_<wbr>interface</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Network interface ID to associate with.
 {{% /md %}}</dd>
@@ -1521,7 +1297,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>private_<wbr>dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Private DNS associated with the Elastic IP address (if in VPC).
 {{% /md %}}</dd>
@@ -1530,7 +1306,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>private_<wbr>ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Contains the private IP address (if in VPC).
 {{% /md %}}</dd>
@@ -1539,7 +1315,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>public_<wbr>dns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Public DNS associated with the Elastic IP address.
 {{% /md %}}</dd>
@@ -1548,7 +1324,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>public_<wbr>ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Contains the public IP address.
 {{% /md %}}</dd>
@@ -1557,7 +1333,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>public_<wbr>ipv4_<wbr>pool</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}EC2 IPv4 address pool identifier or `amazon`. This option is only available for VPC EIPs.
 {{% /md %}}</dd>
@@ -1575,7 +1351,7 @@ the Elastic IP address is associated with the primary private IP address.
             title="Optional">
         <span>vpc</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Boolean if the EIP is in a VPC or not.
 {{% /md %}}</dd>

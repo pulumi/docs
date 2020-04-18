@@ -8,21 +8,24 @@ block_external_search_index: true
 
 The VPN connections data source lists lots of VPN connections resource information owned by an Alicloud account.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const foo = pulumi.output(alicloud.vpn.getConnections({
+const foo = alicloud.vpn.getConnections({
     customerGatewayId: "fake-cgw-id",
     ids: ["fake-conn-id"],
     outputFile: "/tmp/vpnconn",
     vpnGatewayId: "fake-vpn-id",
-}, { async: true }));
+});
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vpn_connections.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -44,13 +47,13 @@ const foo = pulumi.output(alicloud.vpn.getConnections({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupConnections<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/vpn?tab=doc#LookupConnectionsArgs">LookupConnectionsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/vpn?tab=doc#LookupConnectionsResult">LookupConnectionsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupConnections<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpn?tab=doc#LookupConnectionsArgs">LookupConnectionsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpn?tab=doc#LookupConnectionsResult">LookupConnectionsResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetConnections </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Vpn.GetConnectionsResult.html">GetConnectionsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Vpn.GetConnectionsArgs.html">GetConnectionsArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Vpn.GetConnectionsResult.html">GetConnectionsResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.Vpn.GetConnectionsArgs.html">GetConnectionsArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -67,7 +70,7 @@ The following arguments are supported:
             title="Optional">
         <span>Customer<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Use the VPN customer gateway ID as the search key.
 {{% /md %}}</dd>
@@ -76,7 +79,7 @@ The following arguments are supported:
             title="Optional">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}IDs of the VPN connections.
 {{% /md %}}</dd>
@@ -85,7 +88,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A regex string of VPN connection name.
 {{% /md %}}</dd>
@@ -94,7 +97,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Save the result to the file.
 {{% /md %}}</dd>
@@ -103,7 +106,7 @@ The following arguments are supported:
             title="Optional">
         <span>Vpn<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Use the VPN gateway ID as the search key.
 {{% /md %}}</dd>
@@ -119,7 +122,7 @@ The following arguments are supported:
             title="Optional">
         <span>Customer<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Use the VPN customer gateway ID as the search key.
 {{% /md %}}</dd>
@@ -128,7 +131,7 @@ The following arguments are supported:
             title="Optional">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}IDs of the VPN connections.
 {{% /md %}}</dd>
@@ -137,7 +140,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A regex string of VPN connection name.
 {{% /md %}}</dd>
@@ -146,7 +149,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Save the result to the file.
 {{% /md %}}</dd>
@@ -155,7 +158,7 @@ The following arguments are supported:
             title="Optional">
         <span>Vpn<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Use the VPN gateway ID as the search key.
 {{% /md %}}</dd>
@@ -171,7 +174,7 @@ The following arguments are supported:
             title="Optional">
         <span>customer<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Use the VPN customer gateway ID as the search key.
 {{% /md %}}</dd>
@@ -180,7 +183,7 @@ The following arguments are supported:
             title="Optional">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}IDs of the VPN connections.
 {{% /md %}}</dd>
@@ -189,7 +192,7 @@ The following arguments are supported:
             title="Optional">
         <span>name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A regex string of VPN connection name.
 {{% /md %}}</dd>
@@ -198,7 +201,7 @@ The following arguments are supported:
             title="Optional">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Save the result to the file.
 {{% /md %}}</dd>
@@ -207,7 +210,7 @@ The following arguments are supported:
             title="Optional">
         <span>vpn<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Use the VPN gateway ID as the search key.
 {{% /md %}}</dd>
@@ -223,7 +226,7 @@ The following arguments are supported:
             title="Optional">
         <span>customer_<wbr>gateway_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Use the VPN customer gateway ID as the search key.
 {{% /md %}}</dd>
@@ -232,7 +235,7 @@ The following arguments are supported:
             title="Optional">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}IDs of the VPN connections.
 {{% /md %}}</dd>
@@ -241,7 +244,7 @@ The following arguments are supported:
             title="Optional">
         <span>name_<wbr>regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A regex string of VPN connection name.
 {{% /md %}}</dd>
@@ -250,7 +253,7 @@ The following arguments are supported:
             title="Optional">
         <span>output_<wbr>file</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Save the result to the file.
 {{% /md %}}</dd>
@@ -259,7 +262,7 @@ The following arguments are supported:
             title="Optional">
         <span>vpn_<wbr>gateway_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Use the VPN gateway ID as the search key.
 {{% /md %}}</dd>
@@ -288,25 +291,16 @@ The following output properties are available:
             title="">
         <span>Connections</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getconnectionsconnection">List&lt;Get<wbr>Connections<wbr>Connection&gt;</a></span>
+        <span class="property-type"><a href="#getconnectionsconnection">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpn.<wbr>Outputs.<wbr>Get<wbr>Connections<wbr>Connection&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of VPN connections. Each element contains the following attributes:
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Customer<wbr>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ID of the VPN customer gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -315,33 +309,42 @@ The following output properties are available:
             title="">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}(Optional) IDs of the VPN connections.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}(Optional) names of the VPN connections.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
+        <span>Customer<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}ID of the VPN customer gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -349,7 +352,7 @@ The following output properties are available:
             title="">
         <span>Vpn<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VPN gateway.
 {{% /md %}}</dd>
@@ -372,18 +375,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Customer<wbr>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}ID of the VPN customer gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -392,33 +386,42 @@ The following output properties are available:
             title="">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}(Optional) IDs of the VPN connections.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}(Optional) names of the VPN connections.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
+        <span>Customer<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ID of the VPN customer gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -426,7 +429,7 @@ The following output properties are available:
             title="">
         <span>Vpn<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VPN gateway.
 {{% /md %}}</dd>
@@ -449,18 +452,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>customer<wbr>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}ID of the VPN customer gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -469,33 +463,42 @@ The following output properties are available:
             title="">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) IDs of the VPN connections.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>name<wbr>Regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) names of the VPN connections.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
+        <span>customer<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}ID of the VPN customer gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -503,7 +506,7 @@ The following output properties are available:
             title="">
         <span>vpn<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VPN gateway.
 {{% /md %}}</dd>
@@ -526,18 +529,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>customer_<wbr>gateway_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}ID of the VPN customer gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -546,33 +540,42 @@ The following output properties are available:
             title="">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) IDs of the VPN connections.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>name_<wbr>regex</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}(Optional) names of the VPN connections.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
+        <span>customer_<wbr>gateway_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}ID of the VPN customer gateway.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name_<wbr>regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>output_<wbr>file</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -580,7 +583,7 @@ The following output properties are available:
             title="">
         <span>vpn_<wbr>gateway_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the VPN gateway.
 {{% /md %}}</dd>
@@ -603,7 +606,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/vpn?tab=doc#GetConnectionsConnection">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpn?tab=doc#GetConnectionsConnection">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -616,7 +619,7 @@ The following output properties are available:
             title="Required">
         <span>Create<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -624,7 +627,7 @@ The following output properties are available:
             title="Required">
         <span>Customer<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Use the VPN customer gateway ID as the search key.
 {{% /md %}}</dd>
@@ -633,7 +636,7 @@ The following output properties are available:
             title="Required">
         <span>Effect<wbr>Immediately</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -641,34 +644,16 @@ The following output properties are available:
             title="Required">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VPN connection.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ike<wbr>Configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getconnectionsconnectionikeconfig">List&lt;Get<wbr>Connections<wbr>Connection<wbr>Ike<wbr>Config<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The configurations of phase-one negotiation.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Ipsec<wbr>Configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getconnectionsconnectionipsecconfig">List&lt;Get<wbr>Connections<wbr>Connection<wbr>Ipsec<wbr>Config<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}The configurations of phase-two negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Local<wbr>Subnet</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The local subnet of the VPN connection.
 {{% /md %}}</dd>
@@ -677,7 +662,7 @@ The following output properties are available:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the VPN connection.
 {{% /md %}}</dd>
@@ -686,7 +671,7 @@ The following output properties are available:
             title="Required">
         <span>Remote<wbr>Subnet</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The remote subnet of the VPN connection.
 {{% /md %}}</dd>
@@ -695,7 +680,7 @@ The following output properties are available:
             title="Required">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the VPN connection, valid value:ike_sa_not_established, ike_sa_established, ipsec_sa_not_established, ipsec_sa_established.
 {{% /md %}}</dd>
@@ -704,9 +689,27 @@ The following output properties are available:
             title="Required">
         <span>Vpn<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Use the VPN gateway ID as the search key.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ike<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getconnectionsconnectionikeconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpn.<wbr>Inputs.<wbr>Get<wbr>Connections<wbr>Connection<wbr>Ike<wbr>Config<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The configurations of phase-one negotiation.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Ipsec<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getconnectionsconnectionipsecconfig">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Vpn.<wbr>Inputs.<wbr>Get<wbr>Connections<wbr>Connection<wbr>Ipsec<wbr>Config<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The configurations of phase-two negotiation.
 {{% /md %}}</dd>
 
 </dl>
@@ -720,7 +723,7 @@ The following output properties are available:
             title="Required">
         <span>Create<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -728,7 +731,7 @@ The following output properties are available:
             title="Required">
         <span>Customer<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Use the VPN customer gateway ID as the search key.
 {{% /md %}}</dd>
@@ -737,7 +740,7 @@ The following output properties are available:
             title="Required">
         <span>Effect<wbr>Immediately</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -745,9 +748,54 @@ The following output properties are available:
             title="Required">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VPN connection.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Local<wbr>Subnet</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The local subnet of the VPN connection.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the VPN connection.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Remote<wbr>Subnet</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The remote subnet of the VPN connection.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the VPN connection, valid value:ike_sa_not_established, ike_sa_established, ipsec_sa_not_established, ipsec_sa_established.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Vpn<wbr>Gateway<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Use the VPN gateway ID as the search key.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -768,51 +816,6 @@ The following output properties are available:
     <dd>{{% md %}}The configurations of phase-two negotiation.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Local<wbr>Subnet</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The local subnet of the VPN connection.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the VPN connection.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Remote<wbr>Subnet</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The remote subnet of the VPN connection.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The status of the VPN connection, valid value:ike_sa_not_established, ike_sa_established, ipsec_sa_not_established, ipsec_sa_established.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Vpn<wbr>Gateway<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Use the VPN gateway ID as the search key.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -824,7 +827,7 @@ The following output properties are available:
             title="Required">
         <span>create<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -832,7 +835,7 @@ The following output properties are available:
             title="Required">
         <span>customer<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Use the VPN customer gateway ID as the search key.
 {{% /md %}}</dd>
@@ -841,7 +844,7 @@ The following output properties are available:
             title="Required">
         <span>effect<wbr>Immediately</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -849,34 +852,16 @@ The following output properties are available:
             title="Required">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VPN connection.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ike<wbr>Configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getconnectionsconnectionikeconfig">Get<wbr>Connections<wbr>Connection<wbr>Ike<wbr>Config[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The configurations of phase-one negotiation.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>ipsec<wbr>Configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getconnectionsconnectionipsecconfig">Get<wbr>Connections<wbr>Connection<wbr>Ipsec<wbr>Config[]?</a></span>
-    </dt>
-    <dd>{{% md %}}The configurations of phase-two negotiation.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>local<wbr>Subnet</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The local subnet of the VPN connection.
 {{% /md %}}</dd>
@@ -885,7 +870,7 @@ The following output properties are available:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the VPN connection.
 {{% /md %}}</dd>
@@ -894,7 +879,7 @@ The following output properties are available:
             title="Required">
         <span>remote<wbr>Subnet</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The remote subnet of the VPN connection.
 {{% /md %}}</dd>
@@ -903,7 +888,7 @@ The following output properties are available:
             title="Required">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the VPN connection, valid value:ike_sa_not_established, ike_sa_established, ipsec_sa_not_established, ipsec_sa_established.
 {{% /md %}}</dd>
@@ -912,9 +897,27 @@ The following output properties are available:
             title="Required">
         <span>vpn<wbr>Gateway<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Use the VPN gateway ID as the search key.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ike<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getconnectionsconnectionikeconfig">Get<wbr>Connections<wbr>Connection<wbr>Ike<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}The configurations of phase-one negotiation.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ipsec<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getconnectionsconnectionipsecconfig">Get<wbr>Connections<wbr>Connection<wbr>Ipsec<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}The configurations of phase-two negotiation.
 {{% /md %}}</dd>
 
 </dl>
@@ -928,7 +931,7 @@ The following output properties are available:
             title="Required">
         <span>create_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -936,7 +939,7 @@ The following output properties are available:
             title="Required">
         <span>customer_<wbr>gateway_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Use the VPN customer gateway ID as the search key.
 {{% /md %}}</dd>
@@ -945,7 +948,7 @@ The following output properties are available:
             title="Required">
         <span>effect_<wbr>immediately</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -953,9 +956,54 @@ The following output properties are available:
             title="Required">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the VPN connection.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>local_<wbr>subnet</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The local subnet of the VPN connection.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the VPN connection.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>remote<wbr>Subnet</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The remote subnet of the VPN connection.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The status of the VPN connection, valid value:ike_sa_not_established, ike_sa_established, ipsec_sa_not_established, ipsec_sa_established.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>vpn_<wbr>gateway_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Use the VPN gateway ID as the search key.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -976,51 +1024,6 @@ The following output properties are available:
     <dd>{{% md %}}The configurations of phase-two negotiation.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>local_<wbr>subnet</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The local subnet of the VPN connection.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the VPN connection.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>remote<wbr>Subnet</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The remote subnet of the VPN connection.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The status of the VPN connection, valid value:ike_sa_not_established, ike_sa_established, ipsec_sa_not_established, ipsec_sa_established.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>vpn_<wbr>gateway_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Use the VPN gateway ID as the search key.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1034,7 +1037,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/vpn?tab=doc#GetConnectionsConnectionIkeConfig">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpn?tab=doc#GetConnectionsConnectionIkeConfig">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1047,7 +1050,7 @@ The following output properties are available:
             title="Optional">
         <span>Ike<wbr>Auth<wbr>Alg</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The authentication algorithm of phase-one negotiation. 
 {{% /md %}}</dd>
@@ -1056,7 +1059,7 @@ The following output properties are available:
             title="Optional">
         <span>Ike<wbr>Enc<wbr>Alg</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The encryption algorithm of phase-one negotiation. 
 {{% /md %}}</dd>
@@ -1065,7 +1068,7 @@ The following output properties are available:
             title="Optional">
         <span>Ike<wbr>Lifetime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation. 
 {{% /md %}}</dd>
@@ -1074,7 +1077,7 @@ The following output properties are available:
             title="Optional">
         <span>Ike<wbr>Local<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The identification of the VPN gateway.
 {{% /md %}}</dd>
@@ -1083,7 +1086,7 @@ The following output properties are available:
             title="Optional">
         <span>Ike<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The negotiation mode of IKE phase-one. 
 {{% /md %}}</dd>
@@ -1092,7 +1095,7 @@ The following output properties are available:
             title="Optional">
         <span>Ike<wbr>Pfs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-one negotiation. 
 {{% /md %}}</dd>
@@ -1101,7 +1104,7 @@ The following output properties are available:
             title="Optional">
         <span>Ike<wbr>Remote<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The identification of the customer gateway.
 {{% /md %}}</dd>
@@ -1110,7 +1113,7 @@ The following output properties are available:
             title="Optional">
         <span>Ike<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The version of the IKE protocol. 
 {{% /md %}}</dd>
@@ -1119,7 +1122,7 @@ The following output properties are available:
             title="Optional">
         <span>Psk</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Used for authentication between the IPsec VPN gateway and the customer gateway.
 {{% /md %}}</dd>
@@ -1135,7 +1138,7 @@ The following output properties are available:
             title="Optional">
         <span>Ike<wbr>Auth<wbr>Alg</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The authentication algorithm of phase-one negotiation. 
 {{% /md %}}</dd>
@@ -1144,7 +1147,7 @@ The following output properties are available:
             title="Optional">
         <span>Ike<wbr>Enc<wbr>Alg</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The encryption algorithm of phase-one negotiation. 
 {{% /md %}}</dd>
@@ -1153,7 +1156,7 @@ The following output properties are available:
             title="Optional">
         <span>Ike<wbr>Lifetime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation. 
 {{% /md %}}</dd>
@@ -1162,7 +1165,7 @@ The following output properties are available:
             title="Optional">
         <span>Ike<wbr>Local<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The identification of the VPN gateway.
 {{% /md %}}</dd>
@@ -1171,7 +1174,7 @@ The following output properties are available:
             title="Optional">
         <span>Ike<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The negotiation mode of IKE phase-one. 
 {{% /md %}}</dd>
@@ -1180,7 +1183,7 @@ The following output properties are available:
             title="Optional">
         <span>Ike<wbr>Pfs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-one negotiation. 
 {{% /md %}}</dd>
@@ -1189,7 +1192,7 @@ The following output properties are available:
             title="Optional">
         <span>Ike<wbr>Remote<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The identification of the customer gateway.
 {{% /md %}}</dd>
@@ -1198,7 +1201,7 @@ The following output properties are available:
             title="Optional">
         <span>Ike<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The version of the IKE protocol. 
 {{% /md %}}</dd>
@@ -1207,7 +1210,7 @@ The following output properties are available:
             title="Optional">
         <span>Psk</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Used for authentication between the IPsec VPN gateway and the customer gateway.
 {{% /md %}}</dd>
@@ -1223,7 +1226,7 @@ The following output properties are available:
             title="Optional">
         <span>ike<wbr>Auth<wbr>Alg</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The authentication algorithm of phase-one negotiation. 
 {{% /md %}}</dd>
@@ -1232,7 +1235,7 @@ The following output properties are available:
             title="Optional">
         <span>ike<wbr>Enc<wbr>Alg</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The encryption algorithm of phase-one negotiation. 
 {{% /md %}}</dd>
@@ -1241,7 +1244,7 @@ The following output properties are available:
             title="Optional">
         <span>ike<wbr>Lifetime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation. 
 {{% /md %}}</dd>
@@ -1250,7 +1253,7 @@ The following output properties are available:
             title="Optional">
         <span>ike<wbr>Local<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The identification of the VPN gateway.
 {{% /md %}}</dd>
@@ -1259,7 +1262,7 @@ The following output properties are available:
             title="Optional">
         <span>ike<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The negotiation mode of IKE phase-one. 
 {{% /md %}}</dd>
@@ -1268,7 +1271,7 @@ The following output properties are available:
             title="Optional">
         <span>ike<wbr>Pfs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-one negotiation. 
 {{% /md %}}</dd>
@@ -1277,7 +1280,7 @@ The following output properties are available:
             title="Optional">
         <span>ike<wbr>Remote<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The identification of the customer gateway.
 {{% /md %}}</dd>
@@ -1286,7 +1289,7 @@ The following output properties are available:
             title="Optional">
         <span>ike<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The version of the IKE protocol. 
 {{% /md %}}</dd>
@@ -1295,7 +1298,7 @@ The following output properties are available:
             title="Optional">
         <span>psk</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Used for authentication between the IPsec VPN gateway and the customer gateway.
 {{% /md %}}</dd>
@@ -1311,7 +1314,7 @@ The following output properties are available:
             title="Optional">
         <span>ike<wbr>Auth<wbr>Alg</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The authentication algorithm of phase-one negotiation. 
 {{% /md %}}</dd>
@@ -1320,7 +1323,7 @@ The following output properties are available:
             title="Optional">
         <span>ike<wbr>Enc<wbr>Alg</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The encryption algorithm of phase-one negotiation. 
 {{% /md %}}</dd>
@@ -1329,7 +1332,7 @@ The following output properties are available:
             title="Optional">
         <span>ike<wbr>Lifetime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The SA lifecycle as the result of phase-one negotiation. 
 {{% /md %}}</dd>
@@ -1338,7 +1341,7 @@ The following output properties are available:
             title="Optional">
         <span>ike<wbr>Local<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The identification of the VPN gateway.
 {{% /md %}}</dd>
@@ -1347,7 +1350,7 @@ The following output properties are available:
             title="Optional">
         <span>ike<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The negotiation mode of IKE phase-one. 
 {{% /md %}}</dd>
@@ -1356,7 +1359,7 @@ The following output properties are available:
             title="Optional">
         <span>ike<wbr>Pfs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-one negotiation. 
 {{% /md %}}</dd>
@@ -1365,7 +1368,7 @@ The following output properties are available:
             title="Optional">
         <span>ike<wbr>Remote<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The identification of the customer gateway.
 {{% /md %}}</dd>
@@ -1374,7 +1377,7 @@ The following output properties are available:
             title="Optional">
         <span>ike<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The version of the IKE protocol. 
 {{% /md %}}</dd>
@@ -1383,7 +1386,7 @@ The following output properties are available:
             title="Optional">
         <span>psk</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Used for authentication between the IPsec VPN gateway and the customer gateway.
 {{% /md %}}</dd>
@@ -1401,7 +1404,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/vpn?tab=doc#GetConnectionsConnectionIpsecConfig">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/vpn?tab=doc#GetConnectionsConnectionIpsecConfig">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1414,7 +1417,7 @@ The following output properties are available:
             title="Optional">
         <span>Ipsec<wbr>Auth<wbr>Alg</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The authentication algorithm of phase-two negotiation. 
 {{% /md %}}</dd>
@@ -1423,7 +1426,7 @@ The following output properties are available:
             title="Optional">
         <span>Ipsec<wbr>Enc<wbr>Alg</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The encryption algorithm of phase-two negotiation. 
 {{% /md %}}</dd>
@@ -1432,7 +1435,7 @@ The following output properties are available:
             title="Optional">
         <span>Ipsec<wbr>Lifetime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation. 
 {{% /md %}}</dd>
@@ -1441,7 +1444,7 @@ The following output properties are available:
             title="Optional">
         <span>Ipsec<wbr>Pfs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-two negotiation. 
 {{% /md %}}</dd>
@@ -1457,7 +1460,7 @@ The following output properties are available:
             title="Optional">
         <span>Ipsec<wbr>Auth<wbr>Alg</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The authentication algorithm of phase-two negotiation. 
 {{% /md %}}</dd>
@@ -1466,7 +1469,7 @@ The following output properties are available:
             title="Optional">
         <span>Ipsec<wbr>Enc<wbr>Alg</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The encryption algorithm of phase-two negotiation. 
 {{% /md %}}</dd>
@@ -1475,7 +1478,7 @@ The following output properties are available:
             title="Optional">
         <span>Ipsec<wbr>Lifetime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation. 
 {{% /md %}}</dd>
@@ -1484,7 +1487,7 @@ The following output properties are available:
             title="Optional">
         <span>Ipsec<wbr>Pfs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-two negotiation. 
 {{% /md %}}</dd>
@@ -1500,7 +1503,7 @@ The following output properties are available:
             title="Optional">
         <span>ipsec<wbr>Auth<wbr>Alg</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The authentication algorithm of phase-two negotiation. 
 {{% /md %}}</dd>
@@ -1509,7 +1512,7 @@ The following output properties are available:
             title="Optional">
         <span>ipsec<wbr>Enc<wbr>Alg</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The encryption algorithm of phase-two negotiation. 
 {{% /md %}}</dd>
@@ -1518,7 +1521,7 @@ The following output properties are available:
             title="Optional">
         <span>ipsec<wbr>Lifetime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation. 
 {{% /md %}}</dd>
@@ -1527,7 +1530,7 @@ The following output properties are available:
             title="Optional">
         <span>ipsec<wbr>Pfs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-two negotiation. 
 {{% /md %}}</dd>
@@ -1543,7 +1546,7 @@ The following output properties are available:
             title="Optional">
         <span>ipsec<wbr>Auth<wbr>Alg</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The authentication algorithm of phase-two negotiation. 
 {{% /md %}}</dd>
@@ -1552,7 +1555,7 @@ The following output properties are available:
             title="Optional">
         <span>ipsec<wbr>Enc<wbr>Alg</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The encryption algorithm of phase-two negotiation. 
 {{% /md %}}</dd>
@@ -1561,7 +1564,7 @@ The following output properties are available:
             title="Optional">
         <span>ipsec<wbr>Lifetime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The SA lifecycle as the result of phase-two negotiation. 
 {{% /md %}}</dd>
@@ -1570,7 +1573,7 @@ The following output properties are available:
             title="Optional">
         <span>ipsec<wbr>Pfs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Diffie-Hellman key exchange algorithm used by phase-two negotiation. 
 {{% /md %}}</dd>

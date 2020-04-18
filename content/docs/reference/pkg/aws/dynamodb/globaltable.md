@@ -34,7 +34,7 @@ const us_east_1Table = new aws.dynamodb.Table("us-east-1", {
     streamEnabled: true,
     streamViewType: "NEW_AND_OLD_IMAGES",
     writeCapacity: 1,
-}, { provider: us_east_1 });
+}, {provider: us_east_1});
 const us_west_2Table = new aws.dynamodb.Table("us-west-2", {
     attributes: [{
         name: "myAttribute",
@@ -45,7 +45,7 @@ const us_west_2Table = new aws.dynamodb.Table("us-west-2", {
     streamEnabled: true,
     streamViewType: "NEW_AND_OLD_IMAGES",
     writeCapacity: 1,
-}, { provider: us_west_2 });
+}, {provider: us_west_2});
 const myTable = new aws.dynamodb.GlobalTable("myTable", {
     replicas: [
         {
@@ -55,7 +55,7 @@ const myTable = new aws.dynamodb.GlobalTable("myTable", {
             regionName: "us-west-2",
         },
     ],
-}, { provider: us_east_1, dependsOn: [us_east_1Table, us_west_2Table] });
+}, {provider: us_east_1,dependsOn: [us_east_1Table, us_west_2Table]});
 ```
 
 {{% /example %}}
@@ -68,7 +68,7 @@ const myTable = new aws.dynamodb.GlobalTable("myTable", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/dynamodb/#GlobalTable">GlobalTable</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/dynamodb/#GlobalTableArgs">GlobalTableArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/dynamodb/#GlobalTable">GlobalTable</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/dynamodb/#GlobalTableArgs">GlobalTableArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -76,11 +76,11 @@ const myTable = new aws.dynamodb.GlobalTable("myTable", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewGlobalTable<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dynamodb?tab=doc#GlobalTableArgs">GlobalTableArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dynamodb?tab=doc#GlobalTable">GlobalTable</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewGlobalTable<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GlobalTableArgs">GlobalTableArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GlobalTable">GlobalTable</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dynamodb.GlobalTable.html">GlobalTable</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.GlobalTableArgs.html">GlobalTableArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.GlobalTable.html">GlobalTable</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.GlobalTableArgs.html">GlobalTableArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -172,15 +172,6 @@ const myTable = new aws.dynamodb.GlobalTable("myTable", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the global table. Must match underlying DynamoDB Table names in all regions.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Replicas</span>
@@ -190,21 +181,21 @@ const myTable = new aws.dynamodb.GlobalTable("myTable", {
     <dd>{{% md %}}Underlying DynamoDB Table. At least 1 replica must be defined. See below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the global table. Must match underlying DynamoDB Table names in all regions.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the global table. Must match underlying DynamoDB Table names in all regions.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -215,21 +206,21 @@ const myTable = new aws.dynamodb.GlobalTable("myTable", {
     <dd>{{% md %}}Underlying DynamoDB Table. At least 1 replica must be defined. See below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the global table. Must match underlying DynamoDB Table names in all regions.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the global table. Must match underlying DynamoDB Table names in all regions.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -240,21 +231,21 @@ const myTable = new aws.dynamodb.GlobalTable("myTable", {
     <dd>{{% md %}}Underlying DynamoDB Table. At least 1 replica must be defined. See below.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the global table. Must match underlying DynamoDB Table names in all regions.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the global table. Must match underlying DynamoDB Table names in all regions.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -263,6 +254,15 @@ const myTable = new aws.dynamodb.GlobalTable("myTable", {
         <span class="property-type"><a href="#globaltablereplica">List[Global<wbr>Table<wbr>Replica]</a></span>
     </dt>
     <dd>{{% md %}}Underlying DynamoDB Table. At least 1 replica must be defined. See below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the global table. Must match underlying DynamoDB Table names in all regions.
 {{% /md %}}</dd>
 
 </dl>
@@ -288,27 +288,9 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the DynamoDB Global Table
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the global table. Must match underlying DynamoDB Table names in all regions.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Replicas</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globaltablereplica">List&lt;Global<wbr>Table<wbr>Replica&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Underlying DynamoDB Table. At least 1 replica must be defined. See below.
 {{% /md %}}</dd>
 
 </dl>
@@ -322,27 +304,9 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the DynamoDB Global Table
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the global table. Must match underlying DynamoDB Table names in all regions.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Replicas</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globaltablereplica">[]Global<wbr>Table<wbr>Replica</a></span>
-    </dt>
-    <dd>{{% md %}}Underlying DynamoDB Table. At least 1 replica must be defined. See below.
 {{% /md %}}</dd>
 
 </dl>
@@ -356,27 +320,9 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the DynamoDB Global Table
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the global table. Must match underlying DynamoDB Table names in all regions.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>replicas</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globaltablereplica">Global<wbr>Table<wbr>Replica[]</a></span>
-    </dt>
-    <dd>{{% md %}}Underlying DynamoDB Table. At least 1 replica must be defined. See below.
 {{% /md %}}</dd>
 
 </dl>
@@ -390,27 +336,9 @@ The following output properties are available:
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the DynamoDB Global Table
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the global table. Must match underlying DynamoDB Table names in all regions.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>replicas</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globaltablereplica">List[Global<wbr>Table<wbr>Replica]</a></span>
-    </dt>
-    <dd>{{% md %}}Underlying DynamoDB Table. At least 1 replica must be defined. See below.
 {{% /md %}}</dd>
 
 </dl>
@@ -438,11 +366,11 @@ Get an existing GlobalTable resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGlobalTable<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dynamodb?tab=doc#GlobalTableState">GlobalTableState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dynamodb?tab=doc#GlobalTable">GlobalTable</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetGlobalTable<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GlobalTableState">GlobalTableState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GlobalTable">GlobalTable</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dynamodb.GlobalTable.html">GlobalTable</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Dynamodb.GlobalTableState.html">GlobalTableState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.GlobalTable.html">GlobalTable</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.DynamoDB.GlobalTableState.html">GlobalTableState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -552,7 +480,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the DynamoDB Global Table
 {{% /md %}}</dd>
@@ -561,7 +489,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the global table. Must match underlying DynamoDB Table names in all regions.
 {{% /md %}}</dd>
@@ -570,7 +498,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Replicas</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globaltablereplica">List&lt;Global<wbr>Table<wbr>Replica<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#globaltablereplica">List&lt;Global<wbr>Table<wbr>Replica<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Underlying DynamoDB Table. At least 1 replica must be defined. See below.
 {{% /md %}}</dd>
@@ -586,7 +514,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the DynamoDB Global Table
 {{% /md %}}</dd>
@@ -595,7 +523,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the global table. Must match underlying DynamoDB Table names in all regions.
 {{% /md %}}</dd>
@@ -620,7 +548,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the DynamoDB Global Table
 {{% /md %}}</dd>
@@ -629,7 +557,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the global table. Must match underlying DynamoDB Table names in all regions.
 {{% /md %}}</dd>
@@ -638,7 +566,7 @@ The following state arguments are supported:
             title="Optional">
         <span>replicas</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#globaltablereplica">Global<wbr>Table<wbr>Replica[]?</a></span>
+        <span class="property-type"><a href="#globaltablereplica">Global<wbr>Table<wbr>Replica[]</a></span>
     </dt>
     <dd>{{% md %}}Underlying DynamoDB Table. At least 1 replica must be defined. See below.
 {{% /md %}}</dd>
@@ -654,7 +582,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the DynamoDB Global Table
 {{% /md %}}</dd>
@@ -663,7 +591,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the global table. Must match underlying DynamoDB Table names in all regions.
 {{% /md %}}</dd>
@@ -697,7 +625,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dynamodb?tab=doc#GlobalTableReplicaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/dynamodb?tab=doc#GlobalTableReplicaOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GlobalTableReplicaArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GlobalTableReplicaOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -710,7 +638,7 @@ The following state arguments are supported:
             title="Required">
         <span>Region<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}AWS region name of replica DynamoDB Table. e.g. `us-east-1`
 {{% /md %}}</dd>
@@ -726,7 +654,7 @@ The following state arguments are supported:
             title="Required">
         <span>Region<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}AWS region name of replica DynamoDB Table. e.g. `us-east-1`
 {{% /md %}}</dd>
@@ -742,7 +670,7 @@ The following state arguments are supported:
             title="Required">
         <span>region<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}AWS region name of replica DynamoDB Table. e.g. `us-east-1`
 {{% /md %}}</dd>
@@ -758,7 +686,7 @@ The following state arguments are supported:
             title="Required">
         <span>region<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}AWS region name of replica DynamoDB Table. e.g. `us-east-1`
 {{% /md %}}</dd>

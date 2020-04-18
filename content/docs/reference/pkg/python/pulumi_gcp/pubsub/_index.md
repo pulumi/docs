@@ -15,7 +15,7 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_gcp.pubsub"></span><dl class="class">
 <dt id="pulumi_gcp.pubsub.Subscription">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.pubsub.</code><code class="sig-name descname">Subscription</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ack_deadline_seconds=None</em>, <em class="sig-param">expiration_policy=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">message_retention_duration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">push_config=None</em>, <em class="sig-param">retain_acked_messages=None</em>, <em class="sig-param">topic=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.pubsub.Subscription" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.pubsub.</code><code class="sig-name descname">Subscription</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ack_deadline_seconds=None</em>, <em class="sig-param">dead_letter_policy=None</em>, <em class="sig-param">expiration_policy=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">message_retention_duration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">push_config=None</em>, <em class="sig-param">retain_acked_messages=None</em>, <em class="sig-param">topic=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.pubsub.Subscription" title="Permalink to this definition">¶</a></dt>
 <dd><p>A named resource representing the stream of messages from a single,
 specific topic, to be delivered to the subscribing application.</p>
 <p>To get more information about Subscription, see:</p>
@@ -27,9 +27,6 @@ specific topic, to be delivered to the subscribing application.</p>
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_subscription.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -44,6 +41,10 @@ is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10 mi
 default value of 10 seconds is used. For push delivery, this value is also used to set the request timeout for the call
 to the push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the
 message.</p></li>
+<li><p><strong>dead_letter_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A policy that specifies the conditions for dead lettering messages in this subscription. If dead_letter_policy is not
+set, dead lettering is disabled. The Cloud Pub/Sub service account associated with this subscriptions’s parent project
+(i.e., <a class="reference external" href="mailto:service-{project_number}&#37;&#52;&#48;gcp-sa-pubsub&#46;iam&#46;gserviceaccount&#46;com">service-{project_number}<span>&#64;</span>gcp-sa-pubsub<span>&#46;</span>iam<span>&#46;</span>gserviceaccount<span>&#46;</span>com</a>) must have permission to Acknowledge() messages on
+this subscription.</p></li>
 <li><p><strong>expiration_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A policy that specifies the conditions for this subscription’s expiration. A subscription is considered active as long
 as any connected subscriber is successfully consuming messages from the subscription or is issuing operations on the
 subscription. If expirationPolicy is not set, a default policy with ttl of 31 days will be used. If it is set but ttl is
@@ -65,6 +66,11 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
 </ul>
 </dd>
 </dl>
+<p>The <strong>dead_letter_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deadLetterTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxDeliveryAttempts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
 <p>The <strong>expiration_policy</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ttl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -92,6 +98,19 @@ is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10 mi
 default value of 10 seconds is used. For push delivery, this value is also used to set the request timeout for the call
 to the push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the
 message.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_gcp.pubsub.Subscription.dead_letter_policy">
+<code class="sig-name descname">dead_letter_policy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.pubsub.Subscription.dead_letter_policy" title="Permalink to this definition">¶</a></dt>
+<dd><p>A policy that specifies the conditions for dead lettering messages in this subscription. If dead_letter_policy is not
+set, dead lettering is disabled. The Cloud Pub/Sub service account associated with this subscriptions’s parent project
+(i.e., <a class="reference external" href="mailto:service-{project_number}&#37;&#52;&#48;gcp-sa-pubsub&#46;iam&#46;gserviceaccount&#46;com">service-{project_number}<span>&#64;</span>gcp-sa-pubsub<span>&#46;</span>iam<span>&#46;</span>gserviceaccount<span>&#46;</span>com</a>) must have permission to Acknowledge() messages on
+this subscription.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deadLetterTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxDeliveryAttempts</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -167,7 +186,7 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
 
 <dl class="method">
 <dt id="pulumi_gcp.pubsub.Subscription.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ack_deadline_seconds=None</em>, <em class="sig-param">expiration_policy=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">message_retention_duration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">push_config=None</em>, <em class="sig-param">retain_acked_messages=None</em>, <em class="sig-param">topic=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.pubsub.Subscription.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ack_deadline_seconds=None</em>, <em class="sig-param">dead_letter_policy=None</em>, <em class="sig-param">expiration_policy=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">message_retention_duration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">push_config=None</em>, <em class="sig-param">retain_acked_messages=None</em>, <em class="sig-param">topic=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.pubsub.Subscription.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Subscription resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -185,6 +204,10 @@ is 10 seconds. The maximum custom deadline you can specify is 600 seconds (10 mi
 default value of 10 seconds is used. For push delivery, this value is also used to set the request timeout for the call
 to the push endpoint. If the subscriber never acknowledges the message, the Pub/Sub system will eventually redeliver the
 message.</p></li>
+<li><p><strong>dead_letter_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A policy that specifies the conditions for dead lettering messages in this subscription. If dead_letter_policy is not
+set, dead lettering is disabled. The Cloud Pub/Sub service account associated with this subscriptions’s parent project
+(i.e., <a class="reference external" href="mailto:service-{project_number}&#37;&#52;&#48;gcp-sa-pubsub&#46;iam&#46;gserviceaccount&#46;com">service-{project_number}<span>&#64;</span>gcp-sa-pubsub<span>&#46;</span>iam<span>&#46;</span>gserviceaccount<span>&#46;</span>com</a>) must have permission to Acknowledge() messages on
+this subscription.</p></li>
 <li><p><strong>expiration_policy</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A policy that specifies the conditions for this subscription’s expiration. A subscription is considered active as long
 as any connected subscriber is successfully consuming messages from the subscription or is issuing operations on the
 subscription. If expirationPolicy is not set, a default policy with ttl of 31 days will be used. If it is set but ttl is
@@ -206,6 +229,11 @@ backlog, even if they are acknowledged, until they fall out of the messageRetent
 </ul>
 </dd>
 </dl>
+<p>The <strong>dead_letter_policy</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">deadLetterTopic</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">maxDeliveryAttempts</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+</ul>
 <p>The <strong>expiration_policy</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">ttl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -273,7 +301,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">pubsub.SubscriptionIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">pubsub.SubscriptionIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">pubsub.SubscriptionIAMMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">pubsub.SubscriptionIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">pubsub.SubscriptionIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_subscription_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_subscription_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -401,7 +428,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">pubsub.SubscriptionIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">pubsub.SubscriptionIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">pubsub.SubscriptionIAMMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">pubsub.SubscriptionIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">pubsub.SubscriptionIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_subscription_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_subscription_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -529,7 +555,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">pubsub.SubscriptionIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">pubsub.SubscriptionIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">pubsub.SubscriptionIAMMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">pubsub.SubscriptionIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">pubsub.SubscriptionIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_subscription_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_subscription_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -643,9 +668,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_topic.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_topic.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -786,7 +808,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">pubsub.TopicIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">pubsub.TopicIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">pubsub.TopicIAMMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">pubsub.TopicIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">pubsub.TopicIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_topic_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_topic_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -914,7 +935,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">pubsub.TopicIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">pubsub.TopicIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">pubsub.TopicIAMMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">pubsub.TopicIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">pubsub.TopicIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_topic_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_topic_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1042,7 +1062,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">pubsub.TopicIAMPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">pubsub.TopicIAMBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">pubsub.TopicIAMMember</span></code> or they will fight over what your policy should be.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">pubsub.TopicIAMBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">pubsub.TopicIAMMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_topic_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/pubsub_topic_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

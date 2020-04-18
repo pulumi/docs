@@ -31,7 +31,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#MemcachedLayer">MemcachedLayer</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#MemcachedLayerArgs">MemcachedLayerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#MemcachedLayer">MemcachedLayer</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/opsworks/#MemcachedLayerArgs">MemcachedLayerArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -39,11 +39,11 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMemcachedLayer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#MemcachedLayerArgs">MemcachedLayerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#MemcachedLayer">MemcachedLayer</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewMemcachedLayer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#MemcachedLayerArgs">MemcachedLayerArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#MemcachedLayer">MemcachedLayer</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Opsworks.MemcachedLayer.html">MemcachedLayer</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.MemcachedLayerArgs.html">MemcachedLayerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.MemcachedLayer.html">MemcachedLayer</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.MemcachedLayerArgs.html">MemcachedLayerArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -135,11 +135,20 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Stack<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the stack the layer will belong to.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Allocated<wbr>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Amount of memory to allocate for the cache on each instance, in megabytes. Defaults to 512MB.
 {{% /md %}}</dd>
@@ -148,7 +157,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Auto<wbr>Assign<wbr>Elastic<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd>
@@ -157,7 +166,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Auto<wbr>Assign<wbr>Public<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd>
@@ -166,7 +175,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Auto<wbr>Healing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd>
@@ -175,7 +184,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Custom<wbr>Configure<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -183,7 +192,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Custom<wbr>Deploy<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -191,7 +200,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Custom<wbr>Instance<wbr>Profile<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd>
@@ -200,7 +209,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Custom<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd>
@@ -209,7 +218,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Custom<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd>
@@ -218,7 +227,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Custom<wbr>Setup<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -226,7 +235,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Custom<wbr>Shutdown<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -234,7 +243,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Custom<wbr>Undeploy<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -242,7 +251,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Drain<wbr>Elb<wbr>On<wbr>Shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd>
@@ -251,7 +260,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Ebs<wbr>Volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#memcachedlayerebsvolume">List&lt;Memcached<wbr>Layer<wbr>Ebs<wbr>Volume<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#memcachedlayerebsvolume">List&lt;Memcached<wbr>Layer<wbr>Ebs<wbr>Volume<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}`ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 {{% /md %}}</dd>
@@ -260,7 +269,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Elastic<wbr>Load<wbr>Balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd>
@@ -269,7 +278,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Install<wbr>Updates<wbr>On<wbr>Boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd>
@@ -278,7 +287,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Instance<wbr>Shutdown<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd>
@@ -287,25 +296,16 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Stack<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>System<wbr>Packages</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd>
@@ -314,7 +314,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -323,7 +323,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Use<wbr>Ebs<wbr>Optimized<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
@@ -335,11 +335,20 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Stack<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the stack the layer will belong to.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Allocated<wbr>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Amount of memory to allocate for the cache on each instance, in megabytes. Defaults to 512MB.
 {{% /md %}}</dd>
@@ -348,7 +357,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Auto<wbr>Assign<wbr>Elastic<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd>
@@ -357,7 +366,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Auto<wbr>Assign<wbr>Public<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd>
@@ -366,7 +375,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Auto<wbr>Healing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd>
@@ -375,7 +384,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Custom<wbr>Configure<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -383,7 +392,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Custom<wbr>Deploy<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -391,7 +400,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Custom<wbr>Instance<wbr>Profile<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd>
@@ -400,7 +409,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Custom<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd>
@@ -409,7 +418,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Custom<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd>
@@ -418,7 +427,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Custom<wbr>Setup<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -426,7 +435,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Custom<wbr>Shutdown<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -434,7 +443,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Custom<wbr>Undeploy<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -442,7 +451,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Drain<wbr>Elb<wbr>On<wbr>Shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd>
@@ -460,7 +469,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Elastic<wbr>Load<wbr>Balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd>
@@ -469,7 +478,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Install<wbr>Updates<wbr>On<wbr>Boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd>
@@ -478,7 +487,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Instance<wbr>Shutdown<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd>
@@ -487,25 +496,16 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Stack<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>System<wbr>Packages</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd>
@@ -523,7 +523,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>Use<wbr>Ebs<wbr>Optimized<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
@@ -535,11 +535,20 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>stack<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the stack the layer will belong to.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>allocated<wbr>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Amount of memory to allocate for the cache on each instance, in megabytes. Defaults to 512MB.
 {{% /md %}}</dd>
@@ -548,7 +557,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>auto<wbr>Assign<wbr>Elastic<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd>
@@ -557,7 +566,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>auto<wbr>Assign<wbr>Public<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd>
@@ -566,7 +575,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>auto<wbr>Healing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd>
@@ -575,7 +584,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>custom<wbr>Configure<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -583,7 +592,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>custom<wbr>Deploy<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -591,7 +600,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>custom<wbr>Instance<wbr>Profile<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd>
@@ -600,7 +609,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>custom<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd>
@@ -609,7 +618,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>custom<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd>
@@ -618,7 +627,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>custom<wbr>Setup<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -626,7 +635,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>custom<wbr>Shutdown<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -634,7 +643,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>custom<wbr>Undeploy<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -642,7 +651,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>drain<wbr>Elb<wbr>On<wbr>Shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd>
@@ -651,7 +660,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>ebs<wbr>Volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#memcachedlayerebsvolume">Memcached<wbr>Layer<wbr>Ebs<wbr>Volume[]?</a></span>
+        <span class="property-type"><a href="#memcachedlayerebsvolume">Memcached<wbr>Layer<wbr>Ebs<wbr>Volume[]</a></span>
     </dt>
     <dd>{{% md %}}`ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 {{% /md %}}</dd>
@@ -660,7 +669,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>elastic<wbr>Load<wbr>Balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd>
@@ -669,7 +678,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>install<wbr>Updates<wbr>On<wbr>Boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd>
@@ -678,7 +687,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>instance<wbr>Shutdown<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd>
@@ -687,25 +696,16 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>stack<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>system<wbr>Packages</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd>
@@ -714,7 +714,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -723,7 +723,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>use<wbr>Ebs<wbr>Optimized<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
@@ -735,11 +735,20 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>stack_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The id of the stack the layer will belong to.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>allocated_<wbr>memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Amount of memory to allocate for the cache on each instance, in megabytes. Defaults to 512MB.
 {{% /md %}}</dd>
@@ -748,7 +757,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>auto_<wbr>assign_<wbr>elastic_<wbr>ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd>
@@ -757,7 +766,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>auto_<wbr>assign_<wbr>public_<wbr>ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd>
@@ -766,7 +775,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>auto_<wbr>healing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd>
@@ -775,7 +784,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>custom_<wbr>configure_<wbr>recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -783,7 +792,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>custom_<wbr>deploy_<wbr>recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -791,7 +800,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>custom_<wbr>instance_<wbr>profile_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd>
@@ -800,7 +809,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>custom_<wbr>json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd>
@@ -809,7 +818,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>custom_<wbr>security_<wbr>group_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd>
@@ -818,7 +827,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>custom_<wbr>setup_<wbr>recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -826,7 +835,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>custom_<wbr>shutdown_<wbr>recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -834,7 +843,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>custom_<wbr>undeploy_<wbr>recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -842,7 +851,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>drain_<wbr>elb_<wbr>on_<wbr>shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd>
@@ -860,7 +869,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>elastic_<wbr>load_<wbr>balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd>
@@ -869,7 +878,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>install_<wbr>updates_<wbr>on_<wbr>boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd>
@@ -878,7 +887,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>instance_<wbr>shutdown_<wbr>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd>
@@ -887,25 +896,16 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>stack_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>system_<wbr>packages</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd>
@@ -923,7 +923,7 @@ const cache = new aws.opsworks.MemcachedLayer("cache", {
             title="Optional">
         <span>use_<wbr>ebs_<wbr>optimized_<wbr>instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
@@ -949,204 +949,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Allocated<wbr>Memory</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Amount of memory to allocate for the cache on each instance, in megabytes. Defaults to 512MB.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Assign<wbr>Elastic<wbr>Ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Assign<wbr>Public<wbr>Ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Healing</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable auto-healing for the layer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Configure<wbr>Recipes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Deploy<wbr>Recipes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Instance<wbr>Profile<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Json</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Custom JSON attributes to apply to the layer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Setup<wbr>Recipes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Shutdown<wbr>Recipes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Undeploy<wbr>Recipes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Drain<wbr>Elb<wbr>On<wbr>Shutdown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ebs<wbr>Volumes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#memcachedlayerebsvolume">List&lt;Memcached<wbr>Layer<wbr>Ebs<wbr>Volume&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}`ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Elastic<wbr>Load<wbr>Balancer</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Install<wbr>Updates<wbr>On<wbr>Boot</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Shutdown<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A human-readable name for the layer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Stack<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the stack the layer will belong to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>System<wbr>Packages</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Use<wbr>Ebs<wbr>Optimized<wbr>Instances</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
 
 </dl>
@@ -1158,204 +965,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Allocated<wbr>Memory</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Amount of memory to allocate for the cache on each instance, in megabytes. Defaults to 512MB.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Assign<wbr>Elastic<wbr>Ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Assign<wbr>Public<wbr>Ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Healing</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable auto-healing for the layer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Configure<wbr>Recipes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Deploy<wbr>Recipes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Instance<wbr>Profile<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Json</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Custom JSON attributes to apply to the layer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Setup<wbr>Recipes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Shutdown<wbr>Recipes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Custom<wbr>Undeploy<wbr>Recipes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Drain<wbr>Elb<wbr>On<wbr>Shutdown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ebs<wbr>Volumes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#memcachedlayerebsvolume">[]Memcached<wbr>Layer<wbr>Ebs<wbr>Volume</a></span>
-    </dt>
-    <dd>{{% md %}}`ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Elastic<wbr>Load<wbr>Balancer</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Install<wbr>Updates<wbr>On<wbr>Boot</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Instance<wbr>Shutdown<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A human-readable name for the layer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Stack<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the stack the layer will belong to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>System<wbr>Packages</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Use<wbr>Ebs<wbr>Optimized<wbr>Instances</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
 
 </dl>
@@ -1367,204 +981,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>allocated<wbr>Memory</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Amount of memory to allocate for the cache on each instance, in megabytes. Defaults to 512MB.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auto<wbr>Assign<wbr>Elastic<wbr>Ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auto<wbr>Assign<wbr>Public<wbr>Ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auto<wbr>Healing</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable auto-healing for the layer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom<wbr>Configure<wbr>Recipes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom<wbr>Deploy<wbr>Recipes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom<wbr>Instance<wbr>Profile<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom<wbr>Json</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Custom JSON attributes to apply to the layer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom<wbr>Security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom<wbr>Setup<wbr>Recipes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom<wbr>Shutdown<wbr>Recipes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom<wbr>Undeploy<wbr>Recipes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>drain<wbr>Elb<wbr>On<wbr>Shutdown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ebs<wbr>Volumes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#memcachedlayerebsvolume">Memcached<wbr>Layer<wbr>Ebs<wbr>Volume[]?</a></span>
-    </dt>
-    <dd>{{% md %}}`ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>elastic<wbr>Load<wbr>Balancer</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>install<wbr>Updates<wbr>On<wbr>Boot</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance<wbr>Shutdown<wbr>Timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A human-readable name for the layer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>stack<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The id of the stack the layer will belong to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>system<wbr>Packages</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>use<wbr>Ebs<wbr>Optimized<wbr>Instances</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
 
 </dl>
@@ -1576,204 +997,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>allocated_<wbr>memory</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Amount of memory to allocate for the cache on each instance, in megabytes. Defaults to 512MB.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auto_<wbr>assign_<wbr>elastic_<wbr>ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auto_<wbr>assign_<wbr>public_<wbr>ips</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auto_<wbr>healing</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable auto-healing for the layer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom_<wbr>configure_<wbr>recipes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom_<wbr>deploy_<wbr>recipes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom_<wbr>instance_<wbr>profile_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom_<wbr>json</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Custom JSON attributes to apply to the layer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom_<wbr>security_<wbr>group_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom_<wbr>setup_<wbr>recipes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom_<wbr>shutdown_<wbr>recipes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>custom_<wbr>undeploy_<wbr>recipes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>drain_<wbr>elb_<wbr>on_<wbr>shutdown</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ebs_<wbr>volumes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#memcachedlayerebsvolume">List[Memcached<wbr>Layer<wbr>Ebs<wbr>Volume]</a></span>
-    </dt>
-    <dd>{{% md %}}`ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>elastic_<wbr>load_<wbr>balancer</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>install_<wbr>updates_<wbr>on_<wbr>boot</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>instance_<wbr>shutdown_<wbr>timeout</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A human-readable name for the layer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>stack_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The id of the stack the layer will belong to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>system_<wbr>packages</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>use_<wbr>ebs_<wbr>optimized_<wbr>instances</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
 
 </dl>
@@ -1801,11 +1029,11 @@ Get an existing MemcachedLayer resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMemcachedLayer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#MemcachedLayerState">MemcachedLayerState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#MemcachedLayer">MemcachedLayer</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetMemcachedLayer<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#MemcachedLayerState">MemcachedLayerState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#MemcachedLayer">MemcachedLayer</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Opsworks.MemcachedLayer.html">MemcachedLayer</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Opsworks.MemcachedLayerState.html">MemcachedLayerState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.MemcachedLayer.html">MemcachedLayer</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.OpsWorks.MemcachedLayerState.html">MemcachedLayerState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1915,7 +1143,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allocated<wbr>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Amount of memory to allocate for the cache on each instance, in megabytes. Defaults to 512MB.
 {{% /md %}}</dd>
@@ -1924,7 +1152,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
 {{% /md %}}</dd>
@@ -1933,7 +1161,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Assign<wbr>Elastic<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd>
@@ -1942,7 +1170,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Assign<wbr>Public<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd>
@@ -1951,7 +1179,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Healing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd>
@@ -1960,7 +1188,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Configure<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1968,7 +1196,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Deploy<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1976,7 +1204,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Instance<wbr>Profile<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd>
@@ -1985,7 +1213,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd>
@@ -1994,7 +1222,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd>
@@ -2003,7 +1231,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Setup<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2011,7 +1239,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Shutdown<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2019,7 +1247,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Undeploy<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2027,7 +1255,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Drain<wbr>Elb<wbr>On<wbr>Shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd>
@@ -2036,7 +1264,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Ebs<wbr>Volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#memcachedlayerebsvolume">List&lt;Memcached<wbr>Layer<wbr>Ebs<wbr>Volume<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#memcachedlayerebsvolume">List&lt;Memcached<wbr>Layer<wbr>Ebs<wbr>Volume<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}`ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 {{% /md %}}</dd>
@@ -2045,7 +1273,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Elastic<wbr>Load<wbr>Balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd>
@@ -2054,7 +1282,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Install<wbr>Updates<wbr>On<wbr>Boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd>
@@ -2063,7 +1291,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Shutdown<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd>
@@ -2072,7 +1300,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
 {{% /md %}}</dd>
@@ -2081,7 +1309,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Stack<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd>
@@ -2090,7 +1318,7 @@ The following state arguments are supported:
             title="Optional">
         <span>System<wbr>Packages</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd>
@@ -2099,7 +1327,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2108,7 +1336,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Use<wbr>Ebs<wbr>Optimized<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
@@ -2124,7 +1352,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allocated<wbr>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Amount of memory to allocate for the cache on each instance, in megabytes. Defaults to 512MB.
 {{% /md %}}</dd>
@@ -2133,7 +1361,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
 {{% /md %}}</dd>
@@ -2142,7 +1370,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Assign<wbr>Elastic<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd>
@@ -2151,7 +1379,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Assign<wbr>Public<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd>
@@ -2160,7 +1388,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Auto<wbr>Healing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd>
@@ -2169,7 +1397,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Configure<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2177,7 +1405,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Deploy<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2185,7 +1413,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Instance<wbr>Profile<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd>
@@ -2194,7 +1422,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd>
@@ -2203,7 +1431,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd>
@@ -2212,7 +1440,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Setup<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2220,7 +1448,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Shutdown<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2228,7 +1456,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Undeploy<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2236,7 +1464,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Drain<wbr>Elb<wbr>On<wbr>Shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd>
@@ -2254,7 +1482,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Elastic<wbr>Load<wbr>Balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd>
@@ -2263,7 +1491,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Install<wbr>Updates<wbr>On<wbr>Boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd>
@@ -2272,7 +1500,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Instance<wbr>Shutdown<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd>
@@ -2281,7 +1509,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
 {{% /md %}}</dd>
@@ -2290,7 +1518,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Stack<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd>
@@ -2299,7 +1527,7 @@ The following state arguments are supported:
             title="Optional">
         <span>System<wbr>Packages</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd>
@@ -2317,7 +1545,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Use<wbr>Ebs<wbr>Optimized<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
@@ -2333,7 +1561,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allocated<wbr>Memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Amount of memory to allocate for the cache on each instance, in megabytes. Defaults to 512MB.
 {{% /md %}}</dd>
@@ -2342,7 +1570,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
 {{% /md %}}</dd>
@@ -2351,7 +1579,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auto<wbr>Assign<wbr>Elastic<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd>
@@ -2360,7 +1588,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auto<wbr>Assign<wbr>Public<wbr>Ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd>
@@ -2369,7 +1597,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auto<wbr>Healing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd>
@@ -2378,7 +1606,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Configure<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2386,7 +1614,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Deploy<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2394,7 +1622,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Instance<wbr>Profile<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd>
@@ -2403,7 +1631,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd>
@@ -2412,7 +1640,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd>
@@ -2421,7 +1649,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Setup<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2429,7 +1657,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Shutdown<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2437,7 +1665,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Undeploy<wbr>Recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2445,7 +1673,7 @@ The following state arguments are supported:
             title="Optional">
         <span>drain<wbr>Elb<wbr>On<wbr>Shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd>
@@ -2454,7 +1682,7 @@ The following state arguments are supported:
             title="Optional">
         <span>ebs<wbr>Volumes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#memcachedlayerebsvolume">Memcached<wbr>Layer<wbr>Ebs<wbr>Volume[]?</a></span>
+        <span class="property-type"><a href="#memcachedlayerebsvolume">Memcached<wbr>Layer<wbr>Ebs<wbr>Volume[]</a></span>
     </dt>
     <dd>{{% md %}}`ebs_volume` blocks, as described below, will each create an EBS volume and connect it to the layer's instances.
 {{% /md %}}</dd>
@@ -2463,7 +1691,7 @@ The following state arguments are supported:
             title="Optional">
         <span>elastic<wbr>Load<wbr>Balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd>
@@ -2472,7 +1700,7 @@ The following state arguments are supported:
             title="Optional">
         <span>install<wbr>Updates<wbr>On<wbr>Boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd>
@@ -2481,7 +1709,7 @@ The following state arguments are supported:
             title="Optional">
         <span>instance<wbr>Shutdown<wbr>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd>
@@ -2490,7 +1718,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
 {{% /md %}}</dd>
@@ -2499,7 +1727,7 @@ The following state arguments are supported:
             title="Optional">
         <span>stack<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd>
@@ -2508,7 +1736,7 @@ The following state arguments are supported:
             title="Optional">
         <span>system<wbr>Packages</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd>
@@ -2517,7 +1745,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -2526,7 +1754,7 @@ The following state arguments are supported:
             title="Optional">
         <span>use<wbr>Ebs<wbr>Optimized<wbr>Instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
@@ -2542,7 +1770,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allocated_<wbr>memory</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Amount of memory to allocate for the cache on each instance, in megabytes. Defaults to 512MB.
 {{% /md %}}</dd>
@@ -2551,7 +1779,7 @@ The following state arguments are supported:
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Amazon Resource Name(ARN) of the layer.
 {{% /md %}}</dd>
@@ -2560,7 +1788,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auto_<wbr>assign_<wbr>elastic_<wbr>ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to automatically assign an elastic IP address to the layer's instances.
 {{% /md %}}</dd>
@@ -2569,7 +1797,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auto_<wbr>assign_<wbr>public_<wbr>ips</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}For stacks belonging to a VPC, whether to automatically assign a public IP address to each of the layer's instances.
 {{% /md %}}</dd>
@@ -2578,7 +1806,7 @@ The following state arguments are supported:
             title="Optional">
         <span>auto_<wbr>healing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable auto-healing for the layer.
 {{% /md %}}</dd>
@@ -2587,7 +1815,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom_<wbr>configure_<wbr>recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2595,7 +1823,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom_<wbr>deploy_<wbr>recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2603,7 +1831,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom_<wbr>instance_<wbr>profile_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of an IAM profile that will be used for the layer's instances.
 {{% /md %}}</dd>
@@ -2612,7 +1840,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom_<wbr>json</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Custom JSON attributes to apply to the layer.
 {{% /md %}}</dd>
@@ -2621,7 +1849,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom_<wbr>security_<wbr>group_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Ids for a set of security groups to apply to the layer's instances.
 {{% /md %}}</dd>
@@ -2630,7 +1858,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom_<wbr>setup_<wbr>recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2638,7 +1866,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom_<wbr>shutdown_<wbr>recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2646,7 +1874,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom_<wbr>undeploy_<wbr>recipes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2654,7 +1882,7 @@ The following state arguments are supported:
             title="Optional">
         <span>drain_<wbr>elb_<wbr>on_<wbr>shutdown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to enable Elastic Load Balancing connection draining.
 {{% /md %}}</dd>
@@ -2672,7 +1900,7 @@ The following state arguments are supported:
             title="Optional">
         <span>elastic_<wbr>load_<wbr>balancer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of an Elastic Load Balancer to attach to this layer
 {{% /md %}}</dd>
@@ -2681,7 +1909,7 @@ The following state arguments are supported:
             title="Optional">
         <span>install_<wbr>updates_<wbr>on_<wbr>boot</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to install OS and package updates on each instance when it boots.
 {{% /md %}}</dd>
@@ -2690,7 +1918,7 @@ The following state arguments are supported:
             title="Optional">
         <span>instance_<wbr>shutdown_<wbr>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The time, in seconds, that OpsWorks will wait for Chef to complete after triggering the Shutdown event.
 {{% /md %}}</dd>
@@ -2699,7 +1927,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A human-readable name for the layer.
 {{% /md %}}</dd>
@@ -2708,7 +1936,7 @@ The following state arguments are supported:
             title="Optional">
         <span>stack_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The id of the stack the layer will belong to.
 {{% /md %}}</dd>
@@ -2717,7 +1945,7 @@ The following state arguments are supported:
             title="Optional">
         <span>system_<wbr>packages</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Names of a set of system packages to install on the layer's instances.
 {{% /md %}}</dd>
@@ -2735,7 +1963,7 @@ The following state arguments are supported:
             title="Optional">
         <span>use_<wbr>ebs_<wbr>optimized_<wbr>instances</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether to use EBS-optimized instances.
 {{% /md %}}</dd>
@@ -2760,7 +1988,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#MemcachedLayerEbsVolumeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/opsworks?tab=doc#MemcachedLayerEbsVolumeOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#MemcachedLayerEbsVolumeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/opsworks?tab=doc#MemcachedLayerEbsVolumeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2769,28 +1997,11 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Encrypted</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}For PIOPS volumes, the IOPS per disk.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Mount<wbr>Point</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The path to mount the EBS volume on the layer's instances.
 {{% /md %}}</dd>
@@ -2799,34 +2010,51 @@ The following state arguments are supported:
             title="Required">
         <span>Number<wbr>Of<wbr>Disks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of disks to use for the EBS volume.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Raid<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The RAID level to use for the volume.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}For PIOPS volumes, the IOPS per disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Raid<wbr>Level</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The RAID level to use for the volume.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of volume to create. This may be `standard` (the default), `io1` or `gp2`.
 {{% /md %}}</dd>
@@ -2838,28 +2066,11 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Encrypted</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}For PIOPS volumes, the IOPS per disk.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Mount<wbr>Point</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The path to mount the EBS volume on the layer's instances.
 {{% /md %}}</dd>
@@ -2868,34 +2079,51 @@ The following state arguments are supported:
             title="Required">
         <span>Number<wbr>Of<wbr>Disks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of disks to use for the EBS volume.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Raid<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The RAID level to use for the volume.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}For PIOPS volumes, the IOPS per disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Raid<wbr>Level</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The RAID level to use for the volume.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of volume to create. This may be `standard` (the default), `io1` or `gp2`.
 {{% /md %}}</dd>
@@ -2907,28 +2135,11 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>encrypted</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}For PIOPS volumes, the IOPS per disk.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>mount<wbr>Point</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The path to mount the EBS volume on the layer's instances.
 {{% /md %}}</dd>
@@ -2937,34 +2148,51 @@ The following state arguments are supported:
             title="Required">
         <span>number<wbr>Of<wbr>Disks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of disks to use for the EBS volume.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>raid<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The RAID level to use for the volume.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}For PIOPS volumes, the IOPS per disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>raid<wbr>Level</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The RAID level to use for the volume.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of volume to create. This may be `standard` (the default), `io1` or `gp2`.
 {{% /md %}}</dd>
@@ -2976,28 +2204,11 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>encrypted</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>iops</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}For PIOPS volumes, the IOPS per disk.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>mount<wbr>Point</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The path to mount the EBS volume on the layer's instances.
 {{% /md %}}</dd>
@@ -3006,34 +2217,51 @@ The following state arguments are supported:
             title="Required">
         <span>number<wbr>Of<wbr>Disks</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of disks to use for the EBS volume.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>raid<wbr>Level</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The RAID level to use for the volume.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The size of the volume in gigabytes.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>encrypted</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>iops</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}For PIOPS volumes, the IOPS per disk.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>raid<wbr>Level</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The RAID level to use for the volume.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of volume to create. This may be `standard` (the default), `io1` or `gp2`.
 {{% /md %}}</dd>

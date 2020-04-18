@@ -16,13 +16,13 @@ Provides details about a specific redshift cluster.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const testCluster = pulumi.output(aws.redshift.getCluster({
+const testCluster = aws.redshift.getCluster({
     clusterIdentifier: "test-cluster",
-}, { async: true }));
+});
 const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
     destination: "redshift",
     redshiftConfiguration: {
-        clusterJdbcurl: pulumi.interpolate`jdbc:redshift://${testCluster.endpoint}/${testCluster.databaseName}`,
+        clusterJdbcurl: `jdbc:redshift://${testCluster.endpoint}/${testCluster.databaseName}`,
         copyOptions: "delimiter '|'", // the default delimiter
         dataTableColumns: "test-col",
         dataTableName: "test-table",
@@ -63,7 +63,7 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/redshift?tab=doc#LookupClusterArgs">LookupClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/redshift?tab=doc#LookupClusterResult">LookupClusterResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupCluster<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift?tab=doc#LookupClusterArgs">LookupClusterArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/redshift?tab=doc#LookupClusterResult">LookupClusterResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -86,7 +86,7 @@ The following arguments are supported:
             title="Required">
         <span>Cluster<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster identifier
 {{% /md %}}</dd>
@@ -95,7 +95,7 @@ The following arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}The tags associated to the cluster
 {{% /md %}}</dd>
@@ -111,7 +111,7 @@ The following arguments are supported:
             title="Required">
         <span>Cluster<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster identifier
 {{% /md %}}</dd>
@@ -136,7 +136,7 @@ The following arguments are supported:
             title="Required">
         <span>cluster<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster identifier
 {{% /md %}}</dd>
@@ -145,7 +145,7 @@ The following arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}The tags associated to the cluster
 {{% /md %}}</dd>
@@ -161,7 +161,7 @@ The following arguments are supported:
             title="Required">
         <span>cluster_<wbr>identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The cluster identifier
 {{% /md %}}</dd>
@@ -199,7 +199,7 @@ The following output properties are available:
             title="">
         <span>Allow<wbr>Version<wbr>Upgrade</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether major version upgrades can be applied during maintenance period
 {{% /md %}}</dd>
@@ -208,7 +208,7 @@ The following output properties are available:
             title="">
         <span>Automated<wbr>Snapshot<wbr>Retention<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The backup retention period
 {{% /md %}}</dd>
@@ -217,7 +217,7 @@ The following output properties are available:
             title="">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The availability zone of the cluster
 {{% /md %}}</dd>
@@ -226,7 +226,7 @@ The following output properties are available:
             title="">
         <span>Bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket where the log files are to be stored
 {{% /md %}}</dd>
@@ -235,7 +235,7 @@ The following output properties are available:
             title="">
         <span>Cluster<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster identifier
 {{% /md %}}</dd>
@@ -244,7 +244,7 @@ The following output properties are available:
             title="">
         <span>Cluster<wbr>Parameter<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the parameter group to be associated with this cluster
 {{% /md %}}</dd>
@@ -253,7 +253,7 @@ The following output properties are available:
             title="">
         <span>Cluster<wbr>Public<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The public key for the cluster
 {{% /md %}}</dd>
@@ -262,7 +262,7 @@ The following output properties are available:
             title="">
         <span>Cluster<wbr>Revision<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster revision number
 {{% /md %}}</dd>
@@ -271,7 +271,7 @@ The following output properties are available:
             title="">
         <span>Cluster<wbr>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The security groups associated with the cluster
 {{% /md %}}</dd>
@@ -280,7 +280,7 @@ The following output properties are available:
             title="">
         <span>Cluster<wbr>Subnet<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of a cluster subnet group to be associated with this cluster
 {{% /md %}}</dd>
@@ -289,7 +289,7 @@ The following output properties are available:
             title="">
         <span>Cluster<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster type
 {{% /md %}}</dd>
@@ -298,7 +298,7 @@ The following output properties are available:
             title="">
         <span>Cluster<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -306,7 +306,7 @@ The following output properties are available:
             title="">
         <span>Database<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the default database in the cluster
 {{% /md %}}</dd>
@@ -315,7 +315,7 @@ The following output properties are available:
             title="">
         <span>Elastic<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Elastic IP of the cluster
 {{% /md %}}</dd>
@@ -324,7 +324,7 @@ The following output properties are available:
             title="">
         <span>Enable<wbr>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether cluster logging is enabled
 {{% /md %}}</dd>
@@ -333,7 +333,7 @@ The following output properties are available:
             title="">
         <span>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the cluster data is encrypted
 {{% /md %}}</dd>
@@ -342,7 +342,7 @@ The following output properties are available:
             title="">
         <span>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster endpoint
 {{% /md %}}</dd>
@@ -351,7 +351,7 @@ The following output properties are available:
             title="">
         <span>Enhanced<wbr>Vpc<wbr>Routing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether enhanced VPC routing is enabled
 {{% /md %}}</dd>
@@ -360,7 +360,7 @@ The following output properties are available:
             title="">
         <span>Iam<wbr>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The IAM roles associated to the cluster
 {{% /md %}}</dd>
@@ -369,7 +369,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -378,7 +378,7 @@ The following output properties are available:
             title="">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The KMS encryption key associated to the cluster
 {{% /md %}}</dd>
@@ -387,7 +387,7 @@ The following output properties are available:
             title="">
         <span>Master<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Username for the master DB user
 {{% /md %}}</dd>
@@ -396,7 +396,7 @@ The following output properties are available:
             title="">
         <span>Node<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster node type
 {{% /md %}}</dd>
@@ -405,7 +405,7 @@ The following output properties are available:
             title="">
         <span>Number<wbr>Of<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes in the cluster
 {{% /md %}}</dd>
@@ -414,7 +414,7 @@ The following output properties are available:
             title="">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The port the cluster responds on
 {{% /md %}}</dd>
@@ -423,7 +423,7 @@ The following output properties are available:
             title="">
         <span>Preferred<wbr>Maintenance<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The maintenance window
 {{% /md %}}</dd>
@@ -432,7 +432,7 @@ The following output properties are available:
             title="">
         <span>Publicly<wbr>Accessible</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the cluster is publicly accessible
 {{% /md %}}</dd>
@@ -441,25 +441,16 @@ The following output properties are available:
             title="">
         <span>S3Key<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The folder inside the S3 bucket where the log files are stored
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}The tags associated to the cluster
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC Id associated with the cluster
 {{% /md %}}</dd>
@@ -468,9 +459,18 @@ The following output properties are available:
             title="">
         <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The VPC security group Ids associated with the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The tags associated to the cluster
 {{% /md %}}</dd>
 
 </dl>
@@ -484,7 +484,7 @@ The following output properties are available:
             title="">
         <span>Allow<wbr>Version<wbr>Upgrade</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether major version upgrades can be applied during maintenance period
 {{% /md %}}</dd>
@@ -493,7 +493,7 @@ The following output properties are available:
             title="">
         <span>Automated<wbr>Snapshot<wbr>Retention<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The backup retention period
 {{% /md %}}</dd>
@@ -502,7 +502,7 @@ The following output properties are available:
             title="">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The availability zone of the cluster
 {{% /md %}}</dd>
@@ -511,7 +511,7 @@ The following output properties are available:
             title="">
         <span>Bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket where the log files are to be stored
 {{% /md %}}</dd>
@@ -520,7 +520,7 @@ The following output properties are available:
             title="">
         <span>Cluster<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster identifier
 {{% /md %}}</dd>
@@ -529,7 +529,7 @@ The following output properties are available:
             title="">
         <span>Cluster<wbr>Parameter<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the parameter group to be associated with this cluster
 {{% /md %}}</dd>
@@ -538,7 +538,7 @@ The following output properties are available:
             title="">
         <span>Cluster<wbr>Public<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The public key for the cluster
 {{% /md %}}</dd>
@@ -547,7 +547,7 @@ The following output properties are available:
             title="">
         <span>Cluster<wbr>Revision<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster revision number
 {{% /md %}}</dd>
@@ -556,7 +556,7 @@ The following output properties are available:
             title="">
         <span>Cluster<wbr>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The security groups associated with the cluster
 {{% /md %}}</dd>
@@ -565,7 +565,7 @@ The following output properties are available:
             title="">
         <span>Cluster<wbr>Subnet<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of a cluster subnet group to be associated with this cluster
 {{% /md %}}</dd>
@@ -574,7 +574,7 @@ The following output properties are available:
             title="">
         <span>Cluster<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster type
 {{% /md %}}</dd>
@@ -583,7 +583,7 @@ The following output properties are available:
             title="">
         <span>Cluster<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -591,7 +591,7 @@ The following output properties are available:
             title="">
         <span>Database<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the default database in the cluster
 {{% /md %}}</dd>
@@ -600,7 +600,7 @@ The following output properties are available:
             title="">
         <span>Elastic<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Elastic IP of the cluster
 {{% /md %}}</dd>
@@ -609,7 +609,7 @@ The following output properties are available:
             title="">
         <span>Enable<wbr>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether cluster logging is enabled
 {{% /md %}}</dd>
@@ -618,7 +618,7 @@ The following output properties are available:
             title="">
         <span>Encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the cluster data is encrypted
 {{% /md %}}</dd>
@@ -627,7 +627,7 @@ The following output properties are available:
             title="">
         <span>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster endpoint
 {{% /md %}}</dd>
@@ -636,7 +636,7 @@ The following output properties are available:
             title="">
         <span>Enhanced<wbr>Vpc<wbr>Routing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether enhanced VPC routing is enabled
 {{% /md %}}</dd>
@@ -645,7 +645,7 @@ The following output properties are available:
             title="">
         <span>Iam<wbr>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The IAM roles associated to the cluster
 {{% /md %}}</dd>
@@ -654,7 +654,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -663,7 +663,7 @@ The following output properties are available:
             title="">
         <span>Kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The KMS encryption key associated to the cluster
 {{% /md %}}</dd>
@@ -672,7 +672,7 @@ The following output properties are available:
             title="">
         <span>Master<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Username for the master DB user
 {{% /md %}}</dd>
@@ -681,7 +681,7 @@ The following output properties are available:
             title="">
         <span>Node<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster node type
 {{% /md %}}</dd>
@@ -690,7 +690,7 @@ The following output properties are available:
             title="">
         <span>Number<wbr>Of<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes in the cluster
 {{% /md %}}</dd>
@@ -699,7 +699,7 @@ The following output properties are available:
             title="">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The port the cluster responds on
 {{% /md %}}</dd>
@@ -708,7 +708,7 @@ The following output properties are available:
             title="">
         <span>Preferred<wbr>Maintenance<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The maintenance window
 {{% /md %}}</dd>
@@ -717,7 +717,7 @@ The following output properties are available:
             title="">
         <span>Publicly<wbr>Accessible</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the cluster is publicly accessible
 {{% /md %}}</dd>
@@ -726,9 +726,27 @@ The following output properties are available:
             title="">
         <span>S3Key<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The folder inside the S3 bucket where the log files are stored
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Vpc<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The VPC Id associated with the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The VPC security group Ids associated with the cluster
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -738,24 +756,6 @@ The following output properties are available:
         <span class="property-type">map[string]interface{}</span>
     </dt>
     <dd>{{% md %}}The tags associated to the cluster
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The VPC Id associated with the cluster
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc<wbr>Security<wbr>Group<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The VPC security group Ids associated with the cluster
 {{% /md %}}</dd>
 
 </dl>
@@ -769,7 +769,7 @@ The following output properties are available:
             title="">
         <span>allow<wbr>Version<wbr>Upgrade</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether major version upgrades can be applied during maintenance period
 {{% /md %}}</dd>
@@ -778,7 +778,7 @@ The following output properties are available:
             title="">
         <span>automated<wbr>Snapshot<wbr>Retention<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The backup retention period
 {{% /md %}}</dd>
@@ -787,7 +787,7 @@ The following output properties are available:
             title="">
         <span>availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The availability zone of the cluster
 {{% /md %}}</dd>
@@ -796,7 +796,7 @@ The following output properties are available:
             title="">
         <span>bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket where the log files are to be stored
 {{% /md %}}</dd>
@@ -805,7 +805,7 @@ The following output properties are available:
             title="">
         <span>cluster<wbr>Identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster identifier
 {{% /md %}}</dd>
@@ -814,7 +814,7 @@ The following output properties are available:
             title="">
         <span>cluster<wbr>Parameter<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the parameter group to be associated with this cluster
 {{% /md %}}</dd>
@@ -823,7 +823,7 @@ The following output properties are available:
             title="">
         <span>cluster<wbr>Public<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The public key for the cluster
 {{% /md %}}</dd>
@@ -832,7 +832,7 @@ The following output properties are available:
             title="">
         <span>cluster<wbr>Revision<wbr>Number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster revision number
 {{% /md %}}</dd>
@@ -841,7 +841,7 @@ The following output properties are available:
             title="">
         <span>cluster<wbr>Security<wbr>Groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The security groups associated with the cluster
 {{% /md %}}</dd>
@@ -850,7 +850,7 @@ The following output properties are available:
             title="">
         <span>cluster<wbr>Subnet<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of a cluster subnet group to be associated with this cluster
 {{% /md %}}</dd>
@@ -859,7 +859,7 @@ The following output properties are available:
             title="">
         <span>cluster<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster type
 {{% /md %}}</dd>
@@ -868,7 +868,7 @@ The following output properties are available:
             title="">
         <span>cluster<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -876,7 +876,7 @@ The following output properties are available:
             title="">
         <span>database<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the default database in the cluster
 {{% /md %}}</dd>
@@ -885,7 +885,7 @@ The following output properties are available:
             title="">
         <span>elastic<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Elastic IP of the cluster
 {{% /md %}}</dd>
@@ -894,7 +894,7 @@ The following output properties are available:
             title="">
         <span>enable<wbr>Logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether cluster logging is enabled
 {{% /md %}}</dd>
@@ -903,7 +903,7 @@ The following output properties are available:
             title="">
         <span>encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the cluster data is encrypted
 {{% /md %}}</dd>
@@ -912,7 +912,7 @@ The following output properties are available:
             title="">
         <span>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster endpoint
 {{% /md %}}</dd>
@@ -921,7 +921,7 @@ The following output properties are available:
             title="">
         <span>enhanced<wbr>Vpc<wbr>Routing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether enhanced VPC routing is enabled
 {{% /md %}}</dd>
@@ -930,7 +930,7 @@ The following output properties are available:
             title="">
         <span>iam<wbr>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The IAM roles associated to the cluster
 {{% /md %}}</dd>
@@ -939,7 +939,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -948,7 +948,7 @@ The following output properties are available:
             title="">
         <span>kms<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The KMS encryption key associated to the cluster
 {{% /md %}}</dd>
@@ -957,7 +957,7 @@ The following output properties are available:
             title="">
         <span>master<wbr>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Username for the master DB user
 {{% /md %}}</dd>
@@ -966,7 +966,7 @@ The following output properties are available:
             title="">
         <span>node<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster node type
 {{% /md %}}</dd>
@@ -975,7 +975,7 @@ The following output properties are available:
             title="">
         <span>number<wbr>Of<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes in the cluster
 {{% /md %}}</dd>
@@ -984,7 +984,7 @@ The following output properties are available:
             title="">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The port the cluster responds on
 {{% /md %}}</dd>
@@ -993,7 +993,7 @@ The following output properties are available:
             title="">
         <span>preferred<wbr>Maintenance<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The maintenance window
 {{% /md %}}</dd>
@@ -1002,7 +1002,7 @@ The following output properties are available:
             title="">
         <span>publicly<wbr>Accessible</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the cluster is publicly accessible
 {{% /md %}}</dd>
@@ -1011,25 +1011,16 @@ The following output properties are available:
             title="">
         <span>s3Key<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The folder inside the S3 bucket where the log files are stored
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}The tags associated to the cluster
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC Id associated with the cluster
 {{% /md %}}</dd>
@@ -1038,9 +1029,18 @@ The following output properties are available:
             title="">
         <span>vpc<wbr>Security<wbr>Group<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The VPC security group Ids associated with the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The tags associated to the cluster
 {{% /md %}}</dd>
 
 </dl>
@@ -1054,7 +1054,7 @@ The following output properties are available:
             title="">
         <span>allow_<wbr>version_<wbr>upgrade</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether major version upgrades can be applied during maintenance period
 {{% /md %}}</dd>
@@ -1063,7 +1063,7 @@ The following output properties are available:
             title="">
         <span>automated_<wbr>snapshot_<wbr>retention_<wbr>period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The backup retention period
 {{% /md %}}</dd>
@@ -1072,7 +1072,7 @@ The following output properties are available:
             title="">
         <span>availability_<wbr>zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The availability zone of the cluster
 {{% /md %}}</dd>
@@ -1081,7 +1081,7 @@ The following output properties are available:
             title="">
         <span>bucket_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket where the log files are to be stored
 {{% /md %}}</dd>
@@ -1090,7 +1090,7 @@ The following output properties are available:
             title="">
         <span>cluster_<wbr>identifier</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The cluster identifier
 {{% /md %}}</dd>
@@ -1099,7 +1099,7 @@ The following output properties are available:
             title="">
         <span>cluster_<wbr>parameter_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the parameter group to be associated with this cluster
 {{% /md %}}</dd>
@@ -1108,7 +1108,7 @@ The following output properties are available:
             title="">
         <span>cluster_<wbr>public_<wbr>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The public key for the cluster
 {{% /md %}}</dd>
@@ -1117,7 +1117,7 @@ The following output properties are available:
             title="">
         <span>cluster_<wbr>revision_<wbr>number</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The cluster revision number
 {{% /md %}}</dd>
@@ -1126,7 +1126,7 @@ The following output properties are available:
             title="">
         <span>cluster_<wbr>security_<wbr>groups</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The security groups associated with the cluster
 {{% /md %}}</dd>
@@ -1135,7 +1135,7 @@ The following output properties are available:
             title="">
         <span>cluster_<wbr>subnet_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of a cluster subnet group to be associated with this cluster
 {{% /md %}}</dd>
@@ -1144,7 +1144,7 @@ The following output properties are available:
             title="">
         <span>cluster_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The cluster type
 {{% /md %}}</dd>
@@ -1153,7 +1153,7 @@ The following output properties are available:
             title="">
         <span>cluster_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1161,7 +1161,7 @@ The following output properties are available:
             title="">
         <span>database_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the default database in the cluster
 {{% /md %}}</dd>
@@ -1170,7 +1170,7 @@ The following output properties are available:
             title="">
         <span>elastic_<wbr>ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Elastic IP of the cluster
 {{% /md %}}</dd>
@@ -1179,7 +1179,7 @@ The following output properties are available:
             title="">
         <span>enable_<wbr>logging</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether cluster logging is enabled
 {{% /md %}}</dd>
@@ -1188,7 +1188,7 @@ The following output properties are available:
             title="">
         <span>encrypted</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the cluster data is encrypted
 {{% /md %}}</dd>
@@ -1197,7 +1197,7 @@ The following output properties are available:
             title="">
         <span>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The cluster endpoint
 {{% /md %}}</dd>
@@ -1206,7 +1206,7 @@ The following output properties are available:
             title="">
         <span>enhanced_<wbr>vpc_<wbr>routing</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether enhanced VPC routing is enabled
 {{% /md %}}</dd>
@@ -1215,7 +1215,7 @@ The following output properties are available:
             title="">
         <span>iam_<wbr>roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The IAM roles associated to the cluster
 {{% /md %}}</dd>
@@ -1224,7 +1224,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -1233,7 +1233,7 @@ The following output properties are available:
             title="">
         <span>kms_<wbr>key_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The KMS encryption key associated to the cluster
 {{% /md %}}</dd>
@@ -1242,7 +1242,7 @@ The following output properties are available:
             title="">
         <span>master_<wbr>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Username for the master DB user
 {{% /md %}}</dd>
@@ -1251,7 +1251,7 @@ The following output properties are available:
             title="">
         <span>node_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The cluster node type
 {{% /md %}}</dd>
@@ -1260,7 +1260,7 @@ The following output properties are available:
             title="">
         <span>number_<wbr>of_<wbr>nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of nodes in the cluster
 {{% /md %}}</dd>
@@ -1269,7 +1269,7 @@ The following output properties are available:
             title="">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The port the cluster responds on
 {{% /md %}}</dd>
@@ -1278,7 +1278,7 @@ The following output properties are available:
             title="">
         <span>preferred_<wbr>maintenance_<wbr>window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The maintenance window
 {{% /md %}}</dd>
@@ -1287,7 +1287,7 @@ The following output properties are available:
             title="">
         <span>publicly_<wbr>accessible</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the cluster is publicly accessible
 {{% /md %}}</dd>
@@ -1296,9 +1296,27 @@ The following output properties are available:
             title="">
         <span>s3_<wbr>key_<wbr>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The folder inside the S3 bucket where the log files are stored
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>vpc_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The VPC Id associated with the cluster
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>vpc_<wbr>security_<wbr>group_<wbr>ids</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The VPC security group Ids associated with the cluster
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1308,24 +1326,6 @@ The following output properties are available:
         <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}The tags associated to the cluster
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The VPC Id associated with the cluster
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc_<wbr>security_<wbr>group_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The VPC security group Ids associated with the cluster
 {{% /md %}}</dd>
 
 </dl>

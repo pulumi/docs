@@ -2835,6 +2835,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>ids</strong> (<em>list</em>) – A list of Forward Entries IDs.</p></li>
 <li><p><strong>internal_ip</strong> (<em>str</em>) – The private IP address.</p></li>
 <li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by forward entry name.</p></li>
+<li><p><strong>names</strong> (<em>list</em>) – A list of Forward Entries names.</p></li>
 </ul>
 </dd>
 </dl>

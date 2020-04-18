@@ -8,7 +8,8 @@ block_external_search_index: true
 
 Manages an API Management Service.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/api_management.html.markdown.
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -17,7 +18,7 @@ Manages an API Management Service.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#Service">Service</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#ServiceArgs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#Service">Service</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/apimanagement/#ServiceArgs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -25,11 +26,11 @@ Manages an API Management Service.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceArgs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#Service">Service</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceArgs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#Service">Service</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Apimanagement.Service.html">Service</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.ServiceArgs.html">ServiceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.Service.html">Service</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.ServiceArgs.html">ServiceArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -121,92 +122,11 @@ Manages an API Management Service.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Additional<wbr>Locations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceadditionallocation">List&lt;Service<wbr>Additional<wbr>Location<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `additional_location` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecertificate">List&lt;Service<wbr>Certificate<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Hostname<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}A `hostname_configuration` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Identity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}An `identity` block is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the API Management Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Notification<wbr>Sender<wbr>Email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Email address from which the notification will be sent.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}A `policy` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Protocols</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}A `protocols` block as defined below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Publisher<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The email of publisher/company.
 {{% /md %}}</dd>
@@ -215,7 +135,7 @@ Manages an API Management Service.
             title="Required">
         <span>Publisher<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of publisher/company.
 {{% /md %}}</dd>
@@ -224,16 +144,106 @@ Manages an API Management Service.
             title="Required">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Sku<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The fist part is the `name`, valid values include: `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Additional<wbr>Locations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceadditionallocation">List&lt;Service<wbr>Additional<wbr>Location<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `additional_location` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Certificates</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicecertificate">List&lt;Service<wbr>Certificate<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Hostname<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `hostname_configuration` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Identity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Location</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the API Management Service. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Notification<wbr>Sender<wbr>Email</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Email address from which the notification will be sent.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `policy` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Protocols</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `protocols` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Security</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `security` block as defined below.
 {{% /md %}}</dd>
@@ -242,7 +252,7 @@ Manages an API Management Service.
             title="Optional">
         <span>Sign<wbr>In</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sign_in` block as defined below.
 {{% /md %}}</dd>
@@ -251,25 +261,16 @@ Manages an API Management Service.
             title="Optional">
         <span>Sign<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sign_up` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Sku<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The fist part is the `name`, valid values include: `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 {{% /md %}}</dd>
@@ -280,6 +281,42 @@ Manages an API Management Service.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Publisher<wbr>Email</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The email of publisher/company.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Publisher<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of publisher/company.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Sku<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The fist part is the `name`, valid values include: `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -303,7 +340,7 @@ Manages an API Management Service.
             title="Optional">
         <span>Hostname<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfiguration">*Service<wbr>Hostname<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `hostname_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -312,7 +349,7 @@ Manages an API Management Service.
             title="Optional">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceidentity">*Service<wbr>Identity</a></span>
+        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
 {{% /md %}}</dd>
@@ -321,7 +358,7 @@ Manages an API Management Service.
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -330,7 +367,7 @@ Manages an API Management Service.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -339,7 +376,7 @@ Manages an API Management Service.
             title="Optional">
         <span>Notification<wbr>Sender<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Email address from which the notification will be sent.
 {{% /md %}}</dd>
@@ -348,7 +385,7 @@ Manages an API Management Service.
             title="Optional">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepolicy">*Service<wbr>Policy</a></span>
+        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `policy` block as defined below.
 {{% /md %}}</dd>
@@ -357,43 +394,16 @@ Manages an API Management Service.
             title="Optional">
         <span>Protocols</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprotocols">*Service<wbr>Protocols</a></span>
+        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}A `protocols` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Publisher<wbr>Email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The email of publisher/company.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Publisher<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of publisher/company.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Security</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesecurity">*Service<wbr>Security</a></span>
+        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security</a></span>
     </dt>
     <dd>{{% md %}}A `security` block as defined below.
 {{% /md %}}</dd>
@@ -402,7 +412,7 @@ Manages an API Management Service.
             title="Optional">
         <span>Sign<wbr>In</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignin">*Service<wbr>Sign<wbr>In</a></span>
+        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In</a></span>
     </dt>
     <dd>{{% md %}}A `sign_in` block as defined below.
 {{% /md %}}</dd>
@@ -411,18 +421,9 @@ Manages an API Management Service.
             title="Optional">
         <span>Sign<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignup">*Service<wbr>Sign<wbr>Up</a></span>
+        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up</a></span>
     </dt>
     <dd>{{% md %}}A `sign_up` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Sku<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The fist part is the `name`, valid values include: `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -441,92 +442,11 @@ Manages an API Management Service.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>additional<wbr>Locations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceadditionallocation">Service<wbr>Additional<wbr>Location[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `additional_location` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecertificate">Service<wbr>Certificate[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>hostname<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration?</a></span>
-    </dt>
-    <dd>{{% md %}}A `hostname_configuration` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>identity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity?</a></span>
-    </dt>
-    <dd>{{% md %}}An `identity` block is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the API Management Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>notification<wbr>Sender<wbr>Email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Email address from which the notification will be sent.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy?</a></span>
-    </dt>
-    <dd>{{% md %}}A `policy` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>protocols</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols?</a></span>
-    </dt>
-    <dd>{{% md %}}A `protocols` block as defined below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>publisher<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The email of publisher/company.
 {{% /md %}}</dd>
@@ -535,7 +455,7 @@ Manages an API Management Service.
             title="Required">
         <span>publisher<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of publisher/company.
 {{% /md %}}</dd>
@@ -544,16 +464,106 @@ Manages an API Management Service.
             title="Required">
         <span>resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>sku<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The fist part is the `name`, valid values include: `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>additional<wbr>Locations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceadditionallocation">Service<wbr>Additional<wbr>Location[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `additional_location` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>certificates</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicecertificate">Service<wbr>Certificate[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>hostname<wbr>Configuration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}A `hostname_configuration` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>identity</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}An `identity` block is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>location</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the API Management Service. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>notification<wbr>Sender<wbr>Email</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Email address from which the notification will be sent.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>policy</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy</a></span>
+    </dt>
+    <dd>{{% md %}}A `policy` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>protocols</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols</a></span>
+    </dt>
+    <dd>{{% md %}}A `protocols` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>security</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security?</a></span>
+        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security</a></span>
     </dt>
     <dd>{{% md %}}A `security` block as defined below.
 {{% /md %}}</dd>
@@ -562,7 +572,7 @@ Manages an API Management Service.
             title="Optional">
         <span>sign<wbr>In</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In?</a></span>
+        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In</a></span>
     </dt>
     <dd>{{% md %}}A `sign_in` block as defined below.
 {{% /md %}}</dd>
@@ -571,25 +581,16 @@ Manages an API Management Service.
             title="Optional">
         <span>sign<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up?</a></span>
+        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up</a></span>
     </dt>
     <dd>{{% md %}}A `sign_up` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>sku<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The fist part is the `name`, valid values include: `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 {{% /md %}}</dd>
@@ -600,6 +601,42 @@ Manages an API Management Service.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>publisher_<wbr>email</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The email of publisher/company.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>publisher_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of publisher/company.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>resource_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>sku_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The fist part is the `name`, valid values include: `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -641,7 +678,7 @@ Manages an API Management Service.
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -650,7 +687,7 @@ Manages an API Management Service.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -659,7 +696,7 @@ Manages an API Management Service.
             title="Optional">
         <span>notification_<wbr>sender_<wbr>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Email address from which the notification will be sent.
 {{% /md %}}</dd>
@@ -680,33 +717,6 @@ Manages an API Management Service.
         <span class="property-type"><a href="#serviceprotocols">Dict[Service<wbr>Protocols]</a></span>
     </dt>
     <dd>{{% md %}}A `protocols` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>publisher_<wbr>email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The email of publisher/company.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>publisher_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of publisher/company.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -734,15 +744,6 @@ Manages an API Management Service.
         <span class="property-type"><a href="#servicesignup">Dict[Service<wbr>Sign<wbr>Up]</a></span>
     </dt>
     <dd>{{% md %}}A `sign_up` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>sku_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The fist part is the `name`, valid values include: `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -775,27 +776,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Additional<wbr>Locations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceadditionallocation">List&lt;Service<wbr>Additional<wbr>Location&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `additional_location` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecertificate">List&lt;Service<wbr>Certificate&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Gateway<wbr>Regional<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
 {{% /md %}}</dd>
@@ -804,180 +787,45 @@ The following output properties are available:
             title="">
         <span>Gateway<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Gateway for the API Management Service.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Hostname<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}A `hostname_configuration` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Identity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity?</a></span>
-    </dt>
-    <dd>{{% md %}}An `identity` block is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Management<wbr>Api<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URL for the Management API associated with this API Management service.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the API Management Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Notification<wbr>Sender<wbr>Email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Email address from which the notification will be sent.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}A `policy` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Portal<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URL for the Publisher Portal associated with this API Management service.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Protocols</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols</a></span>
-    </dt>
-    <dd>{{% md %}}A `protocols` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Public<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Publisher<wbr>Email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The email of publisher/company.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Publisher<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of publisher/company.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Scm<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URL for the SCM (Source Code Management) Endpoint associated with this API Management service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security</a></span>
-    </dt>
-    <dd>{{% md %}}A `security` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sign<wbr>In</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In</a></span>
-    </dt>
-    <dd>{{% md %}}A `sign_in` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sign<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up</a></span>
-    </dt>
-    <dd>{{% md %}}A `sign_up` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sku<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The fist part is the `name`, valid values include: `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -989,27 +837,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Additional<wbr>Locations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceadditionallocation">[]Service<wbr>Additional<wbr>Location</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `additional_location` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecertificate">[]Service<wbr>Certificate</a></span>
-    </dt>
-    <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Gateway<wbr>Regional<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
 {{% /md %}}</dd>
@@ -1018,180 +848,45 @@ The following output properties are available:
             title="">
         <span>Gateway<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Gateway for the API Management Service.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Hostname<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}A `hostname_configuration` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Identity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceidentity">*Service<wbr>Identity</a></span>
-    </dt>
-    <dd>{{% md %}}An `identity` block is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Management<wbr>Api<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL for the Management API associated with this API Management service.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the API Management Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Notification<wbr>Sender<wbr>Email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Email address from which the notification will be sent.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}A `policy` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Portal<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL for the Publisher Portal associated with this API Management service.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Protocols</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols</a></span>
-    </dt>
-    <dd>{{% md %}}A `protocols` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Public<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Publisher<wbr>Email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The email of publisher/company.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Publisher<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of publisher/company.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Scm<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL for the SCM (Source Code Management) Endpoint associated with this API Management service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Security</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security</a></span>
-    </dt>
-    <dd>{{% md %}}A `security` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sign<wbr>In</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In</a></span>
-    </dt>
-    <dd>{{% md %}}A `sign_in` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sign<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up</a></span>
-    </dt>
-    <dd>{{% md %}}A `sign_up` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sku<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The fist part is the `name`, valid values include: `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1203,27 +898,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>additional<wbr>Locations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceadditionallocation">Service<wbr>Additional<wbr>Location[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `additional_location` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecertificate">Service<wbr>Certificate[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>gateway<wbr>Regional<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
 {{% /md %}}</dd>
@@ -1232,180 +909,45 @@ The following output properties are available:
             title="">
         <span>gateway<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Gateway for the API Management Service.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>hostname<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}A `hostname_configuration` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>identity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity?</a></span>
-    </dt>
-    <dd>{{% md %}}An `identity` block is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>management<wbr>Api<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL for the Management API associated with this API Management service.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the API Management Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>notification<wbr>Sender<wbr>Email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Email address from which the notification will be sent.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy</a></span>
-    </dt>
-    <dd>{{% md %}}A `policy` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>portal<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL for the Publisher Portal associated with this API Management service.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>protocols</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols</a></span>
-    </dt>
-    <dd>{{% md %}}A `protocols` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>public<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>publisher<wbr>Email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The email of publisher/company.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>publisher<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of publisher/company.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>scm<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL for the SCM (Source Code Management) Endpoint associated with this API Management service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security</a></span>
-    </dt>
-    <dd>{{% md %}}A `security` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sign<wbr>In</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In</a></span>
-    </dt>
-    <dd>{{% md %}}A `sign_in` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sign<wbr>Up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up</a></span>
-    </dt>
-    <dd>{{% md %}}A `sign_up` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sku<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The fist part is the `name`, valid values include: `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1417,27 +959,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>additional_<wbr>locations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceadditionallocation">List[Service<wbr>Additional<wbr>Location]</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `additional_location` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>certificates</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecertificate">List[Service<wbr>Certificate]</a></span>
-    </dt>
-    <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>gateway_<wbr>regional_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
 {{% /md %}}</dd>
@@ -1446,180 +970,45 @@ The following output properties are available:
             title="">
         <span>gateway_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Gateway for the API Management Service.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>hostname_<wbr>configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfiguration">Dict[Service<wbr>Hostname<wbr>Configuration]</a></span>
-    </dt>
-    <dd>{{% md %}}A `hostname_configuration` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>identity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceidentity">Dict[Service<wbr>Identity]</a></span>
-    </dt>
-    <dd>{{% md %}}An `identity` block is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>management_<wbr>api_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL for the Management API associated with this API Management service.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the API Management Service. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>notification_<wbr>sender_<wbr>email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Email address from which the notification will be sent.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepolicy">Dict[Service<wbr>Policy]</a></span>
-    </dt>
-    <dd>{{% md %}}A `policy` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>portal_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL for the Publisher Portal associated with this API Management service.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>protocols</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprotocols">Dict[Service<wbr>Protocols]</a></span>
-    </dt>
-    <dd>{{% md %}}A `protocols` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>public_<wbr>ip_<wbr>addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>publisher_<wbr>email</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The email of publisher/company.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>publisher_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of publisher/company.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>scm_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL for the SCM (Source Code Management) Endpoint associated with this API Management service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>security</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesecurity">Dict[Service<wbr>Security]</a></span>
-    </dt>
-    <dd>{{% md %}}A `security` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sign_<wbr>in</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignin">Dict[Service<wbr>Sign<wbr>In]</a></span>
-    </dt>
-    <dd>{{% md %}}A `sign_in` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sign_<wbr>up</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignup">Dict[Service<wbr>Sign<wbr>Up]</a></span>
-    </dt>
-    <dd>{{% md %}}A `sign_up` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sku_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The fist part is the `name`, valid values include: `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags assigned to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1647,11 +1036,11 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceState">ServiceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#Service">Service</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceState">ServiceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#Service">Service</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Apimanagement.Service.html">Service</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Apimanagement.ServiceState.html">ServiceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.Service.html">Service</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.ApiManagement.ServiceState.html">ServiceState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1761,7 +1150,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Additional<wbr>Locations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceadditionallocation">List&lt;Service<wbr>Additional<wbr>Location<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#serviceadditionallocation">List&lt;Service<wbr>Additional<wbr>Location<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_location` blocks as defined below.
 {{% /md %}}</dd>
@@ -1770,7 +1159,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificates</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecertificate">List&lt;Service<wbr>Certificate<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#servicecertificate">List&lt;Service<wbr>Certificate<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -1779,7 +1168,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Gateway<wbr>Regional<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
 {{% /md %}}</dd>
@@ -1788,7 +1177,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Gateway<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Gateway for the API Management Service.
 {{% /md %}}</dd>
@@ -1797,7 +1186,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hostname<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `hostname_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -1806,7 +1195,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity<wbr>Args?</a></span>
+        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
 {{% /md %}}</dd>
@@ -1815,7 +1204,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1824,7 +1213,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Management<wbr>Api<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URL for the Management API associated with this API Management service.
 {{% /md %}}</dd>
@@ -1833,7 +1222,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1842,7 +1231,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Notification<wbr>Sender<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Email address from which the notification will be sent.
 {{% /md %}}</dd>
@@ -1851,7 +1240,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `policy` block as defined below.
 {{% /md %}}</dd>
@@ -1860,7 +1249,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Portal<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URL for the Publisher Portal associated with this API Management service.
 {{% /md %}}</dd>
@@ -1869,7 +1258,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Protocols</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols<wbr>Args?</a></span>
+        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `protocols` block as defined below.
 {{% /md %}}</dd>
@@ -1878,7 +1267,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Public<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 {{% /md %}}</dd>
@@ -1887,7 +1276,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Publisher<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The email of publisher/company.
 {{% /md %}}</dd>
@@ -1896,7 +1285,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Publisher<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of publisher/company.
 {{% /md %}}</dd>
@@ -1905,7 +1294,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1914,7 +1303,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scm<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URL for the SCM (Source Code Management) Endpoint associated with this API Management service.
 {{% /md %}}</dd>
@@ -1923,7 +1312,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Security</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `security` block as defined below.
 {{% /md %}}</dd>
@@ -1932,7 +1321,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sign<wbr>In</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sign_in` block as defined below.
 {{% /md %}}</dd>
@@ -1941,7 +1330,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sign<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sign_up` block as defined below.
 {{% /md %}}</dd>
@@ -1950,7 +1339,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sku<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The fist part is the `name`, valid values include: `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
 {{% /md %}}</dd>
@@ -1959,7 +1348,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 {{% /md %}}</dd>
@@ -1993,7 +1382,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Gateway<wbr>Regional<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
 {{% /md %}}</dd>
@@ -2002,7 +1391,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Gateway<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Gateway for the API Management Service.
 {{% /md %}}</dd>
@@ -2011,7 +1400,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Hostname<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfiguration">*Service<wbr>Hostname<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `hostname_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -2020,7 +1409,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceidentity">*Service<wbr>Identity</a></span>
+        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
 {{% /md %}}</dd>
@@ -2029,7 +1418,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -2038,7 +1427,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Management<wbr>Api<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL for the Management API associated with this API Management service.
 {{% /md %}}</dd>
@@ -2047,7 +1436,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -2056,7 +1445,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Notification<wbr>Sender<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Email address from which the notification will be sent.
 {{% /md %}}</dd>
@@ -2065,7 +1454,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepolicy">*Service<wbr>Policy</a></span>
+        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `policy` block as defined below.
 {{% /md %}}</dd>
@@ -2074,7 +1463,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Portal<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL for the Publisher Portal associated with this API Management service.
 {{% /md %}}</dd>
@@ -2083,7 +1472,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Protocols</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprotocols">*Service<wbr>Protocols</a></span>
+        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}A `protocols` block as defined below.
 {{% /md %}}</dd>
@@ -2092,7 +1481,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Public<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 {{% /md %}}</dd>
@@ -2101,7 +1490,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Publisher<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The email of publisher/company.
 {{% /md %}}</dd>
@@ -2110,7 +1499,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Publisher<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of publisher/company.
 {{% /md %}}</dd>
@@ -2119,7 +1508,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -2128,7 +1517,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scm<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL for the SCM (Source Code Management) Endpoint associated with this API Management service.
 {{% /md %}}</dd>
@@ -2137,7 +1526,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Security</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesecurity">*Service<wbr>Security</a></span>
+        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security</a></span>
     </dt>
     <dd>{{% md %}}A `security` block as defined below.
 {{% /md %}}</dd>
@@ -2146,7 +1535,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sign<wbr>In</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignin">*Service<wbr>Sign<wbr>In</a></span>
+        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In</a></span>
     </dt>
     <dd>{{% md %}}A `sign_in` block as defined below.
 {{% /md %}}</dd>
@@ -2155,7 +1544,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sign<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignup">*Service<wbr>Sign<wbr>Up</a></span>
+        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up</a></span>
     </dt>
     <dd>{{% md %}}A `sign_up` block as defined below.
 {{% /md %}}</dd>
@@ -2164,7 +1553,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sku<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The fist part is the `name`, valid values include: `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
 {{% /md %}}</dd>
@@ -2189,7 +1578,7 @@ The following state arguments are supported:
             title="Optional">
         <span>additional<wbr>Locations</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceadditionallocation">Service<wbr>Additional<wbr>Location[]?</a></span>
+        <span class="property-type"><a href="#serviceadditionallocation">Service<wbr>Additional<wbr>Location[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `additional_location` blocks as defined below.
 {{% /md %}}</dd>
@@ -2198,7 +1587,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificates</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecertificate">Service<wbr>Certificate[]?</a></span>
+        <span class="property-type"><a href="#servicecertificate">Service<wbr>Certificate[]</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -2207,7 +1596,7 @@ The following state arguments are supported:
             title="Optional">
         <span>gateway<wbr>Regional<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
 {{% /md %}}</dd>
@@ -2216,7 +1605,7 @@ The following state arguments are supported:
             title="Optional">
         <span>gateway<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Gateway for the API Management Service.
 {{% /md %}}</dd>
@@ -2225,7 +1614,7 @@ The following state arguments are supported:
             title="Optional">
         <span>hostname<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `hostname_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -2234,7 +1623,7 @@ The following state arguments are supported:
             title="Optional">
         <span>identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity?</a></span>
+        <span class="property-type"><a href="#serviceidentity">Service<wbr>Identity</a></span>
     </dt>
     <dd>{{% md %}}An `identity` block is documented below.
 {{% /md %}}</dd>
@@ -2243,7 +1632,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -2252,7 +1641,7 @@ The following state arguments are supported:
             title="Optional">
         <span>management<wbr>Api<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL for the Management API associated with this API Management service.
 {{% /md %}}</dd>
@@ -2261,7 +1650,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -2270,7 +1659,7 @@ The following state arguments are supported:
             title="Optional">
         <span>notification<wbr>Sender<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Email address from which the notification will be sent.
 {{% /md %}}</dd>
@@ -2279,7 +1668,7 @@ The following state arguments are supported:
             title="Optional">
         <span>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy?</a></span>
+        <span class="property-type"><a href="#servicepolicy">Service<wbr>Policy</a></span>
     </dt>
     <dd>{{% md %}}A `policy` block as defined below.
 {{% /md %}}</dd>
@@ -2288,7 +1677,7 @@ The following state arguments are supported:
             title="Optional">
         <span>portal<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL for the Publisher Portal associated with this API Management service.
 {{% /md %}}</dd>
@@ -2297,7 +1686,7 @@ The following state arguments are supported:
             title="Optional">
         <span>protocols</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols?</a></span>
+        <span class="property-type"><a href="#serviceprotocols">Service<wbr>Protocols</a></span>
     </dt>
     <dd>{{% md %}}A `protocols` block as defined below.
 {{% /md %}}</dd>
@@ -2306,7 +1695,7 @@ The following state arguments are supported:
             title="Optional">
         <span>public<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 {{% /md %}}</dd>
@@ -2315,7 +1704,7 @@ The following state arguments are supported:
             title="Optional">
         <span>publisher<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The email of publisher/company.
 {{% /md %}}</dd>
@@ -2324,7 +1713,7 @@ The following state arguments are supported:
             title="Optional">
         <span>publisher<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of publisher/company.
 {{% /md %}}</dd>
@@ -2333,7 +1722,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -2342,7 +1731,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scm<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL for the SCM (Source Code Management) Endpoint associated with this API Management service.
 {{% /md %}}</dd>
@@ -2351,7 +1740,7 @@ The following state arguments are supported:
             title="Optional">
         <span>security</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security?</a></span>
+        <span class="property-type"><a href="#servicesecurity">Service<wbr>Security</a></span>
     </dt>
     <dd>{{% md %}}A `security` block as defined below.
 {{% /md %}}</dd>
@@ -2360,7 +1749,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sign<wbr>In</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In?</a></span>
+        <span class="property-type"><a href="#servicesignin">Service<wbr>Sign<wbr>In</a></span>
     </dt>
     <dd>{{% md %}}A `sign_in` block as defined below.
 {{% /md %}}</dd>
@@ -2369,7 +1758,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sign<wbr>Up</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up?</a></span>
+        <span class="property-type"><a href="#servicesignup">Service<wbr>Sign<wbr>Up</a></span>
     </dt>
     <dd>{{% md %}}A `sign_up` block as defined below.
 {{% /md %}}</dd>
@@ -2378,7 +1767,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sku<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The fist part is the `name`, valid values include: `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
 {{% /md %}}</dd>
@@ -2387,7 +1776,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags assigned to the resource.
 {{% /md %}}</dd>
@@ -2421,7 +1810,7 @@ The following state arguments are supported:
             title="Optional">
         <span>gateway_<wbr>regional_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
 {{% /md %}}</dd>
@@ -2430,7 +1819,7 @@ The following state arguments are supported:
             title="Optional">
         <span>gateway_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL of the Gateway for the API Management Service.
 {{% /md %}}</dd>
@@ -2457,7 +1846,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Azure location where the API Management Service exists. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -2466,7 +1855,7 @@ The following state arguments are supported:
             title="Optional">
         <span>management_<wbr>api_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL for the Management API associated with this API Management service.
 {{% /md %}}</dd>
@@ -2475,7 +1864,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the API Management Service. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -2484,7 +1873,7 @@ The following state arguments are supported:
             title="Optional">
         <span>notification_<wbr>sender_<wbr>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Email address from which the notification will be sent.
 {{% /md %}}</dd>
@@ -2502,7 +1891,7 @@ The following state arguments are supported:
             title="Optional">
         <span>portal_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL for the Publisher Portal associated with this API Management service.
 {{% /md %}}</dd>
@@ -2520,7 +1909,7 @@ The following state arguments are supported:
             title="Optional">
         <span>public_<wbr>ip_<wbr>addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 {{% /md %}}</dd>
@@ -2529,7 +1918,7 @@ The following state arguments are supported:
             title="Optional">
         <span>publisher_<wbr>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The email of publisher/company.
 {{% /md %}}</dd>
@@ -2538,7 +1927,7 @@ The following state arguments are supported:
             title="Optional">
         <span>publisher_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of publisher/company.
 {{% /md %}}</dd>
@@ -2547,7 +1936,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which the API Management Service should be exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -2556,7 +1945,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scm_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL for the SCM (Source Code Management) Endpoint associated with this API Management service.
 {{% /md %}}</dd>
@@ -2592,7 +1981,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sku_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}`sku_name` is a string consisting of two parts separated by an underscore(\_). The fist part is the `name`, valid values include: `Developer`, `Basic`, `Standard` and `Premium`. The second part is the `capacity` (e.g. the number of deployed units of the `sku`), which must be a positive `integer` (e.g. `Developer_1`).
 {{% /md %}}</dd>
@@ -2626,7 +2015,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceAdditionalLocationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceAdditionalLocationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceAdditionalLocationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceAdditionalLocationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2635,29 +2024,29 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Gateway<wbr>Regional<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Azure Region in which the API Management Service should be expanded to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Gateway<wbr>Regional<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Public<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 {{% /md %}}</dd>
@@ -2669,29 +2058,29 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Gateway<wbr>Regional<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Azure Region in which the API Management Service should be expanded to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Gateway<wbr>Regional<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Public<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 {{% /md %}}</dd>
@@ -2703,29 +2092,29 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>gateway<wbr>Regional<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Azure Region in which the API Management Service should be expanded to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>gateway<wbr>Regional<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>public<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 {{% /md %}}</dd>
@@ -2737,29 +2126,29 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>gateway_<wbr>regional_<wbr>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Azure Region in which the API Management Service should be expanded to.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>gateway_<wbr>regional_<wbr>url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The URL of the Regional Gateway for the API Management Service in the specified region.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>public_<wbr>ip_<wbr>addresses</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Public Static Load Balanced IP addresses of the API Management service in the additional location. Available only for Basic, Standard and Premium SKU.
 {{% /md %}}</dd>
@@ -2777,7 +2166,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceCertificateOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceCertificateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceCertificateOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2790,7 +2179,7 @@ The following state arguments are supported:
             title="Required">
         <span>Certificate<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
 {{% /md %}}</dd>
@@ -2799,7 +2188,7 @@ The following state arguments are supported:
             title="Required">
         <span>Encoded<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded PFX Certificate.
 {{% /md %}}</dd>
@@ -2808,7 +2197,7 @@ The following state arguments are supported:
             title="Required">
         <span>Store<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Store where this certificate should be stored. Possible values are `CertificateAuthority` and `Root`.
 {{% /md %}}</dd>
@@ -2824,7 +2213,7 @@ The following state arguments are supported:
             title="Required">
         <span>Certificate<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
 {{% /md %}}</dd>
@@ -2833,7 +2222,7 @@ The following state arguments are supported:
             title="Required">
         <span>Encoded<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded PFX Certificate.
 {{% /md %}}</dd>
@@ -2842,7 +2231,7 @@ The following state arguments are supported:
             title="Required">
         <span>Store<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Store where this certificate should be stored. Possible values are `CertificateAuthority` and `Root`.
 {{% /md %}}</dd>
@@ -2858,7 +2247,7 @@ The following state arguments are supported:
             title="Required">
         <span>certificate<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
 {{% /md %}}</dd>
@@ -2867,7 +2256,7 @@ The following state arguments are supported:
             title="Required">
         <span>encoded<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded PFX Certificate.
 {{% /md %}}</dd>
@@ -2876,7 +2265,7 @@ The following state arguments are supported:
             title="Required">
         <span>store<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Store where this certificate should be stored. Possible values are `CertificateAuthority` and `Root`.
 {{% /md %}}</dd>
@@ -2892,7 +2281,7 @@ The following state arguments are supported:
             title="Required">
         <span>certificate<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
 {{% /md %}}</dd>
@@ -2901,7 +2290,7 @@ The following state arguments are supported:
             title="Required">
         <span>encoded<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded PFX Certificate.
 {{% /md %}}</dd>
@@ -2910,7 +2299,7 @@ The following state arguments are supported:
             title="Required">
         <span>store<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Certificate Store where this certificate should be stored. Possible values are `CertificateAuthority` and `Root`.
 {{% /md %}}</dd>
@@ -2928,7 +2317,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceHostnameConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceHostnameConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceHostnameConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceHostnameConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2941,7 +2330,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Managements</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationmanagement">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Management<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationmanagement">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Management<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as documented below.
 {{% /md %}}</dd>
@@ -2950,7 +2339,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Portals</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationportal">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Portal<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationportal">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Portal<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as documented below.
 {{% /md %}}</dd>
@@ -2959,7 +2348,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Proxies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationproxy">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Proxy<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationproxy">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Proxy<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as documented below.
 {{% /md %}}</dd>
@@ -2968,7 +2357,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Scms</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationscm">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Scm<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationscm">List&lt;Service<wbr>Hostname<wbr>Configuration<wbr>Scm<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as documented below.
 {{% /md %}}</dd>
@@ -3027,7 +2416,7 @@ The following state arguments are supported:
             title="Optional">
         <span>managements</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationmanagement">Service<wbr>Hostname<wbr>Configuration<wbr>Management[]?</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationmanagement">Service<wbr>Hostname<wbr>Configuration<wbr>Management[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `management` blocks as documented below.
 {{% /md %}}</dd>
@@ -3036,7 +2425,7 @@ The following state arguments are supported:
             title="Optional">
         <span>portals</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationportal">Service<wbr>Hostname<wbr>Configuration<wbr>Portal[]?</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationportal">Service<wbr>Hostname<wbr>Configuration<wbr>Portal[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `portal` blocks as documented below.
 {{% /md %}}</dd>
@@ -3045,7 +2434,7 @@ The following state arguments are supported:
             title="Optional">
         <span>proxies</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationproxy">Service<wbr>Hostname<wbr>Configuration<wbr>Proxy[]?</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationproxy">Service<wbr>Hostname<wbr>Configuration<wbr>Proxy[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `proxy` blocks as documented below.
 {{% /md %}}</dd>
@@ -3054,7 +2443,7 @@ The following state arguments are supported:
             title="Optional">
         <span>scms</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicehostnameconfigurationscm">Service<wbr>Hostname<wbr>Configuration<wbr>Scm[]?</a></span>
+        <span class="property-type"><a href="#servicehostnameconfigurationscm">Service<wbr>Hostname<wbr>Configuration<wbr>Scm[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `scm` blocks as documented below.
 {{% /md %}}</dd>
@@ -3115,7 +2504,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceHostnameConfigurationManagementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceHostnameConfigurationManagementOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceHostnameConfigurationManagementArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceHostnameConfigurationManagementOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3124,11 +2513,20 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Host<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Hostname to use for the Management API.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate.
 {{% /md %}}</dd>
@@ -3137,25 +2535,16 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Host<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Hostname to use for the Management API.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
 {{% /md %}}</dd>
@@ -3164,7 +2553,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
 {{% /md %}}</dd>
@@ -3176,11 +2565,20 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Host<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Hostname to use for the Management API.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate.
 {{% /md %}}</dd>
@@ -3189,25 +2587,16 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Host<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Hostname to use for the Management API.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
 {{% /md %}}</dd>
@@ -3216,7 +2605,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
 {{% /md %}}</dd>
@@ -3228,11 +2617,20 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>host<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Hostname to use for the Management API.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate.
 {{% /md %}}</dd>
@@ -3241,25 +2639,16 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>host<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Hostname to use for the Management API.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
 {{% /md %}}</dd>
@@ -3268,7 +2657,7 @@ The following state arguments are supported:
             title="Optional">
         <span>negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
 {{% /md %}}</dd>
@@ -3280,11 +2669,20 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>host_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Hostname to use for the Management API.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate.
 {{% /md %}}</dd>
@@ -3293,25 +2691,16 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>host_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Hostname to use for the Management API.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>key_<wbr>vault_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
 {{% /md %}}</dd>
@@ -3320,7 +2709,7 @@ The following state arguments are supported:
             title="Optional">
         <span>negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
 {{% /md %}}</dd>
@@ -3338,7 +2727,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceHostnameConfigurationPortalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceHostnameConfigurationPortalOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceHostnameConfigurationPortalArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceHostnameConfigurationPortalOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3347,11 +2736,20 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Host<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Hostname to use for the Management API.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -3360,25 +2758,16 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Host<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Hostname to use for the Management API.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
 {{% /md %}}</dd>
@@ -3387,7 +2776,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
 {{% /md %}}</dd>
@@ -3399,11 +2788,20 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Host<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Hostname to use for the Management API.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -3412,25 +2810,16 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Host<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Hostname to use for the Management API.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
 {{% /md %}}</dd>
@@ -3439,7 +2828,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
 {{% /md %}}</dd>
@@ -3451,11 +2840,20 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>host<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Hostname to use for the Management API.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -3464,25 +2862,16 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>host<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Hostname to use for the Management API.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
 {{% /md %}}</dd>
@@ -3491,7 +2880,7 @@ The following state arguments are supported:
             title="Optional">
         <span>negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
 {{% /md %}}</dd>
@@ -3503,11 +2892,20 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>host_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Hostname to use for the Management API.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -3516,25 +2914,16 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>host_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Hostname to use for the Management API.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>key_<wbr>vault_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
 {{% /md %}}</dd>
@@ -3543,7 +2932,7 @@ The following state arguments are supported:
             title="Optional">
         <span>negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
 {{% /md %}}</dd>
@@ -3561,7 +2950,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceHostnameConfigurationProxyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceHostnameConfigurationProxyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceHostnameConfigurationProxyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceHostnameConfigurationProxyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3570,11 +2959,20 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Host<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Hostname to use for the Management API.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate.
 {{% /md %}}</dd>
@@ -3583,7 +2981,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
 {{% /md %}}</dd>
@@ -3592,25 +2990,16 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Ssl<wbr>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Is the certificate associated with this Hostname the Default SSL Certificate? This is used when an SNI header isn't specified by a client. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Host<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Hostname to use for the Management API.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
 {{% /md %}}</dd>
@@ -3619,7 +3008,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
 {{% /md %}}</dd>
@@ -3631,11 +3020,20 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Host<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Hostname to use for the Management API.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate.
 {{% /md %}}</dd>
@@ -3644,7 +3042,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
 {{% /md %}}</dd>
@@ -3653,25 +3051,16 @@ The following state arguments are supported:
             title="Optional">
         <span>Default<wbr>Ssl<wbr>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Is the certificate associated with this Hostname the Default SSL Certificate? This is used when an SNI header isn't specified by a client. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Host<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Hostname to use for the Management API.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
 {{% /md %}}</dd>
@@ -3680,7 +3069,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
 {{% /md %}}</dd>
@@ -3692,11 +3081,20 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>host<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Hostname to use for the Management API.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate.
 {{% /md %}}</dd>
@@ -3705,7 +3103,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
 {{% /md %}}</dd>
@@ -3714,25 +3112,16 @@ The following state arguments are supported:
             title="Optional">
         <span>default<wbr>Ssl<wbr>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Is the certificate associated with this Hostname the Default SSL Certificate? This is used when an SNI header isn't specified by a client. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>host<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Hostname to use for the Management API.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
 {{% /md %}}</dd>
@@ -3741,7 +3130,7 @@ The following state arguments are supported:
             title="Optional">
         <span>negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
 {{% /md %}}</dd>
@@ -3753,11 +3142,20 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>host_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Hostname to use for the Management API.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Base64 Encoded Certificate.
 {{% /md %}}</dd>
@@ -3766,7 +3164,7 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The password associated with the certificate provided above.
 {{% /md %}}</dd>
@@ -3775,25 +3173,16 @@ The following state arguments are supported:
             title="Optional">
         <span>default<wbr>Ssl<wbr>Binding</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Is the certificate associated with this Hostname the Default SSL Certificate? This is used when an SNI header isn't specified by a client. Defaults to `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>host_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Hostname to use for the Management API.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>key_<wbr>vault_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
 {{% /md %}}</dd>
@@ -3802,7 +3191,7 @@ The following state arguments are supported:
             title="Optional">
         <span>negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
 {{% /md %}}</dd>
@@ -3820,7 +3209,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceHostnameConfigurationScmArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceHostnameConfigurationScmOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceHostnameConfigurationScmArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceHostnameConfigurationScmOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3829,11 +3218,20 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Host<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Hostname to use for the Management API.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -3842,25 +3240,16 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Host<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Hostname to use for the Management API.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
 {{% /md %}}</dd>
@@ -3869,7 +3258,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
 {{% /md %}}</dd>
@@ -3881,11 +3270,20 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Host<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Hostname to use for the Management API.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -3894,25 +3292,16 @@ The following state arguments are supported:
             title="Optional">
         <span>Certificate<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Host<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Hostname to use for the Management API.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
 {{% /md %}}</dd>
@@ -3921,7 +3310,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
 {{% /md %}}</dd>
@@ -3933,11 +3322,20 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>host<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The Hostname to use for the Management API.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -3946,25 +3344,16 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>host<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Hostname to use for the Management API.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>key<wbr>Vault<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
 {{% /md %}}</dd>
@@ -3973,7 +3362,7 @@ The following state arguments are supported:
             title="Optional">
         <span>negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
 {{% /md %}}</dd>
@@ -3985,11 +3374,20 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>host_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Hostname to use for the Management API.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `certificate` blocks as defined below.
 {{% /md %}}</dd>
@@ -3998,25 +3396,16 @@ The following state arguments are supported:
             title="Optional">
         <span>certificate<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The password for the certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>host_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Hostname to use for the Management API.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>key_<wbr>vault_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Key Vault Secret containing the SSL Certificate, which must be should be of the type `application/x-pkcs12`.
 {{% /md %}}</dd>
@@ -4025,7 +3414,7 @@ The following state arguments are supported:
             title="Optional">
         <span>negotiate<wbr>Client<wbr>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Should Client Certificate Negotiation be enabled for this Hostname? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4043,7 +3432,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceIdentityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceIdentityOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceIdentityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceIdentityOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4052,11 +3441,20 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this API Management Service. At this time the only supported value is`SystemAssigned`.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Principal<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Principal ID associated with this Managed Service Identity.
 {{% /md %}}</dd>
@@ -4065,18 +3463,9 @@ The following state arguments are supported:
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Tenant ID associated with this Managed Service Identity.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this API Management Service. At this time the only supported value is`SystemAssigned`.
 {{% /md %}}</dd>
 
 </dl>
@@ -4086,11 +3475,20 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this API Management Service. At this time the only supported value is`SystemAssigned`.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Principal<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Principal ID associated with this Managed Service Identity.
 {{% /md %}}</dd>
@@ -4099,18 +3497,9 @@ The following state arguments are supported:
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Tenant ID associated with this Managed Service Identity.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this API Management Service. At this time the only supported value is`SystemAssigned`.
 {{% /md %}}</dd>
 
 </dl>
@@ -4120,11 +3509,20 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this API Management Service. At this time the only supported value is`SystemAssigned`.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>principal<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Principal ID associated with this Managed Service Identity.
 {{% /md %}}</dd>
@@ -4133,18 +3531,9 @@ The following state arguments are supported:
             title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Tenant ID associated with this Managed Service Identity.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this API Management Service. At this time the only supported value is`SystemAssigned`.
 {{% /md %}}</dd>
 
 </dl>
@@ -4154,11 +3543,20 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this API Management Service. At this time the only supported value is`SystemAssigned`.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>principal_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Principal ID associated with this Managed Service Identity.
 {{% /md %}}</dd>
@@ -4167,18 +3565,9 @@ The following state arguments are supported:
             title="Optional">
         <span>tenant_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Tenant ID associated with this Managed Service Identity.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the type of Managed Service Identity that should be configured on this API Management Service. At this time the only supported value is`SystemAssigned`.
 {{% /md %}}</dd>
 
 </dl>
@@ -4194,7 +3583,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServicePolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServicePolicyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServicePolicyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServicePolicyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4207,7 +3596,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Xml<wbr>Content</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The XML Content for this Policy.
 {{% /md %}}</dd>
@@ -4216,7 +3605,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Xml<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A link to an API Management Policy XML Document, which must be publicly available.
 {{% /md %}}</dd>
@@ -4232,7 +3621,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Xml<wbr>Content</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The XML Content for this Policy.
 {{% /md %}}</dd>
@@ -4241,7 +3630,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Xml<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A link to an API Management Policy XML Document, which must be publicly available.
 {{% /md %}}</dd>
@@ -4257,7 +3646,7 @@ The following state arguments are supported:
             title="Optional">
         <span>xml<wbr>Content</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The XML Content for this Policy.
 {{% /md %}}</dd>
@@ -4266,7 +3655,7 @@ The following state arguments are supported:
             title="Optional">
         <span>xml<wbr>Link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A link to an API Management Policy XML Document, which must be publicly available.
 {{% /md %}}</dd>
@@ -4282,7 +3671,7 @@ The following state arguments are supported:
             title="Optional">
         <span>xml_<wbr>content</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The XML Content for this Policy.
 {{% /md %}}</dd>
@@ -4291,7 +3680,7 @@ The following state arguments are supported:
             title="Optional">
         <span>xml_<wbr>link</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A link to an API Management Policy XML Document, which must be publicly available.
 {{% /md %}}</dd>
@@ -4309,7 +3698,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceProtocolsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceProtocolsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceProtocolsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceProtocolsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4322,7 +3711,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Http2</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Should HTTP/2 be supported by the API Management Service? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4338,7 +3727,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Http2</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Should HTTP/2 be supported by the API Management Service? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4354,7 +3743,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enable<wbr>Http2</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Should HTTP/2 be supported by the API Management Service? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4370,7 +3759,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enable_<wbr>http2</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Should HTTP/2 be supported by the API Management Service? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4388,7 +3777,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceSecurityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceSecurityOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceSecurityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceSecurityOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4401,7 +3790,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Backend<wbr>Ssl30</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Should SSL 3.0 be enabled on the backend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4410,7 +3799,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Backend<wbr>Tls10</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Should TLS 1.0 be enabled on the backend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4419,7 +3808,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Backend<wbr>Tls11</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Should TLS 1.1 be enabled on the backend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4428,7 +3817,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Frontend<wbr>Ssl30</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4437,7 +3826,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Frontend<wbr>Tls10</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4446,7 +3835,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Frontend<wbr>Tls11</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4455,7 +3844,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Triple<wbr>Des<wbr>Ciphers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_3DES_EDE_CBC_SHA` cipher be enabled for alL TLS versions (1.0, 1.1 and 1.2)? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4471,7 +3860,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Backend<wbr>Ssl30</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Should SSL 3.0 be enabled on the backend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4480,7 +3869,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Backend<wbr>Tls10</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Should TLS 1.0 be enabled on the backend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4489,7 +3878,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Backend<wbr>Tls11</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Should TLS 1.1 be enabled on the backend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4498,7 +3887,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Frontend<wbr>Ssl30</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4507,7 +3896,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Frontend<wbr>Tls10</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4516,7 +3905,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Frontend<wbr>Tls11</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4525,7 +3914,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enable<wbr>Triple<wbr>Des<wbr>Ciphers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_3DES_EDE_CBC_SHA` cipher be enabled for alL TLS versions (1.0, 1.1 and 1.2)? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4541,7 +3930,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enable<wbr>Backend<wbr>Ssl30</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Should SSL 3.0 be enabled on the backend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4550,7 +3939,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enable<wbr>Backend<wbr>Tls10</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Should TLS 1.0 be enabled on the backend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4559,7 +3948,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enable<wbr>Backend<wbr>Tls11</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Should TLS 1.1 be enabled on the backend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4568,7 +3957,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enable<wbr>Frontend<wbr>Ssl30</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4577,7 +3966,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enable<wbr>Frontend<wbr>Tls10</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4586,7 +3975,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enable<wbr>Frontend<wbr>Tls11</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4595,7 +3984,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enable<wbr>Triple<wbr>Des<wbr>Ciphers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_3DES_EDE_CBC_SHA` cipher be enabled for alL TLS versions (1.0, 1.1 and 1.2)? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4611,7 +4000,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enable<wbr>Backend<wbr>Ssl30</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Should SSL 3.0 be enabled on the backend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4620,7 +4009,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enable<wbr>Backend<wbr>Tls10</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Should TLS 1.0 be enabled on the backend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4629,7 +4018,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enable<wbr>Backend<wbr>Tls11</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Should TLS 1.1 be enabled on the backend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4638,7 +4027,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enable<wbr>Frontend<wbr>Ssl30</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Should SSL 3.0 be enabled on the frontend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4647,7 +4036,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enable<wbr>Frontend<wbr>Tls10</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Should TLS 1.0 be enabled on the frontend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4656,7 +4045,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enable<wbr>Frontend<wbr>Tls11</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4665,7 +4054,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enable<wbr>Triple<wbr>Des<wbr>Ciphers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Should the `TLS_RSA_WITH_3DES_EDE_CBC_SHA` cipher be enabled for alL TLS versions (1.0, 1.1 and 1.2)? Defaults to `false`.
 {{% /md %}}</dd>
@@ -4683,7 +4072,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceSignInArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceSignInOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceSignInArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceSignInOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4696,7 +4085,7 @@ The following state arguments are supported:
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Should anonymous users be redirected to the sign in page?
 {{% /md %}}</dd>
@@ -4712,7 +4101,7 @@ The following state arguments are supported:
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Should anonymous users be redirected to the sign in page?
 {{% /md %}}</dd>
@@ -4728,7 +4117,7 @@ The following state arguments are supported:
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Should anonymous users be redirected to the sign in page?
 {{% /md %}}</dd>
@@ -4744,7 +4133,7 @@ The following state arguments are supported:
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Should anonymous users be redirected to the sign in page?
 {{% /md %}}</dd>
@@ -4762,7 +4151,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceSignUpArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceSignUpOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceSignUpArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceSignUpOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4775,7 +4164,7 @@ The following state arguments are supported:
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Can users sign up on the development portal?
 {{% /md %}}</dd>
@@ -4800,7 +4189,7 @@ The following state arguments are supported:
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Can users sign up on the development portal?
 {{% /md %}}</dd>
@@ -4825,7 +4214,7 @@ The following state arguments are supported:
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Can users sign up on the development portal?
 {{% /md %}}</dd>
@@ -4850,7 +4239,7 @@ The following state arguments are supported:
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Can users sign up on the development portal?
 {{% /md %}}</dd>
@@ -4877,7 +4266,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceSignUpTermsOfServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/apimanagement?tab=doc#ServiceSignUpTermsOfServiceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceSignUpTermsOfServiceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/apimanagement?tab=doc#ServiceSignUpTermsOfServiceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -4890,7 +4279,7 @@ The following state arguments are supported:
             title="Required">
         <span>Consent<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Should the user be asked for consent during sign up?
 {{% /md %}}</dd>
@@ -4899,7 +4288,7 @@ The following state arguments are supported:
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Should Terms of Service be displayed during sign up?.
 {{% /md %}}</dd>
@@ -4908,7 +4297,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Text</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Terms of Service which users are required to agree to in order to sign up.
 {{% /md %}}</dd>
@@ -4924,7 +4313,7 @@ The following state arguments are supported:
             title="Required">
         <span>Consent<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Should the user be asked for consent during sign up?
 {{% /md %}}</dd>
@@ -4933,7 +4322,7 @@ The following state arguments are supported:
             title="Required">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Should Terms of Service be displayed during sign up?.
 {{% /md %}}</dd>
@@ -4942,7 +4331,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Text</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Terms of Service which users are required to agree to in order to sign up.
 {{% /md %}}</dd>
@@ -4958,7 +4347,7 @@ The following state arguments are supported:
             title="Required">
         <span>consent<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Should the user be asked for consent during sign up?
 {{% /md %}}</dd>
@@ -4967,7 +4356,7 @@ The following state arguments are supported:
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Should Terms of Service be displayed during sign up?.
 {{% /md %}}</dd>
@@ -4976,7 +4365,7 @@ The following state arguments are supported:
             title="Optional">
         <span>text</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Terms of Service which users are required to agree to in order to sign up.
 {{% /md %}}</dd>
@@ -4992,7 +4381,7 @@ The following state arguments are supported:
             title="Required">
         <span>consent<wbr>Required</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Should the user be asked for consent during sign up?
 {{% /md %}}</dd>
@@ -5001,7 +4390,7 @@ The following state arguments are supported:
             title="Required">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Should Terms of Service be displayed during sign up?.
 {{% /md %}}</dd>
@@ -5010,7 +4399,7 @@ The following state arguments are supported:
             title="Optional">
         <span>text</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Terms of Service which users are required to agree to in order to sign up.
 {{% /md %}}</dd>
@@ -5032,6 +4421,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 </dl>
 

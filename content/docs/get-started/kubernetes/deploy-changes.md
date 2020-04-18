@@ -27,6 +27,10 @@ Previewing update (dev):
      pulumi:pulumi:Stack         quickstart-dev
  +   └─ kubernetes:core:Service  nginx           create
 
+ Outputs:
+  + ip  : output<string>
+  - name: "nginx-xw231xdt"
+
 Resources:
     + 1 to create
     2 unchanged
@@ -49,7 +53,7 @@ Updating (dev):
 
 Outputs:
   + ip  : "10.100.249.54"
-  - name: "nginx-98nrfhk6"
+  - name: "nginx-xw231xdt"
 
 Resources:
     + 1 created

@@ -8,7 +8,9 @@ block_external_search_index: true
 
 Manages a Healthcare Service.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -48,7 +50,8 @@ const example = new azure.healthcare.Service("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/healthcare_service.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -57,7 +60,7 @@ const example = new azure.healthcare.Service("example", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/healthcare/#Service">Service</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/healthcare/#ServiceArgs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/healthcare/#Service">Service</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/healthcare/#ServiceArgs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -65,7 +68,7 @@ const example = new azure.healthcare.Service("example", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/healthcare?tab=doc#ServiceArgs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/healthcare?tab=doc#Service">Service</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/healthcare?tab=doc#ServiceArgs">ServiceArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/healthcare?tab=doc#Service">Service</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -165,15 +168,24 @@ const example = new azure.healthcare.Service("example", {
             title="Required">
         <span>Access<wbr>Policy<wbr>Object<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Resource Group in which to create the Service.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Authentication<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthenticationconfiguration">Service<wbr>Authentication<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#serviceauthenticationconfiguration">Service<wbr>Authentication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `authentication_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -182,7 +194,7 @@ const example = new azure.healthcare.Service("example", {
             title="Optional">
         <span>Cors<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorsconfiguration">Service<wbr>Cors<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicecorsconfiguration">Service<wbr>Cors<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cors_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -191,7 +203,7 @@ const example = new azure.healthcare.Service("example", {
             title="Optional">
         <span>Cosmosdb<wbr>Throughput</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`1000`. Defaults to `400`.
 {{% /md %}}</dd>
@@ -200,7 +212,7 @@ const example = new azure.healthcare.Service("example", {
             title="Optional">
         <span>Kind</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the service. Values at time of publication are: `fhir`, `fhir-Stu3` and `fhir-R4`. Default value is `fhir`.
 {{% /md %}}</dd>
@@ -209,7 +221,7 @@ const example = new azure.healthcare.Service("example", {
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure Region where the Service should be created.
 {{% /md %}}</dd>
@@ -218,25 +230,16 @@ const example = new azure.healthcare.Service("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the service instance. Used for service endpoint, must be unique within the audience.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Resource Group in which to create the Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -252,15 +255,24 @@ const example = new azure.healthcare.Service("example", {
             title="Required">
         <span>Access<wbr>Policy<wbr>Object<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Resource Group in which to create the Service.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Authentication<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthenticationconfiguration">*Service<wbr>Authentication<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#serviceauthenticationconfiguration">Service<wbr>Authentication<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}An `authentication_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -269,7 +281,7 @@ const example = new azure.healthcare.Service("example", {
             title="Optional">
         <span>Cors<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorsconfiguration">*Service<wbr>Cors<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#servicecorsconfiguration">Service<wbr>Cors<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `cors_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -278,7 +290,7 @@ const example = new azure.healthcare.Service("example", {
             title="Optional">
         <span>Cosmosdb<wbr>Throughput</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`1000`. Defaults to `400`.
 {{% /md %}}</dd>
@@ -287,7 +299,7 @@ const example = new azure.healthcare.Service("example", {
             title="Optional">
         <span>Kind</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the service. Values at time of publication are: `fhir`, `fhir-Stu3` and `fhir-R4`. Default value is `fhir`.
 {{% /md %}}</dd>
@@ -296,7 +308,7 @@ const example = new azure.healthcare.Service("example", {
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure Region where the Service should be created.
 {{% /md %}}</dd>
@@ -305,18 +317,9 @@ const example = new azure.healthcare.Service("example", {
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the service instance. Used for service endpoint, must be unique within the audience.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Resource Group in which to create the Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -339,15 +342,24 @@ const example = new azure.healthcare.Service("example", {
             title="Required">
         <span>access<wbr>Policy<wbr>Object<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Resource Group in which to create the Service.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>authentication<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthenticationconfiguration">Service<wbr>Authentication<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#serviceauthenticationconfiguration">Service<wbr>Authentication<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}An `authentication_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -356,7 +368,7 @@ const example = new azure.healthcare.Service("example", {
             title="Optional">
         <span>cors<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorsconfiguration">Service<wbr>Cors<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#servicecorsconfiguration">Service<wbr>Cors<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `cors_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -365,7 +377,7 @@ const example = new azure.healthcare.Service("example", {
             title="Optional">
         <span>cosmosdb<wbr>Throughput</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`1000`. Defaults to `400`.
 {{% /md %}}</dd>
@@ -374,7 +386,7 @@ const example = new azure.healthcare.Service("example", {
             title="Optional">
         <span>kind</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the service. Values at time of publication are: `fhir`, `fhir-Stu3` and `fhir-R4`. Default value is `fhir`.
 {{% /md %}}</dd>
@@ -383,7 +395,7 @@ const example = new azure.healthcare.Service("example", {
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure Region where the Service should be created.
 {{% /md %}}</dd>
@@ -392,25 +404,16 @@ const example = new azure.healthcare.Service("example", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the service instance. Used for service endpoint, must be unique within the audience.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Resource Group in which to create the Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -426,9 +429,18 @@ const example = new azure.healthcare.Service("example", {
             title="Required">
         <span>access_<wbr>policy_<wbr>object_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>resource_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the Resource Group in which to create the Service.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -452,7 +464,7 @@ const example = new azure.healthcare.Service("example", {
             title="Optional">
         <span>cosmosdb_<wbr>throughput</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`1000`. Defaults to `400`.
 {{% /md %}}</dd>
@@ -461,7 +473,7 @@ const example = new azure.healthcare.Service("example", {
             title="Optional">
         <span>kind</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of the service. Values at time of publication are: `fhir`, `fhir-Stu3` and `fhir-R4`. Default value is `fhir`.
 {{% /md %}}</dd>
@@ -470,7 +482,7 @@ const example = new azure.healthcare.Service("example", {
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure Region where the Service should be created.
 {{% /md %}}</dd>
@@ -479,18 +491,9 @@ const example = new azure.healthcare.Service("example", {
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the service instance. Used for service endpoint, must be unique within the audience.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Resource Group in which to create the Service.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -506,364 +509,6 @@ const example = new azure.healthcare.Service("example", {
 {{% /choosable %}}
 
 
-
-
-
-
-
-## Service Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Access<wbr>Policy<wbr>Object<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Authentication<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthenticationconfiguration">Service<wbr>Authentication<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}An `authentication_configuration` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cors<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorsconfiguration">Service<wbr>Cors<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}A `cors_configuration` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cosmosdb<wbr>Throughput</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`1000`. Defaults to `400`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of the service. Values at time of publication are: `fhir`, `fhir-Stu3` and `fhir-R4`. Default value is `fhir`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the supported Azure Region where the Service should be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the service instance. Used for service endpoint, must be unique within the audience.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Resource Group in which to create the Service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Access<wbr>Policy<wbr>Object<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Authentication<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthenticationconfiguration">Service<wbr>Authentication<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}An `authentication_configuration` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cors<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorsconfiguration">Service<wbr>Cors<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}A `cors_configuration` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cosmosdb<wbr>Throughput</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`1000`. Defaults to `400`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The type of the service. Values at time of publication are: `fhir`, `fhir-Stu3` and `fhir-R4`. Default value is `fhir`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the supported Azure Region where the Service should be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the service instance. Used for service endpoint, must be unique within the audience.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Resource Group in which to create the Service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>access<wbr>Policy<wbr>Object<wbr>Ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>authentication<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthenticationconfiguration">Service<wbr>Authentication<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}An `authentication_configuration` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cors<wbr>Configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorsconfiguration">Service<wbr>Cors<wbr>Configuration</a></span>
-    </dt>
-    <dd>{{% md %}}A `cors_configuration` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cosmosdb<wbr>Throughput</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`1000`. Defaults to `400`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of the service. Values at time of publication are: `fhir`, `fhir-Stu3` and `fhir-R4`. Default value is `fhir`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the supported Azure Region where the Service should be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the service instance. Used for service endpoint, must be unique within the audience.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Resource Group in which to create the Service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>access_<wbr>policy_<wbr>object_<wbr>ids</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>authentication_<wbr>configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthenticationconfiguration">Dict[Service<wbr>Authentication<wbr>Configuration]</a></span>
-    </dt>
-    <dd>{{% md %}}An `authentication_configuration` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cors_<wbr>configuration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorsconfiguration">Dict[Service<wbr>Cors<wbr>Configuration]</a></span>
-    </dt>
-    <dd>{{% md %}}A `cors_configuration` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cosmosdb_<wbr>throughput</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`1000`. Defaults to `400`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kind</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of the service. Values at time of publication are: `fhir`, `fhir-Stu3` and `fhir-R4`. Default value is `fhir`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the supported Azure Region where the Service should be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the service instance. Used for service endpoint, must be unique within the audience.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Resource Group in which to create the Service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -887,7 +532,7 @@ Get an existing Service resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/healthcare?tab=doc#ServiceState">ServiceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/healthcare?tab=doc#Service">Service</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetService<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/healthcare?tab=doc#ServiceState">ServiceState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/healthcare?tab=doc#Service">Service</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1001,7 +646,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Policy<wbr>Object<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1009,7 +654,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authentication<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthenticationconfiguration">Service<wbr>Authentication<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#serviceauthenticationconfiguration">Service<wbr>Authentication<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An `authentication_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -1018,7 +663,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cors<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorsconfiguration">Service<wbr>Cors<wbr>Configuration<wbr>Args?</a></span>
+        <span class="property-type"><a href="#servicecorsconfiguration">Service<wbr>Cors<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `cors_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -1027,7 +672,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cosmosdb<wbr>Throughput</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`1000`. Defaults to `400`.
 {{% /md %}}</dd>
@@ -1036,7 +681,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kind</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the service. Values at time of publication are: `fhir`, `fhir-Stu3` and `fhir-R4`. Default value is `fhir`.
 {{% /md %}}</dd>
@@ -1045,7 +690,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure Region where the Service should be created.
 {{% /md %}}</dd>
@@ -1054,7 +699,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the service instance. Used for service endpoint, must be unique within the audience.
 {{% /md %}}</dd>
@@ -1063,7 +708,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which to create the Service.
 {{% /md %}}</dd>
@@ -1072,7 +717,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1088,7 +733,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Policy<wbr>Object<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1096,7 +741,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authentication<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthenticationconfiguration">*Service<wbr>Authentication<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#serviceauthenticationconfiguration">Service<wbr>Authentication<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}An `authentication_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -1105,7 +750,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cors<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorsconfiguration">*Service<wbr>Cors<wbr>Configuration</a></span>
+        <span class="property-type"><a href="#servicecorsconfiguration">Service<wbr>Cors<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `cors_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -1114,7 +759,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cosmosdb<wbr>Throughput</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`1000`. Defaults to `400`.
 {{% /md %}}</dd>
@@ -1123,7 +768,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kind</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the service. Values at time of publication are: `fhir`, `fhir-Stu3` and `fhir-R4`. Default value is `fhir`.
 {{% /md %}}</dd>
@@ -1132,7 +777,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure Region where the Service should be created.
 {{% /md %}}</dd>
@@ -1141,7 +786,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the service instance. Used for service endpoint, must be unique within the audience.
 {{% /md %}}</dd>
@@ -1150,7 +795,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which to create the Service.
 {{% /md %}}</dd>
@@ -1175,7 +820,7 @@ The following state arguments are supported:
             title="Optional">
         <span>access<wbr>Policy<wbr>Object<wbr>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1183,7 +828,7 @@ The following state arguments are supported:
             title="Optional">
         <span>authentication<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#serviceauthenticationconfiguration">Service<wbr>Authentication<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#serviceauthenticationconfiguration">Service<wbr>Authentication<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}An `authentication_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -1192,7 +837,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cors<wbr>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#servicecorsconfiguration">Service<wbr>Cors<wbr>Configuration?</a></span>
+        <span class="property-type"><a href="#servicecorsconfiguration">Service<wbr>Cors<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}A `cors_configuration` block as defined below.
 {{% /md %}}</dd>
@@ -1201,7 +846,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cosmosdb<wbr>Throughput</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`1000`. Defaults to `400`.
 {{% /md %}}</dd>
@@ -1210,7 +855,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kind</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of the service. Values at time of publication are: `fhir`, `fhir-Stu3` and `fhir-R4`. Default value is `fhir`.
 {{% /md %}}</dd>
@@ -1219,7 +864,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure Region where the Service should be created.
 {{% /md %}}</dd>
@@ -1228,7 +873,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the service instance. Used for service endpoint, must be unique within the audience.
 {{% /md %}}</dd>
@@ -1237,7 +882,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which to create the Service.
 {{% /md %}}</dd>
@@ -1246,7 +891,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1262,7 +907,7 @@ The following state arguments are supported:
             title="Optional">
         <span>access_<wbr>policy_<wbr>object_<wbr>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1288,7 +933,7 @@ The following state arguments are supported:
             title="Optional">
         <span>cosmosdb_<wbr>throughput</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The provisioned throughput for the backing database. Range of `400`-`1000`. Defaults to `400`.
 {{% /md %}}</dd>
@@ -1297,7 +942,7 @@ The following state arguments are supported:
             title="Optional">
         <span>kind</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of the service. Values at time of publication are: `fhir`, `fhir-Stu3` and `fhir-R4`. Default value is `fhir`.
 {{% /md %}}</dd>
@@ -1306,7 +951,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure Region where the Service should be created.
 {{% /md %}}</dd>
@@ -1315,7 +960,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the service instance. Used for service endpoint, must be unique within the audience.
 {{% /md %}}</dd>
@@ -1324,7 +969,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in which to create the Service.
 {{% /md %}}</dd>
@@ -1358,7 +1003,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/healthcare?tab=doc#ServiceAuthenticationConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/healthcare?tab=doc#ServiceAuthenticationConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/healthcare?tab=doc#ServiceAuthenticationConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/healthcare?tab=doc#ServiceAuthenticationConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1371,7 +1016,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Audience</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The intended audience to receive authentication tokens for the service. The default value is https://azurehealthcareapis.com
 {{% /md %}}</dd>
@@ -1380,7 +1025,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory (tenant) that serves as the authentication authority to access the service. The default authority is the Directory defined in the authentication scheme in use when running this provider.
 Authority must be registered to Azure AD and in the following format: https://{Azure-AD-endpoint}/{tenant-id}.
@@ -1390,7 +1035,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>Smart<wbr>Proxy<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables the 'SMART on FHIR' option for mobile and web implementations.
 {{% /md %}}</dd>
@@ -1406,7 +1051,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>Audience</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The intended audience to receive authentication tokens for the service. The default value is https://azurehealthcareapis.com
 {{% /md %}}</dd>
@@ -1415,7 +1060,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>Authority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory (tenant) that serves as the authentication authority to access the service. The default authority is the Directory defined in the authentication scheme in use when running this provider.
 Authority must be registered to Azure AD and in the following format: https://{Azure-AD-endpoint}/{tenant-id}.
@@ -1425,7 +1070,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>Smart<wbr>Proxy<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables the 'SMART on FHIR' option for mobile and web implementations.
 {{% /md %}}</dd>
@@ -1441,7 +1086,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>audience</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The intended audience to receive authentication tokens for the service. The default value is https://azurehealthcareapis.com
 {{% /md %}}</dd>
@@ -1450,7 +1095,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>authority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory (tenant) that serves as the authentication authority to access the service. The default authority is the Directory defined in the authentication scheme in use when running this provider.
 Authority must be registered to Azure AD and in the following format: https://{Azure-AD-endpoint}/{tenant-id}.
@@ -1460,7 +1105,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>smart<wbr>Proxy<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enables the 'SMART on FHIR' option for mobile and web implementations.
 {{% /md %}}</dd>
@@ -1476,7 +1121,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>audience</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The intended audience to receive authentication tokens for the service. The default value is https://azurehealthcareapis.com
 {{% /md %}}</dd>
@@ -1485,7 +1130,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>authority</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Azure Active Directory (tenant) that serves as the authentication authority to access the service. The default authority is the Directory defined in the authentication scheme in use when running this provider.
 Authority must be registered to Azure AD and in the following format: https://{Azure-AD-endpoint}/{tenant-id}.
@@ -1495,7 +1140,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>smart<wbr>Proxy<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enables the 'SMART on FHIR' option for mobile and web implementations.
 {{% /md %}}</dd>
@@ -1513,7 +1158,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/healthcare?tab=doc#ServiceCorsConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/healthcare?tab=doc#ServiceCorsConfigurationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/healthcare?tab=doc#ServiceCorsConfigurationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/healthcare?tab=doc#ServiceCorsConfigurationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1526,7 +1171,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>Allow<wbr>Credentials</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If credentials are allowed via CORS.
 {{% /md %}}</dd>
@@ -1535,7 +1180,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>Allowed<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of headers to be allowed via CORS.
 {{% /md %}}</dd>
@@ -1544,7 +1189,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>Allowed<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The methods to be allowed via CORS.
 {{% /md %}}</dd>
@@ -1553,7 +1198,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>Allowed<wbr>Origins</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of origins to be allowed via CORS.
 {{% /md %}}</dd>
@@ -1562,7 +1207,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>Max<wbr>Age<wbr>In<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The max age to be allowed via CORS.
 {{% /md %}}</dd>
@@ -1578,7 +1223,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>Allow<wbr>Credentials</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If credentials are allowed via CORS.
 {{% /md %}}</dd>
@@ -1587,7 +1232,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>Allowed<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A set of headers to be allowed via CORS.
 {{% /md %}}</dd>
@@ -1596,7 +1241,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>Allowed<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The methods to be allowed via CORS.
 {{% /md %}}</dd>
@@ -1605,7 +1250,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>Allowed<wbr>Origins</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A set of origins to be allowed via CORS.
 {{% /md %}}</dd>
@@ -1614,7 +1259,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>Max<wbr>Age<wbr>In<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The max age to be allowed via CORS.
 {{% /md %}}</dd>
@@ -1630,7 +1275,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>allow<wbr>Credentials</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If credentials are allowed via CORS.
 {{% /md %}}</dd>
@@ -1639,7 +1284,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>allowed<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A set of headers to be allowed via CORS.
 {{% /md %}}</dd>
@@ -1648,7 +1293,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>allowed<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The methods to be allowed via CORS.
 {{% /md %}}</dd>
@@ -1657,7 +1302,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>allowed<wbr>Origins</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A set of origins to be allowed via CORS.
 {{% /md %}}</dd>
@@ -1666,7 +1311,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>max<wbr>Age<wbr>In<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The max age to be allowed via CORS.
 {{% /md %}}</dd>
@@ -1682,7 +1327,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>allow<wbr>Credentials</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}If credentials are allowed via CORS.
 {{% /md %}}</dd>
@@ -1691,7 +1336,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>allowed<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of headers to be allowed via CORS.
 {{% /md %}}</dd>
@@ -1700,7 +1345,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>allowed<wbr>Methods</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The methods to be allowed via CORS.
 {{% /md %}}</dd>
@@ -1709,7 +1354,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>allowed<wbr>Origins</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of origins to be allowed via CORS.
 {{% /md %}}</dd>
@@ -1718,7 +1363,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
             title="Optional">
         <span>max<wbr>Age<wbr>In<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The max age to be allowed via CORS.
 {{% /md %}}</dd>
@@ -1740,6 +1385,7 @@ Authority must be registered to Azure AD and in the following format: https://{A
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 </dl>
 

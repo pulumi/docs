@@ -33,9 +33,6 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.user.</code><code class="sig-name descname">BaseSchema</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">index=None</em>, <em class="sig-param">master=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">required=None</em>, <em class="sig-param">title=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.user.BaseSchema" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a User Base Schema property.</p>
 <p>This resource allows you to configure a base user schema property.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/user_base_schema.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/user_base_schema.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -415,9 +412,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.user.</code><code class="sig-name descname">Schema</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">array_enums=None</em>, <em class="sig-param">array_one_ofs=None</em>, <em class="sig-param">array_type=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enums=None</em>, <em class="sig-param">external_name=None</em>, <em class="sig-param">index=None</em>, <em class="sig-param">master=None</em>, <em class="sig-param">max_length=None</em>, <em class="sig-param">min_length=None</em>, <em class="sig-param">one_ofs=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">required=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">title=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.user.Schema" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a User Schema property.</p>
 <p>This resource allows you to create and configure a custom user schema property.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/user_schema.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/user_schema.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -641,9 +635,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_okta.user.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">admin_roles=None</em>, <em class="sig-param">city=None</em>, <em class="sig-param">cost_center=None</em>, <em class="sig-param">country_code=None</em>, <em class="sig-param">custom_profile_attributes=None</em>, <em class="sig-param">department=None</em>, <em class="sig-param">display_name=None</em>, <em class="sig-param">division=None</em>, <em class="sig-param">email=None</em>, <em class="sig-param">employee_number=None</em>, <em class="sig-param">first_name=None</em>, <em class="sig-param">group_memberships=None</em>, <em class="sig-param">honorific_prefix=None</em>, <em class="sig-param">honorific_suffix=None</em>, <em class="sig-param">last_name=None</em>, <em class="sig-param">locale=None</em>, <em class="sig-param">login=None</em>, <em class="sig-param">manager=None</em>, <em class="sig-param">manager_id=None</em>, <em class="sig-param">middle_name=None</em>, <em class="sig-param">mobile_phone=None</em>, <em class="sig-param">nick_name=None</em>, <em class="sig-param">organization=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">postal_address=None</em>, <em class="sig-param">preferred_language=None</em>, <em class="sig-param">primary_phone=None</em>, <em class="sig-param">profile_url=None</em>, <em class="sig-param">recovery_answer=None</em>, <em class="sig-param">recovery_question=None</em>, <em class="sig-param">second_email=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">street_address=None</em>, <em class="sig-param">timezone=None</em>, <em class="sig-param">title=None</em>, <em class="sig-param">user_type=None</em>, <em class="sig-param">zip_code=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.user.User" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates an Okta User.</p>
 <p>This resource allows you to create and configure an Okta User.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/user.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/r/user.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1021,9 +1012,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_okta.user.get_user">
 <code class="sig-prename descclassname">pulumi_okta.user.</code><code class="sig-name descname">get_user</code><span class="sig-paren">(</span><em class="sig-param">searches=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.user.get_user" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve a users from Okta.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/user.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/user.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>searches</strong> (<em>list</em>) – Map of search criteria. It supports the following properties.</p>
@@ -1041,21 +1029,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_okta.user.get_user_profile_mapping_source">
 <code class="sig-prename descclassname">pulumi_okta.user.</code><code class="sig-name descname">get_user_profile_mapping_source</code><span class="sig-paren">(</span><em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.user.get_user_profile_mapping_source" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve the base user Profile Mapping source or target from Okta.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/user_profile_mapping_source.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/user_profile_mapping_source.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
 <dt id="pulumi_okta.user.get_users">
 <code class="sig-prename descclassname">pulumi_okta.user.</code><code class="sig-name descname">get_users</code><span class="sig-paren">(</span><em class="sig-param">searches=None</em>, <em class="sig-param">users=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_okta.user.get_users" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve a list of users from Okta.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/users.html.markdown">https://github.com/articulate/terraform-provider-okta/blob/master/website/docs/d/users.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>searches</strong> (<em>list</em>) – Map of search criteria to use to find users. It supports the following properties.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>searches</strong> (<em>list</em>) – Map of search criteria to use to find users. It supports the following properties.</p></li>
+<li><p><strong>users</strong> (<em>list</em>) – collection of users retrieved from Okta with the following properties.</p></li>
+</ul>
 </dd>
 </dl>
 <p>The <strong>searches</strong> object supports the following:</p>

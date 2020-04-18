@@ -19,7 +19,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Manages an Application within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">owned</span> <span class="pre">by</span> <span class="pre">applications</span></code> and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">and</span> <span class="pre">read</span> <span class="pre">user</span> <span class="pre">profile</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/application.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/application.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -39,7 +38,7 @@ anything, please consult the source <a class="reference external" href="https://
 <li><p><strong>public_client</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is this Azure AD Application a public client? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>reply_urls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.</p></li>
 <li><p><strong>required_resource_accesses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A collection of <code class="docutils literal notranslate"><span class="pre">required_resource_access</span></code> blocks as documented below.</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether the id property references an <code class="docutils literal notranslate"><span class="pre">OAuth2Permission</span></code> or an <code class="docutils literal notranslate"><span class="pre">AppRole</span></code>. Possible values are <code class="docutils literal notranslate"><span class="pre">Scope</span></code> or <code class="docutils literal notranslate"><span class="pre">Role</span></code>.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of an application: <code class="docutils literal notranslate"><span class="pre">webapp/api</span></code> or <code class="docutils literal notranslate"><span class="pre">native</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">webapp/api</span></code>. For <code class="docutils literal notranslate"><span class="pre">native</span></code> apps type <code class="docutils literal notranslate"><span class="pre">identifier_uris</span></code> property can not not be set.</p></li>
 </ul>
 </dd>
 </dl>
@@ -56,9 +55,9 @@ anything, please consult the source <a class="reference external" href="https://
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">adminConsentDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The description of the admin consent.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">adminConsentDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The display name of the admin consent.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique identifier of the <code class="docutils literal notranslate"><span class="pre">app_role</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique identifier for one of the <code class="docutils literal notranslate"><span class="pre">OAuth2Permission</span></code> or <code class="docutils literal notranslate"><span class="pre">AppRole</span></code> instances that the resource application exposes.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Determines if the app role is enabled: Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether the id property references an <code class="docutils literal notranslate"><span class="pre">OAuth2Permission</span></code> or an <code class="docutils literal notranslate"><span class="pre">AppRole</span></code>. Possible values are <code class="docutils literal notranslate"><span class="pre">Scope</span></code> or <code class="docutils literal notranslate"><span class="pre">Role</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of an application: <code class="docutils literal notranslate"><span class="pre">webapp/api</span></code> or <code class="docutils literal notranslate"><span class="pre">native</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">webapp/api</span></code>. For <code class="docutils literal notranslate"><span class="pre">native</span></code> apps type <code class="docutils literal notranslate"><span class="pre">identifier_uris</span></code> property can not not be set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">userConsentDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The description of the user consent.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">userConsentDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The display name of the user consent.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the value of the roles claim that the application should expect in the authentication and access tokens.</p></li>
@@ -67,7 +66,7 @@ anything, please consult the source <a class="reference external" href="https://
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">resourceAccesses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A collection of <code class="docutils literal notranslate"><span class="pre">resource_access</span></code> blocks as documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique identifier of the <code class="docutils literal notranslate"><span class="pre">app_role</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique identifier for one of the <code class="docutils literal notranslate"><span class="pre">OAuth2Permission</span></code> or <code class="docutils literal notranslate"><span class="pre">AppRole</span></code> instances that the resource application exposes.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether the id property references an <code class="docutils literal notranslate"><span class="pre">OAuth2Permission</span></code> or an <code class="docutils literal notranslate"><span class="pre">AppRole</span></code>. Possible values are <code class="docutils literal notranslate"><span class="pre">Scope</span></code> or <code class="docutils literal notranslate"><span class="pre">Role</span></code>.</p></li>
 </ul>
 </li>
@@ -142,9 +141,9 @@ anything, please consult the source <a class="reference external" href="https://
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">adminConsentDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The description of the admin consent.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">adminConsentDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The display name of the admin consent.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The unique identifier of the <code class="docutils literal notranslate"><span class="pre">app_role</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The unique identifier for one of the <code class="docutils literal notranslate"><span class="pre">OAuth2Permission</span></code> or <code class="docutils literal notranslate"><span class="pre">AppRole</span></code> instances that the resource application exposes.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Determines if the app role is enabled: Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies whether the id property references an <code class="docutils literal notranslate"><span class="pre">OAuth2Permission</span></code> or an <code class="docutils literal notranslate"><span class="pre">AppRole</span></code>. Possible values are <code class="docutils literal notranslate"><span class="pre">Scope</span></code> or <code class="docutils literal notranslate"><span class="pre">Role</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Type of an application: <code class="docutils literal notranslate"><span class="pre">webapp/api</span></code> or <code class="docutils literal notranslate"><span class="pre">native</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">webapp/api</span></code>. For <code class="docutils literal notranslate"><span class="pre">native</span></code> apps type <code class="docutils literal notranslate"><span class="pre">identifier_uris</span></code> property can not not be set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">userConsentDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The description of the user consent.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">userConsentDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The display name of the user consent.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the value of the roles claim that the application should expect in the authentication and access tokens.</p></li>
@@ -182,7 +181,7 @@ anything, please consult the source <a class="reference external" href="https://
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">resourceAccesses</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A collection of <code class="docutils literal notranslate"><span class="pre">resource_access</span></code> blocks as documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The unique identifier of the <code class="docutils literal notranslate"><span class="pre">app_role</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The unique identifier for one of the <code class="docutils literal notranslate"><span class="pre">OAuth2Permission</span></code> or <code class="docutils literal notranslate"><span class="pre">AppRole</span></code> instances that the resource application exposes.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies whether the id property references an <code class="docutils literal notranslate"><span class="pre">OAuth2Permission</span></code> or an <code class="docutils literal notranslate"><span class="pre">AppRole</span></code>. Possible values are <code class="docutils literal notranslate"><span class="pre">Scope</span></code> or <code class="docutils literal notranslate"><span class="pre">Role</span></code>.</p></li>
 </ul>
 </li>
@@ -193,7 +192,7 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="attribute">
 <dt id="pulumi_azuread.Application.type">
 <code class="sig-name descname">type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azuread.Application.type" title="Permalink to this definition">¶</a></dt>
-<dd><p>Specifies whether the id property references an <code class="docutils literal notranslate"><span class="pre">OAuth2Permission</span></code> or an <code class="docutils literal notranslate"><span class="pre">AppRole</span></code>. Possible values are <code class="docutils literal notranslate"><span class="pre">Scope</span></code> or <code class="docutils literal notranslate"><span class="pre">Role</span></code>.</p>
+<dd><p>Type of an application: <code class="docutils literal notranslate"><span class="pre">webapp/api</span></code> or <code class="docutils literal notranslate"><span class="pre">native</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">webapp/api</span></code>. For <code class="docutils literal notranslate"><span class="pre">native</span></code> apps type <code class="docutils literal notranslate"><span class="pre">identifier_uris</span></code> property can not not be set.</p>
 </dd></dl>
 
 <dl class="method">
@@ -222,7 +221,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>public_client</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Is this Azure AD Application a public client? Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>reply_urls</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of URLs that user tokens are sent to for sign in, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to.</p></li>
 <li><p><strong>required_resource_accesses</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A collection of <code class="docutils literal notranslate"><span class="pre">required_resource_access</span></code> blocks as documented below.</p></li>
-<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies whether the id property references an <code class="docutils literal notranslate"><span class="pre">OAuth2Permission</span></code> or an <code class="docutils literal notranslate"><span class="pre">AppRole</span></code>. Possible values are <code class="docutils literal notranslate"><span class="pre">Scope</span></code> or <code class="docutils literal notranslate"><span class="pre">Role</span></code>.</p></li>
+<li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of an application: <code class="docutils literal notranslate"><span class="pre">webapp/api</span></code> or <code class="docutils literal notranslate"><span class="pre">native</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">webapp/api</span></code>. For <code class="docutils literal notranslate"><span class="pre">native</span></code> apps type <code class="docutils literal notranslate"><span class="pre">identifier_uris</span></code> property can not not be set.</p></li>
 </ul>
 </dd>
 </dl>
@@ -239,9 +238,9 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">adminConsentDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The description of the admin consent.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">adminConsentDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The display name of the admin consent.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique identifier of the <code class="docutils literal notranslate"><span class="pre">app_role</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique identifier for one of the <code class="docutils literal notranslate"><span class="pre">OAuth2Permission</span></code> or <code class="docutils literal notranslate"><span class="pre">AppRole</span></code> instances that the resource application exposes.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">isEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Determines if the app role is enabled: Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether the id property references an <code class="docutils literal notranslate"><span class="pre">OAuth2Permission</span></code> or an <code class="docutils literal notranslate"><span class="pre">AppRole</span></code>. Possible values are <code class="docutils literal notranslate"><span class="pre">Scope</span></code> or <code class="docutils literal notranslate"><span class="pre">Role</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Type of an application: <code class="docutils literal notranslate"><span class="pre">webapp/api</span></code> or <code class="docutils literal notranslate"><span class="pre">native</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">webapp/api</span></code>. For <code class="docutils literal notranslate"><span class="pre">native</span></code> apps type <code class="docutils literal notranslate"><span class="pre">identifier_uris</span></code> property can not not be set.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">userConsentDescription</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The description of the user consent.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">userConsentDisplayName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The display name of the user consent.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the value of the roles claim that the application should expect in the authentication and access tokens.</p></li>
@@ -250,7 +249,7 @@ properties used to qualify the lookup.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">resourceAccesses</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A collection of <code class="docutils literal notranslate"><span class="pre">resource_access</span></code> blocks as documented below.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique identifier of the <code class="docutils literal notranslate"><span class="pre">app_role</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The unique identifier for one of the <code class="docutils literal notranslate"><span class="pre">OAuth2Permission</span></code> or <code class="docutils literal notranslate"><span class="pre">AppRole</span></code> instances that the resource application exposes.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies whether the id property references an <code class="docutils literal notranslate"><span class="pre">OAuth2Permission</span></code> or an <code class="docutils literal notranslate"><span class="pre">AppRole</span></code>. Possible values are <code class="docutils literal notranslate"><span class="pre">Scope</span></code> or <code class="docutils literal notranslate"><span class="pre">Role</span></code>.</p></li>
 </ul>
 </li>
@@ -302,7 +301,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a Password associated with an Application within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">all</span> <span class="pre">applications</span></code> and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">and</span> <span class="pre">read</span> <span class="pre">user</span> <span class="pre">profile</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/application_password.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/application_password.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -754,7 +752,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a Group within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">all</span> <span class="pre">groups</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API. In addition it must also have either the <code class="docutils literal notranslate"><span class="pre">Company</span> <span class="pre">Administrator</span></code> or <code class="docutils literal notranslate"><span class="pre">User</span> <span class="pre">Account</span> <span class="pre">Administrator</span></code> Azure Active Directory roles assigned in order to be able to delete groups. You can assign one of the required Azure Active Directory Roles with the <strong>AzureAD PowerShell Module</strong>, which is available for Windows PowerShell or in the Azure Cloud Shell. Please refer to <a class="reference external" href="https://docs.microsoft.com/en-us/powershell/module/azuread/add-azureaddirectoryrolemember">this documentation</a> for more details.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/group.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/group.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -856,7 +853,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a single Group Membership within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Do not use this resource at the same time as <code class="docutils literal notranslate"><span class="pre">azuread_group.members</span></code>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/group_member.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/group_member.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -943,9 +939,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 <a class="reference external" href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/index.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -998,7 +991,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a Service Principal associated with an Application within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">all</span> <span class="pre">applications</span></code> and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">and</span> <span class="pre">read</span> <span class="pre">user</span> <span class="pre">profile</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API. Please see The Granting a Service Principal permission to manage AAD for the required steps.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/service_principal.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/service_principal.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1146,7 +1138,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a Password associated with a Service Principal within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">all</span> <span class="pre">applications</span></code> and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">and</span> <span class="pre">read</span> <span class="pre">user</span> <span class="pre">profile</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/service_principal_password.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/service_principal_password.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1264,7 +1255,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a User within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to <code class="docutils literal notranslate"><span class="pre">Directory.ReadWrite.All</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/user.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/user.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1439,12 +1429,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to access information about an existing Application within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">all</span> <span class="pre">(or</span> <span class="pre">owned</span> <span class="pre">by)</span> <span class="pre">applications</span></code> and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">and</span> <span class="pre">read</span> <span class="pre">user</span> <span class="pre">profile</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/application.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/application.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> (<em>str</em>) – Specifies the name of the Application within Azure Active Directory.</p></li>
+<li><p><strong>oauth2_permissions</strong> (<em>list</em>) – A collection of OAuth 2.0 permission scopes that the web API (resource) app exposes to client apps. Each permission is covered by a <code class="docutils literal notranslate"><span class="pre">oauth2_permission</span></code> block as documented below.</p></li>
 <li><p><strong>object_id</strong> (<em>str</em>) – Specifies the Object ID of the Application within Azure Active Directory.</p></li>
 </ul>
 </dd>
@@ -1466,9 +1456,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_azuread.get_client_config">
 <code class="sig-prename descclassname">pulumi_azuread.</code><code class="sig-name descname">get_client_config</code><span class="sig-paren">(</span><em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azuread.get_client_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access the configuration of the AzureRM provider.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/client_config.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/client_config.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -1477,7 +1464,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Use this data source to access information about an existing Domains within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to <code class="docutils literal notranslate"><span class="pre">Directory.Read.All</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/domains.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/domains.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1496,7 +1482,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Gets information about an Azure Active Directory group.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">directory</span> <span class="pre">data</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/group.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/group.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1514,7 +1499,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Gets Object IDs or Display Names for multiple Azure Active Directory groups.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">directory</span> <span class="pre">data</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/groups.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/groups.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1532,7 +1516,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Gets information about an existing Service Principal associated with an Application within Azure Active Directory.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to both <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">and</span> <span class="pre">write</span> <span class="pre">all</span> <span class="pre">applications</span></code> and <code class="docutils literal notranslate"><span class="pre">Sign</span> <span class="pre">in</span> <span class="pre">and</span> <span class="pre">read</span> <span class="pre">user</span> <span class="pre">profile</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/service_principal.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/service_principal.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1563,7 +1546,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Gets information about an Azure Active Directory user.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">directory</span> <span class="pre">data</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/user.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/user.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1582,7 +1564,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Gets Object IDs or UPNs for multiple Azure Active Directory users.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> If you’re authenticating using a Service Principal then it must have permissions to <code class="docutils literal notranslate"><span class="pre">Read</span> <span class="pre">directory</span> <span class="pre">data</span></code> within the <code class="docutils literal notranslate"><span class="pre">Windows</span> <span class="pre">Azure</span> <span class="pre">Active</span> <span class="pre">Directory</span></code> API.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/users.html.markdown">https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/users.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

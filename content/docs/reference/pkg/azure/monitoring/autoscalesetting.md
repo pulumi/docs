@@ -8,6 +8,8 @@ block_external_search_index: true
 
 Manages a AutoScale Setting which can be applied to Virtual Machine Scale Sets, App Services and other scalable resources.
 
+{{% examples %}}
+{{% /examples %}}
 ## Example Usage (repeating on weekends)
 
 ```typescript
@@ -88,8 +90,6 @@ const exampleAutoscaleSetting = new azure.monitoring.AutoscaleSetting("example",
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/monitor_autoscale_setting.html.markdown.
-
 
 
 ## Create a AutoscaleSetting Resource
@@ -97,7 +97,7 @@ const exampleAutoscaleSetting = new azure.monitoring.AutoscaleSetting("example",
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/monitoring/#AutoscaleSetting">AutoscaleSetting</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/monitoring/#AutoscaleSettingArgs">AutoscaleSettingArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/monitoring/#AutoscaleSetting">AutoscaleSetting</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/monitoring/#AutoscaleSettingArgs">AutoscaleSettingArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -105,7 +105,7 @@ const exampleAutoscaleSetting = new azure.monitoring.AutoscaleSetting("example",
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAutoscaleSetting<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#AutoscaleSettingArgs">AutoscaleSettingArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#AutoscaleSetting">AutoscaleSetting</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAutoscaleSetting<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingArgs">AutoscaleSettingArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSetting">AutoscaleSetting</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -201,42 +201,6 @@ const exampleAutoscaleSetting = new azure.monitoring.AutoscaleSetting("example",
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether automatic scaling is enabled for the target resource. Defaults to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the AutoScale Setting should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the AutoScale Setting. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Notification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotification">Autoscale<wbr>Setting<wbr>Notification<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies a `notification` block as defined below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Profiles</span>
@@ -250,41 +214,25 @@ const exampleAutoscaleSetting = new azure.monitoring.AutoscaleSetting("example",
             title="Required">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in the AutoScale Setting should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Target<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the resource ID of the resource that the autoscale setting should be added to.
 {{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether automatic scaling is enabled for the target resource. Defaults to `true`.
 {{% /md %}}</dd>
@@ -293,7 +241,7 @@ const exampleAutoscaleSetting = new azure.monitoring.AutoscaleSetting("example",
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the AutoScale Setting should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -302,7 +250,7 @@ const exampleAutoscaleSetting = new azure.monitoring.AutoscaleSetting("example",
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the AutoScale Setting. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -311,10 +259,26 @@ const exampleAutoscaleSetting = new azure.monitoring.AutoscaleSetting("example",
             title="Optional">
         <span>Notification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotification">*Autoscale<wbr>Setting<wbr>Notification</a></span>
+        <span class="property-type"><a href="#autoscalesettingnotification">Autoscale<wbr>Setting<wbr>Notification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `notification` block as defined below.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -329,9 +293,54 @@ const exampleAutoscaleSetting = new azure.monitoring.AutoscaleSetting("example",
             title="Required">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in the AutoScale Setting should be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Target<wbr>Resource<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the resource ID of the resource that the autoscale setting should be added to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether automatic scaling is enabled for the target resource. Defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Location</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the supported Azure location where the AutoScale Setting should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the AutoScale Setting. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Notification</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalesettingnotification">Autoscale<wbr>Setting<wbr>Notification</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a `notification` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -343,57 +352,12 @@ const exampleAutoscaleSetting = new azure.monitoring.AutoscaleSetting("example",
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Target<wbr>Resource<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the resource ID of the resource that the autoscale setting should be added to.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether automatic scaling is enabled for the target resource. Defaults to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the AutoScale Setting should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the AutoScale Setting. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>notification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotification">Autoscale<wbr>Setting<wbr>Notification?</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies a `notification` block as defined below.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -408,41 +372,25 @@ const exampleAutoscaleSetting = new azure.monitoring.AutoscaleSetting("example",
             title="Required">
         <span>resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in the AutoScale Setting should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>target<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the resource ID of the resource that the autoscale setting should be added to.
 {{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
 
     <dt class="property-optional"
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether automatic scaling is enabled for the target resource. Defaults to `true`.
 {{% /md %}}</dd>
@@ -451,7 +399,7 @@ const exampleAutoscaleSetting = new azure.monitoring.AutoscaleSetting("example",
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the AutoScale Setting should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -460,7 +408,7 @@ const exampleAutoscaleSetting = new azure.monitoring.AutoscaleSetting("example",
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the AutoScale Setting. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -469,10 +417,26 @@ const exampleAutoscaleSetting = new azure.monitoring.AutoscaleSetting("example",
             title="Optional">
         <span>notification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotification">Dict[Autoscale<wbr>Setting<wbr>Notification]</a></span>
+        <span class="property-type"><a href="#autoscalesettingnotification">Autoscale<wbr>Setting<wbr>Notification</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `notification` block as defined below.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tags</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
 
     <dt class="property-required"
             title="Required">
@@ -487,9 +451,54 @@ const exampleAutoscaleSetting = new azure.monitoring.AutoscaleSetting("example",
             title="Required">
         <span>resource_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in the AutoScale Setting should be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>target_<wbr>resource_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the resource ID of the resource that the autoscale setting should be added to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies whether automatic scaling is enabled for the target resource. Defaults to `true`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>location</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the supported Azure location where the AutoScale Setting should exist. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the AutoScale Setting. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>notification</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalesettingnotification">Dict[Autoscale<wbr>Setting<wbr>Notification]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a `notification` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -501,345 +510,10 @@ const exampleAutoscaleSetting = new azure.monitoring.AutoscaleSetting("example",
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>target_<wbr>resource_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the resource ID of the resource that the autoscale setting should be added to.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## AutoscaleSetting Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether automatic scaling is enabled for the target resource. Defaults to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the AutoScale Setting should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the AutoScale Setting. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Notification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotification">Autoscale<wbr>Setting<wbr>Notification?</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies a `notification` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Profiles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofile">List&lt;Autoscale<wbr>Setting<wbr>Profile&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies one or more (up to 20) `profile` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Resource Group in the AutoScale Setting should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Resource<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the resource ID of the resource that the autoscale setting should be added to.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether automatic scaling is enabled for the target resource. Defaults to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the AutoScale Setting should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the AutoScale Setting. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Notification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotification">*Autoscale<wbr>Setting<wbr>Notification</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies a `notification` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Profiles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofile">[]Autoscale<wbr>Setting<wbr>Profile</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies one or more (up to 20) `profile` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Resource Group in the AutoScale Setting should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Resource<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the resource ID of the resource that the autoscale setting should be added to.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether automatic scaling is enabled for the target resource. Defaults to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the AutoScale Setting should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the AutoScale Setting. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>notification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotification">Autoscale<wbr>Setting<wbr>Notification?</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies a `notification` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>profiles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofile">Autoscale<wbr>Setting<wbr>Profile[]</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies one or more (up to 20) `profile` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Resource Group in the AutoScale Setting should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target<wbr>Resource<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the resource ID of the resource that the autoscale setting should be added to.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether automatic scaling is enabled for the target resource. Defaults to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the AutoScale Setting should exist. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the AutoScale Setting. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>notification</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotification">Dict[Autoscale<wbr>Setting<wbr>Notification]</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies a `notification` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>profiles</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofile">List[Autoscale<wbr>Setting<wbr>Profile]</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies one or more (up to 20) `profile` blocks as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Resource Group in the AutoScale Setting should be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target_<wbr>resource_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the resource ID of the resource that the autoscale setting should be added to.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -863,7 +537,7 @@ Get an existing AutoscaleSetting resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAutoscaleSetting<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#AutoscaleSettingState">AutoscaleSettingState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#AutoscaleSetting">AutoscaleSetting</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAutoscaleSetting<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingState">AutoscaleSettingState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSetting">AutoscaleSetting</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -977,7 +651,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether automatic scaling is enabled for the target resource. Defaults to `true`.
 {{% /md %}}</dd>
@@ -986,7 +660,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the AutoScale Setting should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -995,7 +669,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the AutoScale Setting. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1004,7 +678,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Notification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotification">Autoscale<wbr>Setting<wbr>Notification<wbr>Args?</a></span>
+        <span class="property-type"><a href="#autoscalesettingnotification">Autoscale<wbr>Setting<wbr>Notification<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `notification` block as defined below.
 {{% /md %}}</dd>
@@ -1013,7 +687,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Profiles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofile">List&lt;Autoscale<wbr>Setting<wbr>Profile<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofile">List&lt;Autoscale<wbr>Setting<wbr>Profile<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies one or more (up to 20) `profile` blocks as defined below.
 {{% /md %}}</dd>
@@ -1022,7 +696,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in the AutoScale Setting should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1031,7 +705,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1040,7 +714,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the resource ID of the resource that the autoscale setting should be added to.
 {{% /md %}}</dd>
@@ -1056,7 +730,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether automatic scaling is enabled for the target resource. Defaults to `true`.
 {{% /md %}}</dd>
@@ -1065,7 +739,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the AutoScale Setting should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1074,7 +748,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the AutoScale Setting. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1083,7 +757,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Notification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotification">*Autoscale<wbr>Setting<wbr>Notification</a></span>
+        <span class="property-type"><a href="#autoscalesettingnotification">Autoscale<wbr>Setting<wbr>Notification</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `notification` block as defined below.
 {{% /md %}}</dd>
@@ -1101,7 +775,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in the AutoScale Setting should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1119,7 +793,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the resource ID of the resource that the autoscale setting should be added to.
 {{% /md %}}</dd>
@@ -1135,7 +809,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether automatic scaling is enabled for the target resource. Defaults to `true`.
 {{% /md %}}</dd>
@@ -1144,7 +818,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the AutoScale Setting should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1153,7 +827,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the AutoScale Setting. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1162,7 +836,7 @@ The following state arguments are supported:
             title="Optional">
         <span>notification</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotification">Autoscale<wbr>Setting<wbr>Notification?</a></span>
+        <span class="property-type"><a href="#autoscalesettingnotification">Autoscale<wbr>Setting<wbr>Notification</a></span>
     </dt>
     <dd>{{% md %}}Specifies a `notification` block as defined below.
 {{% /md %}}</dd>
@@ -1171,7 +845,7 @@ The following state arguments are supported:
             title="Optional">
         <span>profiles</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofile">Autoscale<wbr>Setting<wbr>Profile[]?</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofile">Autoscale<wbr>Setting<wbr>Profile[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies one or more (up to 20) `profile` blocks as defined below.
 {{% /md %}}</dd>
@@ -1180,7 +854,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in the AutoScale Setting should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1189,7 +863,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1198,7 +872,7 @@ The following state arguments are supported:
             title="Optional">
         <span>target<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the resource ID of the resource that the autoscale setting should be added to.
 {{% /md %}}</dd>
@@ -1214,7 +888,7 @@ The following state arguments are supported:
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specifies whether automatic scaling is enabled for the target resource. Defaults to `true`.
 {{% /md %}}</dd>
@@ -1223,7 +897,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the AutoScale Setting should exist. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1232,7 +906,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the AutoScale Setting. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1259,7 +933,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group in the AutoScale Setting should be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1277,7 +951,7 @@ The following state arguments are supported:
             title="Optional">
         <span>target_<wbr>resource_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the resource ID of the resource that the autoscale setting should be added to.
 {{% /md %}}</dd>
@@ -1302,7 +976,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#AutoscaleSettingNotificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#AutoscaleSettingNotificationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingNotificationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingNotificationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1315,7 +989,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotificationemail">Autoscale<wbr>Setting<wbr>Notification<wbr>Email<wbr>Args?</a></span>
+        <span class="property-type"><a href="#autoscalesettingnotificationemail">Autoscale<wbr>Setting<wbr>Notification<wbr>Email<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `email` block as defined below.
 {{% /md %}}</dd>
@@ -1324,7 +998,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Webhooks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotificationwebhook">List&lt;Autoscale<wbr>Setting<wbr>Notification<wbr>Webhook<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#autoscalesettingnotificationwebhook">List&lt;Autoscale<wbr>Setting<wbr>Notification<wbr>Webhook<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook` blocks as defined below.
 {{% /md %}}</dd>
@@ -1340,7 +1014,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotificationemail">*Autoscale<wbr>Setting<wbr>Notification<wbr>Email</a></span>
+        <span class="property-type"><a href="#autoscalesettingnotificationemail">Autoscale<wbr>Setting<wbr>Notification<wbr>Email</a></span>
     </dt>
     <dd>{{% md %}}A `email` block as defined below.
 {{% /md %}}</dd>
@@ -1365,7 +1039,7 @@ The following state arguments are supported:
             title="Optional">
         <span>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotificationemail">Autoscale<wbr>Setting<wbr>Notification<wbr>Email?</a></span>
+        <span class="property-type"><a href="#autoscalesettingnotificationemail">Autoscale<wbr>Setting<wbr>Notification<wbr>Email</a></span>
     </dt>
     <dd>{{% md %}}A `email` block as defined below.
 {{% /md %}}</dd>
@@ -1374,7 +1048,7 @@ The following state arguments are supported:
             title="Optional">
         <span>webhooks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingnotificationwebhook">Autoscale<wbr>Setting<wbr>Notification<wbr>Webhook[]?</a></span>
+        <span class="property-type"><a href="#autoscalesettingnotificationwebhook">Autoscale<wbr>Setting<wbr>Notification<wbr>Webhook[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `webhook` blocks as defined below.
 {{% /md %}}</dd>
@@ -1417,7 +1091,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#AutoscaleSettingNotificationEmailArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#AutoscaleSettingNotificationEmailOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingNotificationEmailArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingNotificationEmailOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1430,7 +1104,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Emails</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of custom email addresses to which the email notifications will be sent.
 {{% /md %}}</dd>
@@ -1439,7 +1113,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Send<wbr>To<wbr>Subscription<wbr>Administrator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Should email notifications be sent to the subscription administrator? Defaults to `false`.
 {{% /md %}}</dd>
@@ -1448,7 +1122,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Send<wbr>To<wbr>Subscription<wbr>Co<wbr>Administrator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Should email notifications be sent to the subscription co-administrator? Defaults to `false`.
 {{% /md %}}</dd>
@@ -1464,7 +1138,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Custom<wbr>Emails</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of custom email addresses to which the email notifications will be sent.
 {{% /md %}}</dd>
@@ -1473,7 +1147,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Send<wbr>To<wbr>Subscription<wbr>Administrator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Should email notifications be sent to the subscription administrator? Defaults to `false`.
 {{% /md %}}</dd>
@@ -1482,7 +1156,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Send<wbr>To<wbr>Subscription<wbr>Co<wbr>Administrator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Should email notifications be sent to the subscription co-administrator? Defaults to `false`.
 {{% /md %}}</dd>
@@ -1498,7 +1172,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Emails</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of custom email addresses to which the email notifications will be sent.
 {{% /md %}}</dd>
@@ -1507,7 +1181,7 @@ The following state arguments are supported:
             title="Optional">
         <span>send<wbr>To<wbr>Subscription<wbr>Administrator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Should email notifications be sent to the subscription administrator? Defaults to `false`.
 {{% /md %}}</dd>
@@ -1516,7 +1190,7 @@ The following state arguments are supported:
             title="Optional">
         <span>send<wbr>To<wbr>Subscription<wbr>Co<wbr>Administrator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Should email notifications be sent to the subscription co-administrator? Defaults to `false`.
 {{% /md %}}</dd>
@@ -1532,7 +1206,7 @@ The following state arguments are supported:
             title="Optional">
         <span>custom<wbr>Emails</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Specifies a list of custom email addresses to which the email notifications will be sent.
 {{% /md %}}</dd>
@@ -1541,7 +1215,7 @@ The following state arguments are supported:
             title="Optional">
         <span>send<wbr>To<wbr>Subscription<wbr>Administrator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Should email notifications be sent to the subscription administrator? Defaults to `false`.
 {{% /md %}}</dd>
@@ -1550,7 +1224,7 @@ The following state arguments are supported:
             title="Optional">
         <span>send<wbr>To<wbr>Subscription<wbr>Co<wbr>Administrator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Should email notifications be sent to the subscription co-administrator? Defaults to `false`.
 {{% /md %}}</dd>
@@ -1568,7 +1242,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#AutoscaleSettingNotificationWebhookArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#AutoscaleSettingNotificationWebhookOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingNotificationWebhookArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingNotificationWebhookOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1577,22 +1251,22 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Properties</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A map of settings.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Service<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The HTTPS URI which should receive scale notifications.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Properties</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of settings.
 {{% /md %}}</dd>
 
 </dl>
@@ -1601,6 +1275,15 @@ The following state arguments are supported:
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Service<wbr>Uri</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTPS URI which should receive scale notifications.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1611,15 +1294,6 @@ The following state arguments are supported:
     <dd>{{% md %}}A map of settings.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Service<wbr>Uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The HTTPS URI which should receive scale notifications.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1627,22 +1301,22 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>properties</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}A map of settings.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>service<wbr>Uri</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The HTTPS URI which should receive scale notifications.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>properties</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of settings.
 {{% /md %}}</dd>
 
 </dl>
@@ -1652,6 +1326,15 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>service_<wbr>uri</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTPS URI which should receive scale notifications.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>properties</span>
@@ -1659,15 +1342,6 @@ The following state arguments are supported:
         <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of settings.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>service_<wbr>uri</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The HTTPS URI which should receive scale notifications.
 {{% /md %}}</dd>
 
 </dl>
@@ -1683,7 +1357,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#AutoscaleSettingProfileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#AutoscaleSettingProfileOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1701,29 +1375,29 @@ The following state arguments are supported:
     <dd>{{% md %}}A `capacity` block as defined below.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Fixed<wbr>Date</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilefixeddate">Autoscale<wbr>Setting<wbr>Profile<wbr>Fixed<wbr>Date<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}A `fixed_date` block as defined below. This cannot be specified if a `recurrence` block is specified.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the profile.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Fixed<wbr>Date</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalesettingprofilefixeddate">Autoscale<wbr>Setting<wbr>Profile<wbr>Fixed<wbr>Date<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `fixed_date` block as defined below. This cannot be specified if a `recurrence` block is specified.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Recurrence</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilerecurrence">Autoscale<wbr>Setting<wbr>Profile<wbr>Recurrence<wbr>Args?</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerecurrence">Autoscale<wbr>Setting<wbr>Profile<wbr>Recurrence<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `recurrence` block as defined below. This cannot be specified if a `fixed_date` block is specified.
 {{% /md %}}</dd>
@@ -1732,7 +1406,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilerule">List&lt;Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerule">List&lt;Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `rule` blocks as defined below.
 {{% /md %}}</dd>
@@ -1753,29 +1427,29 @@ The following state arguments are supported:
     <dd>{{% md %}}A `capacity` block as defined below.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Fixed<wbr>Date</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilefixeddate">*Autoscale<wbr>Setting<wbr>Profile<wbr>Fixed<wbr>Date</a></span>
-    </dt>
-    <dd>{{% md %}}A `fixed_date` block as defined below. This cannot be specified if a `recurrence` block is specified.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the profile.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Fixed<wbr>Date</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalesettingprofilefixeddate">Autoscale<wbr>Setting<wbr>Profile<wbr>Fixed<wbr>Date</a></span>
+    </dt>
+    <dd>{{% md %}}A `fixed_date` block as defined below. This cannot be specified if a `recurrence` block is specified.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Recurrence</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilerecurrence">*Autoscale<wbr>Setting<wbr>Profile<wbr>Recurrence</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerecurrence">Autoscale<wbr>Setting<wbr>Profile<wbr>Recurrence</a></span>
     </dt>
     <dd>{{% md %}}A `recurrence` block as defined below. This cannot be specified if a `fixed_date` block is specified.
 {{% /md %}}</dd>
@@ -1805,29 +1479,29 @@ The following state arguments are supported:
     <dd>{{% md %}}A `capacity` block as defined below.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>fixed<wbr>Date</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilefixeddate">Autoscale<wbr>Setting<wbr>Profile<wbr>Fixed<wbr>Date?</a></span>
-    </dt>
-    <dd>{{% md %}}A `fixed_date` block as defined below. This cannot be specified if a `recurrence` block is specified.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the profile.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>fixed<wbr>Date</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalesettingprofilefixeddate">Autoscale<wbr>Setting<wbr>Profile<wbr>Fixed<wbr>Date</a></span>
+    </dt>
+    <dd>{{% md %}}A `fixed_date` block as defined below. This cannot be specified if a `recurrence` block is specified.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>recurrence</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilerecurrence">Autoscale<wbr>Setting<wbr>Profile<wbr>Recurrence?</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerecurrence">Autoscale<wbr>Setting<wbr>Profile<wbr>Recurrence</a></span>
     </dt>
     <dd>{{% md %}}A `recurrence` block as defined below. This cannot be specified if a `fixed_date` block is specified.
 {{% /md %}}</dd>
@@ -1836,7 +1510,7 @@ The following state arguments are supported:
             title="Optional">
         <span>rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#autoscalesettingprofilerule">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule[]?</a></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerule">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}One or more (up to 10) `rule` blocks as defined below.
 {{% /md %}}</dd>
@@ -1857,6 +1531,15 @@ The following state arguments are supported:
     <dd>{{% md %}}A `capacity` block as defined below.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the profile.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>fixed<wbr>Date</span>
@@ -1864,15 +1547,6 @@ The following state arguments are supported:
         <span class="property-type"><a href="#autoscalesettingprofilefixeddate">Dict[Autoscale<wbr>Setting<wbr>Profile<wbr>Fixed<wbr>Date]</a></span>
     </dt>
     <dd>{{% md %}}A `fixed_date` block as defined below. This cannot be specified if a `recurrence` block is specified.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the profile.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1906,7 +1580,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#AutoscaleSettingProfileCapacityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#AutoscaleSettingProfileCapacityOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileCapacityArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileCapacityOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1919,7 +1593,7 @@ The following state arguments are supported:
             title="Required">
         <span>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of instances that are available for scaling if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default. Valid values are between `0` and `1000`.
 {{% /md %}}</dd>
@@ -1928,7 +1602,7 @@ The following state arguments are supported:
             title="Required">
         <span>Maximum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of instances for this resource. Valid values are between `0` and `1000`.
 {{% /md %}}</dd>
@@ -1937,7 +1611,7 @@ The following state arguments are supported:
             title="Required">
         <span>Minimum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of instances for this resource. Valid values are between `0` and `1000`.
 {{% /md %}}</dd>
@@ -1953,7 +1627,7 @@ The following state arguments are supported:
             title="Required">
         <span>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of instances that are available for scaling if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default. Valid values are between `0` and `1000`.
 {{% /md %}}</dd>
@@ -1962,7 +1636,7 @@ The following state arguments are supported:
             title="Required">
         <span>Maximum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of instances for this resource. Valid values are between `0` and `1000`.
 {{% /md %}}</dd>
@@ -1971,7 +1645,7 @@ The following state arguments are supported:
             title="Required">
         <span>Minimum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of instances for this resource. Valid values are between `0` and `1000`.
 {{% /md %}}</dd>
@@ -1987,7 +1661,7 @@ The following state arguments are supported:
             title="Required">
         <span>default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of instances that are available for scaling if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default. Valid values are between `0` and `1000`.
 {{% /md %}}</dd>
@@ -1996,7 +1670,7 @@ The following state arguments are supported:
             title="Required">
         <span>maximum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of instances for this resource. Valid values are between `0` and `1000`.
 {{% /md %}}</dd>
@@ -2005,7 +1679,7 @@ The following state arguments are supported:
             title="Required">
         <span>minimum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of instances for this resource. Valid values are between `0` and `1000`.
 {{% /md %}}</dd>
@@ -2021,7 +1695,7 @@ The following state arguments are supported:
             title="Required">
         <span>default</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of instances that are available for scaling if metrics are not available for evaluation. The default is only used if the current instance count is lower than the default. Valid values are between `0` and `1000`.
 {{% /md %}}</dd>
@@ -2030,7 +1704,7 @@ The following state arguments are supported:
             title="Required">
         <span>maximum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of instances for this resource. Valid values are between `0` and `1000`.
 {{% /md %}}</dd>
@@ -2039,7 +1713,7 @@ The following state arguments are supported:
             title="Required">
         <span>minimum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The minimum number of instances for this resource. Valid values are between `0` and `1000`.
 {{% /md %}}</dd>
@@ -2057,7 +1731,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#AutoscaleSettingProfileFixedDateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#AutoscaleSettingProfileFixedDateOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileFixedDateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileFixedDateOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2070,7 +1744,7 @@ The following state arguments are supported:
             title="Required">
         <span>End</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the end date for the profile, formatted as an RFC3339 date string.
 {{% /md %}}</dd>
@@ -2079,7 +1753,7 @@ The following state arguments are supported:
             title="Required">
         <span>Start</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the start date for the profile, formatted as an RFC3339 date string.
 {{% /md %}}</dd>
@@ -2088,7 +1762,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Timezone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Time Zone of the `start` and `end` times. A list of [possible values can be found here](https://msdn.microsoft.com/en-us/library/azure/dn931928.aspx). Defaults to `UTC`.
 {{% /md %}}</dd>
@@ -2104,7 +1778,7 @@ The following state arguments are supported:
             title="Required">
         <span>End</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the end date for the profile, formatted as an RFC3339 date string.
 {{% /md %}}</dd>
@@ -2113,7 +1787,7 @@ The following state arguments are supported:
             title="Required">
         <span>Start</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the start date for the profile, formatted as an RFC3339 date string.
 {{% /md %}}</dd>
@@ -2122,7 +1796,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Timezone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Time Zone of the `start` and `end` times. A list of [possible values can be found here](https://msdn.microsoft.com/en-us/library/azure/dn931928.aspx). Defaults to `UTC`.
 {{% /md %}}</dd>
@@ -2138,7 +1812,7 @@ The following state arguments are supported:
             title="Required">
         <span>end</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the end date for the profile, formatted as an RFC3339 date string.
 {{% /md %}}</dd>
@@ -2147,7 +1821,7 @@ The following state arguments are supported:
             title="Required">
         <span>start</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the start date for the profile, formatted as an RFC3339 date string.
 {{% /md %}}</dd>
@@ -2156,7 +1830,7 @@ The following state arguments are supported:
             title="Optional">
         <span>timezone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Time Zone of the `start` and `end` times. A list of [possible values can be found here](https://msdn.microsoft.com/en-us/library/azure/dn931928.aspx). Defaults to `UTC`.
 {{% /md %}}</dd>
@@ -2172,7 +1846,7 @@ The following state arguments are supported:
             title="Required">
         <span>end</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the end date for the profile, formatted as an RFC3339 date string.
 {{% /md %}}</dd>
@@ -2181,7 +1855,7 @@ The following state arguments are supported:
             title="Required">
         <span>start</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the start date for the profile, formatted as an RFC3339 date string.
 {{% /md %}}</dd>
@@ -2190,7 +1864,7 @@ The following state arguments are supported:
             title="Optional">
         <span>timezone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Time Zone of the `start` and `end` times. A list of [possible values can be found here](https://msdn.microsoft.com/en-us/library/azure/dn931928.aspx). Defaults to `UTC`.
 {{% /md %}}</dd>
@@ -2208,7 +1882,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#AutoscaleSettingProfileRecurrenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#AutoscaleSettingProfileRecurrenceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileRecurrenceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileRecurrenceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2221,7 +1895,7 @@ The following state arguments are supported:
             title="Required">
         <span>Days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of days that this profile takes effect on. Possible values include `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday` and `Sunday`.
 {{% /md %}}</dd>
@@ -2230,7 +1904,7 @@ The following state arguments are supported:
             title="Required">
         <span>Hours</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}A list containing a single item, which specifies the Hour interval at which this recurrence should be triggered (in 24-hour time). Possible values are from `0` to `23`.
 {{% /md %}}</dd>
@@ -2239,7 +1913,7 @@ The following state arguments are supported:
             title="Required">
         <span>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}A list containing a single item which specifies the Minute interval at which this recurrence should be triggered.
 {{% /md %}}</dd>
@@ -2248,7 +1922,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Timezone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Time Zone used for the `hours` field. A list of [possible values can be found here](https://msdn.microsoft.com/en-us/library/azure/dn931928.aspx). Defaults to `UTC`.
 {{% /md %}}</dd>
@@ -2264,7 +1938,7 @@ The following state arguments are supported:
             title="Required">
         <span>Days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of days that this profile takes effect on. Possible values include `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday` and `Sunday`.
 {{% /md %}}</dd>
@@ -2273,7 +1947,7 @@ The following state arguments are supported:
             title="Required">
         <span>Hours</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}A list containing a single item, which specifies the Hour interval at which this recurrence should be triggered (in 24-hour time). Possible values are from `0` to `23`.
 {{% /md %}}</dd>
@@ -2282,7 +1956,7 @@ The following state arguments are supported:
             title="Required">
         <span>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}A list containing a single item which specifies the Minute interval at which this recurrence should be triggered.
 {{% /md %}}</dd>
@@ -2291,7 +1965,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Timezone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Time Zone used for the `hours` field. A list of [possible values can be found here](https://msdn.microsoft.com/en-us/library/azure/dn931928.aspx). Defaults to `UTC`.
 {{% /md %}}</dd>
@@ -2307,7 +1981,7 @@ The following state arguments are supported:
             title="Required">
         <span>days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of days that this profile takes effect on. Possible values include `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday` and `Sunday`.
 {{% /md %}}</dd>
@@ -2316,7 +1990,7 @@ The following state arguments are supported:
             title="Required">
         <span>hours</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}A list containing a single item, which specifies the Hour interval at which this recurrence should be triggered (in 24-hour time). Possible values are from `0` to `23`.
 {{% /md %}}</dd>
@@ -2325,7 +1999,7 @@ The following state arguments are supported:
             title="Required">
         <span>minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}A list containing a single item which specifies the Minute interval at which this recurrence should be triggered.
 {{% /md %}}</dd>
@@ -2334,7 +2008,7 @@ The following state arguments are supported:
             title="Optional">
         <span>timezone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Time Zone used for the `hours` field. A list of [possible values can be found here](https://msdn.microsoft.com/en-us/library/azure/dn931928.aspx). Defaults to `UTC`.
 {{% /md %}}</dd>
@@ -2350,7 +2024,7 @@ The following state arguments are supported:
             title="Required">
         <span>days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of days that this profile takes effect on. Possible values include `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday` and `Sunday`.
 {{% /md %}}</dd>
@@ -2359,7 +2033,7 @@ The following state arguments are supported:
             title="Required">
         <span>hours</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}A list containing a single item, which specifies the Hour interval at which this recurrence should be triggered (in 24-hour time). Possible values are from `0` to `23`.
 {{% /md %}}</dd>
@@ -2368,7 +2042,7 @@ The following state arguments are supported:
             title="Required">
         <span>minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}A list containing a single item which specifies the Minute interval at which this recurrence should be triggered.
 {{% /md %}}</dd>
@@ -2377,7 +2051,7 @@ The following state arguments are supported:
             title="Optional">
         <span>timezone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Time Zone used for the `hours` field. A list of [possible values can be found here](https://msdn.microsoft.com/en-us/library/azure/dn931928.aspx). Defaults to `UTC`.
 {{% /md %}}</dd>
@@ -2395,7 +2069,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#AutoscaleSettingProfileRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#AutoscaleSettingProfileRuleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2510,7 +2184,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#AutoscaleSettingProfileRuleMetricTriggerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#AutoscaleSettingProfileRuleMetricTriggerOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileRuleMetricTriggerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileRuleMetricTriggerOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2523,7 +2197,7 @@ The following state arguments are supported:
             title="Required">
         <span>Metric<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the metric that defines what the rule monitors, such as `Percentage CPU` for `Virtual Machine Scale Sets` and `CpuPercentage` for `App Service Plan`.
 {{% /md %}}</dd>
@@ -2532,7 +2206,7 @@ The following state arguments are supported:
             title="Required">
         <span>Metric<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Resource which the Rule monitors.
 {{% /md %}}</dd>
@@ -2541,7 +2215,7 @@ The following state arguments are supported:
             title="Required">
         <span>Operator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operator used to compare the metric data and threshold. Possible values are: `Equals`, `NotEquals`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan`, `LessThanOrEqual`.
 {{% /md %}}</dd>
@@ -2550,7 +2224,7 @@ The following state arguments are supported:
             title="Required">
         <span>Statistic</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies how the metrics from multiple instances are combined. Possible values are `Average`, `Min` and `Max`.
 {{% /md %}}</dd>
@@ -2559,7 +2233,7 @@ The following state arguments are supported:
             title="Required">
         <span>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}Specifies the threshold of the metric that triggers the scale action.
 {{% /md %}}</dd>
@@ -2568,7 +2242,7 @@ The following state arguments are supported:
             title="Required">
         <span>Time<wbr>Aggregation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies how the data that's collected should be combined over time. Possible values include `Average`, `Count`, `Maximum`, `Minimum`, `Last` and `Total`. Defaults to `Average`.
 {{% /md %}}</dd>
@@ -2577,7 +2251,7 @@ The following state arguments are supported:
             title="Required">
         <span>Time<wbr>Grain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the granularity of metrics that the rule monitors, which must be one of the pre-defined values returned from the metric definitions for the metric. This value must be between 1 minute and 12 hours an be formatted as an ISO 8601 string.
 {{% /md %}}</dd>
@@ -2586,7 +2260,7 @@ The following state arguments are supported:
             title="Required">
         <span>Time<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the time range for which data is collected, which must be greater than the delay in metric collection (which varies from resource to resource). This value must be between 5 minutes and 12 hours and be formatted as an ISO 8601 string.
 {{% /md %}}</dd>
@@ -2602,7 +2276,7 @@ The following state arguments are supported:
             title="Required">
         <span>Metric<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the metric that defines what the rule monitors, such as `Percentage CPU` for `Virtual Machine Scale Sets` and `CpuPercentage` for `App Service Plan`.
 {{% /md %}}</dd>
@@ -2611,7 +2285,7 @@ The following state arguments are supported:
             title="Required">
         <span>Metric<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Resource which the Rule monitors.
 {{% /md %}}</dd>
@@ -2620,7 +2294,7 @@ The following state arguments are supported:
             title="Required">
         <span>Operator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operator used to compare the metric data and threshold. Possible values are: `Equals`, `NotEquals`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan`, `LessThanOrEqual`.
 {{% /md %}}</dd>
@@ -2629,7 +2303,7 @@ The following state arguments are supported:
             title="Required">
         <span>Statistic</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies how the metrics from multiple instances are combined. Possible values are `Average`, `Min` and `Max`.
 {{% /md %}}</dd>
@@ -2638,7 +2312,7 @@ The following state arguments are supported:
             title="Required">
         <span>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}Specifies the threshold of the metric that triggers the scale action.
 {{% /md %}}</dd>
@@ -2647,7 +2321,7 @@ The following state arguments are supported:
             title="Required">
         <span>Time<wbr>Aggregation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies how the data that's collected should be combined over time. Possible values include `Average`, `Count`, `Maximum`, `Minimum`, `Last` and `Total`. Defaults to `Average`.
 {{% /md %}}</dd>
@@ -2656,7 +2330,7 @@ The following state arguments are supported:
             title="Required">
         <span>Time<wbr>Grain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the granularity of metrics that the rule monitors, which must be one of the pre-defined values returned from the metric definitions for the metric. This value must be between 1 minute and 12 hours an be formatted as an ISO 8601 string.
 {{% /md %}}</dd>
@@ -2665,7 +2339,7 @@ The following state arguments are supported:
             title="Required">
         <span>Time<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the time range for which data is collected, which must be greater than the delay in metric collection (which varies from resource to resource). This value must be between 5 minutes and 12 hours and be formatted as an ISO 8601 string.
 {{% /md %}}</dd>
@@ -2681,7 +2355,7 @@ The following state arguments are supported:
             title="Required">
         <span>metric<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the metric that defines what the rule monitors, such as `Percentage CPU` for `Virtual Machine Scale Sets` and `CpuPercentage` for `App Service Plan`.
 {{% /md %}}</dd>
@@ -2690,7 +2364,7 @@ The following state arguments are supported:
             title="Required">
         <span>metric<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Resource which the Rule monitors.
 {{% /md %}}</dd>
@@ -2699,7 +2373,7 @@ The following state arguments are supported:
             title="Required">
         <span>operator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operator used to compare the metric data and threshold. Possible values are: `Equals`, `NotEquals`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan`, `LessThanOrEqual`.
 {{% /md %}}</dd>
@@ -2708,7 +2382,7 @@ The following state arguments are supported:
             title="Required">
         <span>statistic</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies how the metrics from multiple instances are combined. Possible values are `Average`, `Min` and `Max`.
 {{% /md %}}</dd>
@@ -2717,7 +2391,7 @@ The following state arguments are supported:
             title="Required">
         <span>threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}Specifies the threshold of the metric that triggers the scale action.
 {{% /md %}}</dd>
@@ -2726,7 +2400,7 @@ The following state arguments are supported:
             title="Required">
         <span>time<wbr>Aggregation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies how the data that's collected should be combined over time. Possible values include `Average`, `Count`, `Maximum`, `Minimum`, `Last` and `Total`. Defaults to `Average`.
 {{% /md %}}</dd>
@@ -2735,7 +2409,7 @@ The following state arguments are supported:
             title="Required">
         <span>time<wbr>Grain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the granularity of metrics that the rule monitors, which must be one of the pre-defined values returned from the metric definitions for the metric. This value must be between 1 minute and 12 hours an be formatted as an ISO 8601 string.
 {{% /md %}}</dd>
@@ -2744,7 +2418,7 @@ The following state arguments are supported:
             title="Required">
         <span>time<wbr>Window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the time range for which data is collected, which must be greater than the delay in metric collection (which varies from resource to resource). This value must be between 5 minutes and 12 hours and be formatted as an ISO 8601 string.
 {{% /md %}}</dd>
@@ -2760,7 +2434,7 @@ The following state arguments are supported:
             title="Required">
         <span>metric<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the metric that defines what the rule monitors, such as `Percentage CPU` for `Virtual Machine Scale Sets` and `CpuPercentage` for `App Service Plan`.
 {{% /md %}}</dd>
@@ -2769,7 +2443,7 @@ The following state arguments are supported:
             title="Required">
         <span>metric<wbr>Resource<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the Resource which the Rule monitors.
 {{% /md %}}</dd>
@@ -2778,7 +2452,7 @@ The following state arguments are supported:
             title="Required">
         <span>operator</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the operator used to compare the metric data and threshold. Possible values are: `Equals`, `NotEquals`, `GreaterThan`, `GreaterThanOrEqual`, `LessThan`, `LessThanOrEqual`.
 {{% /md %}}</dd>
@@ -2787,7 +2461,7 @@ The following state arguments are supported:
             title="Required">
         <span>statistic</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies how the metrics from multiple instances are combined. Possible values are `Average`, `Min` and `Max`.
 {{% /md %}}</dd>
@@ -2796,7 +2470,7 @@ The following state arguments are supported:
             title="Required">
         <span>threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Specifies the threshold of the metric that triggers the scale action.
 {{% /md %}}</dd>
@@ -2805,7 +2479,7 @@ The following state arguments are supported:
             title="Required">
         <span>time<wbr>Aggregation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies how the data that's collected should be combined over time. Possible values include `Average`, `Count`, `Maximum`, `Minimum`, `Last` and `Total`. Defaults to `Average`.
 {{% /md %}}</dd>
@@ -2814,7 +2488,7 @@ The following state arguments are supported:
             title="Required">
         <span>time<wbr>Grain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the granularity of metrics that the rule monitors, which must be one of the pre-defined values returned from the metric definitions for the metric. This value must be between 1 minute and 12 hours an be formatted as an ISO 8601 string.
 {{% /md %}}</dd>
@@ -2823,7 +2497,7 @@ The following state arguments are supported:
             title="Required">
         <span>time_<wbr>window</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the time range for which data is collected, which must be greater than the delay in metric collection (which varies from resource to resource). This value must be between 5 minutes and 12 hours and be formatted as an ISO 8601 string.
 {{% /md %}}</dd>
@@ -2841,7 +2515,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#AutoscaleSettingProfileRuleScaleActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/monitoring?tab=doc#AutoscaleSettingProfileRuleScaleActionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileRuleScaleActionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileRuleScaleActionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2854,7 +2528,7 @@ The following state arguments are supported:
             title="Required">
         <span>Cooldown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The amount of time to wait since the last scaling action before this action occurs. Must be between 1 minute and 1 week and formatted as a ISO 8601 string.
 {{% /md %}}</dd>
@@ -2863,7 +2537,7 @@ The following state arguments are supported:
             title="Required">
         <span>Direction</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The scale direction. Possible values are `Increase` and `Decrease`.
 {{% /md %}}</dd>
@@ -2872,7 +2546,7 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of action that should occur. Possible values are `ChangeCount`, `ExactCount` and `PercentChangeCount`.
 {{% /md %}}</dd>
@@ -2881,7 +2555,7 @@ The following state arguments are supported:
             title="Required">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of instances involved in the scaling action. Defaults to `1`.
 {{% /md %}}</dd>
@@ -2897,7 +2571,7 @@ The following state arguments are supported:
             title="Required">
         <span>Cooldown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The amount of time to wait since the last scaling action before this action occurs. Must be between 1 minute and 1 week and formatted as a ISO 8601 string.
 {{% /md %}}</dd>
@@ -2906,7 +2580,7 @@ The following state arguments are supported:
             title="Required">
         <span>Direction</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The scale direction. Possible values are `Increase` and `Decrease`.
 {{% /md %}}</dd>
@@ -2915,7 +2589,7 @@ The following state arguments are supported:
             title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of action that should occur. Possible values are `ChangeCount`, `ExactCount` and `PercentChangeCount`.
 {{% /md %}}</dd>
@@ -2924,7 +2598,7 @@ The following state arguments are supported:
             title="Required">
         <span>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of instances involved in the scaling action. Defaults to `1`.
 {{% /md %}}</dd>
@@ -2940,7 +2614,7 @@ The following state arguments are supported:
             title="Required">
         <span>cooldown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The amount of time to wait since the last scaling action before this action occurs. Must be between 1 minute and 1 week and formatted as a ISO 8601 string.
 {{% /md %}}</dd>
@@ -2949,7 +2623,7 @@ The following state arguments are supported:
             title="Required">
         <span>direction</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The scale direction. Possible values are `Increase` and `Decrease`.
 {{% /md %}}</dd>
@@ -2958,7 +2632,7 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of action that should occur. Possible values are `ChangeCount`, `ExactCount` and `PercentChangeCount`.
 {{% /md %}}</dd>
@@ -2967,7 +2641,7 @@ The following state arguments are supported:
             title="Required">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of instances involved in the scaling action. Defaults to `1`.
 {{% /md %}}</dd>
@@ -2983,7 +2657,7 @@ The following state arguments are supported:
             title="Required">
         <span>cooldown</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The amount of time to wait since the last scaling action before this action occurs. Must be between 1 minute and 1 week and formatted as a ISO 8601 string.
 {{% /md %}}</dd>
@@ -2992,7 +2666,7 @@ The following state arguments are supported:
             title="Required">
         <span>direction</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The scale direction. Possible values are `Increase` and `Decrease`.
 {{% /md %}}</dd>
@@ -3001,7 +2675,7 @@ The following state arguments are supported:
             title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of action that should occur. Possible values are `ChangeCount`, `ExactCount` and `PercentChangeCount`.
 {{% /md %}}</dd>
@@ -3010,7 +2684,7 @@ The following state arguments are supported:
             title="Required">
         <span>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of instances involved in the scaling action. Defaults to `1`.
 {{% /md %}}</dd>
@@ -3032,6 +2706,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 </dl>
 

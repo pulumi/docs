@@ -9,19 +9,22 @@ block_external_search_index: true
 Use this data source to get the public key from a PEM-encoded private key for use in other
 resources.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
 import * as tls from "@pulumi/tls";
 
-const example = pulumi.output(tls.getPublicKey({
+const example = tls.getPublicKey({
     privateKeyPem: fs.readFileSync("~/.ssh/id_rsa", "utf-8"),
-}, { async: true }));
+});
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-tls/blob/master/website/docs/d/public_key.html.md.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -43,7 +46,7 @@ const example = pulumi.output(tls.getPublicKey({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPublicKey<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-tls/sdk/go/tls/?tab=doc#GetPublicKeyArgs">GetPublicKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-tls/sdk/go/tls/?tab=doc#LookupPublicKeyResult">LookupPublicKeyResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupPublicKey<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-tls/sdk/v2/go/tls/?tab=doc#GetPublicKeyArgs">GetPublicKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-tls/sdk/v2/go/tls/?tab=doc#LookupPublicKeyResult">LookupPublicKeyResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -66,7 +69,7 @@ The following arguments are supported:
             title="Required">
         <span>Private<wbr>Key<wbr>Pem</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The private key to use. Currently-supported key types are "RSA" or "ECDSA".
 {{% /md %}}</dd>
@@ -82,7 +85,7 @@ The following arguments are supported:
             title="Required">
         <span>Private<wbr>Key<wbr>Pem</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The private key to use. Currently-supported key types are "RSA" or "ECDSA".
 {{% /md %}}</dd>
@@ -98,7 +101,7 @@ The following arguments are supported:
             title="Required">
         <span>private<wbr>Key<wbr>Pem</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The private key to use. Currently-supported key types are "RSA" or "ECDSA".
 {{% /md %}}</dd>
@@ -114,7 +117,7 @@ The following arguments are supported:
             title="Required">
         <span>private_<wbr>key_<wbr>pem</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The private key to use. Currently-supported key types are "RSA" or "ECDSA".
 {{% /md %}}</dd>
@@ -143,7 +146,7 @@ The following output properties are available:
             title="">
         <span>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -151,7 +154,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -160,7 +163,7 @@ The following output properties are available:
             title="">
         <span>Private<wbr>Key<wbr>Pem</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The private key data in PEM format.
 {{% /md %}}</dd>
@@ -169,7 +172,7 @@ The following output properties are available:
             title="">
         <span>Public<wbr>Key<wbr>Fingerprint<wbr>Md5</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The md5 hash of the public key data in
 OpenSSH MD5 hash format, e.g. `aa:bb:cc:...`. Only available if the
@@ -181,7 +184,7 @@ selected private key format is compatible, as per the rules for
             title="">
         <span>Public<wbr>Key<wbr>Openssh</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The public key data in OpenSSH `authorized_keys`
 format, if the selected private key format is compatible. All RSA keys
@@ -194,7 +197,7 @@ is selected.
             title="">
         <span>Public<wbr>Key<wbr>Pem</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The public key data in PEM format.
 {{% /md %}}</dd>
@@ -210,7 +213,7 @@ is selected.
             title="">
         <span>Algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -218,7 +221,7 @@ is selected.
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -227,7 +230,7 @@ is selected.
             title="">
         <span>Private<wbr>Key<wbr>Pem</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The private key data in PEM format.
 {{% /md %}}</dd>
@@ -236,7 +239,7 @@ is selected.
             title="">
         <span>Public<wbr>Key<wbr>Fingerprint<wbr>Md5</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The md5 hash of the public key data in
 OpenSSH MD5 hash format, e.g. `aa:bb:cc:...`. Only available if the
@@ -248,7 +251,7 @@ selected private key format is compatible, as per the rules for
             title="">
         <span>Public<wbr>Key<wbr>Openssh</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The public key data in OpenSSH `authorized_keys`
 format, if the selected private key format is compatible. All RSA keys
@@ -261,7 +264,7 @@ is selected.
             title="">
         <span>Public<wbr>Key<wbr>Pem</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The public key data in PEM format.
 {{% /md %}}</dd>
@@ -277,7 +280,7 @@ is selected.
             title="">
         <span>algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -285,7 +288,7 @@ is selected.
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -294,7 +297,7 @@ is selected.
             title="">
         <span>private<wbr>Key<wbr>Pem</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The private key data in PEM format.
 {{% /md %}}</dd>
@@ -303,7 +306,7 @@ is selected.
             title="">
         <span>public<wbr>Key<wbr>Fingerprint<wbr>Md5</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The md5 hash of the public key data in
 OpenSSH MD5 hash format, e.g. `aa:bb:cc:...`. Only available if the
@@ -315,7 +318,7 @@ selected private key format is compatible, as per the rules for
             title="">
         <span>public<wbr>Key<wbr>Openssh</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The public key data in OpenSSH `authorized_keys`
 format, if the selected private key format is compatible. All RSA keys
@@ -328,7 +331,7 @@ is selected.
             title="">
         <span>public<wbr>Key<wbr>Pem</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The public key data in PEM format.
 {{% /md %}}</dd>
@@ -344,7 +347,7 @@ is selected.
             title="">
         <span>algorithm</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -352,7 +355,7 @@ is selected.
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -361,7 +364,7 @@ is selected.
             title="">
         <span>private_<wbr>key_<wbr>pem</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The private key data in PEM format.
 {{% /md %}}</dd>
@@ -370,7 +373,7 @@ is selected.
             title="">
         <span>public_<wbr>key_<wbr>fingerprint_<wbr>md5</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The md5 hash of the public key data in
 OpenSSH MD5 hash format, e.g. `aa:bb:cc:...`. Only available if the
@@ -382,7 +385,7 @@ selected private key format is compatible, as per the rules for
             title="">
         <span>public_<wbr>key_<wbr>openssh</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The public key data in OpenSSH `authorized_keys`
 format, if the selected private key format is compatible. All RSA keys
@@ -395,7 +398,7 @@ is selected.
             title="">
         <span>public_<wbr>key_<wbr>pem</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The public key data in PEM format.
 {{% /md %}}</dd>

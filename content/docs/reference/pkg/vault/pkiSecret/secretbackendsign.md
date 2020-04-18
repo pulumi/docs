@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/pkiSecret/#SecretBackendSign">SecretBackendSign</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/pkiSecret/#SecretBackendSignArgs">SecretBackendSignArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/pkiSecret/#SecretBackendSign">SecretBackendSign</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/pkiSecret/#SecretBackendSignArgs">SecretBackendSignArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,7 +22,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSecretBackendSign<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/pkiSecret?tab=doc#SecretBackendSignArgs">SecretBackendSignArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/pkiSecret?tab=doc#SecretBackendSign">SecretBackendSign</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSecretBackendSign<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/pkiSecret?tab=doc#SecretBackendSignArgs">SecretBackendSignArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/pkiSecret?tab=doc#SecretBackendSign">SecretBackendSign</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -118,29 +118,11 @@ block_external_search_index: true
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Alt<wbr>Names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of alternative names.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Auto<wbr>Renew</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If enabled, a new certificate will be generated if the expiration is within min_seconds_remaining
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The PKI secret backend the resource belongs to.
 {{% /md %}}</dd>
@@ -149,90 +131,108 @@ block_external_search_index: true
             title="Required">
         <span>Common<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}CN of intermediate to create.
+    <dd>{{% md %}}CN of certificate to create
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Csr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The CSR.
+    <dd>{{% md %}}The CSR
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Alt<wbr>Names</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of alternative names
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Auto<wbr>Renew</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, certs will be renewed if the expiration is within `min_seconds_remaining`. Default `false`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Exclude<wbr>Cn<wbr>From<wbr>Sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Flag to exclude CN from SANs.
+    <dd>{{% md %}}Flag to exclude CN from SANs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The format of data.
+    <dd>{{% md %}}The format of data
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Ip<wbr>Sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of alternative IPs.
+    <dd>{{% md %}}List of alternative IPs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Min<wbr>Seconds<wbr>Remaining</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Generate a new certificate when the expiration is within this number of seconds
+    <dd>{{% md %}}Generate a new certificate when the expiration is within this number of seconds, default is 604800 (7 days)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the role to create the certificate against.
+    <dd>{{% md %}}Name of the role to create the certificate against
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Other<wbr>Sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of other SANs.
+    <dd>{{% md %}}List of other SANs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Time to leave.
+    <dd>{{% md %}}Time to live
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Uri<wbr>Sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of alterative URIs.
+    <dd>{{% md %}}List of alterative URIs
 {{% /md %}}</dd>
 
 </dl>
@@ -242,29 +242,11 @@ block_external_search_index: true
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Alt<wbr>Names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of alternative names.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Auto<wbr>Renew</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If enabled, a new certificate will be generated if the expiration is within min_seconds_remaining
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The PKI secret backend the resource belongs to.
 {{% /md %}}</dd>
@@ -273,90 +255,108 @@ block_external_search_index: true
             title="Required">
         <span>Common<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}CN of intermediate to create.
+    <dd>{{% md %}}CN of certificate to create
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Csr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The CSR.
+    <dd>{{% md %}}The CSR
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Alt<wbr>Names</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of alternative names
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Auto<wbr>Renew</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, certs will be renewed if the expiration is within `min_seconds_remaining`. Default `false`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Exclude<wbr>Cn<wbr>From<wbr>Sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Flag to exclude CN from SANs.
+    <dd>{{% md %}}Flag to exclude CN from SANs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The format of data.
+    <dd>{{% md %}}The format of data
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Ip<wbr>Sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of alternative IPs.
+    <dd>{{% md %}}List of alternative IPs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Min<wbr>Seconds<wbr>Remaining</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Generate a new certificate when the expiration is within this number of seconds
+    <dd>{{% md %}}Generate a new certificate when the expiration is within this number of seconds, default is 604800 (7 days)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the role to create the certificate against.
+    <dd>{{% md %}}Name of the role to create the certificate against
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Other<wbr>Sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of other SANs.
+    <dd>{{% md %}}List of other SANs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Time to leave.
+    <dd>{{% md %}}Time to live
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Uri<wbr>Sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of alterative URIs.
+    <dd>{{% md %}}List of alterative URIs
 {{% /md %}}</dd>
 
 </dl>
@@ -366,29 +366,11 @@ block_external_search_index: true
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>alt<wbr>Names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of alternative names.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>auto<wbr>Renew</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If enabled, a new certificate will be generated if the expiration is within min_seconds_remaining
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The PKI secret backend the resource belongs to.
 {{% /md %}}</dd>
@@ -397,90 +379,108 @@ block_external_search_index: true
             title="Required">
         <span>common<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}CN of intermediate to create.
+    <dd>{{% md %}}CN of certificate to create
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>csr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The CSR.
+    <dd>{{% md %}}The CSR
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>alt<wbr>Names</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of alternative names
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>auto<wbr>Renew</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, certs will be renewed if the expiration is within `min_seconds_remaining`. Default `false`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>exclude<wbr>Cn<wbr>From<wbr>Sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Flag to exclude CN from SANs.
+    <dd>{{% md %}}Flag to exclude CN from SANs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The format of data.
+    <dd>{{% md %}}The format of data
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>ip<wbr>Sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of alternative IPs.
+    <dd>{{% md %}}List of alternative IPs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>min<wbr>Seconds<wbr>Remaining</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Generate a new certificate when the expiration is within this number of seconds
+    <dd>{{% md %}}Generate a new certificate when the expiration is within this number of seconds, default is 604800 (7 days)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the role to create the certificate against.
+    <dd>{{% md %}}Name of the role to create the certificate against
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>other<wbr>Sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of other SANs.
+    <dd>{{% md %}}List of other SANs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Time to leave.
+    <dd>{{% md %}}Time to live
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>uri<wbr>Sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of alterative URIs.
+    <dd>{{% md %}}List of alterative URIs
 {{% /md %}}</dd>
 
 </dl>
@@ -490,29 +490,11 @@ block_external_search_index: true
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>alt_<wbr>names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of alternative names.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>auto_<wbr>renew</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If enabled, a new certificate will be generated if the expiration is within min_seconds_remaining
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The PKI secret backend the resource belongs to.
 {{% /md %}}</dd>
@@ -521,90 +503,108 @@ block_external_search_index: true
             title="Required">
         <span>common_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}CN of intermediate to create.
+    <dd>{{% md %}}CN of certificate to create
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>csr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The CSR.
+    <dd>{{% md %}}The CSR
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>alt_<wbr>names</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of alternative names
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>auto_<wbr>renew</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, certs will be renewed if the expiration is within `min_seconds_remaining`. Default `false`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>exclude_<wbr>cn_<wbr>from_<wbr>sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Flag to exclude CN from SANs.
+    <dd>{{% md %}}Flag to exclude CN from SANs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The format of data.
+    <dd>{{% md %}}The format of data
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>ip_<wbr>sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of alternative IPs.
+    <dd>{{% md %}}List of alternative IPs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>min_<wbr>seconds_<wbr>remaining</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Generate a new certificate when the expiration is within this number of seconds
+    <dd>{{% md %}}Generate a new certificate when the expiration is within this number of seconds, default is 604800 (7 days)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the role to create the certificate against.
+    <dd>{{% md %}}Name of the role to create the certificate against
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>other_<wbr>sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of other SANs.
+    <dd>{{% md %}}List of other SANs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Time to leave.
+    <dd>{{% md %}}Time to live
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>uri_<wbr>sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of alterative URIs.
+    <dd>{{% md %}}List of alterative URIs
 {{% /md %}}</dd>
 
 </dl>
@@ -628,164 +628,47 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Alt<wbr>Names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of alternative names.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Renew</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}If enabled, a new certificate will be generated if the expiration is within min_seconds_remaining
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The PKI secret backend the resource belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Ca<wbr>Chains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The CA chain.
+    <dd>{{% md %}}The CA chain
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The certicate.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Common<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}CN of intermediate to create.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Csr</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The CSR.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Exclude<wbr>Cn<wbr>From<wbr>Sans</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Flag to exclude CN from SANs.
+    <dd>{{% md %}}The certificate
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>Expiration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The certificate expiration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The format of data.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ip<wbr>Sans</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of alternative IPs.
+    <dd>{{% md %}}The expiration date of the certificate in unix epoch format
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>Issuing<wbr>Ca</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The issuing CA.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Min<wbr>Seconds<wbr>Remaining</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}Generate a new certificate when the expiration is within this number of seconds
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the role to create the certificate against.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Other<wbr>Sans</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of other SANs.
+    <dd>{{% md %}}The issuing CA
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>Serial</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The serial.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Time to leave.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Uri<wbr>Sans</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of alterative URIs.
+    <dd>{{% md %}}The serial
 {{% /md %}}</dd>
 
 </dl>
@@ -797,164 +680,47 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Alt<wbr>Names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of alternative names.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Auto<wbr>Renew</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}If enabled, a new certificate will be generated if the expiration is within min_seconds_remaining
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The PKI secret backend the resource belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Ca<wbr>Chains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The CA chain.
+    <dd>{{% md %}}The CA chain
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The certicate.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Common<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}CN of intermediate to create.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Csr</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The CSR.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Exclude<wbr>Cn<wbr>From<wbr>Sans</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Flag to exclude CN from SANs.
+    <dd>{{% md %}}The certificate
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>Expiration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The certificate expiration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The format of data.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ip<wbr>Sans</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of alternative IPs.
+    <dd>{{% md %}}The expiration date of the certificate in unix epoch format
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>Issuing<wbr>Ca</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The issuing CA.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Min<wbr>Seconds<wbr>Remaining</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}Generate a new certificate when the expiration is within this number of seconds
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the role to create the certificate against.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Other<wbr>Sans</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of other SANs.
+    <dd>{{% md %}}The issuing CA
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>Serial</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The serial.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Time to leave.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Uri<wbr>Sans</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of alterative URIs.
+    <dd>{{% md %}}The serial
 {{% /md %}}</dd>
 
 </dl>
@@ -966,164 +732,47 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>alt<wbr>Names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of alternative names.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auto<wbr>Renew</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}If enabled, a new certificate will be generated if the expiration is within min_seconds_remaining
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The PKI secret backend the resource belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>ca<wbr>Chains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The CA chain.
+    <dd>{{% md %}}The CA chain
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The certicate.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>common<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}CN of intermediate to create.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>csr</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The CSR.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>exclude<wbr>Cn<wbr>From<wbr>Sans</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Flag to exclude CN from SANs.
+    <dd>{{% md %}}The certificate
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>expiration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The certificate expiration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The format of data.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ip<wbr>Sans</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of alternative IPs.
+    <dd>{{% md %}}The expiration date of the certificate in unix epoch format
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>issuing<wbr>Ca</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The issuing CA.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>min<wbr>Seconds<wbr>Remaining</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}Generate a new certificate when the expiration is within this number of seconds
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the role to create the certificate against.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>other<wbr>Sans</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of other SANs.
+    <dd>{{% md %}}The issuing CA
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>serial</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The serial.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Time to leave.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>uri<wbr>Sans</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of alterative URIs.
+    <dd>{{% md %}}The serial
 {{% /md %}}</dd>
 
 </dl>
@@ -1135,164 +784,47 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>alt_<wbr>names</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of alternative names.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>auto_<wbr>renew</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}If enabled, a new certificate will be generated if the expiration is within min_seconds_remaining
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The PKI secret backend the resource belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>ca_<wbr>chains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The CA chain.
+    <dd>{{% md %}}The CA chain
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The certicate.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>common_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}CN of intermediate to create.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>csr</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The CSR.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>exclude_<wbr>cn_<wbr>from_<wbr>sans</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Flag to exclude CN from SANs.
+    <dd>{{% md %}}The certificate
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>expiration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The certificate expiration.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>format</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The format of data.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ip_<wbr>sans</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of alternative IPs.
+    <dd>{{% md %}}The expiration date of the certificate in unix epoch format
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>issuing_<wbr>ca</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The issuing CA.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>min_<wbr>seconds_<wbr>remaining</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Generate a new certificate when the expiration is within this number of seconds
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the role to create the certificate against.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>other_<wbr>sans</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of other SANs.
+    <dd>{{% md %}}The issuing CA
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>serial</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The serial.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Time to leave.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>uri_<wbr>sans</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of alterative URIs.
+    <dd>{{% md %}}The serial
 {{% /md %}}</dd>
 
 </dl>
@@ -1320,7 +852,7 @@ Get an existing SecretBackendSign resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackendSign<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/pkiSecret?tab=doc#SecretBackendSignState">SecretBackendSignState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/pkiSecret?tab=doc#SecretBackendSign">SecretBackendSign</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackendSign<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/pkiSecret?tab=doc#SecretBackendSignState">SecretBackendSignState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/pkiSecret?tab=doc#SecretBackendSign">SecretBackendSign</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1434,25 +966,25 @@ The following state arguments are supported:
             title="Optional">
         <span>Alt<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of alternative names.
+    <dd>{{% md %}}List of alternative names
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Auto<wbr>Renew</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}If enabled, a new certificate will be generated if the expiration is within min_seconds_remaining
+    <dd>{{% md %}}If set to `true`, certs will be renewed if the expiration is within `min_seconds_remaining`. Default `false`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The PKI secret backend the resource belongs to.
 {{% /md %}}</dd>
@@ -1461,135 +993,135 @@ The following state arguments are supported:
             title="Optional">
         <span>Ca<wbr>Chains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The CA chain.
+    <dd>{{% md %}}The CA chain
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The certicate.
+    <dd>{{% md %}}The certificate
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Common<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}CN of intermediate to create.
+    <dd>{{% md %}}CN of certificate to create
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Csr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The CSR.
+    <dd>{{% md %}}The CSR
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Exclude<wbr>Cn<wbr>From<wbr>Sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Flag to exclude CN from SANs.
+    <dd>{{% md %}}Flag to exclude CN from SANs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Expiration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The certificate expiration.
+    <dd>{{% md %}}The expiration date of the certificate in unix epoch format
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The format of data.
+    <dd>{{% md %}}The format of data
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Ip<wbr>Sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of alternative IPs.
+    <dd>{{% md %}}List of alternative IPs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Issuing<wbr>Ca</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The issuing CA.
+    <dd>{{% md %}}The issuing CA
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Min<wbr>Seconds<wbr>Remaining</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Generate a new certificate when the expiration is within this number of seconds
+    <dd>{{% md %}}Generate a new certificate when the expiration is within this number of seconds, default is 604800 (7 days)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the role to create the certificate against.
+    <dd>{{% md %}}Name of the role to create the certificate against
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Other<wbr>Sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of other SANs.
+    <dd>{{% md %}}List of other SANs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Serial</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The serial.
+    <dd>{{% md %}}The serial
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Time to leave.
+    <dd>{{% md %}}Time to live
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Uri<wbr>Sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of alterative URIs.
+    <dd>{{% md %}}List of alterative URIs
 {{% /md %}}</dd>
 
 </dl>
@@ -1603,25 +1135,25 @@ The following state arguments are supported:
             title="Optional">
         <span>Alt<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of alternative names.
+    <dd>{{% md %}}List of alternative names
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Auto<wbr>Renew</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}If enabled, a new certificate will be generated if the expiration is within min_seconds_remaining
+    <dd>{{% md %}}If set to `true`, certs will be renewed if the expiration is within `min_seconds_remaining`. Default `false`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The PKI secret backend the resource belongs to.
 {{% /md %}}</dd>
@@ -1630,135 +1162,135 @@ The following state arguments are supported:
             title="Optional">
         <span>Ca<wbr>Chains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The CA chain.
+    <dd>{{% md %}}The CA chain
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The certicate.
+    <dd>{{% md %}}The certificate
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Common<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}CN of intermediate to create.
+    <dd>{{% md %}}CN of certificate to create
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Csr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The CSR.
+    <dd>{{% md %}}The CSR
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Exclude<wbr>Cn<wbr>From<wbr>Sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Flag to exclude CN from SANs.
+    <dd>{{% md %}}Flag to exclude CN from SANs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Expiration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The certificate expiration.
+    <dd>{{% md %}}The expiration date of the certificate in unix epoch format
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The format of data.
+    <dd>{{% md %}}The format of data
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Ip<wbr>Sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of alternative IPs.
+    <dd>{{% md %}}List of alternative IPs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Issuing<wbr>Ca</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The issuing CA.
+    <dd>{{% md %}}The issuing CA
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Min<wbr>Seconds<wbr>Remaining</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Generate a new certificate when the expiration is within this number of seconds
+    <dd>{{% md %}}Generate a new certificate when the expiration is within this number of seconds, default is 604800 (7 days)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the role to create the certificate against.
+    <dd>{{% md %}}Name of the role to create the certificate against
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Other<wbr>Sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of other SANs.
+    <dd>{{% md %}}List of other SANs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Serial</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The serial.
+    <dd>{{% md %}}The serial
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Time to leave.
+    <dd>{{% md %}}Time to live
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Uri<wbr>Sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of alterative URIs.
+    <dd>{{% md %}}List of alterative URIs
 {{% /md %}}</dd>
 
 </dl>
@@ -1772,25 +1304,25 @@ The following state arguments are supported:
             title="Optional">
         <span>alt<wbr>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of alternative names.
+    <dd>{{% md %}}List of alternative names
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>auto<wbr>Renew</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}If enabled, a new certificate will be generated if the expiration is within min_seconds_remaining
+    <dd>{{% md %}}If set to `true`, certs will be renewed if the expiration is within `min_seconds_remaining`. Default `false`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The PKI secret backend the resource belongs to.
 {{% /md %}}</dd>
@@ -1799,135 +1331,135 @@ The following state arguments are supported:
             title="Optional">
         <span>ca<wbr>Chains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The CA chain.
+    <dd>{{% md %}}The CA chain
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The certicate.
+    <dd>{{% md %}}The certificate
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>common<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}CN of intermediate to create.
+    <dd>{{% md %}}CN of certificate to create
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>csr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The CSR.
+    <dd>{{% md %}}The CSR
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>exclude<wbr>Cn<wbr>From<wbr>Sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Flag to exclude CN from SANs.
+    <dd>{{% md %}}Flag to exclude CN from SANs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>expiration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The certificate expiration.
+    <dd>{{% md %}}The expiration date of the certificate in unix epoch format
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The format of data.
+    <dd>{{% md %}}The format of data
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>ip<wbr>Sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of alternative IPs.
+    <dd>{{% md %}}List of alternative IPs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>issuing<wbr>Ca</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The issuing CA.
+    <dd>{{% md %}}The issuing CA
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>min<wbr>Seconds<wbr>Remaining</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Generate a new certificate when the expiration is within this number of seconds
+    <dd>{{% md %}}Generate a new certificate when the expiration is within this number of seconds, default is 604800 (7 days)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the role to create the certificate against.
+    <dd>{{% md %}}Name of the role to create the certificate against
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>other<wbr>Sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of other SANs.
+    <dd>{{% md %}}List of other SANs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>serial</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The serial.
+    <dd>{{% md %}}The serial
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Time to leave.
+    <dd>{{% md %}}Time to live
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>uri<wbr>Sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of alterative URIs.
+    <dd>{{% md %}}List of alterative URIs
 {{% /md %}}</dd>
 
 </dl>
@@ -1941,25 +1473,25 @@ The following state arguments are supported:
             title="Optional">
         <span>alt_<wbr>names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of alternative names.
+    <dd>{{% md %}}List of alternative names
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>auto_<wbr>renew</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}If enabled, a new certificate will be generated if the expiration is within min_seconds_remaining
+    <dd>{{% md %}}If set to `true`, certs will be renewed if the expiration is within `min_seconds_remaining`. Default `false`
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The PKI secret backend the resource belongs to.
 {{% /md %}}</dd>
@@ -1968,135 +1500,135 @@ The following state arguments are supported:
             title="Optional">
         <span>ca_<wbr>chains</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The CA chain.
+    <dd>{{% md %}}The CA chain
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>certificate</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The certicate.
+    <dd>{{% md %}}The certificate
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>common_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}CN of intermediate to create.
+    <dd>{{% md %}}CN of certificate to create
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>csr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The CSR.
+    <dd>{{% md %}}The CSR
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>exclude_<wbr>cn_<wbr>from_<wbr>sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Flag to exclude CN from SANs.
+    <dd>{{% md %}}Flag to exclude CN from SANs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>expiration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The certificate expiration.
+    <dd>{{% md %}}The expiration date of the certificate in unix epoch format
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>format</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The format of data.
+    <dd>{{% md %}}The format of data
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>ip_<wbr>sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of alternative IPs.
+    <dd>{{% md %}}List of alternative IPs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>issuing_<wbr>ca</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The issuing CA.
+    <dd>{{% md %}}The issuing CA
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>min_<wbr>seconds_<wbr>remaining</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Generate a new certificate when the expiration is within this number of seconds
+    <dd>{{% md %}}Generate a new certificate when the expiration is within this number of seconds, default is 604800 (7 days)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the role to create the certificate against.
+    <dd>{{% md %}}Name of the role to create the certificate against
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>other_<wbr>sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of other SANs.
+    <dd>{{% md %}}List of other SANs
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>serial</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The serial.
+    <dd>{{% md %}}The serial
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Time to leave.
+    <dd>{{% md %}}Time to live
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>uri_<wbr>sans</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of alterative URIs.
+    <dd>{{% md %}}List of alterative URIs
 {{% /md %}}</dd>
 
 </dl>
@@ -2118,6 +1650,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-vault">https://github.com/pulumi/pulumi-vault</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
 </dl>
 

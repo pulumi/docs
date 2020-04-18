@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendCert">AuthBackendCert</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendCertArgs">AuthBackendCertArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendCert">AuthBackendCert</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendCertArgs">AuthBackendCertArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,7 +22,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAuthBackendCert<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/aws?tab=doc#AuthBackendCertArgs">AuthBackendCertArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/aws?tab=doc#AuthBackendCert">AuthBackendCert</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAuthBackendCert<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/aws?tab=doc#AuthBackendCertArgs">AuthBackendCertArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/aws?tab=doc#AuthBackendCert">AuthBackendCert</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -122,36 +122,42 @@ block_external_search_index: true
             title="Required">
         <span>Aws<wbr>Public<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Base64 encoded AWS Public key required to verify PKCS7 signature of the EC2 instance metadata.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Unique name of the auth backend to configure.
+    <dd>{{% md %}}The  Base64 encoded AWS Public key required to
+verify PKCS7 signature of the EC2 instance metadata. You can find this key in
+the [AWS
+documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-identity-documents.html).
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Cert<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the certificate to configure.
+    <dd>{{% md %}}The name of the certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Backend</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path the AWS auth backend being configured was
+mounted at.  Defaults to `aws`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of document that can be verified using the certificate. Must be either "pkcs7" or "identity".
+    <dd>{{% md %}}Either "pkcs7" or "identity", indicating the type of
+document which can be verified using the given certificate. Defaults to
+"pkcs7".
 {{% /md %}}</dd>
 
 </dl>
@@ -165,36 +171,42 @@ block_external_search_index: true
             title="Required">
         <span>Aws<wbr>Public<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Base64 encoded AWS Public key required to verify PKCS7 signature of the EC2 instance metadata.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Unique name of the auth backend to configure.
+    <dd>{{% md %}}The  Base64 encoded AWS Public key required to
+verify PKCS7 signature of the EC2 instance metadata. You can find this key in
+the [AWS
+documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-identity-documents.html).
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Cert<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the certificate to configure.
+    <dd>{{% md %}}The name of the certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Backend</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path the AWS auth backend being configured was
+mounted at.  Defaults to `aws`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of document that can be verified using the certificate. Must be either "pkcs7" or "identity".
+    <dd>{{% md %}}Either "pkcs7" or "identity", indicating the type of
+document which can be verified using the given certificate. Defaults to
+"pkcs7".
 {{% /md %}}</dd>
 
 </dl>
@@ -208,36 +220,42 @@ block_external_search_index: true
             title="Required">
         <span>aws<wbr>Public<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Base64 encoded AWS Public key required to verify PKCS7 signature of the EC2 instance metadata.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Unique name of the auth backend to configure.
+    <dd>{{% md %}}The  Base64 encoded AWS Public key required to
+verify PKCS7 signature of the EC2 instance metadata. You can find this key in
+the [AWS
+documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-identity-documents.html).
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>cert<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the certificate to configure.
+    <dd>{{% md %}}The name of the certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>backend</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The path the AWS auth backend being configured was
+mounted at.  Defaults to `aws`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of document that can be verified using the certificate. Must be either "pkcs7" or "identity".
+    <dd>{{% md %}}Either "pkcs7" or "identity", indicating the type of
+document which can be verified using the given certificate. Defaults to
+"pkcs7".
 {{% /md %}}</dd>
 
 </dl>
@@ -251,224 +269,48 @@ block_external_search_index: true
             title="Required">
         <span>aws_<wbr>public_<wbr>cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Base64 encoded AWS Public key required to verify PKCS7 signature of the EC2 instance metadata.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Unique name of the auth backend to configure.
+    <dd>{{% md %}}The  Base64 encoded AWS Public key required to
+verify PKCS7 signature of the EC2 instance metadata. You can find this key in
+the [AWS
+documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-identity-documents.html).
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>cert_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the certificate to configure.
+    <dd>{{% md %}}The name of the certificate.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>backend</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The path the AWS auth backend being configured was
+mounted at.  Defaults to `aws`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of document that can be verified using the certificate. Must be either "pkcs7" or "identity".
+    <dd>{{% md %}}Either "pkcs7" or "identity", indicating the type of
+document which can be verified using the given certificate. Defaults to
+"pkcs7".
 {{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## AuthBackendCert Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Aws<wbr>Public<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Base64 encoded AWS Public key required to verify PKCS7 signature of the EC2 instance metadata.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Unique name of the auth backend to configure.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cert<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the certificate to configure.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of document that can be verified using the certificate. Must be either "pkcs7" or "identity".
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Aws<wbr>Public<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Base64 encoded AWS Public key required to verify PKCS7 signature of the EC2 instance metadata.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Unique name of the auth backend to configure.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cert<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the certificate to configure.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The type of document that can be verified using the certificate. Must be either "pkcs7" or "identity".
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>aws<wbr>Public<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Base64 encoded AWS Public key required to verify PKCS7 signature of the EC2 instance metadata.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Unique name of the auth backend to configure.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cert<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the certificate to configure.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The type of document that can be verified using the certificate. Must be either "pkcs7" or "identity".
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>aws_<wbr>public_<wbr>cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Base64 encoded AWS Public key required to verify PKCS7 signature of the EC2 instance metadata.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Unique name of the auth backend to configure.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cert_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the certificate to configure.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of document that can be verified using the certificate. Must be either "pkcs7" or "identity".
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -492,7 +334,7 @@ Get an existing AuthBackendCert resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackendCert<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/aws?tab=doc#AuthBackendCertState">AuthBackendCertState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/aws?tab=doc#AuthBackendCert">AuthBackendCert</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackendCert<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/aws?tab=doc#AuthBackendCertState">AuthBackendCertState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/aws?tab=doc#AuthBackendCert">AuthBackendCert</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -606,36 +448,42 @@ The following state arguments are supported:
             title="Optional">
         <span>Aws<wbr>Public<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Base64 encoded AWS Public key required to verify PKCS7 signature of the EC2 instance metadata.
+    <dd>{{% md %}}The  Base64 encoded AWS Public key required to
+verify PKCS7 signature of the EC2 instance metadata. You can find this key in
+the [AWS
+documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-identity-documents.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique name of the auth backend to configure.
+    <dd>{{% md %}}The path the AWS auth backend being configured was
+mounted at.  Defaults to `aws`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Cert<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the certificate to configure.
+    <dd>{{% md %}}The name of the certificate.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of document that can be verified using the certificate. Must be either "pkcs7" or "identity".
+    <dd>{{% md %}}Either "pkcs7" or "identity", indicating the type of
+document which can be verified using the given certificate. Defaults to
+"pkcs7".
 {{% /md %}}</dd>
 
 </dl>
@@ -649,36 +497,42 @@ The following state arguments are supported:
             title="Optional">
         <span>Aws<wbr>Public<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Base64 encoded AWS Public key required to verify PKCS7 signature of the EC2 instance metadata.
+    <dd>{{% md %}}The  Base64 encoded AWS Public key required to
+verify PKCS7 signature of the EC2 instance metadata. You can find this key in
+the [AWS
+documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-identity-documents.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique name of the auth backend to configure.
+    <dd>{{% md %}}The path the AWS auth backend being configured was
+mounted at.  Defaults to `aws`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Cert<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the certificate to configure.
+    <dd>{{% md %}}The name of the certificate.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of document that can be verified using the certificate. Must be either "pkcs7" or "identity".
+    <dd>{{% md %}}Either "pkcs7" or "identity", indicating the type of
+document which can be verified using the given certificate. Defaults to
+"pkcs7".
 {{% /md %}}</dd>
 
 </dl>
@@ -692,36 +546,42 @@ The following state arguments are supported:
             title="Optional">
         <span>aws<wbr>Public<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Base64 encoded AWS Public key required to verify PKCS7 signature of the EC2 instance metadata.
+    <dd>{{% md %}}The  Base64 encoded AWS Public key required to
+verify PKCS7 signature of the EC2 instance metadata. You can find this key in
+the [AWS
+documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-identity-documents.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique name of the auth backend to configure.
+    <dd>{{% md %}}The path the AWS auth backend being configured was
+mounted at.  Defaults to `aws`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>cert<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the certificate to configure.
+    <dd>{{% md %}}The name of the certificate.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The type of document that can be verified using the certificate. Must be either "pkcs7" or "identity".
+    <dd>{{% md %}}Either "pkcs7" or "identity", indicating the type of
+document which can be verified using the given certificate. Defaults to
+"pkcs7".
 {{% /md %}}</dd>
 
 </dl>
@@ -735,36 +595,42 @@ The following state arguments are supported:
             title="Optional">
         <span>aws_<wbr>public_<wbr>cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Base64 encoded AWS Public key required to verify PKCS7 signature of the EC2 instance metadata.
+    <dd>{{% md %}}The  Base64 encoded AWS Public key required to
+verify PKCS7 signature of the EC2 instance metadata. You can find this key in
+the [AWS
+documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-identity-documents.html).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Unique name of the auth backend to configure.
+    <dd>{{% md %}}The path the AWS auth backend being configured was
+mounted at.  Defaults to `aws`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>cert_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the certificate to configure.
+    <dd>{{% md %}}The name of the certificate.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The type of document that can be verified using the certificate. Must be either "pkcs7" or "identity".
+    <dd>{{% md %}}Either "pkcs7" or "identity", indicating the type of
+document which can be verified using the given certificate. Defaults to
+"pkcs7".
 {{% /md %}}</dd>
 
 </dl>
@@ -786,6 +652,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-vault">https://github.com/pulumi/pulumi-vault</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
 </dl>
 

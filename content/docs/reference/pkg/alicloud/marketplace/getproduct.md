@@ -10,22 +10,25 @@ This data source provides the Market product item details of Alibaba Cloud.
 
 > **NOTE:** Available in 1.69.0+
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultProduct = pulumi.output(alicloud.marketplace.getProduct({
+const defaultProduct = alicloud.marketplace.getProduct({
     productCode: "cmapi022206",
-}, { async: true }));
+});
 
 export const productName = defaultProduct.products[0].name;
 export const firstProductSkuCode = defaultProduct.products[0].skuses[0].skuCode;
 export const firstProductPackageVersion = defaultProduct.products[0].skuses[0].packageVersions[0].packageVersion;
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/market_product.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -47,13 +50,13 @@ export const firstProductPackageVersion = defaultProduct.products[0].skuses[0].p
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupProduct<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/marketplace?tab=doc#LookupProductArgs">LookupProductArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/marketplace?tab=doc#LookupProductResult">LookupProductResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupProduct<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/marketplace?tab=doc#LookupProductArgs">LookupProductArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/marketplace?tab=doc#LookupProductResult">LookupProductResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetProduct </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Marketplace.GetProductResult.html">GetProductResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.MarketPlace.GetProductArgs.html">GetProductArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.Alicloud.Marketplace.GetProductResult.html">GetProductResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Alicloud/Pulumi.AliCloud.MarketPlace.GetProductArgs.html">GetProductArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -66,22 +69,22 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Available<wbr>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A available region id used to filter market place Ecs images.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Product<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The product code of the market product.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Available<wbr>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A available region id used to filter market place Ecs images.
 {{% /md %}}</dd>
 
 </dl>
@@ -91,22 +94,22 @@ The following arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Available<wbr>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A available region id used to filter market place Ecs images.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Product<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The product code of the market product.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Available<wbr>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A available region id used to filter market place Ecs images.
 {{% /md %}}</dd>
 
 </dl>
@@ -116,22 +119,22 @@ The following arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>available<wbr>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A available region id used to filter market place Ecs images.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>product<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The product code of the market product.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>available<wbr>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A available region id used to filter market place Ecs images.
 {{% /md %}}</dd>
 
 </dl>
@@ -141,22 +144,22 @@ The following arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>available_<wbr>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A available region id used to filter market place Ecs images.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>product_<wbr>code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The product code of the market product.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>available_<wbr>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}A available region id used to filter market place Ecs images.
 {{% /md %}}</dd>
 
 </dl>
@@ -181,17 +184,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Available<wbr>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -200,7 +195,7 @@ The following output properties are available:
             title="">
         <span>Product<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -208,10 +203,18 @@ The following output properties are available:
             title="">
         <span>Products</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getproductproduct">List&lt;Get<wbr>Product<wbr>Product&gt;</a></span>
+        <span class="property-type"><a href="#getproductproduct">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Market<wbr>Place.<wbr>Outputs.<wbr>Get<wbr>Product<wbr>Product&gt;</a></span>
     </dt>
     <dd>{{% md %}}A product. It contains the following attributes:
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Available<wbr>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -222,17 +225,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Available<wbr>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -241,7 +236,7 @@ The following output properties are available:
             title="">
         <span>Product<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -254,6 +249,14 @@ The following output properties are available:
     <dd>{{% md %}}A product. It contains the following attributes:
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Available<wbr>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -263,17 +266,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>available<wbr>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -282,7 +277,7 @@ The following output properties are available:
             title="">
         <span>product<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -295,6 +290,14 @@ The following output properties are available:
     <dd>{{% md %}}A product. It contains the following attributes:
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>available<wbr>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -304,17 +307,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>available_<wbr>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -323,7 +318,7 @@ The following output properties are available:
             title="">
         <span>product_<wbr>code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -335,6 +330,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A product. It contains the following attributes:
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>available_<wbr>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -354,7 +357,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/marketplace?tab=doc#GetProductProduct">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/marketplace?tab=doc#GetProductProduct">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -367,7 +370,7 @@ The following output properties are available:
             title="Required">
         <span>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The code of the product.
 {{% /md %}}</dd>
@@ -376,7 +379,7 @@ The following output properties are available:
             title="Required">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the product.
 {{% /md %}}</dd>
@@ -385,7 +388,7 @@ The following output properties are available:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the product.
 {{% /md %}}</dd>
@@ -394,7 +397,7 @@ The following output properties are available:
             title="Required">
         <span>Skuses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getproductproductskus">List&lt;Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getproductproductskus">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Market<wbr>Place.<wbr>Inputs.<wbr>Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of one element containing sku attributes of an object. Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -410,7 +413,7 @@ The following output properties are available:
             title="Required">
         <span>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The code of the product.
 {{% /md %}}</dd>
@@ -419,7 +422,7 @@ The following output properties are available:
             title="Required">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the product.
 {{% /md %}}</dd>
@@ -428,7 +431,7 @@ The following output properties are available:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the product.
 {{% /md %}}</dd>
@@ -453,7 +456,7 @@ The following output properties are available:
             title="Required">
         <span>code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The code of the product.
 {{% /md %}}</dd>
@@ -462,7 +465,7 @@ The following output properties are available:
             title="Required">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The description of the product.
 {{% /md %}}</dd>
@@ -471,7 +474,7 @@ The following output properties are available:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the product.
 {{% /md %}}</dd>
@@ -496,7 +499,7 @@ The following output properties are available:
             title="Required">
         <span>code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The code of the product.
 {{% /md %}}</dd>
@@ -505,7 +508,7 @@ The following output properties are available:
             title="Required">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The description of the product.
 {{% /md %}}</dd>
@@ -514,7 +517,7 @@ The following output properties are available:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the product.
 {{% /md %}}</dd>
@@ -541,7 +544,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/marketplace?tab=doc#GetProductProductSkus">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/marketplace?tab=doc#GetProductProductSkus">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -554,7 +557,7 @@ The following output properties are available:
             title="Required">
         <span>Images</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getproductproductskusimage">List&lt;Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Image<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getproductproductskusimage">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Market<wbr>Place.<wbr>Inputs.<wbr>Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Image<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of custom ECS images, Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -563,7 +566,7 @@ The following output properties are available:
             title="Required">
         <span>Package<wbr>Versions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getproductproductskuspackageversion">List&lt;Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Package<wbr>Version<wbr>Args&gt;</a></span>
+        <span class="property-type"><a href="#getproductproductskuspackageversion">List&lt;Pulumi.<wbr>Ali<wbr>Cloud.<wbr>Market<wbr>Place.<wbr>Inputs.<wbr>Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Package<wbr>Version<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of package version details of this product sku, Each element contains the following attributes:
 {{% /md %}}</dd>
@@ -572,7 +575,7 @@ The following output properties are available:
             title="Required">
         <span>Sku<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The sku code of this product sku.
 {{% /md %}}</dd>
@@ -581,7 +584,7 @@ The following output properties are available:
             title="Required">
         <span>Sku<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The sku name of this product sku.
 {{% /md %}}</dd>
@@ -615,7 +618,7 @@ The following output properties are available:
             title="Required">
         <span>Sku<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The sku code of this product sku.
 {{% /md %}}</dd>
@@ -624,7 +627,7 @@ The following output properties are available:
             title="Required">
         <span>Sku<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The sku name of this product sku.
 {{% /md %}}</dd>
@@ -658,7 +661,7 @@ The following output properties are available:
             title="Required">
         <span>sku<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The sku code of this product sku.
 {{% /md %}}</dd>
@@ -667,7 +670,7 @@ The following output properties are available:
             title="Required">
         <span>sku<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The sku name of this product sku.
 {{% /md %}}</dd>
@@ -701,7 +704,7 @@ The following output properties are available:
             title="Required">
         <span>sku<wbr>Code</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The sku code of this product sku.
 {{% /md %}}</dd>
@@ -710,7 +713,7 @@ The following output properties are available:
             title="Required">
         <span>sku<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The sku name of this product sku.
 {{% /md %}}</dd>
@@ -728,7 +731,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/marketplace?tab=doc#GetProductProductSkusImage">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/marketplace?tab=doc#GetProductProductSkusImage">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -741,7 +744,7 @@ The following output properties are available:
             title="Required">
         <span>Image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Ecs image id.
 {{% /md %}}</dd>
@@ -750,7 +753,7 @@ The following output properties are available:
             title="Required">
         <span>Image<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Ecs image display name.
 {{% /md %}}</dd>
@@ -759,7 +762,7 @@ The following output properties are available:
             title="Required">
         <span>Region<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Ecs image region.
 {{% /md %}}</dd>
@@ -775,7 +778,7 @@ The following output properties are available:
             title="Required">
         <span>Image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Ecs image id.
 {{% /md %}}</dd>
@@ -784,7 +787,7 @@ The following output properties are available:
             title="Required">
         <span>Image<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Ecs image display name.
 {{% /md %}}</dd>
@@ -793,7 +796,7 @@ The following output properties are available:
             title="Required">
         <span>Region<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Ecs image region.
 {{% /md %}}</dd>
@@ -809,7 +812,7 @@ The following output properties are available:
             title="Required">
         <span>image<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Ecs image id.
 {{% /md %}}</dd>
@@ -818,7 +821,7 @@ The following output properties are available:
             title="Required">
         <span>image<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Ecs image display name.
 {{% /md %}}</dd>
@@ -827,7 +830,7 @@ The following output properties are available:
             title="Required">
         <span>region<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Ecs image region.
 {{% /md %}}</dd>
@@ -843,7 +846,7 @@ The following output properties are available:
             title="Required">
         <span>image_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Ecs image id.
 {{% /md %}}</dd>
@@ -852,7 +855,7 @@ The following output properties are available:
             title="Required">
         <span>image_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Ecs image display name.
 {{% /md %}}</dd>
@@ -861,7 +864,7 @@ The following output properties are available:
             title="Required">
         <span>region<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Ecs image region.
 {{% /md %}}</dd>
@@ -879,7 +882,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/marketplace?tab=doc#GetProductProductSkusPackageVersion">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/marketplace?tab=doc#GetProductProductSkusPackageVersion">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -892,7 +895,7 @@ The following output properties are available:
             title="Required">
         <span>Package<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The package name of this product sku package.
 {{% /md %}}</dd>
@@ -901,7 +904,7 @@ The following output properties are available:
             title="Required">
         <span>Package<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The package version of this product sku package. Currently, the API products can return package_version, but others can not for ensure.
 {{% /md %}}</dd>
@@ -917,7 +920,7 @@ The following output properties are available:
             title="Required">
         <span>Package<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The package name of this product sku package.
 {{% /md %}}</dd>
@@ -926,7 +929,7 @@ The following output properties are available:
             title="Required">
         <span>Package<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The package version of this product sku package. Currently, the API products can return package_version, but others can not for ensure.
 {{% /md %}}</dd>
@@ -942,7 +945,7 @@ The following output properties are available:
             title="Required">
         <span>package<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The package name of this product sku package.
 {{% /md %}}</dd>
@@ -951,7 +954,7 @@ The following output properties are available:
             title="Required">
         <span>package<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The package version of this product sku package. Currently, the API products can return package_version, but others can not for ensure.
 {{% /md %}}</dd>
@@ -967,7 +970,7 @@ The following output properties are available:
             title="Required">
         <span>package<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The package name of this product sku package.
 {{% /md %}}</dd>
@@ -976,7 +979,7 @@ The following output properties are available:
             title="Required">
         <span>package_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The package version of this product sku package. Currently, the API products can return package_version, but others can not for ensure.
 {{% /md %}}</dd>

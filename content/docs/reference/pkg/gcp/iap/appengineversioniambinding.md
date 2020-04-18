@@ -91,8 +91,6 @@ const member = new gcp.iap.AppEngineVersionIamMember("member", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/iap_app_engine_version_iam.html.markdown.
-
 
 
 ## Create a AppEngineVersionIamBinding Resource
@@ -100,7 +98,7 @@ const member = new gcp.iap.AppEngineVersionIamMember("member", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/iap/#AppEngineVersionIamBinding">AppEngineVersionIamBinding</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/iap/#AppEngineVersionIamBindingArgs">AppEngineVersionIamBindingArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/iap/#AppEngineVersionIamBinding">AppEngineVersionIamBinding</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/iap/#AppEngineVersionIamBindingArgs">AppEngineVersionIamBindingArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -108,7 +106,7 @@ const member = new gcp.iap.AppEngineVersionIamMember("member", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAppEngineVersionIamBinding<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/iap?tab=doc#AppEngineVersionIamBindingArgs">AppEngineVersionIamBindingArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/iap?tab=doc#AppEngineVersionIamBinding">AppEngineVersionIamBinding</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAppEngineVersionIamBinding<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iap?tab=doc#AppEngineVersionIamBindingArgs">AppEngineVersionIamBindingArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iap?tab=doc#AppEngineVersionIamBinding">AppEngineVersionIamBinding</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -208,44 +206,24 @@ const member = new gcp.iap.AppEngineVersionIamMember("member", {
             title="Required">
         <span>App<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appengineversioniambindingcondition">App<wbr>Engine<wbr>Version<wbr>Iam<wbr>Binding<wbr>Condition<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
-Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The role that should be applied. Only one
 `gcp.iap.AppEngineVersionIamBinding` can be used per role. Note that custom roles must be of the format
@@ -256,7 +234,7 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Required">
         <span>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Service id of the App Engine application Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
@@ -265,9 +243,29 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Required">
         <span>Version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Version id of the App Engine application Used to find the parent resource to bind the IAM policy to
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Condition</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appengineversioniambindingcondition">App<wbr>Engine<wbr>Version<wbr>Iam<wbr>Binding<wbr>Condition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 {{% /md %}}</dd>
 
 </dl>
@@ -281,44 +279,24 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Required">
         <span>App<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appengineversioniambindingcondition">*App<wbr>Engine<wbr>Version<wbr>Iam<wbr>Binding<wbr>Condition</a></span>
-    </dt>
-    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
-Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The role that should be applied. Only one
 `gcp.iap.AppEngineVersionIamBinding` can be used per role. Note that custom roles must be of the format
@@ -329,7 +307,7 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Required">
         <span>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Service id of the App Engine application Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
@@ -338,9 +316,29 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Required">
         <span>Version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Version id of the App Engine application Used to find the parent resource to bind the IAM policy to
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Condition</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appengineversioniambindingcondition">App<wbr>Engine<wbr>Version<wbr>Iam<wbr>Binding<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 {{% /md %}}</dd>
 
 </dl>
@@ -354,44 +352,24 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Required">
         <span>app<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appengineversioniambindingcondition">App<wbr>Engine<wbr>Version<wbr>Iam<wbr>Binding<wbr>Condition?</a></span>
-    </dt>
-    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
-Structure is documented below.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The role that should be applied. Only one
 `gcp.iap.AppEngineVersionIamBinding` can be used per role. Note that custom roles must be of the format
@@ -402,7 +380,7 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Required">
         <span>service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Service id of the App Engine application Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
@@ -411,9 +389,29 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Required">
         <span>version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Version id of the App Engine application Used to find the parent resource to bind the IAM policy to
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>condition</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#appengineversioniambindingcondition">App<wbr>Engine<wbr>Version<wbr>Iam<wbr>Binding<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
+Structure is documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the project in which the resource belongs.
+If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
 {{% /md %}}</dd>
 
 </dl>
@@ -427,9 +425,46 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Required">
         <span>app_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>members</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>role</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The role that should be applied. Only one
+`gcp.iap.AppEngineVersionIamBinding` can be used per role. Note that custom roles must be of the format
+`[projects|organizations]/{parent-name}/roles/{role-name}`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>service</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Service id of the App Engine application Used to find the parent resource to bind the IAM policy to
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>version_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Version id of the App Engine application Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -442,51 +477,14 @@ If it is not provided, the project will be parsed from the identifier of the par
 Structure is documented below.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The role that should be applied. Only one
-`gcp.iap.AppEngineVersionIamBinding` can be used per role. Note that custom roles must be of the format
-`[projects|organizations]/{parent-name}/roles/{role-name}`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>service</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Service id of the App Engine application Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>version_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Version id of the App Engine application Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
 
 </dl>
@@ -510,77 +508,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>App<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appengineversioniambindingcondition">App<wbr>Engine<wbr>Version<wbr>Iam<wbr>Binding<wbr>Condition?</a></span>
-    </dt>
-    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
-Structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the IAM policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The role that should be applied. Only one
-`gcp.iap.AppEngineVersionIamBinding` can be used per role. Note that custom roles must be of the format
-`[projects|organizations]/{parent-name}/roles/{role-name}`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Service id of the App Engine application Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Version<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Version id of the App Engine application Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
 
 </dl>
@@ -592,77 +524,11 @@ If it is not provided, the project will be parsed from the identifier of the par
 
     <dt class="property-"
             title="">
-        <span>App<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appengineversioniambindingcondition">*App<wbr>Engine<wbr>Version<wbr>Iam<wbr>Binding<wbr>Condition</a></span>
-    </dt>
-    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
-Structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the IAM policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The role that should be applied. Only one
-`gcp.iap.AppEngineVersionIamBinding` can be used per role. Note that custom roles must be of the format
-`[projects|organizations]/{parent-name}/roles/{role-name}`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Service</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Service id of the App Engine application Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Version<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Version id of the App Engine application Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
 
 </dl>
@@ -674,77 +540,11 @@ If it is not provided, the project will be parsed from the identifier of the par
 
     <dt class="property-"
             title="">
-        <span>app<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appengineversioniambindingcondition">App<wbr>Engine<wbr>Version<wbr>Iam<wbr>Binding<wbr>Condition?</a></span>
-    </dt>
-    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
-Structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the IAM policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The role that should be applied. Only one
-`gcp.iap.AppEngineVersionIamBinding` can be used per role. Note that custom roles must be of the format
-`[projects|organizations]/{parent-name}/roles/{role-name}`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Service id of the App Engine application Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>version<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Version id of the App Engine application Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
 
 </dl>
@@ -756,77 +556,11 @@ If it is not provided, the project will be parsed from the identifier of the par
 
     <dt class="property-"
             title="">
-        <span>app_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appengineversioniambindingcondition">Dict[App<wbr>Engine<wbr>Version<wbr>Iam<wbr>Binding<wbr>Condition]</a></span>
-    </dt>
-    <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
-Structure is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the IAM policy.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The role that should be applied. Only one
-`gcp.iap.AppEngineVersionIamBinding` can be used per role. Note that custom roles must be of the format
-`[projects|organizations]/{parent-name}/roles/{role-name}`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>service</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Service id of the App Engine application Used to find the parent resource to bind the IAM policy to
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>version_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Version id of the App Engine application Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
 
 </dl>
@@ -854,7 +588,7 @@ Get an existing AppEngineVersionIamBinding resource's state with the given name,
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAppEngineVersionIamBinding<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/iap?tab=doc#AppEngineVersionIamBindingState">AppEngineVersionIamBindingState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/iap?tab=doc#AppEngineVersionIamBinding">AppEngineVersionIamBinding</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAppEngineVersionIamBinding<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iap?tab=doc#AppEngineVersionIamBindingState">AppEngineVersionIamBindingState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iap?tab=doc#AppEngineVersionIamBinding">AppEngineVersionIamBinding</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -968,7 +702,7 @@ The following state arguments are supported:
             title="Optional">
         <span>App<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
@@ -977,7 +711,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Condition</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appengineversioniambindingcondition">App<wbr>Engine<wbr>Version<wbr>Iam<wbr>Binding<wbr>Condition<wbr>Args?</a></span>
+        <span class="property-type"><a href="#appengineversioniambindingcondition">App<wbr>Engine<wbr>Version<wbr>Iam<wbr>Binding<wbr>Condition<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
 Structure is documented below.
@@ -987,7 +721,7 @@ Structure is documented below.
             title="Optional">
         <span>Etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the IAM policy.
 {{% /md %}}</dd>
@@ -996,7 +730,7 @@ Structure is documented below.
             title="Optional">
         <span>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1004,7 +738,7 @@ Structure is documented below.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
@@ -1014,7 +748,7 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Optional">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The role that should be applied. Only one
 `gcp.iap.AppEngineVersionIamBinding` can be used per role. Note that custom roles must be of the format
@@ -1025,7 +759,7 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Optional">
         <span>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Service id of the App Engine application Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
@@ -1034,7 +768,7 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Optional">
         <span>Version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Version id of the App Engine application Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
@@ -1050,7 +784,7 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Optional">
         <span>App<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
@@ -1059,7 +793,7 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Optional">
         <span>Condition</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appengineversioniambindingcondition">*App<wbr>Engine<wbr>Version<wbr>Iam<wbr>Binding<wbr>Condition</a></span>
+        <span class="property-type"><a href="#appengineversioniambindingcondition">App<wbr>Engine<wbr>Version<wbr>Iam<wbr>Binding<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
 Structure is documented below.
@@ -1069,7 +803,7 @@ Structure is documented below.
             title="Optional">
         <span>Etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the IAM policy.
 {{% /md %}}</dd>
@@ -1078,7 +812,7 @@ Structure is documented below.
             title="Optional">
         <span>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1086,7 +820,7 @@ Structure is documented below.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
@@ -1096,7 +830,7 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Optional">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The role that should be applied. Only one
 `gcp.iap.AppEngineVersionIamBinding` can be used per role. Note that custom roles must be of the format
@@ -1107,7 +841,7 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Optional">
         <span>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Service id of the App Engine application Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
@@ -1116,7 +850,7 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Optional">
         <span>Version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Version id of the App Engine application Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
@@ -1132,7 +866,7 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Optional">
         <span>app<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
@@ -1141,7 +875,7 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Optional">
         <span>condition</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#appengineversioniambindingcondition">App<wbr>Engine<wbr>Version<wbr>Iam<wbr>Binding<wbr>Condition?</a></span>
+        <span class="property-type"><a href="#appengineversioniambindingcondition">App<wbr>Engine<wbr>Version<wbr>Iam<wbr>Binding<wbr>Condition</a></span>
     </dt>
     <dd>{{% md %}}An [IAM Condition](https://cloud.google.com/iam/docs/conditions-overview) for a given binding.
 Structure is documented below.
@@ -1151,7 +885,7 @@ Structure is documented below.
             title="Optional">
         <span>etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the IAM policy.
 {{% /md %}}</dd>
@@ -1160,7 +894,7 @@ Structure is documented below.
             title="Optional">
         <span>members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1168,7 +902,7 @@ Structure is documented below.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
@@ -1178,7 +912,7 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Optional">
         <span>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The role that should be applied. Only one
 `gcp.iap.AppEngineVersionIamBinding` can be used per role. Note that custom roles must be of the format
@@ -1189,7 +923,7 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Optional">
         <span>service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Service id of the App Engine application Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
@@ -1198,7 +932,7 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Optional">
         <span>version<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Version id of the App Engine application Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
@@ -1214,7 +948,7 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Optional">
         <span>app_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Id of the App Engine application. Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
@@ -1233,7 +967,7 @@ Structure is documented below.
             title="Optional">
         <span>etag</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The etag of the IAM policy.
 {{% /md %}}</dd>
@@ -1242,7 +976,7 @@ Structure is documented below.
             title="Optional">
         <span>members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1250,7 +984,7 @@ Structure is documented below.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
@@ -1260,7 +994,7 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Optional">
         <span>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The role that should be applied. Only one
 `gcp.iap.AppEngineVersionIamBinding` can be used per role. Note that custom roles must be of the format
@@ -1271,7 +1005,7 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Optional">
         <span>service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Service id of the App Engine application Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
@@ -1280,7 +1014,7 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Optional">
         <span>version_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Version id of the App Engine application Used to find the parent resource to bind the IAM policy to
 {{% /md %}}</dd>
@@ -1305,7 +1039,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/iap?tab=doc#AppEngineVersionIamBindingConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/iap?tab=doc#AppEngineVersionIamBindingConditionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iap?tab=doc#AppEngineVersionIamBindingConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/iap?tab=doc#AppEngineVersionIamBindingConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1314,20 +1048,11 @@ If it is not provided, the project will be parsed from the identifier of the par
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
 {{% /md %}}</dd>
@@ -1336,9 +1061,18 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Required">
         <span>Title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A title for the expression, i.e. a short string describing its purpose.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
 {{% /md %}}</dd>
 
 </dl>
@@ -1348,20 +1082,11 @@ If it is not provided, the project will be parsed from the identifier of the par
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
 {{% /md %}}</dd>
@@ -1370,9 +1095,18 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Required">
         <span>Title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A title for the expression, i.e. a short string describing its purpose.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
 {{% /md %}}</dd>
 
 </dl>
@@ -1382,20 +1116,11 @@ If it is not provided, the project will be parsed from the identifier of the par
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
 {{% /md %}}</dd>
@@ -1404,9 +1129,18 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Required">
         <span>title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A title for the expression, i.e. a short string describing its purpose.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
 {{% /md %}}</dd>
 
 </dl>
@@ -1416,20 +1150,11 @@ If it is not provided, the project will be parsed from the identifier of the par
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Textual representation of an expression in Common Expression Language syntax.
 {{% /md %}}</dd>
@@ -1438,9 +1163,18 @@ If it is not provided, the project will be parsed from the identifier of the par
             title="Required">
         <span>title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A title for the expression, i.e. a short string describing its purpose.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}An optional description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
 {{% /md %}}</dd>
 
 </dl>
@@ -1460,6 +1194,7 @@ If it is not provided, the project will be parsed from the identifier of the par
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

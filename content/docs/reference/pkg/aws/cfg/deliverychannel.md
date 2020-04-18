@@ -42,7 +42,7 @@ const fooRecorder = new aws.cfg.Recorder("foo", {
 });
 const fooDeliveryChannel = new aws.cfg.DeliveryChannel("foo", {
     s3BucketName: bucket.bucket,
-}, { dependsOn: [fooRecorder] });
+}, {dependsOn: [fooRecorder]});
 const rolePolicy = new aws.iam.RolePolicy("p", {
     policy: pulumi.interpolate`{
   "Version": "2012-10-17",
@@ -74,7 +74,7 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cfg/#DeliveryChannel">DeliveryChannel</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cfg/#DeliveryChannelArgs">DeliveryChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cfg/#DeliveryChannel">DeliveryChannel</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/cfg/#DeliveryChannelArgs">DeliveryChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -82,7 +82,7 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDeliveryChannel<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#DeliveryChannelArgs">DeliveryChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#DeliveryChannel">DeliveryChannel</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewDeliveryChannel<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#DeliveryChannelArgs">DeliveryChannelArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#DeliveryChannel">DeliveryChannel</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -178,29 +178,29 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the delivery channel. Defaults to `default`. Changing it recreates the resource.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>S3Bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket used to store the configuration history.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the delivery channel. Defaults to `default`. Changing it recreates the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>S3Key<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The prefix for the specified S3 bucket.
 {{% /md %}}</dd>
@@ -209,7 +209,7 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
             title="Optional">
         <span>Snapshot<wbr>Delivery<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverychannelsnapshotdeliveryproperties">Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties<wbr>Args?</a></span>
+        <span class="property-type"><a href="#deliverychannelsnapshotdeliveryproperties">Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options for how AWS Config delivers configuration snapshots. See below
 {{% /md %}}</dd>
@@ -218,7 +218,7 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
             title="Optional">
         <span>Sns<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS topic that AWS Config delivers notifications to.
 {{% /md %}}</dd>
@@ -230,29 +230,29 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the delivery channel. Defaults to `default`. Changing it recreates the resource.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>S3Bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket used to store the configuration history.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the delivery channel. Defaults to `default`. Changing it recreates the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>S3Key<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The prefix for the specified S3 bucket.
 {{% /md %}}</dd>
@@ -261,7 +261,7 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
             title="Optional">
         <span>Snapshot<wbr>Delivery<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverychannelsnapshotdeliveryproperties">*Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties</a></span>
+        <span class="property-type"><a href="#deliverychannelsnapshotdeliveryproperties">Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Options for how AWS Config delivers configuration snapshots. See below
 {{% /md %}}</dd>
@@ -270,7 +270,7 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
             title="Optional">
         <span>Sns<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS topic that AWS Config delivers notifications to.
 {{% /md %}}</dd>
@@ -282,29 +282,29 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the delivery channel. Defaults to `default`. Changing it recreates the resource.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>s3Bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket used to store the configuration history.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the delivery channel. Defaults to `default`. Changing it recreates the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>s3Key<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The prefix for the specified S3 bucket.
 {{% /md %}}</dd>
@@ -313,7 +313,7 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
             title="Optional">
         <span>snapshot<wbr>Delivery<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverychannelsnapshotdeliveryproperties">Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties?</a></span>
+        <span class="property-type"><a href="#deliverychannelsnapshotdeliveryproperties">Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Options for how AWS Config delivers configuration snapshots. See below
 {{% /md %}}</dd>
@@ -322,7 +322,7 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
             title="Optional">
         <span>sns<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS topic that AWS Config delivers notifications to.
 {{% /md %}}</dd>
@@ -334,29 +334,29 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the delivery channel. Defaults to `default`. Changing it recreates the resource.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>s3_<wbr>bucket_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket used to store the configuration history.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the delivery channel. Defaults to `default`. Changing it recreates the resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>s3_<wbr>key_<wbr>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The prefix for the specified S3 bucket.
 {{% /md %}}</dd>
@@ -374,7 +374,7 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
             title="Optional">
         <span>sns_<wbr>topic_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS topic that AWS Config delivers notifications to.
 {{% /md %}}</dd>
@@ -383,224 +383,6 @@ const rolePolicy = new aws.iam.RolePolicy("p", {
 {{% /choosable %}}
 
 
-
-
-
-
-
-## DeliveryChannel Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the delivery channel. Defaults to `default`. Changing it recreates the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Bucket<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the S3 bucket used to store the configuration history.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Key<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The prefix for the specified S3 bucket.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Snapshot<wbr>Delivery<wbr>Properties</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverychannelsnapshotdeliveryproperties">Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties?</a></span>
-    </dt>
-    <dd>{{% md %}}Options for how AWS Config delivers configuration snapshots. See below
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sns<wbr>Topic<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the SNS topic that AWS Config delivers notifications to.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the delivery channel. Defaults to `default`. Changing it recreates the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Bucket<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the S3 bucket used to store the configuration history.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>S3Key<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The prefix for the specified S3 bucket.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Snapshot<wbr>Delivery<wbr>Properties</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverychannelsnapshotdeliveryproperties">*Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}Options for how AWS Config delivers configuration snapshots. See below
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sns<wbr>Topic<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the SNS topic that AWS Config delivers notifications to.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the delivery channel. Defaults to `default`. Changing it recreates the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>s3Bucket<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the S3 bucket used to store the configuration history.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>s3Key<wbr>Prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The prefix for the specified S3 bucket.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>snapshot<wbr>Delivery<wbr>Properties</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverychannelsnapshotdeliveryproperties">Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties?</a></span>
-    </dt>
-    <dd>{{% md %}}Options for how AWS Config delivers configuration snapshots. See below
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sns<wbr>Topic<wbr>Arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the SNS topic that AWS Config delivers notifications to.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the delivery channel. Defaults to `default`. Changing it recreates the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>s3_<wbr>bucket_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the S3 bucket used to store the configuration history.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>s3_<wbr>key_<wbr>prefix</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The prefix for the specified S3 bucket.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>snapshot_<wbr>delivery_<wbr>properties</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverychannelsnapshotdeliveryproperties">Dict[Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties]</a></span>
-    </dt>
-    <dd>{{% md %}}Options for how AWS Config delivers configuration snapshots. See below
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sns_<wbr>topic_<wbr>arn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ARN of the SNS topic that AWS Config delivers notifications to.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -624,7 +406,7 @@ Get an existing DeliveryChannel resource's state with the given name, ID, and op
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeliveryChannel<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#DeliveryChannelState">DeliveryChannelState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#DeliveryChannel">DeliveryChannel</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetDeliveryChannel<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#DeliveryChannelState">DeliveryChannelState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#DeliveryChannel">DeliveryChannel</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -738,7 +520,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the delivery channel. Defaults to `default`. Changing it recreates the resource.
 {{% /md %}}</dd>
@@ -747,7 +529,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket used to store the configuration history.
 {{% /md %}}</dd>
@@ -756,7 +538,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Key<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The prefix for the specified S3 bucket.
 {{% /md %}}</dd>
@@ -765,7 +547,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Snapshot<wbr>Delivery<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverychannelsnapshotdeliveryproperties">Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties<wbr>Args?</a></span>
+        <span class="property-type"><a href="#deliverychannelsnapshotdeliveryproperties">Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Options for how AWS Config delivers configuration snapshots. See below
 {{% /md %}}</dd>
@@ -774,7 +556,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sns<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS topic that AWS Config delivers notifications to.
 {{% /md %}}</dd>
@@ -790,7 +572,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the delivery channel. Defaults to `default`. Changing it recreates the resource.
 {{% /md %}}</dd>
@@ -799,7 +581,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket used to store the configuration history.
 {{% /md %}}</dd>
@@ -808,7 +590,7 @@ The following state arguments are supported:
             title="Optional">
         <span>S3Key<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The prefix for the specified S3 bucket.
 {{% /md %}}</dd>
@@ -817,7 +599,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Snapshot<wbr>Delivery<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverychannelsnapshotdeliveryproperties">*Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties</a></span>
+        <span class="property-type"><a href="#deliverychannelsnapshotdeliveryproperties">Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Options for how AWS Config delivers configuration snapshots. See below
 {{% /md %}}</dd>
@@ -826,7 +608,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sns<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS topic that AWS Config delivers notifications to.
 {{% /md %}}</dd>
@@ -842,7 +624,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the delivery channel. Defaults to `default`. Changing it recreates the resource.
 {{% /md %}}</dd>
@@ -851,7 +633,7 @@ The following state arguments are supported:
             title="Optional">
         <span>s3Bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket used to store the configuration history.
 {{% /md %}}</dd>
@@ -860,7 +642,7 @@ The following state arguments are supported:
             title="Optional">
         <span>s3Key<wbr>Prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The prefix for the specified S3 bucket.
 {{% /md %}}</dd>
@@ -869,7 +651,7 @@ The following state arguments are supported:
             title="Optional">
         <span>snapshot<wbr>Delivery<wbr>Properties</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#deliverychannelsnapshotdeliveryproperties">Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties?</a></span>
+        <span class="property-type"><a href="#deliverychannelsnapshotdeliveryproperties">Delivery<wbr>Channel<wbr>Snapshot<wbr>Delivery<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Options for how AWS Config delivers configuration snapshots. See below
 {{% /md %}}</dd>
@@ -878,7 +660,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sns<wbr>Topic<wbr>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS topic that AWS Config delivers notifications to.
 {{% /md %}}</dd>
@@ -894,7 +676,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the delivery channel. Defaults to `default`. Changing it recreates the resource.
 {{% /md %}}</dd>
@@ -903,7 +685,7 @@ The following state arguments are supported:
             title="Optional">
         <span>s3_<wbr>bucket_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the S3 bucket used to store the configuration history.
 {{% /md %}}</dd>
@@ -912,7 +694,7 @@ The following state arguments are supported:
             title="Optional">
         <span>s3_<wbr>key_<wbr>prefix</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The prefix for the specified S3 bucket.
 {{% /md %}}</dd>
@@ -930,7 +712,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sns_<wbr>topic_<wbr>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the SNS topic that AWS Config delivers notifications to.
 {{% /md %}}</dd>
@@ -955,7 +737,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#DeliveryChannelSnapshotDeliveryPropertiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/cfg?tab=doc#DeliveryChannelSnapshotDeliveryPropertiesOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#DeliveryChannelSnapshotDeliveryPropertiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/cfg?tab=doc#DeliveryChannelSnapshotDeliveryPropertiesOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -968,7 +750,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Delivery<wbr>Frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}- The frequency with which AWS Config recurringly delivers configuration snapshots.
 e.g. `One_Hour` or `Three_Hours`.
@@ -986,7 +768,7 @@ Valid values are listed [here](https://docs.aws.amazon.com/config/latest/APIRefe
             title="Optional">
         <span>Delivery<wbr>Frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}- The frequency with which AWS Config recurringly delivers configuration snapshots.
 e.g. `One_Hour` or `Three_Hours`.
@@ -1004,7 +786,7 @@ Valid values are listed [here](https://docs.aws.amazon.com/config/latest/APIRefe
             title="Optional">
         <span>delivery<wbr>Frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}- The frequency with which AWS Config recurringly delivers configuration snapshots.
 e.g. `One_Hour` or `Three_Hours`.
@@ -1022,7 +804,7 @@ Valid values are listed [here](https://docs.aws.amazon.com/config/latest/APIRefe
             title="Optional">
         <span>delivery<wbr>Frequency</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}- The frequency with which AWS Config recurringly delivers configuration snapshots.
 e.g. `One_Hour` or `Three_Hours`.

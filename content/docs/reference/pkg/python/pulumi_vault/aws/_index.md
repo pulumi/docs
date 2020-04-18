@@ -286,9 +286,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Configures the periodic tidying operation of the whitelisted identity entries.</p>
 <p>For more information, see the
 <a class="reference external" href="https://www.vaultproject.io/api/auth/aws/index.html#configure-identity-whitelist-tidy-operation">Vault docs</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_identity_whitelist.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_identity_whitelist.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -391,9 +388,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 accomplished using a signed identity request from IAM or using ec2
 instance metadata. For more information, see the <a class="reference external" href="https://www.vaultproject.io/docs/auth/aws.html">Vault
 documentation</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_login.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_login.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -646,9 +640,6 @@ instances or principals that can perform the login operation against the
 backend. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/aws.html">Vault
 documentation</a> for more
 information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_role.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_role.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1188,9 +1179,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vault.aws.AuthBackendRoleTag">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.aws.</code><code class="sig-name descname">AuthBackendRoleTag</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_instance_migration=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">disallow_reauthentication=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">max_ttl=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.aws.AuthBackendRoleTag" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads role tag information from an AWS auth backend in Vault.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_role_tag.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_role_tag.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1333,9 +1321,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_vault.aws.AuthBackendRoletagBlacklist">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.aws.</code><code class="sig-name descname">AuthBackendRoletagBlacklist</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">disable_periodic_tidy=None</em>, <em class="sig-param">safety_buffer=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.aws.AuthBackendRoletagBlacklist" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configures the periodic tidying operation of the blacklisted role tag entries.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_roletag_blacklist.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/aws_auth_backend_roletag_blacklist.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1744,10 +1729,18 @@ then this default TTL will be used. Valid only when <code class="docutils litera
 one of <code class="docutils literal notranslate"><span class="pre">assumed_role</span></code> or <code class="docutils literal notranslate"><span class="pre">federation_token</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name to identify this role within the backend.
 Must be unique within the backend.</p></li>
-<li><p><strong>policy_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The ARN for a pre-existing policy to associate
-with this role. Either <code class="docutils literal notranslate"><span class="pre">policy_document</span></code> or <code class="docutils literal notranslate"><span class="pre">policy_arns</span></code> must be specified.</p></li>
-<li><p><strong>policy_document</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The JSON-formatted policy to associate with this
-role. Either <code class="docutils literal notranslate"><span class="pre">policy_document</span></code> or <code class="docutils literal notranslate"><span class="pre">policy_arns</span></code> must be specified.</p></li>
+<li><p><strong>policy_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies a list of AWS managed policy ARNs. The
+behavior depends on the credential type. With <code class="docutils literal notranslate"><span class="pre">iam_user</span></code>, the policies will be
+attached to IAM users when they are requested. With <code class="docutils literal notranslate"><span class="pre">assumed_role</span></code> and
+<code class="docutils literal notranslate"><span class="pre">federation_token</span></code>, the policy ARNs will act as a filter on what the credentials
+can do, similar to <code class="docutils literal notranslate"><span class="pre">policy_document</span></code>. When <code class="docutils literal notranslate"><span class="pre">credential_type</span></code> is <code class="docutils literal notranslate"><span class="pre">iam_user</span></code> or
+<code class="docutils literal notranslate"><span class="pre">federation_token</span></code>, at least one of <code class="docutils literal notranslate"><span class="pre">policy_document</span></code> or <code class="docutils literal notranslate"><span class="pre">policy_arns</span></code> must
+be specified.</p></li>
+<li><p><strong>policy_document</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM policy document for the role. The
+behavior depends on the credential type. With <code class="docutils literal notranslate"><span class="pre">iam_user</span></code>, the policy document
+will be attached to the IAM user generated and augment the permissions the IAM
+user has. With <code class="docutils literal notranslate"><span class="pre">assumed_role</span></code> and <code class="docutils literal notranslate"><span class="pre">federation_token</span></code>, the policy document will
+act as a filter on what the credentials can do, similar to <code class="docutils literal notranslate"><span class="pre">policy_arns</span></code>.</p></li>
 <li><p><strong>role_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies the ARNs of the AWS roles this Vault role
 is allowed to assume. Required when <code class="docutils literal notranslate"><span class="pre">credential_type</span></code> is <code class="docutils literal notranslate"><span class="pre">assumed_role</span></code> and
 prohibited otherwise.</p></li>
@@ -1797,15 +1790,23 @@ Must be unique within the backend.</p>
 <dl class="attribute">
 <dt id="pulumi_vault.aws.SecretBackendRole.policy_arns">
 <code class="sig-name descname">policy_arns</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.aws.SecretBackendRole.policy_arns" title="Permalink to this definition">¶</a></dt>
-<dd><p>The ARN for a pre-existing policy to associate
-with this role. Either <code class="docutils literal notranslate"><span class="pre">policy_document</span></code> or <code class="docutils literal notranslate"><span class="pre">policy_arns</span></code> must be specified.</p>
+<dd><p>Specifies a list of AWS managed policy ARNs. The
+behavior depends on the credential type. With <code class="docutils literal notranslate"><span class="pre">iam_user</span></code>, the policies will be
+attached to IAM users when they are requested. With <code class="docutils literal notranslate"><span class="pre">assumed_role</span></code> and
+<code class="docutils literal notranslate"><span class="pre">federation_token</span></code>, the policy ARNs will act as a filter on what the credentials
+can do, similar to <code class="docutils literal notranslate"><span class="pre">policy_document</span></code>. When <code class="docutils literal notranslate"><span class="pre">credential_type</span></code> is <code class="docutils literal notranslate"><span class="pre">iam_user</span></code> or
+<code class="docutils literal notranslate"><span class="pre">federation_token</span></code>, at least one of <code class="docutils literal notranslate"><span class="pre">policy_document</span></code> or <code class="docutils literal notranslate"><span class="pre">policy_arns</span></code> must
+be specified.</p>
 </dd></dl>
 
 <dl class="attribute">
 <dt id="pulumi_vault.aws.SecretBackendRole.policy_document">
 <code class="sig-name descname">policy_document</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_vault.aws.SecretBackendRole.policy_document" title="Permalink to this definition">¶</a></dt>
-<dd><p>The JSON-formatted policy to associate with this
-role. Either <code class="docutils literal notranslate"><span class="pre">policy_document</span></code> or <code class="docutils literal notranslate"><span class="pre">policy_arns</span></code> must be specified.</p>
+<dd><p>The IAM policy document for the role. The
+behavior depends on the credential type. With <code class="docutils literal notranslate"><span class="pre">iam_user</span></code>, the policy document
+will be attached to the IAM user generated and augment the permissions the IAM
+user has. With <code class="docutils literal notranslate"><span class="pre">assumed_role</span></code> and <code class="docutils literal notranslate"><span class="pre">federation_token</span></code>, the policy document will
+act as a filter on what the credentials can do, similar to <code class="docutils literal notranslate"><span class="pre">policy_arns</span></code>.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1842,10 +1843,18 @@ then this default TTL will be used. Valid only when <code class="docutils litera
 one of <code class="docutils literal notranslate"><span class="pre">assumed_role</span></code> or <code class="docutils literal notranslate"><span class="pre">federation_token</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name to identify this role within the backend.
 Must be unique within the backend.</p></li>
-<li><p><strong>policy_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The ARN for a pre-existing policy to associate
-with this role. Either <code class="docutils literal notranslate"><span class="pre">policy_document</span></code> or <code class="docutils literal notranslate"><span class="pre">policy_arns</span></code> must be specified.</p></li>
-<li><p><strong>policy_document</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The JSON-formatted policy to associate with this
-role. Either <code class="docutils literal notranslate"><span class="pre">policy_document</span></code> or <code class="docutils literal notranslate"><span class="pre">policy_arns</span></code> must be specified.</p></li>
+<li><p><strong>policy_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies a list of AWS managed policy ARNs. The
+behavior depends on the credential type. With <code class="docutils literal notranslate"><span class="pre">iam_user</span></code>, the policies will be
+attached to IAM users when they are requested. With <code class="docutils literal notranslate"><span class="pre">assumed_role</span></code> and
+<code class="docutils literal notranslate"><span class="pre">federation_token</span></code>, the policy ARNs will act as a filter on what the credentials
+can do, similar to <code class="docutils literal notranslate"><span class="pre">policy_document</span></code>. When <code class="docutils literal notranslate"><span class="pre">credential_type</span></code> is <code class="docutils literal notranslate"><span class="pre">iam_user</span></code> or
+<code class="docutils literal notranslate"><span class="pre">federation_token</span></code>, at least one of <code class="docutils literal notranslate"><span class="pre">policy_document</span></code> or <code class="docutils literal notranslate"><span class="pre">policy_arns</span></code> must
+be specified.</p></li>
+<li><p><strong>policy_document</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IAM policy document for the role. The
+behavior depends on the credential type. With <code class="docutils literal notranslate"><span class="pre">iam_user</span></code>, the policy document
+will be attached to the IAM user generated and augment the permissions the IAM
+user has. With <code class="docutils literal notranslate"><span class="pre">assumed_role</span></code> and <code class="docutils literal notranslate"><span class="pre">federation_token</span></code>, the policy document will
+act as a filter on what the credentials can do, similar to <code class="docutils literal notranslate"><span class="pre">policy_arns</span></code>.</p></li>
 <li><p><strong>role_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Specifies the ARNs of the AWS roles this Vault role
 is allowed to assume. Required when <code class="docutils literal notranslate"><span class="pre">credential_type</span></code> is <code class="docutils literal notranslate"><span class="pre">assumed_role</span></code> and
 prohibited otherwise.</p></li>

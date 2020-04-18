@@ -15,7 +15,8 @@ To get more information about Google Cloud Storage Transfer, see:
 * How-to Guides
     * [Configuring Access to Data Sources and Sinks](https://cloud.google.com/storage-transfer/docs/configure-access)
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_transfer_job.html.markdown.
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -24,7 +25,7 @@ To get more information about Google Cloud Storage Transfer, see:
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/storage/#TransferJob">TransferJob</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/storage/#TransferJobArgs">TransferJobArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/storage/#TransferJob">TransferJob</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/storage/#TransferJobArgs">TransferJobArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -32,7 +33,7 @@ To get more information about Google Cloud Storage Transfer, see:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewTransferJob<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJobArgs">TransferJobArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJob">TransferJob</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewTransferJob<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobArgs">TransferJobArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJob">TransferJob</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -132,19 +133,9 @@ To get more information about Google Cloud Storage Transfer, see:
             title="Required">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Unique description to identify the Transfer Job.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The project in which the resource belongs. If it
-is not provided, the provider project is used.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -156,15 +147,6 @@ is not provided, the provider project is used.
     <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Transfer<wbr>Spec</span>
@@ -172,6 +154,25 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Transfer specification. Structure documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The project in which the resource belongs. If it
+is not provided, the provider project is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
 {{% /md %}}</dd>
 
 </dl>
@@ -185,19 +186,9 @@ is not provided, the provider project is used.
             title="Required">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Unique description to identify the Transfer Job.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The project in which the resource belongs. If it
-is not provided, the provider project is used.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -209,15 +200,6 @@ is not provided, the provider project is used.
     <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Transfer<wbr>Spec</span>
@@ -225,6 +207,25 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Transfer specification. Structure documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The project in which the resource belongs. If it
+is not provided, the provider project is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
 {{% /md %}}</dd>
 
 </dl>
@@ -238,19 +239,9 @@ is not provided, the provider project is used.
             title="Required">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Unique description to identify the Transfer Job.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The project in which the resource belongs. If it
-is not provided, the provider project is used.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -262,15 +253,6 @@ is not provided, the provider project is used.
     <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>transfer<wbr>Spec</span>
@@ -278,6 +260,25 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Transfer specification. Structure documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The project in which the resource belongs. If it
+is not provided, the provider project is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
 {{% /md %}}</dd>
 
 </dl>
@@ -291,19 +292,9 @@ is not provided, the provider project is used.
             title="Required">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Unique description to identify the Transfer Job.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The project in which the resource belongs. If it
-is not provided, the provider project is used.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -315,15 +306,6 @@ is not provided, the provider project is used.
     <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>transfer_<wbr>spec</span>
@@ -331,6 +313,25 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobtransferspec">Dict[Transfer<wbr>Job<wbr>Transfer<wbr>Spec]</a></span>
     </dt>
     <dd>{{% md %}}Transfer specification. Structure documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>project</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The project in which the resource belongs. If it
+is not provided, the provider project is used.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>status</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
 {{% /md %}}</dd>
 
 </dl>
@@ -356,7 +357,7 @@ The following output properties are available:
             title="">
         <span>Creation<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was created.
 {{% /md %}}</dd>
@@ -365,25 +366,16 @@ The following output properties are available:
             title="">
         <span>Deletion<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was deleted.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Unique description to identify the Transfer Job.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Last<wbr>Modification<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was last modified.
 {{% /md %}}</dd>
@@ -392,46 +384,9 @@ The following output properties are available:
             title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Transfer Job.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project in which the resource belongs. If it
-is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Schedule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule</a></span>
-    </dt>
-    <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Transfer<wbr>Spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec</a></span>
-    </dt>
-    <dd>{{% md %}}Transfer specification. Structure documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -445,7 +400,7 @@ is not provided, the provider project is used.
             title="">
         <span>Creation<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was created.
 {{% /md %}}</dd>
@@ -454,25 +409,16 @@ is not provided, the provider project is used.
             title="">
         <span>Deletion<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was deleted.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Unique description to identify the Transfer Job.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Last<wbr>Modification<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was last modified.
 {{% /md %}}</dd>
@@ -481,46 +427,9 @@ is not provided, the provider project is used.
             title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Transfer Job.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project in which the resource belongs. If it
-is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Schedule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule</a></span>
-    </dt>
-    <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Transfer<wbr>Spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec</a></span>
-    </dt>
-    <dd>{{% md %}}Transfer specification. Structure documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -534,7 +443,7 @@ is not provided, the provider project is used.
             title="">
         <span>creation<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was created.
 {{% /md %}}</dd>
@@ -543,25 +452,16 @@ is not provided, the provider project is used.
             title="">
         <span>deletion<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was deleted.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Unique description to identify the Transfer Job.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>last<wbr>Modification<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was last modified.
 {{% /md %}}</dd>
@@ -570,46 +470,9 @@ is not provided, the provider project is used.
             title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Transfer Job.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The project in which the resource belongs. If it
-is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>schedule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule</a></span>
-    </dt>
-    <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>transfer<wbr>Spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec</a></span>
-    </dt>
-    <dd>{{% md %}}Transfer specification. Structure documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -623,7 +486,7 @@ is not provided, the provider project is used.
             title="">
         <span>creation_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was created.
 {{% /md %}}</dd>
@@ -632,25 +495,16 @@ is not provided, the provider project is used.
             title="">
         <span>deletion_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was deleted.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Unique description to identify the Transfer Job.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>last_<wbr>modification_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was last modified.
 {{% /md %}}</dd>
@@ -659,46 +513,9 @@ is not provided, the provider project is used.
             title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Transfer Job.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The project in which the resource belongs. If it
-is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>schedule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobschedule">Dict[Transfer<wbr>Job<wbr>Schedule]</a></span>
-    </dt>
-    <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>transfer_<wbr>spec</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspec">Dict[Transfer<wbr>Job<wbr>Transfer<wbr>Spec]</a></span>
-    </dt>
-    <dd>{{% md %}}Transfer specification. Structure documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -726,7 +543,7 @@ Get an existing TransferJob resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTransferJob<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJobState">TransferJobState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJob">TransferJob</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetTransferJob<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobState">TransferJobState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJob">TransferJob</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -840,7 +657,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Creation<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was created.
 {{% /md %}}</dd>
@@ -849,7 +666,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Deletion<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was deleted.
 {{% /md %}}</dd>
@@ -858,7 +675,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Unique description to identify the Transfer Job.
 {{% /md %}}</dd>
@@ -867,7 +684,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Last<wbr>Modification<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was last modified.
 {{% /md %}}</dd>
@@ -876,7 +693,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Transfer Job.
 {{% /md %}}</dd>
@@ -885,7 +702,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
@@ -895,7 +712,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Schedule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule<wbr>Args?</a></span>
+        <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.
 {{% /md %}}</dd>
@@ -904,7 +721,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
 {{% /md %}}</dd>
@@ -913,7 +730,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Transfer<wbr>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Args?</a></span>
+        <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Transfer specification. Structure documented below.
 {{% /md %}}</dd>
@@ -929,7 +746,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Creation<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was created.
 {{% /md %}}</dd>
@@ -938,7 +755,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Deletion<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was deleted.
 {{% /md %}}</dd>
@@ -947,7 +764,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Unique description to identify the Transfer Job.
 {{% /md %}}</dd>
@@ -956,7 +773,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Last<wbr>Modification<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was last modified.
 {{% /md %}}</dd>
@@ -965,7 +782,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Transfer Job.
 {{% /md %}}</dd>
@@ -974,7 +791,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
@@ -984,7 +801,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Schedule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobschedule">*Transfer<wbr>Job<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.
 {{% /md %}}</dd>
@@ -993,7 +810,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
 {{% /md %}}</dd>
@@ -1002,7 +819,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Transfer<wbr>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspec">*Transfer<wbr>Job<wbr>Transfer<wbr>Spec</a></span>
+        <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Transfer specification. Structure documented below.
 {{% /md %}}</dd>
@@ -1018,7 +835,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>creation<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was created.
 {{% /md %}}</dd>
@@ -1027,7 +844,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>deletion<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was deleted.
 {{% /md %}}</dd>
@@ -1036,7 +853,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Unique description to identify the Transfer Job.
 {{% /md %}}</dd>
@@ -1045,7 +862,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>last<wbr>Modification<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was last modified.
 {{% /md %}}</dd>
@@ -1054,7 +871,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Transfer Job.
 {{% /md %}}</dd>
@@ -1063,7 +880,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
@@ -1073,7 +890,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>schedule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule?</a></span>
+        <span class="property-type"><a href="#transferjobschedule">Transfer<wbr>Job<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}Schedule specification defining when the Transfer Job should be scheduled to start, end and and what time to run. Structure documented below.
 {{% /md %}}</dd>
@@ -1082,7 +899,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
 {{% /md %}}</dd>
@@ -1091,7 +908,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>transfer<wbr>Spec</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec?</a></span>
+        <span class="property-type"><a href="#transferjobtransferspec">Transfer<wbr>Job<wbr>Transfer<wbr>Spec</a></span>
     </dt>
     <dd>{{% md %}}Transfer specification. Structure documented below.
 {{% /md %}}</dd>
@@ -1107,7 +924,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>creation_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was created.
 {{% /md %}}</dd>
@@ -1116,7 +933,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>deletion_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was deleted.
 {{% /md %}}</dd>
@@ -1125,7 +942,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Unique description to identify the Transfer Job.
 {{% /md %}}</dd>
@@ -1134,7 +951,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>last_<wbr>modification_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}When the Transfer Job was last modified.
 {{% /md %}}</dd>
@@ -1143,7 +960,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Transfer Job.
 {{% /md %}}</dd>
@@ -1152,7 +969,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The project in which the resource belongs. If it
 is not provided, the provider project is used.
@@ -1171,7 +988,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Status of the job. Default: `ENABLED`. **NOTE: The effect of the new job status takes place during a subsequent job run. For example, if you change the job status from ENABLED to DISABLED, and an operation spawned by the transfer is running, the status change would not affect the current operation.**
 {{% /md %}}</dd>
@@ -1205,7 +1022,7 @@ is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJobScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJobScheduleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobScheduleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1213,15 +1030,6 @@ is not provided, the provider project is used.
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Schedule<wbr>End<wbr>Date</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobschedulescheduleenddate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>End<wbr>Date<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1234,9 +1042,18 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Schedule<wbr>End<wbr>Date</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transferjobschedulescheduleenddate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>End<wbr>Date<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Start<wbr>Time<wbr>Of<wbr>Day</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobschedulestarttimeofday">Transfer<wbr>Job<wbr>Schedule<wbr>Start<wbr>Time<wbr>Of<wbr>Day<wbr>Args?</a></span>
+        <span class="property-type"><a href="#transferjobschedulestarttimeofday">Transfer<wbr>Job<wbr>Schedule<wbr>Start<wbr>Time<wbr>Of<wbr>Day<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer's start time in a day is specified in your local timezone. Structure documented below.
 {{% /md %}}</dd>
@@ -1247,15 +1064,6 @@ is not provided, the provider project is used.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Schedule<wbr>End<wbr>Date</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobschedulescheduleenddate">*Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>End<wbr>Date</a></span>
-    </dt>
-    <dd>{{% md %}}The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1268,9 +1076,18 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Schedule<wbr>End<wbr>Date</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transferjobschedulescheduleenddate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>End<wbr>Date</a></span>
+    </dt>
+    <dd>{{% md %}}The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Start<wbr>Time<wbr>Of<wbr>Day</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobschedulestarttimeofday">*Transfer<wbr>Job<wbr>Schedule<wbr>Start<wbr>Time<wbr>Of<wbr>Day</a></span>
+        <span class="property-type"><a href="#transferjobschedulestarttimeofday">Transfer<wbr>Job<wbr>Schedule<wbr>Start<wbr>Time<wbr>Of<wbr>Day</a></span>
     </dt>
     <dd>{{% md %}}The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer's start time in a day is specified in your local timezone. Structure documented below.
 {{% /md %}}</dd>
@@ -1281,15 +1098,6 @@ is not provided, the provider project is used.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>schedule<wbr>End<wbr>Date</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobschedulescheduleenddate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>End<wbr>Date?</a></span>
-    </dt>
-    <dd>{{% md %}}The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
-{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
@@ -1302,9 +1110,18 @@ is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
+        <span>schedule<wbr>End<wbr>Date</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transferjobschedulescheduleenddate">Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>End<wbr>Date</a></span>
+    </dt>
+    <dd>{{% md %}}The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>start<wbr>Time<wbr>Of<wbr>Day</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobschedulestarttimeofday">Transfer<wbr>Job<wbr>Schedule<wbr>Start<wbr>Time<wbr>Of<wbr>Day?</a></span>
+        <span class="property-type"><a href="#transferjobschedulestarttimeofday">Transfer<wbr>Job<wbr>Schedule<wbr>Start<wbr>Time<wbr>Of<wbr>Day</a></span>
     </dt>
     <dd>{{% md %}}The time in UTC at which the transfer will be scheduled to start in a day. Transfers may start later than this time. If not specified, recurring and one-time transfers that are scheduled to run today will run immediately; recurring transfers that are scheduled to run on a future date will start at approximately midnight UTC on that date. Note that when configuring a transfer with the Cloud Platform Console, the transfer's start time in a day is specified in your local timezone. Structure documented below.
 {{% /md %}}</dd>
@@ -1316,15 +1133,6 @@ is not provided, the provider project is used.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>schedule<wbr>End<wbr>Date</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobschedulescheduleenddate">Dict[Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>End<wbr>Date]</a></span>
-    </dt>
-    <dd>{{% md %}}The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>schedule<wbr>Start<wbr>Date</span>
@@ -1332,6 +1140,15 @@ is not provided, the provider project is used.
         <span class="property-type"><a href="#transferjobscheduleschedulestartdate">Dict[Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>Start<wbr>Date]</a></span>
     </dt>
     <dd>{{% md %}}The first day the recurring transfer is scheduled to run. If `schedule_start_date` is in the past, the transfer will run for the first time on the following day. Structure documented below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>schedule<wbr>End<wbr>Date</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#transferjobschedulescheduleenddate">Dict[Transfer<wbr>Job<wbr>Schedule<wbr>Schedule<wbr>End<wbr>Date]</a></span>
+    </dt>
+    <dd>{{% md %}}The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1356,7 +1173,7 @@ is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJobScheduleScheduleEndDateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJobScheduleScheduleEndDateOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobScheduleScheduleEndDateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobScheduleScheduleEndDateOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1369,7 +1186,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Day</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month.
 {{% /md %}}</dd>
@@ -1378,7 +1195,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Month</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Month of year. Must be from 1 to 12.
 {{% /md %}}</dd>
@@ -1387,7 +1204,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Year</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999.
 {{% /md %}}</dd>
@@ -1403,7 +1220,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Day</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month.
 {{% /md %}}</dd>
@@ -1412,7 +1229,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Month</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Month of year. Must be from 1 to 12.
 {{% /md %}}</dd>
@@ -1421,7 +1238,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Year</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999.
 {{% /md %}}</dd>
@@ -1437,7 +1254,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>day</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month.
 {{% /md %}}</dd>
@@ -1446,7 +1263,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>month</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Month of year. Must be from 1 to 12.
 {{% /md %}}</dd>
@@ -1455,7 +1272,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>year</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999.
 {{% /md %}}</dd>
@@ -1471,7 +1288,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>day</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month.
 {{% /md %}}</dd>
@@ -1480,7 +1297,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>month</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Month of year. Must be from 1 to 12.
 {{% /md %}}</dd>
@@ -1489,7 +1306,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>year</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999.
 {{% /md %}}</dd>
@@ -1507,7 +1324,7 @@ is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJobScheduleScheduleStartDateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJobScheduleScheduleStartDateOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobScheduleScheduleStartDateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobScheduleScheduleStartDateOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1520,7 +1337,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Day</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month.
 {{% /md %}}</dd>
@@ -1529,7 +1346,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Month</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Month of year. Must be from 1 to 12.
 {{% /md %}}</dd>
@@ -1538,7 +1355,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Year</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999.
 {{% /md %}}</dd>
@@ -1554,7 +1371,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Day</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month.
 {{% /md %}}</dd>
@@ -1563,7 +1380,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Month</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Month of year. Must be from 1 to 12.
 {{% /md %}}</dd>
@@ -1572,7 +1389,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Year</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999.
 {{% /md %}}</dd>
@@ -1588,7 +1405,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>day</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month.
 {{% /md %}}</dd>
@@ -1597,7 +1414,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>month</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Month of year. Must be from 1 to 12.
 {{% /md %}}</dd>
@@ -1606,7 +1423,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>year</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999.
 {{% /md %}}</dd>
@@ -1622,7 +1439,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>day</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Day of month. Must be from 1 to 31 and valid for the year and month.
 {{% /md %}}</dd>
@@ -1631,7 +1448,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>month</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Month of year. Must be from 1 to 12.
 {{% /md %}}</dd>
@@ -1640,7 +1457,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>year</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Year of date. Must be from 1 to 9999.
 {{% /md %}}</dd>
@@ -1658,7 +1475,7 @@ is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJobScheduleStartTimeOfDayArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJobScheduleStartTimeOfDayOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobScheduleStartTimeOfDayArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobScheduleStartTimeOfDayOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1671,7 +1488,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Hours</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23
 {{% /md %}}</dd>
@@ -1680,7 +1497,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.
 {{% /md %}}</dd>
@@ -1689,7 +1506,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Nanos</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 {{% /md %}}</dd>
@@ -1698,7 +1515,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59.
 {{% /md %}}</dd>
@@ -1714,7 +1531,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Hours</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23
 {{% /md %}}</dd>
@@ -1723,7 +1540,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.
 {{% /md %}}</dd>
@@ -1732,7 +1549,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Nanos</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 {{% /md %}}</dd>
@@ -1741,7 +1558,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59.
 {{% /md %}}</dd>
@@ -1757,7 +1574,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>hours</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23
 {{% /md %}}</dd>
@@ -1766,7 +1583,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.
 {{% /md %}}</dd>
@@ -1775,7 +1592,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>nanos</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 {{% /md %}}</dd>
@@ -1784,7 +1601,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59.
 {{% /md %}}</dd>
@@ -1800,7 +1617,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>hours</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Hours of day in 24 hour format. Should be from 0 to 23
 {{% /md %}}</dd>
@@ -1809,7 +1626,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>minutes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Minutes of hour of day. Must be from 0 to 59.
 {{% /md %}}</dd>
@@ -1818,7 +1635,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>nanos</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
 {{% /md %}}</dd>
@@ -1827,7 +1644,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Seconds of minutes of the time. Must normally be from 0 to 59.
 {{% /md %}}</dd>
@@ -1845,7 +1662,7 @@ is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJobTransferSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJobTransferSpecOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1858,7 +1675,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Aws<wbr>S3Data<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecawss3datasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source<wbr>Args?</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecawss3datasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An AWS S3 data source. Structure documented below.
 {{% /md %}}</dd>
@@ -1867,7 +1684,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Gcs<wbr>Data<wbr>Sink</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecgcsdatasink">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Sink<wbr>Args?</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecgcsdatasink">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Sink<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage data sink. Structure documented below.
 {{% /md %}}</dd>
@@ -1876,7 +1693,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Gcs<wbr>Data<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecgcsdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Source<wbr>Args?</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecgcsdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage data source. Structure documented below.
 {{% /md %}}</dd>
@@ -1885,7 +1702,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Http<wbr>Data<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspechttpdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source<wbr>Args?</a></span>
+        <span class="property-type"><a href="#transferjobtransferspechttpdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}An HTTP URL data source. Structure documented below.
 {{% /md %}}</dd>
@@ -1894,7 +1711,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Object<wbr>Conditions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecobjectconditions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Object<wbr>Conditions<wbr>Args?</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecobjectconditions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Object<wbr>Conditions<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' `last_modification_time` do not exclude objects in a data sink. Structure documented below.
 {{% /md %}}</dd>
@@ -1903,7 +1720,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Transfer<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspectransferoptions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Transfer<wbr>Options<wbr>Args?</a></span>
+        <span class="property-type"><a href="#transferjobtransferspectransferoptions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Transfer<wbr>Options<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Characteristics of how to treat files from datasource and sink during job. If the option `delete_objects_unique_in_sink` is true, object conditions based on objects' `last_modification_time` are ignored and do not exclude objects in a data source or a data sink. Structure documented below.
 {{% /md %}}</dd>
@@ -1919,7 +1736,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Aws<wbr>S3Data<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecawss3datasource">*Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecawss3datasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}An AWS S3 data source. Structure documented below.
 {{% /md %}}</dd>
@@ -1928,7 +1745,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Gcs<wbr>Data<wbr>Sink</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecgcsdatasink">*Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Sink</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecgcsdatasink">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Sink</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage data sink. Structure documented below.
 {{% /md %}}</dd>
@@ -1937,7 +1754,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Gcs<wbr>Data<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecgcsdatasource">*Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Source</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecgcsdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage data source. Structure documented below.
 {{% /md %}}</dd>
@@ -1946,7 +1763,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Http<wbr>Data<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspechttpdatasource">*Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source</a></span>
+        <span class="property-type"><a href="#transferjobtransferspechttpdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}An HTTP URL data source. Structure documented below.
 {{% /md %}}</dd>
@@ -1955,7 +1772,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Object<wbr>Conditions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecobjectconditions">*Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Object<wbr>Conditions</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecobjectconditions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Object<wbr>Conditions</a></span>
     </dt>
     <dd>{{% md %}}Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' `last_modification_time` do not exclude objects in a data sink. Structure documented below.
 {{% /md %}}</dd>
@@ -1964,7 +1781,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Transfer<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspectransferoptions">*Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Transfer<wbr>Options</a></span>
+        <span class="property-type"><a href="#transferjobtransferspectransferoptions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Transfer<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Characteristics of how to treat files from datasource and sink during job. If the option `delete_objects_unique_in_sink` is true, object conditions based on objects' `last_modification_time` are ignored and do not exclude objects in a data source or a data sink. Structure documented below.
 {{% /md %}}</dd>
@@ -1980,7 +1797,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>aws<wbr>S3Data<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecawss3datasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source?</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecawss3datasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Aws<wbr>S3Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}An AWS S3 data source. Structure documented below.
 {{% /md %}}</dd>
@@ -1989,7 +1806,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>gcs<wbr>Data<wbr>Sink</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecgcsdatasink">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Sink?</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecgcsdatasink">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Sink</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage data sink. Structure documented below.
 {{% /md %}}</dd>
@@ -1998,7 +1815,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>gcs<wbr>Data<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecgcsdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Source?</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecgcsdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Gcs<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}A Google Cloud Storage data source. Structure documented below.
 {{% /md %}}</dd>
@@ -2007,7 +1824,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>http<wbr>Data<wbr>Source</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspechttpdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source?</a></span>
+        <span class="property-type"><a href="#transferjobtransferspechttpdatasource">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Http<wbr>Data<wbr>Source</a></span>
     </dt>
     <dd>{{% md %}}An HTTP URL data source. Structure documented below.
 {{% /md %}}</dd>
@@ -2016,7 +1833,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>object<wbr>Conditions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspecobjectconditions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Object<wbr>Conditions?</a></span>
+        <span class="property-type"><a href="#transferjobtransferspecobjectconditions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Object<wbr>Conditions</a></span>
     </dt>
     <dd>{{% md %}}Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' `last_modification_time` do not exclude objects in a data sink. Structure documented below.
 {{% /md %}}</dd>
@@ -2025,7 +1842,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>transfer<wbr>Options</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#transferjobtransferspectransferoptions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Transfer<wbr>Options?</a></span>
+        <span class="property-type"><a href="#transferjobtransferspectransferoptions">Transfer<wbr>Job<wbr>Transfer<wbr>Spec<wbr>Transfer<wbr>Options</a></span>
     </dt>
     <dd>{{% md %}}Characteristics of how to treat files from datasource and sink during job. If the option `delete_objects_unique_in_sink` is true, object conditions based on objects' `last_modification_time` are ignored and do not exclude objects in a data source or a data sink. Structure documented below.
 {{% /md %}}</dd>
@@ -2104,7 +1921,7 @@ is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJobTransferSpecAwsS3DataSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJobTransferSpecAwsS3DataSourceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecAwsS3DataSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecAwsS3DataSourceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2126,7 +1943,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
 {{% /md %}}</dd>
@@ -2151,7 +1968,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
 {{% /md %}}</dd>
@@ -2176,7 +1993,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
 {{% /md %}}</dd>
@@ -2201,7 +2018,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>bucket_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
 {{% /md %}}</dd>
@@ -2219,7 +2036,7 @@ is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2232,7 +2049,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Access<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}AWS Key ID.
 {{% /md %}}</dd>
@@ -2241,7 +2058,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Secret<wbr>Access<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}AWS Secret Access Key.
 {{% /md %}}</dd>
@@ -2257,7 +2074,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Access<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}AWS Key ID.
 {{% /md %}}</dd>
@@ -2266,7 +2083,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Secret<wbr>Access<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}AWS Secret Access Key.
 {{% /md %}}</dd>
@@ -2282,7 +2099,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>access<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}AWS Key ID.
 {{% /md %}}</dd>
@@ -2291,7 +2108,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>secret<wbr>Access<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}AWS Secret Access Key.
 {{% /md %}}</dd>
@@ -2307,7 +2124,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>access<wbr>Key<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}AWS Key ID.
 {{% /md %}}</dd>
@@ -2316,7 +2133,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>secret<wbr>Access<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}AWS Secret Access Key.
 {{% /md %}}</dd>
@@ -2334,7 +2151,7 @@ is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJobTransferSpecGcsDataSinkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJobTransferSpecGcsDataSinkOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecGcsDataSinkArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecGcsDataSinkOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2347,7 +2164,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
 {{% /md %}}</dd>
@@ -2363,7 +2180,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
 {{% /md %}}</dd>
@@ -2379,7 +2196,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
 {{% /md %}}</dd>
@@ -2395,7 +2212,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>bucket_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
 {{% /md %}}</dd>
@@ -2413,7 +2230,7 @@ is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJobTransferSpecGcsDataSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJobTransferSpecGcsDataSourceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecGcsDataSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecGcsDataSourceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2426,7 +2243,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
 {{% /md %}}</dd>
@@ -2442,7 +2259,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>Bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
 {{% /md %}}</dd>
@@ -2458,7 +2275,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>bucket<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
 {{% /md %}}</dd>
@@ -2474,7 +2291,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>bucket_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}S3 Bucket name.
 {{% /md %}}</dd>
@@ -2492,7 +2309,7 @@ is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJobTransferSpecHttpDataSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJobTransferSpecHttpDataSourceOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecHttpDataSourceArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecHttpDataSourceOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2505,7 +2322,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>List<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.
 {{% /md %}}</dd>
@@ -2521,7 +2338,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>List<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.
 {{% /md %}}</dd>
@@ -2537,7 +2354,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>list<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.
 {{% /md %}}</dd>
@@ -2553,7 +2370,7 @@ is not provided, the provider project is used.
             title="Required">
         <span>list<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The URL that points to the file that stores the object list entries. This file must allow public access. Currently, only URLs with HTTP and HTTPS schemes are supported.
 {{% /md %}}</dd>
@@ -2571,7 +2388,7 @@ is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJobTransferSpecObjectConditionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJobTransferSpecObjectConditionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecObjectConditionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecObjectConditionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2584,7 +2401,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Exclude<wbr>Prefixes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}`exclude_prefixes` must follow the requirements described for `include_prefixes`. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
 {{% /md %}}</dd>
@@ -2593,7 +2410,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Include<wbr>Prefixes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}If `include_refixes` is specified, objects that satisfy the object conditions must have names that start with one of the `include_prefixes` and that do not start with any of the `exclude_prefixes`. If `include_prefixes` is not specified, all objects except those that have names starting with one of the `exclude_prefixes` must satisfy the object conditions. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
 {{% /md %}}</dd>
@@ -2602,7 +2419,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Max<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
@@ -2611,7 +2428,7 @@ is not provided, the provider project is used.
             title="Optional">
         <span>Min<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
@@ -2628,7 +2445,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span>Exclude<wbr>Prefixes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}`exclude_prefixes` must follow the requirements described for `include_prefixes`. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
 {{% /md %}}</dd>
@@ -2637,7 +2454,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span>Include<wbr>Prefixes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}If `include_refixes` is specified, objects that satisfy the object conditions must have names that start with one of the `include_prefixes` and that do not start with any of the `exclude_prefixes`. If `include_prefixes` is not specified, all objects except those that have names starting with one of the `exclude_prefixes` must satisfy the object conditions. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
 {{% /md %}}</dd>
@@ -2646,7 +2463,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span>Max<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
@@ -2655,7 +2472,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span>Min<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
@@ -2672,7 +2489,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span>exclude<wbr>Prefixes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}`exclude_prefixes` must follow the requirements described for `include_prefixes`. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
 {{% /md %}}</dd>
@@ -2681,7 +2498,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span>include<wbr>Prefixes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}If `include_refixes` is specified, objects that satisfy the object conditions must have names that start with one of the `include_prefixes` and that do not start with any of the `exclude_prefixes`. If `include_prefixes` is not specified, all objects except those that have names starting with one of the `exclude_prefixes` must satisfy the object conditions. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
 {{% /md %}}</dd>
@@ -2690,7 +2507,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span>max<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
@@ -2699,7 +2516,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span>min<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
@@ -2716,7 +2533,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span>exclude<wbr>Prefixes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}`exclude_prefixes` must follow the requirements described for `include_prefixes`. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
 {{% /md %}}</dd>
@@ -2725,7 +2542,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span>include<wbr>Prefixes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}If `include_refixes` is specified, objects that satisfy the object conditions must have names that start with one of the `include_prefixes` and that do not start with any of the `exclude_prefixes`. If `include_prefixes` is not specified, all objects except those that have names starting with one of the `exclude_prefixes` must satisfy the object conditions. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
 {{% /md %}}</dd>
@@ -2734,7 +2551,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span>max<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
 {{% /md %}}</dd>
@@ -2743,7 +2560,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span>min<wbr>Time<wbr>Elapsed<wbr>Since<wbr>Last<wbr>Modification</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}
 A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
@@ -2762,7 +2579,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJobTransferSpecTransferOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/storage?tab=doc#TransferJobTransferSpecTransferOptionsOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecTransferOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/storage?tab=doc#TransferJobTransferSpecTransferOptionsOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2775,7 +2592,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span>Delete<wbr>Objects<wbr>From<wbr>Source<wbr>After<wbr>Transfer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether objects should be deleted from the source after they are transferred to the sink. Note that this option and `delete_objects_unique_in_sink` are mutually exclusive.
 {{% /md %}}</dd>
@@ -2784,7 +2601,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span>Delete<wbr>Objects<wbr>Unique<wbr>In<wbr>Sink</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether objects that exist only in the sink should be deleted. Note that this option and
 `delete_objects_from_source_after_transfer` are mutually exclusive.
@@ -2794,7 +2611,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span>Overwrite<wbr>Objects<wbr>Already<wbr>Existing<wbr>In<wbr>Sink</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether overwriting objects that already exist in the sink is allowed.
 {{% /md %}}</dd>
@@ -2810,7 +2627,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span>Delete<wbr>Objects<wbr>From<wbr>Source<wbr>After<wbr>Transfer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether objects should be deleted from the source after they are transferred to the sink. Note that this option and `delete_objects_unique_in_sink` are mutually exclusive.
 {{% /md %}}</dd>
@@ -2819,7 +2636,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span>Delete<wbr>Objects<wbr>Unique<wbr>In<wbr>Sink</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether objects that exist only in the sink should be deleted. Note that this option and
 `delete_objects_from_source_after_transfer` are mutually exclusive.
@@ -2829,7 +2646,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span>Overwrite<wbr>Objects<wbr>Already<wbr>Existing<wbr>In<wbr>Sink</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether overwriting objects that already exist in the sink is allowed.
 {{% /md %}}</dd>
@@ -2845,7 +2662,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span>delete<wbr>Objects<wbr>From<wbr>Source<wbr>After<wbr>Transfer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether objects should be deleted from the source after they are transferred to the sink. Note that this option and `delete_objects_unique_in_sink` are mutually exclusive.
 {{% /md %}}</dd>
@@ -2854,7 +2671,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span>delete<wbr>Objects<wbr>Unique<wbr>In<wbr>Sink</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether objects that exist only in the sink should be deleted. Note that this option and
 `delete_objects_from_source_after_transfer` are mutually exclusive.
@@ -2864,7 +2681,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span>overwrite<wbr>Objects<wbr>Already<wbr>Existing<wbr>In<wbr>Sink</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether overwriting objects that already exist in the sink is allowed.
 {{% /md %}}</dd>
@@ -2880,7 +2697,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span>delete<wbr>Objects<wbr>From<wbr>Source<wbr>After<wbr>Transfer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether objects should be deleted from the source after they are transferred to the sink. Note that this option and `delete_objects_unique_in_sink` are mutually exclusive.
 {{% /md %}}</dd>
@@ -2889,7 +2706,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span>delete<wbr>Objects<wbr>Unique<wbr>In<wbr>Sink</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether objects that exist only in the sink should be deleted. Note that this option and
 `delete_objects_from_source_after_transfer` are mutually exclusive.
@@ -2899,7 +2716,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
             title="Optional">
         <span>overwrite<wbr>Objects<wbr>Already<wbr>Existing<wbr>In<wbr>Sink</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether overwriting objects that already exist in the sink is allowed.
 {{% /md %}}</dd>
@@ -2921,6 +2738,7 @@ A duration in seconds with up to nine fractional digits, terminated by 's'. Exam
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

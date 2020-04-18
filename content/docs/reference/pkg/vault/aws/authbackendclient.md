@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendClient">AuthBackendClient</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendClientArgs">AuthBackendClientArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendClient">AuthBackendClient</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendClientArgs">AuthBackendClientArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,7 +22,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAuthBackendClient<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/aws?tab=doc#AuthBackendClientArgs">AuthBackendClientArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/aws?tab=doc#AuthBackendClient">AuthBackendClient</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAuthBackendClient<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/aws?tab=doc#AuthBackendClientArgs">AuthBackendClientArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/aws?tab=doc#AuthBackendClient">AuthBackendClient</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -122,64 +122,71 @@ block_external_search_index: true
             title="Optional">
         <span>Access<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS Access key with permissions to query AWS APIs.
+    <dd>{{% md %}}The AWS access key that Vault should use for the
+auth backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique name of the auth backend to configure.
+    <dd>{{% md %}}The path the AWS auth backend being configured was
+mounted at.  Defaults to `aws`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Ec2Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS EC2 API calls.
+    <dd>{{% md %}}Override the URL Vault uses when making EC2 API
+calls.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Iam<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS IAM API calls.
+    <dd>{{% md %}}Override the URL Vault uses when making IAM API
+calls.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Iam<wbr>Server<wbr>Id<wbr>Header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The value to require in the X-Vault-AWS-IAM-Server-ID header as part of GetCallerIdentity requests that are used in the
-iam auth method.
+    <dd>{{% md %}}The value to require in the
+`X-Vault-AWS-IAM-Server-ID` header as part of `GetCallerIdentity` requests
+that are used in the IAM auth method.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Secret<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS Secret key with permissions to query AWS APIs.
+    <dd>{{% md %}}The AWS secret key that Vault should use for the
+auth backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Sts<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS STS API calls.
+    <dd>{{% md %}}Override the URL Vault uses when making STS API
+calls.
 {{% /md %}}</dd>
 
 </dl>
@@ -193,64 +200,71 @@ iam auth method.
             title="Optional">
         <span>Access<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS Access key with permissions to query AWS APIs.
+    <dd>{{% md %}}The AWS access key that Vault should use for the
+auth backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique name of the auth backend to configure.
+    <dd>{{% md %}}The path the AWS auth backend being configured was
+mounted at.  Defaults to `aws`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Ec2Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS EC2 API calls.
+    <dd>{{% md %}}Override the URL Vault uses when making EC2 API
+calls.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Iam<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS IAM API calls.
+    <dd>{{% md %}}Override the URL Vault uses when making IAM API
+calls.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Iam<wbr>Server<wbr>Id<wbr>Header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value to require in the X-Vault-AWS-IAM-Server-ID header as part of GetCallerIdentity requests that are used in the
-iam auth method.
+    <dd>{{% md %}}The value to require in the
+`X-Vault-AWS-IAM-Server-ID` header as part of `GetCallerIdentity` requests
+that are used in the IAM auth method.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Secret<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS Secret key with permissions to query AWS APIs.
+    <dd>{{% md %}}The AWS secret key that Vault should use for the
+auth backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Sts<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS STS API calls.
+    <dd>{{% md %}}Override the URL Vault uses when making STS API
+calls.
 {{% /md %}}</dd>
 
 </dl>
@@ -264,64 +278,71 @@ iam auth method.
             title="Optional">
         <span>access<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS Access key with permissions to query AWS APIs.
+    <dd>{{% md %}}The AWS access key that Vault should use for the
+auth backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique name of the auth backend to configure.
+    <dd>{{% md %}}The path the AWS auth backend being configured was
+mounted at.  Defaults to `aws`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>ec2Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS EC2 API calls.
+    <dd>{{% md %}}Override the URL Vault uses when making EC2 API
+calls.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>iam<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS IAM API calls.
+    <dd>{{% md %}}Override the URL Vault uses when making IAM API
+calls.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>iam<wbr>Server<wbr>Id<wbr>Header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value to require in the X-Vault-AWS-IAM-Server-ID header as part of GetCallerIdentity requests that are used in the
-iam auth method.
+    <dd>{{% md %}}The value to require in the
+`X-Vault-AWS-IAM-Server-ID` header as part of `GetCallerIdentity` requests
+that are used in the IAM auth method.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>secret<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS Secret key with permissions to query AWS APIs.
+    <dd>{{% md %}}The AWS secret key that Vault should use for the
+auth backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>sts<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS STS API calls.
+    <dd>{{% md %}}Override the URL Vault uses when making STS API
+calls.
 {{% /md %}}</dd>
 
 </dl>
@@ -335,364 +356,77 @@ iam auth method.
             title="Optional">
         <span>access_<wbr>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}AWS Access key with permissions to query AWS APIs.
+    <dd>{{% md %}}The AWS access key that Vault should use for the
+auth backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Unique name of the auth backend to configure.
+    <dd>{{% md %}}The path the AWS auth backend being configured was
+mounted at.  Defaults to `aws`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>ec2_<wbr>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS EC2 API calls.
+    <dd>{{% md %}}Override the URL Vault uses when making EC2 API
+calls.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>iam_<wbr>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS IAM API calls.
+    <dd>{{% md %}}Override the URL Vault uses when making IAM API
+calls.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>iam_<wbr>server_<wbr>id_<wbr>header_<wbr>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The value to require in the X-Vault-AWS-IAM-Server-ID header as part of GetCallerIdentity requests that are used in the
-iam auth method.
+    <dd>{{% md %}}The value to require in the
+`X-Vault-AWS-IAM-Server-ID` header as part of `GetCallerIdentity` requests
+that are used in the IAM auth method.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>secret_<wbr>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}AWS Secret key with permissions to query AWS APIs.
+    <dd>{{% md %}}The AWS secret key that Vault should use for the
+auth backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>sts_<wbr>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS STS API calls.
+    <dd>{{% md %}}Override the URL Vault uses when making STS API
+calls.
 {{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## AuthBackendClient Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Access<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}AWS Access key with permissions to query AWS APIs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Unique name of the auth backend to configure.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ec2Endpoint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS EC2 API calls.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Iam<wbr>Endpoint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS IAM API calls.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Iam<wbr>Server<wbr>Id<wbr>Header<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The value to require in the X-Vault-AWS-IAM-Server-ID header as part of GetCallerIdentity requests that are used in the
-iam auth method.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Secret<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}AWS Secret key with permissions to query AWS APIs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sts<wbr>Endpoint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS STS API calls.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Access<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}AWS Access key with permissions to query AWS APIs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Unique name of the auth backend to configure.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ec2Endpoint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS EC2 API calls.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Iam<wbr>Endpoint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS IAM API calls.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Iam<wbr>Server<wbr>Id<wbr>Header<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The value to require in the X-Vault-AWS-IAM-Server-ID header as part of GetCallerIdentity requests that are used in the
-iam auth method.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Secret<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}AWS Secret key with permissions to query AWS APIs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sts<wbr>Endpoint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS STS API calls.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>access<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}AWS Access key with permissions to query AWS APIs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Unique name of the auth backend to configure.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ec2Endpoint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS EC2 API calls.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>iam<wbr>Endpoint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS IAM API calls.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>iam<wbr>Server<wbr>Id<wbr>Header<wbr>Value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The value to require in the X-Vault-AWS-IAM-Server-ID header as part of GetCallerIdentity requests that are used in the
-iam auth method.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>secret<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}AWS Secret key with permissions to query AWS APIs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sts<wbr>Endpoint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS STS API calls.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>access_<wbr>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}AWS Access key with permissions to query AWS APIs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Unique name of the auth backend to configure.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ec2_<wbr>endpoint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS EC2 API calls.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>iam_<wbr>endpoint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS IAM API calls.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>iam_<wbr>server_<wbr>id_<wbr>header_<wbr>value</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The value to require in the X-Vault-AWS-IAM-Server-ID header as part of GetCallerIdentity requests that are used in the
-iam auth method.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>secret_<wbr>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}AWS Secret key with permissions to query AWS APIs.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sts_<wbr>endpoint</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS STS API calls.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -716,7 +450,7 @@ Get an existing AuthBackendClient resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackendClient<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/aws?tab=doc#AuthBackendClientState">AuthBackendClientState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/aws?tab=doc#AuthBackendClient">AuthBackendClient</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackendClient<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/aws?tab=doc#AuthBackendClientState">AuthBackendClientState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/aws?tab=doc#AuthBackendClient">AuthBackendClient</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -830,64 +564,71 @@ The following state arguments are supported:
             title="Optional">
         <span>Access<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS Access key with permissions to query AWS APIs.
+    <dd>{{% md %}}The AWS access key that Vault should use for the
+auth backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique name of the auth backend to configure.
+    <dd>{{% md %}}The path the AWS auth backend being configured was
+mounted at.  Defaults to `aws`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Ec2Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS EC2 API calls.
+    <dd>{{% md %}}Override the URL Vault uses when making EC2 API
+calls.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Iam<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS IAM API calls.
+    <dd>{{% md %}}Override the URL Vault uses when making IAM API
+calls.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Iam<wbr>Server<wbr>Id<wbr>Header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The value to require in the X-Vault-AWS-IAM-Server-ID header as part of GetCallerIdentity requests that are used in the
-iam auth method.
+    <dd>{{% md %}}The value to require in the
+`X-Vault-AWS-IAM-Server-ID` header as part of `GetCallerIdentity` requests
+that are used in the IAM auth method.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Secret<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS Secret key with permissions to query AWS APIs.
+    <dd>{{% md %}}The AWS secret key that Vault should use for the
+auth backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Sts<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS STS API calls.
+    <dd>{{% md %}}Override the URL Vault uses when making STS API
+calls.
 {{% /md %}}</dd>
 
 </dl>
@@ -901,64 +642,71 @@ iam auth method.
             title="Optional">
         <span>Access<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS Access key with permissions to query AWS APIs.
+    <dd>{{% md %}}The AWS access key that Vault should use for the
+auth backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique name of the auth backend to configure.
+    <dd>{{% md %}}The path the AWS auth backend being configured was
+mounted at.  Defaults to `aws`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Ec2Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS EC2 API calls.
+    <dd>{{% md %}}Override the URL Vault uses when making EC2 API
+calls.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Iam<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS IAM API calls.
+    <dd>{{% md %}}Override the URL Vault uses when making IAM API
+calls.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Iam<wbr>Server<wbr>Id<wbr>Header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value to require in the X-Vault-AWS-IAM-Server-ID header as part of GetCallerIdentity requests that are used in the
-iam auth method.
+    <dd>{{% md %}}The value to require in the
+`X-Vault-AWS-IAM-Server-ID` header as part of `GetCallerIdentity` requests
+that are used in the IAM auth method.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Secret<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS Secret key with permissions to query AWS APIs.
+    <dd>{{% md %}}The AWS secret key that Vault should use for the
+auth backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Sts<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS STS API calls.
+    <dd>{{% md %}}Override the URL Vault uses when making STS API
+calls.
 {{% /md %}}</dd>
 
 </dl>
@@ -972,64 +720,71 @@ iam auth method.
             title="Optional">
         <span>access<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS Access key with permissions to query AWS APIs.
+    <dd>{{% md %}}The AWS access key that Vault should use for the
+auth backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique name of the auth backend to configure.
+    <dd>{{% md %}}The path the AWS auth backend being configured was
+mounted at.  Defaults to `aws`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>ec2Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS EC2 API calls.
+    <dd>{{% md %}}Override the URL Vault uses when making EC2 API
+calls.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>iam<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS IAM API calls.
+    <dd>{{% md %}}Override the URL Vault uses when making IAM API
+calls.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>iam<wbr>Server<wbr>Id<wbr>Header<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The value to require in the X-Vault-AWS-IAM-Server-ID header as part of GetCallerIdentity requests that are used in the
-iam auth method.
+    <dd>{{% md %}}The value to require in the
+`X-Vault-AWS-IAM-Server-ID` header as part of `GetCallerIdentity` requests
+that are used in the IAM auth method.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>secret<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS Secret key with permissions to query AWS APIs.
+    <dd>{{% md %}}The AWS secret key that Vault should use for the
+auth backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>sts<wbr>Endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS STS API calls.
+    <dd>{{% md %}}Override the URL Vault uses when making STS API
+calls.
 {{% /md %}}</dd>
 
 </dl>
@@ -1043,64 +798,71 @@ iam auth method.
             title="Optional">
         <span>access_<wbr>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}AWS Access key with permissions to query AWS APIs.
+    <dd>{{% md %}}The AWS access key that Vault should use for the
+auth backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Unique name of the auth backend to configure.
+    <dd>{{% md %}}The path the AWS auth backend being configured was
+mounted at.  Defaults to `aws`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>ec2_<wbr>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS EC2 API calls.
+    <dd>{{% md %}}Override the URL Vault uses when making EC2 API
+calls.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>iam_<wbr>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS IAM API calls.
+    <dd>{{% md %}}Override the URL Vault uses when making IAM API
+calls.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>iam_<wbr>server_<wbr>id_<wbr>header_<wbr>value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The value to require in the X-Vault-AWS-IAM-Server-ID header as part of GetCallerIdentity requests that are used in the
-iam auth method.
+    <dd>{{% md %}}The value to require in the
+`X-Vault-AWS-IAM-Server-ID` header as part of `GetCallerIdentity` requests
+that are used in the IAM auth method.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>secret_<wbr>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}AWS Secret key with permissions to query AWS APIs.
+    <dd>{{% md %}}The AWS secret key that Vault should use for the
+auth backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>sts_<wbr>endpoint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}URL to override the default generated endpoint for making AWS STS API calls.
+    <dd>{{% md %}}Override the URL Vault uses when making STS API
+calls.
 {{% /md %}}</dd>
 
 </dl>
@@ -1122,6 +884,7 @@ iam auth method.
 	<dd><a href="https://github.com/pulumi/pulumi-vault">https://github.com/pulumi/pulumi-vault</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
 </dl>
 

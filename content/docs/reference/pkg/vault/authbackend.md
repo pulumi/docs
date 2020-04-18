@@ -6,6 +6,25 @@ block_external_search_index: true
 
 
 
+{{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vault from "@pulumi/vault";
+
+const example = new vault.AuthBackend("example", {
+    tune: {
+        listingVisibility: "unauth",
+        maxLeaseTtl: "90000s",
+    },
+    type: "github",
+});
+```
+
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -14,7 +33,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/#AuthBackend">AuthBackend</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/#AuthBackendArgs">AuthBackendArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/#AuthBackend">AuthBackend</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/#AuthBackendArgs">AuthBackendArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,11 +41,11 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAuthBackend<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/?tab=doc#AuthBackendArgs">AuthBackendArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/?tab=doc#AuthBackend">AuthBackend</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAuthBackend<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/?tab=doc#AuthBackendArgs">AuthBackendArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/?tab=doc#AuthBackend">AuthBackend</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault..AuthBackend.html">AuthBackend</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.AuthBackendArgs.html">AuthBackendArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.AuthBackend.html">AuthBackend</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.AuthBackendArgs.html">AuthBackendArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -118,75 +137,77 @@ block_external_search_index: true
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the auth method type
+{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span>Default<wbr>Lease<wbr>Ttl<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Default lease duration in seconds
+    <dd>{{% md %}}(Optional; Deprecated, use `tune.default_lease_ttl` if you are using Vault provider version >= 1.8) The default lease duration in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the auth backend
+    <dd>{{% md %}}A description of the auth method
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span>Listing<wbr>Visibility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to show this mount in the UI-specific listing endpoint
+    <dd>{{% md %}}Specifies whether to show this mount in
+the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Local</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if the auth method is local only
+    <dd>{{% md %}}Specifies if the auth method is local only.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span>Max<wbr>Lease<wbr>Ttl<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Maximum possible lease duration in seconds
+    <dd>{{% md %}}(Optional; Deprecated, use `tune.max_lease_ttl` if you are using Vault provider version >= 1.8) The maximum lease duration in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}path to mount the backend. This defaults to the type.
+    <dd>{{% md %}}The path to mount the auth method — this defaults to the name of the type
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Tune</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune<wbr>Args?</a></span>
+        <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the auth backend
+    <dd>{{% md %}}Extra configuration block. Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -196,75 +217,77 @@ block_external_search_index: true
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the auth method type
+{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span>Default<wbr>Lease<wbr>Ttl<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Default lease duration in seconds
+    <dd>{{% md %}}(Optional; Deprecated, use `tune.default_lease_ttl` if you are using Vault provider version >= 1.8) The default lease duration in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the auth backend
+    <dd>{{% md %}}A description of the auth method
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span>Listing<wbr>Visibility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to show this mount in the UI-specific listing endpoint
+    <dd>{{% md %}}Specifies whether to show this mount in
+the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Local</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if the auth method is local only
+    <dd>{{% md %}}Specifies if the auth method is local only.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span>Max<wbr>Lease<wbr>Ttl<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Maximum possible lease duration in seconds
+    <dd>{{% md %}}(Optional; Deprecated, use `tune.max_lease_ttl` if you are using Vault provider version >= 1.8) The maximum lease duration in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}path to mount the backend. This defaults to the type.
+    <dd>{{% md %}}The path to mount the auth method — this defaults to the name of the type
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Tune</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackendtune">*Auth<wbr>Backend<wbr>Tune</a></span>
+        <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the auth backend
+    <dd>{{% md %}}Extra configuration block. Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -274,75 +297,77 @@ block_external_search_index: true
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the auth method type
+{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span>default<wbr>Lease<wbr>Ttl<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Default lease duration in seconds
+    <dd>{{% md %}}(Optional; Deprecated, use `tune.default_lease_ttl` if you are using Vault provider version >= 1.8) The default lease duration in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the auth backend
+    <dd>{{% md %}}A description of the auth method
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span>listing<wbr>Visibility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to show this mount in the UI-specific listing endpoint
+    <dd>{{% md %}}Specifies whether to show this mount in
+the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>local</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if the auth method is local only
+    <dd>{{% md %}}Specifies if the auth method is local only.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span>max<wbr>Lease<wbr>Ttl<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Maximum possible lease duration in seconds
+    <dd>{{% md %}}(Optional; Deprecated, use `tune.max_lease_ttl` if you are using Vault provider version >= 1.8) The maximum lease duration in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}path to mount the backend. This defaults to the type.
+    <dd>{{% md %}}The path to mount the auth method — this defaults to the name of the type
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>tune</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune?</a></span>
+        <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the auth backend
+    <dd>{{% md %}}Extra configuration block. Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -352,58 +377,68 @@ block_external_search_index: true
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the auth method type
+{{% /md %}}</dd>
+
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span>default_<wbr>lease_<wbr>ttl_<wbr>seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Default lease duration in seconds
+    <dd>{{% md %}}(Optional; Deprecated, use `tune.default_lease_ttl` if you are using Vault provider version >= 1.8) The default lease duration in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The description of the auth backend
+    <dd>{{% md %}}A description of the auth method
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span>listing_<wbr>visibility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to show this mount in the UI-specific listing endpoint
+    <dd>{{% md %}}Specifies whether to show this mount in
+the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>local</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if the auth method is local only
+    <dd>{{% md %}}Specifies if the auth method is local only.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span>max_<wbr>lease_<wbr>ttl_<wbr>seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Maximum possible lease duration in seconds
+    <dd>{{% md %}}(Optional; Deprecated, use `tune.max_lease_ttl` if you are using Vault provider version >= 1.8) The maximum lease duration in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}path to mount the backend. This defaults to the type.
+    <dd>{{% md %}}The path to mount the auth method — this defaults to the name of the type
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -412,15 +447,7 @@ block_external_search_index: true
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authbackendtune">Dict[Auth<wbr>Backend<wbr>Tune]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the auth backend
+    <dd>{{% md %}}Extra configuration block. Structure is documented below.
 {{% /md %}}</dd>
 
 </dl>
@@ -446,80 +473,9 @@ The following output properties are available:
             title="">
         <span>Accessor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The accessor of the auth backend
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Default<wbr>Lease<wbr>Ttl<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Default lease duration in seconds
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the auth backend
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Listing<wbr>Visibility</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether to show this mount in the UI-specific listing endpoint
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Local</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Specifies if the auth method is local only
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Max<wbr>Lease<wbr>Ttl<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Maximum possible lease duration in seconds
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}path to mount the backend. This defaults to the type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tune</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the auth backend
+    <dd>{{% md %}}The accessor for this auth method
 {{% /md %}}</dd>
 
 </dl>
@@ -533,80 +489,9 @@ The following output properties are available:
             title="">
         <span>Accessor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The accessor of the auth backend
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Default<wbr>Lease<wbr>Ttl<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Default lease duration in seconds
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The description of the auth backend
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Listing<wbr>Visibility</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether to show this mount in the UI-specific listing endpoint
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Local</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies if the auth method is local only
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Max<wbr>Lease<wbr>Ttl<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Maximum possible lease duration in seconds
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}path to mount the backend. This defaults to the type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tune</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the auth backend
+    <dd>{{% md %}}The accessor for this auth method
 {{% /md %}}</dd>
 
 </dl>
@@ -620,80 +505,9 @@ The following output properties are available:
             title="">
         <span>accessor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The accessor of the auth backend
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>default<wbr>Lease<wbr>Ttl<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Default lease duration in seconds
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The description of the auth backend
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>listing<wbr>Visibility</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether to show this mount in the UI-specific listing endpoint
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>local</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Specifies if the auth method is local only
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>max<wbr>Lease<wbr>Ttl<wbr>Seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Maximum possible lease duration in seconds
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}path to mount the backend. This defaults to the type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tune</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the auth backend
+    <dd>{{% md %}}The accessor for this auth method
 {{% /md %}}</dd>
 
 </dl>
@@ -707,80 +521,9 @@ The following output properties are available:
             title="">
         <span>accessor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The accessor of the auth backend
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>default_<wbr>lease_<wbr>ttl_<wbr>seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Default lease duration in seconds
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The description of the auth backend
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>listing_<wbr>visibility</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies whether to show this mount in the UI-specific listing endpoint
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>local</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specifies if the auth method is local only
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>max_<wbr>lease_<wbr>ttl_<wbr>seconds</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Maximum possible lease duration in seconds
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}path to mount the backend. This defaults to the type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tune</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackendtune">Dict[Auth<wbr>Backend<wbr>Tune]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the auth backend
+    <dd>{{% md %}}The accessor for this auth method
 {{% /md %}}</dd>
 
 </dl>
@@ -808,11 +551,11 @@ Get an existing AuthBackend resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackend<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/?tab=doc#AuthBackendState">AuthBackendState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/?tab=doc#AuthBackend">AuthBackend</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackend<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/?tab=doc#AuthBackendState">AuthBackendState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/?tab=doc#AuthBackend">AuthBackend</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault..AuthBackend.html">AuthBackend</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault..AuthBackendState.html">AuthBackendState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault.AuthBackend.html">AuthBackend</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Vault/Pulumi.Vault..AuthBackendState.html">AuthBackendState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -922,80 +665,82 @@ The following state arguments are supported:
             title="Optional">
         <span>Accessor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The accessor of the auth backend
+    <dd>{{% md %}}The accessor for this auth method
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span>Default<wbr>Lease<wbr>Ttl<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Default lease duration in seconds
+    <dd>{{% md %}}(Optional; Deprecated, use `tune.default_lease_ttl` if you are using Vault provider version >= 1.8) The default lease duration in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the auth backend
+    <dd>{{% md %}}A description of the auth method
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span>Listing<wbr>Visibility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to show this mount in the UI-specific listing endpoint
+    <dd>{{% md %}}Specifies whether to show this mount in
+the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Local</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if the auth method is local only
+    <dd>{{% md %}}Specifies if the auth method is local only.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span>Max<wbr>Lease<wbr>Ttl<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Maximum possible lease duration in seconds
+    <dd>{{% md %}}(Optional; Deprecated, use `tune.max_lease_ttl` if you are using Vault provider version >= 1.8) The maximum lease duration in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}path to mount the backend. This defaults to the type.
+    <dd>{{% md %}}The path to mount the auth method — this defaults to the name of the type
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Tune</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune<wbr>Args?</a></span>
+        <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Extra configuration block. Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the auth backend
+    <dd>{{% md %}}The name of the auth method type
 {{% /md %}}</dd>
 
 </dl>
@@ -1009,80 +754,82 @@ The following state arguments are supported:
             title="Optional">
         <span>Accessor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The accessor of the auth backend
+    <dd>{{% md %}}The accessor for this auth method
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span>Default<wbr>Lease<wbr>Ttl<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Default lease duration in seconds
+    <dd>{{% md %}}(Optional; Deprecated, use `tune.default_lease_ttl` if you are using Vault provider version >= 1.8) The default lease duration in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the auth backend
+    <dd>{{% md %}}A description of the auth method
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span>Listing<wbr>Visibility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to show this mount in the UI-specific listing endpoint
+    <dd>{{% md %}}Specifies whether to show this mount in
+the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Local</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if the auth method is local only
+    <dd>{{% md %}}Specifies if the auth method is local only.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span>Max<wbr>Lease<wbr>Ttl<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Maximum possible lease duration in seconds
+    <dd>{{% md %}}(Optional; Deprecated, use `tune.max_lease_ttl` if you are using Vault provider version >= 1.8) The maximum lease duration in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}path to mount the backend. This defaults to the type.
+    <dd>{{% md %}}The path to mount the auth method — this defaults to the name of the type
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Tune</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackendtune">*Auth<wbr>Backend<wbr>Tune</a></span>
+        <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Extra configuration block. Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the auth backend
+    <dd>{{% md %}}The name of the auth method type
 {{% /md %}}</dd>
 
 </dl>
@@ -1096,80 +843,82 @@ The following state arguments are supported:
             title="Optional">
         <span>accessor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The accessor of the auth backend
+    <dd>{{% md %}}The accessor for this auth method
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span>default<wbr>Lease<wbr>Ttl<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Default lease duration in seconds
+    <dd>{{% md %}}(Optional; Deprecated, use `tune.default_lease_ttl` if you are using Vault provider version >= 1.8) The default lease duration in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The description of the auth backend
+    <dd>{{% md %}}A description of the auth method
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span>listing<wbr>Visibility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to show this mount in the UI-specific listing endpoint
+    <dd>{{% md %}}Specifies whether to show this mount in
+the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>local</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if the auth method is local only
+    <dd>{{% md %}}Specifies if the auth method is local only.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span>max<wbr>Lease<wbr>Ttl<wbr>Seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Maximum possible lease duration in seconds
+    <dd>{{% md %}}(Optional; Deprecated, use `tune.max_lease_ttl` if you are using Vault provider version >= 1.8) The maximum lease duration in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}path to mount the backend. This defaults to the type.
+    <dd>{{% md %}}The path to mount the auth method — this defaults to the name of the type
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>tune</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune?</a></span>
+        <span class="property-type"><a href="#authbackendtune">Auth<wbr>Backend<wbr>Tune</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Extra configuration block. Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the auth backend
+    <dd>{{% md %}}The name of the auth method type
 {{% /md %}}</dd>
 
 </dl>
@@ -1183,63 +932,64 @@ The following state arguments are supported:
             title="Optional">
         <span>accessor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The accessor of the auth backend
+    <dd>{{% md %}}The accessor for this auth method
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span>default_<wbr>lease_<wbr>ttl_<wbr>seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Default lease duration in seconds
+    <dd>{{% md %}}(Optional; Deprecated, use `tune.default_lease_ttl` if you are using Vault provider version >= 1.8) The default lease duration in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The description of the auth backend
+    <dd>{{% md %}}A description of the auth method
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span>listing_<wbr>visibility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies whether to show this mount in the UI-specific listing endpoint
+    <dd>{{% md %}}Specifies whether to show this mount in
+the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>local</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Specifies if the auth method is local only
+    <dd>{{% md %}}Specifies if the auth method is local only.
 {{% /md %}}</dd>
 
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span>max_<wbr>lease_<wbr>ttl_<wbr>seconds</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Maximum possible lease duration in seconds
+    <dd>{{% md %}}(Optional; Deprecated, use `tune.max_lease_ttl` if you are using Vault provider version >= 1.8) The maximum lease duration in seconds.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use the tune configuration block to avoid forcing creation of new resource on an update{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}path to mount the backend. This defaults to the type.
+    <dd>{{% md %}}The path to mount the auth method — this defaults to the name of the type
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1248,15 +998,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#authbackendtune">Dict[Auth<wbr>Backend<wbr>Tune]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Extra configuration block. Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the auth backend
+    <dd>{{% md %}}The name of the auth method type
 {{% /md %}}</dd>
 
 </dl>
@@ -1279,7 +1030,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/?tab=doc#AuthBackendTuneArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/?tab=doc#AuthBackendTuneOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/?tab=doc#AuthBackendTuneArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/?tab=doc#AuthBackendTuneOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1292,65 +1043,83 @@ The following state arguments are supported:
             title="Optional">
         <span>Allowed<wbr>Response<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of headers to whitelist and allowing
+a plugin to include them in the response.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Audit<wbr>Non<wbr>Hmac<wbr>Request<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the list of keys that will
+not be HMAC'd by audit devices in the request data object.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Audit<wbr>Non<wbr>Hmac<wbr>Response<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the list of keys that will
+not be HMAC'd by audit devices in the response data object.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Default<wbr>Lease<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the default time-to-live.
+If set, this overrides the global default.
+Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Listing<wbr>Visibility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether to show this mount in
+the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Max<wbr>Lease<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the maximum time-to-live.
+If set, this overrides the global default.
+Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Passthrough<wbr>Request<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of headers to whitelist and
+pass from the request to the backend.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Token<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the type of tokens that should be returned by
+the mount. Valid values are "default-service", "default-batch", "service", "batch".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1363,65 +1132,83 @@ The following state arguments are supported:
             title="Optional">
         <span>Allowed<wbr>Response<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of headers to whitelist and allowing
+a plugin to include them in the response.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Audit<wbr>Non<wbr>Hmac<wbr>Request<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the list of keys that will
+not be HMAC'd by audit devices in the request data object.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Audit<wbr>Non<wbr>Hmac<wbr>Response<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the list of keys that will
+not be HMAC'd by audit devices in the response data object.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Default<wbr>Lease<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the default time-to-live.
+If set, this overrides the global default.
+Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Listing<wbr>Visibility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether to show this mount in
+the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Max<wbr>Lease<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the maximum time-to-live.
+If set, this overrides the global default.
+Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Passthrough<wbr>Request<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of headers to whitelist and
+pass from the request to the backend.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Token<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the type of tokens that should be returned by
+the mount. Valid values are "default-service", "default-batch", "service", "batch".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1434,65 +1221,83 @@ The following state arguments are supported:
             title="Optional">
         <span>allowed<wbr>Response<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of headers to whitelist and allowing
+a plugin to include them in the response.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>audit<wbr>Non<wbr>Hmac<wbr>Request<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the list of keys that will
+not be HMAC'd by audit devices in the request data object.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>audit<wbr>Non<wbr>Hmac<wbr>Response<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the list of keys that will
+not be HMAC'd by audit devices in the response data object.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>default<wbr>Lease<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the default time-to-live.
+If set, this overrides the global default.
+Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>listing<wbr>Visibility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether to show this mount in
+the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>max<wbr>Lease<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the maximum time-to-live.
+If set, this overrides the global default.
+Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>passthrough<wbr>Request<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of headers to whitelist and
+pass from the request to the backend.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>token<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the type of tokens that should be returned by
+the mount. Valid values are "default-service", "default-batch", "service", "batch".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1505,65 +1310,83 @@ The following state arguments are supported:
             title="Optional">
         <span>allowed<wbr>Response<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of headers to whitelist and allowing
+a plugin to include them in the response.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>audit<wbr>Non<wbr>Hmac<wbr>Request<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the list of keys that will
+not be HMAC'd by audit devices in the request data object.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>audit<wbr>Non<wbr>Hmac<wbr>Response<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the list of keys that will
+not be HMAC'd by audit devices in the response data object.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>default<wbr>Lease<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the default time-to-live.
+If set, this overrides the global default.
+Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>listing_<wbr>visibility</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether to show this mount in
+the UI-specific listing endpoint. Valid values are "unauth" or "hidden".
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>max<wbr>Lease<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the maximum time-to-live.
+If set, this overrides the global default.
+Must be a valid [duration string](https://golang.org/pkg/time/#ParseDuration)
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>passthrough<wbr>Request<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of headers to whitelist and
+pass from the request to the backend.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>token_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the type of tokens that should be returned by
+the mount. Valid values are "default-service", "default-batch", "service", "batch".
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1582,6 +1405,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-vault">https://github.com/pulumi/pulumi-vault</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
 </dl>
 

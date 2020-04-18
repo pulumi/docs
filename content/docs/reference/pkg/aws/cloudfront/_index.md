@@ -15,6 +15,11 @@ block_external_search_index: true
     <li><a href="publickey" title="PublicKey"><span class="symbol resource"></span>PublicKey</a></li>
 </ul>
 
+<h3>Functions</h3>
+<ul class="api">
+    <li><a href="getdistribution" title="GetDistribution"><span class="symbol function"></span>GetDistribution</a></li>
+</ul>
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>

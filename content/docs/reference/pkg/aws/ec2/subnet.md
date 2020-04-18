@@ -60,7 +60,7 @@ const inSecondaryCidr = new aws.ec2.Subnet("in_secondary_cidr", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Subnet">Subnet</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SubnetArgs">SubnetArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#Subnet">Subnet</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/ec2/#SubnetArgs">SubnetArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -68,7 +68,7 @@ const inSecondaryCidr = new aws.ec2.Subnet("in_secondary_cidr", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSubnet<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#SubnetArgs">SubnetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#Subnet">Subnet</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSubnet<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SubnetArgs">SubnetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#Subnet">Subnet</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -164,11 +164,29 @@ const inSecondaryCidr = new aws.ec2.Subnet("in_secondary_cidr", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Cidr<wbr>Block</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CIDR block for the subnet.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Vpc<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The VPC ID.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Assign<wbr>Ipv6Address<wbr>On<wbr>Creation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specify true to indicate
 that network interfaces created in the specified subnet should be
@@ -179,7 +197,7 @@ assigned an IPv6 address. Default is `false`
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The AZ for the subnet.
 {{% /md %}}</dd>
@@ -188,25 +206,16 @@ assigned an IPv6 address. Default is `false`
             title="Optional">
         <span>Availability<wbr>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The AZ ID of the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The CIDR block for the subnet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Ipv6Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 network range for the subnet,
 in CIDR notation. The subnet size must use a /64 prefix length.
@@ -216,7 +225,7 @@ in CIDR notation. The subnet size must use a /64 prefix length.
             title="Optional">
         <span>Map<wbr>Public<wbr>Ip<wbr>On<wbr>Launch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specify true to indicate
 that instances launched into the subnet should be assigned
@@ -227,18 +236,9 @@ a public IP address. Default is `false`.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Vpc<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The VPC ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -248,11 +248,29 @@ a public IP address. Default is `false`.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Cidr<wbr>Block</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CIDR block for the subnet.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Vpc<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The VPC ID.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Assign<wbr>Ipv6Address<wbr>On<wbr>Creation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specify true to indicate
 that network interfaces created in the specified subnet should be
@@ -263,7 +281,7 @@ assigned an IPv6 address. Default is `false`
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The AZ for the subnet.
 {{% /md %}}</dd>
@@ -272,25 +290,16 @@ assigned an IPv6 address. Default is `false`
             title="Optional">
         <span>Availability<wbr>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The AZ ID of the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The CIDR block for the subnet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Ipv6Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 network range for the subnet,
 in CIDR notation. The subnet size must use a /64 prefix length.
@@ -300,7 +309,7 @@ in CIDR notation. The subnet size must use a /64 prefix length.
             title="Optional">
         <span>Map<wbr>Public<wbr>Ip<wbr>On<wbr>Launch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specify true to indicate
 that instances launched into the subnet should be assigned
@@ -316,15 +325,6 @@ a public IP address. Default is `false`.
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Vpc<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The VPC ID.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -332,11 +332,29 @@ a public IP address. Default is `false`.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>cidr<wbr>Block</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The CIDR block for the subnet.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>vpc<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The VPC ID.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>assign<wbr>Ipv6Address<wbr>On<wbr>Creation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specify true to indicate
 that network interfaces created in the specified subnet should be
@@ -347,7 +365,7 @@ assigned an IPv6 address. Default is `false`
             title="Optional">
         <span>availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The AZ for the subnet.
 {{% /md %}}</dd>
@@ -356,25 +374,16 @@ assigned an IPv6 address. Default is `false`
             title="Optional">
         <span>availability<wbr>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The AZ ID of the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The CIDR block for the subnet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>ipv6Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 network range for the subnet,
 in CIDR notation. The subnet size must use a /64 prefix length.
@@ -384,7 +393,7 @@ in CIDR notation. The subnet size must use a /64 prefix length.
             title="Optional">
         <span>map<wbr>Public<wbr>Ip<wbr>On<wbr>Launch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specify true to indicate
 that instances launched into the subnet should be assigned
@@ -395,18 +404,9 @@ a public IP address. Default is `false`.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>vpc<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The VPC ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -416,11 +416,29 @@ a public IP address. Default is `false`.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>cidr_<wbr>block</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CIDR block for the subnet.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>vpc_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The VPC ID.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>assign_<wbr>ipv6_<wbr>address_<wbr>on_<wbr>creation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specify true to indicate
 that network interfaces created in the specified subnet should be
@@ -431,7 +449,7 @@ assigned an IPv6 address. Default is `false`
             title="Optional">
         <span>availability_<wbr>zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The AZ for the subnet.
 {{% /md %}}</dd>
@@ -440,25 +458,16 @@ assigned an IPv6 address. Default is `false`
             title="Optional">
         <span>availability_<wbr>zone_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The AZ ID of the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>cidr_<wbr>block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The CIDR block for the subnet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>ipv6_<wbr>cidr_<wbr>block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 network range for the subnet,
 in CIDR notation. The subnet size must use a /64 prefix length.
@@ -468,7 +477,7 @@ in CIDR notation. The subnet size must use a /64 prefix length.
             title="Optional">
         <span>map_<wbr>public_<wbr>ip_<wbr>on_<wbr>launch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specify true to indicate
 that instances launched into the subnet should be assigned
@@ -482,15 +491,6 @@ a public IP address. Default is `false`.
         <span class="property-type">Dict[str, Any]</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>vpc_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The VPC ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -516,104 +516,27 @@ The following output properties are available:
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the subnet.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Assign<wbr>Ipv6Address<wbr>On<wbr>Creation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Specify true to indicate
-that network interfaces created in the specified subnet should be
-assigned an IPv6 address. Default is `false`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The AZ for the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Availability<wbr>Zone<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The AZ ID of the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The CIDR block for the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ipv6Cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IPv6 network range for the subnet,
-in CIDR notation. The subnet size must use a /64 prefix length.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Ipv6Cidr<wbr>Block<wbr>Association<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Map<wbr>Public<wbr>Ip<wbr>On<wbr>Launch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Specify true to indicate
-that instances launched into the subnet should be assigned
-a public IP address. Default is `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The VPC ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -627,104 +550,27 @@ a public IP address. Default is `false`.
             title="">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the subnet.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Assign<wbr>Ipv6Address<wbr>On<wbr>Creation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Specify true to indicate
-that network interfaces created in the specified subnet should be
-assigned an IPv6 address. Default is `false`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The AZ for the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Availability<wbr>Zone<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The AZ ID of the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The CIDR block for the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ipv6Cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IPv6 network range for the subnet,
-in CIDR notation. The subnet size must use a /64 prefix length.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Ipv6Cidr<wbr>Block<wbr>Association<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Map<wbr>Public<wbr>Ip<wbr>On<wbr>Launch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Specify true to indicate
-that instances launched into the subnet should be assigned
-a public IP address. Default is `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Vpc<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The VPC ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -738,104 +584,27 @@ a public IP address. Default is `false`.
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the subnet.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>assign<wbr>Ipv6Address<wbr>On<wbr>Creation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Specify true to indicate
-that network interfaces created in the specified subnet should be
-assigned an IPv6 address. Default is `false`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>availability<wbr>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The AZ for the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>availability<wbr>Zone<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The AZ ID of the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The CIDR block for the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ipv6Cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IPv6 network range for the subnet,
-in CIDR notation. The subnet size must use a /64 prefix length.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>ipv6Cidr<wbr>Block<wbr>Association<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>map<wbr>Public<wbr>Ip<wbr>On<wbr>Launch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Specify true to indicate
-that instances launched into the subnet should be assigned
-a public IP address. Default is `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The VPC ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -849,104 +618,27 @@ a public IP address. Default is `false`.
             title="">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the subnet.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>assign_<wbr>ipv6_<wbr>address_<wbr>on_<wbr>creation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specify true to indicate
-that network interfaces created in the specified subnet should be
-assigned an IPv6 address. Default is `false`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>availability_<wbr>zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The AZ for the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>availability_<wbr>zone_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The AZ ID of the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cidr_<wbr>block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The CIDR block for the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ipv6_<wbr>cidr_<wbr>block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The IPv6 network range for the subnet,
-in CIDR notation. The subnet size must use a /64 prefix length.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>ipv6_<wbr>cidr_<wbr>block_<wbr>association_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>map_<wbr>public_<wbr>ip_<wbr>on_<wbr>launch</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Specify true to indicate
-that instances launched into the subnet should be assigned
-a public IP address. Default is `false`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>owner_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>vpc_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The VPC ID.
 {{% /md %}}</dd>
 
 </dl>
@@ -974,7 +666,7 @@ Get an existing Subnet resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSubnet<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#SubnetState">SubnetState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#Subnet">Subnet</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSubnet<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#SubnetState">SubnetState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/ec2?tab=doc#Subnet">Subnet</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1088,7 +780,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the subnet.
 {{% /md %}}</dd>
@@ -1097,7 +789,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Assign<wbr>Ipv6Address<wbr>On<wbr>Creation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specify true to indicate
 that network interfaces created in the specified subnet should be
@@ -1108,7 +800,7 @@ assigned an IPv6 address. Default is `false`
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The AZ for the subnet.
 {{% /md %}}</dd>
@@ -1117,7 +809,7 @@ assigned an IPv6 address. Default is `false`
             title="Optional">
         <span>Availability<wbr>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The AZ ID of the subnet.
 {{% /md %}}</dd>
@@ -1126,7 +818,7 @@ assigned an IPv6 address. Default is `false`
             title="Optional">
         <span>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The CIDR block for the subnet.
 {{% /md %}}</dd>
@@ -1135,7 +827,7 @@ assigned an IPv6 address. Default is `false`
             title="Optional">
         <span>Ipv6Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 network range for the subnet,
 in CIDR notation. The subnet size must use a /64 prefix length.
@@ -1145,7 +837,7 @@ in CIDR notation. The subnet size must use a /64 prefix length.
             title="Optional">
         <span>Ipv6Cidr<wbr>Block<wbr>Association<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
 {{% /md %}}</dd>
@@ -1154,7 +846,7 @@ in CIDR notation. The subnet size must use a /64 prefix length.
             title="Optional">
         <span>Map<wbr>Public<wbr>Ip<wbr>On<wbr>Launch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Specify true to indicate
 that instances launched into the subnet should be assigned
@@ -1165,7 +857,7 @@ a public IP address. Default is `false`.
             title="Optional">
         <span>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the subnet.
 {{% /md %}}</dd>
@@ -1174,7 +866,7 @@ a public IP address. Default is `false`.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1183,7 +875,7 @@ a public IP address. Default is `false`.
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC ID.
 {{% /md %}}</dd>
@@ -1199,7 +891,7 @@ a public IP address. Default is `false`.
             title="Optional">
         <span>Arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the subnet.
 {{% /md %}}</dd>
@@ -1208,7 +900,7 @@ a public IP address. Default is `false`.
             title="Optional">
         <span>Assign<wbr>Ipv6Address<wbr>On<wbr>Creation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specify true to indicate
 that network interfaces created in the specified subnet should be
@@ -1219,7 +911,7 @@ assigned an IPv6 address. Default is `false`
             title="Optional">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The AZ for the subnet.
 {{% /md %}}</dd>
@@ -1228,7 +920,7 @@ assigned an IPv6 address. Default is `false`
             title="Optional">
         <span>Availability<wbr>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The AZ ID of the subnet.
 {{% /md %}}</dd>
@@ -1237,7 +929,7 @@ assigned an IPv6 address. Default is `false`
             title="Optional">
         <span>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The CIDR block for the subnet.
 {{% /md %}}</dd>
@@ -1246,7 +938,7 @@ assigned an IPv6 address. Default is `false`
             title="Optional">
         <span>Ipv6Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 network range for the subnet,
 in CIDR notation. The subnet size must use a /64 prefix length.
@@ -1256,7 +948,7 @@ in CIDR notation. The subnet size must use a /64 prefix length.
             title="Optional">
         <span>Ipv6Cidr<wbr>Block<wbr>Association<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
 {{% /md %}}</dd>
@@ -1265,7 +957,7 @@ in CIDR notation. The subnet size must use a /64 prefix length.
             title="Optional">
         <span>Map<wbr>Public<wbr>Ip<wbr>On<wbr>Launch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Specify true to indicate
 that instances launched into the subnet should be assigned
@@ -1276,7 +968,7 @@ a public IP address. Default is `false`.
             title="Optional">
         <span>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the subnet.
 {{% /md %}}</dd>
@@ -1294,7 +986,7 @@ a public IP address. Default is `false`.
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC ID.
 {{% /md %}}</dd>
@@ -1310,7 +1002,7 @@ a public IP address. Default is `false`.
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the subnet.
 {{% /md %}}</dd>
@@ -1319,7 +1011,7 @@ a public IP address. Default is `false`.
             title="Optional">
         <span>assign<wbr>Ipv6Address<wbr>On<wbr>Creation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specify true to indicate
 that network interfaces created in the specified subnet should be
@@ -1330,7 +1022,7 @@ assigned an IPv6 address. Default is `false`
             title="Optional">
         <span>availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The AZ for the subnet.
 {{% /md %}}</dd>
@@ -1339,7 +1031,7 @@ assigned an IPv6 address. Default is `false`
             title="Optional">
         <span>availability<wbr>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The AZ ID of the subnet.
 {{% /md %}}</dd>
@@ -1348,7 +1040,7 @@ assigned an IPv6 address. Default is `false`
             title="Optional">
         <span>cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The CIDR block for the subnet.
 {{% /md %}}</dd>
@@ -1357,7 +1049,7 @@ assigned an IPv6 address. Default is `false`
             title="Optional">
         <span>ipv6Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 network range for the subnet,
 in CIDR notation. The subnet size must use a /64 prefix length.
@@ -1367,7 +1059,7 @@ in CIDR notation. The subnet size must use a /64 prefix length.
             title="Optional">
         <span>ipv6Cidr<wbr>Block<wbr>Association<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
 {{% /md %}}</dd>
@@ -1376,7 +1068,7 @@ in CIDR notation. The subnet size must use a /64 prefix length.
             title="Optional">
         <span>map<wbr>Public<wbr>Ip<wbr>On<wbr>Launch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Specify true to indicate
 that instances launched into the subnet should be assigned
@@ -1387,7 +1079,7 @@ a public IP address. Default is `false`.
             title="Optional">
         <span>owner<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the subnet.
 {{% /md %}}</dd>
@@ -1396,7 +1088,7 @@ a public IP address. Default is `false`.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1405,7 +1097,7 @@ a public IP address. Default is `false`.
             title="Optional">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The VPC ID.
 {{% /md %}}</dd>
@@ -1421,7 +1113,7 @@ a public IP address. Default is `false`.
             title="Optional">
         <span>arn</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ARN of the subnet.
 {{% /md %}}</dd>
@@ -1430,7 +1122,7 @@ a public IP address. Default is `false`.
             title="Optional">
         <span>assign_<wbr>ipv6_<wbr>address_<wbr>on_<wbr>creation</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specify true to indicate
 that network interfaces created in the specified subnet should be
@@ -1441,7 +1133,7 @@ assigned an IPv6 address. Default is `false`
             title="Optional">
         <span>availability_<wbr>zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The AZ for the subnet.
 {{% /md %}}</dd>
@@ -1450,7 +1142,7 @@ assigned an IPv6 address. Default is `false`
             title="Optional">
         <span>availability_<wbr>zone_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The AZ ID of the subnet.
 {{% /md %}}</dd>
@@ -1459,7 +1151,7 @@ assigned an IPv6 address. Default is `false`
             title="Optional">
         <span>cidr_<wbr>block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CIDR block for the subnet.
 {{% /md %}}</dd>
@@ -1468,7 +1160,7 @@ assigned an IPv6 address. Default is `false`
             title="Optional">
         <span>ipv6_<wbr>cidr_<wbr>block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 network range for the subnet,
 in CIDR notation. The subnet size must use a /64 prefix length.
@@ -1478,7 +1170,7 @@ in CIDR notation. The subnet size must use a /64 prefix length.
             title="Optional">
         <span>ipv6_<wbr>cidr_<wbr>block_<wbr>association_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The association ID for the IPv6 CIDR block.
 {{% /md %}}</dd>
@@ -1487,7 +1179,7 @@ in CIDR notation. The subnet size must use a /64 prefix length.
             title="Optional">
         <span>map_<wbr>public_<wbr>ip_<wbr>on_<wbr>launch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Specify true to indicate
 that instances launched into the subnet should be assigned
@@ -1498,7 +1190,7 @@ a public IP address. Default is `false`.
             title="Optional">
         <span>owner_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the AWS account that owns the subnet.
 {{% /md %}}</dd>
@@ -1516,7 +1208,7 @@ a public IP address. Default is `false`.
             title="Optional">
         <span>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The VPC ID.
 {{% /md %}}</dd>

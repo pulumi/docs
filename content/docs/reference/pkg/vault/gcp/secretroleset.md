@@ -6,6 +6,39 @@ block_external_search_index: true
 
 
 
+Creates a Roleset in the [GCP Secrets Engine](https://www.vaultproject.io/docs/secrets/gcp/index.html) for Vault.
+
+Each Roleset is [tied](https://www.vaultproject.io/docs/secrets/gcp/index.html#service-accounts-are-tied-to-rolesets) to a Service Account, and can have one or more [bindings](https://www.vaultproject.io/docs/secrets/gcp/index.html#roleset-bindings) associated with it.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as fs from "fs";
+import * as vault from "@pulumi/vault";
+
+const project = "my-awesome-project";
+const gcp = new vault.gcp.SecretBackend("gcp", {
+    credentials: fs.readFileSync("credentials.json", "utf-8"),
+    path: "gcp",
+});
+const roleset = new vault.gcp.SecretRoleset("roleset", {
+    backend: gcp.path,
+    bindings: [{
+        resource: `//cloudresourcemanager.googleapis.com/projects/${project}`,
+        roles: ["roles/viewer"],
+    }],
+    project: project,
+    roleset: "project_viewer",
+    secretType: "access_token",
+    tokenScopes: ["https://www.googleapis.com/auth/cloud-platform"],
+});
+```
+
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -14,7 +47,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/gcp/#SecretRoleset">SecretRoleset</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/gcp/#SecretRolesetArgs">SecretRolesetArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/gcp/#SecretRoleset">SecretRoleset</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/gcp/#SecretRolesetArgs">SecretRolesetArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,7 +55,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSecretRoleset<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/gcp?tab=doc#SecretRolesetArgs">SecretRolesetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/gcp?tab=doc#SecretRoleset">SecretRoleset</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSecretRoleset<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/gcp?tab=doc#SecretRolesetArgs">SecretRolesetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/gcp?tab=doc#SecretRoleset">SecretRoleset</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -122,9 +155,9 @@ block_external_search_index: true
             title="Required">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Path where the GCP secrets engine is mounted.
+    <dd>{{% md %}}Path where the GCP Secrets Engine is mounted
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -133,13 +166,14 @@ block_external_search_index: true
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretrolesetbinding">List&lt;Secret<wbr>Roleset<wbr>Binding<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Bindings to create for this roleset. This can be specified multiple times for multiple bindings. Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the GCP project that this roleset's service account will belong to.
 {{% /md %}}</dd>
@@ -148,28 +182,27 @@ block_external_search_index: true
             title="Required">
         <span>Roleset</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the RoleSet to create
+    <dd>{{% md %}}Name of the Roleset to create
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Secret<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of secret generated for this role set. Defaults to `access_token`. Accepted values: `access_token`,
-`service_account_key`
+    <dd>{{% md %}}Type of secret generated for this role set. Accepted values: `access_token`, `service_account_key`. Defaults to `access_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Token<wbr>Scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of OAuth scopes to assign to `access_token` secrets generated under this role set (`access_token` role sets only)
+    <dd>{{% md %}}List of OAuth scopes to assign to `access_token` secrets generated under this role set (`access_token` role sets only).
 {{% /md %}}</dd>
 
 </dl>
@@ -183,9 +216,9 @@ block_external_search_index: true
             title="Required">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Path where the GCP secrets engine is mounted.
+    <dd>{{% md %}}Path where the GCP Secrets Engine is mounted
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -194,13 +227,14 @@ block_external_search_index: true
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretrolesetbinding">[]Secret<wbr>Roleset<wbr>Binding</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Bindings to create for this roleset. This can be specified multiple times for multiple bindings. Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the GCP project that this roleset's service account will belong to.
 {{% /md %}}</dd>
@@ -209,28 +243,27 @@ block_external_search_index: true
             title="Required">
         <span>Roleset</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the RoleSet to create
+    <dd>{{% md %}}Name of the Roleset to create
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Secret<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of secret generated for this role set. Defaults to `access_token`. Accepted values: `access_token`,
-`service_account_key`
+    <dd>{{% md %}}Type of secret generated for this role set. Accepted values: `access_token`, `service_account_key`. Defaults to `access_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Token<wbr>Scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of OAuth scopes to assign to `access_token` secrets generated under this role set (`access_token` role sets only)
+    <dd>{{% md %}}List of OAuth scopes to assign to `access_token` secrets generated under this role set (`access_token` role sets only).
 {{% /md %}}</dd>
 
 </dl>
@@ -244,9 +277,9 @@ block_external_search_index: true
             title="Required">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Path where the GCP secrets engine is mounted.
+    <dd>{{% md %}}Path where the GCP Secrets Engine is mounted
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -255,13 +288,14 @@ block_external_search_index: true
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretrolesetbinding">Secret<wbr>Roleset<wbr>Binding[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Bindings to create for this roleset. This can be specified multiple times for multiple bindings. Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the GCP project that this roleset's service account will belong to.
 {{% /md %}}</dd>
@@ -270,28 +304,27 @@ block_external_search_index: true
             title="Required">
         <span>roleset</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the RoleSet to create
+    <dd>{{% md %}}Name of the Roleset to create
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>secret<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of secret generated for this role set. Defaults to `access_token`. Accepted values: `access_token`,
-`service_account_key`
+    <dd>{{% md %}}Type of secret generated for this role set. Accepted values: `access_token`, `service_account_key`. Defaults to `access_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>token<wbr>Scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of OAuth scopes to assign to `access_token` secrets generated under this role set (`access_token` role sets only)
+    <dd>{{% md %}}List of OAuth scopes to assign to `access_token` secrets generated under this role set (`access_token` role sets only).
 {{% /md %}}</dd>
 
 </dl>
@@ -305,9 +338,9 @@ block_external_search_index: true
             title="Required">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Path where the GCP secrets engine is mounted.
+    <dd>{{% md %}}Path where the GCP Secrets Engine is mounted
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -316,13 +349,14 @@ block_external_search_index: true
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretrolesetbinding">List[Secret<wbr>Roleset<wbr>Binding]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Bindings to create for this roleset. This can be specified multiple times for multiple bindings. Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the GCP project that this roleset's service account will belong to.
 {{% /md %}}</dd>
@@ -331,28 +365,27 @@ block_external_search_index: true
             title="Required">
         <span>roleset</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the RoleSet to create
+    <dd>{{% md %}}Name of the Roleset to create
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>secret_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Type of secret generated for this role set. Defaults to `access_token`. Accepted values: `access_token`,
-`service_account_key`
+    <dd>{{% md %}}Type of secret generated for this role set. Accepted values: `access_token`, `service_account_key`. Defaults to `access_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>token_<wbr>scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of OAuth scopes to assign to `access_token` secrets generated under this role set (`access_token` role sets only)
+    <dd>{{% md %}}List of OAuth scopes to assign to `access_token` secrets generated under this role set (`access_token` role sets only).
 {{% /md %}}</dd>
 
 </dl>
@@ -376,65 +409,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Path where the GCP secrets engine is mounted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Bindings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretrolesetbinding">List&lt;Secret<wbr>Roleset<wbr>Binding&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the GCP project that this roleset's service account will belong to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Roleset</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the RoleSet to create
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Secret<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of secret generated for this role set. Defaults to `access_token`. Accepted values: `access_token`,
-`service_account_key`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Service<wbr>Account<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Email of the service account created by Vault for this Roleset
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Token<wbr>Scopes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}List of OAuth scopes to assign to `access_token` secrets generated under this role set (`access_token` role sets only)
 {{% /md %}}</dd>
 
 </dl>
@@ -446,65 +425,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Path where the GCP secrets engine is mounted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Bindings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretrolesetbinding">[]Secret<wbr>Roleset<wbr>Binding</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the GCP project that this roleset's service account will belong to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Roleset</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the RoleSet to create
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Secret<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of secret generated for this role set. Defaults to `access_token`. Accepted values: `access_token`,
-`service_account_key`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Service<wbr>Account<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Email of the service account created by Vault for this Roleset
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Token<wbr>Scopes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}List of OAuth scopes to assign to `access_token` secrets generated under this role set (`access_token` role sets only)
 {{% /md %}}</dd>
 
 </dl>
@@ -516,65 +441,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Path where the GCP secrets engine is mounted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>bindings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretrolesetbinding">Secret<wbr>Roleset<wbr>Binding[]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the GCP project that this roleset's service account will belong to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>roleset</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the RoleSet to create
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>secret<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Type of secret generated for this role set. Defaults to `access_token`. Accepted values: `access_token`,
-`service_account_key`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>service<wbr>Account<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Email of the service account created by Vault for this Roleset
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>token<wbr>Scopes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}List of OAuth scopes to assign to `access_token` secrets generated under this role set (`access_token` role sets only)
 {{% /md %}}</dd>
 
 </dl>
@@ -586,65 +457,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Path where the GCP secrets engine is mounted.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>bindings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretrolesetbinding">List[Secret<wbr>Roleset<wbr>Binding]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the GCP project that this roleset's service account will belong to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>roleset</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the RoleSet to create
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>secret_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Type of secret generated for this role set. Defaults to `access_token`. Accepted values: `access_token`,
-`service_account_key`
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>service_<wbr>account_<wbr>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Email of the service account created by Vault for this Roleset
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>token_<wbr>scopes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}List of OAuth scopes to assign to `access_token` secrets generated under this role set (`access_token` role sets only)
 {{% /md %}}</dd>
 
 </dl>
@@ -672,7 +489,7 @@ Get an existing SecretRoleset resource's state with the given name, ID, and opti
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretRoleset<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/gcp?tab=doc#SecretRolesetState">SecretRolesetState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/gcp?tab=doc#SecretRoleset">SecretRoleset</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretRoleset<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/gcp?tab=doc#SecretRolesetState">SecretRolesetState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/gcp?tab=doc#SecretRoleset">SecretRoleset</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -786,24 +603,25 @@ The following state arguments are supported:
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Path where the GCP secrets engine is mounted.
+    <dd>{{% md %}}Path where the GCP Secrets Engine is mounted
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Bindings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretrolesetbinding">List&lt;Secret<wbr>Roleset<wbr>Binding<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#secretrolesetbinding">List&lt;Secret<wbr>Roleset<wbr>Binding<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Bindings to create for this roleset. This can be specified multiple times for multiple bindings. Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the GCP project that this roleset's service account will belong to.
 {{% /md %}}</dd>
@@ -812,26 +630,25 @@ The following state arguments are supported:
             title="Optional">
         <span>Roleset</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the RoleSet to create
+    <dd>{{% md %}}Name of the Roleset to create
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Secret<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of secret generated for this role set. Defaults to `access_token`. Accepted values: `access_token`,
-`service_account_key`
+    <dd>{{% md %}}Type of secret generated for this role set. Accepted values: `access_token`, `service_account_key`. Defaults to `access_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Service<wbr>Account<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Email of the service account created by Vault for this Roleset
 {{% /md %}}</dd>
@@ -840,9 +657,9 @@ The following state arguments are supported:
             title="Optional">
         <span>Token<wbr>Scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}List of OAuth scopes to assign to `access_token` secrets generated under this role set (`access_token` role sets only)
+    <dd>{{% md %}}List of OAuth scopes to assign to `access_token` secrets generated under this role set (`access_token` role sets only).
 {{% /md %}}</dd>
 
 </dl>
@@ -856,9 +673,9 @@ The following state arguments are supported:
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Path where the GCP secrets engine is mounted.
+    <dd>{{% md %}}Path where the GCP Secrets Engine is mounted
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -867,13 +684,14 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretrolesetbinding">[]Secret<wbr>Roleset<wbr>Binding</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Bindings to create for this roleset. This can be specified multiple times for multiple bindings. Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the GCP project that this roleset's service account will belong to.
 {{% /md %}}</dd>
@@ -882,26 +700,25 @@ The following state arguments are supported:
             title="Optional">
         <span>Roleset</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the RoleSet to create
+    <dd>{{% md %}}Name of the Roleset to create
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Secret<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of secret generated for this role set. Defaults to `access_token`. Accepted values: `access_token`,
-`service_account_key`
+    <dd>{{% md %}}Type of secret generated for this role set. Accepted values: `access_token`, `service_account_key`. Defaults to `access_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Service<wbr>Account<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Email of the service account created by Vault for this Roleset
 {{% /md %}}</dd>
@@ -910,9 +727,9 @@ The following state arguments are supported:
             title="Optional">
         <span>Token<wbr>Scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}List of OAuth scopes to assign to `access_token` secrets generated under this role set (`access_token` role sets only)
+    <dd>{{% md %}}List of OAuth scopes to assign to `access_token` secrets generated under this role set (`access_token` role sets only).
 {{% /md %}}</dd>
 
 </dl>
@@ -926,24 +743,25 @@ The following state arguments are supported:
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Path where the GCP secrets engine is mounted.
+    <dd>{{% md %}}Path where the GCP Secrets Engine is mounted
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>bindings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secretrolesetbinding">Secret<wbr>Roleset<wbr>Binding[]?</a></span>
+        <span class="property-type"><a href="#secretrolesetbinding">Secret<wbr>Roleset<wbr>Binding[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Bindings to create for this roleset. This can be specified multiple times for multiple bindings. Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the GCP project that this roleset's service account will belong to.
 {{% /md %}}</dd>
@@ -952,26 +770,25 @@ The following state arguments are supported:
             title="Optional">
         <span>roleset</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Name of the RoleSet to create
+    <dd>{{% md %}}Name of the Roleset to create
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>secret<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of secret generated for this role set. Defaults to `access_token`. Accepted values: `access_token`,
-`service_account_key`
+    <dd>{{% md %}}Type of secret generated for this role set. Accepted values: `access_token`, `service_account_key`. Defaults to `access_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>service<wbr>Account<wbr>Email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Email of the service account created by Vault for this Roleset
 {{% /md %}}</dd>
@@ -980,9 +797,9 @@ The following state arguments are supported:
             title="Optional">
         <span>token<wbr>Scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}List of OAuth scopes to assign to `access_token` secrets generated under this role set (`access_token` role sets only)
+    <dd>{{% md %}}List of OAuth scopes to assign to `access_token` secrets generated under this role set (`access_token` role sets only).
 {{% /md %}}</dd>
 
 </dl>
@@ -996,9 +813,9 @@ The following state arguments are supported:
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Path where the GCP secrets engine is mounted.
+    <dd>{{% md %}}Path where the GCP Secrets Engine is mounted
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1007,13 +824,14 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secretrolesetbinding">List[Secret<wbr>Roleset<wbr>Binding]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Bindings to create for this roleset. This can be specified multiple times for multiple bindings. Structure is documented below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the GCP project that this roleset's service account will belong to.
 {{% /md %}}</dd>
@@ -1022,26 +840,25 @@ The following state arguments are supported:
             title="Optional">
         <span>roleset</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Name of the RoleSet to create
+    <dd>{{% md %}}Name of the Roleset to create
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>secret_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Type of secret generated for this role set. Defaults to `access_token`. Accepted values: `access_token`,
-`service_account_key`
+    <dd>{{% md %}}Type of secret generated for this role set. Accepted values: `access_token`, `service_account_key`. Defaults to `access_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>service_<wbr>account_<wbr>email</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Email of the service account created by Vault for this Roleset
 {{% /md %}}</dd>
@@ -1050,9 +867,9 @@ The following state arguments are supported:
             title="Optional">
         <span>token_<wbr>scopes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}List of OAuth scopes to assign to `access_token` secrets generated under this role set (`access_token` role sets only)
+    <dd>{{% md %}}List of OAuth scopes to assign to `access_token` secrets generated under this role set (`access_token` role sets only).
 {{% /md %}}</dd>
 
 </dl>
@@ -1075,7 +892,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/gcp?tab=doc#SecretRolesetBindingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/gcp?tab=doc#SecretRolesetBindingOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/gcp?tab=doc#SecretRolesetBindingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/gcp?tab=doc#SecretRolesetBindingOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1088,17 +905,19 @@ The following state arguments are supported:
             title="Required">
         <span>Resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Resource or resource path for which IAM policy information will be bound. The resource path may be specified in a few different [formats](https://www.vaultproject.io/docs/secrets/gcp/index.html#roleset-bindings).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of [GCP IAM roles](https://cloud.google.com/iam/docs/understanding-roles) for the resource.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1111,17 +930,19 @@ The following state arguments are supported:
             title="Required">
         <span>Resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Resource or resource path for which IAM policy information will be bound. The resource path may be specified in a few different [formats](https://www.vaultproject.io/docs/secrets/gcp/index.html#roleset-bindings).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of [GCP IAM roles](https://cloud.google.com/iam/docs/understanding-roles) for the resource.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1134,17 +955,19 @@ The following state arguments are supported:
             title="Required">
         <span>resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Resource or resource path for which IAM policy information will be bound. The resource path may be specified in a few different [formats](https://www.vaultproject.io/docs/secrets/gcp/index.html#roleset-bindings).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of [GCP IAM roles](https://cloud.google.com/iam/docs/understanding-roles) for the resource.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1157,17 +980,19 @@ The following state arguments are supported:
             title="Required">
         <span>resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Resource or resource path for which IAM policy information will be bound. The resource path may be specified in a few different [formats](https://www.vaultproject.io/docs/secrets/gcp/index.html#roleset-bindings).
+{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>roles</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of [GCP IAM roles](https://cloud.google.com/iam/docs/understanding-roles) for the resource.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1186,6 +1011,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-vault">https://github.com/pulumi/pulumi-vault</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
 </dl>
 

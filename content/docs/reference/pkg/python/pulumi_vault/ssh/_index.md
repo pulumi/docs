@@ -18,9 +18,6 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.ssh.</code><code class="sig-name descname">SecretBackendCa</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">generate_signing_key=None</em>, <em class="sig-param">private_key=None</em>, <em class="sig-param">public_key=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.ssh.SecretBackendCa" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage CA information in an SSH secret backend
 <a class="reference external" href="https://www.vaultproject.io/docs/secrets/ssh/index.html">SSH secret backend within Vault</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/ssh_secret_backend_ca.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/ssh_secret_backend_ca.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -120,9 +117,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_vault.ssh.</code><code class="sig-name descname">SecretBackendRole</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_bare_domains=None</em>, <em class="sig-param">allow_host_certificates=None</em>, <em class="sig-param">allow_subdomains=None</em>, <em class="sig-param">allow_user_certificates=None</em>, <em class="sig-param">allow_user_key_ids=None</em>, <em class="sig-param">allowed_critical_options=None</em>, <em class="sig-param">allowed_domains=None</em>, <em class="sig-param">allowed_extensions=None</em>, <em class="sig-param">allowed_user_key_lengths=None</em>, <em class="sig-param">allowed_users=None</em>, <em class="sig-param">backend=None</em>, <em class="sig-param">cidr_list=None</em>, <em class="sig-param">default_critical_options=None</em>, <em class="sig-param">default_extensions=None</em>, <em class="sig-param">default_user=None</em>, <em class="sig-param">key_id_format=None</em>, <em class="sig-param">key_type=None</em>, <em class="sig-param">max_ttl=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_vault.ssh.SecretBackendRole" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage roles in an SSH secret backend
 <a class="reference external" href="https://www.vaultproject.io/docs/secrets/ssh/index.html">SSH secret backend within Vault</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/ssh_secret_backend_role.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/ssh_secret_backend_role.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

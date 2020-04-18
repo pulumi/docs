@@ -30,9 +30,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/firestore_index.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/firestore_index.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -44,6 +41,8 @@ anything, please consult the source <a class="reference external" href="https://
 ‘<strong>name</strong>’ was not specified as the last field, it will be added automatically with the same direction as that of the
 last field defined. If the final field in a composite index is not directional, the ‘<strong>name</strong>’ will be ordered
 ‘“ASCENDING”’ (unless explicitly specified otherwise).</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>query_scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scope at which a query is run. One of ‘“COLLECTION”’ or ‘“COLLECTION_GROUP”’. Defaults to ‘“COLLECTION”’.</p></li>
 </ul>
 </dd>
@@ -88,6 +87,13 @@ last field defined. If the final field in a composite index is not directional, 
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.firestore.Index.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.firestore.Index.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.firestore.Index.query_scope">
 <code class="sig-name descname">query_scope</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.firestore.Index.query_scope" title="Permalink to this definition">¶</a></dt>
 <dd><p>The scope at which a query is run. One of ‘“COLLECTION”’ or ‘“COLLECTION_GROUP”’. Defaults to ‘“COLLECTION”’.</p>
@@ -112,6 +118,8 @@ last field defined. If the final field in a composite index is not directional, 
 ‘“ASCENDING”’ (unless explicitly specified otherwise).</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A server defined name for this index. Format:
 ‘projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}’</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>query_scope</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The scope at which a query is run. One of ‘“COLLECTION”’ or ‘“COLLECTION_GROUP”’. Defaults to ‘“COLLECTION”’.</p></li>
 </ul>
 </dd>

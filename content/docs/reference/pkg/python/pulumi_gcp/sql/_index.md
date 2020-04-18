@@ -23,9 +23,6 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.sql.</code><code class="sig-name descname">Database</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">charset=None</em>, <em class="sig-param">collation=None</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.sql.Database" title="Permalink to this definition">¶</a></dt>
 <dd><p>Represents a SQL database inside the Cloud SQL instance, hosted in
 Google’s cloud.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sql_database.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sql_database.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -192,7 +189,6 @@ Change <code class="docutils literal notranslate"><span class="pre">settings.bac
 default ‘root’&#64;’%’ user with no password. This user will be deleted by the provider on
 instance creation. You should use <code class="docutils literal notranslate"><span class="pre">sql.User</span></code> to define a custom user with
 a restricted host and strong password.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sql_database_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sql_database_instance.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -217,10 +213,7 @@ key - please see <a class="reference external" href="https://cloud.google.com/sq
 <li><p><strong>master_instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance that will act as
 the master in the replication setup. Note, this requires the master to have
 <code class="docutils literal notranslate"><span class="pre">binary_log_enabled</span></code> set, as well as existing backups.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance. If the name is left
-blank, the provider will randomly generate one when the instance is first
-created. This is done because after a name is used, it cannot be reused for
-up to <a class="reference external" href="https://cloud.google.com/sql/docs/delete-instance">one week</a>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for this whitelist entry.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region the instance will sit in. Note, Cloud SQL is not
@@ -239,78 +232,114 @@ configuration is detailed below.</p></li>
 </dl>
 <p>The <strong>replica_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">connectRetryInterval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dumpFilePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">failoverTarget</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">masterHeartbeatPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - PEM representation of the trusted CA’s x509
+certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - PEM representation of the slave’s x509
+certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - PEM representation of the slave’s private key. The
+corresponding public key in encoded in the <code class="docutils literal notranslate"><span class="pre">client_certificate</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectRetryInterval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of seconds
+between connect retries.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dumpFilePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Path to a SQL file in GCS from which slave
+instances are created. Format is <code class="docutils literal notranslate"><span class="pre">gs://bucket/filename</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">failoverTarget</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if the replica is the failover target.
+If the field is set to true the replica will be designated as a failover replica.
+If the master instance fails, the replica instance will be promoted as
+the new master instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">masterHeartbeatPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Time in ms between replication
+heartbeats.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Password for the replication connection.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sslCipher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">verifyServerCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Username for replication connection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">verifyServerCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - True if the master’s common name
+value is checked during the SSL handshake.</p></li>
 </ul>
 <p>The <strong>settings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">activationPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">authorizedGaeApplications</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">availabilityType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">activationPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - This specifies when the instance should be
+active. Can be either <code class="docutils literal notranslate"><span class="pre">ALWAYS</span></code>, <code class="docutils literal notranslate"><span class="pre">NEVER</span></code> or <code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authorizedGaeApplications</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - This property is only applicable to First Generation instances.
+First Generation instances are now deprecated, see <a class="reference external" href="https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen">here</a>
+for information on how to upgrade to Second Generation instances.
+A list of Google App Engine (GAE) project names that are allowed to access this instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">availabilityType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - This specifies whether a PostgreSQL instance
+should be set up for high availability (<code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>) or single zone (<code class="docutils literal notranslate"><span class="pre">ZONAL</span></code>).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">backupConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">binaryLogEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">binaryLogEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - True if binary logging is enabled. If
+<code class="docutils literal notranslate"><span class="pre">settings.backup_configuration.enabled</span></code> is false, this must be as well.
+Cannot be used with Postgres.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - True if backup configuration is enabled.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">startTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <code class="docutils literal notranslate"><span class="pre">HH:MM</span></code> format time indicating when backup
+configuration starts.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">crashSafeReplication</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">crashSafeReplication</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - This property is only applicable to First Generation instances.
+First Generation instances are now deprecated, see <a class="reference external" href="https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen">here</a>
+for information on how to upgrade to Second Generation instances.
+Specific to read instances, indicates
+when crash-safe replication flags are enabled.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">databaseFlags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the instance. If the name is left
-blank, the provider will randomly generate one when the instance is first
-created. This is done because after a name is used, it cannot be reused for
-up to <a class="reference external" href="https://cloud.google.com/sql/docs/delete-instance">one week</a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name for this whitelist entry.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A CIDR notation IPv4 or IPv6 address that is allowed to
+access this instance. Must be set even if other two attributes are not for
+the whitelist to become active.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskAutoresize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskAutoresize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Configuration to increase storage size automatically.  Note that future <code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">apply</span></code> calls will attempt to resize the disk to the value specified in <code class="docutils literal notranslate"><span class="pre">disk_size</span></code> - if this is set, do not set <code class="docutils literal notranslate"><span class="pre">disk_size</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of data disk: PD_SSD or PD_HDD.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">authorizedNetworks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">expiration_time</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the instance. If the name is left
-blank, the provider will randomly generate one when the instance is first
-created. This is done because after a name is used, it cannot be reused for
-up to <a class="reference external" href="https://cloud.google.com/sql/docs/delete-instance">one week</a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expiration_time</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The <a class="reference external" href="https://tools.ietf.org/html/rfc3339">RFC 3339</a>
+formatted date time string indicating when this whitelist expires.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name for this whitelist entry.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A CIDR notation IPv4 or IPv6 address that is allowed to
+access this instance. Must be set even if other two attributes are not for
+the whitelist to become active.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requireSsl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether this Cloud SQL instance should be assigned
+a public IPV4 address. Either <code class="docutils literal notranslate"><span class="pre">ipv4_enabled</span></code> must be enabled or a
+<code class="docutils literal notranslate"><span class="pre">private_network</span></code> must be configured.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The VPC network from which the Cloud SQL
+instance is accessible for private IP. For example, projects/myProject/global/networks/default.
+Specifying a network enables private IP.
+Either <code class="docutils literal notranslate"><span class="pre">ipv4_enabled</span></code> must be enabled or a <code class="docutils literal notranslate"><span class="pre">private_network</span></code> must be configured.
+This setting can be updated, but it cannot be removed after it is set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireSsl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - True if mysqld should default to <code class="docutils literal notranslate"><span class="pre">REQUIRE</span> <span class="pre">X509</span></code>
+for users connecting over IP.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">locationPreference</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">followGaeApplication</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">followGaeApplication</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A GAE application whose zone to remain
+in. Must be in the same region as this instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The preferred compute engine
+<a class="reference external" href="https://cloud.google.com/compute/docs/zones?hl=en">zone</a>.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maintenanceWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">hour</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">updateTrack</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Day of week (<code class="docutils literal notranslate"><span class="pre">1-7</span></code>), starting on Monday</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hour</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Hour of day (<code class="docutils literal notranslate"><span class="pre">0-23</span></code>), ignored if <code class="docutils literal notranslate"><span class="pre">day</span></code> not set</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">updateTrack</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Receive updates earlier (<code class="docutils literal notranslate"><span class="pre">canary</span></code>) or later
+(<code class="docutils literal notranslate"><span class="pre">stable</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pricingPlan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replicationType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">user_labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pricingPlan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Pricing plan for this instance, can only be <code class="docutils literal notranslate"><span class="pre">PER_USE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replicationType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - This property is only applicable to First Generation instances.
+First Generation instances are now deprecated, see <a class="reference external" href="https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen">here</a>
+for information on how to upgrade to Second Generation instances.
+Replication type for this instance, can be one of <code class="docutils literal notranslate"><span class="pre">ASYNCHRONOUS</span></code> or <code class="docutils literal notranslate"><span class="pre">SYNCHRONOUS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The machine type to use. See <a class="reference external" href="https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers">tiers</a>
+for more details and supported versions. Postgres supports only shared-core machine types such as <code class="docutils literal notranslate"><span class="pre">db-f1-micro</span></code>,
+and custom machine types such as <code class="docutils literal notranslate"><span class="pre">db-custom-2-13312</span></code>. See the <a class="reference external" href="https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create">Custom Machine Type Documentation</a> to learn about specifying custom machine types.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A set of key/value user label pairs to assign to the instance.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
 <dl class="attribute">
@@ -361,10 +390,7 @@ the master in the replication setup. Note, this requires the master to have
 <dl class="attribute">
 <dt id="pulumi_gcp.sql.DatabaseInstance.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.sql.DatabaseInstance.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the instance. If the name is left
-blank, the provider will randomly generate one when the instance is first
-created. This is done because after a name is used, it cannot be reused for
-up to <a class="reference external" href="https://cloud.google.com/sql/docs/delete-instance">one week</a>.</p>
+<dd><p>A name for this whitelist entry.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -403,17 +429,27 @@ make sure you understand this.</p>
 <dd><p>The configuration for replication. The
 configuration is detailed below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">connectRetryInterval</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dumpFilePath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">failoverTarget</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">masterHeartbeatPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - PEM representation of the trusted CA’s x509
+certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - PEM representation of the slave’s x509
+certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientKey</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - PEM representation of the slave’s private key. The
+corresponding public key in encoded in the <code class="docutils literal notranslate"><span class="pre">client_certificate</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectRetryInterval</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of seconds
+between connect retries.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dumpFilePath</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Path to a SQL file in GCS from which slave
+instances are created. Format is <code class="docutils literal notranslate"><span class="pre">gs://bucket/filename</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">failoverTarget</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies if the replica is the failover target.
+If the field is set to true the replica will be designated as a failover replica.
+If the master instance fails, the replica instance will be promoted as
+the new master instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">masterHeartbeatPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Time in ms between replication
+heartbeats.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Password for the replication connection.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sslCipher</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">verifyServerCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Username for replication connection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">verifyServerCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - True if the master’s common name
+value is checked during the SSL handshake.</p></li>
 </ul>
 </dd></dl>
 
@@ -442,64 +478,90 @@ instance.</p>
 <dd><p>The settings to use for the database. The
 configuration is detailed below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">activationPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">authorizedGaeApplications</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">availabilityType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">activationPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - This specifies when the instance should be
+active. Can be either <code class="docutils literal notranslate"><span class="pre">ALWAYS</span></code>, <code class="docutils literal notranslate"><span class="pre">NEVER</span></code> or <code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authorizedGaeApplications</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - This property is only applicable to First Generation instances.
+First Generation instances are now deprecated, see <a class="reference external" href="https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen">here</a>
+for information on how to upgrade to Second Generation instances.
+A list of Google App Engine (GAE) project names that are allowed to access this instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">availabilityType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - This specifies whether a PostgreSQL instance
+should be set up for high availability (<code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>) or single zone (<code class="docutils literal notranslate"><span class="pre">ZONAL</span></code>).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">backupConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">binaryLogEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">binaryLogEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - True if binary logging is enabled. If
+<code class="docutils literal notranslate"><span class="pre">settings.backup_configuration.enabled</span></code> is false, this must be as well.
+Cannot be used with Postgres.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - True if backup configuration is enabled.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">startTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - <code class="docutils literal notranslate"><span class="pre">HH:MM</span></code> format time indicating when backup
+configuration starts.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">crashSafeReplication</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">crashSafeReplication</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - This property is only applicable to First Generation instances.
+First Generation instances are now deprecated, see <a class="reference external" href="https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen">here</a>
+for information on how to upgrade to Second Generation instances.
+Specific to read instances, indicates
+when crash-safe replication flags are enabled.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">databaseFlags</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the instance. If the name is left
-blank, the provider will randomly generate one when the instance is first
-created. This is done because after a name is used, it cannot be reused for
-up to <a class="reference external" href="https://cloud.google.com/sql/docs/delete-instance">one week</a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A name for this whitelist entry.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A CIDR notation IPv4 or IPv6 address that is allowed to
+access this instance. Must be set even if other two attributes are not for
+the whitelist to become active.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskAutoresize</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskSize</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskAutoresize</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Configuration to increase storage size automatically.  Note that future <code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">apply</span></code> calls will attempt to resize the disk to the value specified in <code class="docutils literal notranslate"><span class="pre">disk_size</span></code> - if this is set, do not set <code class="docutils literal notranslate"><span class="pre">disk_size</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskSize</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The type of data disk: PD_SSD or PD_HDD.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">authorizedNetworks</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">expiration_time</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the instance. If the name is left
-blank, the provider will randomly generate one when the instance is first
-created. This is done because after a name is used, it cannot be reused for
-up to <a class="reference external" href="https://cloud.google.com/sql/docs/delete-instance">one week</a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expiration_time</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The <a class="reference external" href="https://tools.ietf.org/html/rfc3339">RFC 3339</a>
+formatted date time string indicating when this whitelist expires.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A name for this whitelist entry.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A CIDR notation IPv4 or IPv6 address that is allowed to
+access this instance. Must be set even if other two attributes are not for
+the whitelist to become active.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requireSsl</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether this Cloud SQL instance should be assigned
+a public IPV4 address. Either <code class="docutils literal notranslate"><span class="pre">ipv4_enabled</span></code> must be enabled or a
+<code class="docutils literal notranslate"><span class="pre">private_network</span></code> must be configured.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The VPC network from which the Cloud SQL
+instance is accessible for private IP. For example, projects/myProject/global/networks/default.
+Specifying a network enables private IP.
+Either <code class="docutils literal notranslate"><span class="pre">ipv4_enabled</span></code> must be enabled or a <code class="docutils literal notranslate"><span class="pre">private_network</span></code> must be configured.
+This setting can be updated, but it cannot be removed after it is set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireSsl</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - True if mysqld should default to <code class="docutils literal notranslate"><span class="pre">REQUIRE</span> <span class="pre">X509</span></code>
+for users connecting over IP.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">locationPreference</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">followGaeApplication</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">zone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">followGaeApplication</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A GAE application whose zone to remain
+in. Must be in the same region as this instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The preferred compute engine
+<a class="reference external" href="https://cloud.google.com/compute/docs/zones?hl=en">zone</a>.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maintenanceWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">hour</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">updateTrack</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Day of week (<code class="docutils literal notranslate"><span class="pre">1-7</span></code>), starting on Monday</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hour</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Hour of day (<code class="docutils literal notranslate"><span class="pre">0-23</span></code>), ignored if <code class="docutils literal notranslate"><span class="pre">day</span></code> not set</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">updateTrack</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Receive updates earlier (<code class="docutils literal notranslate"><span class="pre">canary</span></code>) or later
+(<code class="docutils literal notranslate"><span class="pre">stable</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pricingPlan</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replicationType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tier</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">user_labels</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pricingPlan</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Pricing plan for this instance, can only be <code class="docutils literal notranslate"><span class="pre">PER_USE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replicationType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - This property is only applicable to First Generation instances.
+First Generation instances are now deprecated, see <a class="reference external" href="https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen">here</a>
+for information on how to upgrade to Second Generation instances.
+Replication type for this instance, can be one of <code class="docutils literal notranslate"><span class="pre">ASYNCHRONOUS</span></code> or <code class="docutils literal notranslate"><span class="pre">SYNCHRONOUS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tier</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The machine type to use. See <a class="reference external" href="https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers">tiers</a>
+for more details and supported versions. Postgres supports only shared-core machine types such as <code class="docutils literal notranslate"><span class="pre">db-f1-micro</span></code>,
+and custom machine types such as <code class="docutils literal notranslate"><span class="pre">db-custom-2-13312</span></code>. See the <a class="reference external" href="https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create">Custom Machine Type Documentation</a> to learn about specifying custom machine types.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_labels</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - A set of key/value user label pairs to assign to the instance.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
 </ul>
 </dd></dl>
@@ -538,11 +600,7 @@ key - please see <a class="reference external" href="https://cloud.google.com/sq
 <li><p><strong>master_instance_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the instance that will act as
 the master in the replication setup. Note, this requires the master to have
 <code class="docutils literal notranslate"><span class="pre">binary_log_enabled</span></code> set, as well as existing backups.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The name of the instance. If the name is left
-blank, the provider will randomly generate one when the instance is first
-created. This is done because after a name is used, it cannot be reused for
-up to <a class="reference external" href="https://cloud.google.com/sql/docs/delete-instance">one week</a>.</p>
-</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for this whitelist entry.</p></li>
 <li><p><strong>private_ip_address</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The first private (<code class="docutils literal notranslate"><span class="pre">PRIVATE</span></code>) IPv4 address assigned.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs. If it
 is not provided, the provider project is used.</p></li>
@@ -573,86 +631,123 @@ configuration is detailed below.</p></li>
 </ul>
 <p>The <strong>replica_configuration</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">caCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">clientKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">connectRetryInterval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dumpFilePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">failoverTarget</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">masterHeartbeatPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">caCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - PEM representation of the trusted CA’s x509
+certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - PEM representation of the slave’s x509
+certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clientKey</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - PEM representation of the slave’s private key. The
+corresponding public key in encoded in the <code class="docutils literal notranslate"><span class="pre">client_certificate</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">connectRetryInterval</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of seconds
+between connect retries.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dumpFilePath</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Path to a SQL file in GCS from which slave
+instances are created. Format is <code class="docutils literal notranslate"><span class="pre">gs://bucket/filename</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">failoverTarget</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies if the replica is the failover target.
+If the field is set to true the replica will be designated as a failover replica.
+If the master instance fails, the replica instance will be promoted as
+the new master instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">masterHeartbeatPeriod</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Time in ms between replication
+heartbeats.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">password</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Password for the replication connection.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sslCipher</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">verifyServerCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">username</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Username for replication connection.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">verifyServerCertificate</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - True if the master’s common name
+value is checked during the SSL handshake.</p></li>
 </ul>
 <p>The <strong>server_ca_cert</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">cert</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">common_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">create_time</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">expiration_time</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expiration_time</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The <a class="reference external" href="https://tools.ietf.org/html/rfc3339">RFC 3339</a>
+formatted date time string indicating when this whitelist expires.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">sha1_fingerprint</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
 </ul>
 <p>The <strong>settings</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">activationPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">authorizedGaeApplications</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">availabilityType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">activationPolicy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - This specifies when the instance should be
+active. Can be either <code class="docutils literal notranslate"><span class="pre">ALWAYS</span></code>, <code class="docutils literal notranslate"><span class="pre">NEVER</span></code> or <code class="docutils literal notranslate"><span class="pre">ON_DEMAND</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">authorizedGaeApplications</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - This property is only applicable to First Generation instances.
+First Generation instances are now deprecated, see <a class="reference external" href="https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen">here</a>
+for information on how to upgrade to Second Generation instances.
+A list of Google App Engine (GAE) project names that are allowed to access this instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">availabilityType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - This specifies whether a PostgreSQL instance
+should be set up for high availability (<code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>) or single zone (<code class="docutils literal notranslate"><span class="pre">ZONAL</span></code>).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">backupConfiguration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">binaryLogEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">binaryLogEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - True if binary logging is enabled. If
+<code class="docutils literal notranslate"><span class="pre">settings.backup_configuration.enabled</span></code> is false, this must be as well.
+Cannot be used with Postgres.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - True if backup configuration is enabled.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">location</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">startTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">startTime</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - <code class="docutils literal notranslate"><span class="pre">HH:MM</span></code> format time indicating when backup
+configuration starts.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">crashSafeReplication</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">crashSafeReplication</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - This property is only applicable to First Generation instances.
+First Generation instances are now deprecated, see <a class="reference external" href="https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen">here</a>
+for information on how to upgrade to Second Generation instances.
+Specific to read instances, indicates
+when crash-safe replication flags are enabled.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">databaseFlags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the instance. If the name is left
-blank, the provider will randomly generate one when the instance is first
-created. This is done because after a name is used, it cannot be reused for
-up to <a class="reference external" href="https://cloud.google.com/sql/docs/delete-instance">one week</a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name for this whitelist entry.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A CIDR notation IPv4 or IPv6 address that is allowed to
+access this instance. Must be set even if other two attributes are not for
+the whitelist to become active.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskAutoresize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">diskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskAutoresize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Configuration to increase storage size automatically.  Note that future <code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">apply</span></code> calls will attempt to resize the disk to the value specified in <code class="docutils literal notranslate"><span class="pre">disk_size</span></code> - if this is set, do not set <code class="docutils literal notranslate"><span class="pre">disk_size</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskSize</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The size of data disk, in GB. Size of a running instance cannot be reduced but can be increased.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diskType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The type of data disk: PD_SSD or PD_HDD.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ip_configuration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">authorizedNetworks</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">expiration_time</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the instance. If the name is left
-blank, the provider will randomly generate one when the instance is first
-created. This is done because after a name is used, it cannot be reused for
-up to <a class="reference external" href="https://cloud.google.com/sql/docs/delete-instance">one week</a>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expiration_time</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The <a class="reference external" href="https://tools.ietf.org/html/rfc3339">RFC 3339</a>
+formatted date time string indicating when this whitelist expires.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name for this whitelist entry.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A CIDR notation IPv4 or IPv6 address that is allowed to
+access this instance. Must be set even if other two attributes are not for
+the whitelist to become active.</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">privateNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requireSsl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ipv4Enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether this Cloud SQL instance should be assigned
+a public IPV4 address. Either <code class="docutils literal notranslate"><span class="pre">ipv4_enabled</span></code> must be enabled or a
+<code class="docutils literal notranslate"><span class="pre">private_network</span></code> must be configured.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">privateNetwork</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The VPC network from which the Cloud SQL
+instance is accessible for private IP. For example, projects/myProject/global/networks/default.
+Specifying a network enables private IP.
+Either <code class="docutils literal notranslate"><span class="pre">ipv4_enabled</span></code> must be enabled or a <code class="docutils literal notranslate"><span class="pre">private_network</span></code> must be configured.
+This setting can be updated, but it cannot be removed after it is set.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireSsl</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - True if mysqld should default to <code class="docutils literal notranslate"><span class="pre">REQUIRE</span> <span class="pre">X509</span></code>
+for users connecting over IP.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">locationPreference</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">followGaeApplication</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">followGaeApplication</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A GAE application whose zone to remain
+in. Must be in the same region as this instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The preferred compute engine
+<a class="reference external" href="https://cloud.google.com/compute/docs/zones?hl=en">zone</a>.</p></li>
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maintenanceWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">hour</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">updateTrack</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">day</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Day of week (<code class="docutils literal notranslate"><span class="pre">1-7</span></code>), starting on Monday</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hour</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Hour of day (<code class="docutils literal notranslate"><span class="pre">0-23</span></code>), ignored if <code class="docutils literal notranslate"><span class="pre">day</span></code> not set</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">updateTrack</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Receive updates earlier (<code class="docutils literal notranslate"><span class="pre">canary</span></code>) or later
+(<code class="docutils literal notranslate"><span class="pre">stable</span></code>)</p></li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pricingPlan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">replicationType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">user_labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pricingPlan</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Pricing plan for this instance, can only be <code class="docutils literal notranslate"><span class="pre">PER_USE</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">replicationType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - This property is only applicable to First Generation instances.
+First Generation instances are now deprecated, see <a class="reference external" href="https://cloud.google.com/sql/docs/mysql/upgrade-2nd-gen">here</a>
+for information on how to upgrade to Second Generation instances.
+Replication type for this instance, can be one of <code class="docutils literal notranslate"><span class="pre">ASYNCHRONOUS</span></code> or <code class="docutils literal notranslate"><span class="pre">SYNCHRONOUS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tier</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The machine type to use. See <a class="reference external" href="https://cloud.google.com/sql/docs/admin-api/v1beta4/tiers">tiers</a>
+for more details and supported versions. Postgres supports only shared-core machine types such as <code class="docutils literal notranslate"><span class="pre">db-f1-micro</span></code>,
+and custom machine types such as <code class="docutils literal notranslate"><span class="pre">db-custom-2-13312</span></code>. See the <a class="reference external" href="https://cloud.google.com/compute/docs/instances/creating-instance-with-custom-machine-type#create">Custom Machine Type Documentation</a> to learn about specifying custom machine types.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">user_labels</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - A set of key/value user label pairs to assign to the instance.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">version</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
 </ul>
 </dd></dl>
@@ -727,9 +822,6 @@ the source database server to the Cloud SQL replica. It is visible in the
 Cloud Console and appears the same as a regular Cloud SQL instance, but it
 contains no data, requires no configuration or maintenance, and does not
 affect billing. You cannot update the source representation instance.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sql_source_representation_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sql_source_representation_instance.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -847,9 +939,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.sql.SslCert">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.sql.</code><code class="sig-name descname">SslCert</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">common_name=None</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.sql.SslCert" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new Google SQL SSL Cert on a Google SQL Instance. For more information, see the <a class="reference external" href="https://cloud.google.com/sql/">official documentation</a>, or the <a class="reference external" href="https://cloud.google.com/sql/docs/mysql/admin-api/v1beta4/sslCerts">JSON API</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sql_ssl_cert.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sql_ssl_cert.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1004,9 +1093,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.sql.User">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_gcp.sql.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">instance=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.sql.User" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a new Google SQL User on a Google SQL User Instance. For more information, see the <a class="reference external" href="https://cloud.google.com/sql/">official documentation</a>, or the <a class="reference external" href="https://cloud.google.com/sql/docs/admin-api/v1beta4/users">JSON API</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sql_user.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sql_user.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1134,9 +1220,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <a class="reference external" href="https://cloud.google.com/sql/">official documentation</a>
 and
 <a class="reference external" href="https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/instances/listServerCas">API</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_google_sql_ca_certs.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_google_sql_ca_certs.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

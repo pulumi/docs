@@ -133,9 +133,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_datadog.pagerduty.ServiceObject">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.pagerduty.</code><code class="sig-name descname">ServiceObject</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">service_key=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.pagerduty.ServiceObject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides access to individual Service Objects of Datadog - PagerDuty integrations. Note that the Datadog - PagerDuty integration must be activated (either manually in the Datadog UI or by using <a class="reference external" href="https://www.terraform.io/docs/providers/datadog/r/integration_pagerduty.html">pagerduty.Integration</a>) in order for this resource to be usable.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/integration_pagerduty_service_object.html.markdown">https://github.com/terraform-providers/terraform-provider-datadog/blob/master/website/docs/r/integration_pagerduty_service_object.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

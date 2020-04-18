@@ -42,7 +42,7 @@ Let's now see how each of these work. To fully appreciate the new features, we w
 
 Running a Kubernetes cluster isn't easy, but EKS makes the task of doing so much simpler. It offers out-of-the-box integrations with essential AWS services like IAM, EBS, Route53, and CloudWatch, so that your EKS clusters fit with your existing AWS security, storage, and monitoring practices.
 
-It's great to have all of the building blocks at your fingertips, and the `@pulumi/aws` package [exposes these raw capabilities of EKS to you]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/eks#Cluster" >}}). [We also created an EKS package]({{< relref "/blog/easily-create-and-manage-aws-eks-kubernetes-clusters-with-pulumi" >}}) to simplify common tasks, however, including creating the Kubernetes data plane, configuring VPC/CNI and subnet networking, and managing node groups. This package has been enlightened with the new features, and is what we'll use in our examples.
+It's great to have all of the building blocks at your fingertips, and the `@pulumi/aws` package [exposes these raw capabilities of EKS to you]({{< relref "/docs/reference/pkg/aws/eks/cluster" >}}). [We also created an EKS package]({{< relref "/blog/easily-create-and-manage-aws-eks-kubernetes-clusters-with-pulumi" >}}) to simplify common tasks, however, including creating the Kubernetes data plane, configuring VPC/CNI and subnet networking, and managing node groups. This package has been enlightened with the new features, and is what we'll use in our examples.
 
 Provisioning a new EKS cluster today is already as simple as a dozen lines of code:
 
@@ -236,7 +236,7 @@ The new EKS feature [Managed Node Groups](https://aws.amazon.com/blogs/container
 
 Managed Node Groups will automatically scale the EC2 instances powering your cluster using an Auto Scaling Group managed by EKS. This ASG also runs the latest Amazon EKS-optimized Amazon Linux 2 AMI. This is great on one hand &mdash; because updates will be applied automatically for you &mdash; but if you want control over this you will want to manage your own node groups. Finally, security groups, IAM roles, and connecting them together is handled for you.
 
-To opt-in to using Managed Node Groups, the raw [`aws.eks.NodeGroup` building block]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/eks#NodeGroup" >}}) is available. However, we've enlightened the EKS package with the `eks.Cluster.createManagedNodeGroup` function to make it easier and to integrate with cluster provisioning.
+To opt-in to using Managed Node Groups, the raw [`aws.eks.NodeGroup` building block]({{< relref "/docs/reference/pkg/aws/eks/nodegroup" >}}) is available. However, we've enlightened the EKS package with the `eks.Cluster.createManagedNodeGroup` function to make it easier and to integrate with cluster provisioning.
 
 The following example creates an EKS cluster with a single Managed Node Group. It looks similar to our explicitly managed node group earlier, but a bit simpler because we can lean on EKS to configure and scale it:
 
@@ -291,7 +291,7 @@ This can be provisioned with a single `pulumi up`, just like before, but instead
 
 Note that it's possible to mix node groups. So, if you need precise control over some groups, but not others, feel free to call `createNodeGroup` and `createManagedNodeGroup` interspersed with one another. The EKS package knows what to do.
 
-For a full list of properties you can configure on your Managed Node Groups, please refer to the [`createManagedNodeGroup` API docs]({{< relref "/docs/reference/pkg/nodejs/pulumi/eks#createNodeGroup" >}}). There are fewer options available than manually managed node groups, such as inability to supply kubelet arguments, for instance. We are giving up some control in exchange for simplicity. For complete information about EKS Managed Node Groups, [see AWS's own product documentation](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html).
+For a full list of properties you can configure on your Managed Node Groups, please refer to the [`createManagedNodeGroup` API docs]({{< relref "/docs/reference/pkg/aws/eks/nodegroup#create-a-nodegroup-resource" >}}). There are fewer options available than manually managed node groups, such as inability to supply kubelet arguments, for instance. We are giving up some control in exchange for simplicity. For complete information about EKS Managed Node Groups, [see AWS's own product documentation](https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html).
 
 ## Let Fargate Manage It All
 
@@ -303,7 +303,7 @@ Not only is it simpler, but as [Clare Liguori](https://twitter.com/clare_liguori
 
 ![EC2 vs Fargate EKS Scaling](./clare-fargate.jpeg)
 
-Now let's see how to use it. The key building block that enables Fargate support is something called a [Fargate profile]({{< relref "/docs/reference/pkg/nodejs/pulumi/aws/eks#FargateProfile" >}}). Like `eks.NodeGroup`s above, one of these can be allocated explicitly, if you prefer to program at the level of the raw underlying building blocks.
+Now let's see how to use it. The key building block that enables Fargate support is something called a [Fargate profile]({{< relref "/docs/reference/pkg/aws/eks/fargateprofile" >}}). Like `eks.NodeGroup`s above, one of these can be allocated explicitly, if you prefer to program at the level of the raw underlying building blocks.
 
 The EKS package, however, has  been enlightened to make allocating a Fargate-powered EKS cluster as simple as saying `fargate: true`. All we need to do is change our original cluster definition to the following:
 

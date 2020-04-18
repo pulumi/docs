@@ -49,7 +49,6 @@ against GCP Cloud Composer before filing bugs against this provider.</p></li>
 <li><p><strong>Environments create Google Cloud Storage buckets that do not get cleaned up automatically</strong> on environment 
 deletion. <a class="reference external" href="https://cloud.google.com/composer/docs/concepts/cloud-storage">More about Composer’s use of Cloud Storage</a>.</p></li>
 </ul>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/composer_environment.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/composer_environment.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -98,9 +97,18 @@ If it is not provided, the provider project is used.</p></li>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">airflowConfigOverrides</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">env_variables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">imageVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">imageVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
+The version of the software running in the environment. This encapsulates both the version of Cloud Composer
+functionality and the version of Apache Airflow. It must match the regular expression
+<code class="docutils literal notranslate"><span class="pre">composer-[0-9]+\.[0-9]+(\.[0-9]+)?-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?</span></code>.
+The Cloud Composer portion of the version is a semantic version.
+The portion of the image version following ‘airflow-‘ is an official Apache Airflow repository release name.
+See <a class="reference external" href="https://cloud.google.com/composer/docs/reference/rest/v1beta1/projects.locations.environments#softwareconfig">documentation</a>
+for allowed release names.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pypiPackages</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pythonVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pythonVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
+The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes.
+Can be set to ‘2’ or ‘3’. If not specified, the default is ‘2’. Cannot be updated.</p></li>
 </ul>
 </li>
 </ul>
@@ -164,9 +172,18 @@ If it is not provided, the provider project is used.</p></li>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">airflowConfigOverrides</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">env_variables</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">imageVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">imageVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
+The version of the software running in the environment. This encapsulates both the version of Cloud Composer
+functionality and the version of Apache Airflow. It must match the regular expression
+<code class="docutils literal notranslate"><span class="pre">composer-[0-9]+\.[0-9]+(\.[0-9]+)?-airflow-[0-9]+\.[0-9]+(\.[0-9]+.*)?</span></code>.
+The Cloud Composer portion of the version is a semantic version.
+The portion of the image version following ‘airflow-‘ is an official Apache Airflow repository release name.
+See <a class="reference external" href="https://cloud.google.com/composer/docs/reference/rest/v1beta1/projects.locations.environments#softwareconfig">documentation</a>
+for allowed release names.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pypiPackages</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pythonVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pythonVersion</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - -
+The major version of Python used to run the Apache Airflow scheduler, worker, and webserver processes.
+Can be set to ‘2’ or ‘3’. If not specified, the default is ‘2’. Cannot be updated.</p></li>
 </ul>
 </li>
 </ul>
@@ -232,9 +249,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_gcp.composer.get_image_versions">
 <code class="sig-prename descclassname">pulumi_gcp.composer.</code><code class="sig-name descname">get_image_versions</code><span class="sig-paren">(</span><em class="sig-param">project=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.composer.get_image_versions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides access to available Cloud Composer versions in a region for a given project.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_google_composer_image_versions.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_google_composer_image_versions.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

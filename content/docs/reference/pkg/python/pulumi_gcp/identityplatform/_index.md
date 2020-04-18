@@ -20,9 +20,6 @@ anything, please consult the source <a class="reference external" href="https://
 <p>You must enable the
 <a class="reference external" href="https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity">Google Identity Platform</a> in
 the marketplace prior to using this resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_default_supported_idp_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_default_supported_idp_config.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -145,9 +142,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>You must enable the
 <a class="reference external" href="https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity">Google Identity Platform</a> in
 the marketplace prior to using this resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_inbound_saml_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_inbound_saml_config.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -159,6 +153,8 @@ the marketplace prior to using this resource.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the InboundSamlConfig resource. Must start with ‘saml.’ and can only have alphanumeric characters, hyphens,
 underscores or periods. The part after ‘saml.’ must also start with a lowercase letter, end with an alphanumeric
 character, and have at least 2 characters.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>sp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an
 authentication assertion issued by a SAML identity provider.</p></li>
 </ul>
@@ -222,6 +218,13 @@ character, and have at least 2 characters.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.identityplatform.InboundSamlConfig.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.identityplatform.InboundSamlConfig.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.identityplatform.InboundSamlConfig.sp_config">
 <code class="sig-name descname">sp_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.identityplatform.InboundSamlConfig.sp_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an
@@ -254,6 +257,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the InboundSamlConfig resource. Must start with ‘saml.’ and can only have alphanumeric characters, hyphens,
 underscores or periods. The part after ‘saml.’ must also start with a lowercase letter, end with an alphanumeric
 character, and have at least 2 characters.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>sp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an
 authentication assertion issued by a SAML identity provider.</p></li>
 </ul>
@@ -327,9 +332,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>You must enable the
 <a class="reference external" href="https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity">Google Identity Platform</a> in
 the marketplace prior to using this resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_oauth_idp_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_oauth_idp_config.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -460,9 +462,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 the marketplace prior to using this resource.</p>
 <p>You must <a class="reference external" href="https://cloud.google.com/identity-platform/docs/multi-tenancy-quickstart">enable multi-tenancy</a> via
 the Cloud Console prior to creating tenants.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_tenant.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_tenant.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -585,9 +584,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>You must enable the
 <a class="reference external" href="https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity">Google Identity Platform</a> in
 the marketplace prior to using this resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_tenant_default_supported_idp_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_tenant_default_supported_idp_config.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -718,9 +714,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>You must enable the
 <a class="reference external" href="https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity">Google Identity Platform</a> in
 the marketplace prior to using this resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_tenant_inbound_saml_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_tenant_inbound_saml_config.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -732,6 +725,8 @@ the marketplace prior to using this resource.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the InboundSamlConfig resource. Must start with ‘saml.’ and can only have alphanumeric characters, hyphens,
 underscores or periods. The part after ‘saml.’ must also start with a lowercase letter, end with an alphanumeric
 character, and have at least 2 characters.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>sp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an
 authentication assertion issued by a SAML identity provider.</p></li>
 <li><p><strong>tenant</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the tenant where this inbound SAML config resource exists</p></li>
@@ -796,6 +791,13 @@ character, and have at least 2 characters.</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.identityplatform.TenantInboundSamlConfig.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.identityplatform.TenantInboundSamlConfig.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.identityplatform.TenantInboundSamlConfig.sp_config">
 <code class="sig-name descname">sp_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.identityplatform.TenantInboundSamlConfig.sp_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an
@@ -834,6 +836,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the InboundSamlConfig resource. Must start with ‘saml.’ and can only have alphanumeric characters, hyphens,
 underscores or periods. The part after ‘saml.’ must also start with a lowercase letter, end with an alphanumeric
 character, and have at least 2 characters.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 <li><p><strong>sp_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – SAML SP (Service Provider) configuration when the project acts as the relying party to receive and accept an
 authentication assertion issued by a SAML identity provider.</p></li>
 <li><p><strong>tenant</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the tenant where this inbound SAML config resource exists</p></li>
@@ -908,9 +912,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>You must enable the
 <a class="reference external" href="https://console.cloud.google.com/marketplace/details/google-cloud-platform/customer-identity">Google Identity Platform</a> in
 the marketplace prior to using this resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_tenant_oauth_idp_config.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/identity_platform_tenant_oauth_idp_config.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

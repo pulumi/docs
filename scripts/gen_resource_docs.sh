@@ -31,27 +31,25 @@ popd
 generate_docs() {
     provider=$1
 
-    # Checkout the latest branch of the provider repo, rather than
-    # using the update_repos script. This is only temporary until
-    # 2.0 is GA.
-    # ./scripts/update_repos.sh "pulumi-${provider}"
-
     echo -e "\033[0;95m--- Updating repo pulumi/pulumi-${provider} ---\033[0m"
     pushd "../pulumi-${provider}"
-    echo -e "\033[0;93mPulling changes\033[0m"
-    git checkout master >/dev/null
-    git pull origin master >/dev/null
+    git fetch --tags
 
     if [ -n "${INSTALL_RESOURCE_PLUGIN:-}" ]; then
-        git fetch --tags
-        plugin_version=$(git describe --tags `git rev-list --max-count=1 --tags --not --tags='*-dev' --tags='*beta*'`)
+        plugin_version=$(git describe --tags $(git rev-list --max-count=1 --tags --not --tags='*-dev'))
+        # If a plugin version was passed, then use that.
+        # The provider repo will also be checked out at that version below.
         if [ -n "${INSTALL_RESOURCE_PLUGIN_VERSION:-}" ]; then
             plugin_version=${INSTALL_RESOURCE_PLUGIN_VERSION}
         elif [[ ${plugin_version} = sdk* ]]; then
             plugin_version=${plugin_version:4}
         fi
+
+        echo -e "\033[0;93mCheckout repo at tag $plugin_version\033[0m"
+        git -c advice.detachedHead=false checkout "$plugin_version" >/dev/null
+
         echo "Installing resource plugin for ${provider}. Version: ${plugin_version}"
-        pulumi plugin install resource ${provider} ${plugin_version}
+        pulumi plugin install resource "${provider}" "${plugin_version}"
     fi
 
     TFGEN=pulumi-tfgen-${provider}
@@ -59,10 +57,12 @@ generate_docs() {
     make generate_schema
     popd
 
-    if [ $provider = "kubernetes" ]; then
+    if [ "$provider" = "kubernetes" ]; then
         SCHEMA_FILE="../../../pulumi-kubernetes/sdk/schema/schema.json"
+        OVERLAY_SCHEMA_FILE="./overlays/kubernetes/overlays.json"
     else
         SCHEMA_FILE="../../../pulumi-${provider}/provider/cmd/pulumi-resource-${provider}/schema.json"
+        OVERLAY_SCHEMA_FILE=""
     fi
 
     echo "Removing the ${PACKDIR}/${provider} dir..."
@@ -70,7 +70,7 @@ generate_docs() {
 
     echo "Running docs generator from schema for ${provider}..."
     pushd ${TOOL_RESDOCGEN}
-    go run . -logtostderr ${ABSOLUTEPACKDIR}/${provider} ${SCHEMA_FILE} || exit 3
+    go run . -logtostderr "${ABSOLUTEPACKDIR}/${provider}" "${SCHEMA_FILE}" "${OVERLAY_SCHEMA_FILE}" || exit 3
     popd
 
     echo "Done generating resource docs for ${provider}"

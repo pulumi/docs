@@ -20,6 +20,7 @@ block_external_search_index: true
 <ul class="api">
     <li><a href="getnotificationchannel" title="GetNotificationChannel"><span class="symbol function"></span>GetNotificationChannel</a></li>
     <li><a href="getsecretversion" title="GetSecretVersion"><span class="symbol function"></span>GetSecretVersion</a></li>
+    <li><a href="getuptimecheckips" title="GetUptimeCheckIPs"><span class="symbol function"></span>GetUptimeCheckIPs</a></li>
 </ul>
 
 <h3>Package Details</h3>
@@ -28,6 +29,7 @@ block_external_search_index: true
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

@@ -45,8 +45,6 @@ const alertPolicy = new gcp.monitoring.AlertPolicy("alert_policy", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/monitoring_alert_policy.html.markdown.
-
 
 
 ## Create a AlertPolicy Resource
@@ -54,7 +52,7 @@ const alertPolicy = new gcp.monitoring.AlertPolicy("alert_policy", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#AlertPolicy">AlertPolicy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#AlertPolicyArgs">AlertPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#AlertPolicy">AlertPolicy</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/monitoring/#AlertPolicyArgs">AlertPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -62,7 +60,7 @@ const alertPolicy = new gcp.monitoring.AlertPolicy("alert_policy", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAlertPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/monitoring?tab=doc#AlertPolicyArgs">AlertPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/monitoring?tab=doc#AlertPolicy">AlertPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAlertPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyArgs">AlertPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicy">AlertPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -162,7 +160,7 @@ const alertPolicy = new gcp.monitoring.AlertPolicy("alert_policy", {
             title="Required">
         <span>Combiner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to determine if an incident should be opened.
 {{% /md %}}</dd>
@@ -181,7 +179,7 @@ combined conditions evaluate to true, then an incident is created. A policy can 
             title="Required">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
 don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
@@ -192,7 +190,7 @@ characters.
             title="Optional">
         <span>Documentation</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation<wbr>Args?</a></span>
+        <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
 don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
@@ -203,7 +201,7 @@ characters.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the policy is enabled. The default is true.
 {{% /md %}}</dd>
@@ -212,7 +210,7 @@ characters.
             title="Optional">
         <span>Notification<wbr>Channels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Identifies the notification channels to which notifications should be sent when incidents are opened or closed or when
 new violations occur on an already opened incident. Each element of this array corresponds to the name field in each of
@@ -224,7 +222,7 @@ in this field is 'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -234,7 +232,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>User<wbr>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy objects.The field can contain up to 64
 entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
@@ -252,7 +250,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Required">
         <span>Combiner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to determine if an incident should be opened.
 {{% /md %}}</dd>
@@ -271,7 +269,7 @@ combined conditions evaluate to true, then an incident is created. A policy can 
             title="Required">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
 don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
@@ -282,7 +280,7 @@ characters.
             title="Optional">
         <span>Documentation</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicydocumentation">*Alert<wbr>Policy<wbr>Documentation</a></span>
+        <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation</a></span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
 don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
@@ -293,7 +291,7 @@ characters.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the policy is enabled. The default is true.
 {{% /md %}}</dd>
@@ -302,7 +300,7 @@ characters.
             title="Optional">
         <span>Notification<wbr>Channels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Identifies the notification channels to which notifications should be sent when incidents are opened or closed or when
 new violations occur on an already opened incident. Each element of this array corresponds to the name field in each of
@@ -314,7 +312,7 @@ in this field is 'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -342,7 +340,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Required">
         <span>combiner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to determine if an incident should be opened.
 {{% /md %}}</dd>
@@ -361,7 +359,7 @@ combined conditions evaluate to true, then an incident is created. A policy can 
             title="Required">
         <span>display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
 don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
@@ -372,7 +370,7 @@ characters.
             title="Optional">
         <span>documentation</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation?</a></span>
+        <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation</a></span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
 don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
@@ -383,7 +381,7 @@ characters.
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the policy is enabled. The default is true.
 {{% /md %}}</dd>
@@ -392,7 +390,7 @@ characters.
             title="Optional">
         <span>notification<wbr>Channels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Identifies the notification channels to which notifications should be sent when incidents are opened or closed or when
 new violations occur on an already opened incident. Each element of this array corresponds to the name field in each of
@@ -404,7 +402,7 @@ in this field is 'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -414,7 +412,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>user<wbr>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy objects.The field can contain up to 64
 entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
@@ -432,7 +430,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Required">
         <span>combiner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to determine if an incident should be opened.
 {{% /md %}}</dd>
@@ -451,7 +449,7 @@ combined conditions evaluate to true, then an incident is created. A policy can 
             title="Required">
         <span>display_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
 don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
@@ -473,7 +471,7 @@ characters.
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the policy is enabled. The default is true.
 {{% /md %}}</dd>
@@ -482,7 +480,7 @@ characters.
             title="Optional">
         <span>notification_<wbr>channels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Identifies the notification channels to which notifications should be sent when incidents are opened or closed or when
 new violations occur on an already opened incident. Each element of this array corresponds to the name field in each of
@@ -494,7 +492,7 @@ in this field is 'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -532,25 +530,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Combiner</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}How to combine the results of multiple conditions to determine if an incident should be opened.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Conditions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycondition">List&lt;Alert<wbr>Policy<wbr>Condition&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by AND or OR according to the combiner field. If the
-combined conditions evaluate to true, then an incident is created. A policy can have from one to six conditions.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Creation<wbr>Record</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicycreationrecord">Alert<wbr>Policy<wbr>Creation<wbr>Record</a></span>
@@ -561,75 +540,11 @@ ignored.
 
     <dt class="property-"
             title="">
-        <span>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
-don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
-characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Documentation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation?</a></span>
-    </dt>
-    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
-don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
-characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Whether or not the policy is enabled. The default is true.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The unique resource name for this policy. Its syntax is: projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Notification<wbr>Channels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Identifies the notification channels to which notifications should be sent when incidents are opened or closed or when
-new violations occur on an already opened incident. Each element of this array corresponds to the name field in each of
-the NotificationChannel objects that are returned from the notificationChannels.list method. The syntax of the entries
-in this field is 'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy objects.The field can contain up to 64
-entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
-can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.
 {{% /md %}}</dd>
 
 </dl>
@@ -641,25 +556,6 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 
     <dt class="property-"
             title="">
-        <span>Combiner</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}How to combine the results of multiple conditions to determine if an incident should be opened.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Conditions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycondition">[]Alert<wbr>Policy<wbr>Condition</a></span>
-    </dt>
-    <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by AND or OR according to the combiner field. If the
-combined conditions evaluate to true, then an incident is created. A policy can have from one to six conditions.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Creation<wbr>Record</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#alertpolicycreationrecord">Alert<wbr>Policy<wbr>Creation<wbr>Record</a></span>
@@ -670,75 +566,11 @@ ignored.
 
     <dt class="property-"
             title="">
-        <span>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
-don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
-characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Documentation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicydocumentation">*Alert<wbr>Policy<wbr>Documentation</a></span>
-    </dt>
-    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
-don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
-characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Whether or not the policy is enabled. The default is true.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique resource name for this policy. Its syntax is: projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Notification<wbr>Channels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Identifies the notification channels to which notifications should be sent when incidents are opened or closed or when
-new violations occur on an already opened incident. Each element of this array corresponds to the name field in each of
-the NotificationChannel objects that are returned from the notificationChannels.list method. The syntax of the entries
-in this field is 'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy objects.The field can contain up to 64
-entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
-can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.
 {{% /md %}}</dd>
 
 </dl>
@@ -747,25 +579,6 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>combiner</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}How to combine the results of multiple conditions to determine if an incident should be opened.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>conditions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycondition">Alert<wbr>Policy<wbr>Condition[]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by AND or OR according to the combiner field. If the
-combined conditions evaluate to true, then an incident is created. A policy can have from one to six conditions.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -779,75 +592,11 @@ ignored.
 
     <dt class="property-"
             title="">
-        <span>display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
-don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
-characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>documentation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation?</a></span>
-    </dt>
-    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
-don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
-characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Whether or not the policy is enabled. The default is true.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique resource name for this policy. Its syntax is: projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>notification<wbr>Channels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Identifies the notification channels to which notifications should be sent when incidents are opened or closed or when
-new violations occur on an already opened incident. Each element of this array corresponds to the name field in each of
-the NotificationChannel objects that are returned from the notificationChannels.list method. The syntax of the entries
-in this field is 'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy objects.The field can contain up to 64
-entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
-can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.
 {{% /md %}}</dd>
 
 </dl>
@@ -856,25 +605,6 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>combiner</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}How to combine the results of multiple conditions to determine if an incident should be opened.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>conditions</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycondition">List[Alert<wbr>Policy<wbr>Condition]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by AND or OR according to the combiner field. If the
-combined conditions evaluate to true, then an incident is created. A policy can have from one to six conditions.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -888,75 +618,11 @@ ignored.
 
     <dt class="property-"
             title="">
-        <span>display_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
-don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
-characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>documentation</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicydocumentation">Dict[Alert<wbr>Policy<wbr>Documentation]</a></span>
-    </dt>
-    <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
-don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
-characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enabled</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether or not the policy is enabled. The default is true.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The unique resource name for this policy. Its syntax is: projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>notification_<wbr>channels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Identifies the notification channels to which notifications should be sent when incidents are opened or closed or when
-new violations occur on an already opened incident. Each element of this array corresponds to the name field in each of
-the NotificationChannel objects that are returned from the notificationChannels.list method. The syntax of the entries
-in this field is 'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy objects.The field can contain up to 64
-entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
-can contain only lowercase letters, numerals, underscores, and dashes. Keys must begin with a letter.
 {{% /md %}}</dd>
 
 </dl>
@@ -984,7 +650,7 @@ Get an existing AlertPolicy resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlertPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/monitoring?tab=doc#AlertPolicyState">AlertPolicyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/monitoring?tab=doc#AlertPolicy">AlertPolicy</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAlertPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyState">AlertPolicyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicy">AlertPolicy</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1098,7 +764,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Combiner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to determine if an incident should be opened.
 {{% /md %}}</dd>
@@ -1107,7 +773,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Conditions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycondition">List&lt;Alert<wbr>Policy<wbr>Condition<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#alertpolicycondition">List&lt;Alert<wbr>Policy<wbr>Condition<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by AND or OR according to the combiner field. If the
 combined conditions evaluate to true, then an incident is created. A policy can have from one to six conditions.
@@ -1117,7 +783,7 @@ combined conditions evaluate to true, then an incident is created. A policy can 
             title="Optional">
         <span>Creation<wbr>Record</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycreationrecord">Alert<wbr>Policy<wbr>Creation<wbr>Record<wbr>Args?</a></span>
+        <span class="property-type"><a href="#alertpolicycreationrecord">Alert<wbr>Policy<wbr>Creation<wbr>Record<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
 ignored.
@@ -1127,7 +793,7 @@ ignored.
             title="Optional">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
 don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
@@ -1138,7 +804,7 @@ characters.
             title="Optional">
         <span>Documentation</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation<wbr>Args?</a></span>
+        <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
 don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
@@ -1149,7 +815,7 @@ characters.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the policy is enabled. The default is true.
 {{% /md %}}</dd>
@@ -1158,7 +824,7 @@ characters.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The unique resource name for this policy. Its syntax is: projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
 {{% /md %}}</dd>
@@ -1167,7 +833,7 @@ characters.
             title="Optional">
         <span>Notification<wbr>Channels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Identifies the notification channels to which notifications should be sent when incidents are opened or closed or when
 new violations occur on an already opened incident. Each element of this array corresponds to the name field in each of
@@ -1179,7 +845,7 @@ in this field is 'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1189,7 +855,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>User<wbr>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy objects.The field can contain up to 64
 entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
@@ -1207,7 +873,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Combiner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to determine if an incident should be opened.
 {{% /md %}}</dd>
@@ -1226,7 +892,7 @@ combined conditions evaluate to true, then an incident is created. A policy can 
             title="Optional">
         <span>Creation<wbr>Record</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycreationrecord">*Alert<wbr>Policy<wbr>Creation<wbr>Record</a></span>
+        <span class="property-type"><a href="#alertpolicycreationrecord">Alert<wbr>Policy<wbr>Creation<wbr>Record</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
 ignored.
@@ -1236,7 +902,7 @@ ignored.
             title="Optional">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
 don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
@@ -1247,7 +913,7 @@ characters.
             title="Optional">
         <span>Documentation</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicydocumentation">*Alert<wbr>Policy<wbr>Documentation</a></span>
+        <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation</a></span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
 don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
@@ -1258,7 +924,7 @@ characters.
             title="Optional">
         <span>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the policy is enabled. The default is true.
 {{% /md %}}</dd>
@@ -1267,7 +933,7 @@ characters.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique resource name for this policy. Its syntax is: projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
 {{% /md %}}</dd>
@@ -1276,7 +942,7 @@ characters.
             title="Optional">
         <span>Notification<wbr>Channels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Identifies the notification channels to which notifications should be sent when incidents are opened or closed or when
 new violations occur on an already opened incident. Each element of this array corresponds to the name field in each of
@@ -1288,7 +954,7 @@ in this field is 'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1316,7 +982,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>combiner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to determine if an incident should be opened.
 {{% /md %}}</dd>
@@ -1325,7 +991,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>conditions</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycondition">Alert<wbr>Policy<wbr>Condition[]?</a></span>
+        <span class="property-type"><a href="#alertpolicycondition">Alert<wbr>Policy<wbr>Condition[]</a></span>
     </dt>
     <dd>{{% md %}}A list of conditions for the policy. The conditions are combined by AND or OR according to the combiner field. If the
 combined conditions evaluate to true, then an incident is created. A policy can have from one to six conditions.
@@ -1335,7 +1001,7 @@ combined conditions evaluate to true, then an incident is created. A policy can 
             title="Optional">
         <span>creation<wbr>Record</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicycreationrecord">Alert<wbr>Policy<wbr>Creation<wbr>Record?</a></span>
+        <span class="property-type"><a href="#alertpolicycreationrecord">Alert<wbr>Policy<wbr>Creation<wbr>Record</a></span>
     </dt>
     <dd>{{% md %}}A read-only record of the creation of the alerting policy. If provided in a call to create or update, this field will be
 ignored.
@@ -1345,7 +1011,7 @@ ignored.
             title="Optional">
         <span>display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
 don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
@@ -1356,7 +1022,7 @@ characters.
             title="Optional">
         <span>documentation</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation?</a></span>
+        <span class="property-type"><a href="#alertpolicydocumentation">Alert<wbr>Policy<wbr>Documentation</a></span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
 don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
@@ -1367,7 +1033,7 @@ characters.
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the policy is enabled. The default is true.
 {{% /md %}}</dd>
@@ -1376,7 +1042,7 @@ characters.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique resource name for this policy. Its syntax is: projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
 {{% /md %}}</dd>
@@ -1385,7 +1051,7 @@ characters.
             title="Optional">
         <span>notification<wbr>Channels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Identifies the notification channels to which notifications should be sent when incidents are opened or closed or when
 new violations occur on an already opened incident. Each element of this array corresponds to the name field in each of
@@ -1397,7 +1063,7 @@ in this field is 'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1407,7 +1073,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>user<wbr>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}This field is intended to be used for organizing and identifying the AlertPolicy objects.The field can contain up to 64
 entries. Each key and value is limited to 63 Unicode characters or 128 bytes, whichever is smaller. Labels and values
@@ -1425,7 +1091,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>combiner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}How to combine the results of multiple conditions to determine if an incident should be opened.
 {{% /md %}}</dd>
@@ -1454,7 +1120,7 @@ ignored.
             title="Optional">
         <span>display_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A short name or phrase used to identify the policy in dashboards, notifications, and incidents. To avoid confusion,
 don't use the same display name for multiple policies in the same project. The name is limited to 512 Unicode
@@ -1476,7 +1142,7 @@ characters.
             title="Optional">
         <span>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether or not the policy is enabled. The default is true.
 {{% /md %}}</dd>
@@ -1485,7 +1151,7 @@ characters.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The unique resource name for this policy. Its syntax is: projects/[PROJECT_ID]/alertPolicies/[ALERT_POLICY_ID]
 {{% /md %}}</dd>
@@ -1494,7 +1160,7 @@ characters.
             title="Optional">
         <span>notification_<wbr>channels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Identifies the notification channels to which notifications should be sent when incidents are opened or closed or when
 new violations occur on an already opened incident. Each element of this array corresponds to the name field in each of
@@ -1506,7 +1172,7 @@ in this field is 'projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]'
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1543,7 +1209,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/monitoring?tab=doc#AlertPolicyConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/monitoring?tab=doc#AlertPolicyConditionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1552,11 +1218,19 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Display<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Condition<wbr>Absent</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Args?</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1564,15 +1238,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Condition<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1580,7 +1246,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1591,11 +1257,19 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Display<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Condition<wbr>Absent</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsent">*Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1603,15 +1277,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Condition<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">*Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1619,7 +1285,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1630,11 +1296,19 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>display<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>condition<wbr>Absent</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent?</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsent">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1642,15 +1316,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>condition<wbr>Threshold</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthreshold">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1658,7 +1324,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1668,6 +1334,14 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>display_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -1685,19 +1359,11 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>display_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1714,7 +1380,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1723,19 +1389,19 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Aggregations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsentaggregation">List&lt;Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Aggregations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsentaggregation">List&lt;Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1743,7 +1409,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1751,7 +1417,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Trigger</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsenttrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger<wbr>Args?</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsenttrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1762,6 +1428,14 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Duration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Aggregations</span>
@@ -1770,19 +1444,11 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1790,7 +1456,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Trigger</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsenttrigger">*Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsenttrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1801,19 +1467,19 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>aggregations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsentaggregation">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>aggregations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsentaggregation">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Aggregation[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1821,7 +1487,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1829,7 +1495,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>trigger</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionabsenttrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger?</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionabsenttrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Absent<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1840,6 +1506,14 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>duration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>aggregations</span>
@@ -1848,19 +1522,11 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1885,7 +1551,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentAggregationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentAggregationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentAggregationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentAggregationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1898,7 +1564,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Alignment<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1906,7 +1572,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Cross<wbr>Series<wbr>Reducer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1914,7 +1580,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Group<wbr>By<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1922,7 +1588,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Per<wbr>Series<wbr>Aligner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1937,7 +1603,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Alignment<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1945,7 +1611,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Cross<wbr>Series<wbr>Reducer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1953,7 +1619,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Group<wbr>By<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1961,7 +1627,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Per<wbr>Series<wbr>Aligner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1976,7 +1642,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>alignment<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1984,7 +1650,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>cross<wbr>Series<wbr>Reducer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1992,7 +1658,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>group<wbr>By<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2000,7 +1666,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>per<wbr>Series<wbr>Aligner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2015,7 +1681,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>alignment<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2023,7 +1689,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>cross<wbr>Series<wbr>Reducer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2031,7 +1697,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>group<wbr>By<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2039,7 +1705,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>per<wbr>Series<wbr>Aligner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2056,7 +1722,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentTriggerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentTriggerOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentTriggerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionAbsentTriggerOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2069,7 +1735,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2077,7 +1743,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Percent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2092,7 +1758,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2100,7 +1766,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Percent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2115,7 +1781,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2123,7 +1789,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>percent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2138,7 +1804,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2146,7 +1812,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>percent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2163,7 +1829,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2172,35 +1838,11 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Aggregations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">List&lt;Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Comparison</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Denominator<wbr>Aggregations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholddenominatoraggregation">List&lt;Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Denominator<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2208,7 +1850,31 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Required">
         <span>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Aggregations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">List&lt;Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Denominator<wbr>Aggregations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholddenominatoraggregation">List&lt;Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Denominator<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2216,7 +1882,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2224,7 +1890,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Threshold<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2232,7 +1898,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Trigger</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdtrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger<wbr>Args?</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdtrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2243,19 +1909,27 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Aggregations</span>
+    <dt class="property-required"
+            title="Required">
+        <span>Comparison</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">[]Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>Comparison</span>
+        <span>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Aggregations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">[]Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2271,15 +1945,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Denominator<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2287,7 +1953,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2295,7 +1961,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Threshold<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2303,7 +1969,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Trigger</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdtrigger">*Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdtrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2314,35 +1980,11 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>aggregations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>comparison</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>denominator<wbr>Aggregations</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholddenominatoraggregation">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>denominator<wbr>Filter</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2350,7 +1992,31 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Required">
         <span>duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>aggregations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>denominator<wbr>Aggregations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholddenominatoraggregation">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Denominator<wbr>Aggregation[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>denominator<wbr>Filter</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2358,7 +2024,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2366,7 +2032,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>threshold<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2374,7 +2040,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>trigger</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdtrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger?</a></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdtrigger">Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2385,19 +2051,27 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>aggregations</span>
+    <dt class="property-required"
+            title="Required">
+        <span>comparison</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">List[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>comparison</span>
+        <span>duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>aggregations</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#alertpolicyconditionconditionthresholdaggregation">List[Alert<wbr>Policy<wbr>Condition<wbr>Condition<wbr>Threshold<wbr>Aggregation]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2413,15 +2087,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>denominator<wbr>Filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>duration</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2429,7 +2095,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>filter</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2437,7 +2103,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>threshold<wbr>Value</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2462,7 +2128,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdAggregationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdAggregationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdAggregationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdAggregationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2475,7 +2141,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Alignment<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2483,7 +2149,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Cross<wbr>Series<wbr>Reducer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2491,7 +2157,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Group<wbr>By<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2499,7 +2165,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Per<wbr>Series<wbr>Aligner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2514,7 +2180,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Alignment<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2522,7 +2188,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Cross<wbr>Series<wbr>Reducer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2530,7 +2196,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Group<wbr>By<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2538,7 +2204,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Per<wbr>Series<wbr>Aligner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2553,7 +2219,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>alignment<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2561,7 +2227,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>cross<wbr>Series<wbr>Reducer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2569,7 +2235,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>group<wbr>By<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2577,7 +2243,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>per<wbr>Series<wbr>Aligner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2592,7 +2258,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>alignment<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2600,7 +2266,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>cross<wbr>Series<wbr>Reducer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2608,7 +2274,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>group<wbr>By<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2616,7 +2282,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>per<wbr>Series<wbr>Aligner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2633,7 +2299,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdDenominatorAggregationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdDenominatorAggregationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdDenominatorAggregationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdDenominatorAggregationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2646,7 +2312,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Alignment<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2654,7 +2320,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Cross<wbr>Series<wbr>Reducer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2662,7 +2328,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Group<wbr>By<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2670,7 +2336,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Per<wbr>Series<wbr>Aligner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2685,7 +2351,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Alignment<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2693,7 +2359,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Cross<wbr>Series<wbr>Reducer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2701,7 +2367,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Group<wbr>By<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2709,7 +2375,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Per<wbr>Series<wbr>Aligner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2724,7 +2390,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>alignment<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2732,7 +2398,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>cross<wbr>Series<wbr>Reducer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2740,7 +2406,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>group<wbr>By<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2748,7 +2414,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>per<wbr>Series<wbr>Aligner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2763,7 +2429,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>alignment<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2771,7 +2437,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>cross<wbr>Series<wbr>Reducer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2779,7 +2445,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>group<wbr>By<wbr>Fields</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2787,7 +2453,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>per<wbr>Series<wbr>Aligner</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2804,7 +2470,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdTriggerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdTriggerOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdTriggerArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyConditionConditionThresholdTriggerOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2817,7 +2483,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2825,7 +2491,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Percent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">double?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">double</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2840,7 +2506,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2848,7 +2514,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Percent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*float64</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#number">float64</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2863,7 +2529,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2871,7 +2537,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>percent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2886,7 +2552,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>count</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2894,7 +2560,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>percent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2911,7 +2577,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/monitoring?tab=doc#AlertPolicyCreationRecordOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyCreationRecordOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2924,7 +2590,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Mutate<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2932,7 +2598,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Mutated<wbr>By</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2947,7 +2613,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Mutate<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2955,7 +2621,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Mutated<wbr>By</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2970,7 +2636,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>mutate<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2978,7 +2644,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>mutated<wbr>By</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2993,7 +2659,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>mutate<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3001,7 +2667,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>mutated<wbr>By</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3018,7 +2684,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/monitoring?tab=doc#AlertPolicyDocumentationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/monitoring?tab=doc#AlertPolicyDocumentationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyDocumentationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/monitoring?tab=doc#AlertPolicyDocumentationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3031,7 +2697,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Content</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3039,7 +2705,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Mime<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3054,7 +2720,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Content</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3062,7 +2728,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>Mime<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3077,7 +2743,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>content</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3085,7 +2751,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>mime<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3100,7 +2766,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>content</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3108,7 +2774,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
             title="Optional">
         <span>mime<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3129,6 +2795,7 @@ can contain only lowercase letters, numerals, underscores, and dashes. Keys must
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

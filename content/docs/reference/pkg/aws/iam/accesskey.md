@@ -18,7 +18,7 @@ Provides an IAM access key. This is a set of credentials that allow API requests
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#AccessKey">AccessKey</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#AccessKeyArgs">AccessKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#AccessKey">AccessKey</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/aws/iam/#AccessKeyArgs">AccessKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -26,7 +26,7 @@ Provides an IAM access key. This is a set of credentials that allow API requests
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAccessKey<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#AccessKeyArgs">AccessKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#AccessKey">AccessKey</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAccessKey<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#AccessKeyArgs">AccessKeyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#AccessKey">AccessKey</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -122,11 +122,20 @@ Provides an IAM access key. This is a set of credentials that allow API requests
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>User</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM user to associate with this access key.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Pgp<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Either a base-64 encoded PGP public key, or a
 keybase username in the form `keybase:some_person_that_exists`, for use
@@ -137,19 +146,10 @@ in the `encrypted_secret` output attribute.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The access key status to apply. Defaults to `Active`.
 Valid values are `Active` and `Inactive`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>User</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IAM user to associate with this access key.
 {{% /md %}}</dd>
 
 </dl>
@@ -159,11 +159,20 @@ Valid values are `Active` and `Inactive`.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>User</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM user to associate with this access key.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Pgp<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Either a base-64 encoded PGP public key, or a
 keybase username in the form `keybase:some_person_that_exists`, for use
@@ -174,19 +183,10 @@ in the `encrypted_secret` output attribute.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The access key status to apply. Defaults to `Active`.
 Valid values are `Active` and `Inactive`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>User</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IAM user to associate with this access key.
 {{% /md %}}</dd>
 
 </dl>
@@ -196,11 +196,20 @@ Valid values are `Active` and `Inactive`.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>user</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM user to associate with this access key.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>pgp<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Either a base-64 encoded PGP public key, or a
 keybase username in the form `keybase:some_person_that_exists`, for use
@@ -211,19 +220,10 @@ in the `encrypted_secret` output attribute.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The access key status to apply. Defaults to `Active`.
 Valid values are `Active` and `Inactive`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>user</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IAM user to associate with this access key.
 {{% /md %}}</dd>
 
 </dl>
@@ -233,11 +233,20 @@ Valid values are `Active` and `Inactive`.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>user</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The IAM user to associate with this access key.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>pgp_<wbr>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Either a base-64 encoded PGP public key, or a
 keybase username in the form `keybase:some_person_that_exists`, for use
@@ -248,19 +257,10 @@ in the `encrypted_secret` output attribute.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The access key status to apply. Defaults to `Active`.
 Valid values are `Active` and `Inactive`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>user</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The IAM user to associate with this access key.
 {{% /md %}}</dd>
 
 </dl>
@@ -286,7 +286,7 @@ The following output properties are available:
             title="">
         <span>Encrypted<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The encrypted secret, base64 encoded, if `pgp_key` was specified.
 > **NOTE:** The encrypted secret may be decrypted using the command line,
@@ -296,7 +296,7 @@ The following output properties are available:
             title="">
         <span>Key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The fingerprint of the PGP key used to encrypt
 the secret
@@ -304,20 +304,9 @@ the secret
 
     <dt class="property-"
             title="">
-        <span>Pgp<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a
-keybase username in the form `keybase:some_person_that_exists`, for use
-in the `encrypted_secret` output attribute.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The secret access key. Note that this will be written
 to the state file. If you use this, please protect your backend state file
@@ -330,7 +319,7 @@ the use of the secret key in automation.
             title=", Deprecated">
         <span>Ses<wbr>Smtp<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}**DEPRECATED** The secret access key converted into an SES SMTP
 password by applying [AWS's documented conversion
@@ -341,31 +330,12 @@ Use &#39;ses_smtp_password_v4&#39; for region-specific AWS SigV4 signed SES SMTP
             title="">
         <span>Ses<wbr>Smtp<wbr>Password<wbr>V4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The secret access key converted into an SES SMTP
 password by applying [AWS's documented Sigv4 conversion
 algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert).
 As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The access key status to apply. Defaults to `Active`.
-Valid values are `Active` and `Inactive`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IAM user to associate with this access key.
 {{% /md %}}</dd>
 
 </dl>
@@ -379,7 +349,7 @@ Valid values are `Active` and `Inactive`.
             title="">
         <span>Encrypted<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The encrypted secret, base64 encoded, if `pgp_key` was specified.
 > **NOTE:** The encrypted secret may be decrypted using the command line,
@@ -389,7 +359,7 @@ Valid values are `Active` and `Inactive`.
             title="">
         <span>Key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The fingerprint of the PGP key used to encrypt
 the secret
@@ -397,20 +367,9 @@ the secret
 
     <dt class="property-"
             title="">
-        <span>Pgp<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a
-keybase username in the form `keybase:some_person_that_exists`, for use
-in the `encrypted_secret` output attribute.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The secret access key. Note that this will be written
 to the state file. If you use this, please protect your backend state file
@@ -423,7 +382,7 @@ the use of the secret key in automation.
             title=", Deprecated">
         <span>Ses<wbr>Smtp<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}**DEPRECATED** The secret access key converted into an SES SMTP
 password by applying [AWS's documented conversion
@@ -434,31 +393,12 @@ Use &#39;ses_smtp_password_v4&#39; for region-specific AWS SigV4 signed SES SMTP
             title="">
         <span>Ses<wbr>Smtp<wbr>Password<wbr>V4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The secret access key converted into an SES SMTP
 password by applying [AWS's documented Sigv4 conversion
 algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert).
 As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The access key status to apply. Defaults to `Active`.
-Valid values are `Active` and `Inactive`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IAM user to associate with this access key.
 {{% /md %}}</dd>
 
 </dl>
@@ -472,7 +412,7 @@ Valid values are `Active` and `Inactive`.
             title="">
         <span>encrypted<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The encrypted secret, base64 encoded, if `pgp_key` was specified.
 > **NOTE:** The encrypted secret may be decrypted using the command line,
@@ -482,7 +422,7 @@ Valid values are `Active` and `Inactive`.
             title="">
         <span>key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The fingerprint of the PGP key used to encrypt
 the secret
@@ -490,20 +430,9 @@ the secret
 
     <dt class="property-"
             title="">
-        <span>pgp<wbr>Key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a
-keybase username in the form `keybase:some_person_that_exists`, for use
-in the `encrypted_secret` output attribute.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The secret access key. Note that this will be written
 to the state file. If you use this, please protect your backend state file
@@ -516,7 +445,7 @@ the use of the secret key in automation.
             title=", Deprecated">
         <span>ses<wbr>Smtp<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}**DEPRECATED** The secret access key converted into an SES SMTP
 password by applying [AWS's documented conversion
@@ -527,31 +456,12 @@ Use &#39;ses_smtp_password_v4&#39; for region-specific AWS SigV4 signed SES SMTP
             title="">
         <span>ses<wbr>Smtp<wbr>Password<wbr>V4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The secret access key converted into an SES SMTP
 password by applying [AWS's documented Sigv4 conversion
 algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert).
 As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The access key status to apply. Defaults to `Active`.
-Valid values are `Active` and `Inactive`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IAM user to associate with this access key.
 {{% /md %}}</dd>
 
 </dl>
@@ -565,7 +475,7 @@ Valid values are `Active` and `Inactive`.
             title="">
         <span>encrypted_<wbr>secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The encrypted secret, base64 encoded, if `pgp_key` was specified.
 > **NOTE:** The encrypted secret may be decrypted using the command line,
@@ -575,7 +485,7 @@ Valid values are `Active` and `Inactive`.
             title="">
         <span>key_<wbr>fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The fingerprint of the PGP key used to encrypt
 the secret
@@ -583,20 +493,9 @@ the secret
 
     <dt class="property-"
             title="">
-        <span>pgp_<wbr>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Either a base-64 encoded PGP public key, or a
-keybase username in the form `keybase:some_person_that_exists`, for use
-in the `encrypted_secret` output attribute.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The secret access key. Note that this will be written
 to the state file. If you use this, please protect your backend state file
@@ -609,7 +508,7 @@ the use of the secret key in automation.
             title=", Deprecated">
         <span>ses_<wbr>smtp_<wbr>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}**DEPRECATED** The secret access key converted into an SES SMTP
 password by applying [AWS's documented conversion
@@ -620,31 +519,12 @@ Use &#39;ses_smtp_password_v4&#39; for region-specific AWS SigV4 signed SES SMTP
             title="">
         <span>ses_<wbr>smtp_<wbr>password_<wbr>v4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The secret access key converted into an SES SMTP
 password by applying [AWS's documented Sigv4 conversion
 algorithm](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/smtp-credentials.html#smtp-credentials-convert).
 As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southeast-2`, `eu-central-1`, `eu-west-1`, `us-east-1` and `us-west-2`. See current [AWS SES regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#ses_region)
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>status</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The access key status to apply. Defaults to `Active`.
-Valid values are `Active` and `Inactive`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The IAM user to associate with this access key.
 {{% /md %}}</dd>
 
 </dl>
@@ -672,7 +552,7 @@ Get an existing AccessKey resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccessKey<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#AccessKeyState">AccessKeyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/iam?tab=doc#AccessKey">AccessKey</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAccessKey<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#AccessKeyState">AccessKeyState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/iam?tab=doc#AccessKey">AccessKey</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -786,7 +666,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Encrypted<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The encrypted secret, base64 encoded, if `pgp_key` was specified.
 > **NOTE:** The encrypted secret may be decrypted using the command line,
@@ -796,7 +676,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The fingerprint of the PGP key used to encrypt
 the secret
@@ -806,7 +686,7 @@ the secret
             title="Optional">
         <span>Pgp<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Either a base-64 encoded PGP public key, or a
 keybase username in the form `keybase:some_person_that_exists`, for use
@@ -817,7 +697,7 @@ in the `encrypted_secret` output attribute.
             title="Optional">
         <span>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The secret access key. Note that this will be written
 to the state file. If you use this, please protect your backend state file
@@ -830,7 +710,7 @@ the use of the secret key in automation.
             title="Optional, Deprecated">
         <span>Ses<wbr>Smtp<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}**DEPRECATED** The secret access key converted into an SES SMTP
 password by applying [AWS's documented conversion
@@ -841,7 +721,7 @@ Use &#39;ses_smtp_password_v4&#39; for region-specific AWS SigV4 signed SES SMTP
             title="Optional">
         <span>Ses<wbr>Smtp<wbr>Password<wbr>V4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The secret access key converted into an SES SMTP
 password by applying [AWS's documented Sigv4 conversion
@@ -853,7 +733,7 @@ As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southe
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The access key status to apply. Defaults to `Active`.
 Valid values are `Active` and `Inactive`.
@@ -863,7 +743,7 @@ Valid values are `Active` and `Inactive`.
             title="Optional">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM user to associate with this access key.
 {{% /md %}}</dd>
@@ -879,7 +759,7 @@ Valid values are `Active` and `Inactive`.
             title="Optional">
         <span>Encrypted<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The encrypted secret, base64 encoded, if `pgp_key` was specified.
 > **NOTE:** The encrypted secret may be decrypted using the command line,
@@ -889,7 +769,7 @@ Valid values are `Active` and `Inactive`.
             title="Optional">
         <span>Key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The fingerprint of the PGP key used to encrypt
 the secret
@@ -899,7 +779,7 @@ the secret
             title="Optional">
         <span>Pgp<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Either a base-64 encoded PGP public key, or a
 keybase username in the form `keybase:some_person_that_exists`, for use
@@ -910,7 +790,7 @@ in the `encrypted_secret` output attribute.
             title="Optional">
         <span>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The secret access key. Note that this will be written
 to the state file. If you use this, please protect your backend state file
@@ -923,7 +803,7 @@ the use of the secret key in automation.
             title="Optional, Deprecated">
         <span>Ses<wbr>Smtp<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}**DEPRECATED** The secret access key converted into an SES SMTP
 password by applying [AWS's documented conversion
@@ -934,7 +814,7 @@ Use &#39;ses_smtp_password_v4&#39; for region-specific AWS SigV4 signed SES SMTP
             title="Optional">
         <span>Ses<wbr>Smtp<wbr>Password<wbr>V4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The secret access key converted into an SES SMTP
 password by applying [AWS's documented Sigv4 conversion
@@ -946,7 +826,7 @@ As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southe
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The access key status to apply. Defaults to `Active`.
 Valid values are `Active` and `Inactive`.
@@ -956,7 +836,7 @@ Valid values are `Active` and `Inactive`.
             title="Optional">
         <span>User</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM user to associate with this access key.
 {{% /md %}}</dd>
@@ -972,7 +852,7 @@ Valid values are `Active` and `Inactive`.
             title="Optional">
         <span>encrypted<wbr>Secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The encrypted secret, base64 encoded, if `pgp_key` was specified.
 > **NOTE:** The encrypted secret may be decrypted using the command line,
@@ -982,7 +862,7 @@ Valid values are `Active` and `Inactive`.
             title="Optional">
         <span>key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The fingerprint of the PGP key used to encrypt
 the secret
@@ -992,7 +872,7 @@ the secret
             title="Optional">
         <span>pgp<wbr>Key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Either a base-64 encoded PGP public key, or a
 keybase username in the form `keybase:some_person_that_exists`, for use
@@ -1003,7 +883,7 @@ in the `encrypted_secret` output attribute.
             title="Optional">
         <span>secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The secret access key. Note that this will be written
 to the state file. If you use this, please protect your backend state file
@@ -1016,7 +896,7 @@ the use of the secret key in automation.
             title="Optional, Deprecated">
         <span>ses<wbr>Smtp<wbr>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}**DEPRECATED** The secret access key converted into an SES SMTP
 password by applying [AWS's documented conversion
@@ -1027,7 +907,7 @@ Use &#39;ses_smtp_password_v4&#39; for region-specific AWS SigV4 signed SES SMTP
             title="Optional">
         <span>ses<wbr>Smtp<wbr>Password<wbr>V4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The secret access key converted into an SES SMTP
 password by applying [AWS's documented Sigv4 conversion
@@ -1039,7 +919,7 @@ As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southe
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The access key status to apply. Defaults to `Active`.
 Valid values are `Active` and `Inactive`.
@@ -1049,7 +929,7 @@ Valid values are `Active` and `Inactive`.
             title="Optional">
         <span>user</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IAM user to associate with this access key.
 {{% /md %}}</dd>
@@ -1065,7 +945,7 @@ Valid values are `Active` and `Inactive`.
             title="Optional">
         <span>encrypted_<wbr>secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The encrypted secret, base64 encoded, if `pgp_key` was specified.
 > **NOTE:** The encrypted secret may be decrypted using the command line,
@@ -1075,7 +955,7 @@ Valid values are `Active` and `Inactive`.
             title="Optional">
         <span>key_<wbr>fingerprint</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The fingerprint of the PGP key used to encrypt
 the secret
@@ -1085,7 +965,7 @@ the secret
             title="Optional">
         <span>pgp_<wbr>key</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Either a base-64 encoded PGP public key, or a
 keybase username in the form `keybase:some_person_that_exists`, for use
@@ -1096,7 +976,7 @@ in the `encrypted_secret` output attribute.
             title="Optional">
         <span>secret</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The secret access key. Note that this will be written
 to the state file. If you use this, please protect your backend state file
@@ -1109,7 +989,7 @@ the use of the secret key in automation.
             title="Optional, Deprecated">
         <span>ses_<wbr>smtp_<wbr>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}**DEPRECATED** The secret access key converted into an SES SMTP
 password by applying [AWS's documented conversion
@@ -1120,7 +1000,7 @@ Use &#39;ses_smtp_password_v4&#39; for region-specific AWS SigV4 signed SES SMTP
             title="Optional">
         <span>ses_<wbr>smtp_<wbr>password_<wbr>v4</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The secret access key converted into an SES SMTP
 password by applying [AWS's documented Sigv4 conversion
@@ -1132,7 +1012,7 @@ As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southe
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The access key status to apply. Defaults to `Active`.
 Valid values are `Active` and `Inactive`.
@@ -1142,7 +1022,7 @@ Valid values are `Active` and `Inactive`.
             title="Optional">
         <span>user</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IAM user to associate with this access key.
 {{% /md %}}</dd>

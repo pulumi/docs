@@ -17,7 +17,7 @@ for a list of these restrictions.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+const admin = gcp.organizations.getIAMPolicy({
     auditConfigs: [{
         auditLogConfigs: [
             {
@@ -43,14 +43,12 @@ const admin = pulumi.output(gcp.organizations.getIAMPolicy({
             role: "roles/storage.objectViewer",
         },
     ],
-}, { async: true }));
+});
 ```
 
 This data source is used to define IAM policies to apply to other resources.
 Currently, defining a policy through a datasource and referencing that policy
 from another resource is the only way to apply an IAM policy to a resource.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_iam_policy.html.markdown.
 
 
 
@@ -72,7 +70,7 @@ from another resource is the only way to apply an IAM policy to a resource.
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIAMPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/organizations?tab=doc#LookupIAMPolicyArgs">LookupIAMPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/organizations?tab=doc#LookupIAMPolicyResult">LookupIAMPolicyResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupIAMPolicy<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#LookupIAMPolicyArgs">LookupIAMPolicyArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#LookupIAMPolicyResult">LookupIAMPolicyResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -95,7 +93,7 @@ The following arguments are supported:
             title="Optional">
         <span>Audit<wbr>Configs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicyauditconfig">List&lt;Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getiampolicyauditconfig">List&lt;Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block that defines logging additional configuration for your project.
 {{% /md %}}</dd>
@@ -104,7 +102,7 @@ The following arguments are supported:
             title="Optional">
         <span>Bindings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicybinding">List&lt;Get<wbr>IAMPolicy<wbr>Binding<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#getiampolicybinding">List&lt;Get<wbr>IAMPolicy<wbr>Binding<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block (described below)
 defining a binding to be included in the policy document. Multiple
@@ -149,7 +147,7 @@ defining a binding to be included in the policy document. Multiple
             title="Optional">
         <span>audit<wbr>Configs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicyauditconfig">Get<wbr>IAMPolicy<wbr>Audit<wbr>Config[]?</a></span>
+        <span class="property-type"><a href="#getiampolicyauditconfig">Get<wbr>IAMPolicy<wbr>Audit<wbr>Config[]</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block that defines logging additional configuration for your project.
 {{% /md %}}</dd>
@@ -158,7 +156,7 @@ defining a binding to be included in the policy document. Multiple
             title="Optional">
         <span>bindings</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicybinding">Get<wbr>IAMPolicy<wbr>Binding[]?</a></span>
+        <span class="property-type"><a href="#getiampolicybinding">Get<wbr>IAMPolicy<wbr>Binding[]</a></span>
     </dt>
     <dd>{{% md %}}A nested configuration block (described below)
 defining a binding to be included in the policy document. Multiple
@@ -214,25 +212,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Audit<wbr>Configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicyauditconfig">List&lt;Get<wbr>IAMPolicy<wbr>Audit<wbr>Config&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Bindings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicybinding">List&lt;Get<wbr>IAMPolicy<wbr>Binding&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -241,11 +223,27 @@ The following output properties are available:
             title="">
         <span>Policy<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The above bindings serialized in a format suitable for
 referencing from a resource that supports IAM.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Audit<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getiampolicyauditconfig">List&lt;Get<wbr>IAMPolicy<wbr>Audit<wbr>Config&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Bindings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getiampolicybinding">List&lt;Get<wbr>IAMPolicy<wbr>Binding&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -253,6 +251,25 @@ referencing from a resource that supports IAM.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Policy<wbr>Data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The above bindings serialized in a format suitable for
+referencing from a resource that supports IAM.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -270,25 +287,6 @@ referencing from a resource that supports IAM.
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy<wbr>Data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The above bindings serialized in a format suitable for
-referencing from a resource that supports IAM.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -298,25 +296,9 @@ referencing from a resource that supports IAM.
 
     <dt class="property-"
             title="">
-        <span>audit<wbr>Configs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicyauditconfig">Get<wbr>IAMPolicy<wbr>Audit<wbr>Config[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>bindings</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicybinding">Get<wbr>IAMPolicy<wbr>Binding[]?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -325,11 +307,27 @@ referencing from a resource that supports IAM.
             title="">
         <span>policy<wbr>Data</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The above bindings serialized in a format suitable for
 referencing from a resource that supports IAM.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>audit<wbr>Configs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getiampolicyauditconfig">Get<wbr>IAMPolicy<wbr>Audit<wbr>Config[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>bindings</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getiampolicybinding">Get<wbr>IAMPolicy<wbr>Binding[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -337,6 +335,25 @@ referencing from a resource that supports IAM.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>policy_<wbr>data</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The above bindings serialized in a format suitable for
+referencing from a resource that supports IAM.
+{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -353,25 +370,6 @@ referencing from a resource that supports IAM.
         <span class="property-type"><a href="#getiampolicybinding">List[Get<wbr>IAMPolicy<wbr>Binding]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy_<wbr>data</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The above bindings serialized in a format suitable for
-referencing from a resource that supports IAM.
-{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -391,7 +389,7 @@ referencing from a resource that supports IAM.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/organizations?tab=doc#GetIAMPolicyAuditConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/organizations?tab=doc#GetIAMPolicyAuditConfig">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#GetIAMPolicyAuditConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#GetIAMPolicyAuditConfig">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -413,7 +411,7 @@ referencing from a resource that supports IAM.
             title="Required">
         <span>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Defines a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
 {{% /md %}}</dd>
@@ -438,7 +436,7 @@ referencing from a resource that supports IAM.
             title="Required">
         <span>Service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Defines a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
 {{% /md %}}</dd>
@@ -463,7 +461,7 @@ referencing from a resource that supports IAM.
             title="Required">
         <span>service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Defines a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
 {{% /md %}}</dd>
@@ -488,7 +486,7 @@ referencing from a resource that supports IAM.
             title="Required">
         <span>service</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Defines a service that will be enabled for audit logging. For example, `storage.googleapis.com`, `cloudsql.googleapis.com`. `allServices` is a special value that covers all services.
 {{% /md %}}</dd>
@@ -506,7 +504,7 @@ referencing from a resource that supports IAM.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/organizations?tab=doc#GetIAMPolicyAuditConfigAuditLogConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/organizations?tab=doc#GetIAMPolicyAuditConfigAuditLogConfig">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#GetIAMPolicyAuditConfigAuditLogConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#GetIAMPolicyAuditConfigAuditLogConfig">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -515,22 +513,22 @@ referencing from a resource that supports IAM.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Exempted<wbr>Members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the identities that are exempt from these types of logging operations. Follows the same format of the `members` array for `binding`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Log<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Defines the logging level. `DATA_READ`, `DATA_WRITE` and `ADMIN_READ` capture different types of events. See [the audit configuration documentation](https://cloud.google.com/resource-manager/reference/rest/Shared.Types/AuditConfig) for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Exempted<wbr>Members</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the identities that are exempt from these types of logging operations. Follows the same format of the `members` array for `binding`.
 {{% /md %}}</dd>
 
 </dl>
@@ -540,22 +538,22 @@ referencing from a resource that supports IAM.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Exempted<wbr>Members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the identities that are exempt from these types of logging operations. Follows the same format of the `members` array for `binding`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Log<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Defines the logging level. `DATA_READ`, `DATA_WRITE` and `ADMIN_READ` capture different types of events. See [the audit configuration documentation](https://cloud.google.com/resource-manager/reference/rest/Shared.Types/AuditConfig) for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Exempted<wbr>Members</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the identities that are exempt from these types of logging operations. Follows the same format of the `members` array for `binding`.
 {{% /md %}}</dd>
 
 </dl>
@@ -565,22 +563,22 @@ referencing from a resource that supports IAM.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>exempted<wbr>Members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the identities that are exempt from these types of logging operations. Follows the same format of the `members` array for `binding`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>log<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Defines the logging level. `DATA_READ`, `DATA_WRITE` and `ADMIN_READ` capture different types of events. See [the audit configuration documentation](https://cloud.google.com/resource-manager/reference/rest/Shared.Types/AuditConfig) for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>exempted<wbr>Members</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the identities that are exempt from these types of logging operations. Follows the same format of the `members` array for `binding`.
 {{% /md %}}</dd>
 
 </dl>
@@ -590,22 +588,22 @@ referencing from a resource that supports IAM.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>exempted<wbr>Members</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Specifies the identities that are exempt from these types of logging operations. Follows the same format of the `members` array for `binding`.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>log<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Defines the logging level. `DATA_READ`, `DATA_WRITE` and `ADMIN_READ` capture different types of events. See [the audit configuration documentation](https://cloud.google.com/resource-manager/reference/rest/Shared.Types/AuditConfig) for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>exempted<wbr>Members</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the identities that are exempt from these types of logging operations. Follows the same format of the `members` array for `binding`.
 {{% /md %}}</dd>
 
 </dl>
@@ -621,7 +619,7 @@ referencing from a resource that supports IAM.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/organizations?tab=doc#GetIAMPolicyBindingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/organizations?tab=doc#GetIAMPolicyBinding">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#GetIAMPolicyBindingArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#GetIAMPolicyBinding">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -630,19 +628,11 @@ referencing from a resource that supports IAM.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicybindingcondition">Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition<wbr>Args?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of identities that will be granted the privilege in the `role`. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
 Each entry can have one of the following values:
@@ -658,12 +648,20 @@ Each entry can have one of the following values:
             title="Required">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The role/permission that will be granted to the members.
 See the [IAM Roles](https://cloud.google.com/compute/docs/access/iam) documentation for a complete list of roles.
 Note that custom roles must be of the format `[projects|organizations]/{parent-name}/roles/{role-name}`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Condition</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getiampolicybindingcondition">Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -672,19 +670,11 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicybindingcondition">*Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}An array of identities that will be granted the privilege in the `role`. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
 Each entry can have one of the following values:
@@ -700,12 +690,20 @@ Each entry can have one of the following values:
             title="Required">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The role/permission that will be granted to the members.
 See the [IAM Roles](https://cloud.google.com/compute/docs/access/iam) documentation for a complete list of roles.
 Note that custom roles must be of the format `[projects|organizations]/{parent-name}/roles/{role-name}`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Condition</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getiampolicybindingcondition">Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -714,19 +712,11 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicybindingcondition">Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition?</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}An array of identities that will be granted the privilege in the `role`. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
 Each entry can have one of the following values:
@@ -742,12 +732,20 @@ Each entry can have one of the following values:
             title="Required">
         <span>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The role/permission that will be granted to the members.
 See the [IAM Roles](https://cloud.google.com/compute/docs/access/iam) documentation for a complete list of roles.
 Note that custom roles must be of the format `[projects|organizations]/{parent-name}/roles/{role-name}`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>condition</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getiampolicybindingcondition">Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -756,19 +754,11 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>condition</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getiampolicybindingcondition">Dict[Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition]</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>members</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of identities that will be granted the privilege in the `role`. For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
 Each entry can have one of the following values:
@@ -784,12 +774,20 @@ Each entry can have one of the following values:
             title="Required">
         <span>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The role/permission that will be granted to the members.
 See the [IAM Roles](https://cloud.google.com/compute/docs/access/iam) documentation for a complete list of roles.
 Note that custom roles must be of the format `[projects|organizations]/{parent-name}/roles/{role-name}`.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>condition</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getiampolicybindingcondition">Dict[Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -804,7 +802,7 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/organizations?tab=doc#GetIAMPolicyBindingConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/organizations?tab=doc#GetIAMPolicyBindingCondition">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#GetIAMPolicyBindingConditionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/organizations?tab=doc#GetIAMPolicyBindingCondition">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -813,19 +811,11 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -833,7 +823,15 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
             title="Required">
         <span>Title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -844,19 +842,11 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -864,7 +854,15 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
             title="Required">
         <span>Title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -875,19 +873,11 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -895,7 +885,15 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
             title="Required">
         <span>title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -906,19 +904,11 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>expression</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -926,7 +916,15 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
             title="Required">
         <span>title</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

@@ -11,11 +11,6 @@ menu:
 
 A Pulumi package for creating and managing F5 BigIP resources.
 
-> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-bigip)
-> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
-> first check the [`pulumi/pulumi-f5bigip` repo](https://github.com/pulumi/pulumi-f5bigip/issues); however, if that doesn't turn up anything,
-> please consult the source [`terraform-providers/terraform-provider-bigip` repo](https://github.com/terraform-providers/terraform-provider-bigip/issues).
-
 <h3>Modules</h3>
 <ul class="api">
     <li><a href="cm/" title="cm"><span class="symbol module"></span>cm</a></li>
@@ -38,6 +33,7 @@ A Pulumi package for creating and managing F5 BigIP resources.
 	<dd><a href="https://github.com/pulumi/pulumi-f5bigip">https://github.com/pulumi/pulumi-f5bigip</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`bigip` Terraform Provider](https://github.com/terraform-providers/terraform-provider-bigip).</dd>
 </dl>
 

@@ -8,7 +8,8 @@ block_external_search_index: true
 
 Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A replicated VM keeps a copiously updated image of the VM in another region in order to be able to start the VM in that region in case of a disaster.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/site_recovery_replicated_vm.html.markdown.
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -17,7 +18,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/siterecovery/#ReplicatedVM">ReplicatedVM</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/siterecovery/#ReplicatedVMArgs">ReplicatedVMArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/siterecovery/#ReplicatedVM">ReplicatedVM</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/siterecovery/#ReplicatedVMArgs">ReplicatedVMArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -25,11 +26,11 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewReplicatedVM<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/siterecovery?tab=doc#ReplicatedVMArgs">ReplicatedVMArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/siterecovery?tab=doc#ReplicatedVM">ReplicatedVM</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewReplicatedVM<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/siterecovery?tab=doc#ReplicatedVMArgs">ReplicatedVMArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/siterecovery?tab=doc#ReplicatedVM">ReplicatedVM</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Siterecovery.ReplicatedVM.html">ReplicatedVM</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.SiteRecovery.ReplicatedVMArgs.html">ReplicatedVMArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.SiteRecovery.ReplicatedVM.html">ReplicatedVM</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.SiteRecovery.ReplicatedVMArgs.html">ReplicatedVMArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -121,29 +122,11 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Managed<wbr>Disks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicatedvmmanageddisk">List&lt;Replicated<wbr>VMManaged<wbr>Disk<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `managed_disk` block.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the network mapping.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Recovery<wbr>Replication<wbr>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -151,7 +134,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
             title="Required">
         <span>Recovery<wbr>Vault<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the vault that should be updated.
 {{% /md %}}</dd>
@@ -160,7 +143,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
             title="Required">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
 {{% /md %}}</dd>
@@ -169,7 +152,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
             title="Required">
         <span>Source<wbr>Recovery<wbr>Fabric<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of fabric that should contains this replication.
 {{% /md %}}</dd>
@@ -178,7 +161,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
             title="Required">
         <span>Source<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the protection container to use.
 {{% /md %}}</dd>
@@ -187,25 +170,16 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
             title="Required">
         <span>Source<wbr>Vm<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Id of the VM to replicate
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Target<wbr>Availability<wbr>Set<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Target<wbr>Recovery<wbr>Fabric<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Id of fabric where the VM replication should be handled when a failover is done.
 {{% /md %}}</dd>
@@ -214,7 +188,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
             title="Required">
         <span>Target<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Id of protection container where the VM replication should be created when a failover is done.
 {{% /md %}}</dd>
@@ -223,9 +197,36 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
             title="Required">
         <span>Target<wbr>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Id of resource group where the VM should be created when a failover is done.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Managed<wbr>Disks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#replicatedvmmanageddisk">List&lt;Replicated<wbr>VMManaged<wbr>Disk<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `managed_disk` block.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the network mapping.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Target<wbr>Availability<wbr>Set<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
 {{% /md %}}</dd>
 
 </dl>
@@ -234,6 +235,86 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Recovery<wbr>Replication<wbr>Policy<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Recovery<wbr>Vault<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the vault that should be updated.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Source<wbr>Recovery<wbr>Fabric<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of fabric that should contains this replication.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Source<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the protection container to use.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Source<wbr>Vm<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Id of the VM to replicate
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Target<wbr>Recovery<wbr>Fabric<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Id of fabric where the VM replication should be handled when a failover is done.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Target<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Id of protection container where the VM replication should be created when a failover is done.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Target<wbr>Resource<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Id of resource group where the VM should be created when a failover is done.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -248,98 +329,18 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Recovery<wbr>Replication<wbr>Policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Recovery<wbr>Vault<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the vault that should be updated.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Source<wbr>Recovery<wbr>Fabric<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of fabric that should contains this replication.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Source<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the protection container to use.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Source<wbr>Vm<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id of the VM to replicate
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Target<wbr>Availability<wbr>Set<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Target<wbr>Recovery<wbr>Fabric<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id of fabric where the VM replication should be handled when a failover is done.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Target<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id of protection container where the VM replication should be created when a failover is done.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Target<wbr>Resource<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id of resource group where the VM should be created when a failover is done.
 {{% /md %}}</dd>
 
 </dl>
@@ -349,29 +350,11 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>managed<wbr>Disks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicatedvmmanageddisk">Replicated<wbr>VMManaged<wbr>Disk[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `managed_disk` block.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the network mapping.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>recovery<wbr>Replication<wbr>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -379,7 +362,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
             title="Required">
         <span>recovery<wbr>Vault<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the vault that should be updated.
 {{% /md %}}</dd>
@@ -388,7 +371,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
             title="Required">
         <span>resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
 {{% /md %}}</dd>
@@ -397,7 +380,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
             title="Required">
         <span>source<wbr>Recovery<wbr>Fabric<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of fabric that should contains this replication.
 {{% /md %}}</dd>
@@ -406,7 +389,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
             title="Required">
         <span>source<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the protection container to use.
 {{% /md %}}</dd>
@@ -415,25 +398,16 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
             title="Required">
         <span>source<wbr>Vm<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Id of the VM to replicate
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>target<wbr>Availability<wbr>Set<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>target<wbr>Recovery<wbr>Fabric<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Id of fabric where the VM replication should be handled when a failover is done.
 {{% /md %}}</dd>
@@ -442,7 +416,7 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
             title="Required">
         <span>target<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Id of protection container where the VM replication should be created when a failover is done.
 {{% /md %}}</dd>
@@ -451,9 +425,36 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
             title="Required">
         <span>target<wbr>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Id of resource group where the VM should be created when a failover is done.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>managed<wbr>Disks</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#replicatedvmmanageddisk">Replicated<wbr>VMManaged<wbr>Disk[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `managed_disk` block.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the network mapping.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>target<wbr>Availability<wbr>Set<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
 {{% /md %}}</dd>
 
 </dl>
@@ -462,6 +463,86 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>recovery_<wbr>replication_<wbr>policy_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>recovery_<wbr>vault_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the vault that should be updated.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>resource_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>source_<wbr>recovery_<wbr>fabric_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of fabric that should contains this replication.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>source_<wbr>recovery_<wbr>protection_<wbr>container_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the protection container to use.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>source_<wbr>vm_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Id of the VM to replicate
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>target_<wbr>recovery_<wbr>fabric_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Id of fabric where the VM replication should be handled when a failover is done.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>target_<wbr>recovery_<wbr>protection_<wbr>container_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Id of protection container where the VM replication should be created when a failover is done.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>target_<wbr>resource_<wbr>group_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Id of resource group where the VM should be created when a failover is done.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -476,570 +557,24 @@ Manages a VM replicated using Azure Site Recovery (Azure to Azure only). A repli
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>recovery_<wbr>replication_<wbr>policy_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>recovery_<wbr>vault_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the vault that should be updated.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>source_<wbr>recovery_<wbr>fabric_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of fabric that should contains this replication.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>source_<wbr>recovery_<wbr>protection_<wbr>container_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the protection container to use.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>source_<wbr>vm_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Id of the VM to replicate
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>target_<wbr>availability_<wbr>set_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>target_<wbr>recovery_<wbr>fabric_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Id of fabric where the VM replication should be handled when a failover is done.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>target_<wbr>recovery_<wbr>protection_<wbr>container_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Id of protection container where the VM replication should be created when a failover is done.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>target_<wbr>resource_<wbr>group_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Id of resource group where the VM should be created when a failover is done.
 {{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## ReplicatedVM Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Managed<wbr>Disks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicatedvmmanageddisk">List&lt;Replicated<wbr>VMManaged<wbr>Disk&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `managed_disk` block.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the network mapping.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Recovery<wbr>Replication<wbr>Policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Recovery<wbr>Vault<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the vault that should be updated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Source<wbr>Recovery<wbr>Fabric<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of fabric that should contains this replication.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Source<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the protection container to use.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Source<wbr>Vm<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id of the VM to replicate
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Availability<wbr>Set<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Recovery<wbr>Fabric<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id of fabric where the VM replication should be handled when a failover is done.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id of protection container where the VM replication should be created when a failover is done.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Resource<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id of resource group where the VM should be created when a failover is done.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Managed<wbr>Disks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicatedvmmanageddisk">[]Replicated<wbr>VMManaged<wbr>Disk</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `managed_disk` block.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the network mapping.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Recovery<wbr>Replication<wbr>Policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Recovery<wbr>Vault<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the vault that should be updated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Source<wbr>Recovery<wbr>Fabric<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of fabric that should contains this replication.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Source<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the protection container to use.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Source<wbr>Vm<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id of the VM to replicate
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Availability<wbr>Set<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Recovery<wbr>Fabric<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id of fabric where the VM replication should be handled when a failover is done.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id of protection container where the VM replication should be created when a failover is done.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Resource<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id of resource group where the VM should be created when a failover is done.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>managed<wbr>Disks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicatedvmmanageddisk">Replicated<wbr>VMManaged<wbr>Disk[]?</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `managed_disk` block.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the network mapping.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>recovery<wbr>Replication<wbr>Policy<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>recovery<wbr>Vault<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the vault that should be updated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>source<wbr>Recovery<wbr>Fabric<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of fabric that should contains this replication.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>source<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Name of the protection container to use.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>source<wbr>Vm<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id of the VM to replicate
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target<wbr>Availability<wbr>Set<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target<wbr>Recovery<wbr>Fabric<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id of fabric where the VM replication should be handled when a failover is done.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id of protection container where the VM replication should be created when a failover is done.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target<wbr>Resource<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Id of resource group where the VM should be created when a failover is done.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>managed_<wbr>disks</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicatedvmmanageddisk">List[Replicated<wbr>VMManaged<wbr>Disk]</a></span>
-    </dt>
-    <dd>{{% md %}}One or more `managed_disk` block.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the network mapping.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>recovery_<wbr>replication_<wbr>policy_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>recovery_<wbr>vault_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the vault that should be updated.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>source_<wbr>recovery_<wbr>fabric_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of fabric that should contains this replication.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>source_<wbr>recovery_<wbr>protection_<wbr>container_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Name of the protection container to use.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>source_<wbr>vm_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Id of the VM to replicate
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target_<wbr>availability_<wbr>set_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target_<wbr>recovery_<wbr>fabric_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Id of fabric where the VM replication should be handled when a failover is done.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target_<wbr>recovery_<wbr>protection_<wbr>container_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Id of protection container where the VM replication should be created when a failover is done.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target_<wbr>resource_<wbr>group_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Id of resource group where the VM should be created when a failover is done.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -1063,11 +598,11 @@ Get an existing ReplicatedVM resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetReplicatedVM<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/siterecovery?tab=doc#ReplicatedVMState">ReplicatedVMState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/siterecovery?tab=doc#ReplicatedVM">ReplicatedVM</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetReplicatedVM<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/siterecovery?tab=doc#ReplicatedVMState">ReplicatedVMState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/siterecovery?tab=doc#ReplicatedVM">ReplicatedVM</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Siterecovery.ReplicatedVM.html">ReplicatedVM</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Siterecovery.ReplicatedVMState.html">ReplicatedVMState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.SiteRecovery.ReplicatedVM.html">ReplicatedVM</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.SiteRecovery.ReplicatedVMState.html">ReplicatedVMState</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1177,7 +712,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Managed<wbr>Disks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicatedvmmanageddisk">List&lt;Replicated<wbr>VMManaged<wbr>Disk<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#replicatedvmmanageddisk">List&lt;Replicated<wbr>VMManaged<wbr>Disk<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}One or more `managed_disk` block.
 {{% /md %}}</dd>
@@ -1186,7 +721,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
 {{% /md %}}</dd>
@@ -1195,7 +730,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Recovery<wbr>Replication<wbr>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1203,7 +738,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Recovery<wbr>Vault<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the vault that should be updated.
 {{% /md %}}</dd>
@@ -1212,7 +747,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
 {{% /md %}}</dd>
@@ -1221,7 +756,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Recovery<wbr>Fabric<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of fabric that should contains this replication.
 {{% /md %}}</dd>
@@ -1230,7 +765,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the protection container to use.
 {{% /md %}}</dd>
@@ -1239,7 +774,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Vm<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Id of the VM to replicate
 {{% /md %}}</dd>
@@ -1248,7 +783,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target<wbr>Availability<wbr>Set<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
 {{% /md %}}</dd>
@@ -1257,7 +792,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target<wbr>Recovery<wbr>Fabric<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Id of fabric where the VM replication should be handled when a failover is done.
 {{% /md %}}</dd>
@@ -1266,7 +801,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Id of protection container where the VM replication should be created when a failover is done.
 {{% /md %}}</dd>
@@ -1275,7 +810,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target<wbr>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Id of resource group where the VM should be created when a failover is done.
 {{% /md %}}</dd>
@@ -1300,7 +835,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
 {{% /md %}}</dd>
@@ -1309,7 +844,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Recovery<wbr>Replication<wbr>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1317,7 +852,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Recovery<wbr>Vault<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the vault that should be updated.
 {{% /md %}}</dd>
@@ -1326,7 +861,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
 {{% /md %}}</dd>
@@ -1335,7 +870,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Recovery<wbr>Fabric<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of fabric that should contains this replication.
 {{% /md %}}</dd>
@@ -1344,7 +879,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the protection container to use.
 {{% /md %}}</dd>
@@ -1353,7 +888,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Source<wbr>Vm<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Id of the VM to replicate
 {{% /md %}}</dd>
@@ -1362,7 +897,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target<wbr>Availability<wbr>Set<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
 {{% /md %}}</dd>
@@ -1371,7 +906,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target<wbr>Recovery<wbr>Fabric<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Id of fabric where the VM replication should be handled when a failover is done.
 {{% /md %}}</dd>
@@ -1380,7 +915,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Id of protection container where the VM replication should be created when a failover is done.
 {{% /md %}}</dd>
@@ -1389,7 +924,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Target<wbr>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Id of resource group where the VM should be created when a failover is done.
 {{% /md %}}</dd>
@@ -1405,7 +940,7 @@ The following state arguments are supported:
             title="Optional">
         <span>managed<wbr>Disks</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#replicatedvmmanageddisk">Replicated<wbr>VMManaged<wbr>Disk[]?</a></span>
+        <span class="property-type"><a href="#replicatedvmmanageddisk">Replicated<wbr>VMManaged<wbr>Disk[]</a></span>
     </dt>
     <dd>{{% md %}}One or more `managed_disk` block.
 {{% /md %}}</dd>
@@ -1414,7 +949,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
 {{% /md %}}</dd>
@@ -1423,7 +958,7 @@ The following state arguments are supported:
             title="Optional">
         <span>recovery<wbr>Replication<wbr>Policy<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1431,7 +966,7 @@ The following state arguments are supported:
             title="Optional">
         <span>recovery<wbr>Vault<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the vault that should be updated.
 {{% /md %}}</dd>
@@ -1440,7 +975,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
 {{% /md %}}</dd>
@@ -1449,7 +984,7 @@ The following state arguments are supported:
             title="Optional">
         <span>source<wbr>Recovery<wbr>Fabric<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of fabric that should contains this replication.
 {{% /md %}}</dd>
@@ -1458,7 +993,7 @@ The following state arguments are supported:
             title="Optional">
         <span>source<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the protection container to use.
 {{% /md %}}</dd>
@@ -1467,7 +1002,7 @@ The following state arguments are supported:
             title="Optional">
         <span>source<wbr>Vm<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Id of the VM to replicate
 {{% /md %}}</dd>
@@ -1476,7 +1011,7 @@ The following state arguments are supported:
             title="Optional">
         <span>target<wbr>Availability<wbr>Set<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
 {{% /md %}}</dd>
@@ -1485,7 +1020,7 @@ The following state arguments are supported:
             title="Optional">
         <span>target<wbr>Recovery<wbr>Fabric<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Id of fabric where the VM replication should be handled when a failover is done.
 {{% /md %}}</dd>
@@ -1494,7 +1029,7 @@ The following state arguments are supported:
             title="Optional">
         <span>target<wbr>Recovery<wbr>Protection<wbr>Container<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Id of protection container where the VM replication should be created when a failover is done.
 {{% /md %}}</dd>
@@ -1503,7 +1038,7 @@ The following state arguments are supported:
             title="Optional">
         <span>target<wbr>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Id of resource group where the VM should be created when a failover is done.
 {{% /md %}}</dd>
@@ -1528,7 +1063,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the network mapping.
 {{% /md %}}</dd>
@@ -1537,7 +1072,7 @@ The following state arguments are supported:
             title="Optional">
         <span>recovery_<wbr>replication_<wbr>policy_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1545,7 +1080,7 @@ The following state arguments are supported:
             title="Optional">
         <span>recovery_<wbr>vault_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the vault that should be updated.
 {{% /md %}}</dd>
@@ -1554,7 +1089,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the resource group where the vault that should be updated is located.
 {{% /md %}}</dd>
@@ -1563,7 +1098,7 @@ The following state arguments are supported:
             title="Optional">
         <span>source_<wbr>recovery_<wbr>fabric_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of fabric that should contains this replication.
 {{% /md %}}</dd>
@@ -1572,7 +1107,7 @@ The following state arguments are supported:
             title="Optional">
         <span>source_<wbr>recovery_<wbr>protection_<wbr>container_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the protection container to use.
 {{% /md %}}</dd>
@@ -1581,7 +1116,7 @@ The following state arguments are supported:
             title="Optional">
         <span>source_<wbr>vm_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Id of the VM to replicate
 {{% /md %}}</dd>
@@ -1590,7 +1125,7 @@ The following state arguments are supported:
             title="Optional">
         <span>target_<wbr>availability_<wbr>set_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Id of availability set that the new VM should belong to when a failover is done.
 {{% /md %}}</dd>
@@ -1599,7 +1134,7 @@ The following state arguments are supported:
             title="Optional">
         <span>target_<wbr>recovery_<wbr>fabric_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Id of fabric where the VM replication should be handled when a failover is done.
 {{% /md %}}</dd>
@@ -1608,7 +1143,7 @@ The following state arguments are supported:
             title="Optional">
         <span>target_<wbr>recovery_<wbr>protection_<wbr>container_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Id of protection container where the VM replication should be created when a failover is done.
 {{% /md %}}</dd>
@@ -1617,7 +1152,7 @@ The following state arguments are supported:
             title="Optional">
         <span>target_<wbr>resource_<wbr>group_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Id of resource group where the VM should be created when a failover is done.
 {{% /md %}}</dd>
@@ -1642,7 +1177,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/siterecovery?tab=doc#ReplicatedVMManagedDiskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/siterecovery?tab=doc#ReplicatedVMManagedDiskOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/siterecovery?tab=doc#ReplicatedVMManagedDiskArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/siterecovery?tab=doc#ReplicatedVMManagedDiskOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1655,7 +1190,7 @@ The following state arguments are supported:
             title="Required">
         <span>Disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Id of disk that should be replicated.
 {{% /md %}}</dd>
@@ -1664,7 +1199,7 @@ The following state arguments are supported:
             title="Required">
         <span>Staging<wbr>Storage<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Storage account that should be used for caching.
 {{% /md %}}</dd>
@@ -1673,7 +1208,7 @@ The following state arguments are supported:
             title="Required">
         <span>Target<wbr>Disk<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}What type should the disk be when a failover is done.
 {{% /md %}}</dd>
@@ -1682,7 +1217,7 @@ The following state arguments are supported:
             title="Required">
         <span>Target<wbr>Replica<wbr>Disk<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}What type should the disk be that holds the replication data.
 {{% /md %}}</dd>
@@ -1691,7 +1226,7 @@ The following state arguments are supported:
             title="Required">
         <span>Target<wbr>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Resource group disk should belong to when a failover is done.
 {{% /md %}}</dd>
@@ -1707,7 +1242,7 @@ The following state arguments are supported:
             title="Required">
         <span>Disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Id of disk that should be replicated.
 {{% /md %}}</dd>
@@ -1716,7 +1251,7 @@ The following state arguments are supported:
             title="Required">
         <span>Staging<wbr>Storage<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Storage account that should be used for caching.
 {{% /md %}}</dd>
@@ -1725,7 +1260,7 @@ The following state arguments are supported:
             title="Required">
         <span>Target<wbr>Disk<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}What type should the disk be when a failover is done.
 {{% /md %}}</dd>
@@ -1734,7 +1269,7 @@ The following state arguments are supported:
             title="Required">
         <span>Target<wbr>Replica<wbr>Disk<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}What type should the disk be that holds the replication data.
 {{% /md %}}</dd>
@@ -1743,7 +1278,7 @@ The following state arguments are supported:
             title="Required">
         <span>Target<wbr>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource group disk should belong to when a failover is done.
 {{% /md %}}</dd>
@@ -1759,7 +1294,7 @@ The following state arguments are supported:
             title="Required">
         <span>disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Id of disk that should be replicated.
 {{% /md %}}</dd>
@@ -1768,7 +1303,7 @@ The following state arguments are supported:
             title="Required">
         <span>staging<wbr>Storage<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Storage account that should be used for caching.
 {{% /md %}}</dd>
@@ -1777,7 +1312,7 @@ The following state arguments are supported:
             title="Required">
         <span>target<wbr>Disk<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}What type should the disk be when a failover is done.
 {{% /md %}}</dd>
@@ -1786,7 +1321,7 @@ The following state arguments are supported:
             title="Required">
         <span>target<wbr>Replica<wbr>Disk<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}What type should the disk be that holds the replication data.
 {{% /md %}}</dd>
@@ -1795,7 +1330,7 @@ The following state arguments are supported:
             title="Required">
         <span>target<wbr>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Resource group disk should belong to when a failover is done.
 {{% /md %}}</dd>
@@ -1811,7 +1346,7 @@ The following state arguments are supported:
             title="Required">
         <span>disk<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Id of disk that should be replicated.
 {{% /md %}}</dd>
@@ -1820,7 +1355,7 @@ The following state arguments are supported:
             title="Required">
         <span>staging<wbr>Storage<wbr>Account<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Storage account that should be used for caching.
 {{% /md %}}</dd>
@@ -1829,7 +1364,7 @@ The following state arguments are supported:
             title="Required">
         <span>target<wbr>Disk<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}What type should the disk be when a failover is done.
 {{% /md %}}</dd>
@@ -1838,7 +1373,7 @@ The following state arguments are supported:
             title="Required">
         <span>target<wbr>Replica<wbr>Disk<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}What type should the disk be that holds the replication data.
 {{% /md %}}</dd>
@@ -1847,7 +1382,7 @@ The following state arguments are supported:
             title="Required">
         <span>target_<wbr>resource_<wbr>group_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Resource group disk should belong to when a failover is done.
 {{% /md %}}</dd>
@@ -1869,6 +1404,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 </dl>
 

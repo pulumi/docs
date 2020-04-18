@@ -8,7 +8,8 @@ block_external_search_index: true
 
 Manages an IotHub Device Provisioning Service.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/iothub_dps.html.markdown.
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -17,7 +18,7 @@ Manages an IotHub Device Provisioning Service.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/iot/#IotHubDps">IotHubDps</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/iot/#IotHubDpsArgs">IotHubDpsArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/iot/#IotHubDps">IotHubDps</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/azure/iot/#IotHubDpsArgs">IotHubDpsArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -25,7 +26,7 @@ Manages an IotHub Device Provisioning Service.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewIotHubDps<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/iot?tab=doc#IotHubDpsArgs">IotHubDpsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/iot?tab=doc#IotHubDps">IotHubDps</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewIotHubDps<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iot?tab=doc#IotHubDpsArgs">IotHubDpsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iot?tab=doc#IotHubDps">IotHubDps</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -121,38 +122,11 @@ Manages an IotHub Device Provisioning Service.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Linked<wbr>Hubs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdpslinkedhub">List&lt;Iot<wbr>Hub<wbr>Dps<wbr>Linked<wbr>Hub<wbr>Args&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A `linked_hub` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the Iot Device Provisioning Service resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group under which the Iot Device Provisioning Service resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -168,9 +142,36 @@ Manages an IotHub Device Provisioning Service.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Linked<wbr>Hubs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#iothubdpslinkedhub">List&lt;Iot<wbr>Hub<wbr>Dps<wbr>Linked<wbr>Hub<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A `linked_hub` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Location</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the Iot Device Provisioning Service resource. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -181,6 +182,24 @@ Manages an IotHub Device Provisioning Service.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Resource<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource group under which the Iot Device Provisioning Service resource has to be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Sku</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#iothubdpssku">Iot<wbr>Hub<wbr>Dps<wbr>Sku</a></span>
+    </dt>
+    <dd>{{% md %}}A `sku` block as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -195,7 +214,7 @@ Manages an IotHub Device Provisioning Service.
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -204,27 +223,9 @@ Manages an IotHub Device Provisioning Service.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Iot Device Provisioning Service resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group under which the Iot Device Provisioning Service resource has to be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Sku</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdpssku">Iot<wbr>Hub<wbr>Dps<wbr>Sku</a></span>
-    </dt>
-    <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -243,38 +244,11 @@ Manages an IotHub Device Provisioning Service.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>linked<wbr>Hubs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdpslinkedhub">Iot<wbr>Hub<wbr>Dps<wbr>Linked<wbr>Hub[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A `linked_hub` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the Iot Device Provisioning Service resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group under which the Iot Device Provisioning Service resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -290,9 +264,36 @@ Manages an IotHub Device Provisioning Service.
 
     <dt class="property-optional"
             title="Optional">
+        <span>linked<wbr>Hubs</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#iothubdpslinkedhub">Iot<wbr>Hub<wbr>Dps<wbr>Linked<wbr>Hub[]</a></span>
+    </dt>
+    <dd>{{% md %}}A `linked_hub` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>location</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the Iot Device Provisioning Service resource. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -303,6 +304,24 @@ Manages an IotHub Device Provisioning Service.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>resource_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the resource group under which the Iot Device Provisioning Service resource has to be created. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>sku</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#iothubdpssku">Dict[Iot<wbr>Hub<wbr>Dps<wbr>Sku]</a></span>
+    </dt>
+    <dd>{{% md %}}A `sku` block as defined below.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -317,7 +336,7 @@ Manages an IotHub Device Provisioning Service.
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -326,27 +345,9 @@ Manages an IotHub Device Provisioning Service.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Iot Device Provisioning Service resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>resource_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group under which the Iot Device Provisioning Service resource has to be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>sku</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdpssku">Dict[Iot<wbr>Hub<wbr>Dps<wbr>Sku]</a></span>
-    </dt>
-    <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -381,7 +382,7 @@ The following output properties are available:
             title="">
         <span>Allocation<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation policy of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
@@ -390,7 +391,7 @@ The following output properties are available:
             title="">
         <span>Device<wbr>Provisioning<wbr>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The device endpoint of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
@@ -399,72 +400,18 @@ The following output properties are available:
             title="">
         <span>Id<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Linked<wbr>Hubs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdpslinkedhub">List&lt;Iot<wbr>Hub<wbr>Dps<wbr>Linked<wbr>Hub&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A `linked_hub` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the Iot Device Provisioning Service resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group under which the Iot Device Provisioning Service resource has to be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Service<wbr>Operations<wbr>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The service endpoint of the IoT Device Provisioning Service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sku</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdpssku">Iot<wbr>Hub<wbr>Dps<wbr>Sku</a></span>
-    </dt>
-    <dd>{{% md %}}A `sku` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -478,7 +425,7 @@ The following output properties are available:
             title="">
         <span>Allocation<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation policy of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
@@ -487,7 +434,7 @@ The following output properties are available:
             title="">
         <span>Device<wbr>Provisioning<wbr>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The device endpoint of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
@@ -496,72 +443,18 @@ The following output properties are available:
             title="">
         <span>Id<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Linked<wbr>Hubs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdpslinkedhub">[]Iot<wbr>Hub<wbr>Dps<wbr>Linked<wbr>Hub</a></span>
-    </dt>
-    <dd>{{% md %}}A `linked_hub` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the Iot Device Provisioning Service resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group under which the Iot Device Provisioning Service resource has to be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Service<wbr>Operations<wbr>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The service endpoint of the IoT Device Provisioning Service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Sku</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdpssku">Iot<wbr>Hub<wbr>Dps<wbr>Sku</a></span>
-    </dt>
-    <dd>{{% md %}}A `sku` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -575,7 +468,7 @@ The following output properties are available:
             title="">
         <span>allocation<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation policy of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
@@ -584,7 +477,7 @@ The following output properties are available:
             title="">
         <span>device<wbr>Provisioning<wbr>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The device endpoint of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
@@ -593,72 +486,18 @@ The following output properties are available:
             title="">
         <span>id<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>linked<wbr>Hubs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdpslinkedhub">Iot<wbr>Hub<wbr>Dps<wbr>Linked<wbr>Hub[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A `linked_hub` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the Iot Device Provisioning Service resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource<wbr>Group<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group under which the Iot Device Provisioning Service resource has to be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>service<wbr>Operations<wbr>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The service endpoint of the IoT Device Provisioning Service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sku</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdpssku">Iot<wbr>Hub<wbr>Dps<wbr>Sku</a></span>
-    </dt>
-    <dd>{{% md %}}A `sku` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -672,7 +511,7 @@ The following output properties are available:
             title="">
         <span>allocation_<wbr>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The allocation policy of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
@@ -681,7 +520,7 @@ The following output properties are available:
             title="">
         <span>device_<wbr>provisioning_<wbr>host_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The device endpoint of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
@@ -690,72 +529,18 @@ The following output properties are available:
             title="">
         <span>id_<wbr>scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>linked_<wbr>hubs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdpslinkedhub">List[Iot<wbr>Hub<wbr>Dps<wbr>Linked<wbr>Hub]</a></span>
-    </dt>
-    <dd>{{% md %}}A `linked_hub` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the name of the Iot Device Provisioning Service resource. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>resource_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the resource group under which the Iot Device Provisioning Service resource has to be created. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>service_<wbr>operations_<wbr>host_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The service endpoint of the IoT Device Provisioning Service.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>sku</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdpssku">Dict[Iot<wbr>Hub<wbr>Dps<wbr>Sku]</a></span>
-    </dt>
-    <dd>{{% md %}}A `sku` block as defined below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -783,7 +568,7 @@ Get an existing IotHubDps resource's state with the given name, ID, and optional
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIotHubDps<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/iot?tab=doc#IotHubDpsState">IotHubDpsState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/iot?tab=doc#IotHubDps">IotHubDps</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetIotHubDps<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iot?tab=doc#IotHubDpsState">IotHubDpsState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iot?tab=doc#IotHubDps">IotHubDps</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -897,7 +682,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allocation<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation policy of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
@@ -906,7 +691,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Device<wbr>Provisioning<wbr>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The device endpoint of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
@@ -915,7 +700,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
@@ -924,7 +709,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Linked<wbr>Hubs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdpslinkedhub">List&lt;Iot<wbr>Hub<wbr>Dps<wbr>Linked<wbr>Hub<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#iothubdpslinkedhub">List&lt;Iot<wbr>Hub<wbr>Dps<wbr>Linked<wbr>Hub<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A `linked_hub` block as defined below.
 {{% /md %}}</dd>
@@ -933,7 +718,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -942,7 +727,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Iot Device Provisioning Service resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -951,7 +736,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group under which the Iot Device Provisioning Service resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -960,7 +745,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Operations<wbr>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The service endpoint of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
@@ -969,7 +754,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sku</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdpssku">Iot<wbr>Hub<wbr>Dps<wbr>Sku<wbr>Args?</a></span>
+        <span class="property-type"><a href="#iothubdpssku">Iot<wbr>Hub<wbr>Dps<wbr>Sku<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd>
@@ -978,7 +763,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -994,7 +779,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Allocation<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation policy of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
@@ -1003,7 +788,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Device<wbr>Provisioning<wbr>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The device endpoint of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
@@ -1012,7 +797,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Id<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
@@ -1030,7 +815,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1039,7 +824,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Iot Device Provisioning Service resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1048,7 +833,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group under which the Iot Device Provisioning Service resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1057,7 +842,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Service<wbr>Operations<wbr>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The service endpoint of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
@@ -1066,7 +851,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Sku</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdpssku">*Iot<wbr>Hub<wbr>Dps<wbr>Sku</a></span>
+        <span class="property-type"><a href="#iothubdpssku">Iot<wbr>Hub<wbr>Dps<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd>
@@ -1091,7 +876,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allocation<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The allocation policy of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
@@ -1100,7 +885,7 @@ The following state arguments are supported:
             title="Optional">
         <span>device<wbr>Provisioning<wbr>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The device endpoint of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
@@ -1109,7 +894,7 @@ The following state arguments are supported:
             title="Optional">
         <span>id<wbr>Scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
@@ -1118,7 +903,7 @@ The following state arguments are supported:
             title="Optional">
         <span>linked<wbr>Hubs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdpslinkedhub">Iot<wbr>Hub<wbr>Dps<wbr>Linked<wbr>Hub[]?</a></span>
+        <span class="property-type"><a href="#iothubdpslinkedhub">Iot<wbr>Hub<wbr>Dps<wbr>Linked<wbr>Hub[]</a></span>
     </dt>
     <dd>{{% md %}}A `linked_hub` block as defined below.
 {{% /md %}}</dd>
@@ -1127,7 +912,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1136,7 +921,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Iot Device Provisioning Service resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1145,7 +930,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group under which the Iot Device Provisioning Service resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1154,7 +939,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service<wbr>Operations<wbr>Host<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The service endpoint of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
@@ -1163,7 +948,7 @@ The following state arguments are supported:
             title="Optional">
         <span>sku</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#iothubdpssku">Iot<wbr>Hub<wbr>Dps<wbr>Sku?</a></span>
+        <span class="property-type"><a href="#iothubdpssku">Iot<wbr>Hub<wbr>Dps<wbr>Sku</a></span>
     </dt>
     <dd>{{% md %}}A `sku` block as defined below.
 {{% /md %}}</dd>
@@ -1172,7 +957,7 @@ The following state arguments are supported:
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
@@ -1188,7 +973,7 @@ The following state arguments are supported:
             title="Optional">
         <span>allocation_<wbr>policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The allocation policy of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
@@ -1197,7 +982,7 @@ The following state arguments are supported:
             title="Optional">
         <span>device_<wbr>provisioning_<wbr>host_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The device endpoint of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
@@ -1206,7 +991,7 @@ The following state arguments are supported:
             title="Optional">
         <span>id_<wbr>scope</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The unique identifier of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
@@ -1224,7 +1009,7 @@ The following state arguments are supported:
             title="Optional">
         <span>location</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the supported Azure location where the resource has to be createc. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1233,7 +1018,7 @@ The following state arguments are supported:
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name of the Iot Device Provisioning Service resource. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1242,7 +1027,7 @@ The following state arguments are supported:
             title="Optional">
         <span>resource_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the resource group under which the Iot Device Provisioning Service resource has to be created. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
@@ -1251,7 +1036,7 @@ The following state arguments are supported:
             title="Optional">
         <span>service_<wbr>operations_<wbr>host_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The service endpoint of the IoT Device Provisioning Service.
 {{% /md %}}</dd>
@@ -1294,7 +1079,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/iot?tab=doc#IotHubDpsLinkedHubArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/iot?tab=doc#IotHubDpsLinkedHubOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iot?tab=doc#IotHubDpsLinkedHubArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iot?tab=doc#IotHubDpsLinkedHubOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1303,11 +1088,29 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Connection<wbr>String</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The connection string to connect to the IoT Hub. Changing this forces a new resource.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Location</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The location of the IoT hub. Changing this forces a new resource.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Allocation<wbr>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The weight applied to the IoT Hub. Defaults to 0.
 {{% /md %}}</dd>
@@ -1316,36 +1119,18 @@ The following state arguments are supported:
             title="Optional">
         <span>Apply<wbr>Allocation<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines whether to apply allocation policies to the IoT Hub. Defaults to false.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Connection<wbr>String</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The connection string to connect to the IoT Hub. Changing this forces a new resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IoT Hub hostname.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the IoT hub. Changing this forces a new resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1355,11 +1140,29 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Connection<wbr>String</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The connection string to connect to the IoT Hub. Changing this forces a new resource.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Location</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The location of the IoT hub. Changing this forces a new resource.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Allocation<wbr>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The weight applied to the IoT Hub. Defaults to 0.
 {{% /md %}}</dd>
@@ -1368,36 +1171,18 @@ The following state arguments are supported:
             title="Optional">
         <span>Apply<wbr>Allocation<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines whether to apply allocation policies to the IoT Hub. Defaults to false.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Connection<wbr>String</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The connection string to connect to the IoT Hub. Changing this forces a new resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IoT Hub hostname.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the IoT hub. Changing this forces a new resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1407,11 +1192,29 @@ The following state arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>connection<wbr>String</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The connection string to connect to the IoT Hub. Changing this forces a new resource.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>location</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The location of the IoT hub. Changing this forces a new resource.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>allocation<wbr>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The weight applied to the IoT Hub. Defaults to 0.
 {{% /md %}}</dd>
@@ -1420,36 +1223,18 @@ The following state arguments are supported:
             title="Optional">
         <span>apply<wbr>Allocation<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Determines whether to apply allocation policies to the IoT Hub. Defaults to false.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>connection<wbr>String</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The connection string to connect to the IoT Hub. Changing this forces a new resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IoT Hub hostname.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The location of the IoT hub. Changing this forces a new resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1459,11 +1244,29 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>connection_<wbr>string</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The connection string to connect to the IoT Hub. Changing this forces a new resource.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>location</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The location of the IoT hub. Changing this forces a new resource.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>allocation<wbr>Weight</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The weight applied to the IoT Hub. Defaults to 0.
 {{% /md %}}</dd>
@@ -1472,36 +1275,18 @@ The following state arguments are supported:
             title="Optional">
         <span>apply<wbr>Allocation<wbr>Policy</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Determines whether to apply allocation policies to the IoT Hub. Defaults to false.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>connection_<wbr>string</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The connection string to connect to the IoT Hub. Changing this forces a new resource.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>hostname</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IoT Hub hostname.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>location</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The location of the IoT hub. Changing this forces a new resource.
 {{% /md %}}</dd>
 
 </dl>
@@ -1517,7 +1302,7 @@ The following state arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/iot?tab=doc#IotHubDpsSkuArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure/iot?tab=doc#IotHubDpsSkuOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iot?tab=doc#IotHubDpsSkuArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/iot?tab=doc#IotHubDpsSkuOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1530,7 +1315,7 @@ The following state arguments are supported:
             title="Required">
         <span>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The number of provisioned IoT Device Provisioning Service units.
 {{% /md %}}</dd>
@@ -1539,7 +1324,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the sku. Possible values are `B1`, `B2`, `B3`, `F1`, `S1`, `S2`, and `S3`.
 {{% /md %}}</dd>
@@ -1555,7 +1340,7 @@ The following state arguments are supported:
             title="Required">
         <span>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The number of provisioned IoT Device Provisioning Service units.
 {{% /md %}}</dd>
@@ -1564,7 +1349,7 @@ The following state arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the sku. Possible values are `B1`, `B2`, `B3`, `F1`, `S1`, `S2`, and `S3`.
 {{% /md %}}</dd>
@@ -1580,7 +1365,7 @@ The following state arguments are supported:
             title="Required">
         <span>capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The number of provisioned IoT Device Provisioning Service units.
 {{% /md %}}</dd>
@@ -1589,7 +1374,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the sku. Possible values are `B1`, `B2`, `B3`, `F1`, `S1`, `S2`, and `S3`.
 {{% /md %}}</dd>
@@ -1605,7 +1390,7 @@ The following state arguments are supported:
             title="Required">
         <span>capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The number of provisioned IoT Device Provisioning Service units.
 {{% /md %}}</dd>
@@ -1614,7 +1399,7 @@ The following state arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the sku. Possible values are `B1`, `B2`, `B3`, `F1`, `S1`, `S2`, and `S3`.
 {{% /md %}}</dd>
@@ -1636,6 +1421,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 </dl>
 

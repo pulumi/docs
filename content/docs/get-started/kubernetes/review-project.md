@@ -71,6 +71,9 @@ export const name = deployment.metadata.name;
 {{% choosable language python %}}
 
 ```python
+"""
+Creating a Kubernetes Deployment
+"""
 import pulumi
 from pulumi_kubernetes.apps.v1 import Deployment
 

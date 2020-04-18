@@ -14,8 +14,6 @@ To get more information about ScanConfig, see:
 * How-to Guides
     * [Using Cloud Security Scanner](https://cloud.google.com/security-scanner/docs/scanning)
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/security_scanner_scan_config.html.markdown.
-
 
 
 ## Create a SecurityScanConfig Resource
@@ -23,7 +21,7 @@ To get more information about ScanConfig, see:
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#SecurityScanConfig">SecurityScanConfig</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#SecurityScanConfigArgs">SecurityScanConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#SecurityScanConfig">SecurityScanConfig</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/compute/#SecurityScanConfigArgs">SecurityScanConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -31,7 +29,7 @@ To get more information about ScanConfig, see:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSecurityScanConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#SecurityScanConfigArgs">SecurityScanConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#SecurityScanConfig">SecurityScanConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSecurityScanConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SecurityScanConfigArgs">SecurityScanConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SecurityScanConfig">SecurityScanConfig</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -127,11 +125,29 @@ To get more information about ScanConfig, see:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Display<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user provider display name of the ScanConfig.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Starting<wbr>Urls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The starting URLs from which the scanner finds site pages.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Authentication</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigauthentication">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Args?</a></span>
+        <span class="property-type"><a href="#securityscanconfigauthentication">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication configuration. If specified, service will use the authentication configuration during scanning.
 {{% /md %}}</dd>
@@ -140,25 +156,16 @@ To get more information about ScanConfig, see:
             title="Optional">
         <span>Blacklist<wbr>Patterns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The blacklist URL patterns as described in https://cloud.google.com/security-scanner/docs/excluded-urls
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The user provider display name of the ScanConfig.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Controls export of scan configurations and results to Cloud Security Command Center.
 {{% /md %}}</dd>
@@ -167,7 +174,7 @@ To get more information about ScanConfig, see:
             title="Optional">
         <span>Max<wbr>Qps</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively. Defaults to 15.
 {{% /md %}}</dd>
@@ -176,7 +183,7 @@ To get more information about ScanConfig, see:
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -186,25 +193,16 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Schedule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigschedule">Security<wbr>Scan<wbr>Config<wbr>Schedule<wbr>Args?</a></span>
+        <span class="property-type"><a href="#securityscanconfigschedule">Security<wbr>Scan<wbr>Config<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The schedule of the ScanConfig
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Starting<wbr>Urls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}The starting URLs from which the scanner finds site pages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Target<wbr>Platforms</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of Cloud Platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.
 {{% /md %}}</dd>
@@ -213,7 +211,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>User<wbr>Agent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Type of the user agents used for scanning
 {{% /md %}}</dd>
@@ -225,11 +223,29 @@ If it is not provided, the provider project is used.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Display<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user provider display name of the ScanConfig.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Starting<wbr>Urls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The starting URLs from which the scanner finds site pages.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Authentication</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigauthentication">*Security<wbr>Scan<wbr>Config<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#securityscanconfigauthentication">Security<wbr>Scan<wbr>Config<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}The authentication configuration. If specified, service will use the authentication configuration during scanning.
 {{% /md %}}</dd>
@@ -238,25 +254,16 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Blacklist<wbr>Patterns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The blacklist URL patterns as described in https://cloud.google.com/security-scanner/docs/excluded-urls
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The user provider display name of the ScanConfig.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Controls export of scan configurations and results to Cloud Security Command Center.
 {{% /md %}}</dd>
@@ -265,7 +272,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Max<wbr>Qps</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively. Defaults to 15.
 {{% /md %}}</dd>
@@ -274,7 +281,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -284,25 +291,16 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Schedule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigschedule">*Security<wbr>Scan<wbr>Config<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#securityscanconfigschedule">Security<wbr>Scan<wbr>Config<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}The schedule of the ScanConfig
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Starting<wbr>Urls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The starting URLs from which the scanner finds site pages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Target<wbr>Platforms</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Set of Cloud Platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.
 {{% /md %}}</dd>
@@ -311,7 +309,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>User<wbr>Agent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of the user agents used for scanning
 {{% /md %}}</dd>
@@ -323,11 +321,29 @@ If it is not provided, the provider project is used.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>display<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The user provider display name of the ScanConfig.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>starting<wbr>Urls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}The starting URLs from which the scanner finds site pages.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>authentication</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigauthentication">Security<wbr>Scan<wbr>Config<wbr>Authentication?</a></span>
+        <span class="property-type"><a href="#securityscanconfigauthentication">Security<wbr>Scan<wbr>Config<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}The authentication configuration. If specified, service will use the authentication configuration during scanning.
 {{% /md %}}</dd>
@@ -336,25 +352,16 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>blacklist<wbr>Patterns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The blacklist URL patterns as described in https://cloud.google.com/security-scanner/docs/excluded-urls
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The user provider display name of the ScanConfig.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>export<wbr>To<wbr>Security<wbr>Command<wbr>Center</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Controls export of scan configurations and results to Cloud Security Command Center.
 {{% /md %}}</dd>
@@ -363,7 +370,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>max<wbr>Qps</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively. Defaults to 15.
 {{% /md %}}</dd>
@@ -372,7 +379,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -382,25 +389,16 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>schedule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigschedule">Security<wbr>Scan<wbr>Config<wbr>Schedule?</a></span>
+        <span class="property-type"><a href="#securityscanconfigschedule">Security<wbr>Scan<wbr>Config<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}The schedule of the ScanConfig
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>starting<wbr>Urls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The starting URLs from which the scanner finds site pages.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>target<wbr>Platforms</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Set of Cloud Platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.
 {{% /md %}}</dd>
@@ -409,7 +407,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>user<wbr>Agent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of the user agents used for scanning
 {{% /md %}}</dd>
@@ -420,6 +418,24 @@ If it is not provided, the provider project is used.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>display_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The user provider display name of the ScanConfig.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>starting_<wbr>urls</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}The starting URLs from which the scanner finds site pages.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -434,25 +450,16 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>blacklist_<wbr>patterns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The blacklist URL patterns as described in https://cloud.google.com/security-scanner/docs/excluded-urls
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>display_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The user provider display name of the ScanConfig.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>export_<wbr>to_<wbr>security_<wbr>command_<wbr>center</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Controls export of scan configurations and results to Cloud Security Command Center.
 {{% /md %}}</dd>
@@ -461,7 +468,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>max_<wbr>qps</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively. Defaults to 15.
 {{% /md %}}</dd>
@@ -470,7 +477,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -485,20 +492,11 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The schedule of the ScanConfig
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>starting_<wbr>urls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The starting URLs from which the scanner finds site pages.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>target_<wbr>platforms</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of Cloud Platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.
 {{% /md %}}</dd>
@@ -507,7 +505,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>user_<wbr>agent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Type of the user agents used for scanning
 {{% /md %}}</dd>
@@ -533,102 +531,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Authentication</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigauthentication">Security<wbr>Scan<wbr>Config<wbr>Authentication?</a></span>
-    </dt>
-    <dd>{{% md %}}The authentication configuration. If specified, service will use the authentication configuration during scanning.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Blacklist<wbr>Patterns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}The blacklist URL patterns as described in https://cloud.google.com/security-scanner/docs/excluded-urls
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The user provider display name of the ScanConfig.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Controls export of scan configurations and results to Cloud Security Command Center.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Qps</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively. Defaults to 15.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format: 'projects/{{project}}/scanConfigs/{{server_generated_id}}'
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Schedule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigschedule">Security<wbr>Scan<wbr>Config<wbr>Schedule?</a></span>
-    </dt>
-    <dd>{{% md %}}The schedule of the ScanConfig
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Starting<wbr>Urls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
-    </dt>
-    <dd>{{% md %}}The starting URLs from which the scanner finds site pages.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Platforms</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Set of Cloud Platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Agent</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Type of the user agents used for scanning
 {{% /md %}}</dd>
 
 </dl>
@@ -640,102 +547,11 @@ If it is not provided, the provider project is used.
 
     <dt class="property-"
             title="">
-        <span>Authentication</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigauthentication">*Security<wbr>Scan<wbr>Config<wbr>Authentication</a></span>
-    </dt>
-    <dd>{{% md %}}The authentication configuration. If specified, service will use the authentication configuration during scanning.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Blacklist<wbr>Patterns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The blacklist URL patterns as described in https://cloud.google.com/security-scanner/docs/excluded-urls
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The user provider display name of the ScanConfig.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Controls export of scan configurations and results to Cloud Security Command Center.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Qps</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively. Defaults to 15.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format: 'projects/{{project}}/scanConfigs/{{server_generated_id}}'
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Schedule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigschedule">*Security<wbr>Scan<wbr>Config<wbr>Schedule</a></span>
-    </dt>
-    <dd>{{% md %}}The schedule of the ScanConfig
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Starting<wbr>Urls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}The starting URLs from which the scanner finds site pages.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Target<wbr>Platforms</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Set of Cloud Platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>User<wbr>Agent</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Type of the user agents used for scanning
 {{% /md %}}</dd>
 
 </dl>
@@ -747,102 +563,11 @@ If it is not provided, the provider project is used.
 
     <dt class="property-"
             title="">
-        <span>authentication</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigauthentication">Security<wbr>Scan<wbr>Config<wbr>Authentication?</a></span>
-    </dt>
-    <dd>{{% md %}}The authentication configuration. If specified, service will use the authentication configuration during scanning.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>blacklist<wbr>Patterns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}The blacklist URL patterns as described in https://cloud.google.com/security-scanner/docs/excluded-urls
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The user provider display name of the ScanConfig.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>export<wbr>To<wbr>Security<wbr>Command<wbr>Center</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Controls export of scan configurations and results to Cloud Security Command Center.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max<wbr>Qps</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively. Defaults to 15.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format: 'projects/{{project}}/scanConfigs/{{server_generated_id}}'
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>schedule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigschedule">Security<wbr>Scan<wbr>Config<wbr>Schedule?</a></span>
-    </dt>
-    <dd>{{% md %}}The schedule of the ScanConfig
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>starting<wbr>Urls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}The starting URLs from which the scanner finds site pages.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target<wbr>Platforms</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Set of Cloud Platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user<wbr>Agent</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Type of the user agents used for scanning
 {{% /md %}}</dd>
 
 </dl>
@@ -854,102 +579,11 @@ If it is not provided, the provider project is used.
 
     <dt class="property-"
             title="">
-        <span>authentication</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigauthentication">Dict[Security<wbr>Scan<wbr>Config<wbr>Authentication]</a></span>
-    </dt>
-    <dd>{{% md %}}The authentication configuration. If specified, service will use the authentication configuration during scanning.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>blacklist_<wbr>patterns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The blacklist URL patterns as described in https://cloud.google.com/security-scanner/docs/excluded-urls
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>display_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The user provider display name of the ScanConfig.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>export_<wbr>to_<wbr>security_<wbr>command_<wbr>center</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Controls export of scan configurations and results to Cloud Security Command Center.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max_<wbr>qps</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively. Defaults to 15.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format: 'projects/{{project}}/scanConfigs/{{server_generated_id}}'
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>schedule</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigschedule">Dict[Security<wbr>Scan<wbr>Config<wbr>Schedule]</a></span>
-    </dt>
-    <dd>{{% md %}}The schedule of the ScanConfig
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>starting_<wbr>urls</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}The starting URLs from which the scanner finds site pages.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>target_<wbr>platforms</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Set of Cloud Platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>user_<wbr>agent</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Type of the user agents used for scanning
 {{% /md %}}</dd>
 
 </dl>
@@ -977,7 +611,7 @@ Get an existing SecurityScanConfig resource's state with the given name, ID, and
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecurityScanConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#SecurityScanConfigState">SecurityScanConfigState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#SecurityScanConfig">SecurityScanConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecurityScanConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SecurityScanConfigState">SecurityScanConfigState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SecurityScanConfig">SecurityScanConfig</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1091,7 +725,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Authentication</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigauthentication">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Args?</a></span>
+        <span class="property-type"><a href="#securityscanconfigauthentication">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The authentication configuration. If specified, service will use the authentication configuration during scanning.
 {{% /md %}}</dd>
@@ -1100,7 +734,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Blacklist<wbr>Patterns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The blacklist URL patterns as described in https://cloud.google.com/security-scanner/docs/excluded-urls
 {{% /md %}}</dd>
@@ -1109,7 +743,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The user provider display name of the ScanConfig.
 {{% /md %}}</dd>
@@ -1118,7 +752,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Controls export of scan configurations and results to Cloud Security Command Center.
 {{% /md %}}</dd>
@@ -1127,7 +761,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Max<wbr>Qps</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively. Defaults to 15.
 {{% /md %}}</dd>
@@ -1136,7 +770,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format: 'projects/{{project}}/scanConfigs/{{server_generated_id}}'
 {{% /md %}}</dd>
@@ -1145,7 +779,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1155,7 +789,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Schedule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigschedule">Security<wbr>Scan<wbr>Config<wbr>Schedule<wbr>Args?</a></span>
+        <span class="property-type"><a href="#securityscanconfigschedule">Security<wbr>Scan<wbr>Config<wbr>Schedule<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The schedule of the ScanConfig
 {{% /md %}}</dd>
@@ -1164,7 +798,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Starting<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The starting URLs from which the scanner finds site pages.
 {{% /md %}}</dd>
@@ -1173,7 +807,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Target<wbr>Platforms</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Set of Cloud Platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.
 {{% /md %}}</dd>
@@ -1182,7 +816,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>User<wbr>Agent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Type of the user agents used for scanning
 {{% /md %}}</dd>
@@ -1198,7 +832,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Authentication</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigauthentication">*Security<wbr>Scan<wbr>Config<wbr>Authentication</a></span>
+        <span class="property-type"><a href="#securityscanconfigauthentication">Security<wbr>Scan<wbr>Config<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}The authentication configuration. If specified, service will use the authentication configuration during scanning.
 {{% /md %}}</dd>
@@ -1207,7 +841,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Blacklist<wbr>Patterns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The blacklist URL patterns as described in https://cloud.google.com/security-scanner/docs/excluded-urls
 {{% /md %}}</dd>
@@ -1216,7 +850,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The user provider display name of the ScanConfig.
 {{% /md %}}</dd>
@@ -1225,7 +859,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Export<wbr>To<wbr>Security<wbr>Command<wbr>Center</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Controls export of scan configurations and results to Cloud Security Command Center.
 {{% /md %}}</dd>
@@ -1234,7 +868,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Max<wbr>Qps</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively. Defaults to 15.
 {{% /md %}}</dd>
@@ -1243,7 +877,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format: 'projects/{{project}}/scanConfigs/{{server_generated_id}}'
 {{% /md %}}</dd>
@@ -1252,7 +886,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1262,7 +896,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Schedule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigschedule">*Security<wbr>Scan<wbr>Config<wbr>Schedule</a></span>
+        <span class="property-type"><a href="#securityscanconfigschedule">Security<wbr>Scan<wbr>Config<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}The schedule of the ScanConfig
 {{% /md %}}</dd>
@@ -1271,7 +905,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Starting<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The starting URLs from which the scanner finds site pages.
 {{% /md %}}</dd>
@@ -1280,7 +914,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Target<wbr>Platforms</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Set of Cloud Platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.
 {{% /md %}}</dd>
@@ -1289,7 +923,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>User<wbr>Agent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of the user agents used for scanning
 {{% /md %}}</dd>
@@ -1305,7 +939,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>authentication</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigauthentication">Security<wbr>Scan<wbr>Config<wbr>Authentication?</a></span>
+        <span class="property-type"><a href="#securityscanconfigauthentication">Security<wbr>Scan<wbr>Config<wbr>Authentication</a></span>
     </dt>
     <dd>{{% md %}}The authentication configuration. If specified, service will use the authentication configuration during scanning.
 {{% /md %}}</dd>
@@ -1314,7 +948,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>blacklist<wbr>Patterns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The blacklist URL patterns as described in https://cloud.google.com/security-scanner/docs/excluded-urls
 {{% /md %}}</dd>
@@ -1323,7 +957,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>display<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The user provider display name of the ScanConfig.
 {{% /md %}}</dd>
@@ -1332,7 +966,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>export<wbr>To<wbr>Security<wbr>Command<wbr>Center</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Controls export of scan configurations and results to Cloud Security Command Center.
 {{% /md %}}</dd>
@@ -1341,7 +975,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>max<wbr>Qps</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively. Defaults to 15.
 {{% /md %}}</dd>
@@ -1350,7 +984,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format: 'projects/{{project}}/scanConfigs/{{server_generated_id}}'
 {{% /md %}}</dd>
@@ -1359,7 +993,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1369,7 +1003,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>schedule</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigschedule">Security<wbr>Scan<wbr>Config<wbr>Schedule?</a></span>
+        <span class="property-type"><a href="#securityscanconfigschedule">Security<wbr>Scan<wbr>Config<wbr>Schedule</a></span>
     </dt>
     <dd>{{% md %}}The schedule of the ScanConfig
 {{% /md %}}</dd>
@@ -1378,7 +1012,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>starting<wbr>Urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The starting URLs from which the scanner finds site pages.
 {{% /md %}}</dd>
@@ -1387,7 +1021,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>target<wbr>Platforms</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Set of Cloud Platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.
 {{% /md %}}</dd>
@@ -1396,7 +1030,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>user<wbr>Agent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Type of the user agents used for scanning
 {{% /md %}}</dd>
@@ -1421,7 +1055,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>blacklist_<wbr>patterns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The blacklist URL patterns as described in https://cloud.google.com/security-scanner/docs/excluded-urls
 {{% /md %}}</dd>
@@ -1430,7 +1064,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>display_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The user provider display name of the ScanConfig.
 {{% /md %}}</dd>
@@ -1439,7 +1073,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>export_<wbr>to_<wbr>security_<wbr>command_<wbr>center</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Controls export of scan configurations and results to Cloud Security Command Center.
 {{% /md %}}</dd>
@@ -1448,7 +1082,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>max_<wbr>qps</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum QPS during scanning. A valid value ranges from 5 to 20 inclusively. Defaults to 15.
 {{% /md %}}</dd>
@@ -1457,7 +1091,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A server defined name for this index. Format: 'projects/{{project}}/scanConfigs/{{server_generated_id}}'
 {{% /md %}}</dd>
@@ -1466,7 +1100,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1485,7 +1119,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>starting_<wbr>urls</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The starting URLs from which the scanner finds site pages.
 {{% /md %}}</dd>
@@ -1494,7 +1128,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>target_<wbr>platforms</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Set of Cloud Platforms targeted by the scan. If empty, APP_ENGINE will be used as a default.
 {{% /md %}}</dd>
@@ -1503,7 +1137,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>user_<wbr>agent</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Type of the user agents used for scanning
 {{% /md %}}</dd>
@@ -1528,7 +1162,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#SecurityScanConfigAuthenticationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#SecurityScanConfigAuthenticationOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SecurityScanConfigAuthenticationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SecurityScanConfigAuthenticationOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1541,7 +1175,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Custom<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigauthenticationcustomaccount">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Custom<wbr>Account<wbr>Args?</a></span>
+        <span class="property-type"><a href="#securityscanconfigauthenticationcustomaccount">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Custom<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1549,7 +1183,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Google<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigauthenticationgoogleaccount">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Google<wbr>Account<wbr>Args?</a></span>
+        <span class="property-type"><a href="#securityscanconfigauthenticationgoogleaccount">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Google<wbr>Account<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1564,7 +1198,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Custom<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigauthenticationcustomaccount">*Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Custom<wbr>Account</a></span>
+        <span class="property-type"><a href="#securityscanconfigauthenticationcustomaccount">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Custom<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1572,7 +1206,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Google<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigauthenticationgoogleaccount">*Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Google<wbr>Account</a></span>
+        <span class="property-type"><a href="#securityscanconfigauthenticationgoogleaccount">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Google<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1587,7 +1221,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>custom<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigauthenticationcustomaccount">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Custom<wbr>Account?</a></span>
+        <span class="property-type"><a href="#securityscanconfigauthenticationcustomaccount">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Custom<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1595,7 +1229,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>google<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#securityscanconfigauthenticationgoogleaccount">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Google<wbr>Account?</a></span>
+        <span class="property-type"><a href="#securityscanconfigauthenticationgoogleaccount">Security<wbr>Scan<wbr>Config<wbr>Authentication<wbr>Google<wbr>Account</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1635,7 +1269,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#SecurityScanConfigAuthenticationCustomAccountArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#SecurityScanConfigAuthenticationCustomAccountOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SecurityScanConfigAuthenticationCustomAccountArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SecurityScanConfigAuthenticationCustomAccountOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1648,7 +1282,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Login<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1656,7 +1290,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1664,7 +1298,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1679,7 +1313,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Login<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1687,7 +1321,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1695,7 +1329,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1710,7 +1344,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>login<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1718,7 +1352,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1726,7 +1360,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1741,7 +1375,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>login<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1749,7 +1383,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1757,7 +1391,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1774,7 +1408,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#SecurityScanConfigAuthenticationGoogleAccountArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#SecurityScanConfigAuthenticationGoogleAccountOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SecurityScanConfigAuthenticationGoogleAccountArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SecurityScanConfigAuthenticationGoogleAccountOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1787,7 +1421,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1795,7 +1429,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1810,7 +1444,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1818,7 +1452,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1833,7 +1467,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1841,7 +1475,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1856,7 +1490,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>password</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1864,7 +1498,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1881,7 +1515,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#SecurityScanConfigScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/compute?tab=doc#SecurityScanConfigScheduleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SecurityScanConfigScheduleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#SecurityScanConfigScheduleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1894,7 +1528,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Interval<wbr>Duration<wbr>Days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1902,7 +1536,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Schedule<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1917,7 +1551,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Interval<wbr>Duration<wbr>Days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1925,7 +1559,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Schedule<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1940,7 +1574,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>interval<wbr>Duration<wbr>Days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1948,7 +1582,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>schedule<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1963,7 +1597,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>interval<wbr>Duration<wbr>Days</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1971,7 +1605,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>schedule<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1992,6 +1626,7 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

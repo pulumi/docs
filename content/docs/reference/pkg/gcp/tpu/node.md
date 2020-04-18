@@ -15,8 +15,6 @@ To get more information about Node, see:
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/tpu/docs/)
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/tpu_node.html.markdown.
-
 
 
 ## Create a Node Resource
@@ -24,7 +22,7 @@ To get more information about Node, see:
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/tpu/#Node">Node</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/tpu/#NodeArgs">NodeArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/tpu/#Node">Node</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/gcp/tpu/#NodeArgs">NodeArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -32,7 +30,7 @@ To get more information about Node, see:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNode<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/tpu?tab=doc#NodeArgs">NodeArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/tpu?tab=doc#Node">Node</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewNode<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/tpu?tab=doc#NodeArgs">NodeArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/tpu?tab=doc#Node">Node</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -132,7 +130,7 @@ To get more information about Node, see:
             title="Required">
         <span>Accelerator<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of hardware accelerators associated with this node.
 {{% /md %}}</dd>
@@ -141,7 +139,7 @@ To get more information about Node, see:
             title="Required">
         <span>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute
 Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP
@@ -150,11 +148,29 @@ conflicts with any subnetworks in the user's provided network, or the provided n
 that is using that CIDR block.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Tensorflow<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The version of Tensorflow running in the Node.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The GCP location for the TPU.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the TPU. Maximum of 512 characters.
 {{% /md %}}</dd>
@@ -163,7 +179,7 @@ that is using that CIDR block.
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
 {{% /md %}}</dd>
@@ -172,7 +188,7 @@ that is using that CIDR block.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The immutable name of the TPU.
 {{% /md %}}</dd>
@@ -181,7 +197,7 @@ that is using that CIDR block.
             title="Optional">
         <span>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on
 which this API has been activated. If none is provided, "default" will be used.
@@ -191,7 +207,7 @@ which this API has been activated. If none is provided, "default" will be used.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -201,27 +217,9 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Scheduling<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sets the scheduling options for this TPU instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Tensorflow<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The version of Tensorflow running in the Node.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The GCP location for the TPU.
 {{% /md %}}</dd>
 
 </dl>
@@ -235,7 +233,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Accelerator<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of hardware accelerators associated with this node.
 {{% /md %}}</dd>
@@ -244,7 +242,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute
 Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP
@@ -253,11 +251,29 @@ conflicts with any subnetworks in the user's provided network, or the provided n
 that is using that CIDR block.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>Tensorflow<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The version of Tensorflow running in the Node.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The GCP location for the TPU.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the TPU. Maximum of 512 characters.
 {{% /md %}}</dd>
@@ -275,7 +291,7 @@ that is using that CIDR block.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The immutable name of the TPU.
 {{% /md %}}</dd>
@@ -284,7 +300,7 @@ that is using that CIDR block.
             title="Optional">
         <span>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on
 which this API has been activated. If none is provided, "default" will be used.
@@ -294,7 +310,7 @@ which this API has been activated. If none is provided, "default" will be used.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -304,27 +320,9 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Scheduling<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeschedulingconfig">*Node<wbr>Scheduling<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Sets the scheduling options for this TPU instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Tensorflow<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The version of Tensorflow running in the Node.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The GCP location for the TPU.
 {{% /md %}}</dd>
 
 </dl>
@@ -338,7 +336,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>accelerator<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of hardware accelerators associated with this node.
 {{% /md %}}</dd>
@@ -347,7 +345,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute
 Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP
@@ -356,11 +354,29 @@ conflicts with any subnetworks in the user's provided network, or the provided n
 that is using that CIDR block.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>tensorflow<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The version of Tensorflow running in the Node.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The GCP location for the TPU.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the TPU. Maximum of 512 characters.
 {{% /md %}}</dd>
@@ -369,7 +385,7 @@ that is using that CIDR block.
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
 {{% /md %}}</dd>
@@ -378,7 +394,7 @@ that is using that CIDR block.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The immutable name of the TPU.
 {{% /md %}}</dd>
@@ -387,7 +403,7 @@ that is using that CIDR block.
             title="Optional">
         <span>network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on
 which this API has been activated. If none is provided, "default" will be used.
@@ -397,7 +413,7 @@ which this API has been activated. If none is provided, "default" will be used.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -407,27 +423,9 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>scheduling<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config?</a></span>
+        <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Sets the scheduling options for this TPU instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>tensorflow<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The version of Tensorflow running in the Node.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The GCP location for the TPU.
 {{% /md %}}</dd>
 
 </dl>
@@ -441,7 +439,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>accelerator_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of hardware accelerators associated with this node.
 {{% /md %}}</dd>
@@ -450,7 +448,7 @@ If it is not provided, the provider project is used.
             title="Required">
         <span>cidr_<wbr>block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute
 Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP
@@ -459,11 +457,29 @@ conflicts with any subnetworks in the user's provided network, or the provided n
 that is using that CIDR block.
 {{% /md %}}</dd>
 
+    <dt class="property-required"
+            title="Required">
+        <span>tensorflow_<wbr>version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The version of Tensorflow running in the Node.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>zone</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The GCP location for the TPU.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the TPU. Maximum of 512 characters.
 {{% /md %}}</dd>
@@ -481,7 +497,7 @@ that is using that CIDR block.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The immutable name of the TPU.
 {{% /md %}}</dd>
@@ -490,7 +506,7 @@ that is using that CIDR block.
             title="Optional">
         <span>network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on
 which this API has been activated. If none is provided, "default" will be used.
@@ -500,7 +516,7 @@ which this API has been activated. If none is provided, "default" will be used.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -513,24 +529,6 @@ If it is not provided, the provider project is used.
         <span class="property-type"><a href="#nodeschedulingconfig">Dict[Node<wbr>Scheduling<wbr>Config]</a></span>
     </dt>
     <dd>{{% md %}}Sets the scheduling options for this TPU instance.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>tensorflow_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The version of Tensorflow running in the Node.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The GCP location for the TPU.
 {{% /md %}}</dd>
 
 </dl>
@@ -554,65 +552,6 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Accelerator<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of hardware accelerators associated with this node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute
-Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP
-address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block
-conflicts with any subnetworks in the user's provided network, or the provided network is peered with another network
-that is using that CIDR block.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The user-supplied description of the TPU. Maximum of 512 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
-    </dt>
-    <dd>{{% md %}}Resource labels to represent user provided metadata.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The immutable name of the TPU.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on
-which this API has been activated. If none is provided, "default" will be used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Network<wbr>Endpoints</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodenetworkendpoint">List&lt;Node<wbr>Network<wbr>Endpoint&gt;</a></span>
@@ -623,49 +562,12 @@ node first reach out to the first (index 0) entry.
 
     <dt class="property-"
             title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scheduling<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Sets the scheduling options for this TPU instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Service<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The service account used to run the tensor flow services within the node. To share resources, including Google Cloud
 Storage data, with the Tensorflow job running in the Node, this account must have permissions to that data.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tensorflow<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The version of Tensorflow running in the Node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The GCP location for the TPU.
 {{% /md %}}</dd>
 
 </dl>
@@ -674,65 +576,6 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Accelerator<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of hardware accelerators associated with this node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute
-Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP
-address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block
-conflicts with any subnetworks in the user's provided network, or the provided network is peered with another network
-that is using that CIDR block.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The user-supplied description of the TPU. Maximum of 512 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Resource labels to represent user provided metadata.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The immutable name of the TPU.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on
-which this API has been activated. If none is provided, "default" will be used.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -746,49 +589,12 @@ node first reach out to the first (index 0) entry.
 
     <dt class="property-"
             title="">
-        <span>Project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Scheduling<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeschedulingconfig">*Node<wbr>Scheduling<wbr>Config</a></span>
-    </dt>
-    <dd>{{% md %}}Sets the scheduling options for this TPU instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Service<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The service account used to run the tensor flow services within the node. To share resources, including Google Cloud
 Storage data, with the Tensorflow job running in the Node, this account must have permissions to that data.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tensorflow<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The version of Tensorflow running in the Node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The GCP location for the TPU.
 {{% /md %}}</dd>
 
 </dl>
@@ -797,65 +603,6 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>accelerator<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The type of hardware accelerators associated with this node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cidr<wbr>Block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute
-Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP
-address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block
-conflicts with any subnetworks in the user's provided network, or the provided network is peered with another network
-that is using that CIDR block.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The user-supplied description of the TPU. Maximum of 512 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
-    </dt>
-    <dd>{{% md %}}Resource labels to represent user provided metadata.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The immutable name of the TPU.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on
-which this API has been activated. If none is provided, "default" will be used.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -869,49 +616,12 @@ node first reach out to the first (index 0) entry.
 
     <dt class="property-"
             title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scheduling<wbr>Config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config?</a></span>
-    </dt>
-    <dd>{{% md %}}Sets the scheduling options for this TPU instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>service<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The service account used to run the tensor flow services within the node. To share resources, including Google Cloud
 Storage data, with the Tensorflow job running in the Node, this account must have permissions to that data.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tensorflow<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The version of Tensorflow running in the Node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The GCP location for the TPU.
 {{% /md %}}</dd>
 
 </dl>
@@ -920,65 +630,6 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>accelerator_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The type of hardware accelerators associated with this node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>cidr_<wbr>block</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute
-Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP
-address). Errors will occur if the CIDR block has already been used for a currently existing TPU node, the CIDR block
-conflicts with any subnetworks in the user's provided network, or the provided network is peered with another network
-that is using that CIDR block.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The user-supplied description of the TPU. Maximum of 512 characters.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>labels</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, str]</span>
-    </dt>
-    <dd>{{% md %}}Resource labels to represent user provided metadata.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The immutable name of the TPU.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on
-which this API has been activated. If none is provided, "default" will be used.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -992,49 +643,12 @@ node first reach out to the first (index 0) entry.
 
     <dt class="property-"
             title="">
-        <span>project</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs.
-If it is not provided, the provider project is used.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>scheduling_<wbr>config</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeschedulingconfig">Dict[Node<wbr>Scheduling<wbr>Config]</a></span>
-    </dt>
-    <dd>{{% md %}}Sets the scheduling options for this TPU instance.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>service_<wbr>account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The service account used to run the tensor flow services within the node. To share resources, including Google Cloud
 Storage data, with the Tensorflow job running in the Node, this account must have permissions to that data.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tensorflow_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The version of Tensorflow running in the Node.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>zone</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The GCP location for the TPU.
 {{% /md %}}</dd>
 
 </dl>
@@ -1062,7 +676,7 @@ Get an existing Node resource's state with the given name, ID, and optional extr
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNode<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/tpu?tab=doc#NodeState">NodeState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/tpu?tab=doc#Node">Node</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetNode<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/tpu?tab=doc#NodeState">NodeState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/tpu?tab=doc#Node">Node</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1176,7 +790,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Accelerator<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The type of hardware accelerators associated with this node.
 {{% /md %}}</dd>
@@ -1185,7 +799,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute
 Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP
@@ -1198,7 +812,7 @@ that is using that CIDR block.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the TPU. Maximum of 512 characters.
 {{% /md %}}</dd>
@@ -1207,7 +821,7 @@ that is using that CIDR block.
             title="Optional">
         <span>Labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, string>?</span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
 {{% /md %}}</dd>
@@ -1216,7 +830,7 @@ that is using that CIDR block.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The immutable name of the TPU.
 {{% /md %}}</dd>
@@ -1225,7 +839,7 @@ that is using that CIDR block.
             title="Optional">
         <span>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on
 which this API has been activated. If none is provided, "default" will be used.
@@ -1235,7 +849,7 @@ which this API has been activated. If none is provided, "default" will be used.
             title="Optional">
         <span>Network<wbr>Endpoints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodenetworkendpoint">List&lt;Node<wbr>Network<wbr>Endpoint<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#nodenetworkendpoint">List&lt;Node<wbr>Network<wbr>Endpoint<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The network endpoints where TPU workers can be accessed and sent work. It is recommended that Tensorflow clients of the
 node first reach out to the first (index 0) entry.
@@ -1245,7 +859,7 @@ node first reach out to the first (index 0) entry.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1255,7 +869,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Scheduling<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config<wbr>Args?</a></span>
+        <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Sets the scheduling options for this TPU instance.
 {{% /md %}}</dd>
@@ -1264,7 +878,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Service<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The service account used to run the tensor flow services within the node. To share resources, including Google Cloud
 Storage data, with the Tensorflow job running in the Node, this account must have permissions to that data.
@@ -1274,7 +888,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
             title="Optional">
         <span>Tensorflow<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The version of Tensorflow running in the Node.
 {{% /md %}}</dd>
@@ -1283,7 +897,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
             title="Optional">
         <span>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The GCP location for the TPU.
 {{% /md %}}</dd>
@@ -1299,7 +913,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
             title="Optional">
         <span>Accelerator<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of hardware accelerators associated with this node.
 {{% /md %}}</dd>
@@ -1308,7 +922,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
             title="Optional">
         <span>Cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute
 Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP
@@ -1321,7 +935,7 @@ that is using that CIDR block.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the TPU. Maximum of 512 characters.
 {{% /md %}}</dd>
@@ -1339,7 +953,7 @@ that is using that CIDR block.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The immutable name of the TPU.
 {{% /md %}}</dd>
@@ -1348,7 +962,7 @@ that is using that CIDR block.
             title="Optional">
         <span>Network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on
 which this API has been activated. If none is provided, "default" will be used.
@@ -1368,7 +982,7 @@ node first reach out to the first (index 0) entry.
             title="Optional">
         <span>Project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1378,7 +992,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Scheduling<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeschedulingconfig">*Node<wbr>Scheduling<wbr>Config</a></span>
+        <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Sets the scheduling options for this TPU instance.
 {{% /md %}}</dd>
@@ -1387,7 +1001,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Service<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The service account used to run the tensor flow services within the node. To share resources, including Google Cloud
 Storage data, with the Tensorflow job running in the Node, this account must have permissions to that data.
@@ -1397,7 +1011,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
             title="Optional">
         <span>Tensorflow<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The version of Tensorflow running in the Node.
 {{% /md %}}</dd>
@@ -1406,7 +1020,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
             title="Optional">
         <span>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The GCP location for the TPU.
 {{% /md %}}</dd>
@@ -1422,7 +1036,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
             title="Optional">
         <span>accelerator<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The type of hardware accelerators associated with this node.
 {{% /md %}}</dd>
@@ -1431,7 +1045,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
             title="Optional">
         <span>cidr<wbr>Block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute
 Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP
@@ -1444,7 +1058,7 @@ that is using that CIDR block.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the TPU. Maximum of 512 characters.
 {{% /md %}}</dd>
@@ -1453,7 +1067,7 @@ that is using that CIDR block.
             title="Optional">
         <span>labels</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}?</span>
+        <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource labels to represent user provided metadata.
 {{% /md %}}</dd>
@@ -1462,7 +1076,7 @@ that is using that CIDR block.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The immutable name of the TPU.
 {{% /md %}}</dd>
@@ -1471,7 +1085,7 @@ that is using that CIDR block.
             title="Optional">
         <span>network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on
 which this API has been activated. If none is provided, "default" will be used.
@@ -1481,7 +1095,7 @@ which this API has been activated. If none is provided, "default" will be used.
             title="Optional">
         <span>network<wbr>Endpoints</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodenetworkendpoint">Node<wbr>Network<wbr>Endpoint[]?</a></span>
+        <span class="property-type"><a href="#nodenetworkendpoint">Node<wbr>Network<wbr>Endpoint[]</a></span>
     </dt>
     <dd>{{% md %}}The network endpoints where TPU workers can be accessed and sent work. It is recommended that Tensorflow clients of the
 node first reach out to the first (index 0) entry.
@@ -1491,7 +1105,7 @@ node first reach out to the first (index 0) entry.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1501,7 +1115,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>scheduling<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config?</a></span>
+        <span class="property-type"><a href="#nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config</a></span>
     </dt>
     <dd>{{% md %}}Sets the scheduling options for this TPU instance.
 {{% /md %}}</dd>
@@ -1510,7 +1124,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>service<wbr>Account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The service account used to run the tensor flow services within the node. To share resources, including Google Cloud
 Storage data, with the Tensorflow job running in the Node, this account must have permissions to that data.
@@ -1520,7 +1134,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
             title="Optional">
         <span>tensorflow<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The version of Tensorflow running in the Node.
 {{% /md %}}</dd>
@@ -1529,7 +1143,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
             title="Optional">
         <span>zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The GCP location for the TPU.
 {{% /md %}}</dd>
@@ -1545,7 +1159,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
             title="Optional">
         <span>accelerator_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of hardware accelerators associated with this node.
 {{% /md %}}</dd>
@@ -1554,7 +1168,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
             title="Optional">
         <span>cidr_<wbr>block</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CIDR block that the TPU node will use when selecting an IP address. This CIDR block must be a /29 block; the Compute
 Engine networks API forbids a smaller block, and using a larger block would be wasteful (a node can only consume one IP
@@ -1567,7 +1181,7 @@ that is using that CIDR block.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The user-supplied description of the TPU. Maximum of 512 characters.
 {{% /md %}}</dd>
@@ -1585,7 +1199,7 @@ that is using that CIDR block.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The immutable name of the TPU.
 {{% /md %}}</dd>
@@ -1594,7 +1208,7 @@ that is using that CIDR block.
             title="Optional">
         <span>network</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of a network to peer the TPU node to. It must be a preexisting Compute Engine network inside of the project on
 which this API has been activated. If none is provided, "default" will be used.
@@ -1614,7 +1228,7 @@ node first reach out to the first (index 0) entry.
             title="Optional">
         <span>project</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
@@ -1633,7 +1247,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>service_<wbr>account</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The service account used to run the tensor flow services within the node. To share resources, including Google Cloud
 Storage data, with the Tensorflow job running in the Node, this account must have permissions to that data.
@@ -1643,7 +1257,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
             title="Optional">
         <span>tensorflow_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The version of Tensorflow running in the Node.
 {{% /md %}}</dd>
@@ -1652,7 +1266,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
             title="Optional">
         <span>zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The GCP location for the TPU.
 {{% /md %}}</dd>
@@ -1677,7 +1291,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/tpu?tab=doc#NodeNetworkEndpointOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/tpu?tab=doc#NodeNetworkEndpointOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1690,7 +1304,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
             title="Optional">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1698,7 +1312,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1713,7 +1327,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
             title="Optional">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1721,7 +1335,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
             title="Optional">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1736,7 +1350,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
             title="Optional">
         <span>ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1744,7 +1358,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1759,7 +1373,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
             title="Optional">
         <span>ip_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1767,7 +1381,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
             title="Optional">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1784,7 +1398,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/tpu?tab=doc#NodeSchedulingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp/tpu?tab=doc#NodeSchedulingConfigOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/tpu?tab=doc#NodeSchedulingConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/tpu?tab=doc#NodeSchedulingConfigOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1797,7 +1411,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
             title="Required">
         <span>Preemptible</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1812,7 +1426,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
             title="Required">
         <span>Preemptible</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1827,7 +1441,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
             title="Required">
         <span>preemptible</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1842,7 +1456,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
             title="Required">
         <span>preemptible</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1863,6 +1477,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 </dl>
 

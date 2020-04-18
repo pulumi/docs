@@ -19,9 +19,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Creates a Google Cloud Bigtable GC Policy inside a family. For more information see
 <a class="reference external" href="https://cloud.google.com/bigtable/">the official documentation</a> and
 <a class="reference external" href="https://cloud.google.com/bigtable/docs/go/reference">API</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_gc_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_gc_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -168,9 +165,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Creates a Google Bigtable instance. For more information see
 <a class="reference external" href="https://cloud.google.com/bigtable/">the official documentation</a> and
 <a class="reference external" href="https://cloud.google.com/bigtable/docs/go/reference">API</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_instance.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -187,20 +181,30 @@ is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>clusters</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">num_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storageType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Cloud Bigtable cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">num_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of nodes in your Cloud Bigtable cluster.
+Required, with a minimum of <code class="docutils literal notranslate"><span class="pre">3</span></code> for a <code class="docutils literal notranslate"><span class="pre">PRODUCTION</span></code> instance. Must be left unset
+for a <code class="docutils literal notranslate"><span class="pre">DEVELOPMENT</span></code> instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The storage type to use. One of <code class="docutils literal notranslate"><span class="pre">&quot;SSD&quot;</span></code> or
+<code class="docutils literal notranslate"><span class="pre">&quot;HDD&quot;</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;SSD&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The zone to create the Cloud Bigtable cluster in. Each
+cluster must have a different zone in the same region. Zones that support
+Bigtable instances are noted on the <a class="reference external" href="https://cloud.google.com/bigtable/docs/locations">Cloud Bigtable locations page</a>.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_gcp.bigtable.Instance.clusters">
 <code class="sig-name descname">clusters</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.bigtable.Instance.clusters" title="Permalink to this definition">¶</a></dt>
 <dd><p>A block of cluster configuration options. This can be specified 1 or 2 times. See structure below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">num_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storageType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">zone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the Cloud Bigtable cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">num_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The number of nodes in your Cloud Bigtable cluster.
+Required, with a minimum of <code class="docutils literal notranslate"><span class="pre">3</span></code> for a <code class="docutils literal notranslate"><span class="pre">PRODUCTION</span></code> instance. Must be left unset
+for a <code class="docutils literal notranslate"><span class="pre">DEVELOPMENT</span></code> instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The storage type to use. One of <code class="docutils literal notranslate"><span class="pre">&quot;SSD&quot;</span></code> or
+<code class="docutils literal notranslate"><span class="pre">&quot;HDD&quot;</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;SSD&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zone</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The zone to create the Cloud Bigtable cluster in. Each
+cluster must have a different zone in the same region. Zones that support
+Bigtable instances are noted on the <a class="reference external" href="https://cloud.google.com/bigtable/docs/locations">Cloud Bigtable locations page</a>.</p></li>
 </ul>
 </dd></dl>
 
@@ -251,10 +255,15 @@ is not provided, the provider project is used.</p></li>
 </dl>
 <p>The <strong>clusters</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">num_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">storageType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the Cloud Bigtable cluster.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">num_nodes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The number of nodes in your Cloud Bigtable cluster.
+Required, with a minimum of <code class="docutils literal notranslate"><span class="pre">3</span></code> for a <code class="docutils literal notranslate"><span class="pre">PRODUCTION</span></code> instance. Must be left unset
+for a <code class="docutils literal notranslate"><span class="pre">DEVELOPMENT</span></code> instance.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">storageType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The storage type to use. One of <code class="docutils literal notranslate"><span class="pre">&quot;SSD&quot;</span></code> or
+<code class="docutils literal notranslate"><span class="pre">&quot;HDD&quot;</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;SSD&quot;</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zone</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The zone to create the Cloud Bigtable cluster in. Each
+cluster must have a different zone in the same region. Zones that support
+Bigtable instances are noted on the <a class="reference external" href="https://cloud.google.com/bigtable/docs/locations">Cloud Bigtable locations page</a>.</p></li>
 </ul>
 </dd></dl>
 
@@ -308,7 +317,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamMember</span></code> or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the instance as <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamPolicy</span></code> replaces the entire policy.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_instance_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_instance_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -436,7 +444,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamMember</span></code> or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the instance as <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamPolicy</span></code> replaces the entire policy.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_instance_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_instance_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -564,7 +571,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamPolicy</span></code> <strong>cannot</strong> be used in conjunction with <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamBinding</span></code> and <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamMember</span></code> or they will fight over what your policy should be. In addition, be careful not to accidentally unset ownership of the instance as <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamPolicy</span></code> replaces the entire policy.</p>
 <p><strong>Note:</strong> <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamBinding</span></code> resources <strong>can be</strong> used in conjunction with <code class="docutils literal notranslate"><span class="pre">bigtable.InstanceIamMember</span></code> resources <strong>only if</strong> they do not grant privilege to the same role.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_instance_iam.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_instance_iam.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -668,9 +674,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Creates a Google Cloud Bigtable table inside an instance. For more information see
 <a class="reference external" href="https://cloud.google.com/bigtable/">the official documentation</a> and
 <a class="reference external" href="https://cloud.google.com/bigtable/docs/go/reference">API</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_table.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/bigtable_table.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

@@ -20,9 +20,6 @@ anything, please consult the source <a class="reference external" href="https://
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 <a class="reference external" href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/index.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -82,9 +79,6 @@ type-4 UUID.</p>
 the <code class="docutils literal notranslate"><span class="pre">create_before_destroy</span></code> lifecycle flag set to avoid conflicts with
 unique names during the brief period where both the old and new resources
 exist concurrently.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/id.html.md">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/id.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -223,9 +217,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 the <code class="docutils literal notranslate"><span class="pre">create_before_destroy</span></code> lifecycle flag set, to avoid conflicts with
 unique names during the brief period where both the old and new resources
 exist concurrently.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/integer.html.md">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/integer.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -347,9 +338,6 @@ the raw state as plain-text. <a class="reference external" href="https://www.ter
 state</a>.</p>
 </div></blockquote>
 <p>This resource <em>does</em> use a cryptographic random number generator.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/password.html.md">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/password.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -421,9 +409,6 @@ used as unique identifiers for other resources.</p>
 the <code class="docutils literal notranslate"><span class="pre">create_before_destroy</span></code> lifecycle flag set, to avoid conflicts with
 unique names during the brief period where both the old and new resources
 exist concurrently.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/pet.html.md">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/pet.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -529,9 +514,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_random.</code><code class="sig-name descname">RandomShuffle</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">inputs=None</em>, <em class="sig-param">keepers=None</em>, <em class="sig-param">result_count=None</em>, <em class="sig-param">seed=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_random.RandomShuffle" title="Permalink to this definition">¶</a></dt>
 <dd><p>The resource <code class="docutils literal notranslate"><span class="pre">.RandomShuffle</span></code> generates a random permutation of a list
 of strings given as an argument.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/shuffle.html.md">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/shuffle.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -653,9 +635,6 @@ characters and optionally special characters.</p>
 used it in a password. For backwards compatibility it will
 continue to exist. For unique ids please use random_id, for sensitive
 random values please use random_password.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/string.html.md">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/string.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -861,9 +840,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 used as unique identifiers for other resources.</p>
 <p>This resource uses the <code class="docutils literal notranslate"><span class="pre">hashicorp/go-uuid</span></code> to generate a UUID-formatted string
 for use with services needed a unique string identifier.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/uuid.html.md">https://github.com/terraform-providers/terraform-provider-random/blob/master/website/docs/r/uuid.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

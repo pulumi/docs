@@ -32,9 +32,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_openstack.compute.Flavor">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.compute.</code><code class="sig-name descname">Flavor</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">disk=None</em>, <em class="sig-param">ephemeral=None</em>, <em class="sig-param">extra_specs=None</em>, <em class="sig-param">is_public=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ram=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">rx_tx_factor=None</em>, <em class="sig-param">swap=None</em>, <em class="sig-param">vcpus=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.Flavor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a V2 flavor resource within OpenStack.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_flavor_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_flavor_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -205,9 +202,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages a project access for flavor V2 resource within OpenStack.</p>
 <p>Note: You <em>must</em> have admin privileges in your OpenStack cloud to use
 this resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_flavor_access_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_flavor_access_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -312,9 +306,6 @@ that can be used for compute instances.</p>
 been deprecated. Unless you are using an older OpenStack environment, it is
 recommended to use the <code class="docutils literal notranslate"><span class="pre">networking.FloatingIp</span></code>
 resource instead, which uses the OpenStack Networking API.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_floatingip_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_floatingip_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -434,9 +425,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.compute.</code><code class="sig-name descname">FloatingIpAssociate</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">fixed_ip=None</em>, <em class="sig-param">floating_ip=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">wait_until_associated=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.FloatingIpAssociate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Associate a floating IP to an instance. This can be used instead of the
 <code class="docutils literal notranslate"><span class="pre">floating_ip</span></code> options in <code class="docutils literal notranslate"><span class="pre">compute.Instance</span></code>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_floatingip_associate_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_floatingip_associate_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -629,9 +617,6 @@ disks are examples of this.</p>
 <p>The importer cannot read the emphemeral disk configuration
 of an instance, so just specify image_id as in the configuration 
 of the basic instance example.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_instance_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_instance_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1238,9 +1223,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.compute.</code><code class="sig-name descname">InterfaceAttach</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">fixed_ip=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">network_id=None</em>, <em class="sig-param">port_id=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.InterfaceAttach" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attaches a Network Interface (a Port) to an Instance using the OpenStack
 Compute (Nova) v2 API.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_interface_attach_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_interface_attach_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1506,7 +1488,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt><strong>Note:</strong> This resource has a no-op deletion so no actual actions will be done against the OpenStack API </dt><dd><p>in case of delete call.</p>
 </dd>
 </dl>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_quotaset_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_quotaset_v2.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1758,9 +1739,6 @@ has been deprecated. Unless you are using an older OpenStack environment, it is
 recommended to use the <code class="docutils literal notranslate"><span class="pre">networking.SecGroup</span></code>
 and <code class="docutils literal notranslate"><span class="pre">networking.SecGroupRule</span></code>
 resources instead, which uses the OpenStack Networking API.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_secgroup_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_secgroup_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1968,9 +1946,6 @@ OpenStack environment should support Compute service API 2.15 or above.</p>
 </dl>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_servergroup_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_servergroup_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2092,9 +2067,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_openstack.compute.</code><code class="sig-name descname">VolumeAttach</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">device=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">multiattach=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">volume_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.VolumeAttach" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attaches a Block Storage Volume to an Instance using the OpenStack
 Compute (Nova) v2 API.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_volume_attach_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_volume_attach_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2216,9 +2188,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.compute.get_availability_zones">
 <code class="sig-prename descclassname">pulumi_openstack.compute.</code><code class="sig-name descname">get_availability_zones</code><span class="sig-paren">(</span><em class="sig-param">region=None</em>, <em class="sig-param">state=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.get_availability_zones" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get a list of availability zones from OpenStack</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/compute_availability_zones_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/compute_availability_zones_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2233,9 +2202,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_openstack.compute.get_flavor">
 <code class="sig-prename descclassname">pulumi_openstack.compute.</code><code class="sig-name descname">get_flavor</code><span class="sig-paren">(</span><em class="sig-param">disk=None</em>, <em class="sig-param">flavor_id=None</em>, <em class="sig-param">min_disk=None</em>, <em class="sig-param">min_ram=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ram=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">rx_tx_factor=None</em>, <em class="sig-param">swap=None</em>, <em class="sig-param">vcpus=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.get_flavor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID of an available OpenStack flavor.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/compute_flavor_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/compute_flavor_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2262,9 +2228,6 @@ If omitted, the <code class="docutils literal notranslate"><span class="pre">reg
 <dt id="pulumi_openstack.compute.get_keypair">
 <code class="sig-prename descclassname">pulumi_openstack.compute.</code><code class="sig-name descname">get_keypair</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_openstack.compute.get_keypair" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ID and public key of an OpenStack keypair.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/compute_keypair_v2.html.markdown">https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/d/compute_keypair_v2.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

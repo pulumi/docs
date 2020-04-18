@@ -1,7 +1,7 @@
 ---
 # Name of the webinar.
 title: "Modern Cloud Infrastructure in Go"
-meta_desc: "Join us Wed, Apr 1, 2020, 6:30 PM where Evan Boyle will go over modern cloud progamming techniques using Pulumi and Go."
+meta_desc: "Join us Wed, Apr 14, 2020, 6:30 PM where Evan Boyle will go over modern cloud progamming techniques using Pulumi and Go."
 
 # A featured webinar will display first in the list.
 featured: false
@@ -16,7 +16,7 @@ pulumi_tv: false
 preview_image: "/images/webinar/pulumi_tech_talk.jpg"
 
 # Webinars with unlisted as true will not be shown on the webinar list
-unlisted: false
+unlisted: true
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.

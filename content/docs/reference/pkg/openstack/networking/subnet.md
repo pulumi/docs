@@ -8,7 +8,9 @@ block_external_search_index: true
 
 Manages a V2 Neutron subnet resource within OpenStack.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -23,7 +25,8 @@ const subnet1 = new openstack.networking.Subnet("subnet_1", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/networking_subnet_v2.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -32,7 +35,7 @@ const subnet1 = new openstack.networking.Subnet("subnet_1", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#Subnet">Subnet</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#SubnetArgs">SubnetArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#Subnet">Subnet</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/networking/#SubnetArgs">SubnetArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -40,11 +43,11 @@ const subnet1 = new openstack.networking.Subnet("subnet_1", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSubnet<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#SubnetArgs">SubnetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#Subnet">Subnet</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSubnet<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#SubnetArgs">SubnetArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#Subnet">Subnet</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Networking.Subnet.html">Subnet</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Networking.SubnetArgs.html">SubnetArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Networking.Subnet.html">Subnet</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Networking.SubnetArgs.html">SubnetArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -136,11 +139,21 @@ const subnet1 = new openstack.networking.Subnet("subnet_1", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Network<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The UUID of the parent network. Changing this
+creates a new subnet.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Allocation<wbr>Pools</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpool">List&lt;Subnet<wbr>Allocation<wbr>Pool<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#subnetallocationpool">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Subnet<wbr>Allocation<wbr>Pool<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A block declaring the start and end range of
 the IP addresses available for use with DHCP in this subnet. Multiple
@@ -154,7 +167,7 @@ The `allocation_pool` block is documented below.
             title="Optional, Deprecated">
         <span>Allocation<wbr>Pools<wbr>Collection</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpoolscollection">List&lt;Subnet<wbr>Allocation<wbr>Pools<wbr>Collection<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#subnetallocationpoolscollection">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Subnet<wbr>Allocation<wbr>Pools<wbr>Collection<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}
 A block declaring the start and end range of the IP addresses available for
@@ -166,7 +179,7 @@ The `allocation_pools` block is documented below.
             title="Optional">
         <span>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}CIDR representing IP range for this subnet, based on IP
 version. You can omit this option if you are creating a subnet from a
@@ -177,7 +190,7 @@ subnet pool.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the subnet. Changing this
 updates the name of the existing subnet.
@@ -187,7 +200,7 @@ updates the name of the existing subnet.
             title="Optional">
         <span>Dns<wbr>Nameservers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of DNS name server names used by hosts
 in this subnet. Changing this updates the DNS name servers for the existing
@@ -198,7 +211,7 @@ subnet.
             title="Optional">
         <span>Enable<wbr>Dhcp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value enables or
@@ -209,7 +222,7 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
             title="Optional">
         <span>Gateway<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Default gateway used by devices in this subnet.
 Leaving this blank and not setting `no_gateway` will cause a default
@@ -221,7 +234,7 @@ existing subnet.
             title="Optional, Deprecated">
         <span>Host<wbr>Routes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnethostroute">List&lt;Subnet<wbr>Host<wbr>Route<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#subnethostroute">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Subnet<wbr>Host<wbr>Route<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}(**Deprecated** - use `openstack.networking.SubnetRoute`
 instead) An array of routes that should be used by devices
@@ -234,7 +247,7 @@ for the existing subnet.
             title="Optional">
         <span>Ip<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this creates a
 new subnet.
@@ -244,7 +257,7 @@ new subnet.
             title="Optional">
         <span>Ipv6Address<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 address mode. Valid values are
 `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
@@ -254,7 +267,7 @@ new subnet.
             title="Optional">
         <span>Ipv6Ra<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
 are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
@@ -264,27 +277,17 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the subnet. Changing this updates the name of
 the existing subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Network<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the parent network. Changing this
-creates a new subnet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>No<wbr>Gateway</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Do not set a gateway IP on this subnet. Changing
 this removes or adds a default gateway IP of the existing subnet.
@@ -294,7 +297,7 @@ this removes or adds a default gateway IP of the existing subnet.
             title="Optional">
         <span>Prefix<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The prefix length to use when creating a subnet
 from a subnet pool. The default subnet pool prefix length that was defined
@@ -306,7 +309,7 @@ creates a new subnet.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron subnet. If omitted, the
@@ -318,7 +321,7 @@ subnet.
             title="Optional">
         <span>Subnetpool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
 {{% /md %}}</dd>
@@ -327,7 +330,7 @@ subnet.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnet.
 {{% /md %}}</dd>
@@ -336,7 +339,7 @@ subnet.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The owner of the subnet. Required if admin wants to
 create a subnet for another tenant. Changing this creates a new subnet.
@@ -346,7 +349,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Optional">
         <span>Value<wbr>Specs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
@@ -357,6 +360,16 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Network<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The UUID of the parent network. Changing this
+creates a new subnet.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -388,7 +401,7 @@ The `allocation_pools` block is documented below.
             title="Optional">
         <span>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}CIDR representing IP range for this subnet, based on IP
 version. You can omit this option if you are creating a subnet from a
@@ -399,7 +412,7 @@ subnet pool.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the subnet. Changing this
 updates the name of the existing subnet.
@@ -409,7 +422,7 @@ updates the name of the existing subnet.
             title="Optional">
         <span>Dns<wbr>Nameservers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}An array of DNS name server names used by hosts
 in this subnet. Changing this updates the DNS name servers for the existing
@@ -420,7 +433,7 @@ subnet.
             title="Optional">
         <span>Enable<wbr>Dhcp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value enables or
@@ -431,7 +444,7 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
             title="Optional">
         <span>Gateway<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Default gateway used by devices in this subnet.
 Leaving this blank and not setting `no_gateway` will cause a default
@@ -456,7 +469,7 @@ for the existing subnet.
             title="Optional">
         <span>Ip<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this creates a
 new subnet.
@@ -466,7 +479,7 @@ new subnet.
             title="Optional">
         <span>Ipv6Address<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 address mode. Valid values are
 `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
@@ -476,7 +489,7 @@ new subnet.
             title="Optional">
         <span>Ipv6Ra<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
 are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
@@ -486,27 +499,17 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the subnet. Changing this updates the name of
 the existing subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Network<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the parent network. Changing this
-creates a new subnet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>No<wbr>Gateway</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Do not set a gateway IP on this subnet. Changing
 this removes or adds a default gateway IP of the existing subnet.
@@ -516,7 +519,7 @@ this removes or adds a default gateway IP of the existing subnet.
             title="Optional">
         <span>Prefix<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The prefix length to use when creating a subnet
 from a subnet pool. The default subnet pool prefix length that was defined
@@ -528,7 +531,7 @@ creates a new subnet.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron subnet. If omitted, the
@@ -540,7 +543,7 @@ subnet.
             title="Optional">
         <span>Subnetpool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
 {{% /md %}}</dd>
@@ -549,7 +552,7 @@ subnet.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnet.
 {{% /md %}}</dd>
@@ -558,7 +561,7 @@ subnet.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The owner of the subnet. Required if admin wants to
 create a subnet for another tenant. Changing this creates a new subnet.
@@ -580,11 +583,21 @@ create a subnet for another tenant. Changing this creates a new subnet.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>network<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The UUID of the parent network. Changing this
+creates a new subnet.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>allocation<wbr>Pools</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpool">Subnet<wbr>Allocation<wbr>Pool[]?</a></span>
+        <span class="property-type"><a href="#subnetallocationpool">Subnet<wbr>Allocation<wbr>Pool[]</a></span>
     </dt>
     <dd>{{% md %}}A block declaring the start and end range of
 the IP addresses available for use with DHCP in this subnet. Multiple
@@ -598,7 +611,7 @@ The `allocation_pool` block is documented below.
             title="Optional, Deprecated">
         <span>allocation<wbr>Pools<wbr>Collection</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpoolscollection">Subnet<wbr>Allocation<wbr>Pools<wbr>Collection[]?</a></span>
+        <span class="property-type"><a href="#subnetallocationpoolscollection">Subnet<wbr>Allocation<wbr>Pools<wbr>Collection[]</a></span>
     </dt>
     <dd>{{% md %}}
 A block declaring the start and end range of the IP addresses available for
@@ -610,7 +623,7 @@ The `allocation_pools` block is documented below.
             title="Optional">
         <span>cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}CIDR representing IP range for this subnet, based on IP
 version. You can omit this option if you are creating a subnet from a
@@ -621,7 +634,7 @@ subnet pool.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the subnet. Changing this
 updates the name of the existing subnet.
@@ -631,7 +644,7 @@ updates the name of the existing subnet.
             title="Optional">
         <span>dns<wbr>Nameservers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}An array of DNS name server names used by hosts
 in this subnet. Changing this updates the DNS name servers for the existing
@@ -642,7 +655,7 @@ subnet.
             title="Optional">
         <span>enable<wbr>Dhcp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value enables or
@@ -653,7 +666,7 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
             title="Optional">
         <span>gateway<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Default gateway used by devices in this subnet.
 Leaving this blank and not setting `no_gateway` will cause a default
@@ -665,7 +678,7 @@ existing subnet.
             title="Optional, Deprecated">
         <span>host<wbr>Routes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnethostroute">Subnet<wbr>Host<wbr>Route[]?</a></span>
+        <span class="property-type"><a href="#subnethostroute">Subnet<wbr>Host<wbr>Route[]</a></span>
     </dt>
     <dd>{{% md %}}(**Deprecated** - use `openstack.networking.SubnetRoute`
 instead) An array of routes that should be used by devices
@@ -678,7 +691,7 @@ for the existing subnet.
             title="Optional">
         <span>ip<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this creates a
 new subnet.
@@ -688,7 +701,7 @@ new subnet.
             title="Optional">
         <span>ipv6Address<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 address mode. Valid values are
 `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
@@ -698,7 +711,7 @@ new subnet.
             title="Optional">
         <span>ipv6Ra<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
 are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
@@ -708,27 +721,17 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the subnet. Changing this updates the name of
 the existing subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>network<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the parent network. Changing this
-creates a new subnet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>no<wbr>Gateway</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Do not set a gateway IP on this subnet. Changing
 this removes or adds a default gateway IP of the existing subnet.
@@ -738,7 +741,7 @@ this removes or adds a default gateway IP of the existing subnet.
             title="Optional">
         <span>prefix<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The prefix length to use when creating a subnet
 from a subnet pool. The default subnet pool prefix length that was defined
@@ -750,7 +753,7 @@ creates a new subnet.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron subnet. If omitted, the
@@ -762,7 +765,7 @@ subnet.
             title="Optional">
         <span>subnetpool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
 {{% /md %}}</dd>
@@ -771,7 +774,7 @@ subnet.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnet.
 {{% /md %}}</dd>
@@ -780,7 +783,7 @@ subnet.
             title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The owner of the subnet. Required if admin wants to
 create a subnet for another tenant. Changing this creates a new subnet.
@@ -790,7 +793,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Optional">
         <span>value<wbr>Specs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
@@ -801,6 +804,16 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>network_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The UUID of the parent network. Changing this
+creates a new subnet.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -832,7 +845,7 @@ The `allocation_pools` block is documented below.
             title="Optional">
         <span>cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}CIDR representing IP range for this subnet, based on IP
 version. You can omit this option if you are creating a subnet from a
@@ -843,7 +856,7 @@ subnet pool.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the subnet. Changing this
 updates the name of the existing subnet.
@@ -853,7 +866,7 @@ updates the name of the existing subnet.
             title="Optional">
         <span>dns_<wbr>nameservers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of DNS name server names used by hosts
 in this subnet. Changing this updates the DNS name servers for the existing
@@ -864,7 +877,7 @@ subnet.
             title="Optional">
         <span>enable_<wbr>dhcp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value enables or
@@ -875,7 +888,7 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
             title="Optional">
         <span>gateway_<wbr>ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Default gateway used by devices in this subnet.
 Leaving this blank and not setting `no_gateway` will cause a default
@@ -900,7 +913,7 @@ for the existing subnet.
             title="Optional">
         <span>ip_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this creates a
 new subnet.
@@ -910,7 +923,7 @@ new subnet.
             title="Optional">
         <span>ipv6_<wbr>address_<wbr>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 address mode. Valid values are
 `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
@@ -920,7 +933,7 @@ new subnet.
             title="Optional">
         <span>ipv6_<wbr>ra_<wbr>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
 are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
@@ -930,27 +943,17 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the subnet. Changing this updates the name of
 the existing subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>network_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the parent network. Changing this
-creates a new subnet.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>no_<wbr>gateway</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Do not set a gateway IP on this subnet. Changing
 this removes or adds a default gateway IP of the existing subnet.
@@ -960,7 +963,7 @@ this removes or adds a default gateway IP of the existing subnet.
             title="Optional">
         <span>prefix_<wbr>length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The prefix length to use when creating a subnet
 from a subnet pool. The default subnet pool prefix length that was defined
@@ -972,7 +975,7 @@ creates a new subnet.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron subnet. If omitted, the
@@ -984,7 +987,7 @@ subnet.
             title="Optional">
         <span>subnetpool_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
 {{% /md %}}</dd>
@@ -993,7 +996,7 @@ subnet.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnet.
 {{% /md %}}</dd>
@@ -1002,7 +1005,7 @@ subnet.
             title="Optional">
         <span>tenant_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The owner of the subnet. Required if admin wants to
 create a subnet for another tenant. Changing this creates a new subnet.
@@ -1040,225 +1043,10 @@ The following output properties are available:
             title="">
         <span>All<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of ags assigned on the subnet, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Allocation<wbr>Pools</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpool">List&lt;Subnet<wbr>Allocation<wbr>Pool&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A block declaring the start and end range of
-the IP addresses available for use with DHCP in this subnet. Multiple
-`allocation_pool` blocks can be declared, providing the subnet with more
-than one range of IP addresses to use with DHCP. However, each IP range
-must be from the same CIDR that the subnet is part of.
-The `allocation_pool` block is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Allocation<wbr>Pools<wbr>Collection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpoolscollection">List&lt;Subnet<wbr>Allocation<wbr>Pools<wbr>Collection&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}
-A block declaring the start and end range of the IP addresses available for
-use with DHCP in this subnet.
-The `allocation_pools` block is documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cidr</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}CIDR representing IP range for this subnet, based on IP
-version. You can omit this option if you are creating a subnet from a
-subnet pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description of the subnet. Changing this
-updates the name of the existing subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dns<wbr>Nameservers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}An array of DNS name server names used by hosts
-in this subnet. Changing this updates the DNS name servers for the existing
-subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Dhcp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}The administrative state of the network.
-Acceptable values are "true" and "false". Changing this value enables or
-disables the DHCP capabilities of the existing subnet. Defaults to true.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Gateway<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Default gateway used by devices in this subnet.
-Leaving this blank and not setting `no_gateway` will cause a default
-gateway of `.1` to be used. Changing this updates the gateway IP of the
-existing subnet.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Host<wbr>Routes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnethostroute">List&lt;Subnet<wbr>Host<wbr>Route&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}(**Deprecated** - use `openstack.networking.SubnetRoute`
-instead) An array of routes that should be used by devices
-with IPs from this subnet (not including local subnet route). The host_route
-object structure is documented below. Changing this updates the host routes
-for the existing subnet.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_networking_subnet_route_v2 instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ip<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this creates a
-new subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ipv6Address<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IPv6 address mode. Valid values are
-`dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ipv6Ra<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
-are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the subnet. Changing this updates the name of
-the existing subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the parent network. Changing this
-creates a new subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>No<wbr>Gateway</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Do not set a gateway IP on this subnet. Changing
-this removes or adds a default gateway IP of the existing subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Prefix<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
-    </dt>
-    <dd>{{% md %}}The prefix length to use when creating a subnet
-from a subnet pool. The default subnet pool prefix length that was defined
-when creating the subnet pool will be used if not provided. Changing this
-creates a new subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create a Neutron subnet. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subnetpool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}A set of string tags for the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The owner of the subnet. Required if admin wants to
-create a subnet for another tenant. Changing this creates a new subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value<wbr>Specs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
 
 </dl>
@@ -1272,225 +1060,10 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="">
         <span>All<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The collection of ags assigned on the subnet, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Allocation<wbr>Pools</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpool">[]Subnet<wbr>Allocation<wbr>Pool</a></span>
-    </dt>
-    <dd>{{% md %}}A block declaring the start and end range of
-the IP addresses available for use with DHCP in this subnet. Multiple
-`allocation_pool` blocks can be declared, providing the subnet with more
-than one range of IP addresses to use with DHCP. However, each IP range
-must be from the same CIDR that the subnet is part of.
-The `allocation_pool` block is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Allocation<wbr>Pools<wbr>Collection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpoolscollection">[]Subnet<wbr>Allocation<wbr>Pools<wbr>Collection</a></span>
-    </dt>
-    <dd>{{% md %}}
-A block declaring the start and end range of the IP addresses available for
-use with DHCP in this subnet.
-The `allocation_pools` block is documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Cidr</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}CIDR representing IP range for this subnet, based on IP
-version. You can omit this option if you are creating a subnet from a
-subnet pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description of the subnet. Changing this
-updates the name of the existing subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Dns<wbr>Nameservers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}An array of DNS name server names used by hosts
-in this subnet. Changing this updates the DNS name servers for the existing
-subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Enable<wbr>Dhcp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}The administrative state of the network.
-Acceptable values are "true" and "false". Changing this value enables or
-disables the DHCP capabilities of the existing subnet. Defaults to true.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Gateway<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Default gateway used by devices in this subnet.
-Leaving this blank and not setting `no_gateway` will cause a default
-gateway of `.1` to be used. Changing this updates the gateway IP of the
-existing subnet.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>Host<wbr>Routes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnethostroute">[]Subnet<wbr>Host<wbr>Route</a></span>
-    </dt>
-    <dd>{{% md %}}(**Deprecated** - use `openstack.networking.SubnetRoute`
-instead) An array of routes that should be used by devices
-with IPs from this subnet (not including local subnet route). The host_route
-object structure is documented below. Changing this updates the host routes
-for the existing subnet.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_networking_subnet_route_v2 instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ip<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this creates a
-new subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ipv6Address<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IPv6 address mode. Valid values are
-`dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Ipv6Ra<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
-are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the subnet. Changing this updates the name of
-the existing subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Network<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the parent network. Changing this
-creates a new subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>No<wbr>Gateway</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Do not set a gateway IP on this subnet. Changing
-this removes or adds a default gateway IP of the existing subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Prefix<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
-    </dt>
-    <dd>{{% md %}}The prefix length to use when creating a subnet
-from a subnet pool. The default subnet pool prefix length that was defined
-when creating the subnet pool will be used if not provided. Changing this
-creates a new subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create a Neutron subnet. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Subnetpool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}A set of string tags for the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The owner of the subnet. Required if admin wants to
-create a subnet for another tenant. Changing this creates a new subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Value<wbr>Specs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
 
 </dl>
@@ -1504,225 +1077,10 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="">
         <span>all<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of ags assigned on the subnet, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>allocation<wbr>Pools</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpool">Subnet<wbr>Allocation<wbr>Pool[]</a></span>
-    </dt>
-    <dd>{{% md %}}A block declaring the start and end range of
-the IP addresses available for use with DHCP in this subnet. Multiple
-`allocation_pool` blocks can be declared, providing the subnet with more
-than one range of IP addresses to use with DHCP. However, each IP range
-must be from the same CIDR that the subnet is part of.
-The `allocation_pool` block is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>allocation<wbr>Pools<wbr>Collection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpoolscollection">Subnet<wbr>Allocation<wbr>Pools<wbr>Collection[]</a></span>
-    </dt>
-    <dd>{{% md %}}
-A block declaring the start and end range of the IP addresses available for
-use with DHCP in this subnet.
-The `allocation_pools` block is documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>cidr</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}CIDR representing IP range for this subnet, based on IP
-version. You can omit this option if you are creating a subnet from a
-subnet pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description of the subnet. Changing this
-updates the name of the existing subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>dns<wbr>Nameservers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}An array of DNS name server names used by hosts
-in this subnet. Changing this updates the DNS name servers for the existing
-subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enable<wbr>Dhcp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}The administrative state of the network.
-Acceptable values are "true" and "false". Changing this value enables or
-disables the DHCP capabilities of the existing subnet. Defaults to true.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>gateway<wbr>Ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Default gateway used by devices in this subnet.
-Leaving this blank and not setting `no_gateway` will cause a default
-gateway of `.1` to be used. Changing this updates the gateway IP of the
-existing subnet.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>host<wbr>Routes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnethostroute">Subnet<wbr>Host<wbr>Route[]?</a></span>
-    </dt>
-    <dd>{{% md %}}(**Deprecated** - use `openstack.networking.SubnetRoute`
-instead) An array of routes that should be used by devices
-with IPs from this subnet (not including local subnet route). The host_route
-object structure is documented below. Changing this updates the host routes
-for the existing subnet.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_networking_subnet_route_v2 instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>ip<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this creates a
-new subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ipv6Address<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IPv6 address mode. Valid values are
-`dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ipv6Ra<wbr>Mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
-are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the subnet. Changing this updates the name of
-the existing subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the parent network. Changing this
-creates a new subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>no<wbr>Gateway</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Do not set a gateway IP on this subnet. Changing
-this removes or adds a default gateway IP of the existing subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>prefix<wbr>Length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
-    </dt>
-    <dd>{{% md %}}The prefix length to use when creating a subnet
-from a subnet pool. The default subnet pool prefix length that was defined
-when creating the subnet pool will be used if not provided. Changing this
-creates a new subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create a Neutron subnet. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subnetpool<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}A set of string tags for the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tenant<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The owner of the subnet. Required if admin wants to
-create a subnet for another tenant. Changing this creates a new subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>value<wbr>Specs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
 
 </dl>
@@ -1736,225 +1094,10 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="">
         <span>all_<wbr>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The collection of ags assigned on the subnet, which have been
 explicitly and implicitly added.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>allocation_<wbr>pools</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpool">List[Subnet<wbr>Allocation<wbr>Pool]</a></span>
-    </dt>
-    <dd>{{% md %}}A block declaring the start and end range of
-the IP addresses available for use with DHCP in this subnet. Multiple
-`allocation_pool` blocks can be declared, providing the subnet with more
-than one range of IP addresses to use with DHCP. However, each IP range
-must be from the same CIDR that the subnet is part of.
-The `allocation_pool` block is documented below.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>allocation_<wbr>pools_<wbr>collection</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpoolscollection">List[Subnet<wbr>Allocation<wbr>Pools<wbr>Collection]</a></span>
-    </dt>
-    <dd>{{% md %}}
-A block declaring the start and end range of the IP addresses available for
-use with DHCP in this subnet.
-The `allocation_pools` block is documented below.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use allocation_pool instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>cidr</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}CIDR representing IP range for this subnet, based on IP
-version. You can omit this option if you are creating a subnet from a
-subnet pool.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Human-readable description of the subnet. Changing this
-updates the name of the existing subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>dns_<wbr>nameservers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}An array of DNS name server names used by hosts
-in this subnet. Changing this updates the DNS name servers for the existing
-subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>enable_<wbr>dhcp</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}The administrative state of the network.
-Acceptable values are "true" and "false". Changing this value enables or
-disables the DHCP capabilities of the existing subnet. Defaults to true.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>gateway_<wbr>ip</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Default gateway used by devices in this subnet.
-Leaving this blank and not setting `no_gateway` will cause a default
-gateway of `.1` to be used. Changing this updates the gateway IP of the
-existing subnet.
-{{% /md %}}</dd>
-
-    <dt class="property- property-deprecated"
-            title=", Deprecated">
-        <span>host_<wbr>routes</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnethostroute">List[Subnet<wbr>Host<wbr>Route]</a></span>
-    </dt>
-    <dd>{{% md %}}(**Deprecated** - use `openstack.networking.SubnetRoute`
-instead) An array of routes that should be used by devices
-with IPs from this subnet (not including local subnet route). The host_route
-object structure is documented below. Changing this updates the host routes
-for the existing subnet.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Use openstack_networking_subnet_route_v2 instead{{% /md %}}</p></dd>
-
-    <dt class="property-"
-            title="">
-        <span>ip_<wbr>version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this creates a
-new subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ipv6_<wbr>address_<wbr>mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The IPv6 address mode. Valid values are
-`dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>ipv6_<wbr>ra_<wbr>mode</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
-are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the subnet. Changing this updates the name of
-the existing subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>network_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The UUID of the parent network. Changing this
-creates a new subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>no_<wbr>gateway</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Do not set a gateway IP on this subnet. Changing
-this removes or adds a default gateway IP of the existing subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>prefix_<wbr>length</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The prefix length to use when creating a subnet
-from a subnet pool. The default subnet pool prefix length that was defined
-when creating the subnet pool will be used if not provided. Changing this
-creates a new subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Networking client.
-A Networking client is needed to create a Neutron subnet. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>subnetpool_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}A set of string tags for the subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tenant_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The owner of the subnet. Required if admin wants to
-create a subnet for another tenant. Changing this creates a new subnet.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>value_<wbr>specs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
-    </dt>
-    <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
 
 </dl>
@@ -1982,7 +1125,7 @@ Get an existing Subnet resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSubnet<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#SubnetState">SubnetState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#Subnet">Subnet</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSubnet<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#SubnetState">SubnetState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#Subnet">Subnet</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -2096,7 +1239,7 @@ The following state arguments are supported:
             title="Optional">
         <span>All<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The collection of ags assigned on the subnet, which have been
 explicitly and implicitly added.
@@ -2106,7 +1249,7 @@ explicitly and implicitly added.
             title="Optional">
         <span>Allocation<wbr>Pools</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpool">List&lt;Subnet<wbr>Allocation<wbr>Pool<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#subnetallocationpool">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Subnet<wbr>Allocation<wbr>Pool<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A block declaring the start and end range of
 the IP addresses available for use with DHCP in this subnet. Multiple
@@ -2120,7 +1263,7 @@ The `allocation_pool` block is documented below.
             title="Optional, Deprecated">
         <span>Allocation<wbr>Pools<wbr>Collection</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpoolscollection">List&lt;Subnet<wbr>Allocation<wbr>Pools<wbr>Collection<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#subnetallocationpoolscollection">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Subnet<wbr>Allocation<wbr>Pools<wbr>Collection<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}
 A block declaring the start and end range of the IP addresses available for
@@ -2132,7 +1275,7 @@ The `allocation_pools` block is documented below.
             title="Optional">
         <span>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}CIDR representing IP range for this subnet, based on IP
 version. You can omit this option if you are creating a subnet from a
@@ -2143,7 +1286,7 @@ subnet pool.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the subnet. Changing this
 updates the name of the existing subnet.
@@ -2153,7 +1296,7 @@ updates the name of the existing subnet.
             title="Optional">
         <span>Dns<wbr>Nameservers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}An array of DNS name server names used by hosts
 in this subnet. Changing this updates the DNS name servers for the existing
@@ -2164,7 +1307,7 @@ subnet.
             title="Optional">
         <span>Enable<wbr>Dhcp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value enables or
@@ -2175,7 +1318,7 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
             title="Optional">
         <span>Gateway<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Default gateway used by devices in this subnet.
 Leaving this blank and not setting `no_gateway` will cause a default
@@ -2187,7 +1330,7 @@ existing subnet.
             title="Optional, Deprecated">
         <span>Host<wbr>Routes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnethostroute">List&lt;Subnet<wbr>Host<wbr>Route<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#subnethostroute">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Networking.<wbr>Inputs.<wbr>Subnet<wbr>Host<wbr>Route<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}(**Deprecated** - use `openstack.networking.SubnetRoute`
 instead) An array of routes that should be used by devices
@@ -2200,7 +1343,7 @@ for the existing subnet.
             title="Optional">
         <span>Ip<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this creates a
 new subnet.
@@ -2210,7 +1353,7 @@ new subnet.
             title="Optional">
         <span>Ipv6Address<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 address mode. Valid values are
 `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
@@ -2220,7 +1363,7 @@ new subnet.
             title="Optional">
         <span>Ipv6Ra<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
 are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
@@ -2230,7 +1373,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the subnet. Changing this updates the name of
 the existing subnet.
@@ -2240,7 +1383,7 @@ the existing subnet.
             title="Optional">
         <span>Network<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The UUID of the parent network. Changing this
 creates a new subnet.
@@ -2250,7 +1393,7 @@ creates a new subnet.
             title="Optional">
         <span>No<wbr>Gateway</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Do not set a gateway IP on this subnet. Changing
 this removes or adds a default gateway IP of the existing subnet.
@@ -2260,7 +1403,7 @@ this removes or adds a default gateway IP of the existing subnet.
             title="Optional">
         <span>Prefix<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The prefix length to use when creating a subnet
 from a subnet pool. The default subnet pool prefix length that was defined
@@ -2272,7 +1415,7 @@ creates a new subnet.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron subnet. If omitted, the
@@ -2284,7 +1427,7 @@ subnet.
             title="Optional">
         <span>Subnetpool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
 {{% /md %}}</dd>
@@ -2293,7 +1436,7 @@ subnet.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnet.
 {{% /md %}}</dd>
@@ -2302,7 +1445,7 @@ subnet.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The owner of the subnet. Required if admin wants to
 create a subnet for another tenant. Changing this creates a new subnet.
@@ -2312,7 +1455,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Optional">
         <span>Value<wbr>Specs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
@@ -2328,7 +1471,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Optional">
         <span>All<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The collection of ags assigned on the subnet, which have been
 explicitly and implicitly added.
@@ -2364,7 +1507,7 @@ The `allocation_pools` block is documented below.
             title="Optional">
         <span>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}CIDR representing IP range for this subnet, based on IP
 version. You can omit this option if you are creating a subnet from a
@@ -2375,7 +1518,7 @@ subnet pool.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the subnet. Changing this
 updates the name of the existing subnet.
@@ -2385,7 +1528,7 @@ updates the name of the existing subnet.
             title="Optional">
         <span>Dns<wbr>Nameservers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}An array of DNS name server names used by hosts
 in this subnet. Changing this updates the DNS name servers for the existing
@@ -2396,7 +1539,7 @@ subnet.
             title="Optional">
         <span>Enable<wbr>Dhcp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value enables or
@@ -2407,7 +1550,7 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
             title="Optional">
         <span>Gateway<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Default gateway used by devices in this subnet.
 Leaving this blank and not setting `no_gateway` will cause a default
@@ -2432,7 +1575,7 @@ for the existing subnet.
             title="Optional">
         <span>Ip<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this creates a
 new subnet.
@@ -2442,7 +1585,7 @@ new subnet.
             title="Optional">
         <span>Ipv6Address<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 address mode. Valid values are
 `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
@@ -2452,7 +1595,7 @@ new subnet.
             title="Optional">
         <span>Ipv6Ra<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
 are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
@@ -2462,7 +1605,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the subnet. Changing this updates the name of
 the existing subnet.
@@ -2472,7 +1615,7 @@ the existing subnet.
             title="Optional">
         <span>Network<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The UUID of the parent network. Changing this
 creates a new subnet.
@@ -2482,7 +1625,7 @@ creates a new subnet.
             title="Optional">
         <span>No<wbr>Gateway</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Do not set a gateway IP on this subnet. Changing
 this removes or adds a default gateway IP of the existing subnet.
@@ -2492,7 +1635,7 @@ this removes or adds a default gateway IP of the existing subnet.
             title="Optional">
         <span>Prefix<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The prefix length to use when creating a subnet
 from a subnet pool. The default subnet pool prefix length that was defined
@@ -2504,7 +1647,7 @@ creates a new subnet.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron subnet. If omitted, the
@@ -2516,7 +1659,7 @@ subnet.
             title="Optional">
         <span>Subnetpool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
 {{% /md %}}</dd>
@@ -2525,7 +1668,7 @@ subnet.
             title="Optional">
         <span>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnet.
 {{% /md %}}</dd>
@@ -2534,7 +1677,7 @@ subnet.
             title="Optional">
         <span>Tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The owner of the subnet. Required if admin wants to
 create a subnet for another tenant. Changing this creates a new subnet.
@@ -2560,7 +1703,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Optional">
         <span>all<wbr>Tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The collection of ags assigned on the subnet, which have been
 explicitly and implicitly added.
@@ -2570,7 +1713,7 @@ explicitly and implicitly added.
             title="Optional">
         <span>allocation<wbr>Pools</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpool">Subnet<wbr>Allocation<wbr>Pool[]?</a></span>
+        <span class="property-type"><a href="#subnetallocationpool">Subnet<wbr>Allocation<wbr>Pool[]</a></span>
     </dt>
     <dd>{{% md %}}A block declaring the start and end range of
 the IP addresses available for use with DHCP in this subnet. Multiple
@@ -2584,7 +1727,7 @@ The `allocation_pool` block is documented below.
             title="Optional, Deprecated">
         <span>allocation<wbr>Pools<wbr>Collection</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnetallocationpoolscollection">Subnet<wbr>Allocation<wbr>Pools<wbr>Collection[]?</a></span>
+        <span class="property-type"><a href="#subnetallocationpoolscollection">Subnet<wbr>Allocation<wbr>Pools<wbr>Collection[]</a></span>
     </dt>
     <dd>{{% md %}}
 A block declaring the start and end range of the IP addresses available for
@@ -2596,7 +1739,7 @@ The `allocation_pools` block is documented below.
             title="Optional">
         <span>cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}CIDR representing IP range for this subnet, based on IP
 version. You can omit this option if you are creating a subnet from a
@@ -2607,7 +1750,7 @@ subnet pool.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the subnet. Changing this
 updates the name of the existing subnet.
@@ -2617,7 +1760,7 @@ updates the name of the existing subnet.
             title="Optional">
         <span>dns<wbr>Nameservers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}An array of DNS name server names used by hosts
 in this subnet. Changing this updates the DNS name servers for the existing
@@ -2628,7 +1771,7 @@ subnet.
             title="Optional">
         <span>enable<wbr>Dhcp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value enables or
@@ -2639,7 +1782,7 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
             title="Optional">
         <span>gateway<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Default gateway used by devices in this subnet.
 Leaving this blank and not setting `no_gateway` will cause a default
@@ -2651,7 +1794,7 @@ existing subnet.
             title="Optional, Deprecated">
         <span>host<wbr>Routes</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#subnethostroute">Subnet<wbr>Host<wbr>Route[]?</a></span>
+        <span class="property-type"><a href="#subnethostroute">Subnet<wbr>Host<wbr>Route[]</a></span>
     </dt>
     <dd>{{% md %}}(**Deprecated** - use `openstack.networking.SubnetRoute`
 instead) An array of routes that should be used by devices
@@ -2664,7 +1807,7 @@ for the existing subnet.
             title="Optional">
         <span>ip<wbr>Version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this creates a
 new subnet.
@@ -2674,7 +1817,7 @@ new subnet.
             title="Optional">
         <span>ipv6Address<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 address mode. Valid values are
 `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
@@ -2684,7 +1827,7 @@ new subnet.
             title="Optional">
         <span>ipv6Ra<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
 are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
@@ -2694,7 +1837,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the subnet. Changing this updates the name of
 the existing subnet.
@@ -2704,7 +1847,7 @@ the existing subnet.
             title="Optional">
         <span>network<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The UUID of the parent network. Changing this
 creates a new subnet.
@@ -2714,7 +1857,7 @@ creates a new subnet.
             title="Optional">
         <span>no<wbr>Gateway</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Do not set a gateway IP on this subnet. Changing
 this removes or adds a default gateway IP of the existing subnet.
@@ -2724,7 +1867,7 @@ this removes or adds a default gateway IP of the existing subnet.
             title="Optional">
         <span>prefix<wbr>Length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The prefix length to use when creating a subnet
 from a subnet pool. The default subnet pool prefix length that was defined
@@ -2736,7 +1879,7 @@ creates a new subnet.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron subnet. If omitted, the
@@ -2748,7 +1891,7 @@ subnet.
             title="Optional">
         <span>subnetpool<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
 {{% /md %}}</dd>
@@ -2757,7 +1900,7 @@ subnet.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnet.
 {{% /md %}}</dd>
@@ -2766,7 +1909,7 @@ subnet.
             title="Optional">
         <span>tenant<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The owner of the subnet. Required if admin wants to
 create a subnet for another tenant. Changing this creates a new subnet.
@@ -2776,7 +1919,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Optional">
         <span>value<wbr>Specs</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
     <dd>{{% md %}}Map of additional options.
 {{% /md %}}</dd>
@@ -2792,7 +1935,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Optional">
         <span>all_<wbr>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The collection of ags assigned on the subnet, which have been
 explicitly and implicitly added.
@@ -2828,7 +1971,7 @@ The `allocation_pools` block is documented below.
             title="Optional">
         <span>cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}CIDR representing IP range for this subnet, based on IP
 version. You can omit this option if you are creating a subnet from a
@@ -2839,7 +1982,7 @@ subnet pool.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Human-readable description of the subnet. Changing this
 updates the name of the existing subnet.
@@ -2849,7 +1992,7 @@ updates the name of the existing subnet.
             title="Optional">
         <span>dns_<wbr>nameservers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}An array of DNS name server names used by hosts
 in this subnet. Changing this updates the DNS name servers for the existing
@@ -2860,7 +2003,7 @@ subnet.
             title="Optional">
         <span>enable_<wbr>dhcp</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}The administrative state of the network.
 Acceptable values are "true" and "false". Changing this value enables or
@@ -2871,7 +2014,7 @@ disables the DHCP capabilities of the existing subnet. Defaults to true.
             title="Optional">
         <span>gateway_<wbr>ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Default gateway used by devices in this subnet.
 Leaving this blank and not setting `no_gateway` will cause a default
@@ -2896,7 +2039,7 @@ for the existing subnet.
             title="Optional">
         <span>ip_<wbr>version</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}IP version, either 4 (default) or 6. Changing this creates a
 new subnet.
@@ -2906,7 +2049,7 @@ new subnet.
             title="Optional">
         <span>ipv6_<wbr>address_<wbr>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 address mode. Valid values are
 `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
@@ -2916,7 +2059,7 @@ new subnet.
             title="Optional">
         <span>ipv6_<wbr>ra_<wbr>mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The IPv6 Router Advertisement mode. Valid values
 are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
@@ -2926,7 +2069,7 @@ are `dhcpv6-stateful`, `dhcpv6-stateless`, or `slaac`.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the subnet. Changing this updates the name of
 the existing subnet.
@@ -2936,7 +2079,7 @@ the existing subnet.
             title="Optional">
         <span>network_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The UUID of the parent network. Changing this
 creates a new subnet.
@@ -2946,7 +2089,7 @@ creates a new subnet.
             title="Optional">
         <span>no_<wbr>gateway</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Do not set a gateway IP on this subnet. Changing
 this removes or adds a default gateway IP of the existing subnet.
@@ -2956,7 +2099,7 @@ this removes or adds a default gateway IP of the existing subnet.
             title="Optional">
         <span>prefix_<wbr>length</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The prefix length to use when creating a subnet
 from a subnet pool. The default subnet pool prefix length that was defined
@@ -2968,7 +2111,7 @@ creates a new subnet.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Networking client.
 A Networking client is needed to create a Neutron subnet. If omitted, the
@@ -2980,7 +2123,7 @@ subnet.
             title="Optional">
         <span>subnetpool_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the subnetpool associated with the subnet.
 {{% /md %}}</dd>
@@ -2989,7 +2132,7 @@ subnet.
             title="Optional">
         <span>tags</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A set of string tags for the subnet.
 {{% /md %}}</dd>
@@ -2998,7 +2141,7 @@ subnet.
             title="Optional">
         <span>tenant_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The owner of the subnet. Required if admin wants to
 create a subnet for another tenant. Changing this creates a new subnet.
@@ -3033,7 +2176,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#SubnetAllocationPoolArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#SubnetAllocationPoolOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#SubnetAllocationPoolArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#SubnetAllocationPoolOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3046,7 +2189,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Required">
         <span>End</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ending address.
 {{% /md %}}</dd>
@@ -3055,7 +2198,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Required">
         <span>Start</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The starting address.
 {{% /md %}}</dd>
@@ -3071,7 +2214,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Required">
         <span>End</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ending address.
 {{% /md %}}</dd>
@@ -3080,7 +2223,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Required">
         <span>Start</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The starting address.
 {{% /md %}}</dd>
@@ -3096,7 +2239,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Required">
         <span>end</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ending address.
 {{% /md %}}</dd>
@@ -3105,7 +2248,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Required">
         <span>start</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The starting address.
 {{% /md %}}</dd>
@@ -3121,7 +2264,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Required">
         <span>end</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ending address.
 {{% /md %}}</dd>
@@ -3130,7 +2273,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Required">
         <span>start</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The starting address.
 {{% /md %}}</dd>
@@ -3148,7 +2291,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#SubnetAllocationPoolsCollectionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#SubnetAllocationPoolsCollectionOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#SubnetAllocationPoolsCollectionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#SubnetAllocationPoolsCollectionOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3161,7 +2304,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Required">
         <span>End</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ending address.
 {{% /md %}}</dd>
@@ -3170,7 +2313,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Required">
         <span>Start</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The starting address.
 {{% /md %}}</dd>
@@ -3186,7 +2329,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Required">
         <span>End</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ending address.
 {{% /md %}}</dd>
@@ -3195,7 +2338,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Required">
         <span>Start</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The starting address.
 {{% /md %}}</dd>
@@ -3211,7 +2354,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Required">
         <span>end</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ending address.
 {{% /md %}}</dd>
@@ -3220,7 +2363,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Required">
         <span>start</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The starting address.
 {{% /md %}}</dd>
@@ -3236,7 +2379,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Required">
         <span>end</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ending address.
 {{% /md %}}</dd>
@@ -3245,7 +2388,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Required">
         <span>start</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The starting address.
 {{% /md %}}</dd>
@@ -3263,7 +2406,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#SubnetHostRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/networking?tab=doc#SubnetHostRouteOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#SubnetHostRouteArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/networking?tab=doc#SubnetHostRouteOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -3276,7 +2419,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Required">
         <span>Destination<wbr>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The destination CIDR.
 {{% /md %}}</dd>
@@ -3285,7 +2428,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Required">
         <span>Next<wbr>Hop</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The next hop in the route.
 {{% /md %}}</dd>
@@ -3301,7 +2444,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Required">
         <span>Destination<wbr>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The destination CIDR.
 {{% /md %}}</dd>
@@ -3310,7 +2453,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Required">
         <span>Next<wbr>Hop</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The next hop in the route.
 {{% /md %}}</dd>
@@ -3326,7 +2469,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Required">
         <span>destination<wbr>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The destination CIDR.
 {{% /md %}}</dd>
@@ -3335,7 +2478,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Required">
         <span>next<wbr>Hop</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The next hop in the route.
 {{% /md %}}</dd>
@@ -3351,7 +2494,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Required">
         <span>destination_<wbr>cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The destination CIDR.
 {{% /md %}}</dd>
@@ -3360,7 +2503,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
             title="Required">
         <span>next_<wbr>hop</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The next hop in the route.
 {{% /md %}}</dd>
@@ -3382,6 +2525,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 	<dd><a href="https://github.com/pulumi/pulumi-openstack">https://github.com/pulumi/pulumi-openstack</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
 </dl>
 

@@ -14,7 +14,9 @@ recommended to use the `openstack.networking.SecGroup`
 and `openstack.networking.SecGroupRule`
 resources instead, which uses the OpenStack Networking API.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -39,6 +41,8 @@ const secgroup1 = new openstack.compute.SecGroup("secgroup_1", {
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## Notes
 
 ### ICMP Rules
@@ -67,8 +71,6 @@ const test_server = new openstack.compute.Instance("test-server", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/compute_secgroup_v2.html.markdown.
-
 
 
 ## Create a SecGroup Resource
@@ -76,7 +78,7 @@ const test_server = new openstack.compute.Instance("test-server", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/compute/#SecGroup">SecGroup</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/compute/#SecGroupArgs">SecGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/compute/#SecGroup">SecGroup</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/compute/#SecGroupArgs">SecGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -84,11 +86,11 @@ const test_server = new openstack.compute.Instance("test-server", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSecGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/compute?tab=doc#SecGroupArgs">SecGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/compute?tab=doc#SecGroup">SecGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSecGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute?tab=doc#SecGroupArgs">SecGroupArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute?tab=doc#SecGroup">SecGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Compute.SecGroup.html">SecGroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Compute.SecGroupArgs.html">SecGroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Compute.SecGroup.html">SecGroup</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.Compute.SecGroupArgs.html">SecGroupArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -184,7 +186,7 @@ const test_server = new openstack.compute.Instance("test-server", {
             title="Required">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A description for the security group. Changing this
 updates the `description` of an existing security group.
@@ -194,7 +196,7 @@ updates the `description` of an existing security group.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A unique name for the security group. Changing this
 updates the `name` of an existing security group.
@@ -204,7 +206,7 @@ updates the `name` of an existing security group.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 A Compute client is needed to create a security group. If omitted, the
@@ -216,7 +218,7 @@ security group.
             title="Optional">
         <span>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secgrouprule">List&lt;Sec<wbr>Group<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#secgrouprule">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Compute.<wbr>Inputs.<wbr>Sec<wbr>Group<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A rule describing how the security group operates. The
 rule object structure is documented below. Changing this updates the
@@ -235,7 +237,7 @@ may be used.
             title="Required">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A description for the security group. Changing this
 updates the `description` of an existing security group.
@@ -245,7 +247,7 @@ updates the `description` of an existing security group.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique name for the security group. Changing this
 updates the `name` of an existing security group.
@@ -255,7 +257,7 @@ updates the `name` of an existing security group.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 A Compute client is needed to create a security group. If omitted, the
@@ -286,7 +288,7 @@ may be used.
             title="Required">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A description for the security group. Changing this
 updates the `description` of an existing security group.
@@ -296,7 +298,7 @@ updates the `description` of an existing security group.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique name for the security group. Changing this
 updates the `name` of an existing security group.
@@ -306,7 +308,7 @@ updates the `name` of an existing security group.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 A Compute client is needed to create a security group. If omitted, the
@@ -316,222 +318,6 @@ security group.
 
     <dt class="property-optional"
             title="Optional">
-        <span>rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secgrouprule">Sec<wbr>Group<wbr>Rule[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A rule describing how the security group operates. The
-rule object structure is documented below. Changing this updates the
-security group rules. As shown in the example above, multiple rule blocks
-may be used.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A description for the security group. Changing this
-updates the `description` of an existing security group.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A unique name for the security group. Changing this
-updates the `name` of an existing security group.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Compute client.
-A Compute client is needed to create a security group. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-security group.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secgrouprule">List[Sec<wbr>Group<wbr>Rule]</a></span>
-    </dt>
-    <dd>{{% md %}}A rule describing how the security group operates. The
-rule object structure is documented below. Changing this updates the
-security group rules. As shown in the example above, multiple rule blocks
-may be used.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## SecGroup Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A description for the security group. Changing this
-updates the `description` of an existing security group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique name for the security group. Changing this
-updates the `name` of an existing security group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Compute client.
-A Compute client is needed to create a security group. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-security group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secgrouprule">List&lt;Sec<wbr>Group<wbr>Rule&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A rule describing how the security group operates. The
-rule object structure is documented below. Changing this updates the
-security group rules. As shown in the example above, multiple rule blocks
-may be used.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A description for the security group. Changing this
-updates the `description` of an existing security group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique name for the security group. Changing this
-updates the `name` of an existing security group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Compute client.
-A Compute client is needed to create a security group. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-security group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rules</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secgrouprule">[]Sec<wbr>Group<wbr>Rule</a></span>
-    </dt>
-    <dd>{{% md %}}A rule describing how the security group operates. The
-rule object structure is documented below. Changing this updates the
-security group rules. As shown in the example above, multiple rule blocks
-may be used.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A description for the security group. Changing this
-updates the `description` of an existing security group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}A unique name for the security group. Changing this
-updates the `name` of an existing security group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V2 Compute client.
-A Compute client is needed to create a security group. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-security group.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>rules</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secgrouprule">Sec<wbr>Group<wbr>Rule[]</a></span>
@@ -549,31 +335,31 @@ may be used.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
+    <dt class="property-required"
+            title="Required">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A description for the security group. Changing this
 updates the `description` of an existing security group.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A unique name for the security group. Changing this
 updates the `name` of an existing security group.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 A Compute client is needed to create a security group. If omitted, the
@@ -581,8 +367,8 @@ A Compute client is needed to create a security group. If omitted, the
 security group.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>rules</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#secgrouprule">List[Sec<wbr>Group<wbr>Rule]</a></span>
@@ -595,6 +381,8 @@ may be used.
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -618,7 +406,7 @@ Get an existing SecGroup resource's state with the given name, ID, and optional 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/compute?tab=doc#SecGroupState">SecGroupState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/compute?tab=doc#SecGroup">SecGroup</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecGroup<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute?tab=doc#SecGroupState">SecGroupState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute?tab=doc#SecGroup">SecGroup</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -732,7 +520,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A description for the security group. Changing this
 updates the `description` of an existing security group.
@@ -742,7 +530,7 @@ updates the `description` of an existing security group.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A unique name for the security group. Changing this
 updates the `name` of an existing security group.
@@ -752,7 +540,7 @@ updates the `name` of an existing security group.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 A Compute client is needed to create a security group. If omitted, the
@@ -764,7 +552,7 @@ security group.
             title="Optional">
         <span>Rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secgrouprule">List&lt;Sec<wbr>Group<wbr>Rule<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#secgrouprule">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Compute.<wbr>Inputs.<wbr>Sec<wbr>Group<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A rule describing how the security group operates. The
 rule object structure is documented below. Changing this updates the
@@ -783,7 +571,7 @@ may be used.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A description for the security group. Changing this
 updates the `description` of an existing security group.
@@ -793,7 +581,7 @@ updates the `description` of an existing security group.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique name for the security group. Changing this
 updates the `name` of an existing security group.
@@ -803,7 +591,7 @@ updates the `name` of an existing security group.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 A Compute client is needed to create a security group. If omitted, the
@@ -834,7 +622,7 @@ may be used.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A description for the security group. Changing this
 updates the `description` of an existing security group.
@@ -844,7 +632,7 @@ updates the `description` of an existing security group.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A unique name for the security group. Changing this
 updates the `name` of an existing security group.
@@ -854,7 +642,7 @@ updates the `name` of an existing security group.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 A Compute client is needed to create a security group. If omitted, the
@@ -866,7 +654,7 @@ security group.
             title="Optional">
         <span>rules</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#secgrouprule">Sec<wbr>Group<wbr>Rule[]?</a></span>
+        <span class="property-type"><a href="#secgrouprule">Sec<wbr>Group<wbr>Rule[]</a></span>
     </dt>
     <dd>{{% md %}}A rule describing how the security group operates. The
 rule object structure is documented below. Changing this updates the
@@ -885,7 +673,7 @@ may be used.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A description for the security group. Changing this
 updates the `description` of an existing security group.
@@ -895,7 +683,7 @@ updates the `description` of an existing security group.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A unique name for the security group. Changing this
 updates the `name` of an existing security group.
@@ -905,7 +693,7 @@ updates the `name` of an existing security group.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V2 Compute client.
 A Compute client is needed to create a security group. If omitted, the
@@ -945,7 +733,7 @@ may be used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/compute?tab=doc#SecGroupRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/compute?tab=doc#SecGroupRuleOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute?tab=doc#SecGroupRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute?tab=doc#SecGroupRuleOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -954,11 +742,41 @@ may be used.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>From<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the lower bound of the port
+range to open. Changing this creates a new security group rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Ip<wbr>Protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The protocol type that will be allowed. Changing
+this creates a new security group rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>To<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the upper bound of the port
+range to open. Changing this creates a new security group rule.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Required if `from_group_id` or `self` is empty. The IP range
 that will be the source of network traffic to the security group. Use 0.0.0.0/0
@@ -970,60 +788,30 @@ be combined with `from_group_id` or `self`.
             title="Optional">
         <span>From<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Required if `cidr` or `self` is empty. The ID of a
 group from which to forward traffic to the parent group. Changing this creates a
 new security group rule. Cannot be combined with `cidr` or `self`.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>From<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}An integer representing the lower bound of the port
-range to open. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Ip<wbr>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The protocol type that will be allowed. Changing
-this creates a new security group rule.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Self</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Required if `cidr` and `from_group_id` is empty. If true,
 the security group itself will be added as a source to this ingress rule. Cannot
 be combined with `cidr` or `from_group_id`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>To<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}An integer representing the upper bound of the port
-range to open. Changing this creates a new security group rule.
 {{% /md %}}</dd>
 
 </dl>
@@ -1033,11 +821,41 @@ range to open. Changing this creates a new security group rule.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>From<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the lower bound of the port
+range to open. Changing this creates a new security group rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Ip<wbr>Protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The protocol type that will be allowed. Changing
+this creates a new security group rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>To<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the upper bound of the port
+range to open. Changing this creates a new security group rule.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Required if `from_group_id` or `self` is empty. The IP range
 that will be the source of network traffic to the security group. Use 0.0.0.0/0
@@ -1049,60 +867,30 @@ be combined with `from_group_id` or `self`.
             title="Optional">
         <span>From<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Required if `cidr` or `self` is empty. The ID of a
 group from which to forward traffic to the parent group. Changing this creates a
 new security group rule. Cannot be combined with `cidr` or `self`.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>From<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}An integer representing the lower bound of the port
-range to open. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Ip<wbr>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The protocol type that will be allowed. Changing
-this creates a new security group rule.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Self</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Required if `cidr` and `from_group_id` is empty. If true,
 the security group itself will be added as a source to this ingress rule. Cannot
 be combined with `cidr` or `from_group_id`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>To<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}An integer representing the upper bound of the port
-range to open. Changing this creates a new security group rule.
 {{% /md %}}</dd>
 
 </dl>
@@ -1112,11 +900,41 @@ range to open. Changing this creates a new security group rule.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>from<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the lower bound of the port
+range to open. Changing this creates a new security group rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>ip<wbr>Protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The protocol type that will be allowed. Changing
+this creates a new security group rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>to<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the upper bound of the port
+range to open. Changing this creates a new security group rule.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Required if `from_group_id` or `self` is empty. The IP range
 that will be the source of network traffic to the security group. Use 0.0.0.0/0
@@ -1128,60 +946,30 @@ be combined with `from_group_id` or `self`.
             title="Optional">
         <span>from<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Required if `cidr` or `self` is empty. The ID of a
 group from which to forward traffic to the parent group. Changing this creates a
 new security group rule. Cannot be combined with `cidr` or `self`.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>from<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}An integer representing the lower bound of the port
-range to open. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>ip<wbr>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The protocol type that will be allowed. Changing
-this creates a new security group rule.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>self</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Required if `cidr` and `from_group_id` is empty. If true,
 the security group itself will be added as a source to this ingress rule. Cannot
 be combined with `cidr` or `from_group_id`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>to<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}An integer representing the upper bound of the port
-range to open. Changing this creates a new security group rule.
 {{% /md %}}</dd>
 
 </dl>
@@ -1191,11 +979,41 @@ range to open. Changing this creates a new security group rule.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>from<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the lower bound of the port
+range to open. Changing this creates a new security group rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>ip<wbr>Protocol</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The protocol type that will be allowed. Changing
+this creates a new security group rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>to<wbr>Port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}An integer representing the upper bound of the port
+range to open. Changing this creates a new security group rule.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>cidr</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Required if `from_group_id` or `self` is empty. The IP range
 that will be the source of network traffic to the security group. Use 0.0.0.0/0
@@ -1207,60 +1025,30 @@ be combined with `from_group_id` or `self`.
             title="Optional">
         <span>from<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Required if `cidr` or `self` is empty. The ID of a
 group from which to forward traffic to the parent group. Changing this creates a
 new security group rule. Cannot be combined with `cidr` or `self`.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>from<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}An integer representing the lower bound of the port
-range to open. Changing this creates a new security group rule.
-{{% /md %}}</dd>
-
     <dt class="property-optional"
             title="Optional">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>ip<wbr>Protocol</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The protocol type that will be allowed. Changing
-this creates a new security group rule.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>self</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Required if `cidr` and `from_group_id` is empty. If true,
 the security group itself will be added as a source to this ingress rule. Cannot
 be combined with `cidr` or `from_group_id`.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>to<wbr>Port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}An integer representing the upper bound of the port
-range to open. Changing this creates a new security group rule.
 {{% /md %}}</dd>
 
 </dl>
@@ -1280,6 +1068,7 @@ range to open. Changing this creates a new security group rule.
 	<dd><a href="https://github.com/pulumi/pulumi-openstack">https://github.com/pulumi/pulumi-openstack</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
 </dl>
 

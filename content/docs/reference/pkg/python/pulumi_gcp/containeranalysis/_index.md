@@ -26,9 +26,6 @@ anything, please consult the source <a class="reference external" href="https://
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_analysis_note.html.markdown">https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_analysis_note.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -40,6 +37,8 @@ attached Occurrences (Attestations). This grouping mechanism also provides a sec
 ability for a principle to attach an Occurrence to a given Note. It also provides a single point of lookup to find all
 attached Attestation Occurrences, even if they don’t all live in the same project.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the note.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 </ul>
 </dd>
 </dl>
@@ -74,6 +73,13 @@ attached Attestation Occurrences, even if they don’t all live in the same proj
 <dd><p>The name of the note.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_gcp.containeranalysis.Note.project">
+<code class="sig-name descname">project</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.containeranalysis.Note.project" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_gcp.containeranalysis.Note.get">
 <em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attestation_authority=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.containeranalysis.Note.get" title="Permalink to this definition">¶</a></dt>
@@ -91,6 +97,8 @@ attached Occurrences (Attestations). This grouping mechanism also provides a sec
 ability for a principle to attach an Occurrence to a given Note. It also provides a single point of lookup to find all
 attached Attestation Occurrences, even if they don’t all live in the same project.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the note.</p></li>
+<li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the project in which the resource belongs.
+If it is not provided, the provider project is used.</p></li>
 </ul>
 </dd>
 </dl>

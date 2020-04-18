@@ -8,8 +8,10 @@ block_external_search_index: true
 
 Manages a V1 Barbican container resource within OpenStack.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Simple secret
 
 The container with the TLS certificates, which can be used by the loadbalancer HTTPS listener.
@@ -51,9 +53,9 @@ const tls1 = new openstack.keymanager.ContainerV1("tls_1", {
     ],
     type: "certificate",
 });
-const subnet1 = pulumi.output(openstack.networking.getSubnet({
+const subnet1 = openstack.networking.getSubnet({
     name: "my-subnet",
-}, { async: true }));
+});
 const lb1 = new openstack.loadbalancer.LoadBalancer("lb_1", {
     vipSubnetId: subnet1.id,
 });
@@ -65,6 +67,8 @@ const listener1 = new openstack.loadbalancer.Listener("listener_1", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Container with the ACL
 
 > **Note** Only read ACLs are supported
@@ -101,7 +105,8 @@ const tls1 = new openstack.keymanager.ContainerV1("tls_1", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-openstack/blob/master/website/docs/r/keymanager_container_v1.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -110,7 +115,7 @@ const tls1 = new openstack.keymanager.ContainerV1("tls_1", {
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/keymanager/#ContainerV1">ContainerV1</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/keymanager/#ContainerV1Args">ContainerV1Args</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/keymanager/#ContainerV1">ContainerV1</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/openstack/keymanager/#ContainerV1Args">ContainerV1Args</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -118,11 +123,11 @@ const tls1 = new openstack.keymanager.ContainerV1("tls_1", {
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewContainerV1<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/keymanager?tab=doc#ContainerV1Args">ContainerV1Args</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/keymanager?tab=doc#ContainerV1">ContainerV1</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewContainerV1<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#ContainerV1Args">ContainerV1Args</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#ContainerV1">ContainerV1</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Keymanager.ContainerV1.html">ContainerV1</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.KeyManager.ContainerV1Args.html">ContainerV1Args</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.KeyManager.ContainerV1.html">ContainerV1</a></span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.OpenStack.KeyManager.ContainerV1Args.html">ContainerV1Args</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -214,11 +219,20 @@ const tls1 = new openstack.keymanager.ContainerV1("tls_1", {
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Used to indicate the type of container. Must be one of `generic`, `rsa` or `certificate`.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Acl</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1acl">Container<wbr>V1Acl<wbr>Args?</a></span>
+        <span class="property-type"><a href="#containerv1acl">Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Inputs.<wbr>Container<wbr>V1Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allows to control an access to a container. Currently only
 the `read` operation is supported. If not specified, the container is
@@ -229,7 +243,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the secret reference. The reference names must correspond the container type, more details are available [here](https://docs.openstack.org/barbican/stein/api/reference/containers.html).
 {{% /md %}}</dd>
@@ -238,7 +252,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V1 KeyManager client.
 A KeyManager client is needed to create a container. If omitted, the
@@ -250,19 +264,10 @@ V1 container.
             title="Optional">
         <span>Secret<wbr>Refs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1secretref">List&lt;Container<wbr>V1Secret<wbr>Ref<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#containerv1secretref">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Inputs.<wbr>Container<wbr>V1Secret<wbr>Ref<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of dictionaries containing references to secrets. The structure is described
 below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Used to indicate the type of container. Must be one of `generic`, `rsa` or `certificate`.
 {{% /md %}}</dd>
 
 </dl>
@@ -272,11 +277,20 @@ below.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Used to indicate the type of container. Must be one of `generic`, `rsa` or `certificate`.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Acl</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1acl">*Container<wbr>V1Acl</a></span>
+        <span class="property-type"><a href="#containerv1acl">Container<wbr>V1Acl</a></span>
     </dt>
     <dd>{{% md %}}Allows to control an access to a container. Currently only
 the `read` operation is supported. If not specified, the container is
@@ -287,7 +301,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the secret reference. The reference names must correspond the container type, more details are available [here](https://docs.openstack.org/barbican/stein/api/reference/containers.html).
 {{% /md %}}</dd>
@@ -296,7 +310,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V1 KeyManager client.
 A KeyManager client is needed to create a container. If omitted, the
@@ -314,15 +328,6 @@ V1 container.
 below.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Used to indicate the type of container. Must be one of `generic`, `rsa` or `certificate`.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -330,11 +335,20 @@ below.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Used to indicate the type of container. Must be one of `generic`, `rsa` or `certificate`.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>acl</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1acl">Container<wbr>V1Acl?</a></span>
+        <span class="property-type"><a href="#containerv1acl">Container<wbr>V1Acl</a></span>
     </dt>
     <dd>{{% md %}}Allows to control an access to a container. Currently only
 the `read` operation is supported. If not specified, the container is
@@ -345,7 +359,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the secret reference. The reference names must correspond the container type, more details are available [here](https://docs.openstack.org/barbican/stein/api/reference/containers.html).
 {{% /md %}}</dd>
@@ -354,7 +368,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V1 KeyManager client.
 A KeyManager client is needed to create a container. If omitted, the
@@ -366,19 +380,10 @@ V1 container.
             title="Optional">
         <span>secret<wbr>Refs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1secretref">Container<wbr>V1Secret<wbr>Ref[]?</a></span>
+        <span class="property-type"><a href="#containerv1secretref">Container<wbr>V1Secret<wbr>Ref[]</a></span>
     </dt>
     <dd>{{% md %}}A set of dictionaries containing references to secrets. The structure is described
 below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Used to indicate the type of container. Must be one of `generic`, `rsa` or `certificate`.
 {{% /md %}}</dd>
 
 </dl>
@@ -387,6 +392,15 @@ below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Used to indicate the type of container. Must be one of `generic`, `rsa` or `certificate`.
+{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -403,7 +417,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the secret reference. The reference names must correspond the container type, more details are available [here](https://docs.openstack.org/barbican/stein/api/reference/containers.html).
 {{% /md %}}</dd>
@@ -412,7 +426,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V1 KeyManager client.
 A KeyManager client is needed to create a container. If omitted, the
@@ -428,15 +442,6 @@ V1 container.
     </dt>
     <dd>{{% md %}}A set of dictionaries containing references to secrets. The structure is described
 below.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Used to indicate the type of container. Must be one of `generic`, `rsa` or `certificate`.
 {{% /md %}}</dd>
 
 </dl>
@@ -460,20 +465,9 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Acl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1acl">Container<wbr>V1Acl</a></span>
-    </dt>
-    <dd>{{% md %}}Allows to control an access to a container. Currently only
-the `read` operation is supported. If not specified, the container is
-accessible project wide. The `read` structure is described below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Consumers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1consumer">List&lt;Container<wbr>V1Consumer&gt;</a></span>
+        <span class="property-type"><a href="#containerv1consumer">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Outputs.<wbr>Container<wbr>V1Consumer&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of the container consumers. The structure is described below.
 {{% /md %}}</dd>
@@ -482,7 +476,7 @@ accessible project wide. The `read` structure is described below.
             title="">
         <span>Container<wbr>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The container reference / where to find the container.
 {{% /md %}}</dd>
@@ -491,7 +485,7 @@ accessible project wide. The `read` structure is described below.
             title="">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The date the container ACL was created.
 {{% /md %}}</dd>
@@ -500,65 +494,25 @@ accessible project wide. The `read` structure is described below.
             title="">
         <span>Creator<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The creator of the container.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the secret reference. The reference names must correspond the container type, more details are available [here](https://docs.openstack.org/barbican/stein/api/reference/containers.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V1 KeyManager client.
-A KeyManager client is needed to create a container. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-V1 container.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Secret<wbr>Refs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1secretref">List&lt;Container<wbr>V1Secret<wbr>Ref&gt;?</a></span>
-    </dt>
-    <dd>{{% md %}}A set of dictionaries containing references to secrets. The structure is described
-below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the container.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Used to indicate the type of container. Must be one of `generic`, `rsa` or `certificate`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The date the container ACL was last updated.
 {{% /md %}}</dd>
@@ -569,17 +523,6 @@ below.
 
 {{% choosable language go %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Acl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1acl">Container<wbr>V1Acl</a></span>
-    </dt>
-    <dd>{{% md %}}Allows to control an access to a container. Currently only
-the `read` operation is supported. If not specified, the container is
-accessible project wide. The `read` structure is described below.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -594,7 +537,7 @@ accessible project wide. The `read` structure is described below.
             title="">
         <span>Container<wbr>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The container reference / where to find the container.
 {{% /md %}}</dd>
@@ -603,7 +546,7 @@ accessible project wide. The `read` structure is described below.
             title="">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the container ACL was created.
 {{% /md %}}</dd>
@@ -612,65 +555,25 @@ accessible project wide. The `read` structure is described below.
             title="">
         <span>Creator<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The creator of the container.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the secret reference. The reference names must correspond the container type, more details are available [here](https://docs.openstack.org/barbican/stein/api/reference/containers.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V1 KeyManager client.
-A KeyManager client is needed to create a container. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-V1 container.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Secret<wbr>Refs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1secretref">[]Container<wbr>V1Secret<wbr>Ref</a></span>
-    </dt>
-    <dd>{{% md %}}A set of dictionaries containing references to secrets. The structure is described
-below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the container.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Used to indicate the type of container. Must be one of `generic`, `rsa` or `certificate`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the container ACL was last updated.
 {{% /md %}}</dd>
@@ -681,17 +584,6 @@ below.
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>acl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1acl">Container<wbr>V1Acl</a></span>
-    </dt>
-    <dd>{{% md %}}Allows to control an access to a container. Currently only
-the `read` operation is supported. If not specified, the container is
-accessible project wide. The `read` structure is described below.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -706,7 +598,7 @@ accessible project wide. The `read` structure is described below.
             title="">
         <span>container<wbr>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The container reference / where to find the container.
 {{% /md %}}</dd>
@@ -715,7 +607,7 @@ accessible project wide. The `read` structure is described below.
             title="">
         <span>created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the container ACL was created.
 {{% /md %}}</dd>
@@ -724,65 +616,25 @@ accessible project wide. The `read` structure is described below.
             title="">
         <span>creator<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The creator of the container.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the secret reference. The reference names must correspond the container type, more details are available [here](https://docs.openstack.org/barbican/stein/api/reference/containers.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V1 KeyManager client.
-A KeyManager client is needed to create a container. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-V1 container.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>secret<wbr>Refs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1secretref">Container<wbr>V1Secret<wbr>Ref[]?</a></span>
-    </dt>
-    <dd>{{% md %}}A set of dictionaries containing references to secrets. The structure is described
-below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the container.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Used to indicate the type of container. Must be one of `generic`, `rsa` or `certificate`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the container ACL was last updated.
 {{% /md %}}</dd>
@@ -793,17 +645,6 @@ below.
 
 {{% choosable language python %}}
 <dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>acl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1acl">Dict[Container<wbr>V1Acl]</a></span>
-    </dt>
-    <dd>{{% md %}}Allows to control an access to a container. Currently only
-the `read` operation is supported. If not specified, the container is
-accessible project wide. The `read` structure is described below.
-{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -818,7 +659,7 @@ accessible project wide. The `read` structure is described below.
             title="">
         <span>container_<wbr>ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The container reference / where to find the container.
 {{% /md %}}</dd>
@@ -827,7 +668,7 @@ accessible project wide. The `read` structure is described below.
             title="">
         <span>created_<wbr>at</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The date the container ACL was created.
 {{% /md %}}</dd>
@@ -836,65 +677,25 @@ accessible project wide. The `read` structure is described below.
             title="">
         <span>creator_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The creator of the container.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the secret reference. The reference names must correspond the container type, more details are available [here](https://docs.openstack.org/barbican/stein/api/reference/containers.html).
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>region</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The region in which to obtain the V1 KeyManager client.
-A KeyManager client is needed to create a container. If omitted, the
-`region` argument of the provider is used. Changing this creates a new
-V1 container.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>secret_<wbr>refs</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1secretref">List[Container<wbr>V1Secret<wbr>Ref]</a></span>
-    </dt>
-    <dd>{{% md %}}A set of dictionaries containing references to secrets. The structure is described
-below.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The status of the container.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Used to indicate the type of container. Must be one of `generic`, `rsa` or `certificate`.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>updated_<wbr>at</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The date the container ACL was last updated.
 {{% /md %}}</dd>
@@ -924,11 +725,11 @@ Get an existing ContainerV1 resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContainerV1<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/keymanager?tab=doc#ContainerV1State">ContainerV1State</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/keymanager?tab=doc#ContainerV1">ContainerV1</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetContainerV1<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#ContainerV1State">ContainerV1State</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#ContainerV1">ContainerV1</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Keymanager.ContainerV1.html">ContainerV1</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.Keymanager.ContainerV1State.html">ContainerV1State</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.KeyManager.ContainerV1.html">ContainerV1</a></span><span class="nf"> Get</span><span class="p">(</span><span class="nx"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span> <span class="nx">name<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.Input.html">Input&lt;string&gt;</a></span> <span class="nx">id<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Openstack/Pulumi.Openstack.KeyManager.ContainerV1State.html">ContainerV1State</a></span>? <span class="nx">state<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.CustomResourceOptions.html">CustomResourceOptions</a></span>? <span class="nx">opts = null<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
@@ -1038,7 +839,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Acl</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1acl">Container<wbr>V1Acl<wbr>Args?</a></span>
+        <span class="property-type"><a href="#containerv1acl">Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Inputs.<wbr>Container<wbr>V1Acl<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Allows to control an access to a container. Currently only
 the `read` operation is supported. If not specified, the container is
@@ -1049,7 +850,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>Consumers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1consumer">List&lt;Container<wbr>V1Consumer<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#containerv1consumer">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Inputs.<wbr>Container<wbr>V1Consumer<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of the container consumers. The structure is described below.
 {{% /md %}}</dd>
@@ -1058,7 +859,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>Container<wbr>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The container reference / where to find the container.
 {{% /md %}}</dd>
@@ -1067,7 +868,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The date the container ACL was created.
 {{% /md %}}</dd>
@@ -1076,7 +877,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>Creator<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The creator of the container.
 {{% /md %}}</dd>
@@ -1085,7 +886,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the secret reference. The reference names must correspond the container type, more details are available [here](https://docs.openstack.org/barbican/stein/api/reference/containers.html).
 {{% /md %}}</dd>
@@ -1094,7 +895,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V1 KeyManager client.
 A KeyManager client is needed to create a container. If omitted, the
@@ -1106,7 +907,7 @@ V1 container.
             title="Optional">
         <span>Secret<wbr>Refs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1secretref">List&lt;Container<wbr>V1Secret<wbr>Ref<wbr>Args&gt;?</a></span>
+        <span class="property-type"><a href="#containerv1secretref">List&lt;Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Inputs.<wbr>Container<wbr>V1Secret<wbr>Ref<wbr>Args&gt;</a></span>
     </dt>
     <dd>{{% md %}}A set of dictionaries containing references to secrets. The structure is described
 below.
@@ -1116,7 +917,7 @@ below.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the container.
 {{% /md %}}</dd>
@@ -1125,7 +926,7 @@ below.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Used to indicate the type of container. Must be one of `generic`, `rsa` or `certificate`.
 {{% /md %}}</dd>
@@ -1134,7 +935,7 @@ below.
             title="Optional">
         <span>Updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The date the container ACL was last updated.
 {{% /md %}}</dd>
@@ -1150,7 +951,7 @@ below.
             title="Optional">
         <span>Acl</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1acl">*Container<wbr>V1Acl</a></span>
+        <span class="property-type"><a href="#containerv1acl">Container<wbr>V1Acl</a></span>
     </dt>
     <dd>{{% md %}}Allows to control an access to a container. Currently only
 the `read` operation is supported. If not specified, the container is
@@ -1170,7 +971,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>Container<wbr>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The container reference / where to find the container.
 {{% /md %}}</dd>
@@ -1179,7 +980,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the container ACL was created.
 {{% /md %}}</dd>
@@ -1188,7 +989,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>Creator<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The creator of the container.
 {{% /md %}}</dd>
@@ -1197,7 +998,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the secret reference. The reference names must correspond the container type, more details are available [here](https://docs.openstack.org/barbican/stein/api/reference/containers.html).
 {{% /md %}}</dd>
@@ -1206,7 +1007,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>Region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V1 KeyManager client.
 A KeyManager client is needed to create a container. If omitted, the
@@ -1228,7 +1029,7 @@ below.
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the container.
 {{% /md %}}</dd>
@@ -1237,7 +1038,7 @@ below.
             title="Optional">
         <span>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Used to indicate the type of container. Must be one of `generic`, `rsa` or `certificate`.
 {{% /md %}}</dd>
@@ -1246,7 +1047,7 @@ below.
             title="Optional">
         <span>Updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the container ACL was last updated.
 {{% /md %}}</dd>
@@ -1262,7 +1063,7 @@ below.
             title="Optional">
         <span>acl</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1acl">Container<wbr>V1Acl?</a></span>
+        <span class="property-type"><a href="#containerv1acl">Container<wbr>V1Acl</a></span>
     </dt>
     <dd>{{% md %}}Allows to control an access to a container. Currently only
 the `read` operation is supported. If not specified, the container is
@@ -1273,7 +1074,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>consumers</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1consumer">Container<wbr>V1Consumer[]?</a></span>
+        <span class="property-type"><a href="#containerv1consumer">Container<wbr>V1Consumer[]</a></span>
     </dt>
     <dd>{{% md %}}The list of the container consumers. The structure is described below.
 {{% /md %}}</dd>
@@ -1282,7 +1083,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>container<wbr>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The container reference / where to find the container.
 {{% /md %}}</dd>
@@ -1291,7 +1092,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the container ACL was created.
 {{% /md %}}</dd>
@@ -1300,7 +1101,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>creator<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The creator of the container.
 {{% /md %}}</dd>
@@ -1309,7 +1110,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the secret reference. The reference names must correspond the container type, more details are available [here](https://docs.openstack.org/barbican/stein/api/reference/containers.html).
 {{% /md %}}</dd>
@@ -1318,7 +1119,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V1 KeyManager client.
 A KeyManager client is needed to create a container. If omitted, the
@@ -1330,7 +1131,7 @@ V1 container.
             title="Optional">
         <span>secret<wbr>Refs</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1secretref">Container<wbr>V1Secret<wbr>Ref[]?</a></span>
+        <span class="property-type"><a href="#containerv1secretref">Container<wbr>V1Secret<wbr>Ref[]</a></span>
     </dt>
     <dd>{{% md %}}A set of dictionaries containing references to secrets. The structure is described
 below.
@@ -1340,7 +1141,7 @@ below.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The status of the container.
 {{% /md %}}</dd>
@@ -1349,7 +1150,7 @@ below.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Used to indicate the type of container. Must be one of `generic`, `rsa` or `certificate`.
 {{% /md %}}</dd>
@@ -1358,7 +1159,7 @@ below.
             title="Optional">
         <span>updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the container ACL was last updated.
 {{% /md %}}</dd>
@@ -1394,7 +1195,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>container_<wbr>ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The container reference / where to find the container.
 {{% /md %}}</dd>
@@ -1403,7 +1204,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>created_<wbr>at</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The date the container ACL was created.
 {{% /md %}}</dd>
@@ -1412,7 +1213,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>creator_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The creator of the container.
 {{% /md %}}</dd>
@@ -1421,7 +1222,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the secret reference. The reference names must correspond the container type, more details are available [here](https://docs.openstack.org/barbican/stein/api/reference/containers.html).
 {{% /md %}}</dd>
@@ -1430,7 +1231,7 @@ accessible project wide. The `read` structure is described below.
             title="Optional">
         <span>region</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The region in which to obtain the V1 KeyManager client.
 A KeyManager client is needed to create a container. If omitted, the
@@ -1452,7 +1253,7 @@ below.
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The status of the container.
 {{% /md %}}</dd>
@@ -1461,7 +1262,7 @@ below.
             title="Optional">
         <span>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Used to indicate the type of container. Must be one of `generic`, `rsa` or `certificate`.
 {{% /md %}}</dd>
@@ -1470,7 +1271,7 @@ below.
             title="Optional">
         <span>updated_<wbr>at</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The date the container ACL was last updated.
 {{% /md %}}</dd>
@@ -1495,7 +1296,7 @@ below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/keymanager?tab=doc#ContainerV1AclArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/keymanager?tab=doc#ContainerV1AclOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#ContainerV1AclArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#ContainerV1AclOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1508,7 +1309,7 @@ below.
             title="Optional">
         <span>Read</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1aclread">Container<wbr>V1Acl<wbr>Read<wbr>Args?</a></span>
+        <span class="property-type"><a href="#containerv1aclread">Pulumi.<wbr>Open<wbr>Stack.<wbr>Key<wbr>Manager.<wbr>Inputs.<wbr>Container<wbr>V1Acl<wbr>Read<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1523,7 +1324,7 @@ below.
             title="Optional">
         <span>Read</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1aclread">*Container<wbr>V1Acl<wbr>Read</a></span>
+        <span class="property-type"><a href="#containerv1aclread">Container<wbr>V1Acl<wbr>Read</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1538,7 +1339,7 @@ below.
             title="Optional">
         <span>read</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#containerv1aclread">Container<wbr>V1Acl<wbr>Read?</a></span>
+        <span class="property-type"><a href="#containerv1aclread">Container<wbr>V1Acl<wbr>Read</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1570,7 +1371,7 @@ below.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/keymanager?tab=doc#ContainerV1AclReadArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/keymanager?tab=doc#ContainerV1AclReadOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#ContainerV1AclReadArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#ContainerV1AclReadOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1583,7 +1384,7 @@ below.
             title="Optional">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The date the container ACL was created.
 {{% /md %}}</dd>
@@ -1592,7 +1393,7 @@ below.
             title="Optional">
         <span>Project<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the container is accessible project wide.
 Defaults to `true`.
@@ -1602,7 +1403,7 @@ Defaults to `true`.
             title="Optional">
         <span>Updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The date the container ACL was last updated.
 {{% /md %}}</dd>
@@ -1611,7 +1412,7 @@ Defaults to `true`.
             title="Optional">
         <span>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of user IDs, which are allowed to access the
 container, when `project_access` is set to `false`.
@@ -1628,7 +1429,7 @@ container, when `project_access` is set to `false`.
             title="Optional">
         <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the container ACL was created.
 {{% /md %}}</dd>
@@ -1637,7 +1438,7 @@ container, when `project_access` is set to `false`.
             title="Optional">
         <span>Project<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the container is accessible project wide.
 Defaults to `true`.
@@ -1647,7 +1448,7 @@ Defaults to `true`.
             title="Optional">
         <span>Updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the container ACL was last updated.
 {{% /md %}}</dd>
@@ -1656,7 +1457,7 @@ Defaults to `true`.
             title="Optional">
         <span>Users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The list of user IDs, which are allowed to access the
 container, when `project_access` is set to `false`.
@@ -1673,7 +1474,7 @@ container, when `project_access` is set to `false`.
             title="Optional">
         <span>created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the container ACL was created.
 {{% /md %}}</dd>
@@ -1682,7 +1483,7 @@ container, when `project_access` is set to `false`.
             title="Optional">
         <span>project<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the container is accessible project wide.
 Defaults to `true`.
@@ -1692,7 +1493,7 @@ Defaults to `true`.
             title="Optional">
         <span>updated<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The date the container ACL was last updated.
 {{% /md %}}</dd>
@@ -1701,7 +1502,7 @@ Defaults to `true`.
             title="Optional">
         <span>users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The list of user IDs, which are allowed to access the
 container, when `project_access` is set to `false`.
@@ -1718,7 +1519,7 @@ container, when `project_access` is set to `false`.
             title="Optional">
         <span>created_<wbr>at</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The date the container ACL was created.
 {{% /md %}}</dd>
@@ -1727,7 +1528,7 @@ container, when `project_access` is set to `false`.
             title="Optional">
         <span>project<wbr>Access</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the container is accessible project wide.
 Defaults to `true`.
@@ -1737,7 +1538,7 @@ Defaults to `true`.
             title="Optional">
         <span>updated_<wbr>at</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The date the container ACL was last updated.
 {{% /md %}}</dd>
@@ -1746,7 +1547,7 @@ Defaults to `true`.
             title="Optional">
         <span>users</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of user IDs, which are allowed to access the
 container, when `project_access` is set to `false`.
@@ -1765,7 +1566,7 @@ container, when `project_access` is set to `false`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/keymanager?tab=doc#ContainerV1ConsumerOutput">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#ContainerV1ConsumerOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1778,7 +1579,7 @@ container, when `project_access` is set to `false`.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the secret reference. The reference names must correspond the container type, more details are available [here](https://docs.openstack.org/barbican/stein/api/reference/containers.html).
 {{% /md %}}</dd>
@@ -1787,7 +1588,7 @@ container, when `project_access` is set to `false`.
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The consumer URL.
 {{% /md %}}</dd>
@@ -1803,7 +1604,7 @@ container, when `project_access` is set to `false`.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the secret reference. The reference names must correspond the container type, more details are available [here](https://docs.openstack.org/barbican/stein/api/reference/containers.html).
 {{% /md %}}</dd>
@@ -1812,7 +1613,7 @@ container, when `project_access` is set to `false`.
             title="Optional">
         <span>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The consumer URL.
 {{% /md %}}</dd>
@@ -1828,7 +1629,7 @@ container, when `project_access` is set to `false`.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the secret reference. The reference names must correspond the container type, more details are available [here](https://docs.openstack.org/barbican/stein/api/reference/containers.html).
 {{% /md %}}</dd>
@@ -1837,7 +1638,7 @@ container, when `project_access` is set to `false`.
             title="Optional">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The consumer URL.
 {{% /md %}}</dd>
@@ -1853,7 +1654,7 @@ container, when `project_access` is set to `false`.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the secret reference. The reference names must correspond the container type, more details are available [here](https://docs.openstack.org/barbican/stein/api/reference/containers.html).
 {{% /md %}}</dd>
@@ -1862,7 +1663,7 @@ container, when `project_access` is set to `false`.
             title="Optional">
         <span>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The consumer URL.
 {{% /md %}}</dd>
@@ -1880,7 +1681,7 @@ container, when `project_access` is set to `false`.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/keymanager?tab=doc#ContainerV1SecretRefArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/go/openstack/keymanager?tab=doc#ContainerV1SecretRefOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#ContainerV1SecretRefArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/keymanager?tab=doc#ContainerV1SecretRefOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1889,22 +1690,22 @@ container, when `project_access` is set to `false`.
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the secret reference. The reference names must correspond the container type, more details are available [here](https://docs.openstack.org/barbican/stein/api/reference/containers.html).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Secret<wbr>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret, URL.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the secret reference. The reference names must correspond the container type, more details are available [here](https://docs.openstack.org/barbican/stein/api/reference/containers.html).
 {{% /md %}}</dd>
 
 </dl>
@@ -1914,22 +1715,22 @@ container, when `project_access` is set to `false`.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The name of the secret reference. The reference names must correspond the container type, more details are available [here](https://docs.openstack.org/barbican/stein/api/reference/containers.html).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>Secret<wbr>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret, URL.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the secret reference. The reference names must correspond the container type, more details are available [here](https://docs.openstack.org/barbican/stein/api/reference/containers.html).
 {{% /md %}}</dd>
 
 </dl>
@@ -1939,22 +1740,22 @@ container, when `project_access` is set to `false`.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The name of the secret reference. The reference names must correspond the container type, more details are available [here](https://docs.openstack.org/barbican/stein/api/reference/containers.html).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>secret<wbr>Ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret, URL.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the secret reference. The reference names must correspond the container type, more details are available [here](https://docs.openstack.org/barbican/stein/api/reference/containers.html).
 {{% /md %}}</dd>
 
 </dl>
@@ -1964,22 +1765,22 @@ container, when `project_access` is set to `false`.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the secret reference. The reference names must correspond the container type, more details are available [here](https://docs.openstack.org/barbican/stein/api/reference/containers.html).
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>secret_<wbr>ref</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The secret reference / where to find the secret, URL.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The name of the secret reference. The reference names must correspond the container type, more details are available [here](https://docs.openstack.org/barbican/stein/api/reference/containers.html).
 {{% /md %}}</dd>
 
 </dl>
@@ -1999,6 +1800,7 @@ container, when `project_access` is set to `false`.
 	<dd><a href="https://github.com/pulumi/pulumi-openstack">https://github.com/pulumi/pulumi-openstack</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-providers/terraform-provider-openstack).</dd>
 </dl>
 

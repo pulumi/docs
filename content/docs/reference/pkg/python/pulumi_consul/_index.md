@@ -18,9 +18,6 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AclAuthMethod</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">config=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AclAuthMethod" title="Permalink to this definition">¶</a></dt>
 <dd><p>Starting with Consul 1.5.0, the .AclAuthMethod resource can be used to
 managed Consul ACL auth methods.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/acl_auth_method.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/acl_auth_method.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -128,9 +125,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AclBindingRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auth_method=None</em>, <em class="sig-param">bind_name=None</em>, <em class="sig-param">bind_type=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">selector=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AclBindingRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Starting with Consul 1.5.0, the .AclBindingRule resource can be used to
 managed Consul ACL binding rules.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/acl_binding_rule.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/acl_binding_rule.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -257,9 +251,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_consul.AclPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AclPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">datacenters=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AclPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Starting with Consul 1.4.0, the .AclPolicy can be used to managed Consul ACL policies.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/acl_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/acl_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -366,9 +357,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_consul.AclRole">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AclRole</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">service_identities=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AclRole" title="Permalink to this definition">¶</a></dt>
 <dd><p>Starting with Consul 1.5.0, the .AclRole can be used to managed Consul ACL roles.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/acl_role.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/acl_role.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -492,9 +480,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_consul.AclToken">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">AclToken</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">accessor_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">local=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">roles=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.AclToken" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.AclToken</span></code> resource writes an ACL token into Consul.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/acl_token.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/acl_token.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -693,9 +678,6 @@ for more information.</p>
 <p>Provides access to the agent service data in Consul. This can be used to
 define a service associated with a particular agent. Currently, defining
 health checks for an agent service is not supported.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/agent_service.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/agent_service.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -803,9 +785,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 of Consul to automatically manage Consul servers.</p>
 <p>It includes to automatically cleanup dead servers, monitor the status of the Raft
 cluster and stable server introduction.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/autopilot_config.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/autopilot_config.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1057,9 +1036,6 @@ and will be removed in a future release. Please read the <a class="reference ext
 for more information.</p>
 <p>Registers a node or service with the <a class="reference external" href="https://www.consul.io/docs/agent/http/catalog.html#catalog_register">Consul Catalog</a>.
 Currently, defining health checks is not supported.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/catalog_entry.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/catalog_entry.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1079,12 +1055,13 @@ the node. Supported values are documented below.</p></li>
 </dl>
 <p>The <strong>services</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The address of the node being added to,
-or referenced in the catalog.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The address of the service. Defaults to the
+node address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the service. Defaults to the <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the service</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port of the service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values that are opaque to Consul,
+but can be used to distinguish between services or nodes.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_consul.CatalogEntry.address">
@@ -1113,12 +1090,13 @@ referenced in the catalog.</p>
 <dd><p>A service to optionally associated with
 the node. Supported values are documented below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The address of the node being added to,
-or referenced in the catalog.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The address of the service. Defaults to the
+node address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ID of the service. Defaults to the <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the service</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The port of the service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of values that are opaque to Consul,
+but can be used to distinguish between services or nodes.</p></li>
 </ul>
 </dd></dl>
 
@@ -1153,12 +1131,13 @@ the node. Supported values are documented below.</p></li>
 </dl>
 <p>The <strong>services</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The address of the node being added to,
-or referenced in the catalog.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">address</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The address of the service. Defaults to the
+node address.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ID of the service. Defaults to the <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the service</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port of the service.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of values that are opaque to Consul,
+but can be used to distinguish between services or nodes.</p></li>
 </ul>
 </dd></dl>
 
@@ -1206,9 +1185,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The <a class="reference external" href="https://www.consul.io/docs/agent/config_entries.html">Configuration Entry</a>
 resource can be used to provide cluster-wide defaults for various aspects of
 Consul.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/config_entry.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/config_entry.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1854,9 +1830,6 @@ rules for which services may connect to one another when using <a class="referen
 that will be created in the future when creating intentions. This resource can be used
 in conjunction with the <code class="docutils literal notranslate"><span class="pre">.Service</span></code> datasource when referencing services
 registered on nodes that have a running Consul agent.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/intention.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/intention.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2023,9 +1996,11 @@ token that the agent provides by default.</p></li>
 </dl>
 <p>The <strong>subkey_collection</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">flags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - An <a class="reference external" href="https://www.consul.io/api/kv.html#flags-1">unsigned integer value</a>
+to attach to the key (defaults to 0).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - This is the path (which will be appended to the given
+<code class="docutils literal notranslate"><span class="pre">path_prefix</span></code>) in Consul that should be written to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value to write to the given path.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_consul.KeyPrefix.datacenter">
@@ -2054,9 +2029,11 @@ end with a slash, to manage a “folder” of keys.</p>
 <dd><p>A subkey to add. Supported values documented below.
 Multiple blocks supported.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">flags</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flags</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - An <a class="reference external" href="https://www.consul.io/api/kv.html#flags-1">unsigned integer value</a>
+to attach to the key (defaults to 0).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - This is the path (which will be appended to the given
+<code class="docutils literal notranslate"><span class="pre">path_prefix</span></code>) in Consul that should be written to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value to write to the given path.</p></li>
 </ul>
 </dd></dl>
 
@@ -2106,9 +2083,11 @@ token that the agent provides by default.</p></li>
 </dl>
 <p>The <strong>subkey_collection</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">flags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - An <a class="reference external" href="https://www.consul.io/api/kv.html#flags-1">unsigned integer value</a>
+to attach to the key (defaults to 0).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - This is the path (which will be appended to the given
+<code class="docutils literal notranslate"><span class="pre">path_prefix</span></code>) in Consul that should be written to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value to write to the given path.</p></li>
 </ul>
 </dd></dl>
 
@@ -2174,11 +2153,15 @@ token that the agent provides by default.</p></li>
 <p>The <strong>keys</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">delete</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">flags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delete</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, then the key will be deleted when
+either its configuration block is removed from the configuration or
+the entire resource is destroyed. Otherwise, it will be left in Consul.
+Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - An <a class="reference external" href="https://www.consul.io/api/kv.html#flags-1">unsigned integer value</a>
+to attach to the key (defaults to 0).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - This is the path in Consul that should be written to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value to write to the given path.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_consul.Keys.datacenter">
@@ -2194,11 +2177,15 @@ agent’s default datacenter and the datacenter in the provider setup.</p>
 Supported values documented below.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">delete</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">flags</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delete</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - If true, then the key will be deleted when
+either its configuration block is removed from the configuration or
+the entire resource is destroyed. Otherwise, it will be left in Consul.
+Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flags</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - An <a class="reference external" href="https://www.consul.io/api/kv.html#flags-1">unsigned integer value</a>
+to attach to the key (defaults to 0).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - This is the path in Consul that should be written to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value to write to the given path.</p></li>
 </ul>
 </dd></dl>
 
@@ -2239,11 +2226,15 @@ token that the agent provides by default.</p></li>
 <p>The <strong>keys</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">delete</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">flags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">delete</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - If true, then the key will be deleted when
+either its configuration block is removed from the configuration or
+the entire resource is destroyed. Otherwise, it will be left in Consul.
+Defaults to false.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">flags</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - An <a class="reference external" href="https://www.consul.io/api/kv.html#flags-1">unsigned integer value</a>
+to attach to the key (defaults to 0).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - This is the path in Consul that should be written to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value to write to the given path.</p></li>
 </ul>
 </dd></dl>
 
@@ -2290,9 +2281,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">Node</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">address=None</em>, <em class="sig-param">datacenter=None</em>, <em class="sig-param">meta=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.Node" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides access to Node data in Consul. This can be used to define a
 node. Currently, defining health checks is not supported.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/node.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/node.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2680,9 +2668,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 <a class="reference external" href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/index.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2738,9 +2723,6 @@ can be used to create services addressable by Consul that cannot be registered
 with a <a class="reference external" href="https://www.consul.io/docs/agent/basics.html">local agent</a>.</p>
 <p>If the Consul agent is running on the node where this service is registered, it is
 not recommended to use this resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/service.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/r/service.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2752,7 +2734,7 @@ address of the node.</p></li>
 agent’s default datacenter and the datacenter in the provider setup.</p></li>
 <li><p><strong>meta</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of arbitrary KV metadata linked to the service
 instance.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the header.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the health-check.</p></li>
 <li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace to create the service within.</p></li>
 <li><p><strong>node</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the node the to register the service on.</p></li>
 <li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port of the service.</p></li>
@@ -2781,7 +2763,7 @@ The attributes of each header is given below.</p>
 invocation.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">method</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The method to use for HTTP health-checks. Defaults
 to <code class="docutils literal notranslate"><span class="pre">GET</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the health-check.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">notes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An opaque field meant to hold human readable text.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The initial health-check status.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tcp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The TCP address and port to connect to for a TCP check.</p></li>
@@ -2813,7 +2795,7 @@ instance.</p>
 <dl class="attribute">
 <dt id="pulumi_consul.Service.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_consul.Service.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>The name of the header.</p>
+<dd><p>The name of the health-check.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2864,7 +2846,7 @@ address of the node.</p></li>
 agent’s default datacenter and the datacenter in the provider setup.</p></li>
 <li><p><strong>meta</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of arbitrary KV metadata linked to the service
 instance.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the header.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the health-check.</p></li>
 <li><p><strong>namespace</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The namespace to create the service within.</p></li>
 <li><p><strong>node</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the node the to register the service on.</p></li>
 <li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The port of the service.</p></li>
@@ -2893,7 +2875,7 @@ The attributes of each header is given below.</p>
 invocation.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">method</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The method to use for HTTP health-checks. Defaults
 to <code class="docutils literal notranslate"><span class="pre">GET</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the header.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the health-check.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">notes</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An opaque field meant to hold human readable text.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The initial health-check status.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">tcp</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The TCP address and port to connect to for a TCP check.</p></li>
@@ -2946,14 +2928,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">get_acl_auth_method</code><span class="sig-paren">(</span><em class="sig-param">config=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.get_acl_auth_method" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.AclAuthMethod</span></code> data source returns the information related to a
 <a class="reference external" href="https://www.consul.io/docs/acl/acl-auth-methods.html">Consul Auth Method</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/acl_auth_method.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/acl_auth_method.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>config</strong> (<em>dict</em>) – The configuration options of the ACL Auth Method.</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – The description of the ACL Auth Method.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The name of the ACL Auth Method.</p></li>
 <li><p><strong>namespace</strong> (<em>str</em>) – The namespace to lookup the auth method.</p></li>
+<li><p><strong>type</strong> (<em>str</em>) – The type of the ACL Auth Method.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2964,14 +2946,14 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">get_acl_policy</code><span class="sig-paren">(</span><em class="sig-param">datacenters=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.get_acl_policy" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.AclPolicy</span></code> data source returns the information related to a
 <a class="reference external" href="https://www.consul.io/docs/acl/acl-system.html#acl-policies">Consul ACL Policy</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/acl_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/acl_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>datacenters</strong> (<em>list</em>) – The datacenters associated with the ACL Policy.</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – The description of the ACL Policy.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The name of the ACL Policy.</p></li>
 <li><p><strong>namespace</strong> (<em>str</em>) – The namespace to lookup the policy.</p></li>
+<li><p><strong>rules</strong> (<em>str</em>) – The rules associated with the ACL Policy.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2982,14 +2964,16 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">get_acl_role</code><span class="sig-paren">(</span><em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">policies=None</em>, <em class="sig-param">service_identities=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.get_acl_role" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.AclRole</span></code> data source returns the information related to a
 <a class="reference external" href="https://www.consul.io/api/acl/roles.html">Consul ACL Role</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/acl_role.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/acl_role.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>description</strong> (<em>str</em>) – The description of the ACL Role.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The name of the ACL Role.</p></li>
 <li><p><strong>namespace</strong> (<em>str</em>) – The namespace to lookup the role.</p></li>
+<li><p><strong>policies</strong> (<em>list</em>) – The list of policies associated with the ACL Role. Each entry has
+an <code class="docutils literal notranslate"><span class="pre">id</span></code> and a <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute.</p></li>
+<li><p><strong>service_identities</strong> (<em>list</em>) – The list of service identities associated with the ACL
+Role. Each entry has a <code class="docutils literal notranslate"><span class="pre">service_name</span></code> attribute and a list of <code class="docutils literal notranslate"><span class="pre">datacenters</span></code>.</p></li>
 </ul>
 </dd>
 </dl>
@@ -3012,14 +2996,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="docutils literal notranslate"><span class="pre">.AclToken</span></code> resource with the exception of its secret ID.</p>
 <p>If you want to get the secret ID associated with a token, use the
 <cite>`</cite>.getAclTokenSecretId`` data source &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/consul/d/acl_token_secret_id.html">https://www.terraform.io/docs/providers/consul/d/acl_token_secret_id.html</a>&gt;`_.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/acl_token.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/acl_token.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>accessor_id</strong> (<em>str</em>) – The accessor ID of the ACL token.</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – The description of the ACL token.</p></li>
+<li><p><strong>local</strong> (<em>bool</em>) – Whether the ACL token is local to the datacenter it was created within.</p></li>
 <li><p><strong>namespace</strong> (<em>str</em>) – The namespace to lookup the ACL token.</p></li>
+<li><p><strong>policies</strong> (<em>list</em>) – A list of policies associated with the ACL token. Each entry has
+an <code class="docutils literal notranslate"><span class="pre">id</span></code> and a <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute.</p></li>
 </ul>
 </dd>
 </dl>
@@ -3052,9 +3037,6 @@ deprecated in a future release.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">.getAgentConfig</span></code> data source returns
 <a class="reference external" href="https://www.consul.io/api/agent.html#read-configuration">configuration data</a>
 from the agent specified in the <code class="docutils literal notranslate"><span class="pre">provider</span></code>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/agent_config.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/agent_config.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -3067,9 +3049,6 @@ from a future release of the provider. Read the <a class="reference external" hr
 <p>The <code class="docutils literal notranslate"><span class="pre">.getAgentSelf</span></code> data source returns
 <a class="reference external" href="https://www.consul.io/docs/agent/http/agent.html#agent_self">configuration and status data</a>
 from the agent specified in the <code class="docutils literal notranslate"><span class="pre">provider</span></code>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/agent_self.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/agent_self.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 <dl class="function">
@@ -3078,9 +3057,6 @@ from the agent specified in the <code class="docutils literal notranslate"><span
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.getAutopilotHealth</span></code> data source returns
 <a class="reference external" href="https://www.consul.io/api/operator/autopilot.html#read-health">autopilot health information</a>
 about the current Consul cluster.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/autopilot_health.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/autopilot_health.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>datacenter</strong> (<em>str</em>) – The datacenter to use. This overrides the agent’s
@@ -3164,9 +3140,14 @@ token that the agent provides by default.</p></li>
 </dl>
 <p>The <strong>subkey_collection</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - This is the default value to set for <code class="docutils literal notranslate"><span class="pre">var.&lt;name&gt;</span></code>
+if the key does not exist in Consul. Defaults to an empty string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - This is the name of the key. This value of the
+key is exposed as <code class="docutils literal notranslate"><span class="pre">var.&lt;name&gt;</span></code>. This is not the path of the subkey
+in Consul.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - This is the subkey path in Consul (which will be appended
+to the given <code class="docutils literal notranslate"><span class="pre">path_prefix</span></code>) to construct the full key that will be used
+to read the value.</p></li>
 </ul>
 </dd></dl>
 
@@ -3175,9 +3156,6 @@ token that the agent provides by default.</p></li>
 <code class="sig-prename descclassname">pulumi_consul.</code><code class="sig-name descname">get_keys</code><span class="sig-paren">(</span><em class="sig-param">datacenter=None</em>, <em class="sig-param">keys=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_consul.get_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">.Keys</span></code> resource reads values from the Consul key/value store.
 This is a powerful way dynamically set values in templates.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/keys.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/keys.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3193,9 +3171,13 @@ token that the agent provides by default.</p></li>
 </dl>
 <p>The <strong>keys</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - This is the default value to set for <code class="docutils literal notranslate"><span class="pre">var.&lt;name&gt;</span></code>
+if the key does not exist in Consul. Defaults to an empty string.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - This is the name of the key. This value of the
+key is exposed as <code class="docutils literal notranslate"><span class="pre">var.&lt;name&gt;</span></code>. This is not the path of the key
+in Consul.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - This is the path in Consul that should be read
+or written to.</p></li>
 </ul>
 </dd></dl>
 
@@ -3206,9 +3188,6 @@ token that the agent provides by default.</p></li>
 been registered with the Consul cluster in a given datacenter.  By specifying a
 different datacenter in the <code class="docutils literal notranslate"><span class="pre">query_options</span></code> it is possible to retrieve a list of
 nodes from a different WAN-attached Consul datacenter.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/nodes.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/nodes.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>query_options</strong> (<em>list</em>) – See below.</p>
@@ -3216,17 +3195,23 @@ nodes from a different WAN-attached Consul datacenter.</p>
 </dl>
 <p>The <strong>query_options</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allowStale</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowStale</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - When <code class="docutils literal notranslate"><span class="pre">true</span></code>, the default, allow responses from
+Consul servers that are followers.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">datacenter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Consul datacenter to query.  Defaults to the
 same value found in <code class="docutils literal notranslate"><span class="pre">query_options</span></code> parameter specified below, or if that is
 empty, the <code class="docutils literal notranslate"><span class="pre">datacenter</span></code> value found in the Consul agent that this provider is
 configured to talk to then the datacenter in the provider setup.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">near</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeMeta</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requireConsistent</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">waitIndex</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">waitTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireConsistent</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - When <code class="docutils literal notranslate"><span class="pre">true</span></code> force the client to perform a
+read on at least quorum servers and verify the result is the same.  Defaults
+to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specify the Consul ACL token to use when performing the
+request.  This defaults to the same API token configured by the <code class="docutils literal notranslate"><span class="pre">consul</span></code>
+provider but may be overriden if necessary.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">waitIndex</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Index number used to enable blocking quereis.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">waitTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Max time the client should wait for a blocking query
+to return.</p></li>
 </ul>
 </dd></dl>
 
@@ -3240,9 +3225,6 @@ different datacenter in the <code class="docutils literal notranslate"><span cla
 services from a different WAN-attached Consul datacenter.</p>
 <p>This data source is different from the <code class="docutils literal notranslate"><span class="pre">.getServices</span></code> (plural) data
 source, which provides a summary of the current Consul services.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/service.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/service.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3259,18 +3241,24 @@ to return based on a single matching tag..</p></li>
 </dl>
 <p>The <strong>query_options</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allowStale</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowStale</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - When <code class="docutils literal notranslate"><span class="pre">true</span></code>, the default, allow responses from
+Consul servers that are followers.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">datacenter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Consul datacenter to query.  Defaults to the
 same value found in <code class="docutils literal notranslate"><span class="pre">query_options</span></code> parameter specified below, or if that is
 empty, the <code class="docutils literal notranslate"><span class="pre">datacenter</span></code> value found in the Consul agent that this provider is
 configured to talk to.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The namespace to lookup the service.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">near</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeMeta</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requireConsistent</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">waitIndex</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">waitTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireConsistent</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - When <code class="docutils literal notranslate"><span class="pre">true</span></code> force the client to perform a
+read on at least quorum servers and verify the result is the same.  Defaults
+to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specify the Consul ACL token to use when performing the
+request.  This defaults to the same API token configured by the <code class="docutils literal notranslate"><span class="pre">consul</span></code>
+provider but may be overriden if necessary.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">waitIndex</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Index number used to enable blocking quereis.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">waitTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Max time the client should wait for a blocking query
+to return.</p></li>
 </ul>
 </dd></dl>
 
@@ -3283,9 +3271,6 @@ The result includes the list of service instances, the node associated to each
 instance and its health-checks.</p>
 <p>This resource is likely to change as frequently as the health-checks are being
 updated, you should expect different results in a frequent basis.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/service_health.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/service_health.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3313,9 +3298,6 @@ specifying a different datacenter in the <code class="docutils literal notransla
 retrieve a list of services from a different WAN-attached Consul datacenter.</p>
 <p>This data source is different from the <code class="docutils literal notranslate"><span class="pre">.Service</span></code> (singular) data
 source, which provides a detailed response about a specific Consul service.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/services.html.markdown">https://github.com/terraform-providers/terraform-provider-consul/blob/master/website/docs/d/services.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>query_options</strong> (<em>list</em>) – See below.</p>
@@ -3323,18 +3305,24 @@ source, which provides a detailed response about a specific Consul service.</p>
 </dl>
 <p>The <strong>query_options</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">allowStale</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">allowStale</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - When <code class="docutils literal notranslate"><span class="pre">true</span></code>, the default, allow responses from
+Consul servers that are followers.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">datacenter</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Consul datacenter to query.  Defaults to the
 same value found in <code class="docutils literal notranslate"><span class="pre">query_options</span></code> parameter specified below, or if that is
 empty, the <code class="docutils literal notranslate"><span class="pre">datacenter</span></code> value found in the Consul agent that this provider is
 configured to talk to.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The namespace to lookup the services.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">near</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">nodeMeta</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requireConsistent</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">waitIndex</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">waitTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requireConsistent</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - When <code class="docutils literal notranslate"><span class="pre">true</span></code> force the client to perform a
+read on at least quorum servers and verify the result is the same.  Defaults
+to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">token</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specify the Consul ACL token to use when performing the
+request.  This defaults to the same API token configured by the <code class="docutils literal notranslate"><span class="pre">consul</span></code>
+provider but may be overriden if necessary.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">waitIndex</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Index number used to enable blocking quereis.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">waitTime</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Max time the client should wait for a blocking query
+to return.</p></li>
 </ul>
 </dd></dl>
 

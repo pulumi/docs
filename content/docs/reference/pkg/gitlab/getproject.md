@@ -8,18 +8,21 @@ block_external_search_index: true
 
 Provides details about a specific project in the gitlab provider. The results include the name of the project, path, description, default branch, etc.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
 
-const example = pulumi.output(gitlab.getProject({
+const example = gitlab.getProject({
     id: 30,
-}, { async: true }));
+});
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-gitlab/blob/master/website/docs/d/project.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -41,13 +44,13 @@ const example = pulumi.output(gitlab.getProject({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupProject<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#GetProjectArgs">GetProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#InvokeOption">InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/go/gitlab/?tab=doc#LookupProjectResult">LookupProjectResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupProject<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab/?tab=doc#GetProjectArgs">GetProjectArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-gitlab/sdk/v2/go/gitlab/?tab=doc#LookupProjectResult">LookupProjectResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
 <div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetProject </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.GetProjectResult.html">GetProjectResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.GetProjectArgs.html">GetProjectArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.Gitlab.GetProjectResult.html">GetProjectResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Gitlab/Pulumi.GitLab.GetProjectArgs.html">GetProjectArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -60,11 +63,20 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}The integer that uniquely identifies the project within the gitlab install.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Archived</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the project is in read-only mode (archived).
 {{% /md %}}</dd>
@@ -73,7 +85,7 @@ The following arguments are supported:
             title="Optional">
         <span>Default<wbr>Branch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The default branch for the project.
 {{% /md %}}</dd>
@@ -82,7 +94,7 @@ The following arguments are supported:
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A description of the project.
 {{% /md %}}</dd>
@@ -91,26 +103,17 @@ The following arguments are supported:
             title="Optional">
         <span>Http<wbr>Url<wbr>To<wbr>Repo</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via HTTP.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The integer that uniquely identifies the project within the gitlab install.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Issues<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable issue tracking for the project.
 {{% /md %}}</dd>
@@ -119,7 +122,7 @@ repository via HTTP.
             title="Optional">
         <span>Lfs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable LFS for the project.
 {{% /md %}}</dd>
@@ -128,7 +131,7 @@ repository via HTTP.
             title="Optional">
         <span>Merge<wbr>Requests<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable merge requests for the project.
 {{% /md %}}</dd>
@@ -137,7 +140,7 @@ repository via HTTP.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -145,7 +148,7 @@ repository via HTTP.
             title="Optional">
         <span>Namespace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
 See `gitlab..Group` for an example.
@@ -155,7 +158,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The path of the repository.
 {{% /md %}}</dd>
@@ -164,7 +167,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Pipelines<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
 {{% /md %}}</dd>
@@ -173,7 +176,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Request<wbr>Access<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Allow users to request member access.
 {{% /md %}}</dd>
@@ -182,7 +185,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Runners<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Registration token to use during runner setup.
 {{% /md %}}</dd>
@@ -191,7 +194,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Snippets<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable snippets for the project.
 {{% /md %}}</dd>
@@ -200,7 +203,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Ssh<wbr>Url<wbr>To<wbr>Repo</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via SSH.
@@ -210,7 +213,7 @@ repository via SSH.
             title="Optional">
         <span>Visibility<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Repositories are created as private by default.
 {{% /md %}}</dd>
@@ -219,7 +222,7 @@ repository via SSH.
             title="Optional">
         <span>Web<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}URL that can be used to find the project in a browser.
 {{% /md %}}</dd>
@@ -228,7 +231,7 @@ repository via SSH.
             title="Optional">
         <span>Wiki<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable wiki for the project.
 {{% /md %}}</dd>
@@ -240,11 +243,20 @@ repository via SSH.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}The integer that uniquely identifies the project within the gitlab install.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Archived</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the project is in read-only mode (archived).
 {{% /md %}}</dd>
@@ -253,7 +265,7 @@ repository via SSH.
             title="Optional">
         <span>Default<wbr>Branch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The default branch for the project.
 {{% /md %}}</dd>
@@ -262,7 +274,7 @@ repository via SSH.
             title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A description of the project.
 {{% /md %}}</dd>
@@ -271,26 +283,17 @@ repository via SSH.
             title="Optional">
         <span>Http<wbr>Url<wbr>To<wbr>Repo</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via HTTP.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The integer that uniquely identifies the project within the gitlab install.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Issues<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable issue tracking for the project.
 {{% /md %}}</dd>
@@ -299,7 +302,7 @@ repository via HTTP.
             title="Optional">
         <span>Lfs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable LFS for the project.
 {{% /md %}}</dd>
@@ -308,7 +311,7 @@ repository via HTTP.
             title="Optional">
         <span>Merge<wbr>Requests<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable merge requests for the project.
 {{% /md %}}</dd>
@@ -317,7 +320,7 @@ repository via HTTP.
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -325,7 +328,7 @@ repository via HTTP.
             title="Optional">
         <span>Namespace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
 See `gitlab..Group` for an example.
@@ -335,7 +338,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The path of the repository.
 {{% /md %}}</dd>
@@ -344,7 +347,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Pipelines<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
 {{% /md %}}</dd>
@@ -353,7 +356,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Request<wbr>Access<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Allow users to request member access.
 {{% /md %}}</dd>
@@ -362,7 +365,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Runners<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Registration token to use during runner setup.
 {{% /md %}}</dd>
@@ -371,7 +374,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Snippets<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable snippets for the project.
 {{% /md %}}</dd>
@@ -380,7 +383,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>Ssh<wbr>Url<wbr>To<wbr>Repo</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via SSH.
@@ -390,7 +393,7 @@ repository via SSH.
             title="Optional">
         <span>Visibility<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Repositories are created as private by default.
 {{% /md %}}</dd>
@@ -399,7 +402,7 @@ repository via SSH.
             title="Optional">
         <span>Web<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}URL that can be used to find the project in a browser.
 {{% /md %}}</dd>
@@ -408,7 +411,7 @@ repository via SSH.
             title="Optional">
         <span>Wiki<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable wiki for the project.
 {{% /md %}}</dd>
@@ -420,11 +423,20 @@ repository via SSH.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}The integer that uniquely identifies the project within the gitlab install.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>archived</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the project is in read-only mode (archived).
 {{% /md %}}</dd>
@@ -433,7 +445,7 @@ repository via SSH.
             title="Optional">
         <span>default<wbr>Branch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The default branch for the project.
 {{% /md %}}</dd>
@@ -442,7 +454,7 @@ repository via SSH.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A description of the project.
 {{% /md %}}</dd>
@@ -451,26 +463,17 @@ repository via SSH.
             title="Optional">
         <span>http<wbr>Url<wbr>To<wbr>Repo</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via HTTP.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The integer that uniquely identifies the project within the gitlab install.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>issues<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable issue tracking for the project.
 {{% /md %}}</dd>
@@ -479,7 +482,7 @@ repository via HTTP.
             title="Optional">
         <span>lfs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable LFS for the project.
 {{% /md %}}</dd>
@@ -488,7 +491,7 @@ repository via HTTP.
             title="Optional">
         <span>merge<wbr>Requests<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable merge requests for the project.
 {{% /md %}}</dd>
@@ -497,7 +500,7 @@ repository via HTTP.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -505,7 +508,7 @@ repository via HTTP.
             title="Optional">
         <span>namespace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
 See `gitlab..Group` for an example.
@@ -515,7 +518,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The path of the repository.
 {{% /md %}}</dd>
@@ -524,7 +527,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>pipelines<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
 {{% /md %}}</dd>
@@ -533,7 +536,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>request<wbr>Access<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Allow users to request member access.
 {{% /md %}}</dd>
@@ -542,7 +545,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>runners<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Registration token to use during runner setup.
 {{% /md %}}</dd>
@@ -551,7 +554,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>snippets<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable snippets for the project.
 {{% /md %}}</dd>
@@ -560,7 +563,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>ssh<wbr>Url<wbr>To<wbr>Repo</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via SSH.
@@ -570,7 +573,7 @@ repository via SSH.
             title="Optional">
         <span>visibility<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Repositories are created as private by default.
 {{% /md %}}</dd>
@@ -579,7 +582,7 @@ repository via SSH.
             title="Optional">
         <span>web<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}URL that can be used to find the project in a browser.
 {{% /md %}}</dd>
@@ -588,7 +591,7 @@ repository via SSH.
             title="Optional">
         <span>wiki<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable wiki for the project.
 {{% /md %}}</dd>
@@ -600,11 +603,20 @@ repository via SSH.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The integer that uniquely identifies the project within the gitlab install.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>archived</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the project is in read-only mode (archived).
 {{% /md %}}</dd>
@@ -613,7 +625,7 @@ repository via SSH.
             title="Optional">
         <span>default_<wbr>branch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The default branch for the project.
 {{% /md %}}</dd>
@@ -622,7 +634,7 @@ repository via SSH.
             title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A description of the project.
 {{% /md %}}</dd>
@@ -631,26 +643,17 @@ repository via SSH.
             title="Optional">
         <span>http_<wbr>url_<wbr>to_<wbr>repo</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via HTTP.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The integer that uniquely identifies the project within the gitlab install.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>issues_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable issue tracking for the project.
 {{% /md %}}</dd>
@@ -659,7 +662,7 @@ repository via HTTP.
             title="Optional">
         <span>lfs_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable LFS for the project.
 {{% /md %}}</dd>
@@ -668,7 +671,7 @@ repository via HTTP.
             title="Optional">
         <span>merge_<wbr>requests_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable merge requests for the project.
 {{% /md %}}</dd>
@@ -677,7 +680,7 @@ repository via HTTP.
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -685,7 +688,7 @@ repository via HTTP.
             title="Optional">
         <span>namespace_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
 See `gitlab..Group` for an example.
@@ -695,7 +698,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The path of the repository.
 {{% /md %}}</dd>
@@ -704,7 +707,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>pipelines_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
 {{% /md %}}</dd>
@@ -713,7 +716,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>request_<wbr>access_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Allow users to request member access.
 {{% /md %}}</dd>
@@ -722,7 +725,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>runners_<wbr>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Registration token to use during runner setup.
 {{% /md %}}</dd>
@@ -731,7 +734,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>snippets_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable snippets for the project.
 {{% /md %}}</dd>
@@ -740,7 +743,7 @@ See `gitlab..Group` for an example.
             title="Optional">
         <span>ssh_<wbr>url_<wbr>to_<wbr>repo</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via SSH.
@@ -750,7 +753,7 @@ repository via SSH.
             title="Optional">
         <span>visibility_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Repositories are created as private by default.
 {{% /md %}}</dd>
@@ -759,7 +762,7 @@ repository via SSH.
             title="Optional">
         <span>web_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}URL that can be used to find the project in a browser.
 {{% /md %}}</dd>
@@ -768,7 +771,7 @@ repository via SSH.
             title="Optional">
         <span>wiki_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable wiki for the project.
 {{% /md %}}</dd>
@@ -797,7 +800,7 @@ The following output properties are available:
             title="">
         <span>Archived</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the project is in read-only mode (archived).
 {{% /md %}}</dd>
@@ -806,7 +809,7 @@ The following output properties are available:
             title="">
         <span>Default<wbr>Branch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The default branch for the project.
 {{% /md %}}</dd>
@@ -815,7 +818,7 @@ The following output properties are available:
             title="">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A description of the project.
 {{% /md %}}</dd>
@@ -824,7 +827,7 @@ The following output properties are available:
             title="">
         <span>Http<wbr>Url<wbr>To<wbr>Repo</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via HTTP.
@@ -834,7 +837,7 @@ repository via HTTP.
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Integer that uniquely identifies the project within the gitlab install.
 {{% /md %}}</dd>
@@ -843,7 +846,7 @@ repository via HTTP.
             title="">
         <span>Issues<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable issue tracking for the project.
 {{% /md %}}</dd>
@@ -852,7 +855,7 @@ repository via HTTP.
             title="">
         <span>Lfs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable LFS for the project.
 {{% /md %}}</dd>
@@ -861,7 +864,7 @@ repository via HTTP.
             title="">
         <span>Merge<wbr>Requests<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable merge requests for the project.
 {{% /md %}}</dd>
@@ -870,7 +873,7 @@ repository via HTTP.
             title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -878,7 +881,7 @@ repository via HTTP.
             title="">
         <span>Namespace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
 See `gitlab..Group` for an example.
@@ -888,7 +891,7 @@ See `gitlab..Group` for an example.
             title="">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The path of the repository.
 {{% /md %}}</dd>
@@ -897,7 +900,7 @@ See `gitlab..Group` for an example.
             title="">
         <span>Pipelines<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
 {{% /md %}}</dd>
@@ -906,7 +909,7 @@ See `gitlab..Group` for an example.
             title="">
         <span>Request<wbr>Access<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Allow users to request member access.
 {{% /md %}}</dd>
@@ -915,7 +918,7 @@ See `gitlab..Group` for an example.
             title="">
         <span>Runners<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Registration token to use during runner setup.
 {{% /md %}}</dd>
@@ -924,7 +927,7 @@ See `gitlab..Group` for an example.
             title="">
         <span>Snippets<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable snippets for the project.
 {{% /md %}}</dd>
@@ -933,7 +936,7 @@ See `gitlab..Group` for an example.
             title="">
         <span>Ssh<wbr>Url<wbr>To<wbr>Repo</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via SSH.
@@ -943,7 +946,7 @@ repository via SSH.
             title="">
         <span>Visibility<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Repositories are created as private by default.
 {{% /md %}}</dd>
@@ -952,7 +955,7 @@ repository via SSH.
             title="">
         <span>Web<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}URL that can be used to find the project in a browser.
 {{% /md %}}</dd>
@@ -961,7 +964,7 @@ repository via SSH.
             title="">
         <span>Wiki<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable wiki for the project.
 {{% /md %}}</dd>
@@ -977,7 +980,7 @@ repository via SSH.
             title="">
         <span>Archived</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the project is in read-only mode (archived).
 {{% /md %}}</dd>
@@ -986,7 +989,7 @@ repository via SSH.
             title="">
         <span>Default<wbr>Branch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The default branch for the project.
 {{% /md %}}</dd>
@@ -995,7 +998,7 @@ repository via SSH.
             title="">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A description of the project.
 {{% /md %}}</dd>
@@ -1004,7 +1007,7 @@ repository via SSH.
             title="">
         <span>Http<wbr>Url<wbr>To<wbr>Repo</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via HTTP.
@@ -1014,7 +1017,7 @@ repository via HTTP.
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Integer that uniquely identifies the project within the gitlab install.
 {{% /md %}}</dd>
@@ -1023,7 +1026,7 @@ repository via HTTP.
             title="">
         <span>Issues<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable issue tracking for the project.
 {{% /md %}}</dd>
@@ -1032,7 +1035,7 @@ repository via HTTP.
             title="">
         <span>Lfs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable LFS for the project.
 {{% /md %}}</dd>
@@ -1041,7 +1044,7 @@ repository via HTTP.
             title="">
         <span>Merge<wbr>Requests<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable merge requests for the project.
 {{% /md %}}</dd>
@@ -1050,7 +1053,7 @@ repository via HTTP.
             title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1058,7 +1061,7 @@ repository via HTTP.
             title="">
         <span>Namespace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
 See `gitlab..Group` for an example.
@@ -1068,7 +1071,7 @@ See `gitlab..Group` for an example.
             title="">
         <span>Path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The path of the repository.
 {{% /md %}}</dd>
@@ -1077,7 +1080,7 @@ See `gitlab..Group` for an example.
             title="">
         <span>Pipelines<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
 {{% /md %}}</dd>
@@ -1086,7 +1089,7 @@ See `gitlab..Group` for an example.
             title="">
         <span>Request<wbr>Access<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Allow users to request member access.
 {{% /md %}}</dd>
@@ -1095,7 +1098,7 @@ See `gitlab..Group` for an example.
             title="">
         <span>Runners<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Registration token to use during runner setup.
 {{% /md %}}</dd>
@@ -1104,7 +1107,7 @@ See `gitlab..Group` for an example.
             title="">
         <span>Snippets<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable snippets for the project.
 {{% /md %}}</dd>
@@ -1113,7 +1116,7 @@ See `gitlab..Group` for an example.
             title="">
         <span>Ssh<wbr>Url<wbr>To<wbr>Repo</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via SSH.
@@ -1123,7 +1126,7 @@ repository via SSH.
             title="">
         <span>Visibility<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Repositories are created as private by default.
 {{% /md %}}</dd>
@@ -1132,7 +1135,7 @@ repository via SSH.
             title="">
         <span>Web<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}URL that can be used to find the project in a browser.
 {{% /md %}}</dd>
@@ -1141,7 +1144,7 @@ repository via SSH.
             title="">
         <span>Wiki<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable wiki for the project.
 {{% /md %}}</dd>
@@ -1157,7 +1160,7 @@ repository via SSH.
             title="">
         <span>archived</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the project is in read-only mode (archived).
 {{% /md %}}</dd>
@@ -1166,7 +1169,7 @@ repository via SSH.
             title="">
         <span>default<wbr>Branch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The default branch for the project.
 {{% /md %}}</dd>
@@ -1175,7 +1178,7 @@ repository via SSH.
             title="">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A description of the project.
 {{% /md %}}</dd>
@@ -1184,7 +1187,7 @@ repository via SSH.
             title="">
         <span>http<wbr>Url<wbr>To<wbr>Repo</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via HTTP.
@@ -1194,7 +1197,7 @@ repository via HTTP.
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Integer that uniquely identifies the project within the gitlab install.
 {{% /md %}}</dd>
@@ -1203,7 +1206,7 @@ repository via HTTP.
             title="">
         <span>issues<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable issue tracking for the project.
 {{% /md %}}</dd>
@@ -1212,7 +1215,7 @@ repository via HTTP.
             title="">
         <span>lfs<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable LFS for the project.
 {{% /md %}}</dd>
@@ -1221,7 +1224,7 @@ repository via HTTP.
             title="">
         <span>merge<wbr>Requests<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable merge requests for the project.
 {{% /md %}}</dd>
@@ -1230,7 +1233,7 @@ repository via HTTP.
             title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1238,7 +1241,7 @@ repository via HTTP.
             title="">
         <span>namespace<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
 See `gitlab..Group` for an example.
@@ -1248,7 +1251,7 @@ See `gitlab..Group` for an example.
             title="">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The path of the repository.
 {{% /md %}}</dd>
@@ -1257,7 +1260,7 @@ See `gitlab..Group` for an example.
             title="">
         <span>pipelines<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
 {{% /md %}}</dd>
@@ -1266,7 +1269,7 @@ See `gitlab..Group` for an example.
             title="">
         <span>request<wbr>Access<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Allow users to request member access.
 {{% /md %}}</dd>
@@ -1275,7 +1278,7 @@ See `gitlab..Group` for an example.
             title="">
         <span>runners<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Registration token to use during runner setup.
 {{% /md %}}</dd>
@@ -1284,7 +1287,7 @@ See `gitlab..Group` for an example.
             title="">
         <span>snippets<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable snippets for the project.
 {{% /md %}}</dd>
@@ -1293,7 +1296,7 @@ See `gitlab..Group` for an example.
             title="">
         <span>ssh<wbr>Url<wbr>To<wbr>Repo</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via SSH.
@@ -1303,7 +1306,7 @@ repository via SSH.
             title="">
         <span>visibility<wbr>Level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Repositories are created as private by default.
 {{% /md %}}</dd>
@@ -1312,7 +1315,7 @@ repository via SSH.
             title="">
         <span>web<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}URL that can be used to find the project in a browser.
 {{% /md %}}</dd>
@@ -1321,7 +1324,7 @@ repository via SSH.
             title="">
         <span>wiki<wbr>Enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Enable wiki for the project.
 {{% /md %}}</dd>
@@ -1337,7 +1340,7 @@ repository via SSH.
             title="">
         <span>archived</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the project is in read-only mode (archived).
 {{% /md %}}</dd>
@@ -1346,7 +1349,7 @@ repository via SSH.
             title="">
         <span>default_<wbr>branch</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The default branch for the project.
 {{% /md %}}</dd>
@@ -1355,7 +1358,7 @@ repository via SSH.
             title="">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A description of the project.
 {{% /md %}}</dd>
@@ -1364,7 +1367,7 @@ repository via SSH.
             title="">
         <span>http_<wbr>url_<wbr>to_<wbr>repo</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via HTTP.
@@ -1374,7 +1377,7 @@ repository via HTTP.
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Integer that uniquely identifies the project within the gitlab install.
 {{% /md %}}</dd>
@@ -1383,7 +1386,7 @@ repository via HTTP.
             title="">
         <span>issues_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable issue tracking for the project.
 {{% /md %}}</dd>
@@ -1392,7 +1395,7 @@ repository via HTTP.
             title="">
         <span>lfs_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable LFS for the project.
 {{% /md %}}</dd>
@@ -1401,7 +1404,7 @@ repository via HTTP.
             title="">
         <span>merge_<wbr>requests_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable merge requests for the project.
 {{% /md %}}</dd>
@@ -1410,7 +1413,7 @@ repository via HTTP.
             title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1418,7 +1421,7 @@ repository via HTTP.
             title="">
         <span>namespace_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The namespace (group or user) of the project. Defaults to your user.
 See `gitlab..Group` for an example.
@@ -1428,7 +1431,7 @@ See `gitlab..Group` for an example.
             title="">
         <span>path</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The path of the repository.
 {{% /md %}}</dd>
@@ -1437,7 +1440,7 @@ See `gitlab..Group` for an example.
             title="">
         <span>pipelines_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable pipelines for the project.
 {{% /md %}}</dd>
@@ -1446,7 +1449,7 @@ See `gitlab..Group` for an example.
             title="">
         <span>request_<wbr>access_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Allow users to request member access.
 {{% /md %}}</dd>
@@ -1455,7 +1458,7 @@ See `gitlab..Group` for an example.
             title="">
         <span>runners_<wbr>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Registration token to use during runner setup.
 {{% /md %}}</dd>
@@ -1464,7 +1467,7 @@ See `gitlab..Group` for an example.
             title="">
         <span>snippets_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable snippets for the project.
 {{% /md %}}</dd>
@@ -1473,7 +1476,7 @@ See `gitlab..Group` for an example.
             title="">
         <span>ssh_<wbr>url_<wbr>to_<wbr>repo</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}URL that can be provided to `git clone` to clone the
 repository via SSH.
@@ -1483,7 +1486,7 @@ repository via SSH.
             title="">
         <span>visibility_<wbr>level</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Repositories are created as private by default.
 {{% /md %}}</dd>
@@ -1492,7 +1495,7 @@ repository via SSH.
             title="">
         <span>web_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}URL that can be used to find the project in a browser.
 {{% /md %}}</dd>
@@ -1501,7 +1504,7 @@ repository via SSH.
             title="">
         <span>wiki_<wbr>enabled</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Enable wiki for the project.
 {{% /md %}}</dd>

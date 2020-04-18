@@ -11,11 +11,6 @@ menu:
 
 A Pulumi package for creating and managing RabbitMQ resources.
 
-> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-rabbitmq)
-> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
-> first check the [`pulumi/pulumi-rabbitmq` repo](https://github.com/pulumi/pulumi-rabbitmq/issues); however, if that doesn't turn up anything,
-> please consult the source [`terraform-providers/terraform-provider-rabbitmq` repo](https://github.com/terraform-providers/terraform-provider-rabbitmq/issues).
-
 <h3>Resources</h3>
 <ul class="api">
     <li><a href="binding" title="Binding"><span class="symbol resource"></span>Binding</a></li>
@@ -35,6 +30,9 @@ A Pulumi package for creating and managing RabbitMQ resources.
 	<dd><a href="https://github.com/pulumi/pulumi-rabbitmq">https://github.com/pulumi/pulumi-rabbitmq</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`rabbitmq` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rabbitmq).</dd>
+	<dt>Version</dt>
+	<dd>2.0.0</dd>
 </dl>
 

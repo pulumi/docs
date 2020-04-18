@@ -250,4 +250,8 @@ main {
     @apply block;
 }
 
+.resource-deprecated {
+    @apply text-yellow-700 py-2 px-4 rounded border border-yellow-600;
+}
+
 @tailwind utilities;

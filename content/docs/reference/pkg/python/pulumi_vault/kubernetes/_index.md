@@ -19,9 +19,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Manages an Kubernetes auth backend config in a Vault server. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/kubernetes.html">Vault
 documentation</a> for more
 information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/kubernetes_auth_backend_config.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/kubernetes_auth_backend_config.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -138,9 +135,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages an Kubernetes auth backend role in a Vault server. See the <a class="reference external" href="https://www.vaultproject.io/docs/auth/kubernetes.html">Vault
 documentation</a> for more
 information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/kubernetes_auth_backend_role.html.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/r/kubernetes_auth_backend_role.html.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -587,13 +581,16 @@ requests a different type at generation time.</p>
 <dd><p>Reads the Role of an Kubernetes from a Vault server. See the <a class="reference external" href="https://www.vaultproject.io/api/auth/kubernetes/index.html#read-config">Vault
 documentation</a> for more
 information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/d/kubernetes_auth_backend_config.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/d/kubernetes_auth_backend_config.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>backend</strong> (<em>str</em>) – The unique name for the Kubernetes backend the config to
-retrieve Role attributes for resides in. Defaults to “kubernetes”.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>backend</strong> (<em>str</em>) – The unique name for the Kubernetes backend the config to
+retrieve Role attributes for resides in. Defaults to “kubernetes”.</p></li>
+<li><p><strong>issuer</strong> (<em>str</em>) – Optional JWT issuer. If no issuer is specified, <code class="docutils literal notranslate"><span class="pre">kubernetes.io/serviceaccount</span></code> will be used as the default issuer.</p></li>
+<li><p><strong>kubernetes_ca_cert</strong> (<em>str</em>) – PEM encoded CA cert for use by the TLS client used to talk with the Kubernetes API.</p></li>
+<li><p><strong>kubernetes_host</strong> (<em>str</em>) – Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.</p></li>
+<li><p><strong>pem_keys</strong> (<em>list</em>) – Optional list of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these keys.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
@@ -604,15 +601,42 @@ retrieve Role attributes for resides in. Defaults to “kubernetes”.</p>
 <dd><p>Reads the Role of an Kubernetes from a Vault server. See the <a class="reference external" href="https://www.vaultproject.io/api/auth/kubernetes/index.html#read-role">Vault
 documentation</a> for more
 information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/d/kubernetes_auth_backend_role.md">https://github.com/terraform-providers/terraform-provider-vault/blob/master/website/docs/d/kubernetes_auth_backend_role.md</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>audience</strong> (<em>str</em>) – (Optional) Audience claim to verify in the JWT.</p></li>
 <li><p><strong>backend</strong> (<em>str</em>) – The unique name for the Kubernetes backend the role to
 retrieve Role attributes for resides in. Defaults to “kubernetes”.</p></li>
 <li><p><strong>role_name</strong> (<em>str</em>) – The name of the role to retrieve the Role attributes for.</p></li>
+<li><p><strong>token_bound_cidrs</strong> (<em>list</em>) – List of CIDR blocks; if set, specifies blocks of IP
+addresses which can authenticate successfully, and ties the resulting token to these blocks
+as well.</p></li>
+<li><p><strong>token_explicit_max_ttl</strong> (<em>float</em>) – <p>If set, will encode an
+<a class="reference external" href="https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls">explicit max TTL</a>
+onto the token in number of seconds. This is a hard cap even if <code class="docutils literal notranslate"><span class="pre">token_ttl</span></code> and
+<code class="docutils literal notranslate"><span class="pre">token_max_ttl</span></code> would otherwise allow a renewal.</p>
+</p></li>
+<li><p><strong>token_max_ttl</strong> (<em>float</em>) – The maximum lifetime for generated tokens in number of seconds.
+Its current value will be referenced at renewal time.</p></li>
+<li><p><strong>token_no_default_policy</strong> (<em>bool</em>) – If set, the default policy will not be set on
+generated tokens; otherwise it will be added to the policies set in token_policies.</p></li>
+<li><p><strong>token_num_uses</strong> (<em>float</em>) – <p>The
+<a class="reference external" href="https://www.vaultproject.io/docs/concepts/tokens.html#token-time-to-live-periodic-tokens-and-explicit-max-ttls">period</a>,
+if any, in number of seconds to set on the token.</p>
+</p></li>
+<li><p><strong>token_period</strong> (<em>float</em>) – (Optional) If set, indicates that the
+token generated using this role should never expire. The token should be renewed within the
+duration specified by this value. At each renewal, the token’s TTL will be set to the
+value of this field. Specified in seconds.</p></li>
+<li><p><strong>token_policies</strong> (<em>list</em>) – List of policies to encode onto generated tokens. Depending
+on the auth method, this list may be supplemented by user/group/other values.</p></li>
+<li><p><strong>token_ttl</strong> (<em>float</em>) – The incremental lifetime for generated tokens in number of seconds.
+Its current value will be referenced at renewal time.</p></li>
+<li><p><strong>token_type</strong> (<em>str</em>) – The type of token that should be generated. Can be <code class="docutils literal notranslate"><span class="pre">service</span></code>,
+<code class="docutils literal notranslate"><span class="pre">batch</span></code>, or <code class="docutils literal notranslate"><span class="pre">default</span></code> to use the mount’s tuned default (which unless changed will be
+<code class="docutils literal notranslate"><span class="pre">service</span></code> tokens). For token store roles, there are two additional possibilities:
+<code class="docutils literal notranslate"><span class="pre">default-service</span></code> and <code class="docutils literal notranslate"><span class="pre">default-batch</span></code> which specify the type to return unless the client
+requests a different type at generation time.</p></li>
 </ul>
 </dd>
 </dl>

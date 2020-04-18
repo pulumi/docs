@@ -11,11 +11,6 @@ menu:
 
 A Pulumi package for creating and managing dnsimple cloud resources.
 
-> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-dnsimple)
-> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
-> first check the [`pulumi/pulumi-dnsimple` repo](https://github.com/pulumi/pulumi-dnsimple/issues); however, if that doesn't turn up anything,
-> please consult the source [`terraform-providers/terraform-provider-dnsimple` repo](https://github.com/terraform-providers/terraform-provider-dnsimple/issues).
-
 <h3>Resources</h3>
 <ul class="api">
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
@@ -28,6 +23,9 @@ A Pulumi package for creating and managing dnsimple cloud resources.
 	<dd><a href="https://github.com/pulumi/pulumi-dnsimple">https://github.com/pulumi/pulumi-dnsimple</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`dnsimple` Terraform Provider](https://github.com/terraform-providers/terraform-provider-dnsimple).</dd>
+	<dt>Version</dt>
+	<dd>2.0.0</dd>
 </dl>
 

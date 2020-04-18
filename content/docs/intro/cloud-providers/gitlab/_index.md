@@ -13,7 +13,7 @@ menu:
 The GitLab provider for Pulumi can be used to provision any of the cloud resources available in [GitLab](https://about.gitlab.com/).
 The GitLab provider must be configured with credentials to deploy and update resources in GitLab.
 
-See the [full API documentation]({{< relref "/docs/reference/pkg/nodejs/pulumi/gitlab" >}}) for complete details of the available GitLab provider APIs.
+See the [full API documentation]({{< relref "/docs/reference/pkg/gitlab" >}}) for complete details of the available GitLab provider APIs.
 
 ## Setup
 
