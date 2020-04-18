@@ -11,11 +11,6 @@ menu:
 
 A Pulumi package for creating and managing CloudAMQP resources.
 
-> This provider is a derived work of the [Terraform Provider](https://github.com/cloudamqp/terraform-provider-cloudamqp)
-> distributed under [MIT](https://mit-license.org/). If you encounter a bug or missing feature,
-> first check the [`pulumi/pulumi-cloudamqp` repo](https://github.com/pulumi/pulumi-cloudamqp/issues); however, if that doesn't turn up anything,
-> please consult the source [`cloudamqp/terraform-provider-cloudamqp` repo](https://github.com/cloudamqp/terraform-provider-cloudamqp/issues).
-
 <h3>Resources</h3>
 <ul class="api">
     <li><a href="alarm" title="Alarm"><span class="symbol resource"></span>Alarm</a></li>
@@ -43,6 +38,9 @@ A Pulumi package for creating and managing CloudAMQP resources.
 	<dd><a href="https://github.com/pulumi/pulumi-cloudamqp">https://github.com/pulumi/pulumi-cloudamqp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`cloudamqp` Terraform Provider](https://github.com/cloudamqp/terraform-provider-cloudamqp).</dd>
+	<dt>Version</dt>
+	<dd>2.0.0</dd>
 </dl>
 
