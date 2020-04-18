@@ -19,12 +19,12 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const vpcId = config.require("vpcId");
 
-const defaultInternetGateway = aws.ec2.getInternetGateway({
+const defaultInternetGateway = pulumi.output(aws.ec2.getInternetGateway({
     filters: [{
         name: "attachment.vpc-id",
         values: [vpcId],
     }],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

@@ -25,16 +25,16 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const listenerArn = config.require("listenerArn");
 
-const listener = aws.lb.getListener({
+const listener = pulumi.output(aws.lb.getListener({
     arn: listenerArn,
-});
-const selected = aws.lb.getLoadBalancer({
+}, { async: true }));
+const selected = pulumi.output(aws.lb.getLoadBalancer({
     name: "default-public",
-});
-const selected443 = aws.lb.getListener({
+}, { async: true }));
+const selected443 = selected.apply(selected => aws.lb.getListener({
     loadBalancerArn: selected.arn!,
     port: 443,
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

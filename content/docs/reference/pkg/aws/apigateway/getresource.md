@@ -17,13 +17,13 @@ To fetch the Resource, you must provide the REST API id as well as the full path
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const myRestApi = aws.apigateway.getRestApi({
+const myRestApi = pulumi.output(aws.apigateway.getRestApi({
     name: "my-rest-api",
-});
-const myResource = aws.apigateway.getResource({
+}, { async: true }));
+const myResource = myRestApi.apply(myRestApi => aws.apigateway.getResource({
     path: "/endpoint/path",
     restApiId: myRestApi.id,
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

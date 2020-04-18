@@ -16,9 +16,9 @@ Provides information about a RDS cluster.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const clusterName = aws.rds.getCluster({
+const clusterName = pulumi.output(aws.rds.getCluster({
     clusterIdentifier: "clusterName",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

@@ -24,7 +24,7 @@ the name of the AWS region configured on the provider.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const current = aws.getRegion();
+const current = pulumi.output(aws.getRegion({ async: true }));
 ```
 
 {{% /example %}}

@@ -18,9 +18,9 @@ Retrieve information about an EC2 DHCP Options configuration.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.ec2.getVpcDhcpOptions({
+const example = pulumi.output(aws.ec2.getVpcDhcpOptions({
     dhcpOptionsId: "dopts-12345678",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -31,7 +31,7 @@ const example = aws.ec2.getVpcDhcpOptions({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.ec2.getVpcDhcpOptions({
+const example = pulumi.output(aws.ec2.getVpcDhcpOptions({
     filters: [
         {
             name: "key",
@@ -42,7 +42,7 @@ const example = aws.ec2.getVpcDhcpOptions({
             values: ["example.com"],
         },
     ],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

@@ -102,7 +102,7 @@ const example = pulumi.all([aws_glue_catalog_database_source.name, aws_glue_cata
         },
     ],
     language: "PYTHON",
-}));
+}, { async: true }));
 
 export const pythonScript = example.pythonScript;
 ```
@@ -199,7 +199,7 @@ const example = pulumi.all([aws_glue_catalog_database_source.name, aws_glue_cata
         },
     ],
     language: "SCALA",
-}));
+}, { async: true }));
 
 export const scalaCode = example.scalaCode;
 ```

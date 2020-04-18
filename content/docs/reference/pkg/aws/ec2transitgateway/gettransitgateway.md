@@ -18,12 +18,12 @@ Get information on an EC2 Transit Gateway.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.ec2transitgateway.getTransitGateway({
+const example = pulumi.output(aws.ec2transitgateway.getTransitGateway({
     filters: [{
         name: "options.amazon-side-asn",
         values: ["64512"],
     }],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -34,9 +34,9 @@ const example = aws.ec2transitgateway.getTransitGateway({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.ec2transitgateway.getTransitGateway({
+const example = pulumi.output(aws.ec2transitgateway.getTransitGateway({
     id: "tgw-12345678",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

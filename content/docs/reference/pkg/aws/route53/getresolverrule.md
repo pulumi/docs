@@ -18,10 +18,10 @@ The following example shows how to get a Route53 Resolver rule based on its asso
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.route53.getResolverRule({
+const example = pulumi.output(aws.route53.getResolverRule({
     domainName: "subdomain.example.com",
     ruleType: "SYSTEM",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

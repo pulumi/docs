@@ -19,9 +19,9 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const fileSystemId = config.get("fileSystemId") || "";
 
-const byId = aws.efs.getFileSystem({
+const byId = pulumi.output(aws.efs.getFileSystem({
     fileSystemId: fileSystemId,
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

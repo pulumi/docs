@@ -16,7 +16,7 @@ Information about single EC2 Instance Type Offering.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.ec2.getInstanceTypeOffering({
+const example = pulumi.output(aws.ec2.getInstanceTypeOffering({
     filters: [{
         name: "instance-type",
         values: [
@@ -30,7 +30,7 @@ const example = aws.ec2.getInstanceTypeOffering({
         "t2.micro",
         "t1.micro",
     ],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

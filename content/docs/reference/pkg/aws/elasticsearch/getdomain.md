@@ -16,9 +16,9 @@ Use this data source to get information about an Elasticsearch Domain
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const myDomain = aws.elasticsearch.getDomain({
+const myDomain = pulumi.output(aws.elasticsearch.getDomain({
     domainName: "my-domain-name",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

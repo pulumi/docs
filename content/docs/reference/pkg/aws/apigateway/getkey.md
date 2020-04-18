@@ -17,9 +17,9 @@ example to supply credentials for a dependency microservice.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const myApiKey = aws.apigateway.getKey({
+const myApiKey = pulumi.output(aws.apigateway.getKey({
     id: "ru3mpjgse6",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

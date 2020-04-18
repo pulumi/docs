@@ -17,7 +17,7 @@ ASGs within a specific region. This will allow you to pass a list of AutoScaling
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const groups = aws.getAutoscalingGroups({
+const groups = pulumi.output(aws.getAutoscalingGroups({
     filters: [
         {
             name: "key",
@@ -28,7 +28,7 @@ const groups = aws.getAutoscalingGroups({
             values: ["Pets"],
         },
     ],
-});
+}, { async: true }));
 const slackNotifications = new aws.autoscaling.Notification("slack_notifications", {
     groupNames: groups.names,
     notifications: [

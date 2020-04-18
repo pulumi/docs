@@ -20,11 +20,11 @@ The following shows outputing all VPC Ids.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const fooVpcs = aws.ec2.getVpcs({
+const fooVpcs = pulumi.output(aws.ec2.getVpcs({
     tags: {
         service: "production",
     },
-});
+}, { async: true }));
 
 export const foo = fooVpcs.ids;
 ```
@@ -35,12 +35,11 @@ An example use case would be interpolate the `aws.ec2.getVpcs` output into `coun
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const fooVpcs = aws.ec2.getVpcs();
+const fooVpcs = pulumi.output(aws.ec2.getVpcs({ async: true }));
 const testFlowLog: aws.ec2.FlowLog[] = [];
-for (let i = 0; i < fooVpcs.ids.length; i++) {
+for (let i = 0; i < fooVpcs.apply(fooVpcs => fooVpcs.ids.length); i++) {
     testFlowLog.push(new aws.ec2.FlowLog(`test_flow_log-${i}`, {
-        // ...
-        vpcId: fooVpcs.ids[i],
+        vpcId: fooVpcs.apply(fooVpcs => fooVpcs.ids[i]),
     }));
 }
 

@@ -16,9 +16,9 @@ Provides information about a DynamoDB table.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const tableName = aws.dynamodb.getTable({
+const tableName = pulumi.output(aws.dynamodb.getTable({
     name: "tableName",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

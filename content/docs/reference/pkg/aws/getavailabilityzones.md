@@ -27,16 +27,16 @@ All Local Zones (regardless of opt-in status):
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.getAvailabilityZones({
+const example = pulumi.output(aws.getAvailabilityZones({
     allAvailabilityZones: true,
-    filters: [{
+    filter: [{
         name: "opt-in-status",
         values: [
             "not-opted-in",
             "opted-in",
         ],
     }],
-});
+}, { async: true }));
 ```
 
 Only Availability Zones (no Local Zones):
@@ -45,12 +45,12 @@ Only Availability Zones (no Local Zones):
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.getAvailabilityZones({
-    filters: [{
+const example = pulumi.output(aws.getAvailabilityZones({
+    filter: [{
         name: "opt-in-status",
         values: ["opt-in-not-required"],
     }],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

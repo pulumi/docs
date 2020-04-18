@@ -16,10 +16,10 @@ Use this data source to lookup information about IAM Server Certificates.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const my_domain = aws.iam.getServerCertificate({
+const my_domain = pulumi.output(aws.iam.getServerCertificate({
     latest: true,
     namePrefix: "my-domain.org",
-});
+}, { async: true }));
 const elb = new aws.elb.LoadBalancer("elb", {
     listeners: [{
         instancePort: 8000,

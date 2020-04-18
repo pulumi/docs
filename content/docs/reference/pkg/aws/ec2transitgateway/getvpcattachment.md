@@ -18,12 +18,12 @@ Get information on an EC2 Transit Gateway VPC Attachment.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.ec2transitgateway.getVpcAttachment({
+const example = pulumi.output(aws.ec2transitgateway.getVpcAttachment({
     filters: [{
         name: "vpc-id",
         values: ["vpc-12345678"],
     }],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -34,9 +34,9 @@ const example = aws.ec2transitgateway.getVpcAttachment({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.ec2transitgateway.getVpcAttachment({
+const example = pulumi.output(aws.ec2transitgateway.getVpcAttachment({
     id: "tgw-attach-12345678",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

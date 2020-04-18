@@ -19,9 +19,9 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const functionName = config.require("functionName");
 
-const existing = aws.lambda.getFunction({
+const existing = pulumi.output(aws.lambda.getFunction({
     functionName: functionName,
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

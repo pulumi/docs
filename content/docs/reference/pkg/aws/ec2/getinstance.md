@@ -17,7 +17,7 @@ resources.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const foo = aws.ec2.getInstance({
+const foo = pulumi.output(aws.ec2.getInstance({
     filters: [
         {
             name: "image-id",
@@ -29,7 +29,7 @@ const foo = aws.ec2.getInstance({
         },
     ],
     instanceId: "i-instanceid",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

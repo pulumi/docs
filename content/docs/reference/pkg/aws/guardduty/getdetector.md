@@ -16,7 +16,7 @@ Retrieve information about a GuardDuty detector.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.guardduty.getDetector();
+const example = pulumi.output(aws.guardduty.getDetector({ async: true }));
 ```
 
 {{% /example %}}

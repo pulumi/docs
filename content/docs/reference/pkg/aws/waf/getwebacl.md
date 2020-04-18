@@ -16,9 +16,9 @@ block_external_search_index: true
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.waf.getWebAcl({
+const example = pulumi.output(aws.waf.getWebAcl({
     name: "tfWAFWebACL",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

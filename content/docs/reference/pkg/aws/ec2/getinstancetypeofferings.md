@@ -16,7 +16,7 @@ Information about EC2 Instance Type Offerings.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.ec2.getInstanceTypeOfferings({
+const example = pulumi.output(aws.ec2.getInstanceTypeOfferings({
     filters: [
         {
             name: "instance-type",
@@ -31,7 +31,7 @@ const example = aws.ec2.getInstanceTypeOfferings({
         },
     ],
     locationType: "availability-zone-id",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

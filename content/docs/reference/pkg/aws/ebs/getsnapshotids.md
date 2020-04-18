@@ -17,7 +17,7 @@ criteria.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ebsVolumes = aws.ebs.getSnapshotIds({
+const ebsVolumes = pulumi.output(aws.ebs.getSnapshotIds({
     filters: [
         {
             name: "volume-size",
@@ -29,7 +29,7 @@ const ebsVolumes = aws.ebs.getSnapshotIds({
         },
     ],
     owners: ["self"],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

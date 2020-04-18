@@ -20,12 +20,12 @@ const config = new pulumi.Config();
 const brokerId = config.get("brokerId") || "";
 const brokerName = config.get("brokerName") || "";
 
-const byId = aws.mq.getBroker({
+const byId = pulumi.output(aws.mq.getBroker({
     brokerId: brokerId,
-});
-const byName = aws.mq.getBroker({
+}, { async: true }));
+const byName = pulumi.output(aws.mq.getBroker({
     brokerName: brokerName,
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

@@ -16,7 +16,7 @@ List the event categories of all the RDS resources.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleEventCategories = aws.rds.getEventCategories();
+const exampleEventCategories = pulumi.output(aws.rds.getEventCategories({ async: true }));
 
 export const example = exampleEventCategories.eventCategories;
 ```
@@ -27,9 +27,9 @@ List the event categories specific to the RDS resource `db-snapshot`.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleEventCategories = aws.rds.getEventCategories({
+const exampleEventCategories = pulumi.output(aws.rds.getEventCategories({
     sourceType: "db-snapshot",
-});
+}, { async: true }));
 
 export const example = exampleEventCategories.eventCategories;
 ```

@@ -16,10 +16,10 @@ Use this data source to get the name of a elastic beanstalk solution stack.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const multiDocker = aws.elasticbeanstalk.getSolutionStack({
+const multiDocker = pulumi.output(aws.elasticbeanstalk.getSolutionStack({
     mostRecent: true,
     nameRegex: "^64bit Amazon Linux (.*) Multi-container Docker (.*)$",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

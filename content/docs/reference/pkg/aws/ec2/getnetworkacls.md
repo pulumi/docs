@@ -16,9 +16,9 @@ The following shows outputing all network ACL ids in a vpc.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleNetworkAcls = aws.ec2.getNetworkAcls({
+const exampleNetworkAcls = pulumi.output(aws.ec2.getNetworkAcls({
     vpcId: var_vpc_id,
-});
+}, { async: true }));
 
 export const example = exampleNetworkAcls.ids;
 ```
@@ -30,12 +30,12 @@ tag of `Tier` set to a value of "Private".
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.ec2.getNetworkAcls({
+const example = pulumi.output(aws.ec2.getNetworkAcls({
     tags: {
         Tier: "Private",
     },
     vpcId: var_vpc_id,
-});
+}, { async: true }));
 ```
 
 The following example retrieves a network ACL id in a VPC which associated
@@ -51,7 +51,7 @@ const example = aws_subnet_test.id.apply(id => aws.ec2.getNetworkAcls({
         values: [id],
     }],
     vpcId: var_vpc_id,
-}));
+}, { async: true }));
 ```
 
 {{% /example %}}

@@ -16,7 +16,7 @@ Use this data source to get the ID of an [elastic beanstalk hosted zone](http://
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const current = aws.elasticbeanstalk.getHostedZone();
+const current = pulumi.output(aws.elasticbeanstalk.getHostedZone({ async: true }));
 ```
 
 {{% /example %}}

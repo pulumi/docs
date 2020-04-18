@@ -19,9 +19,9 @@ error if there is more than one match.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const myRestApi = aws.apigateway.getRestApi({
+const myRestApi = pulumi.output(aws.apigateway.getRestApi({
     name: "my-rest-api",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

@@ -16,9 +16,9 @@ Use this data source to get information about a CloudHSM v2 cluster
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const cluster = aws.cloudhsmv2.getCluster({
+const cluster = pulumi.output(aws.cloudhsmv2.getCluster({
     clusterId: "cluster-testclusterid",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

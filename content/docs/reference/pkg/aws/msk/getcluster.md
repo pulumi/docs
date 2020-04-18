@@ -16,9 +16,9 @@ Get information on an Amazon MSK Cluster.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.msk.getCluster({
+const example = pulumi.output(aws.msk.getCluster({
     clusterName: "example",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

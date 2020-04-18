@@ -19,9 +19,9 @@ exports specified in the [Output](http://docs.aws.amazon.com/AWSCloudFormation/l
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const subnetId = aws.cloudformation.getExport({
+const subnetId = pulumi.output(aws.cloudformation.getExport({
     name: "mySubnetIdExportName",
-});
+}, { async: true }));
 const web = new aws.ec2.Instance("web", {
     ami: "ami-abb07bcb",
     instanceType: "t1.micro",

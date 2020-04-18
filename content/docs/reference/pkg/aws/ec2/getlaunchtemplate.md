@@ -16,9 +16,9 @@ Provides information about a Launch Template.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const defaultLaunchTemplate = aws.ec2.getLaunchTemplate({
+const defaultLaunchTemplate = pulumi.output(aws.ec2.getLaunchTemplate({
     name: "my-launch-template",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -29,12 +29,12 @@ const defaultLaunchTemplate = aws.ec2.getLaunchTemplate({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const test = aws.ec2.getLaunchTemplate({
-    filters: [{
+const test = pulumi.output(aws.ec2.getLaunchTemplate({
+    filter: [{
         name: "launch-template-name",
         values: ["some-template"],
     }],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

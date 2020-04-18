@@ -26,10 +26,10 @@ const config = new pulumi.Config();
 const lbTgArn = config.get("lbTgArn") || "";
 const lbTgName = config.get("lbTgName") || "";
 
-const test = aws.lb.getTargetGroup({
+const test = pulumi.output(aws.lb.getTargetGroup({
     arn: lbTgArn,
     name: lbTgName,
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

@@ -22,7 +22,7 @@ and you'd need to re-run `apply` every time an instance comes up or dies.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const testInstances = aws.ec2.getInstances({
+const testInstances = pulumi.output(aws.ec2.getInstances({
     filters: [{
         name: "instance.group-id",
         values: ["sg-12345678"],
@@ -34,11 +34,11 @@ const testInstances = aws.ec2.getInstances({
     instanceTags: {
         Role: "HardWorker",
     },
-});
+}, { async: true }));
 const testEip: aws.ec2.Eip[] = [];
-for (let i = 0; i < testInstances.ids.length; i++) {
+for (let i = 0; i < testInstances.apply(testInstances => testInstances.ids.length); i++) {
     testEip.push(new aws.ec2.Eip(`test-${i}`, {
-        instance: testInstances.ids[i],
+        instance: testInstances.apply(testInstances => testInstances.ids[i]),
     }));
 }
 ```

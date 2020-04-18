@@ -20,9 +20,9 @@ Use this data source to get information on an AWS Cost and Usage Report Definiti
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const reportDefinition = aws.cur.getReportDefinition({
+const reportDefinition = pulumi.output(aws.cur.getReportDefinition({
     reportName: "example",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

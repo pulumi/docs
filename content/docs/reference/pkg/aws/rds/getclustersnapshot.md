@@ -19,17 +19,17 @@ See the [`aws.rds.Snapshot` data source](https://www.terraform.io/docs/providers
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const developmentFinalSnapshot = aws.rds.getClusterSnapshot({
+const developmentFinalSnapshot = pulumi.output(aws.rds.getClusterSnapshot({
     dbClusterIdentifier: "development_cluster",
     mostRecent: true,
-});
+}, { async: true }));
 // Use the last snapshot of the dev database before it was destroyed to create
 // a new dev database.
 const auroraCluster = new aws.rds.Cluster("aurora", {
     clusterIdentifier: "development_cluster",
     dbSubnetGroupName: "my_db_subnet_group",
     snapshotIdentifier: developmentFinalSnapshot.id,
-}, {ignoreChanges: ["snapshotIdentifier"]});
+}, { ignoreChanges: ["snapshotIdentifier"] });
 const auroraClusterInstance = new aws.rds.ClusterInstance("aurora", {
     clusterIdentifier: auroraCluster.id,
     dbSubnetGroupName: "my_db_subnet_group",

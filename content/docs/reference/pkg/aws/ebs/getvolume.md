@@ -17,7 +17,7 @@ resources.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ebsVolume = aws.ebs.getVolume({
+const ebsVolume = pulumi.output(aws.ebs.getVolume({
     filters: [
         {
             name: "volume-type",
@@ -29,7 +29,7 @@ const ebsVolume = aws.ebs.getVolume({
         },
     ],
     mostRecent: true,
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

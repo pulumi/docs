@@ -19,9 +19,9 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const mountTargetId = config.get("mountTargetId") || "";
 
-const byId = aws.efs.getMountTarget({
+const byId = pulumi.output(aws.efs.getMountTarget({
     mountTargetId: mountTargetId,
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

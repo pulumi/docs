@@ -16,9 +16,9 @@ Provides a Step Functions Activity data source
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const sfnActivity = aws.sfn.getActivity({
+const sfnActivity = pulumi.output(aws.sfn.getActivity({
     name: "my-activity",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

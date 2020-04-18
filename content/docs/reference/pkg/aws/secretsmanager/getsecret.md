@@ -18,9 +18,9 @@ Retrieve metadata information about a Secrets Manager secret. To retrieve a secr
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const by_arn = aws.secretsmanager.getSecret({
+const by_arn = pulumi.output(aws.secretsmanager.getSecret({
     arn: "arn:aws:secretsmanager:us-east-1:123456789012:secret:example-123456",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -31,9 +31,9 @@ const by_arn = aws.secretsmanager.getSecret({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const by_name = aws.secretsmanager.getSecret({
+const by_name = pulumi.output(aws.secretsmanager.getSecret({
     name: "example",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

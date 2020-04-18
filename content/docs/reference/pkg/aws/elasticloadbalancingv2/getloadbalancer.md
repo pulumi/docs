@@ -26,10 +26,10 @@ const config = new pulumi.Config();
 const lbArn = config.get("lbArn") || "";
 const lbName = config.get("lbName") || "";
 
-const test = aws.lb.getLoadBalancer({
+const test = pulumi.output(aws.lb.getLoadBalancer({
     arn: lbArn,
     name: lbName,
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

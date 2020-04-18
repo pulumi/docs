@@ -16,7 +16,7 @@ Use this data source to get information about an EBS Snapshot for use when provi
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ebsVolume = aws.ebs.getSnapshot({
+const ebsVolume = pulumi.output(aws.ebs.getSnapshot({
     filters: [
         {
             name: "volume-size",
@@ -29,7 +29,7 @@ const ebsVolume = aws.ebs.getSnapshot({
     ],
     mostRecent: true,
     owners: ["self"],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

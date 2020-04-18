@@ -17,7 +17,7 @@ This data source is only available in a us-east-1 or ap-south-1 provider.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.pricing.getProduct({
+const example = pulumi.output(aws.pricing.getProduct({
     filters: [
         {
             field: "instanceType",
@@ -49,14 +49,14 @@ const example = aws.pricing.getProduct({
         },
     ],
     serviceCode: "AmazonEC2",
-});
+}, { async: true }));
 ```
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.pricing.getProduct({
+const example = pulumi.output(aws.pricing.getProduct({
     filters: [
         {
             field: "instanceType",
@@ -68,7 +68,7 @@ const example = aws.pricing.getProduct({
         },
     ],
     serviceCode: "AmazonRedshift",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

@@ -18,9 +18,9 @@ Get information about the organization that the user's account belongs to
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.organizations.getOrganization();
+const example = pulumi.output(aws.organizations.getOrganization({ async: true }));
 const snsTopic = new aws.sns.Topic("sns_topic", {});
-const snsTopicPolicyPolicyDocument = snsTopic.arn.apply(arn => aws.iam.getPolicyDocument({
+const snsTopicPolicyPolicyDocument = pulumi.all([example, snsTopic.arn]).apply(([example, arn]) => aws.iam.getPolicyDocument({
     statements: [{
         actions: [
             "SNS:Subscribe",
@@ -28,7 +28,7 @@ const snsTopicPolicyPolicyDocument = snsTopic.arn.apply(arn => aws.iam.getPolicy
         ],
         conditions: [{
             test: "StringEquals",
-            values: [example],
+            values: [example.id],
             variable: "aws:PrincipalOrgID",
         }],
         effect: "Allow",
@@ -38,7 +38,7 @@ const snsTopicPolicyPolicyDocument = snsTopic.arn.apply(arn => aws.iam.getPolicy
         }],
         resources: [arn],
     }],
-}));
+}, { async: true }));
 const snsTopicPolicyTopicPolicy = new aws.sns.TopicPolicy("sns_topic_policy", {
     arn: snsTopic.arn,
     policy: snsTopicPolicyPolicyDocument.json,

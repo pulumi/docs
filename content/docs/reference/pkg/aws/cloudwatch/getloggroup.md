@@ -16,9 +16,9 @@ Use this data source to get information about an AWS Cloudwatch Log Group
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.cloudwatch.getLogGroup({
+const example = pulumi.output(aws.cloudwatch.getLogGroup({
     name: "MyImportantLogs",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

@@ -16,7 +16,7 @@ such as the `aws.iam.Policy` resource.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const examplePolicyDocument = aws.iam.getPolicyDocument({
+const examplePolicyDocument = pulumi.output(aws.iam.getPolicyDocument({
     statements: [
         {
             actions: [
@@ -47,7 +47,7 @@ const examplePolicyDocument = aws.iam.getPolicyDocument({
             ],
         },
     ],
-});
+}, { async: true }));
 const examplePolicy = new aws.iam.Policy("example", {
     path: "/",
     policy: examplePolicyDocument.json,
@@ -84,7 +84,7 @@ Showing how you can use this as an assume role policy as well as showing how you
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const eventStreamBucketRoleAssumeRolePolicy = aws.iam.getPolicyDocument({
+const eventStreamBucketRoleAssumeRolePolicy = pulumi.output(aws.iam.getPolicyDocument({
     statements: [{
         actions: ["sts:AssumeRole"],
         principals: [
@@ -98,7 +98,7 @@ const eventStreamBucketRoleAssumeRolePolicy = aws.iam.getPolicyDocument({
             },
         ],
     }],
-});
+}, { async: true }));
 ```
 
 ## Example with Source and Override
@@ -109,7 +109,7 @@ Showing how you can use `source_json` and `override_json`
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const source = aws.iam.getPolicyDocument({
+const source = pulumi.output(aws.iam.getPolicyDocument({
     statements: [
         {
             actions: ["ec2:*"],
@@ -121,8 +121,8 @@ const source = aws.iam.getPolicyDocument({
             sid: "SidToOverwrite",
         },
     ],
-});
-const sourceJsonExample = aws.iam.getPolicyDocument({
+}, { async: true }));
+const sourceJsonExample = source.apply(source => aws.iam.getPolicyDocument({
     sourceJson: source.json,
     statements: [{
         actions: ["s3:*"],
@@ -132,15 +132,15 @@ const sourceJsonExample = aws.iam.getPolicyDocument({
         ],
         sid: "SidToOverwrite",
     }],
-});
-const override = aws.iam.getPolicyDocument({
+}, { async: true }));
+const override = pulumi.output(aws.iam.getPolicyDocument({
     statements: [{
         actions: ["s3:*"],
         resources: ["*"],
         sid: "SidToOverwrite",
     }],
-});
-const overrideJsonExample = aws.iam.getPolicyDocument({
+}, { async: true }));
+const overrideJsonExample = override.apply(override => aws.iam.getPolicyDocument({
     overrideJson: override.json,
     statements: [
         {
@@ -156,7 +156,7 @@ const overrideJsonExample = aws.iam.getPolicyDocument({
             sid: "SidToOverwrite",
         },
     ],
-});
+}, { async: true }));
 ```
 
 `data.aws_iam_policy_document.source_json_example.json` will evaluate to:
@@ -181,24 +181,24 @@ Use without a `statement`:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const source = aws.iam.getPolicyDocument({
+const source = pulumi.output(aws.iam.getPolicyDocument({
     statements: [{
         actions: ["ec2:DescribeAccountAttributes"],
         resources: ["*"],
         sid: "OverridePlaceholder",
     }],
-});
-const override = aws.iam.getPolicyDocument({
+}, { async: true }));
+const override = pulumi.output(aws.iam.getPolicyDocument({
     statements: [{
         actions: ["s3:GetObject"],
         resources: ["*"],
         sid: "OverridePlaceholder",
     }],
-});
-const politik = aws.iam.getPolicyDocument({
+}, { async: true }));
+const politik = pulumi.all([override, source]).apply(([override, source]) => aws.iam.getPolicyDocument({
     overrideJson: override.json,
     sourceJson: source.json,
-});
+}, { async: true }));
 ```
 
 `data.aws_iam_policy_document.politik.json` will evaluate to:

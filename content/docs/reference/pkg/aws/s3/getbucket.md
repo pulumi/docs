@@ -21,12 +21,12 @@ Distribution.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const selected = aws.s3.getBucket({
+const selected = pulumi.output(aws.s3.getBucket({
     bucket: "bucket.test.com",
-});
-const testZone = aws.route53.getZone({
+}, { async: true }));
+const testZone = pulumi.output(aws.route53.getZone({
     name: "test.com.",
-});
+}, { async: true }));
 const example = new aws.route53.Record("example", {
     aliases: [{
         name: selected.websiteDomain,
@@ -46,9 +46,9 @@ const example = new aws.route53.Record("example", {
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const selected = aws.s3.getBucket({
+const selected = pulumi.output(aws.s3.getBucket({
     bucket: "a-test-bucket",
-});
+}, { async: true }));
 const test = new aws.cloudfront.Distribution("test", {
     origins: [{
         domainName: selected.bucketDomainName,

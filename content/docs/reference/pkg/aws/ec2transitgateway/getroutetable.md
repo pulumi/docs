@@ -18,7 +18,7 @@ Get information on an EC2 Transit Gateway Route Table.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.ec2transitgateway.getRouteTable({
+const example = pulumi.output(aws.ec2transitgateway.getRouteTable({
     filters: [
         {
             name: "default-association-route-table",
@@ -29,7 +29,7 @@ const example = aws.ec2transitgateway.getRouteTable({
             values: ["tgw-12345678"],
         },
     ],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -40,9 +40,9 @@ const example = aws.ec2transitgateway.getRouteTable({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.ec2transitgateway.getRouteTable({
+const example = pulumi.output(aws.ec2transitgateway.getRouteTable({
     id: "tgw-rtb-12345678",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

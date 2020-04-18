@@ -22,10 +22,10 @@ value starting with `text/`) and uses it as the `user_data` for an EC2 instance:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const bootstrapScript = aws.s3.getBucketObject({
+const bootstrapScript = pulumi.output(aws.s3.getBucketObject({
     bucket: "ourcorp-deploy-config",
     key: "ec2-bootstrap-script.sh",
-});
+}, { async: true }));
 const example = new aws.ec2.Instance("example", {
     ami: "ami-2757f631",
     instanceType: "t2.micro",
@@ -43,10 +43,10 @@ Lambda functions is available in the documentation for
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const lambda = aws.s3.getBucketObject({
+const lambda = pulumi.output(aws.s3.getBucketObject({
     bucket: "ourcorp-lambda-functions",
     key: "hello-world.zip",
-});
+}, { async: true }));
 const testLambda = new aws.lambda.Function("test_lambda", {
     handler: "exports.test",
     role: aws_iam_role_iam_for_lambda.arn, // (not shown)

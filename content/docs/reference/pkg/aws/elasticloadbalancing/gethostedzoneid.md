@@ -17,7 +17,7 @@ in a given region for the purpose of using in an AWS Route53 Alias.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const main = aws.elb.getHostedZoneId();
+const main = pulumi.output(aws.elb.getHostedZoneId({ async: true }));
 const www = new aws.route53.Record("www", {
     aliases: [{
         evaluateTargetHealth: true,

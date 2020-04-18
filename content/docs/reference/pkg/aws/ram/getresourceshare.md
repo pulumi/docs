@@ -16,10 +16,10 @@ block_external_search_index: true
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.ram.getResourceShare({
+const example = pulumi.output(aws.ram.getResourceShare({
     name: "example",
     resourceOwner: "SELF",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -30,14 +30,14 @@ const example = aws.ram.getResourceShare({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const tagFilter = aws.ram.getResourceShare({
+const tagFilter = pulumi.output(aws.ram.getResourceShare({
     filters: [{
         name: "NameOfTag",
         values: ["exampleNameTagValue"],
     }],
     name: "MyResourceName",
     resourceOwner: "SELF",
-});
+}, { async: true }));
 ```
 
 

@@ -21,7 +21,7 @@ const subnetId = config.require("subnetId");
 
 const defaultNatGateway = aws_subnet_public.id.apply(id => aws.ec2.getNatGateway({
     subnetId: id,
-}));
+}, { async: true }));
 ```
 
 Usage with tags:
@@ -35,7 +35,7 @@ const defaultNatGateway = aws_subnet_public.id.apply(id => aws.ec2.getNatGateway
     tags: {
         Name: "gw NAT",
     },
-}));
+}, { async: true }));
 ```
 
 {{% /example %}}
