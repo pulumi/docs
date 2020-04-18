@@ -8,21 +8,24 @@ block_external_search_index: true
 
 This data source provides the Function Compute functions of the current Alibaba Cloud user.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const functionsDs = pulumi.output(alicloud.fc.getFunctions({
+const functionsDs = alicloud.fc.getFunctions({
     nameRegex: "sample_fc_function",
     serviceName: "sample_service",
-}, { async: true }));
+});
 
 export const firstFcFunctionName = functionsDs.functions[0].name;
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/fc_functions.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -44,7 +47,7 @@ export const firstFcFunctionName = functionsDs.functions[0].name;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupFunctions<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/fc?tab=doc#LookupFunctionsArgs">LookupFunctionsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/fc?tab=doc#LookupFunctionsResult">LookupFunctionsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupFunctions<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/fc?tab=doc#LookupFunctionsArgs">LookupFunctionsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/fc?tab=doc#LookupFunctionsResult">LookupFunctionsResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -67,7 +70,7 @@ The following arguments are supported:
             title="Required">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the service that contains the functions to find.
 {{% /md %}}</dd>
@@ -76,7 +79,7 @@ The following arguments are supported:
             title="Optional">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of functions ids.
 {{% /md %}}</dd>
@@ -85,7 +88,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by function name.
 * `ids` (Optional, Available in 1.53.0+) - A list of functions ids.
@@ -95,7 +98,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -110,7 +113,7 @@ The following arguments are supported:
             title="Required">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the service that contains the functions to find.
 {{% /md %}}</dd>
@@ -119,7 +122,7 @@ The following arguments are supported:
             title="Optional">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of functions ids.
 {{% /md %}}</dd>
@@ -128,7 +131,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by function name.
 * `ids` (Optional, Available in 1.53.0+) - A list of functions ids.
@@ -138,7 +141,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -153,7 +156,7 @@ The following arguments are supported:
             title="Required">
         <span>service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Name of the service that contains the functions to find.
 {{% /md %}}</dd>
@@ -162,7 +165,7 @@ The following arguments are supported:
             title="Optional">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of functions ids.
 {{% /md %}}</dd>
@@ -171,7 +174,7 @@ The following arguments are supported:
             title="Optional">
         <span>name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by function name.
 * `ids` (Optional, Available in 1.53.0+) - A list of functions ids.
@@ -181,7 +184,7 @@ The following arguments are supported:
             title="Optional">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -196,7 +199,7 @@ The following arguments are supported:
             title="Required">
         <span>service_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the service that contains the functions to find.
 {{% /md %}}</dd>
@@ -205,7 +208,7 @@ The following arguments are supported:
             title="Optional">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of functions ids.
 {{% /md %}}</dd>
@@ -214,7 +217,7 @@ The following arguments are supported:
             title="Optional">
         <span>name_<wbr>regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by function name.
 * `ids` (Optional, Available in 1.53.0+) - A list of functions ids.
@@ -224,7 +227,7 @@ The following arguments are supported:
             title="Optional">
         <span>output_<wbr>file</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -261,7 +264,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -270,7 +273,7 @@ The following output properties are available:
             title="">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of functions ids.
 {{% /md %}}</dd>
@@ -279,7 +282,7 @@ The following output properties are available:
             title="">
         <span>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of functions names.
 {{% /md %}}</dd>
@@ -288,7 +291,7 @@ The following output properties are available:
             title="">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -296,7 +299,7 @@ The following output properties are available:
             title="">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -304,7 +307,7 @@ The following output properties are available:
             title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -328,7 +331,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -337,7 +340,7 @@ The following output properties are available:
             title="">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of functions ids.
 {{% /md %}}</dd>
@@ -346,7 +349,7 @@ The following output properties are available:
             title="">
         <span>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of functions names.
 {{% /md %}}</dd>
@@ -355,7 +358,7 @@ The following output properties are available:
             title="">
         <span>Service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -363,7 +366,7 @@ The following output properties are available:
             title="">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -371,7 +374,7 @@ The following output properties are available:
             title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -395,7 +398,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -404,7 +407,7 @@ The following output properties are available:
             title="">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of functions ids.
 {{% /md %}}</dd>
@@ -413,7 +416,7 @@ The following output properties are available:
             title="">
         <span>names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of functions names.
 {{% /md %}}</dd>
@@ -422,7 +425,7 @@ The following output properties are available:
             title="">
         <span>service<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -430,7 +433,7 @@ The following output properties are available:
             title="">
         <span>name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -438,7 +441,7 @@ The following output properties are available:
             title="">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -462,7 +465,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -471,7 +474,7 @@ The following output properties are available:
             title="">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of functions ids.
 {{% /md %}}</dd>
@@ -480,7 +483,7 @@ The following output properties are available:
             title="">
         <span>names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of functions names.
 {{% /md %}}</dd>
@@ -489,7 +492,7 @@ The following output properties are available:
             title="">
         <span>service_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -497,7 +500,7 @@ The following output properties are available:
             title="">
         <span>name_<wbr>regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -505,7 +508,7 @@ The following output properties are available:
             title="">
         <span>output_<wbr>file</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -527,7 +530,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/fc?tab=doc#GetFunctionsFunction">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/fc?tab=doc#GetFunctionsFunction">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -540,7 +543,7 @@ The following output properties are available:
             title="Required">
         <span>Code<wbr>Checksum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Checksum (crc64) of the function code.
 {{% /md %}}</dd>
@@ -549,7 +552,7 @@ The following output properties are available:
             title="Required">
         <span>Code<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Function code size in bytes.
 {{% /md %}}</dd>
@@ -558,7 +561,7 @@ The following output properties are available:
             title="Required">
         <span>Creation<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Function creation time.
 {{% /md %}}</dd>
@@ -567,7 +570,7 @@ The following output properties are available:
             title="Required">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Function description.
 {{% /md %}}</dd>
@@ -585,7 +588,7 @@ The following output properties are available:
             title="Required">
         <span>Handler</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Function [entry point](https://www.alibabacloud.com/help/doc-detail/62213.htm) in the code.
 {{% /md %}}</dd>
@@ -594,7 +597,7 @@ The following output properties are available:
             title="Required">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Function ID.
 {{% /md %}}</dd>
@@ -603,7 +606,7 @@ The following output properties are available:
             title="Required">
         <span>Last<wbr>Modification<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Function last modification time.
 {{% /md %}}</dd>
@@ -612,7 +615,7 @@ The following output properties are available:
             title="Required">
         <span>Memory<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB the function can use at runtime.
 {{% /md %}}</dd>
@@ -621,7 +624,7 @@ The following output properties are available:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Function name.
 {{% /md %}}</dd>
@@ -630,7 +633,7 @@ The following output properties are available:
             title="Required">
         <span>Runtime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Function runtime. The list of possible values is [available here](https://www.alibabacloud.com/help/doc-detail/52077.htm).
 {{% /md %}}</dd>
@@ -639,7 +642,7 @@ The following output properties are available:
             title="Required">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum amount of time the function can run in seconds.
 {{% /md %}}</dd>
@@ -655,7 +658,7 @@ The following output properties are available:
             title="Required">
         <span>Code<wbr>Checksum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Checksum (crc64) of the function code.
 {{% /md %}}</dd>
@@ -664,7 +667,7 @@ The following output properties are available:
             title="Required">
         <span>Code<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Function code size in bytes.
 {{% /md %}}</dd>
@@ -673,7 +676,7 @@ The following output properties are available:
             title="Required">
         <span>Creation<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Function creation time.
 {{% /md %}}</dd>
@@ -682,7 +685,7 @@ The following output properties are available:
             title="Required">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Function description.
 {{% /md %}}</dd>
@@ -700,7 +703,7 @@ The following output properties are available:
             title="Required">
         <span>Handler</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Function [entry point](https://www.alibabacloud.com/help/doc-detail/62213.htm) in the code.
 {{% /md %}}</dd>
@@ -709,7 +712,7 @@ The following output properties are available:
             title="Required">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Function ID.
 {{% /md %}}</dd>
@@ -718,7 +721,7 @@ The following output properties are available:
             title="Required">
         <span>Last<wbr>Modification<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Function last modification time.
 {{% /md %}}</dd>
@@ -727,7 +730,7 @@ The following output properties are available:
             title="Required">
         <span>Memory<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB the function can use at runtime.
 {{% /md %}}</dd>
@@ -736,7 +739,7 @@ The following output properties are available:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Function name.
 {{% /md %}}</dd>
@@ -745,7 +748,7 @@ The following output properties are available:
             title="Required">
         <span>Runtime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Function runtime. The list of possible values is [available here](https://www.alibabacloud.com/help/doc-detail/52077.htm).
 {{% /md %}}</dd>
@@ -754,7 +757,7 @@ The following output properties are available:
             title="Required">
         <span>Timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Maximum amount of time the function can run in seconds.
 {{% /md %}}</dd>
@@ -770,7 +773,7 @@ The following output properties are available:
             title="Required">
         <span>code<wbr>Checksum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Checksum (crc64) of the function code.
 {{% /md %}}</dd>
@@ -779,7 +782,7 @@ The following output properties are available:
             title="Required">
         <span>code<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Function code size in bytes.
 {{% /md %}}</dd>
@@ -788,7 +791,7 @@ The following output properties are available:
             title="Required">
         <span>creation<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Function creation time.
 {{% /md %}}</dd>
@@ -797,7 +800,7 @@ The following output properties are available:
             title="Required">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Function description.
 {{% /md %}}</dd>
@@ -815,7 +818,7 @@ The following output properties are available:
             title="Required">
         <span>handler</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Function [entry point](https://www.alibabacloud.com/help/doc-detail/62213.htm) in the code.
 {{% /md %}}</dd>
@@ -824,7 +827,7 @@ The following output properties are available:
             title="Required">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Function ID.
 {{% /md %}}</dd>
@@ -833,7 +836,7 @@ The following output properties are available:
             title="Required">
         <span>last<wbr>Modification<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Function last modification time.
 {{% /md %}}</dd>
@@ -842,7 +845,7 @@ The following output properties are available:
             title="Required">
         <span>memory<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB the function can use at runtime.
 {{% /md %}}</dd>
@@ -851,7 +854,7 @@ The following output properties are available:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Function name.
 {{% /md %}}</dd>
@@ -860,7 +863,7 @@ The following output properties are available:
             title="Required">
         <span>runtime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Function runtime. The list of possible values is [available here](https://www.alibabacloud.com/help/doc-detail/52077.htm).
 {{% /md %}}</dd>
@@ -869,7 +872,7 @@ The following output properties are available:
             title="Required">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Maximum amount of time the function can run in seconds.
 {{% /md %}}</dd>
@@ -885,7 +888,7 @@ The following output properties are available:
             title="Required">
         <span>code_<wbr>checksum</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Checksum (crc64) of the function code.
 {{% /md %}}</dd>
@@ -894,7 +897,7 @@ The following output properties are available:
             title="Required">
         <span>code<wbr>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Function code size in bytes.
 {{% /md %}}</dd>
@@ -903,7 +906,7 @@ The following output properties are available:
             title="Required">
         <span>creation_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Function creation time.
 {{% /md %}}</dd>
@@ -912,7 +915,7 @@ The following output properties are available:
             title="Required">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Function description.
 {{% /md %}}</dd>
@@ -930,7 +933,7 @@ The following output properties are available:
             title="Required">
         <span>handler</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Function [entry point](https://www.alibabacloud.com/help/doc-detail/62213.htm) in the code.
 {{% /md %}}</dd>
@@ -939,7 +942,7 @@ The following output properties are available:
             title="Required">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Function ID.
 {{% /md %}}</dd>
@@ -948,7 +951,7 @@ The following output properties are available:
             title="Required">
         <span>last<wbr>Modification<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Function last modification time.
 {{% /md %}}</dd>
@@ -957,7 +960,7 @@ The following output properties are available:
             title="Required">
         <span>memory_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Amount of memory in MB the function can use at runtime.
 {{% /md %}}</dd>
@@ -966,7 +969,7 @@ The following output properties are available:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Function name.
 {{% /md %}}</dd>
@@ -975,7 +978,7 @@ The following output properties are available:
             title="Required">
         <span>runtime</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Function runtime. The list of possible values is [available here](https://www.alibabacloud.com/help/doc-detail/52077.htm).
 {{% /md %}}</dd>
@@ -984,7 +987,7 @@ The following output properties are available:
             title="Required">
         <span>timeout</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Maximum amount of time the function can run in seconds.
 {{% /md %}}</dd>

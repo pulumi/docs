@@ -9,7 +9,8 @@ block_external_search_index: true
 The `alicloud.kvstore.getInstances` data source provides a collection of kvstore instances available in Alicloud account.
 Filters support regular expression for the instance name, searches by tags, and other filters which are listed below.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kvstore_instances.html.markdown.
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -31,7 +32,7 @@ Filters support regular expression for the instance name, searches by tags, and 
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupInstances<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/kvstore?tab=doc#LookupInstancesArgs">LookupInstancesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/kvstore?tab=doc#LookupInstancesResult">LookupInstancesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupInstances<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/kvstore?tab=doc#LookupInstancesArgs">LookupInstancesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/kvstore?tab=doc#LookupInstancesResult">LookupInstancesResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -54,7 +55,7 @@ The following arguments are supported:
             title="Optional">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of RKV instance IDs.
 {{% /md %}}</dd>
@@ -63,7 +64,7 @@ The following arguments are supported:
             title="Optional">
         <span>Instance<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -71,7 +72,7 @@ The following arguments are supported:
             title="Optional">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Database type. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
 {{% /md %}}</dd>
@@ -80,7 +81,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A regex string to apply to the instance name.
 {{% /md %}}</dd>
@@ -89,7 +90,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -97,7 +98,7 @@ The following arguments are supported:
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Status of the instance.
 * `instance_class`- (Optional) Type of the applied ApsaraDB for Redis instance.
@@ -117,7 +118,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Used to retrieve instances belong to specified VPC.
 {{% /md %}}</dd>
@@ -126,7 +127,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Optional">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Used to retrieve instances belong to specified `vswitch` resources.
 {{% /md %}}</dd>
@@ -142,7 +143,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Optional">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of RKV instance IDs.
 {{% /md %}}</dd>
@@ -151,7 +152,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Optional">
         <span>Instance<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -159,7 +160,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Optional">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Database type. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
 {{% /md %}}</dd>
@@ -168,7 +169,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Optional">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A regex string to apply to the instance name.
 {{% /md %}}</dd>
@@ -177,7 +178,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -185,7 +186,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Optional">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Status of the instance.
 * `instance_class`- (Optional) Type of the applied ApsaraDB for Redis instance.
@@ -205,7 +206,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Used to retrieve instances belong to specified VPC.
 {{% /md %}}</dd>
@@ -214,7 +215,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Optional">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Used to retrieve instances belong to specified `vswitch` resources.
 {{% /md %}}</dd>
@@ -230,7 +231,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Optional">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of RKV instance IDs.
 {{% /md %}}</dd>
@@ -239,7 +240,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Optional">
         <span>instance<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -247,7 +248,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Optional">
         <span>instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Database type. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
 {{% /md %}}</dd>
@@ -256,7 +257,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Optional">
         <span>name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A regex string to apply to the instance name.
 {{% /md %}}</dd>
@@ -265,7 +266,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Optional">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -273,7 +274,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Status of the instance.
 * `instance_class`- (Optional) Type of the applied ApsaraDB for Redis instance.
@@ -293,7 +294,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Optional">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Used to retrieve instances belong to specified VPC.
 {{% /md %}}</dd>
@@ -302,7 +303,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Optional">
         <span>vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Used to retrieve instances belong to specified `vswitch` resources.
 {{% /md %}}</dd>
@@ -318,7 +319,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Optional">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of RKV instance IDs.
 {{% /md %}}</dd>
@@ -327,7 +328,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Optional">
         <span>instance_<wbr>class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -335,7 +336,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Optional">
         <span>instance_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Database type. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
 {{% /md %}}</dd>
@@ -344,7 +345,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Optional">
         <span>name_<wbr>regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A regex string to apply to the instance name.
 {{% /md %}}</dd>
@@ -353,7 +354,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Optional">
         <span>output_<wbr>file</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -361,7 +362,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Optional">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Status of the instance.
 * `instance_class`- (Optional) Type of the applied ApsaraDB for Redis instance.
@@ -381,7 +382,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Optional">
         <span>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Used to retrieve instances belong to specified VPC.
 {{% /md %}}</dd>
@@ -390,7 +391,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Optional">
         <span>vswitch_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Used to retrieve instances belong to specified `vswitch` resources.
 {{% /md %}}</dd>
@@ -419,7 +420,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -428,7 +429,7 @@ The following output properties are available:
             title="">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of RKV instance IDs.
 {{% /md %}}</dd>
@@ -446,7 +447,7 @@ The following output properties are available:
             title="">
         <span>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -454,7 +455,7 @@ The following output properties are available:
             title="">
         <span>Instance<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -462,7 +463,7 @@ The following output properties are available:
             title="">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Database type. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
 * `instance_class`- (Optional) Type of the applied ApsaraDB for Redis instance.
@@ -473,7 +474,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -481,7 +482,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -489,7 +490,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Status of the instance.
 {{% /md %}}</dd>
@@ -506,7 +507,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}VPC ID the instance belongs to.
 {{% /md %}}</dd>
@@ -515,7 +516,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}VSwitch ID the instance belongs to.
 {{% /md %}}</dd>
@@ -531,7 +532,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -540,7 +541,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of RKV instance IDs.
 {{% /md %}}</dd>
@@ -558,7 +559,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -566,7 +567,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>Instance<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -574,7 +575,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Database type. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
 * `instance_class`- (Optional) Type of the applied ApsaraDB for Redis instance.
@@ -585,7 +586,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -593,7 +594,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -601,7 +602,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Status of the instance.
 {{% /md %}}</dd>
@@ -618,7 +619,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}VPC ID the instance belongs to.
 {{% /md %}}</dd>
@@ -627,7 +628,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}VSwitch ID the instance belongs to.
 {{% /md %}}</dd>
@@ -643,7 +644,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -652,7 +653,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of RKV instance IDs.
 {{% /md %}}</dd>
@@ -670,7 +671,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -678,7 +679,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>instance<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -686,7 +687,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Database type. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
 * `instance_class`- (Optional) Type of the applied ApsaraDB for Redis instance.
@@ -697,7 +698,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -705,7 +706,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -713,7 +714,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Status of the instance.
 {{% /md %}}</dd>
@@ -730,7 +731,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}VPC ID the instance belongs to.
 {{% /md %}}</dd>
@@ -739,7 +740,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}VSwitch ID the instance belongs to.
 {{% /md %}}</dd>
@@ -755,7 +756,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -764,7 +765,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of RKV instance IDs.
 {{% /md %}}</dd>
@@ -782,7 +783,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -790,7 +791,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>instance_<wbr>class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -798,7 +799,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>instance_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}(Optional) Database type. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
 * `instance_class`- (Optional) Type of the applied ApsaraDB for Redis instance.
@@ -809,7 +810,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>name_<wbr>regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -817,7 +818,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>output_<wbr>file</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -825,7 +826,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Status of the instance.
 {{% /md %}}</dd>
@@ -842,7 +843,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}VPC ID the instance belongs to.
 {{% /md %}}</dd>
@@ -851,7 +852,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="">
         <span>vswitch_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}VSwitch ID the instance belongs to.
 {{% /md %}}</dd>
@@ -874,7 +875,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/kvstore?tab=doc#GetInstancesInstance">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/kvstore?tab=doc#GetInstancesInstance">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -887,7 +888,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Availability zone.
 {{% /md %}}</dd>
@@ -896,7 +897,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Instance bandwidth limit. Unit: Mbit/s.
 {{% /md %}}</dd>
@@ -905,7 +906,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Capacity of the applied ApsaraDB for Redis instance. Unit: MB.
 {{% /md %}}</dd>
@@ -914,7 +915,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Billing method. Value options: `PostPaid` for  Pay-As-You-Go and `PrePaid` for subscription.
 {{% /md %}}</dd>
@@ -923,7 +924,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Connection<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -931,7 +932,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Connections</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Instance connection quantity limit. Unit: count.
 {{% /md %}}</dd>
@@ -940,7 +941,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Create<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Creation time of the instance.
 {{% /md %}}</dd>
@@ -949,7 +950,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Expire<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Expiration time. Pay-As-You-Go instances are never expire.
 {{% /md %}}</dd>
@@ -958,7 +959,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the RKV instance.
 {{% /md %}}</dd>
@@ -967,7 +968,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Instance<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -975,7 +976,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Database type. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
 {{% /md %}}</dd>
@@ -984,7 +985,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the RKV instance.
 {{% /md %}}</dd>
@@ -993,7 +994,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Connection port of the instance.
 {{% /md %}}</dd>
@@ -1002,7 +1003,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Private IP address of the instance.
 {{% /md %}}</dd>
@@ -1011,7 +1012,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Region<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Region ID the instance belongs to.
 {{% /md %}}</dd>
@@ -1020,7 +1021,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Status of the instance.
 * `instance_class`- (Optional) Type of the applied ApsaraDB for Redis instance.
@@ -1031,7 +1032,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>User<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1039,7 +1040,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Used to retrieve instances belong to specified VPC.
 {{% /md %}}</dd>
@@ -1048,7 +1049,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Used to retrieve instances belong to specified `vswitch` resources.
 {{% /md %}}</dd>
@@ -1064,7 +1065,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Availability zone.
 {{% /md %}}</dd>
@@ -1073,7 +1074,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Instance bandwidth limit. Unit: Mbit/s.
 {{% /md %}}</dd>
@@ -1082,7 +1083,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Capacity of the applied ApsaraDB for Redis instance. Unit: MB.
 {{% /md %}}</dd>
@@ -1091,7 +1092,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Billing method. Value options: `PostPaid` for  Pay-As-You-Go and `PrePaid` for subscription.
 {{% /md %}}</dd>
@@ -1100,7 +1101,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Connection<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1108,7 +1109,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Connections</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Instance connection quantity limit. Unit: count.
 {{% /md %}}</dd>
@@ -1117,7 +1118,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Create<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation time of the instance.
 {{% /md %}}</dd>
@@ -1126,7 +1127,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Expire<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Expiration time. Pay-As-You-Go instances are never expire.
 {{% /md %}}</dd>
@@ -1135,7 +1136,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the RKV instance.
 {{% /md %}}</dd>
@@ -1144,7 +1145,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Instance<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1152,7 +1153,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Database type. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
 {{% /md %}}</dd>
@@ -1161,7 +1162,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the RKV instance.
 {{% /md %}}</dd>
@@ -1170,7 +1171,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Connection port of the instance.
 {{% /md %}}</dd>
@@ -1179,7 +1180,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Private IP address of the instance.
 {{% /md %}}</dd>
@@ -1188,7 +1189,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Region<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Region ID the instance belongs to.
 {{% /md %}}</dd>
@@ -1197,7 +1198,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Status of the instance.
 * `instance_class`- (Optional) Type of the applied ApsaraDB for Redis instance.
@@ -1208,7 +1209,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>User<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1216,7 +1217,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Used to retrieve instances belong to specified VPC.
 {{% /md %}}</dd>
@@ -1225,7 +1226,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Used to retrieve instances belong to specified `vswitch` resources.
 {{% /md %}}</dd>
@@ -1241,7 +1242,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Availability zone.
 {{% /md %}}</dd>
@@ -1250,7 +1251,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Instance bandwidth limit. Unit: Mbit/s.
 {{% /md %}}</dd>
@@ -1259,7 +1260,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Capacity of the applied ApsaraDB for Redis instance. Unit: MB.
 {{% /md %}}</dd>
@@ -1268,7 +1269,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Billing method. Value options: `PostPaid` for  Pay-As-You-Go and `PrePaid` for subscription.
 {{% /md %}}</dd>
@@ -1277,7 +1278,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>connection<wbr>Domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1285,7 +1286,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>connections</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Instance connection quantity limit. Unit: count.
 {{% /md %}}</dd>
@@ -1294,7 +1295,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>create<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Creation time of the instance.
 {{% /md %}}</dd>
@@ -1303,7 +1304,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>expire<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Expiration time. Pay-As-You-Go instances are never expire.
 {{% /md %}}</dd>
@@ -1312,7 +1313,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the RKV instance.
 {{% /md %}}</dd>
@@ -1321,7 +1322,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>instance<wbr>Class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1329,7 +1330,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Database type. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
 {{% /md %}}</dd>
@@ -1338,7 +1339,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the RKV instance.
 {{% /md %}}</dd>
@@ -1347,7 +1348,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Connection port of the instance.
 {{% /md %}}</dd>
@@ -1356,7 +1357,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>private<wbr>Ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Private IP address of the instance.
 {{% /md %}}</dd>
@@ -1365,7 +1366,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>region<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Region ID the instance belongs to.
 {{% /md %}}</dd>
@@ -1374,7 +1375,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Status of the instance.
 * `instance_class`- (Optional) Type of the applied ApsaraDB for Redis instance.
@@ -1385,7 +1386,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>user<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1393,7 +1394,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Used to retrieve instances belong to specified VPC.
 {{% /md %}}</dd>
@@ -1402,7 +1403,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Used to retrieve instances belong to specified `vswitch` resources.
 {{% /md %}}</dd>
@@ -1418,7 +1419,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>availability_<wbr>zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Availability zone.
 {{% /md %}}</dd>
@@ -1427,7 +1428,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>bandwidth</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Instance bandwidth limit. Unit: Mbit/s.
 {{% /md %}}</dd>
@@ -1436,7 +1437,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Capacity of the applied ApsaraDB for Redis instance. Unit: MB.
 {{% /md %}}</dd>
@@ -1445,7 +1446,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>charge_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Billing method. Value options: `PostPaid` for  Pay-As-You-Go and `PrePaid` for subscription.
 {{% /md %}}</dd>
@@ -1454,7 +1455,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>connection_<wbr>domain</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1462,7 +1463,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>connections</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Instance connection quantity limit. Unit: count.
 {{% /md %}}</dd>
@@ -1471,7 +1472,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>create_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Creation time of the instance.
 {{% /md %}}</dd>
@@ -1480,7 +1481,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>expire<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Expiration time. Pay-As-You-Go instances are never expire.
 {{% /md %}}</dd>
@@ -1489,7 +1490,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the RKV instance.
 {{% /md %}}</dd>
@@ -1498,7 +1499,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>instance_<wbr>class</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1506,7 +1507,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>instance_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Database type. Options are `Memcache`, and `Redis`. If no value is specified, all types are returned.
 {{% /md %}}</dd>
@@ -1515,7 +1516,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the RKV instance.
 {{% /md %}}</dd>
@@ -1524,7 +1525,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Connection port of the instance.
 {{% /md %}}</dd>
@@ -1533,7 +1534,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>private_<wbr>ip</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Private IP address of the instance.
 {{% /md %}}</dd>
@@ -1542,7 +1543,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>region<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Region ID the instance belongs to.
 {{% /md %}}</dd>
@@ -1551,7 +1552,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Status of the instance.
 * `instance_class`- (Optional) Type of the applied ApsaraDB for Redis instance.
@@ -1562,7 +1563,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>user_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1570,7 +1571,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Used to retrieve instances belong to specified VPC.
 {{% /md %}}</dd>
@@ -1579,7 +1580,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
             title="Required">
         <span>vswitch_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Used to retrieve instances belong to specified `vswitch` resources.
 {{% /md %}}</dd>

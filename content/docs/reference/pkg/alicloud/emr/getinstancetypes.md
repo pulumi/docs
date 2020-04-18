@@ -11,13 +11,15 @@ instance types available in Alibaba Cloud account when create a emr cluster.
 
 > **NOTE:** Available in 1.59.0+
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultInstanceTypes = pulumi.output(alicloud.emr.getInstanceTypes({
+const defaultInstanceTypes = alicloud.emr.getInstanceTypes({
     clusterType: "HADOOP",
     destinationResource: "InstanceType",
     instanceChargeType: "PostPaid",
@@ -27,12 +29,13 @@ const defaultInstanceTypes = pulumi.output(alicloud.emr.getInstanceTypes({
         "MASTER",
         "CORE",
     ],
-}, { async: true }));
+});
 
 export const firstInstanceType = defaultInstanceTypes.types[0].id;
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/emr_instance_types.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -54,7 +57,7 @@ export const firstInstanceType = defaultInstanceTypes.types[0].id;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupInstanceTypes<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/emr?tab=doc#LookupInstanceTypesArgs">LookupInstanceTypesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/emr?tab=doc#LookupInstanceTypesResult">LookupInstanceTypesResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupInstanceTypes<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/emr?tab=doc#LookupInstanceTypesArgs">LookupInstanceTypesArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/emr?tab=doc#LookupInstanceTypesResult">LookupInstanceTypesResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -77,7 +80,7 @@ The following arguments are supported:
             title="Required">
         <span>Cluster<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster type of the emr cluster instance. Possible values: `HADOOP`, `KAFKA`, `ZOOKEEPER`, `DRUID`.
 {{% /md %}}</dd>
@@ -86,7 +89,7 @@ The following arguments are supported:
             title="Required">
         <span>Destination<wbr>Resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The destination resource of emr cluster instance
 {{% /md %}}</dd>
@@ -95,7 +98,7 @@ The following arguments are supported:
             title="Required">
         <span>Instance<wbr>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Filter the results by charge type. Valid values: `PrePaid` and `PostPaid`. Default to `PostPaid`.
 {{% /md %}}</dd>
@@ -104,7 +107,7 @@ The following arguments are supported:
             title="Optional">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Filter the specific ecs instance type to create emr cluster.
 {{% /md %}}</dd>
@@ -113,7 +116,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -121,7 +124,7 @@ The following arguments are supported:
             title="Optional">
         <span>Support<wbr>Local<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the current storage disk is local or not.
 {{% /md %}}</dd>
@@ -130,7 +133,7 @@ The following arguments are supported:
             title="Optional">
         <span>Support<wbr>Node<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The specific supported node type list.
 Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK", "GATEWAY"]
@@ -140,7 +143,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The supported resources of specific zoneId.
 {{% /md %}}</dd>
@@ -156,7 +159,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Required">
         <span>Cluster<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster type of the emr cluster instance. Possible values: `HADOOP`, `KAFKA`, `ZOOKEEPER`, `DRUID`.
 {{% /md %}}</dd>
@@ -165,7 +168,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Required">
         <span>Destination<wbr>Resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The destination resource of emr cluster instance
 {{% /md %}}</dd>
@@ -174,7 +177,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Required">
         <span>Instance<wbr>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Filter the results by charge type. Valid values: `PrePaid` and `PostPaid`. Default to `PostPaid`.
 {{% /md %}}</dd>
@@ -183,7 +186,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Optional">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Filter the specific ecs instance type to create emr cluster.
 {{% /md %}}</dd>
@@ -192,7 +195,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -200,7 +203,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Optional">
         <span>Support<wbr>Local<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the current storage disk is local or not.
 {{% /md %}}</dd>
@@ -209,7 +212,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Optional">
         <span>Support<wbr>Node<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}The specific supported node type list.
 Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK", "GATEWAY"]
@@ -219,7 +222,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Optional">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The supported resources of specific zoneId.
 {{% /md %}}</dd>
@@ -235,7 +238,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Required">
         <span>cluster<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The cluster type of the emr cluster instance. Possible values: `HADOOP`, `KAFKA`, `ZOOKEEPER`, `DRUID`.
 {{% /md %}}</dd>
@@ -244,7 +247,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Required">
         <span>destination<wbr>Resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The destination resource of emr cluster instance
 {{% /md %}}</dd>
@@ -253,7 +256,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Required">
         <span>instance<wbr>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Filter the results by charge type. Valid values: `PrePaid` and `PostPaid`. Default to `PostPaid`.
 {{% /md %}}</dd>
@@ -262,7 +265,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Optional">
         <span>instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Filter the specific ecs instance type to create emr cluster.
 {{% /md %}}</dd>
@@ -271,7 +274,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Optional">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -279,7 +282,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Optional">
         <span>support<wbr>Local<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Whether the current storage disk is local or not.
 {{% /md %}}</dd>
@@ -288,7 +291,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Optional">
         <span>support<wbr>Node<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}The specific supported node type list.
 Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK", "GATEWAY"]
@@ -298,7 +301,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Optional">
         <span>zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The supported resources of specific zoneId.
 {{% /md %}}</dd>
@@ -314,7 +317,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Required">
         <span>cluster_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The cluster type of the emr cluster instance. Possible values: `HADOOP`, `KAFKA`, `ZOOKEEPER`, `DRUID`.
 {{% /md %}}</dd>
@@ -323,7 +326,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Required">
         <span>destination_<wbr>resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The destination resource of emr cluster instance
 {{% /md %}}</dd>
@@ -332,7 +335,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Required">
         <span>instance_<wbr>charge_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Filter the results by charge type. Valid values: `PrePaid` and `PostPaid`. Default to `PostPaid`.
 {{% /md %}}</dd>
@@ -341,7 +344,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Optional">
         <span>instance_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Filter the specific ecs instance type to create emr cluster.
 {{% /md %}}</dd>
@@ -350,7 +353,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Optional">
         <span>output_<wbr>file</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -358,7 +361,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Optional">
         <span>support_<wbr>local_<wbr>storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Whether the current storage disk is local or not.
 {{% /md %}}</dd>
@@ -367,7 +370,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Optional">
         <span>support_<wbr>node_<wbr>types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The specific supported node type list.
 Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK", "GATEWAY"]
@@ -377,7 +380,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
             title="Optional">
         <span>zone_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The supported resources of specific zoneId.
 {{% /md %}}</dd>
@@ -406,7 +409,7 @@ The following output properties are available:
             title="">
         <span>Cluster<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -414,7 +417,7 @@ The following output properties are available:
             title="">
         <span>Destination<wbr>Resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -422,7 +425,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -431,7 +434,7 @@ The following output properties are available:
             title="">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of emr instance types IDs. 
 {{% /md %}}</dd>
@@ -440,7 +443,7 @@ The following output properties are available:
             title="">
         <span>Instance<wbr>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -457,7 +460,7 @@ The following output properties are available:
             title="">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -465,7 +468,7 @@ The following output properties are available:
             title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -473,7 +476,7 @@ The following output properties are available:
             title="">
         <span>Support<wbr>Local<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -481,7 +484,7 @@ The following output properties are available:
             title="">
         <span>Support<wbr>Node<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -489,7 +492,7 @@ The following output properties are available:
             title="">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The available zone id in Alibaba Cloud account
 {{% /md %}}</dd>
@@ -505,7 +508,7 @@ The following output properties are available:
             title="">
         <span>Cluster<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -513,7 +516,7 @@ The following output properties are available:
             title="">
         <span>Destination<wbr>Resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -521,7 +524,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -530,7 +533,7 @@ The following output properties are available:
             title="">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of emr instance types IDs. 
 {{% /md %}}</dd>
@@ -539,7 +542,7 @@ The following output properties are available:
             title="">
         <span>Instance<wbr>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -556,7 +559,7 @@ The following output properties are available:
             title="">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -564,7 +567,7 @@ The following output properties are available:
             title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -572,7 +575,7 @@ The following output properties are available:
             title="">
         <span>Support<wbr>Local<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -580,7 +583,7 @@ The following output properties are available:
             title="">
         <span>Support<wbr>Node<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -588,7 +591,7 @@ The following output properties are available:
             title="">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The available zone id in Alibaba Cloud account
 {{% /md %}}</dd>
@@ -604,7 +607,7 @@ The following output properties are available:
             title="">
         <span>cluster<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -612,7 +615,7 @@ The following output properties are available:
             title="">
         <span>destination<wbr>Resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -620,7 +623,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -629,7 +632,7 @@ The following output properties are available:
             title="">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of emr instance types IDs. 
 {{% /md %}}</dd>
@@ -638,7 +641,7 @@ The following output properties are available:
             title="">
         <span>instance<wbr>Charge<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -655,7 +658,7 @@ The following output properties are available:
             title="">
         <span>instance<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -663,7 +666,7 @@ The following output properties are available:
             title="">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -671,7 +674,7 @@ The following output properties are available:
             title="">
         <span>support<wbr>Local<wbr>Storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -679,7 +682,7 @@ The following output properties are available:
             title="">
         <span>support<wbr>Node<wbr>Types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -687,7 +690,7 @@ The following output properties are available:
             title="">
         <span>zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The available zone id in Alibaba Cloud account
 {{% /md %}}</dd>
@@ -703,7 +706,7 @@ The following output properties are available:
             title="">
         <span>cluster_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -711,7 +714,7 @@ The following output properties are available:
             title="">
         <span>destination_<wbr>resource</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -719,7 +722,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -728,7 +731,7 @@ The following output properties are available:
             title="">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of emr instance types IDs. 
 {{% /md %}}</dd>
@@ -737,7 +740,7 @@ The following output properties are available:
             title="">
         <span>instance_<wbr>charge_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -754,7 +757,7 @@ The following output properties are available:
             title="">
         <span>instance_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -762,7 +765,7 @@ The following output properties are available:
             title="">
         <span>output_<wbr>file</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -770,7 +773,7 @@ The following output properties are available:
             title="">
         <span>support_<wbr>local_<wbr>storage</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -778,7 +781,7 @@ The following output properties are available:
             title="">
         <span>support_<wbr>node_<wbr>types</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -786,7 +789,7 @@ The following output properties are available:
             title="">
         <span>zone_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The available zone id in Alibaba Cloud account
 {{% /md %}}</dd>
@@ -809,7 +812,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/emr?tab=doc#GetInstanceTypesType">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/emr?tab=doc#GetInstanceTypesType">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -822,7 +825,7 @@ The following output properties are available:
             title="Required">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the instance type.
 {{% /md %}}</dd>
@@ -831,7 +834,7 @@ The following output properties are available:
             title="Required">
         <span>Local<wbr>Storage<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}Local capacity of the applied ecs instance for emr cluster. Unit: GB.
 {{% /md %}}</dd>
@@ -840,7 +843,7 @@ The following output properties are available:
             title="Required">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The supported resources of specific zoneId.
 {{% /md %}}</dd>
@@ -856,7 +859,7 @@ The following output properties are available:
             title="Required">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the instance type.
 {{% /md %}}</dd>
@@ -865,7 +868,7 @@ The following output properties are available:
             title="Required">
         <span>Local<wbr>Storage<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}Local capacity of the applied ecs instance for emr cluster. Unit: GB.
 {{% /md %}}</dd>
@@ -874,7 +877,7 @@ The following output properties are available:
             title="Required">
         <span>Zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The supported resources of specific zoneId.
 {{% /md %}}</dd>
@@ -890,7 +893,7 @@ The following output properties are available:
             title="Required">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ID of the instance type.
 {{% /md %}}</dd>
@@ -899,7 +902,7 @@ The following output properties are available:
             title="Required">
         <span>local<wbr>Storage<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}Local capacity of the applied ecs instance for emr cluster. Unit: GB.
 {{% /md %}}</dd>
@@ -908,7 +911,7 @@ The following output properties are available:
             title="Required">
         <span>zone<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The supported resources of specific zoneId.
 {{% /md %}}</dd>
@@ -924,7 +927,7 @@ The following output properties are available:
             title="Required">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the instance type.
 {{% /md %}}</dd>
@@ -933,7 +936,7 @@ The following output properties are available:
             title="Required">
         <span>local<wbr>Storage<wbr>Capacity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Local capacity of the applied ecs instance for emr cluster. Unit: GB.
 {{% /md %}}</dd>
@@ -942,7 +945,7 @@ The following output properties are available:
             title="Required">
         <span>zone_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The supported resources of specific zoneId.
 {{% /md %}}</dd>

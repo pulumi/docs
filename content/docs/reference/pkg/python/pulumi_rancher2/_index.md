@@ -18,9 +18,6 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ActiveDirectory</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_mode=None</em>, <em class="sig-param">allowed_principal_ids=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">connection_timeout=None</em>, <em class="sig-param">default_login_domain=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">group_dn_attribute=None</em>, <em class="sig-param">group_member_mapping_attribute=None</em>, <em class="sig-param">group_member_user_attribute=None</em>, <em class="sig-param">group_name_attribute=None</em>, <em class="sig-param">group_object_class=None</em>, <em class="sig-param">group_search_attribute=None</em>, <em class="sig-param">group_search_base=None</em>, <em class="sig-param">group_search_filter=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">nested_group_membership_enabled=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">servers=None</em>, <em class="sig-param">service_account_password=None</em>, <em class="sig-param">service_account_username=None</em>, <em class="sig-param">tls=None</em>, <em class="sig-param">user_disabled_bit_mask=None</em>, <em class="sig-param">user_enabled_attribute=None</em>, <em class="sig-param">user_login_attribute=None</em>, <em class="sig-param">user_name_attribute=None</em>, <em class="sig-param">user_object_class=None</em>, <em class="sig-param">user_search_attribute=None</em>, <em class="sig-param">user_search_base=None</em>, <em class="sig-param">user_search_filter=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ActiveDirectory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Auth Config ActiveDirectory resource. This can be used to configure and enable Auth Config ActiveDirectory for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigActiveDirectory.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigActiveDirectory.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -537,9 +534,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AuthConfigAdfs</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_mode=None</em>, <em class="sig-param">allowed_principal_ids=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">display_name_field=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">groups_field=None</em>, <em class="sig-param">idp_metadata_content=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">rancher_api_host=None</em>, <em class="sig-param">sp_cert=None</em>, <em class="sig-param">sp_key=None</em>, <em class="sig-param">uid_field=None</em>, <em class="sig-param">user_name_field=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AuthConfigAdfs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Auth Config ADFS resource. This can be used to configure and enable Auth Config ADFS for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigADFS.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigADFS.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -725,9 +719,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AuthConfigAzureAd</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_mode=None</em>, <em class="sig-param">allowed_principal_ids=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">application_secret=None</em>, <em class="sig-param">auth_endpoint=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">graph_endpoint=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">rancher_url=None</em>, <em class="sig-param">tenant_id=None</em>, <em class="sig-param">token_endpoint=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AuthConfigAzureAd" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Auth Config AzureAD resource. This can be used to configure and enable Auth Config AzureAD for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigAzureAD.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigAzureAD.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -913,9 +904,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AuthConfigFreeIpa</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_mode=None</em>, <em class="sig-param">allowed_principal_ids=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">connection_timeout=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">group_dn_attribute=None</em>, <em class="sig-param">group_member_mapping_attribute=None</em>, <em class="sig-param">group_member_user_attribute=None</em>, <em class="sig-param">group_name_attribute=None</em>, <em class="sig-param">group_object_class=None</em>, <em class="sig-param">group_search_attribute=None</em>, <em class="sig-param">group_search_base=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">nested_group_membership_enabled=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">servers=None</em>, <em class="sig-param">service_account_distinguished_name=None</em>, <em class="sig-param">service_account_password=None</em>, <em class="sig-param">tls=None</em>, <em class="sig-param">user_disabled_bit_mask=None</em>, <em class="sig-param">user_enabled_attribute=None</em>, <em class="sig-param">user_login_attribute=None</em>, <em class="sig-param">user_member_attribute=None</em>, <em class="sig-param">user_name_attribute=None</em>, <em class="sig-param">user_object_class=None</em>, <em class="sig-param">user_search_attribute=None</em>, <em class="sig-param">user_search_base=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AuthConfigFreeIpa" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Auth Config FreeIpa resource. This can be used to configure and enable Auth Config FreeIpa for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigFreeIpa.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigFreeIpa.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1221,9 +1209,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AuthConfigGithub</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_mode=None</em>, <em class="sig-param">allowed_principal_ids=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_secret=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">hostname=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">tls=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AuthConfigGithub" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Auth Config Github resource. This can be used to configure and enable Auth Config Github for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigGithub.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigGithub.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1377,9 +1362,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AuthConfigKeycloak</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_mode=None</em>, <em class="sig-param">allowed_principal_ids=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">display_name_field=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">groups_field=None</em>, <em class="sig-param">idp_metadata_content=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">rancher_api_host=None</em>, <em class="sig-param">sp_cert=None</em>, <em class="sig-param">sp_key=None</em>, <em class="sig-param">uid_field=None</em>, <em class="sig-param">user_name_field=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AuthConfigKeycloak" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Auth Config KeyCloak resource. This can be used to configure and enable Auth Config KeyCloak for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigKeyCloak.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigKeyCloak.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1565,9 +1547,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AuthConfigOkta</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_mode=None</em>, <em class="sig-param">allowed_principal_ids=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">display_name_field=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">groups_field=None</em>, <em class="sig-param">idp_metadata_content=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">rancher_api_host=None</em>, <em class="sig-param">sp_cert=None</em>, <em class="sig-param">sp_key=None</em>, <em class="sig-param">uid_field=None</em>, <em class="sig-param">user_name_field=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AuthConfigOkta" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Auth Config OKTA resource. This can be used to configure and enable Auth Config OKTA for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigOKTA.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigOKTA.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1753,9 +1732,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AuthConfigOpenLdap</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_mode=None</em>, <em class="sig-param">allowed_principal_ids=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">certificate=None</em>, <em class="sig-param">connection_timeout=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">group_dn_attribute=None</em>, <em class="sig-param">group_member_mapping_attribute=None</em>, <em class="sig-param">group_member_user_attribute=None</em>, <em class="sig-param">group_name_attribute=None</em>, <em class="sig-param">group_object_class=None</em>, <em class="sig-param">group_search_attribute=None</em>, <em class="sig-param">group_search_base=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">nested_group_membership_enabled=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">servers=None</em>, <em class="sig-param">service_account_distinguished_name=None</em>, <em class="sig-param">service_account_password=None</em>, <em class="sig-param">tls=None</em>, <em class="sig-param">user_disabled_bit_mask=None</em>, <em class="sig-param">user_enabled_attribute=None</em>, <em class="sig-param">user_login_attribute=None</em>, <em class="sig-param">user_member_attribute=None</em>, <em class="sig-param">user_name_attribute=None</em>, <em class="sig-param">user_object_class=None</em>, <em class="sig-param">user_search_attribute=None</em>, <em class="sig-param">user_search_base=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AuthConfigOpenLdap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Auth Config OpenLdap resource. This can be used to configure and enable Auth Config OpenLdap for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigOpenLdap.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigOpenLdap.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2061,9 +2037,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">AuthConfigPing</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_mode=None</em>, <em class="sig-param">allowed_principal_ids=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">display_name_field=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">groups_field=None</em>, <em class="sig-param">idp_metadata_content=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">rancher_api_host=None</em>, <em class="sig-param">sp_cert=None</em>, <em class="sig-param">sp_key=None</em>, <em class="sig-param">uid_field=None</em>, <em class="sig-param">user_name_field=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.AuthConfigPing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Auth Config Ping resource. This can be used to configure and enable Auth Config Ping for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>In addition to the built-in local auth, only one external auth config provider can be enabled at a time.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigPing.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/authConfigPing.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2550,9 +2523,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.Catalog">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Catalog</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">branch=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">refresh=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Catalog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Catalog resource. This can be used to create cluster, global and/or project catalogs for Rancher v2 environments and retrieve their information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/catalog.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/catalog.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2736,9 +2706,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>Project certificate: Available to all namespaces in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 <li><p>Namespaced certificate: Available to just <code class="docutils literal notranslate"><span class="pre">namespace_id</span></code> in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/certificate.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2870,9 +2837,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">CloudCredential</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">amazonec2_credential_config=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">azure_credential_config=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">digitalocean_credential_config=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">linode_credential_config=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">openstack_credential_config=None</em>, <em class="sig-param">vsphere_credential_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.CloudCredential" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Cloud Credential resource. This can be used to create Cloud Credential for Rancher v2.2.x and retrieve their information.</p>
 <p>amazonec2, azure, digitalocean, linode, openstack and vsphere credentials config are supported for Cloud Credential.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cloudCredential.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cloudCredential.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3111,7 +3075,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Cluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">aks_config=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_auth_endpoint=None</em>, <em class="sig-param">cluster_monitoring_input=None</em>, <em class="sig-param">cluster_template_answers=None</em>, <em class="sig-param">cluster_template_id=None</em>, <em class="sig-param">cluster_template_questions=None</em>, <em class="sig-param">cluster_template_revision_id=None</em>, <em class="sig-param">default_pod_security_policy_template_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">desired_agent_image=None</em>, <em class="sig-param">desired_auth_image=None</em>, <em class="sig-param">docker_root_dir=None</em>, <em class="sig-param">driver=None</em>, <em class="sig-param">eks_config=None</em>, <em class="sig-param">enable_cluster_alerting=None</em>, <em class="sig-param">enable_cluster_istio=None</em>, <em class="sig-param">enable_cluster_monitoring=None</em>, <em class="sig-param">enable_network_policy=None</em>, <em class="sig-param">gke_config=None</em>, <em class="sig-param">k3s_config=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rke_config=None</em>, <em class="sig-param">scheduled_cluster_scan=None</em>, <em class="sig-param">windows_prefered_cluster=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Cluster" title="Permalink to this definition">¶</a></dt>
 <dd><div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Provides a Rancher v2 Cluster resource. This can be used to create Clusters for Rancher v2 environments and retrieve their information.
 
-&gt; This content is derived from https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/cluster.html.markdown.
+
 
 :param str resource_name: The name of the resource.
 :param pulumi.ResourceOptions opts: Options for the resource.
@@ -4935,9 +4899,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.ClusterAlterGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterAlterGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">group_interval_seconds=None</em>, <em class="sig-param">group_wait_seconds=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">recipients=None</em>, <em class="sig-param">repeat_interval_seconds=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterAlterGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Cluster Alert Group resource. This can be used to create Cluster Alert Group for Rancher v2 environments and retrieve their information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterAlertGroup.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterAlertGroup.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5096,9 +5057,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.ClusterAlterRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterAlterRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">event_rule=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_interval_seconds=None</em>, <em class="sig-param">group_wait_seconds=None</em>, <em class="sig-param">inherited=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">metric_rule=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_rule=None</em>, <em class="sig-param">repeat_interval_seconds=None</em>, <em class="sig-param">severity=None</em>, <em class="sig-param">system_service_rule=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterAlterRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Cluster Alert Rule resource. This can be used to create Cluster Alert Rule for Rancher v2 environments and retrieve their information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterAlertRule.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterAlertRule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5348,9 +5306,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.ClusterDriver">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterDriver</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active=None</em>, <em class="sig-param">actual_url=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">builtin=None</em>, <em class="sig-param">checksum=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ui_url=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">whitelist_domains=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterDriver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Cluster Driver resource. This can be used to create Cluster Driver for Rancher v2.2.x Kontainer Engine clusters and retrieve their information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterDriver.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterDriver.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5497,9 +5452,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.ClusterLogging">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterLogging</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">custom_target_config=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">enable_json_parsing=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterLogging" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Cluster Logging resource. This can be used to configure Cluster Logging for Rancher v2 environments and retrieve their information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterLogging.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterLogging.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -5893,9 +5845,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.ClusterRoleTemplateBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterRoleTemplateBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_principal_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_template_id=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">user_principal_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterRoleTemplateBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Cluster Role Template Binding resource. This can be used to create Cluster Role Template Bindings for Rancher v2 environments and retrieve their information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterRole.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterRole.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -6140,9 +6089,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ClusterTemplate</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">members=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">template_revisions=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ClusterTemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Cluster Template resource. This can be used to create Cluster Templates for Rancher v2 RKE clusters and retrieve their information.</p>
 <p>Cluster Templates are available from Rancher v2.3.x and above.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterTemplate.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/clusterTemplate.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -9721,9 +9667,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.GlobalRoleBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">GlobalRoleBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">global_role_id=None</em>, <em class="sig-param">group_principal_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.GlobalRoleBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Global Role Binding resource. This can be used to create Global Role Bindings for Rancher v2 environments and retrieve their information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/globalRole.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/globalRole.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10097,9 +10040,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.Namespace">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Namespace</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">container_resource_limit=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">resource_quota=None</em>, <em class="sig-param">wait_for_cluster=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Namespace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Namespace resource. This can be used to create namespaces for Rancher v2 environments and retrieve their information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/namespace.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/namespace.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10309,9 +10249,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.NodeDriver">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">NodeDriver</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">active=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">builtin=None</em>, <em class="sig-param">checksum=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">external_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">ui_url=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">whitelist_domains=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.NodeDriver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Node Driver resource. This can be used to create Node Driver for Rancher v2 RKE clusters and retrieve their information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/nodeDriver.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/nodeDriver.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10466,9 +10403,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.NodePool">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">NodePool</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">control_plane=None</em>, <em class="sig-param">delete_not_ready_after_secs=None</em>, <em class="sig-param">etcd=None</em>, <em class="sig-param">hostname_prefix=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_taints=None</em>, <em class="sig-param">node_template_id=None</em>, <em class="sig-param">quantity=None</em>, <em class="sig-param">worker=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.NodePool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Node Pool resource. This can be used to create Node Pool, using Node template for Rancher v2 RKE clusters and retrieve their information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/nodePool.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/nodePool.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -10653,9 +10587,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a Rancher v2 Node Template resource. This can be used to create Node Template for Rancher v2 and retrieve their information.</p>
 <p>amazonec2, azure, digitalocean, linode, opennebula, openstack, and vsphere drivers are supported for node templates.</p>
 <p><strong>Note</strong> If you are upgrading to Rancher v2.3.3, please take a look to final section</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/nodeTemplate.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/nodeTemplate.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -11482,9 +11413,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.Notifier">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Notifier</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pagerduty_config=None</em>, <em class="sig-param">send_resolved=None</em>, <em class="sig-param">slack_config=None</em>, <em class="sig-param">smtp_config=None</em>, <em class="sig-param">webhook_config=None</em>, <em class="sig-param">wechat_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Notifier" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Notifier resource. This can be used to create notifiers for Rancher v2 environments and retrieve their information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/notifier.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/notifier.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -11760,9 +11688,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.PodSecurityPolicyTemplate">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">PodSecurityPolicyTemplate</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">allow_privilege_escalation=None</em>, <em class="sig-param">allowed_capabilities=None</em>, <em class="sig-param">allowed_csi_drivers=None</em>, <em class="sig-param">allowed_flex_volumes=None</em>, <em class="sig-param">allowed_host_paths=None</em>, <em class="sig-param">allowed_proc_mount_types=None</em>, <em class="sig-param">allowed_unsafe_sysctls=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">default_add_capabilities=None</em>, <em class="sig-param">default_allow_privilege_escalation=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">forbidden_sysctls=None</em>, <em class="sig-param">fs_group=None</em>, <em class="sig-param">host_ipc=None</em>, <em class="sig-param">host_network=None</em>, <em class="sig-param">host_pid=None</em>, <em class="sig-param">host_ports=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">privileged=None</em>, <em class="sig-param">read_only_root_filesystem=None</em>, <em class="sig-param">required_drop_capabilities=None</em>, <em class="sig-param">run_as_group=None</em>, <em class="sig-param">run_as_user=None</em>, <em class="sig-param">runtime_class=None</em>, <em class="sig-param">se_linux=None</em>, <em class="sig-param">supplemental_group=None</em>, <em class="sig-param">volumes=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.PodSecurityPolicyTemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 PodSecurityPolicyTemplate resource. This can be used to create PodSecurityPolicyTemplates for Rancher v2 environments and retrieve their information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/podSecurityPolicyTemplate.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/podSecurityPolicyTemplate.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -12292,9 +12217,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.Project">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">cluster_id=None</em>, <em class="sig-param">container_resource_limit=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enable_project_monitoring=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pod_security_policy_template_id=None</em>, <em class="sig-param">project_monitoring_input=None</em>, <em class="sig-param">resource_quota=None</em>, <em class="sig-param">wait_for_cluster=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.Project" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Project resource. This can be used to create projects for Rancher v2 environments and retrieve their information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/project.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/project.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -12595,9 +12517,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.ProjectAlertGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ProjectAlertGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">group_interval_seconds=None</em>, <em class="sig-param">group_wait_seconds=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">recipients=None</em>, <em class="sig-param">repeat_interval_seconds=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ProjectAlertGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Project Alert Group resource. This can be used to create Project Alert Group for Rancher v2 environments and retrieve their information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/projectAlertGroup.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/projectAlertGroup.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -12756,9 +12675,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.ProjectAlertRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ProjectAlertRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_interval_seconds=None</em>, <em class="sig-param">group_wait_seconds=None</em>, <em class="sig-param">inherited=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">metric_rule=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pod_rule=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">repeat_interval_seconds=None</em>, <em class="sig-param">severity=None</em>, <em class="sig-param">workload_rule=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ProjectAlertRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Project Alert Rule resource. This can be used to create Project Alert Rule for Rancher v2 environments and retrieve their information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/projectAlertRule.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/projectAlertRule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -12989,9 +12905,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.ProjectLogging">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ProjectLogging</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">custom_target_config=None</em>, <em class="sig-param">elasticsearch_config=None</em>, <em class="sig-param">enable_json_parsing=None</em>, <em class="sig-param">fluentd_config=None</em>, <em class="sig-param">kafka_config=None</em>, <em class="sig-param">kind=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace_id=None</em>, <em class="sig-param">output_flush_interval=None</em>, <em class="sig-param">output_tags=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">splunk_config=None</em>, <em class="sig-param">syslog_config=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ProjectLogging" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Project Logging resource. This can be used to create Project Logging for Rancher v2 environments and retrieve their information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/projectLogging.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/projectLogging.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13385,9 +13298,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.ProjectRoleTemplateBinding">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">ProjectRoleTemplateBinding</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">group_id=None</em>, <em class="sig-param">group_principal_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">role_template_id=None</em>, <em class="sig-param">user_id=None</em>, <em class="sig-param">user_principal_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.ProjectRoleTemplateBinding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Project Role Template Binding resource. This can be used to create Project Role Template Bindings for Rancher v2 environments and retrieve their information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/projectRole.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/projectRole.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13529,9 +13439,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
 <a class="reference external" href="https://www.pulumi.com/docs/reference/programming-model/#providers">documentation</a> for more information.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/index.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/index.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13595,9 +13502,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>Project registry: Available to all namespaces in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 <li><p>Namespaced regitry: Available to just <code class="docutils literal notranslate"><span class="pre">namespace_id</span></code> in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/registry.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/registry.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13738,9 +13642,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">RoleTempalte</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">administrative=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">context=None</em>, <em class="sig-param">default_role=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">external=None</em>, <em class="sig-param">hidden=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">locked=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_template_ids=None</em>, <em class="sig-param">rules=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.RoleTempalte" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 Role Template resource. This can be used to create Role Template for Rancher v2 and retrieve their information.</p>
 <p><code class="docutils literal notranslate"><span class="pre">cluster</span></code> and <code class="docutils literal notranslate"><span class="pre">project</span></code> scopes are supported for role templates.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/roleTemplate.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/roleTemplate.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -13938,9 +13839,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>Project secret: Available to all namespaces in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 <li><p>Namespaced secret: Available to just <code class="docutils literal notranslate"><span class="pre">namespace_id</span></code> in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/secret.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/secret.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14065,9 +13963,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a Rancher v2 Setting resource. This can be used to create settings for Rancher v2 environments and retrieve their information.</p>
 <p>On create, if setting already exists, provider will import it and update its value.</p>
 <p>On destroy, if setting is a system setting like <code class="docutils literal notranslate"><span class="pre">server-url</span></code>, provider’ll not delete it from Rancher, it’ll just update setting value to default and remove it from tfstate.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/setting.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/setting.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14172,9 +14067,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>scoped: valid for just a specific cluster (<code class="docutils literal notranslate"><span class="pre">cluster_id</span></code> should be provided).</p></li>
 </ul>
 <p>Tokens can’t be updated once created. Any diff in token data will recreate the token. If any token expire, Rancher2 provider will generate a diff to regenerate it.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/token.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/token.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14339,9 +14231,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.User" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Rancher v2 User resource. This can be used to create Users for Rancher v2 environments and retrieve their information.</p>
 <p>When a Rancher User is created, it doesn’t have a global role binding. At least, <code class="docutils literal notranslate"><span class="pre">user-base</span></code> global role binding in needed in order to enable user login.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/user.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/r/user.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14455,9 +14344,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_app">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_app</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">target_namespace=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_app" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 app.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/app.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/app.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14474,9 +14360,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_catalog">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_catalog</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">scope=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_catalog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 catalog.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/catalog.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/catalog.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14496,9 +14379,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>Project certificate: Available to all namespaces in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 <li><p>Namespaced certificate: Available to just <code class="docutils literal notranslate"><span class="pre">namespace_id</span></code> in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/certificate.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14514,9 +14394,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_cloud_credential">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_cloud_credential</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_cloud_credential" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 Cloud Credential.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/cloudCredential.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/cloudCredential.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The Cloud Credential name.</p>
@@ -14528,9 +14405,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_cluster">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 cluster.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the Cluster (string)</p>
@@ -14542,9 +14416,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_cluster_alert_group">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_cluster_alert_group</code><span class="sig-paren">(</span><em class="sig-param">cluster_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_cluster_alert_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 cluster alert group.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/clusterAlertGroup.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/clusterAlertGroup.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14559,9 +14430,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_cluster_alter_rule">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_cluster_alter_rule</code><span class="sig-paren">(</span><em class="sig-param">cluster_id=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_cluster_alter_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 cluster alert rule.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/clusterAlertRule.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/clusterAlertRule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14577,9 +14445,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_cluster_driver">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_cluster_driver</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_cluster_driver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 Cluster Driver resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/clusterDriver.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/clusterDriver.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14594,9 +14459,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_cluster_logging">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_cluster_logging</code><span class="sig-paren">(</span><em class="sig-param">cluster_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_cluster_logging" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 Cluster Logging.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/clusterLogging.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/clusterLogging.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>cluster_id</strong> (<em>str</em>) – The cluster id to configure logging (string)</p>
@@ -14608,9 +14470,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_cluster_role_template_binding">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_cluster_role_template_binding</code><span class="sig-paren">(</span><em class="sig-param">cluster_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_template_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_cluster_role_template_binding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 cluster role template binding.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/clusterRole.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/clusterRole.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14633,9 +14492,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_cluster_template</code><span class="sig-paren">(</span><em class="sig-param">annotations=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_cluster_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 cluster template.</p>
 <p>Cluster Templates are available from Rancher v2.3.x and above.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/clusterTemplate.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/clusterTemplate.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14651,9 +14507,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_etcd_backup">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_etcd_backup</code><span class="sig-paren">(</span><em class="sig-param">cluster_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_etcd_backup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 etcd backup.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/etcdBackup.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/etcdBackup.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14668,9 +14521,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_global_role_binding">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_global_role_binding</code><span class="sig-paren">(</span><em class="sig-param">global_role_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_global_role_binding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 global role binding.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/globalRole.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/globalRole.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14685,9 +14535,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_multi_cluster_app">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_multi_cluster_app</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_multi_cluster_app" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 multi cluster app.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/multiClusterApp.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/multiClusterApp.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The multi cluster app name (string)</p>
@@ -14699,9 +14546,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_namespace">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_namespace</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_namespace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 namespace.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/namespace.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/namespace.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14716,9 +14560,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_node_driver">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_node_driver</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_node_driver" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 Node Driver resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/nodeDriver.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/nodeDriver.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14733,9 +14574,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_node_pool">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_node_pool</code><span class="sig-paren">(</span><em class="sig-param">cluster_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_template_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_node_pool" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 Node Pool resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/nodePool.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/nodePool.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14751,9 +14589,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_node_template">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_node_template</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">use_internal_ip_address=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_node_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 Node Template resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/nodeTemplate.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/nodeTemplate.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14768,9 +14603,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_notifier">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_notifier</code><span class="sig-paren">(</span><em class="sig-param">cluster_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_notifier" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 notifier.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/notifier.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/notifier.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14785,9 +14617,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_pod_security_policy_template">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_pod_security_policy_template</code><span class="sig-paren">(</span><em class="sig-param">allow_privilege_escalation=None</em>, <em class="sig-param">allowed_capabilities=None</em>, <em class="sig-param">allowed_csi_drivers=None</em>, <em class="sig-param">allowed_flex_volumes=None</em>, <em class="sig-param">allowed_host_paths=None</em>, <em class="sig-param">allowed_proc_mount_types=None</em>, <em class="sig-param">allowed_unsafe_sysctls=None</em>, <em class="sig-param">annotations=None</em>, <em class="sig-param">default_add_capabilities=None</em>, <em class="sig-param">default_allow_privilege_escalation=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">forbidden_sysctls=None</em>, <em class="sig-param">fs_group=None</em>, <em class="sig-param">host_ipc=None</em>, <em class="sig-param">host_network=None</em>, <em class="sig-param">host_pid=None</em>, <em class="sig-param">host_ports=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">privileged=None</em>, <em class="sig-param">read_only_root_filesystem=None</em>, <em class="sig-param">required_drop_capabilities=None</em>, <em class="sig-param">run_as_group=None</em>, <em class="sig-param">run_as_user=None</em>, <em class="sig-param">runtime_class=None</em>, <em class="sig-param">se_linux=None</em>, <em class="sig-param">supplemental_group=None</em>, <em class="sig-param">volumes=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_pod_security_policy_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 PodSecurityPolicyTemplate.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/podSecurityPolicyTemplate.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/podSecurityPolicyTemplate.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14924,9 +14753,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_project_alert_group">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_project_alert_group</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_project_alert_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 project alert group.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/projectAlertGroup.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/projectAlertGroup.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14941,9 +14767,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_project_alert_rule">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_project_alert_rule</code><span class="sig-paren">(</span><em class="sig-param">labels=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_project_alert_rule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 project alert rule.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/projectAlertRule.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/projectAlertRule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14959,9 +14782,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_project_logging">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_project_logging</code><span class="sig-paren">(</span><em class="sig-param">project_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_project_logging" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 Project Logging.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/projectLogging.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/projectLogging.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>project_id</strong> (<em>str</em>) – The project id to configure logging (string)</p>
@@ -14973,9 +14793,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_project_role_template_binding">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_project_role_template_binding</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">project_id=None</em>, <em class="sig-param">role_template_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_project_role_template_binding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 project role template binding.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/projectRole.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/projectRole.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -14996,9 +14813,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>Project registry: Available to all namespaces in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 <li><p>Namespaced registry: Available to just <code class="docutils literal notranslate"><span class="pre">namespace_id</span></code> in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/registry.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/registry.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -15014,9 +14828,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_role_tempalte">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_role_tempalte</code><span class="sig-paren">(</span><em class="sig-param">context=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_role_tempalte" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 role template resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/roleTemplate.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/roleTemplate.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -15031,9 +14842,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_role_template">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_role_template</code><span class="sig-paren">(</span><em class="sig-param">context=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_role_template" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 role template resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/roleTemplate.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/roleTemplate.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -15053,9 +14861,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p>Project secret: Available to all namespaces in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 <li><p>Namespaced secret: Available to just <code class="docutils literal notranslate"><span class="pre">namespace_id</span></code> in the <code class="docutils literal notranslate"><span class="pre">project_id</span></code></p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/secret.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/secret.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -15071,9 +14876,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_setting">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_setting</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_setting" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 setting.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/setting.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/setting.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The setting name.</p>
@@ -15085,9 +14887,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_rancher2.get_user">
 <code class="sig-prename descclassname">pulumi_rancher2.</code><code class="sig-name descname">get_user</code><span class="sig-paren">(</span><em class="sig-param">is_external=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">username=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_rancher2.get_user" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to retrieve information about a Rancher v2 user</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/user.html.markdown">https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/user.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
