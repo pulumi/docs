@@ -288,15 +288,21 @@ The CustomResourceDefinition resource accepts the following [input]({{< relref "
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the CustomResourceDefinition resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the CustomResourceDefinition resource produces the following output properties:
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -315,6 +321,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitionstatus">Custom<wbr>Resource<wbr>Definition<wbr>Status</a></span>
@@ -327,6 +341,14 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -345,6 +367,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitionstatus">Dict[Custom<wbr>Resource<wbr>Definition<wbr>Status]</a></span>
@@ -353,7 +383,6 @@ The following output properties are available:
 
 </dl>
 {{% /choosable %}}
-
 
 
 
@@ -385,14 +414,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>JSONPath</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}JSONPath is a simple JSON path (i.e. with array notation) which is evaluated against each custom resource to produce the value for this column.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -406,6 +427,14 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}format is an optional OpenAPI type definition for this column. The 'name' format is applied to the primary identifier column to assist in clients identifying column is the resource name. See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types for details.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>JSONPath</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}JSONPath is a simple JSON path (i.e. with array notation) which is evaluated against each custom resource to produce the value for this column.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -440,14 +469,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>JSONPath</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}JSONPath is a simple JSON path (i.e. with array notation) which is evaluated against each custom resource to produce the value for this column.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -461,6 +482,14 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}format is an optional OpenAPI type definition for this column. The 'name' format is applied to the primary identifier column to assist in clients identifying column is the resource name. See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types for details.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>JSONPath</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}JSONPath is a simple JSON path (i.e. with array notation) which is evaluated against each custom resource to produce the value for this column.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -550,14 +579,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>json_<wbr>path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}JSONPath is a simple JSON path (i.e. with array notation) which is evaluated against each custom resource to produce the value for this column.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -571,6 +592,14 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}format is an optional OpenAPI type definition for this column. The 'name' format is applied to the primary identifier column to assist in clients identifying column is the resource name. See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types for details.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>json_<wbr>path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}JSONPath is a simple JSON path (i.e. with array notation) which is evaluated against each custom resource to produce the value for this column.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
