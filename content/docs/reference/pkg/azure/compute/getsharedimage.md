@@ -16,11 +16,11 @@ Use this data source to access information about an existing Shared Image within
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = azure.compute.getSharedImage({
+const example = pulumi.output(azure.compute.getSharedImage({
     galleryName: "my-image-gallery",
     name: "my-image",
     resourceGroupName: "example-resources",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

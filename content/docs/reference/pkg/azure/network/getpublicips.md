@@ -16,10 +16,10 @@ Use this data source to access information about a set of existing Public IP Add
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = azure.network.getPublicIPs({
+const example = pulumi.output(azure.network.getPublicIPs({
     attached: false,
     resourceGroupName: "pip-test",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

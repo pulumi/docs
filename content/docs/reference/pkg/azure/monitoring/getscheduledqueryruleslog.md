@@ -16,10 +16,10 @@ Use this data source to access the properties of a LogToMetricAction scheduled q
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = azure.monitoring.getScheduledQueryRulesLog({
+const example = pulumi.output(azure.monitoring.getScheduledQueryRulesLog({
     name: "tfex-queryrule",
     resourceGroupName: "example-rg",
-});
+}, { async: true }));
 
 export const queryRuleId = example.id;
 ```

@@ -16,10 +16,10 @@ Use this data source to access information about an existing Storage Container.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = azure.storage.getStorageContainer({
+const example = pulumi.output(azure.storage.getStorageContainer({
     name: "example-container-name",
     storageAccountName: "example-storage-account-name",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

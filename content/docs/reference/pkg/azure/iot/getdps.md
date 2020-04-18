@@ -16,10 +16,10 @@ Use this data source to access information about an existing IotHub Device Provi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = azure.iot.getDps({
+const example = pulumi.output(azure.iot.getDps({
     name: "iot_hub_dps_test",
     resourceGroupName: "iothub_dps_rg",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

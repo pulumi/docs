@@ -16,10 +16,10 @@ Use this data source to access information about an existing Route Table.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = azure.network.getRouteTable({
+const example = pulumi.output(azure.network.getRouteTable({
     name: "myroutetable",
     resourceGroupName: "some-resource-group",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

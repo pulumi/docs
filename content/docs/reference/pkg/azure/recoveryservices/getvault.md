@@ -16,10 +16,10 @@ Use this data source to access information about an existing Recovery Services V
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const vault = azure.recoveryservices.getVault({
+const vault = pulumi.output(azure.recoveryservices.getVault({
     name: "tfex-recovery_vault",
     resourceGroupName: "tfex-resource_group",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

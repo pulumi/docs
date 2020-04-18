@@ -21,7 +21,7 @@ const test = pulumi.all([azurerm_eventhub_test.name, azurerm_eventhub_consumer_g
     name: azurerm_eventhub_consumer_group_testName,
     namespaceName: azurerm_eventhub_namespace_testName,
     resourceGroupName: azurerm_resource_group_testName,
-}));
+}, { async: true }));
 ```
 
 {{% /example %}}
