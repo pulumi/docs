@@ -21,9 +21,9 @@ data source.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = vsphere.getDatacenter({
+const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

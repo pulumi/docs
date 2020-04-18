@@ -22,13 +22,13 @@ reads the guest ID so that can be supplied as well.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = vsphere.getDatacenter({
+const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
-});
-const template = vsphere.getVirtualMachine({
+}, { async: true }));
+const template = datacenter.apply(datacenter => vsphere.getVirtualMachine({
     datacenterId: datacenter.id,
     name: "test-vm-template",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
