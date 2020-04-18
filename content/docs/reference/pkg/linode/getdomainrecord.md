@@ -18,14 +18,14 @@ The following example shows how one might use this data source to access informa
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const myRecord = linode.getDomainRecord({
+const myRecord = pulumi.output(linode.getDomainRecord({
     domainId: 3150401,
     id: 14950401,
-});
-const myWwwRecord = linode.getDomainRecord({
+}, { async: true }));
+const myWwwRecord = pulumi.output(linode.getDomainRecord({
     domainId: 3150401,
     name: "www",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

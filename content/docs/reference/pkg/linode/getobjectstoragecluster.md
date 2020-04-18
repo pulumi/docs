@@ -18,9 +18,9 @@ The following example shows how one might use this data source to access informa
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const primary = linode.getObjectStorageCluster({
+const primary = pulumi.output(linode.getObjectStorageCluster({
     id: "us-east-1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

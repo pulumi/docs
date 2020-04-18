@@ -183,7 +183,13 @@ Provides a Linode Object Storage Bucket resource. This can be used to create, mo
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## ObjectStorageBucket Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The ObjectStorageBucket resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -292,6 +298,9 @@ Provides a Linode Object Storage Bucket resource. This can be used to create, mo
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. The ObjectStorageBucket resource does not produce any additional output properties.
 
 
 

@@ -18,7 +18,7 @@ The following example shows how one might use this data source to access profile
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const profile = linode.getProfile();
+const profile = pulumi.output(linode.getProfile({ async: true }));
 ```
 
 {{% /example %}}

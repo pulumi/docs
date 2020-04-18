@@ -179,7 +179,13 @@ block_external_search_index: true
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## NodeBalancerConfig Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The NodeBalancerConfig resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -760,8 +766,9 @@ the response body of a check request, the backend is considered to be down
 
 
 
+### Outputs
 
-## NodeBalancerConfig Output Properties
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the NodeBalancerConfig resource produces the following computed outputs.
 
 The following output properties are available:
 

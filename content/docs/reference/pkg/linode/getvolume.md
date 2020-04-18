@@ -18,9 +18,9 @@ The following example shows how one might use this data source to access informa
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const foo = linode.getVolume({
+const foo = pulumi.output(linode.getVolume({
     id: 1234567,
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

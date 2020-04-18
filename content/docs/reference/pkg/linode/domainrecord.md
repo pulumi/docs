@@ -210,7 +210,13 @@ This resource exports no additional attributes.
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## DomainRecord Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The DomainRecord resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -647,6 +653,9 @@ This resource exports no additional attributes.
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. The DomainRecord resource does not produce any additional output properties.
 
 
 

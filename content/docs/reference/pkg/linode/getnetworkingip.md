@@ -18,9 +18,9 @@ The following example shows how one might use this data source to access informa
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const ns1LinodeCom = linode.NetworkIp({
+const ns1LinodeCom = pulumi.output(linode.NetworkIp({
     address: "162.159.27.72",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
