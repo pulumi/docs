@@ -8,20 +8,23 @@ block_external_search_index: true
 
 This data source provides the server load balancers of the current Alibaba Cloud user.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const slbsDs = pulumi.output(alicloud.slb.getLoadBalancers({
+const slbsDs = alicloud.slb.getLoadBalancers({
     nameRegex: "sample_slb",
-}, { async: true }));
+});
 
 export const firstSlbId = slbsDs.slbs[0].id;
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slbs.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -43,7 +46,7 @@ export const firstSlbId = slbsDs.slbs[0].id;
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLoadBalancers<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/slb?tab=doc#LookupLoadBalancersArgs">LookupLoadBalancersArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/slb?tab=doc#LookupLoadBalancersResult">LookupLoadBalancersResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupLoadBalancers<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb?tab=doc#LookupLoadBalancersArgs">LookupLoadBalancersArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb?tab=doc#LookupLoadBalancersResult">LookupLoadBalancersResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -66,7 +69,7 @@ The following arguments are supported:
             title="Optional">
         <span>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Service address of the SLBs.
 {{% /md %}}</dd>
@@ -75,7 +78,7 @@ The following arguments are supported:
             title="Optional">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of SLBs IDs.
 {{% /md %}}</dd>
@@ -84,7 +87,7 @@ The following arguments are supported:
             title="Optional">
         <span>Master<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Master availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -93,7 +96,7 @@ The following arguments are supported:
             title="Optional">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by SLB name.
 {{% /md %}}</dd>
@@ -102,7 +105,7 @@ The following arguments are supported:
             title="Optional">
         <span>Network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Network type of the SLBs. Valid values: `vpc` and `classic`.
 {{% /md %}}</dd>
@@ -111,7 +114,7 @@ The following arguments are supported:
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -119,7 +122,7 @@ The following arguments are supported:
             title="Optional">
         <span>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Id of resource group which SLB belongs.
 {{% /md %}}</dd>
@@ -128,7 +131,7 @@ The following arguments are supported:
             title="Optional">
         <span>Slave<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Slave availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -154,7 +157,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VPC linked to the SLBs.
 {{% /md %}}</dd>
@@ -163,7 +166,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch linked to the SLBs.
 {{% /md %}}</dd>
@@ -179,7 +182,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Service address of the SLBs.
 {{% /md %}}</dd>
@@ -188,7 +191,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of SLBs IDs.
 {{% /md %}}</dd>
@@ -197,7 +200,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Master<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Master availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -206,7 +209,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by SLB name.
 {{% /md %}}</dd>
@@ -215,7 +218,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Network type of the SLBs. Valid values: `vpc` and `classic`.
 {{% /md %}}</dd>
@@ -224,7 +227,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -232,7 +235,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Id of resource group which SLB belongs.
 {{% /md %}}</dd>
@@ -241,7 +244,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Slave<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Slave availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -267,7 +270,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VPC linked to the SLBs.
 {{% /md %}}</dd>
@@ -276,7 +279,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch linked to the SLBs.
 {{% /md %}}</dd>
@@ -292,7 +295,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Service address of the SLBs.
 {{% /md %}}</dd>
@@ -301,7 +304,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of SLBs IDs.
 {{% /md %}}</dd>
@@ -310,7 +313,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>master<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Master availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -319,7 +322,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by SLB name.
 {{% /md %}}</dd>
@@ -328,7 +331,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Network type of the SLBs. Valid values: `vpc` and `classic`.
 {{% /md %}}</dd>
@@ -337,7 +340,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -345,7 +348,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Id of resource group which SLB belongs.
 {{% /md %}}</dd>
@@ -354,7 +357,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>slave<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Slave availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -380,7 +383,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VPC linked to the SLBs.
 {{% /md %}}</dd>
@@ -389,7 +392,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch linked to the SLBs.
 {{% /md %}}</dd>
@@ -405,7 +408,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Service address of the SLBs.
 {{% /md %}}</dd>
@@ -414,7 +417,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of SLBs IDs.
 {{% /md %}}</dd>
@@ -423,7 +426,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>master_<wbr>availability_<wbr>zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Master availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -432,7 +435,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>name_<wbr>regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A regex string to filter results by SLB name.
 {{% /md %}}</dd>
@@ -441,7 +444,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>network_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Network type of the SLBs. Valid values: `vpc` and `classic`.
 {{% /md %}}</dd>
@@ -450,7 +453,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>output_<wbr>file</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -458,7 +461,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>resource_<wbr>group_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Id of resource group which SLB belongs.
 {{% /md %}}</dd>
@@ -467,7 +470,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>slave_<wbr>availability_<wbr>zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Slave availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -493,7 +496,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the VPC linked to the SLBs.
 {{% /md %}}</dd>
@@ -502,7 +505,7 @@ tagKey2 = "tagValue2"
             title="Optional">
         <span>vswitch_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch linked to the SLBs.
 {{% /md %}}</dd>
@@ -531,7 +534,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -540,7 +543,7 @@ The following output properties are available:
             title="">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of slb IDs.
 {{% /md %}}</dd>
@@ -549,7 +552,7 @@ The following output properties are available:
             title="">
         <span>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of slb names.
 {{% /md %}}</dd>
@@ -567,7 +570,7 @@ The following output properties are available:
             title="">
         <span>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Service address of the SLB.
 {{% /md %}}</dd>
@@ -576,7 +579,7 @@ The following output properties are available:
             title="">
         <span>Master<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Master availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -585,7 +588,7 @@ The following output properties are available:
             title="">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -593,7 +596,7 @@ The following output properties are available:
             title="">
         <span>Network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Network type of the SLB. Possible values: `vpc` and `classic`.
 {{% /md %}}</dd>
@@ -602,7 +605,7 @@ The following output properties are available:
             title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -610,7 +613,7 @@ The following output properties are available:
             title="">
         <span>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -618,7 +621,7 @@ The following output properties are available:
             title="">
         <span>Slave<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Slave availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -636,7 +639,7 @@ The following output properties are available:
             title="">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VPC the SLB belongs to.
 {{% /md %}}</dd>
@@ -645,7 +648,7 @@ The following output properties are available:
             title="">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch the SLB belongs to.
 {{% /md %}}</dd>
@@ -661,7 +664,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -670,7 +673,7 @@ The following output properties are available:
             title="">
         <span>Ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of slb IDs.
 {{% /md %}}</dd>
@@ -679,7 +682,7 @@ The following output properties are available:
             title="">
         <span>Names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of slb names.
 {{% /md %}}</dd>
@@ -697,7 +700,7 @@ The following output properties are available:
             title="">
         <span>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Service address of the SLB.
 {{% /md %}}</dd>
@@ -706,7 +709,7 @@ The following output properties are available:
             title="">
         <span>Master<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Master availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -715,7 +718,7 @@ The following output properties are available:
             title="">
         <span>Name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -723,7 +726,7 @@ The following output properties are available:
             title="">
         <span>Network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Network type of the SLB. Possible values: `vpc` and `classic`.
 {{% /md %}}</dd>
@@ -732,7 +735,7 @@ The following output properties are available:
             title="">
         <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -740,7 +743,7 @@ The following output properties are available:
             title="">
         <span>Resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -748,7 +751,7 @@ The following output properties are available:
             title="">
         <span>Slave<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Slave availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -766,7 +769,7 @@ The following output properties are available:
             title="">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VPC the SLB belongs to.
 {{% /md %}}</dd>
@@ -775,7 +778,7 @@ The following output properties are available:
             title="">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch the SLB belongs to.
 {{% /md %}}</dd>
@@ -791,7 +794,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -800,7 +803,7 @@ The following output properties are available:
             title="">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of slb IDs.
 {{% /md %}}</dd>
@@ -809,7 +812,7 @@ The following output properties are available:
             title="">
         <span>names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of slb names.
 {{% /md %}}</dd>
@@ -827,7 +830,7 @@ The following output properties are available:
             title="">
         <span>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Service address of the SLB.
 {{% /md %}}</dd>
@@ -836,7 +839,7 @@ The following output properties are available:
             title="">
         <span>master<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Master availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -845,7 +848,7 @@ The following output properties are available:
             title="">
         <span>name<wbr>Regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -853,7 +856,7 @@ The following output properties are available:
             title="">
         <span>network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Network type of the SLB. Possible values: `vpc` and `classic`.
 {{% /md %}}</dd>
@@ -862,7 +865,7 @@ The following output properties are available:
             title="">
         <span>output<wbr>File</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -870,7 +873,7 @@ The following output properties are available:
             title="">
         <span>resource<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -878,7 +881,7 @@ The following output properties are available:
             title="">
         <span>slave<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Slave availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -896,7 +899,7 @@ The following output properties are available:
             title="">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VPC the SLB belongs to.
 {{% /md %}}</dd>
@@ -905,7 +908,7 @@ The following output properties are available:
             title="">
         <span>vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch the SLB belongs to.
 {{% /md %}}</dd>
@@ -921,7 +924,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -930,7 +933,7 @@ The following output properties are available:
             title="">
         <span>ids</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of slb IDs.
 {{% /md %}}</dd>
@@ -939,7 +942,7 @@ The following output properties are available:
             title="">
         <span>names</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}A list of slb names.
 {{% /md %}}</dd>
@@ -957,7 +960,7 @@ The following output properties are available:
             title="">
         <span>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Service address of the SLB.
 {{% /md %}}</dd>
@@ -966,7 +969,7 @@ The following output properties are available:
             title="">
         <span>master_<wbr>availability_<wbr>zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Master availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -975,7 +978,7 @@ The following output properties are available:
             title="">
         <span>name_<wbr>regex</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -983,7 +986,7 @@ The following output properties are available:
             title="">
         <span>network_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Network type of the SLB. Possible values: `vpc` and `classic`.
 {{% /md %}}</dd>
@@ -992,7 +995,7 @@ The following output properties are available:
             title="">
         <span>output_<wbr>file</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1000,7 +1003,7 @@ The following output properties are available:
             title="">
         <span>resource_<wbr>group_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -1008,7 +1011,7 @@ The following output properties are available:
             title="">
         <span>slave_<wbr>availability_<wbr>zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Slave availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -1026,7 +1029,7 @@ The following output properties are available:
             title="">
         <span>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the VPC the SLB belongs to.
 {{% /md %}}</dd>
@@ -1035,7 +1038,7 @@ The following output properties are available:
             title="">
         <span>vswitch_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch the SLB belongs to.
 {{% /md %}}</dd>
@@ -1058,7 +1061,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/slb?tab=doc#GetLoadBalancersSlb">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/slb?tab=doc#GetLoadBalancersSlb">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1071,7 +1074,7 @@ The following output properties are available:
             title="Required">
         <span>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Service address of the SLBs.
 {{% /md %}}</dd>
@@ -1080,7 +1083,7 @@ The following output properties are available:
             title="Required">
         <span>Creation<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}SLB creation time.
 {{% /md %}}</dd>
@@ -1089,7 +1092,7 @@ The following output properties are available:
             title="Required">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the SLB.
 {{% /md %}}</dd>
@@ -1098,7 +1101,7 @@ The following output properties are available:
             title="Required">
         <span>Internet</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}SLB addressType: internet if `true`, intranet if `false`. Must be `false` when `network_type` is `vpc`.
 {{% /md %}}</dd>
@@ -1107,7 +1110,7 @@ The following output properties are available:
             title="Required">
         <span>Master<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Master availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -1116,7 +1119,7 @@ The following output properties are available:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}SLB name.
 {{% /md %}}</dd>
@@ -1125,7 +1128,7 @@ The following output properties are available:
             title="Required">
         <span>Network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Network type of the SLBs. Valid values: `vpc` and `classic`.
 {{% /md %}}</dd>
@@ -1134,7 +1137,7 @@ The following output properties are available:
             title="Required">
         <span>Region<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Region ID the SLB belongs to.
 {{% /md %}}</dd>
@@ -1143,7 +1146,7 @@ The following output properties are available:
             title="Required">
         <span>Slave<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Slave availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -1152,7 +1155,7 @@ The following output properties are available:
             title="Required">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}SLB current status. Possible values: `inactive`, `active` and `locked`.
 {{% /md %}}</dd>
@@ -1178,7 +1181,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VPC linked to the SLBs.
 {{% /md %}}</dd>
@@ -1187,7 +1190,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch linked to the SLBs.
 {{% /md %}}</dd>
@@ -1203,7 +1206,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Service address of the SLBs.
 {{% /md %}}</dd>
@@ -1212,7 +1215,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>Creation<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}SLB creation time.
 {{% /md %}}</dd>
@@ -1221,7 +1224,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the SLB.
 {{% /md %}}</dd>
@@ -1230,7 +1233,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>Internet</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}SLB addressType: internet if `true`, intranet if `false`. Must be `false` when `network_type` is `vpc`.
 {{% /md %}}</dd>
@@ -1239,7 +1242,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>Master<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Master availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -1248,7 +1251,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}SLB name.
 {{% /md %}}</dd>
@@ -1257,7 +1260,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>Network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Network type of the SLBs. Valid values: `vpc` and `classic`.
 {{% /md %}}</dd>
@@ -1266,7 +1269,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>Region<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Region ID the SLB belongs to.
 {{% /md %}}</dd>
@@ -1275,7 +1278,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>Slave<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Slave availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -1284,7 +1287,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>Status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}SLB current status. Possible values: `inactive`, `active` and `locked`.
 {{% /md %}}</dd>
@@ -1310,7 +1313,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VPC linked to the SLBs.
 {{% /md %}}</dd>
@@ -1319,7 +1322,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch linked to the SLBs.
 {{% /md %}}</dd>
@@ -1335,7 +1338,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Service address of the SLBs.
 {{% /md %}}</dd>
@@ -1344,7 +1347,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>creation<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}SLB creation time.
 {{% /md %}}</dd>
@@ -1353,7 +1356,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the SLB.
 {{% /md %}}</dd>
@@ -1362,7 +1365,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>internet</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}SLB addressType: internet if `true`, intranet if `false`. Must be `false` when `network_type` is `vpc`.
 {{% /md %}}</dd>
@@ -1371,7 +1374,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>master<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Master availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -1380,7 +1383,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}SLB name.
 {{% /md %}}</dd>
@@ -1389,7 +1392,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>network<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Network type of the SLBs. Valid values: `vpc` and `classic`.
 {{% /md %}}</dd>
@@ -1398,7 +1401,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>region<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Region ID the SLB belongs to.
 {{% /md %}}</dd>
@@ -1407,7 +1410,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>slave<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Slave availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -1416,7 +1419,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}SLB current status. Possible values: `inactive`, `active` and `locked`.
 {{% /md %}}</dd>
@@ -1442,7 +1445,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VPC linked to the SLBs.
 {{% /md %}}</dd>
@@ -1451,7 +1454,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch linked to the SLBs.
 {{% /md %}}</dd>
@@ -1467,7 +1470,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Service address of the SLBs.
 {{% /md %}}</dd>
@@ -1476,7 +1479,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>creation_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}SLB creation time.
 {{% /md %}}</dd>
@@ -1485,7 +1488,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the SLB.
 {{% /md %}}</dd>
@@ -1494,7 +1497,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>internet</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}SLB addressType: internet if `true`, intranet if `false`. Must be `false` when `network_type` is `vpc`.
 {{% /md %}}</dd>
@@ -1503,7 +1506,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>master<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Master availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -1512,7 +1515,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}SLB name.
 {{% /md %}}</dd>
@@ -1521,7 +1524,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>network_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Network type of the SLBs. Valid values: `vpc` and `classic`.
 {{% /md %}}</dd>
@@ -1530,7 +1533,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>region<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Region ID the SLB belongs to.
 {{% /md %}}</dd>
@@ -1539,7 +1542,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>slave<wbr>Availability<wbr>Zone</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Slave availability zone of the SLBs.
 {{% /md %}}</dd>
@@ -1548,7 +1551,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>status</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}SLB current status. Possible values: `inactive`, `active` and `locked`.
 {{% /md %}}</dd>
@@ -1574,7 +1577,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the VPC linked to the SLBs.
 {{% /md %}}</dd>
@@ -1583,7 +1586,7 @@ tagKey2 = "tagValue2"
             title="Required">
         <span>vswitch_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch linked to the SLBs.
 {{% /md %}}</dd>

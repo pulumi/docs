@@ -11,7 +11,8 @@ Filters support regular expression for the cluster name, searches by clusterId, 
 
 > **NOTE:** Available in v1.68.0+.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/polardb_endpoints.html.markdown.
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -33,7 +34,7 @@ Filters support regular expression for the cluster name, searches by clusterId, 
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupEndpoints<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/polardb?tab=doc#LookupEndpointsArgs">LookupEndpointsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/polardb?tab=doc#LookupEndpointsResult">LookupEndpointsResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupEndpoints<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/polardb?tab=doc#LookupEndpointsArgs">LookupEndpointsArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/polardb?tab=doc#LookupEndpointsResult">LookupEndpointsResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -56,7 +57,7 @@ The following arguments are supported:
             title="Required">
         <span>Db<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}PolarDB cluster ID. 
 {{% /md %}}</dd>
@@ -65,7 +66,7 @@ The following arguments are supported:
             title="Optional">
         <span>Db<wbr>Endpoint<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}endpoint of the cluster.
 {{% /md %}}</dd>
@@ -81,7 +82,7 @@ The following arguments are supported:
             title="Required">
         <span>Db<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}PolarDB cluster ID. 
 {{% /md %}}</dd>
@@ -90,7 +91,7 @@ The following arguments are supported:
             title="Optional">
         <span>Db<wbr>Endpoint<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}endpoint of the cluster.
 {{% /md %}}</dd>
@@ -106,7 +107,7 @@ The following arguments are supported:
             title="Required">
         <span>db<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}PolarDB cluster ID. 
 {{% /md %}}</dd>
@@ -115,7 +116,7 @@ The following arguments are supported:
             title="Optional">
         <span>db<wbr>Endpoint<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}endpoint of the cluster.
 {{% /md %}}</dd>
@@ -131,7 +132,7 @@ The following arguments are supported:
             title="Required">
         <span>db_<wbr>cluster_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}PolarDB cluster ID. 
 {{% /md %}}</dd>
@@ -140,7 +141,7 @@ The following arguments are supported:
             title="Optional">
         <span>db_<wbr>endpoint_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}endpoint of the cluster.
 {{% /md %}}</dd>
@@ -169,7 +170,7 @@ The following output properties are available:
             title="">
         <span>Db<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -186,7 +187,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -195,7 +196,7 @@ The following output properties are available:
             title="">
         <span>Db<wbr>Endpoint<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The endpoint ID.
 {{% /md %}}</dd>
@@ -211,7 +212,7 @@ The following output properties are available:
             title="">
         <span>Db<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -228,7 +229,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -237,7 +238,7 @@ The following output properties are available:
             title="">
         <span>Db<wbr>Endpoint<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The endpoint ID.
 {{% /md %}}</dd>
@@ -253,7 +254,7 @@ The following output properties are available:
             title="">
         <span>db<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -270,7 +271,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -279,7 +280,7 @@ The following output properties are available:
             title="">
         <span>db<wbr>Endpoint<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The endpoint ID.
 {{% /md %}}</dd>
@@ -295,7 +296,7 @@ The following output properties are available:
             title="">
         <span>db_<wbr>cluster_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -312,7 +313,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -321,7 +322,7 @@ The following output properties are available:
             title="">
         <span>db_<wbr>endpoint_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The endpoint ID.
 {{% /md %}}</dd>
@@ -344,7 +345,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/polardb?tab=doc#GetEndpointsEndpoint">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/polardb?tab=doc#GetEndpointsEndpoint">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -366,7 +367,7 @@ The following output properties are available:
             title="Required">
         <span>Auto<wbr>Add<wbr>New<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Whether the new node is automatically added to the default cluster address.Options are `Enable` and `Disable`.
 {{% /md %}}</dd>
@@ -375,7 +376,7 @@ The following output properties are available:
             title="Required">
         <span>Db<wbr>Endpoint<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}endpoint of the cluster.
 {{% /md %}}</dd>
@@ -384,7 +385,7 @@ The following output properties are available:
             title="Required">
         <span>Endpoint<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The Endpoint configuration. `ConsistLevel`: session consistency level, value:`0`: final consistency,`1`: session consistency;`LoadBalanceStrategy`: load balancing strategy. Based on the automatic scheduling of load, the value is: `load`.
 {{% /md %}}</dd>
@@ -393,7 +394,7 @@ The following output properties are available:
             title="Required">
         <span>Endpoint<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Cluster address type.`Cluster`: the default address of the Cluster.`Primary`: Primary address.`Custom`: Custom cluster addresses.
 {{% /md %}}</dd>
@@ -402,7 +403,7 @@ The following output properties are available:
             title="Required">
         <span>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}A list of nodes that connect to the address configuration.
 {{% /md %}}</dd>
@@ -411,7 +412,7 @@ The following output properties are available:
             title="Required">
         <span>Read<wbr>Write<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Read-write mode:`ReadWrite`: readable and writable (automatic read-write separation).`ReadOnly`: ReadOnly.
 {{% /md %}}</dd>
@@ -436,7 +437,7 @@ The following output properties are available:
             title="Required">
         <span>Auto<wbr>Add<wbr>New<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether the new node is automatically added to the default cluster address.Options are `Enable` and `Disable`.
 {{% /md %}}</dd>
@@ -445,7 +446,7 @@ The following output properties are available:
             title="Required">
         <span>Db<wbr>Endpoint<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}endpoint of the cluster.
 {{% /md %}}</dd>
@@ -454,7 +455,7 @@ The following output properties are available:
             title="Required">
         <span>Endpoint<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The Endpoint configuration. `ConsistLevel`: session consistency level, value:`0`: final consistency,`1`: session consistency;`LoadBalanceStrategy`: load balancing strategy. Based on the automatic scheduling of load, the value is: `load`.
 {{% /md %}}</dd>
@@ -463,7 +464,7 @@ The following output properties are available:
             title="Required">
         <span>Endpoint<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Cluster address type.`Cluster`: the default address of the Cluster.`Primary`: Primary address.`Custom`: Custom cluster addresses.
 {{% /md %}}</dd>
@@ -472,7 +473,7 @@ The following output properties are available:
             title="Required">
         <span>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}A list of nodes that connect to the address configuration.
 {{% /md %}}</dd>
@@ -481,7 +482,7 @@ The following output properties are available:
             title="Required">
         <span>Read<wbr>Write<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Read-write mode:`ReadWrite`: readable and writable (automatic read-write separation).`ReadOnly`: ReadOnly.
 {{% /md %}}</dd>
@@ -506,7 +507,7 @@ The following output properties are available:
             title="Required">
         <span>auto<wbr>Add<wbr>New<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Whether the new node is automatically added to the default cluster address.Options are `Enable` and `Disable`.
 {{% /md %}}</dd>
@@ -515,7 +516,7 @@ The following output properties are available:
             title="Required">
         <span>db<wbr>Endpoint<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}endpoint of the cluster.
 {{% /md %}}</dd>
@@ -524,7 +525,7 @@ The following output properties are available:
             title="Required">
         <span>endpoint<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The Endpoint configuration. `ConsistLevel`: session consistency level, value:`0`: final consistency,`1`: session consistency;`LoadBalanceStrategy`: load balancing strategy. Based on the automatic scheduling of load, the value is: `load`.
 {{% /md %}}</dd>
@@ -533,7 +534,7 @@ The following output properties are available:
             title="Required">
         <span>endpoint<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Cluster address type.`Cluster`: the default address of the Cluster.`Primary`: Primary address.`Custom`: Custom cluster addresses.
 {{% /md %}}</dd>
@@ -542,7 +543,7 @@ The following output properties are available:
             title="Required">
         <span>nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}A list of nodes that connect to the address configuration.
 {{% /md %}}</dd>
@@ -551,7 +552,7 @@ The following output properties are available:
             title="Required">
         <span>read<wbr>Write<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Read-write mode:`ReadWrite`: readable and writable (automatic read-write separation).`ReadOnly`: ReadOnly.
 {{% /md %}}</dd>
@@ -576,7 +577,7 @@ The following output properties are available:
             title="Required">
         <span>auto<wbr>Add<wbr>New<wbr>Nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Whether the new node is automatically added to the default cluster address.Options are `Enable` and `Disable`.
 {{% /md %}}</dd>
@@ -585,7 +586,7 @@ The following output properties are available:
             title="Required">
         <span>db_<wbr>endpoint_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}endpoint of the cluster.
 {{% /md %}}</dd>
@@ -594,7 +595,7 @@ The following output properties are available:
             title="Required">
         <span>endpoint<wbr>Config</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Endpoint configuration. `ConsistLevel`: session consistency level, value:`0`: final consistency,`1`: session consistency;`LoadBalanceStrategy`: load balancing strategy. Based on the automatic scheduling of load, the value is: `load`.
 {{% /md %}}</dd>
@@ -603,7 +604,7 @@ The following output properties are available:
             title="Required">
         <span>endpoint<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Cluster address type.`Cluster`: the default address of the Cluster.`Primary`: Primary address.`Custom`: Custom cluster addresses.
 {{% /md %}}</dd>
@@ -612,7 +613,7 @@ The following output properties are available:
             title="Required">
         <span>nodes</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}A list of nodes that connect to the address configuration.
 {{% /md %}}</dd>
@@ -621,7 +622,7 @@ The following output properties are available:
             title="Required">
         <span>read<wbr>Write<wbr>Mode</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Read-write mode:`ReadWrite`: readable and writable (automatic read-write separation).`ReadOnly`: ReadOnly.
 {{% /md %}}</dd>
@@ -639,7 +640,7 @@ The following output properties are available:
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud/polardb?tab=doc#GetEndpointsEndpointAddressItem">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/v2/go/alicloud/polardb?tab=doc#GetEndpointsEndpointAddressItem">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -652,7 +653,7 @@ The following output properties are available:
             title="Required">
         <span>Connection<wbr>String</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Connection instance string.
 {{% /md %}}</dd>
@@ -661,7 +662,7 @@ The following output properties are available:
             title="Required">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The ip address of connection string.
 {{% /md %}}</dd>
@@ -670,7 +671,7 @@ The following output properties are available:
             title="Required">
         <span>Net<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}IP network type:`Public` or `Private`.
 {{% /md %}}</dd>
@@ -679,7 +680,7 @@ The following output properties are available:
             title="Required">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Intranet connection port.
 {{% /md %}}</dd>
@@ -688,7 +689,7 @@ The following output properties are available:
             title="Required">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VPC the instance belongs to.
 {{% /md %}}</dd>
@@ -697,7 +698,7 @@ The following output properties are available:
             title="Required">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch the cluster belongs to.
 {{% /md %}}</dd>
@@ -713,7 +714,7 @@ The following output properties are available:
             title="Required">
         <span>Connection<wbr>String</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Connection instance string.
 {{% /md %}}</dd>
@@ -722,7 +723,7 @@ The following output properties are available:
             title="Required">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The ip address of connection string.
 {{% /md %}}</dd>
@@ -731,7 +732,7 @@ The following output properties are available:
             title="Required">
         <span>Net<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}IP network type:`Public` or `Private`.
 {{% /md %}}</dd>
@@ -740,7 +741,7 @@ The following output properties are available:
             title="Required">
         <span>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Intranet connection port.
 {{% /md %}}</dd>
@@ -749,7 +750,7 @@ The following output properties are available:
             title="Required">
         <span>Vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VPC the instance belongs to.
 {{% /md %}}</dd>
@@ -758,7 +759,7 @@ The following output properties are available:
             title="Required">
         <span>Vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch the cluster belongs to.
 {{% /md %}}</dd>
@@ -774,7 +775,7 @@ The following output properties are available:
             title="Required">
         <span>connection<wbr>String</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Connection instance string.
 {{% /md %}}</dd>
@@ -783,7 +784,7 @@ The following output properties are available:
             title="Required">
         <span>ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The ip address of connection string.
 {{% /md %}}</dd>
@@ -792,7 +793,7 @@ The following output properties are available:
             title="Required">
         <span>net<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}IP network type:`Public` or `Private`.
 {{% /md %}}</dd>
@@ -801,7 +802,7 @@ The following output properties are available:
             title="Required">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Intranet connection port.
 {{% /md %}}</dd>
@@ -810,7 +811,7 @@ The following output properties are available:
             title="Required">
         <span>vpc<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VPC the instance belongs to.
 {{% /md %}}</dd>
@@ -819,7 +820,7 @@ The following output properties are available:
             title="Required">
         <span>vswitch<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch the cluster belongs to.
 {{% /md %}}</dd>
@@ -835,7 +836,7 @@ The following output properties are available:
             title="Required">
         <span>connection_<wbr>string</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Connection instance string.
 {{% /md %}}</dd>
@@ -844,7 +845,7 @@ The following output properties are available:
             title="Required">
         <span>ip_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ip address of connection string.
 {{% /md %}}</dd>
@@ -853,7 +854,7 @@ The following output properties are available:
             title="Required">
         <span>net_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}IP network type:`Public` or `Private`.
 {{% /md %}}</dd>
@@ -862,7 +863,7 @@ The following output properties are available:
             title="Required">
         <span>port</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Intranet connection port.
 {{% /md %}}</dd>
@@ -871,7 +872,7 @@ The following output properties are available:
             title="Required">
         <span>vpc_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the VPC the instance belongs to.
 {{% /md %}}</dd>
@@ -880,7 +881,7 @@ The following output properties are available:
             title="Required">
         <span>vswitch_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}ID of the VSwitch the cluster belongs to.
 {{% /md %}}</dd>
