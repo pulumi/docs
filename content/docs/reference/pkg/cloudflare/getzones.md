@@ -19,13 +19,13 @@ locked down using the `cloudflare..ZoneLockdown` resource.
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
 
-const test = cloudflare.getZones({
+const test = pulumi.output(cloudflare.getZones({
     filter: {
         name: "example.*",
         paused: false,
         status: "active",
     },
-});
+}, { async: true }));
 const endpointLockdown = new cloudflare.ZoneLockdown("endpoint_lockdown", {
     configurations: [{
         target: "ip",
@@ -34,7 +34,7 @@ const endpointLockdown = new cloudflare.ZoneLockdown("endpoint_lockdown", {
     description: "Restrict access to these endpoints to requests from a known IP address",
     paused: false,
     urls: ["api.mysite.com/some/endpoint*"],
-    zone: (<any>test.zones[0])["name"],
+    zone: test.apply(test => (<any>test.zones[0])["name"]),
 });
 ```
 
