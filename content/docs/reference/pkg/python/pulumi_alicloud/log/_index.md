@@ -20,7 +20,6 @@ anything, please consult the source <a class="reference external" href="https://
 Log Service enables you to configure alerts based on the charts in a dashboard to monitor the service status in real time.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.78.0</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/log_alert.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/log_alert.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -238,7 +237,6 @@ Compute Service (ECS) instances in real time in the Log Service console. <a clas
 <p>This resource amis to attach one logtail configure to a machine group.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> One logtail configure can be attached to multiple machine groups and one machine group can attach several logtail configures.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/logtail_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/logtail_attachment.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

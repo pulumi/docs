@@ -18,9 +18,6 @@ anything, please consult the source <a class="reference external" href="https://
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.maxcompute.</code><code class="sig-name descname">Project</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">order_type=None</em>, <em class="sig-param">specification_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.maxcompute.Project" title="Permalink to this definition">¶</a></dt>
 <dd><p>The project is the basic unit of operation in maxcompute. It is similar to the concept of Database or Schema in traditional databases, and sets the boundary for maxcompute multi-user isolation and access control. <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/27818.html">Refer to details</a>.</p>
 <p>-&gt;<strong>NOTE:</strong> Available in 1.77.0+.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/maxcompute_project.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/maxcompute_project.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

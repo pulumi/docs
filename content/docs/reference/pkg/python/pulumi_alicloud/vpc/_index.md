@@ -256,9 +256,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.vpc.ForwardEntry">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">ForwardEntry</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">external_ip=None</em>, <em class="sig-param">external_port=None</em>, <em class="sig-param">forward_table_id=None</em>, <em class="sig-param">internal_ip=None</em>, <em class="sig-param">internal_port=None</em>, <em class="sig-param">ip_protocol=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.ForwardEntry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a forward resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/forward_entry.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/forward_entry.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1305,7 +1302,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a network acl resource to add network acls.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.43.0+. Currently, the resource are only available in Hongkong(cn-hongkong), India(ap-south-1), and Indonesia(ap-southeast-1) regions.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_acl.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1399,7 +1395,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a network acl attachment resource to associate network acls to vswitches.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.44.0+. Currently, the resource are only available in Hongkong(cn-hongkong), India(ap-south-1), and Indonesia(ap-southeast-1) regions.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_acl_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_acl_attachment.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1501,7 +1496,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> Available in 1.45.0+. Currently, the resource are only available in Hongkong(cn-hongkong), India(ap-south-1), and Indonesia(ap-southeast-1) regions.</p>
 <p><strong>NOTE:</strong> It doesn’t support concurrency and the order of the ingress and egress entries determines the priority.</p>
 <p><strong>NOTE:</strong> Using this resource need to open a whitelist.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_acl_entries.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_acl_entries.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1654,7 +1648,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>For information about Elastic Network Interface and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/58496.html">Elastic Network Interface</a>.</p>
 <blockquote>
 <div><p><strong>NOTE</strong> Only one of private_ips or private_ips_count can be specified when assign private IPs.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_interface.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_interface.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1804,9 +1797,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">NetworkInterfaceAttachment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">network_interface_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.NetworkInterfaceAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Alicloud ECS Elastic Network Interface Attachment as a resource to attach ENI to or detach ENI from ECS Instances.</p>
 <p>For information about Elastic Network Interface and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/58496.html">Elastic Network Interface</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_interface_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/network_interface_attachment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2411,7 +2401,6 @@ After that, all of the two router interfaces will be active.</p>
 <p><strong>NOTE:</strong> If you want to changing opposite router interface, you can delete router interface and re-build them.</p>
 <p><strong>NOTE:</strong> A integrated router interface connection tunnel requires both InitiatingSide and AcceptingSide configuring opposite router interface.</p>
 <p><strong>NOTE:</strong> Please remember to add a <code class="docutils literal notranslate"><span class="pre">depends_on</span></code> clause in the router interface connection from the InitiatingSide to the AcceptingSide, because the connection from the AcceptingSide to the InitiatingSide must be done first.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/router_interface_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/router_interface_connection.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2511,9 +2500,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.vpc.SnatEntry">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">SnatEntry</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">snat_entry_name=None</em>, <em class="sig-param">snat_ip=None</em>, <em class="sig-param">snat_table_id=None</em>, <em class="sig-param">source_cidr=None</em>, <em class="sig-param">source_vswitch_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.SnatEntry" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a snat resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/snat.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/snat.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2805,9 +2791,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">ip_address</span></code>   - The address of the EIP.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allocation_id</span></code> - The ID of the EIP instance.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/common_bandwidth_packages.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/common_bandwidth_packages.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2825,7 +2808,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides a list of Forward Entries owned by an Alibaba Cloud account.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.37.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/forward_entries.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/forward_entries.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2847,7 +2829,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides a list of Nat Gateways owned by an Alibaba Cloud account.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.37.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nat_gateways.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nat_gateways.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2864,9 +2845,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.vpc.get_networks">
 <code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">get_networks</code><span class="sig-paren">(</span><em class="sig-param">cidr_block=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.get_networks" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides VPCs available to the user.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vpcs.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vpcs.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2889,7 +2867,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides a list of Route Entries owned by an Alibaba Cloud account.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.37.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/route_entries.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/route_entries.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2909,7 +2886,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides a list of Route Tables owned by an Alibaba Cloud account.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.36.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/route_tables.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/route_tables.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2929,9 +2905,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">get_router_interfaces</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">opposite_interface_id=None</em>, <em class="sig-param">opposite_interface_owner_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">router_id=None</em>, <em class="sig-param">router_type=None</em>, <em class="sig-param">specification=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.get_router_interfaces" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides information about <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/52412.htm">router interfaces</a>
 that connect VPCs together.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/router_interfaces.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/router_interfaces.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2956,7 +2929,6 @@ that connect VPCs together.</p>
 <dd><p>This data source provides a list of Snat Entries owned by an Alibaba Cloud account.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.37.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/snat_entries.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/snat_entries.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2974,9 +2946,6 @@ that connect VPCs together.</p>
 <dt id="pulumi_alicloud.vpc.get_ssl_vpn_client_certs">
 <code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">get_ssl_vpn_client_certs</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">ssl_vpn_server_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.get_ssl_vpn_client_certs" title="Permalink to this definition">¶</a></dt>
 <dd><p>The SSL-VPN client certificates data source lists lots of SSL-VPN client certificates resource information owned by an Alicloud account.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ssl_vpn_client_certs.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ssl_vpn_client_certs.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2993,9 +2962,6 @@ that connect VPCs together.</p>
 <dt id="pulumi_alicloud.vpc.get_ssl_vpn_servers">
 <code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">get_ssl_vpn_servers</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">vpn_gateway_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.get_ssl_vpn_servers" title="Permalink to this definition">¶</a></dt>
 <dd><p>The SSL-VPN servers data source lists lots of SSL-VPN servers resource information owned by an Alicloud account.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ssl_vpn_servers.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ssl_vpn_servers.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3012,9 +2978,6 @@ that connect VPCs together.</p>
 <dt id="pulumi_alicloud.vpc.get_switches">
 <code class="sig-prename descclassname">pulumi_alicloud.vpc.</code><code class="sig-name descname">get_switches</code><span class="sig-paren">(</span><em class="sig-param">cidr_block=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">is_default=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.vpc.get_switches" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of VSwitches owned by an Alibaba Cloud account.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vswitches.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/vswitches.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

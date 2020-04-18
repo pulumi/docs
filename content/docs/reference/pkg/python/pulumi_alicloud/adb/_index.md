@@ -19,7 +19,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Provides a <a class="reference external" href="https://www.alibabacloud.com/help/product/92664.htm">ADB</a> account resource and used to manage databases.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.71.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/adb_account.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/adb_account.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -243,7 +242,6 @@ environment in the cloud. A ADB cluster can contain multiple user-created
 databases.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.71.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/adb_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/adb_cluster.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -512,7 +510,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 Filters support regular expression for the cluster description, searches by tags, and other filters which are listed below.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.71.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/adb_clusters.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/adb_clusters.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -535,7 +532,6 @@ Filters support regular expression for the cluster description, searches by tags
 <dd><p>This data source provides availability zones for ADB that can be accessed by an Alibaba Cloud account within the region configured in the provider.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.73.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/adb_zones.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/adb_zones.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

@@ -24,7 +24,6 @@ Each application can contain one or more services.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Application orchestration template must be a valid Docker Compose YAML template.</p>
 <p><strong>NOTE:</strong> At present, this resource only support swarm cluster.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_application.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_application.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -845,7 +844,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>NOTE:</strong> The cluster-autoscaler can only use the same size of instanceTypes in one scaling group.</p>
 <p><strong>NOTE:</strong> Add Policy to RAM role of the node to deploy cluster-autoscaler if you need.</p>
 <p><strong>NOTE:</strong> Available in 1.65.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_kubernetes_autoscaler.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_kubernetes_autoscaler.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1581,7 +1579,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>This resource will help you to manager a Swarm Cluster.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Swarm cluster only supports VPC network and you can specify a VPC network by filed <code class="docutils literal notranslate"><span class="pre">vswitch_id</span></code>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_swarm.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cs_swarm.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1848,7 +1845,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides a list Container Service Kubernetes Clusters on Alibaba Cloud.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.34.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cs_kubernetes_clusters.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cs_kubernetes_clusters.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1866,7 +1862,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides a list Container Service Managed Kubernetes Clusters on Alibaba Cloud.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.35.0+</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cs_managed_kubernetes_clusters.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cs_managed_kubernetes_clusters.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1884,7 +1879,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides a list Container Service Serverless Kubernetes Clusters on Alibaba Cloud.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.58.0+</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cs_serverless_kubernetes_clusters.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cs_serverless_kubernetes_clusters.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

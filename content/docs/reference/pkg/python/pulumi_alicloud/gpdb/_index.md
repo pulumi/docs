@@ -33,7 +33,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt><strong>NOTE:</strong> Each instance will allocate a intranet connection string automatically and its prefix is instance ID.</dt><dd><p>To avoid unnecessary conflict, please specified a internet connection prefix before applying the resource.</p>
 </dd>
 </dl>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/gpdb_connection.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/gpdb_connection.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -205,7 +204,6 @@ You can see detail product introduction <a class="reference external" href="http
 <p><strong>NOTE:</strong>  The following regions don’t support create Classic network Gpdb instance.
 [<code class="docutils literal notranslate"><span class="pre">ap-southeast-2</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-southeast-3</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-southeast-5</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-south-1</span></code>,<code class="docutils literal notranslate"><span class="pre">me-east-1</span></code>,<code class="docutils literal notranslate"><span class="pre">ap-northeast-1</span></code>,<code class="docutils literal notranslate"><span class="pre">eu-west-1</span></code>,<code class="docutils literal notranslate"><span class="pre">us-east-1</span></code>,<code class="docutils literal notranslate"><span class="pre">eu-central-1</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-shanghai-finance-1</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-shenzhen-finance-1</span></code>,<code class="docutils literal notranslate"><span class="pre">cn-hangzhou-finance</span></code>]</p>
 <p><strong>NOTE:</strong>  Create instance or change instance would cost 10~15 minutes. Please make full preparation.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/gpdb_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/gpdb_instance.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -342,7 +340,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 Filters support regular expression for the instance name or availability_zone.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong>  Available in 1.47.0+</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/gpdb_instances.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/gpdb_instances.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -363,7 +360,6 @@ Filters support regular expression for the instance name or availability_zone.</
 <dd><p>This data source provides availability zones for Gpdb that can be accessed by an Alibaba Cloud account within the region configured in the provider.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.73.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/gpdb_zones.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/gpdb_zones.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

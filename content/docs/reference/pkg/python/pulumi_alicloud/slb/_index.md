@@ -37,9 +37,6 @@ when you create a listener or change access control configuration after a listen
 <li><p><code class="docutils literal notranslate"><span class="pre">entry</span></code> - (Required) An IP addresses or CIDR blocks.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">comment</span></code> - (Optional) the comment of the entry.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_acl.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_acl.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -337,9 +334,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> - (Optional) Weight of the backend server. Valid value range: [0-100].</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> - (Optional) Type of the backend server. Valid value ecs, eni. Default to eni.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_backend_server.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_backend_server.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -449,9 +443,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A Load Balancer CA Certificate is used by the listener of the protocol https.</p>
 <p>For information about slb and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/27539.htm">What is Server Load Balancer</a>.</p>
 <p>For information about CA Certificate and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/85968.htm">Configure CA Certificate</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_ca_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_ca_certificate.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -554,7 +545,6 @@ Please refer to the <a class="reference external" href="https://www.alibabacloud
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.60.0+</p>
 <p><strong>NOTE:</strong> The instance with shared loadBalancerSpec doesn’t support domainExtension.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_domain_extension.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_domain_extension.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1062,9 +1052,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </ul>
 <p>load balance support 4 protocal to listen on, they are <code class="docutils literal notranslate"><span class="pre">http</span></code>,<code class="docutils literal notranslate"><span class="pre">https</span></code>,<code class="docutils literal notranslate"><span class="pre">tcp</span></code>,<code class="docutils literal notranslate"><span class="pre">udp</span></code>, the every listener support which portocal following:</p>
 <p>The listener mapping supports the following:</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_listener.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_listener.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1467,7 +1454,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> At present, to avoid some unnecessary regulation confusion, SLB can not support alicloud international account to create “paybybandwidth” instance.</p>
 <p><strong>NOTE:</strong> The supported specifications vary by region. Currently not all regions support guaranteed-performance instances.
 For more details about guaranteed-performance instance, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/27657.htm">Guaranteed-performance instances</a>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1713,9 +1699,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">server_type</span></code> - (Optional) The server type of the backend server. Valid value Master, Slave.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">is_backup</span></code> - (Removed from v1.63.0) Determine if the server is executing. Valid value 0, 1.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_master_slave_server_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_master_slave_server_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1844,7 +1827,6 @@ You can add forwarding rules to a listener to forward requests based on the doma
 <p><strong>NOTE:</strong> Having the same ‘Domain’ and ‘Url’ rule can not be created repeatedly in the one listener.</p>
 <p><strong>NOTE:</strong> Rule only be created in the <code class="docutils literal notranslate"><span class="pre">HTTP</span></code> or <code class="docutils literal notranslate"><span class="pre">HTTPS</span></code> listener.</p>
 <p><strong>NOTE:</strong> Only rule’s virtual server group can be modified.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_rule.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2120,9 +2102,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>A Load Balancer Server Certificate is an ssl Certificate used by the listener of the protocol https.</p>
 <p>For information about slb and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/27539.htm">What is Server Load Balancer</a>.</p>
 <p>For information about Server Certificate and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/85968.htm">Configure Server Certificate</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_server_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_server_certificate.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2268,9 +2247,6 @@ and to meet the personalized requirements of domain name and URL forwarding.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> - (Optional) Weight of the backend server. Valid value range: [0-100]. Default to 100.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">type</span></code> - (Optional, Available in 1.51.0+) Type of the backend server. Valid value ecs, eni. Default to eni.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_server_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/slb_server_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2401,9 +2377,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code>      - the listener protocol (such as tcp/udp/http/https, etc).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">acl_type</span></code>      - the type of acl (such as white/black).</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_acls.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_acls.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2420,9 +2393,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.slb.get_attachments">
 <code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">get_attachments</code><span class="sig-paren">(</span><em class="sig-param">instance_ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.get_attachments" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the server load balancer attachments of the current Alibaba Cloud user.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_attachments.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_attachments.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2439,7 +2409,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides the server load balancer backend servers related to a server load balancer..</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.53.0+</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_backend_servers.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_backend_servers.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2455,9 +2424,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.slb.get_ca_certificates">
 <code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">get_ca_certificates</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.get_ca_certificates" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the CA certificate list.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_ca_certificates.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_ca_certificates.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2476,7 +2442,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides the domain extensions associated with a server load balancer listener.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.60.0+</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_domain_extensions.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_domain_extensions.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2493,9 +2458,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.slb.get_listeners">
 <code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">get_listeners</code><span class="sig-paren">(</span><em class="sig-param">description_regex=None</em>, <em class="sig-param">frontend_port=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">protocol=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.get_listeners" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the listeners related to a server load balancer of the current Alibaba Cloud user.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_listeners.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_listeners.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2512,9 +2474,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.slb.get_load_balancers">
 <code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">get_load_balancers</code><span class="sig-paren">(</span><em class="sig-param">address=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">master_availability_zone=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">slave_availability_zone=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.get_load_balancers" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the server load balancers of the current Alibaba Cloud user.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slbs.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slbs.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2555,7 +2514,6 @@ tagKey2 = &quot;tagValue2&quot;
 <dd><p>This data source provides the master slave server groups related to a server load balancer.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.54.0+</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_master_slave_server_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_master_slave_server_groups.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2572,9 +2530,6 @@ tagKey2 = &quot;tagValue2&quot;
 <dt id="pulumi_alicloud.slb.get_rules">
 <code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">get_rules</code><span class="sig-paren">(</span><em class="sig-param">frontend_port=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.get_rules" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the rules associated with a server load balancer listener.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_rules.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_rules.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2591,9 +2546,6 @@ tagKey2 = &quot;tagValue2&quot;
 <dt id="pulumi_alicloud.slb.get_server_certificates">
 <code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">get_server_certificates</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.get_server_certificates" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the server certificate list.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_server_certificates.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_server_certificates.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2610,9 +2562,6 @@ tagKey2 = &quot;tagValue2&quot;
 <dt id="pulumi_alicloud.slb.get_server_groups">
 <code class="sig-prename descclassname">pulumi_alicloud.slb.</code><code class="sig-name descname">get_server_groups</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">load_balancer_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.slb.get_server_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the VServer groups related to a server load balancer.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_server_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_server_groups.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2630,7 +2579,6 @@ tagKey2 = &quot;tagValue2&quot;
 <dd><p>This data source provides availability zones for SLB that can be accessed by an Alibaba Cloud account within the region configured in the provider.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.73.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_zones.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/slb_zones.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

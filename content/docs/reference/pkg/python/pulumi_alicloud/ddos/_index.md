@@ -89,7 +89,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>This data source provides a list of Anti-DDoS Advanced instances in an Alibaba Cloud account according to the specified filters.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.57.0+ .</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ddosbgp_instances.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ddosbgp_instances.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -105,9 +104,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_alicloud.ddos.get_ddos_coo_instances">
 <code class="sig-prename descclassname">pulumi_alicloud.ddos.</code><code class="sig-name descname">get_ddos_coo_instances</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ddos.get_ddos_coo_instances" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of BGP-Line Anti-DDoS Pro instances in an Alibaba Cloud account according to the specified filters.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ddoscoo_instances.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ddoscoo_instances.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

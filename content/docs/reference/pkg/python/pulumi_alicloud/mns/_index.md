@@ -423,9 +423,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.mns.get_queues">
 <code class="sig-prename descclassname">pulumi_alicloud.mns.</code><code class="sig-name descname">get_queues</code><span class="sig-paren">(</span><em class="sig-param">name_prefix=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mns.get_queues" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of MNS queues in an Alibaba Cloud account according to the specified parameters.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/mns_queues.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/mns_queues.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name_prefix</strong> (<em>str</em>) – A string to filter resulting queues by their name prefixs.</p>
@@ -437,9 +434,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.mns.get_topic_subscriptions">
 <code class="sig-prename descclassname">pulumi_alicloud.mns.</code><code class="sig-name descname">get_topic_subscriptions</code><span class="sig-paren">(</span><em class="sig-param">name_prefix=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">topic_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mns.get_topic_subscriptions" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of MNS topic subscriptions in an Alibaba Cloud account according to the specified parameters.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/mns_topic_subscriptions.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/mns_topic_subscriptions.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -454,9 +448,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.mns.get_topics">
 <code class="sig-prename descclassname">pulumi_alicloud.mns.</code><code class="sig-name descname">get_topics</code><span class="sig-paren">(</span><em class="sig-param">name_prefix=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.mns.get_topics" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of MNS topics in an Alibaba Cloud account according to the specified parameters.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/mns_topics.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/mns_topics.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name_prefix</strong> (<em>str</em>) – A string to filter resulting topics by their name prefixs.</p>

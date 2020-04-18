@@ -26,7 +26,6 @@ anything, please consult the source <a class="reference external" href="https://
 <div><p><strong>NOTE:</strong> The Certificate name which you want to add must be already registered and had not added by another account. Every Certificate name can only exist in a unique group.</p>
 <p><strong>NOTE:</strong> The Cas Certificate region only support cn-hangzhou, ap-south-1, me-east-1, eu-central-1, ap-northeast-1, ap-southeast-2.</p>
 <p><strong>NOTE:</strong> Available in 1.35.0+ .</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cas_certificate.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cas_certificate.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -148,9 +147,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.cas.get_certificates">
 <code class="sig-prename descclassname">pulumi_alicloud.cas.</code><code class="sig-name descname">get_certificates</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cas.get_certificates" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of CAS Certificates in an Alibaba Cloud account according to the specified filters.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cas_certificates.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/cas_certificates.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
