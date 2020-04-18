@@ -42,9 +42,6 @@ in order to take advantage of Keycloak’s user sessions for SSO.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">logout_service_redirect_binding_url</span></code> - (Optional) SAML Redirect Binding URL for the client’s single logout service.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">full_scope_allowed</span></code> - (Optional) - Allow to include all roles mappings in the access token</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_saml_client.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_saml_client.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -143,9 +140,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">signature_algorithm</span></code> - (Optional) Signing Algorithm. Defaults to empty.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">xml_sign_key_info_key_name_transformer</span></code> - (Optional) Sign Key Transformer. Defaults to empty.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_saml_identity_provider.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_saml_identity_provider.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -458,9 +452,6 @@ can be shared between multiple different clients.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">saml_attribute_name</span></code> - (Required) The name of the SAML attribute.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">saml_attribute_name_format</span></code> - (Required) The SAML attribute Name Format. Can be one of <code class="docutils literal notranslate"><span class="pre">Unspecified</span></code>, <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, or <code class="docutils literal notranslate"><span class="pre">URI</span> <span class="pre">Reference</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_saml_user_attribute_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_saml_user_attribute_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -543,9 +534,6 @@ can be shared between multiple different clients.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">saml_attribute_name</span></code> - (Required) The name of the SAML attribute.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">saml_attribute_name_format</span></code> - (Required) The SAML attribute Name Format. Can be one of <code class="docutils literal notranslate"><span class="pre">Unspecified</span></code>, <code class="docutils literal notranslate"><span class="pre">Basic</span></code>, or <code class="docutils literal notranslate"><span class="pre">URI</span> <span class="pre">Reference</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_saml_user_property_protocol_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_saml_user_property_protocol_mapper.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

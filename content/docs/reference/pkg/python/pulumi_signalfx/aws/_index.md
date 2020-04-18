@@ -20,7 +20,6 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider.</p>
 <p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with <code class="docutils literal notranslate"><span class="pre">aws.Integration</span></code>. Check with SignalFx support for your realm’s AWS account id.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_external_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_external_integration.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -115,9 +114,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with one of either <code class="docutils literal notranslate"><span class="pre">aws.ExternalIntegration</span></code> or <code class="docutils literal notranslate"><span class="pre">aws.TokenIntegration</span></code>.</p>
 </div></blockquote>
 <p>Fields that expect an AWS service/namespace will work with one of: “AWS/ApiGateway” “AWS/AppStream” “AWS/AutoScaling” “AWS/Billing” “AWS/CloudFront” “AWS/CloudSearch” “AWS/Events” “AWS/Logs” “AWS/Connect” “AWS/DMS” “AWS/DX” “AWS/DynamoDB” “AWS/EC2” “AWS/EC2Spot” “AWS/ECS” “AWS/ElasticBeanstalk” “AWS/EBS” “AWS/EFS” “AWS/ELB” “AWS/ApplicationELB” “AWS/NetworkELB” “AWS/ElasticTranscoder” “AWS/ElastiCache” “AWS/ES” “AWS/ElasticMapReduce” “AWS/GameLift” “AWS/Inspector” “AWS/IoT” “AWS/KMS” “AWS/KinesisAnalytics” “AWS/Firehose” “AWS/Kinesis” “AWS/KinesisVideo” “AWS/Lambda” “AWS/Lex” “AWS/ML” “AWS/OpsWorks” “AWS/Polly” “AWS/Redshift” “AWS/RDS” “AWS/Route53” “AWS/SageMaker” “AWS/DDoSProtection” “AWS/SES” “AWS/SNS” “AWS/SQS” “AWS/S3” “AWS/SWF” “AWS/States” “AWS/StorageGateway” “AWS/Translate” “AWS/NATGateway” “AWS/VPN” “WAF” “AWS/WorkSpaces”.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_integration.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -347,7 +343,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE</strong> When managing integrations you’ll need to use an admin token to authenticate the SignalFx provider.</p>
 <p><strong>WARNING</strong> This resource implements a part of a workflow. You must use it with <code class="docutils literal notranslate"><span class="pre">aws.Integration</span></code>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_token_integration.html.markdown">https://github.com/terraform-providers/terraform-provider-signalfx/blob/master/website/docs/r/aws_token_integration.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
