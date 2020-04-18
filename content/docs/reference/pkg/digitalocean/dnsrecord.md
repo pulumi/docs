@@ -183,7 +183,13 @@ Provides a DigitalOcean DNS record resource.
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## DnsRecord Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The DnsRecord resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -580,8 +586,9 @@ Provides a DigitalOcean DNS record resource.
 
 
 
+### Outputs
 
-## DnsRecord Output Properties
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the DnsRecord resource produces the following computed outputs.
 
 The following output properties are available:
 

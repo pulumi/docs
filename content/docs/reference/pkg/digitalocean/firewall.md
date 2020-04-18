@@ -184,7 +184,13 @@ modify, and delete Firewalls.
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## Firewall Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The Firewall resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -413,8 +419,9 @@ The `outbound_rule` block is documented below.
 
 
 
+### Outputs
 
-## Firewall Output Properties
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Firewall resource produces the following computed outputs.
 
 The following output properties are available:
 

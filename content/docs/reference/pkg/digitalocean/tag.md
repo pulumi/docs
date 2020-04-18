@@ -186,7 +186,13 @@ configuration via their ID or name.
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## Tag Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The Tag resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -259,6 +265,9 @@ configuration via their ID or name.
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. The Tag resource does not produce any additional output properties.
 
 
 

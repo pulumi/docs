@@ -201,7 +201,13 @@ const web = new digitalocean.Droplet("web", {
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## Droplet Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The Droplet resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -742,8 +748,9 @@ to retrieve them.
 
 
 
+### Outputs
 
-## Droplet Output Properties
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Droplet resource produces the following computed outputs.
 
 The following output properties are available:
 

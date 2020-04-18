@@ -183,7 +183,13 @@ Provides a DigitalOcean Kubernetes node pool resource. While the default node po
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## KubernetesNodePool Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The KubernetesNodePool resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -544,8 +550,9 @@ Provides a DigitalOcean Kubernetes node pool resource. While the default node po
 
 
 
+### Outputs
 
-## KubernetesNodePool Output Properties
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the KubernetesNodePool resource produces the following computed outputs.
 
 The following output properties are available:
 

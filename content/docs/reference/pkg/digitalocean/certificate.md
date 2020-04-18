@@ -188,7 +188,13 @@ Let's Encrypt.
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## Certificate Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The Certificate resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -469,8 +475,9 @@ corresponding to the SSL certificate. Only valid when type is `custom`.
 
 
 
+### Outputs
 
-## Certificate Output Properties
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Certificate resource produces the following computed outputs.
 
 The following output properties are available:
 

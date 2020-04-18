@@ -17,10 +17,10 @@ then this data source returns the default project.
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
-const defaultProject = digitalocean.getProject();
-const staging = digitalocean.getProject({
+const defaultProject = pulumi.output(digitalocean.getProject({ async: true }));
+const staging = pulumi.output(digitalocean.getProject({
     name: "My Staging Project",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

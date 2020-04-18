@@ -186,7 +186,13 @@ fingerprint.
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## SshKey Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The SshKey resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -299,8 +305,9 @@ can be read using the file interpolation function
 
 
 
+### Outputs
 
-## SshKey Output Properties
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the SshKey resource produces the following computed outputs.
 
 The following output properties are available:
 

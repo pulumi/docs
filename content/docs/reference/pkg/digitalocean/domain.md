@@ -183,7 +183,13 @@ Provides a DigitalOcean domain resource.
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## Domain Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The Domain resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -296,8 +302,9 @@ is used to created an initial A record for the domain.
 
 
 
+### Outputs
 
-## Domain Output Properties
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Domain resource produces the following computed outputs.
 
 The following output properties are available:
 

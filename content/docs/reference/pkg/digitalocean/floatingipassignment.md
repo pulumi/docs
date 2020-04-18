@@ -185,7 +185,13 @@ Droplet.
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## FloatingIpAssignment Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The FloatingIpAssignment resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -294,6 +300,9 @@ Droplet.
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. The FloatingIpAssignment resource does not produce any additional output properties.
 
 
 

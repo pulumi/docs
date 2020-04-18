@@ -24,12 +24,12 @@ For example to find all available regions:
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
-const available = digitalocean.getRegions({
+const available = pulumi.output(digitalocean.getRegions({
     filters: [{
         key: "available",
         values: ["true"],
     }],
-});
+}, { async: true }));
 ```
 
 You can filter on multiple fields and sort the results as well:
@@ -38,7 +38,7 @@ You can filter on multiple fields and sort the results as well:
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
-const available = digitalocean.getRegions({
+const available = pulumi.output(digitalocean.getRegions({
     filters: [
         {
             key: "available",
@@ -53,7 +53,7 @@ const available = digitalocean.getRegions({
         direction: "desc",
         key: "name",
     }],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

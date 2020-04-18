@@ -183,7 +183,13 @@ Provides a resource which can be used to create a snapshot from an existing Digi
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## DropletSnapshot Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The DropletSnapshot resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -292,8 +298,9 @@ Provides a resource which can be used to create a snapshot from an existing Digi
 
 
 
+### Outputs
 
-## DropletSnapshot Output Properties
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the DropletSnapshot resource produces the following computed outputs.
 
 The following output properties are available:
 

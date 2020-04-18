@@ -185,7 +185,13 @@ specific Droplets, Kubernetes clusters, or IP addresses.
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## DatabaseFirewall Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The DatabaseFirewall resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -302,6 +308,9 @@ specific Droplets, Kubernetes clusters, or IP addresses.
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. The DatabaseFirewall resource does not produce any additional output properties.
 
 
 

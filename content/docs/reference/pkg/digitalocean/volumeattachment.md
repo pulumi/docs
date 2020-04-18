@@ -186,7 +186,13 @@ Manages attaching a Volume to a Droplet.
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## VolumeAttachment Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The VolumeAttachment resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -295,6 +301,9 @@ Manages attaching a Volume to a Droplet.
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. The VolumeAttachment resource does not produce any additional output properties.
 
 
 

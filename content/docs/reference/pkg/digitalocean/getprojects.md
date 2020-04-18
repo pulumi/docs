@@ -26,12 +26,12 @@ For example to find all staging environment projects:
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
-const staging = digitalocean.getProjects({
+const staging = pulumi.output(digitalocean.getProjects({
     filters: [{
         key: "environment",
         values: ["Staging"],
     }],
-});
+}, { async: true }));
 ```
 
 You can filter on multiple fields and sort the results as well:
@@ -40,7 +40,7 @@ You can filter on multiple fields and sort the results as well:
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
-const non_default_production = digitalocean.getProjects({
+const non_default_production = pulumi.output(digitalocean.getProjects({
     filters: [
         {
             key: "environment",
@@ -55,7 +55,7 @@ const non_default_production = digitalocean.getProjects({
         direction: "asc",
         key: "name",
     }],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

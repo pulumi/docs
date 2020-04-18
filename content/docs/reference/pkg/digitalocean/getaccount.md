@@ -18,7 +18,7 @@ Get the account:
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
-const example = digitalocean.getAccount();
+const example = pulumi.output(digitalocean.getAccount({ async: true }));
 ```
 
 {{% /example %}}
