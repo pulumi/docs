@@ -16,9 +16,9 @@ Use this data source to retrieve the collaborators for a given repository.
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
-const example = okta.app.getApp({
+const example = pulumi.output(okta.app.getApp({
     label: "Example App",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

@@ -182,7 +182,13 @@ This resource allows you to create and configure a Password Policy Rule.
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## RulePassword Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The RulePassword resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -615,6 +621,9 @@ This resource allows you to create and configure a Password Policy Rule.
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. The RulePassword resource does not produce any additional output properties.
 
 
 

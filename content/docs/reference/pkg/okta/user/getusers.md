@@ -16,13 +16,13 @@ Use this data source to retrieve a list of users from Okta.
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
-const example = okta.user.getUsers({
+const example = pulumi.output(okta.user.getUsers({
     searches: [{
         comparison: "sw",
         name: "profile.company",
         value: "Articulate",
     }],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

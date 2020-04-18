@@ -16,10 +16,10 @@ Use this data source to retrieve a policy from Okta.
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
-const example = okta.policy.getPolicy({
+const example = pulumi.output(okta.policy.getPolicy({
     name: "Password Policy Example",
     type: "PASSWORD",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

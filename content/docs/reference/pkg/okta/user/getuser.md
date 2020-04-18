@@ -16,7 +16,7 @@ Use this data source to retrieve a users from Okta.
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
-const example = okta.user.getUser({
+const example = pulumi.output(okta.user.getUser({
     searches: [
         {
             name: "profile.firstName",
@@ -27,7 +27,7 @@ const example = okta.user.getUser({
             value: "Doe",
         },
     ],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

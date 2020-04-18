@@ -200,7 +200,13 @@ const example = new okta.auth.ServerScope("example", {
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## ServerScope Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The ServerScope resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -453,6 +459,9 @@ const example = new okta.auth.ServerScope("example", {
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. The ServerScope resource does not produce any additional output properties.
 
 
 

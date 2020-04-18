@@ -199,7 +199,13 @@ const example = new okta.app.Bookmark("example", {
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## Bookmark Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The Bookmark resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -560,8 +566,9 @@ const example = new okta.app.Bookmark("example", {
 
 
 
+### Outputs
 
-## Bookmark Output Properties
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Bookmark resource produces the following computed outputs.
 
 The following output properties are available:
 

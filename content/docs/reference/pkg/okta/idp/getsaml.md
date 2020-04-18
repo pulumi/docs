@@ -16,9 +16,9 @@ Use this data source to retrieve a SAML IdP from Okta.
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
-const example = okta.idp.getSaml({
+const example = pulumi.output(okta.idp.getSaml({
     label: "Example App",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

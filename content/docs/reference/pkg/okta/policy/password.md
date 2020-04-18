@@ -201,7 +201,13 @@ const example = new okta.policy.Password("example", {
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## Password Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The Password resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -1246,6 +1252,9 @@ const example = new okta.policy.Password("example", {
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. The Password resource does not produce any additional output properties.
 
 
 

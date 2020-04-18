@@ -182,7 +182,13 @@ This resource allows you to create and configure an MFA Policy Rule.
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## RuleMfa Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The RuleMfa resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -543,6 +549,9 @@ This resource allows you to create and configure an MFA Policy Rule.
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. The RuleMfa resource does not produce any additional output properties.
 
 
 

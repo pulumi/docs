@@ -202,7 +202,13 @@ const example = new okta.app.ThreeField("example", {
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## ThreeField Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The ThreeField resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -815,8 +821,9 @@ const example = new okta.app.ThreeField("example", {
 
 
 
+### Outputs
 
-## ThreeField Output Properties
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the ThreeField resource produces the following computed outputs.
 
 The following output properties are available:
 

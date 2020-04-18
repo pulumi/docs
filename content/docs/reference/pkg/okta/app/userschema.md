@@ -204,7 +204,13 @@ const example = new okta.app.UserSchema("example", {
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## UserSchema Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The UserSchema resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -853,6 +859,9 @@ const example = new okta.app.UserSchema("example", {
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. The UserSchema resource does not produce any additional output properties.
 
 
 
