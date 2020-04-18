@@ -23,9 +23,6 @@ to the first and last name attributes of a Keycloak user.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">read_only</span></code> - (Optional) When <code class="docutils literal notranslate"><span class="pre">true</span></code>, updates to a user within Keycloak will not be written back to LDAP. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">write_only</span></code> - (Optional) When <code class="docutils literal notranslate"><span class="pre">true</span></code>, this mapper will only be used to write updates to LDAP. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_ldap_full_name_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_ldap_full_name_mapper.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -140,9 +137,6 @@ if they do not already exist.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">mapped_group_attributes</span></code> - (Optional) Array of strings representing attributes on the LDAP group which will be mapped to attributes on the Keycloak group.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">drop_non_existing_groups_during_sync</span></code> - (Optional) When <code class="docutils literal notranslate"><span class="pre">true</span></code>, groups that no longer exist within LDAP will be dropped in Keycloak during sync. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_ldap_group_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_ldap_group_mapper.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -240,9 +234,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> - (Required) Display name of this mapper when displayed in the console.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">role</span></code> - (Required) The role which should be assigned to the users.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_ldap_hardcoded_role_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_ldap_hardcoded_role_mapper.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -437,9 +428,6 @@ or disabled accounts.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> - (Required) Display name of this mapper when displayed in the console.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">ldap_password_policy_hints_enabled</span></code> - (Optional) When <code class="docutils literal notranslate"><span class="pre">true</span></code>, advanced password policies, such as password hints and previous password history will be used when writing new passwords to AD. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_ldap_msad_user_account_control_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_ldap_msad_user_account_control_mapper.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -544,9 +532,6 @@ to an attribute on the Keycloak user model.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">always_read_value_from_ldap</span></code> - (Optional) When <code class="docutils literal notranslate"><span class="pre">true</span></code>, the value fetched from LDAP will override the value stored in Keycloak. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">is_mandatory_in_ldap</span></code> - (Optional) When <code class="docutils literal notranslate"><span class="pre">true</span></code>, this attribute must exist in LDAP. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_ldap_user_attribute_mapper.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_ldap_user_attribute_mapper.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -722,9 +707,6 @@ users can have their attributes defined using mappers.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">changed_sync_period</span></code> - (Optional) How frequently Keycloak should sync changed LDAP users, in seconds. Omit this property to disable periodic changed users sync.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cache_policy</span></code> - (Optional) Can be one of <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code>, <code class="docutils literal notranslate"><span class="pre">EVICT_DAILY</span></code>, <code class="docutils literal notranslate"><span class="pre">EVICT_WEEKLY</span></code>, <code class="docutils literal notranslate"><span class="pre">MAX_LIFESPAN</span></code>, or <code class="docutils literal notranslate"><span class="pre">NO_CACHE</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">DEFAULT</span></code>.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_ldap_user_federation.html.markdown">https://github.com/mrparkers/terraform-provider-keycloak/blob/master/website/docs/r/keycloak_ldap_user_federation.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

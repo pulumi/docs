@@ -8,18 +8,21 @@ block_external_search_index: true
 
 Use this data source to retrieve information about a Rancher v2 Node Template resource.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
 
-const foo = pulumi.output(rancher2.getNodeTemplate({
+const foo = rancher2.getNodeTemplate({
     name: "foo",
-}, { async: true }));
+});
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-rancher2/blob/master/website/docs/d/nodeTemplate.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -41,7 +44,7 @@ const foo = pulumi.output(rancher2.getNodeTemplate({
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupNodeTemplate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#GetNodeTemplateArgs">GetNodeTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/go/rancher2/?tab=doc#LookupNodeTemplateResult">LookupNodeTemplateResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupNodeTemplate<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#GetNodeTemplateArgs">GetNodeTemplateArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-rancher2/sdk/v2/go/rancher2/?tab=doc#LookupNodeTemplateResult">LookupNodeTemplateResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -64,7 +67,7 @@ The following arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Node Template (string)
 {{% /md %}}</dd>
@@ -73,7 +76,7 @@ The following arguments are supported:
             title="Optional">
         <span>Use<wbr>Internal<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (bool)
 {{% /md %}}</dd>
@@ -89,7 +92,7 @@ The following arguments are supported:
             title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Node Template (string)
 {{% /md %}}</dd>
@@ -98,7 +101,7 @@ The following arguments are supported:
             title="Optional">
         <span>Use<wbr>Internal<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (bool)
 {{% /md %}}</dd>
@@ -114,7 +117,7 @@ The following arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The name of the Node Template (string)
 {{% /md %}}</dd>
@@ -123,7 +126,7 @@ The following arguments are supported:
             title="Optional">
         <span>use<wbr>Internal<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (bool)
 {{% /md %}}</dd>
@@ -139,7 +142,7 @@ The following arguments are supported:
             title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of the Node Template (string)
 {{% /md %}}</dd>
@@ -148,7 +151,7 @@ The following arguments are supported:
             title="Optional">
         <span>use_<wbr>internal_<wbr>ip_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (bool)
 {{% /md %}}</dd>
@@ -186,7 +189,7 @@ The following output properties are available:
             title="">
         <span>Cloud<wbr>Credential<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Cloud credential ID for the Node Template. Required from Rancher v2.2.x (string)
 {{% /md %}}</dd>
@@ -195,7 +198,7 @@ The following output properties are available:
             title="">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Description for the Node Template (string)
 {{% /md %}}</dd>
@@ -204,7 +207,7 @@ The following output properties are available:
             title="">
         <span>Driver</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the node template (string)
 {{% /md %}}</dd>
@@ -222,7 +225,7 @@ The following output properties are available:
             title="">
         <span>Engine<wbr>Insecure<wbr>Registries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Insecure registry for the node template (list)
 {{% /md %}}</dd>
@@ -231,7 +234,7 @@ The following output properties are available:
             title="">
         <span>Engine<wbr>Install<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Docker engine install URL for the node template (string)
 {{% /md %}}</dd>
@@ -258,7 +261,7 @@ The following output properties are available:
             title="">
         <span>Engine<wbr>Registry<wbr>Mirrors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Engine registry mirror for the node template (list)
 {{% /md %}}</dd>
@@ -267,7 +270,7 @@ The following output properties are available:
             title="">
         <span>Engine<wbr>Storage<wbr>Driver</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (string)
 {{% /md %}}</dd>
@@ -276,7 +279,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -294,7 +297,7 @@ The following output properties are available:
             title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -302,7 +305,7 @@ The following output properties are available:
             title="">
         <span>Use<wbr>Internal<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (bool)
 {{% /md %}}</dd>
@@ -327,7 +330,7 @@ The following output properties are available:
             title="">
         <span>Cloud<wbr>Credential<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Cloud credential ID for the Node Template. Required from Rancher v2.2.x (string)
 {{% /md %}}</dd>
@@ -336,7 +339,7 @@ The following output properties are available:
             title="">
         <span>Description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Description for the Node Template (string)
 {{% /md %}}</dd>
@@ -345,7 +348,7 @@ The following output properties are available:
             title="">
         <span>Driver</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the node template (string)
 {{% /md %}}</dd>
@@ -363,7 +366,7 @@ The following output properties are available:
             title="">
         <span>Engine<wbr>Insecure<wbr>Registries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Insecure registry for the node template (list)
 {{% /md %}}</dd>
@@ -372,7 +375,7 @@ The following output properties are available:
             title="">
         <span>Engine<wbr>Install<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Docker engine install URL for the node template (string)
 {{% /md %}}</dd>
@@ -399,7 +402,7 @@ The following output properties are available:
             title="">
         <span>Engine<wbr>Registry<wbr>Mirrors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Engine registry mirror for the node template (list)
 {{% /md %}}</dd>
@@ -408,7 +411,7 @@ The following output properties are available:
             title="">
         <span>Engine<wbr>Storage<wbr>Driver</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (string)
 {{% /md %}}</dd>
@@ -417,7 +420,7 @@ The following output properties are available:
             title="">
         <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -435,7 +438,7 @@ The following output properties are available:
             title="">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -443,7 +446,7 @@ The following output properties are available:
             title="">
         <span>Use<wbr>Internal<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (bool)
 {{% /md %}}</dd>
@@ -468,7 +471,7 @@ The following output properties are available:
             title="">
         <span>cloud<wbr>Credential<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Cloud credential ID for the Node Template. Required from Rancher v2.2.x (string)
 {{% /md %}}</dd>
@@ -477,7 +480,7 @@ The following output properties are available:
             title="">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Description for the Node Template (string)
 {{% /md %}}</dd>
@@ -486,7 +489,7 @@ The following output properties are available:
             title="">
         <span>driver</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the node template (string)
 {{% /md %}}</dd>
@@ -504,7 +507,7 @@ The following output properties are available:
             title="">
         <span>engine<wbr>Insecure<wbr>Registries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Insecure registry for the node template (list)
 {{% /md %}}</dd>
@@ -513,7 +516,7 @@ The following output properties are available:
             title="">
         <span>engine<wbr>Install<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Docker engine install URL for the node template (string)
 {{% /md %}}</dd>
@@ -540,7 +543,7 @@ The following output properties are available:
             title="">
         <span>engine<wbr>Registry<wbr>Mirrors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Engine registry mirror for the node template (list)
 {{% /md %}}</dd>
@@ -549,7 +552,7 @@ The following output properties are available:
             title="">
         <span>engine<wbr>Storage<wbr>Driver</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (string)
 {{% /md %}}</dd>
@@ -558,7 +561,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -576,7 +579,7 @@ The following output properties are available:
             title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -584,7 +587,7 @@ The following output properties are available:
             title="">
         <span>use<wbr>Internal<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (bool)
 {{% /md %}}</dd>
@@ -609,7 +612,7 @@ The following output properties are available:
             title="">
         <span>cloud_<wbr>credential_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Cloud credential ID for the Node Template. Required from Rancher v2.2.x (string)
 {{% /md %}}</dd>
@@ -618,7 +621,7 @@ The following output properties are available:
             title="">
         <span>description</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Description for the Node Template (string)
 {{% /md %}}</dd>
@@ -627,7 +630,7 @@ The following output properties are available:
             title="">
         <span>driver</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}(Computed) The driver of the node template (string)
 {{% /md %}}</dd>
@@ -645,7 +648,7 @@ The following output properties are available:
             title="">
         <span>engine_<wbr>insecure_<wbr>registries</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Insecure registry for the node template (list)
 {{% /md %}}</dd>
@@ -654,7 +657,7 @@ The following output properties are available:
             title="">
         <span>engine_<wbr>install_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Docker engine install URL for the node template (string)
 {{% /md %}}</dd>
@@ -681,7 +684,7 @@ The following output properties are available:
             title="">
         <span>engine_<wbr>registry_<wbr>mirrors</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Engine registry mirror for the node template (list)
 {{% /md %}}</dd>
@@ -690,7 +693,7 @@ The following output properties are available:
             title="">
         <span>engine_<wbr>storage_<wbr>driver</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (string)
 {{% /md %}}</dd>
@@ -699,7 +702,7 @@ The following output properties are available:
             title="">
         <span>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
@@ -717,7 +720,7 @@ The following output properties are available:
             title="">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -725,7 +728,7 @@ The following output properties are available:
             title="">
         <span>use_<wbr>internal_<wbr>ip_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}(Computed) Engine storage driver for the node template (bool)
 {{% /md %}}</dd>
