@@ -18,9 +18,9 @@ Note that the secure credential's value is not returned as an attribute for secu
 import * as pulumi from "@pulumi/pulumi";
 import * as newrelic from "@pulumi/newrelic";
 
-const foo = newrelic.synthetics.getSecureCredential({
+const foo = pulumi.output(newrelic.synthetics.getSecureCredential({
     key: "MY_KEY",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
