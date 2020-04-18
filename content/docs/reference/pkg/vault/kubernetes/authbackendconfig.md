@@ -6,6 +6,34 @@ block_external_search_index: true
 
 
 
+Manages an Kubernetes auth backend config in a Vault server. See the [Vault
+documentation](https://www.vaultproject.io/docs/auth/kubernetes.html) for more
+information.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vault from "@pulumi/vault";
+
+const kubernetes = new vault.AuthBackend("kubernetes", {
+    type: "kubernetes",
+});
+const example = new vault.kubernetes.AuthBackendConfig("example", {
+    backend: kubernetes.path,
+    issuer: "api",
+    kubernetesCaCert: `-----BEGIN CERTIFICATE-----
+example
+-----END CERTIFICATE-----`,
+    kubernetesHost: "http://example.com:443",
+    tokenReviewerJwt: "ZXhhbXBsZQo=",
+});
+```
+
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -14,7 +42,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/kubernetes/#AuthBackendConfig">AuthBackendConfig</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/kubernetes/#AuthBackendConfigArgs">AuthBackendConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/kubernetes/#AuthBackendConfig">AuthBackendConfig</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/kubernetes/#AuthBackendConfigArgs">AuthBackendConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,7 +50,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAuthBackendConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/kubernetes?tab=doc#AuthBackendConfigArgs">AuthBackendConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/kubernetes?tab=doc#AuthBackendConfig">AuthBackendConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAuthBackendConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/kubernetes?tab=doc#AuthBackendConfigArgs">AuthBackendConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/kubernetes?tab=doc#AuthBackendConfig">AuthBackendConfig</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -118,11 +146,20 @@ block_external_search_index: true
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Kubernetes<wbr>Host</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Unique name of the kubernetes backend to configure.
 {{% /md %}}</dd>
@@ -131,48 +168,36 @@ block_external_search_index: true
             title="Optional">
         <span>Issuer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, kubernetes.io/serviceaccount will be used as the default issuer.
+    <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, `kubernetes.io/serviceaccount` will be used as the default issuer. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Kubernetes<wbr>Ca<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}PEM encoded CA cert for use by the TLS client used to talk with the Kubernetes API.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Kubernetes<wbr>Host</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Pem<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Optional list of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account
-JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these
-keys.
+    <dd>{{% md %}}List of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these keys.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Token<wbr>Reviewer<wbr>Jwt</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A service account JWT used to access the TokenReview API to validate other JWTs during login. If not set the JWT used
-for login will be used to access the API.
+    <dd>{{% md %}}A service account JWT used to access the TokenReview API to validate other JWTs during login. If not set the JWT used for login will be used to access the API.
 {{% /md %}}</dd>
 
 </dl>
@@ -182,11 +207,20 @@ for login will be used to access the API.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>Kubernetes<wbr>Host</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Unique name of the kubernetes backend to configure.
 {{% /md %}}</dd>
@@ -195,48 +229,36 @@ for login will be used to access the API.
             title="Optional">
         <span>Issuer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, kubernetes.io/serviceaccount will be used as the default issuer.
+    <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, `kubernetes.io/serviceaccount` will be used as the default issuer. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Kubernetes<wbr>Ca<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}PEM encoded CA cert for use by the TLS client used to talk with the Kubernetes API.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Kubernetes<wbr>Host</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Pem<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Optional list of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account
-JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these
-keys.
+    <dd>{{% md %}}List of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these keys.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Token<wbr>Reviewer<wbr>Jwt</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A service account JWT used to access the TokenReview API to validate other JWTs during login. If not set the JWT used
-for login will be used to access the API.
+    <dd>{{% md %}}A service account JWT used to access the TokenReview API to validate other JWTs during login. If not set the JWT used for login will be used to access the API.
 {{% /md %}}</dd>
 
 </dl>
@@ -246,11 +268,20 @@ for login will be used to access the API.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span>kubernetes<wbr>Host</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.
+{{% /md %}}</dd>
+
     <dt class="property-optional"
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Unique name of the kubernetes backend to configure.
 {{% /md %}}</dd>
@@ -259,48 +290,36 @@ for login will be used to access the API.
             title="Optional">
         <span>issuer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, kubernetes.io/serviceaccount will be used as the default issuer.
+    <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, `kubernetes.io/serviceaccount` will be used as the default issuer. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>kubernetes<wbr>Ca<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}PEM encoded CA cert for use by the TLS client used to talk with the Kubernetes API.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>kubernetes<wbr>Host</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>pem<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Optional list of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account
-JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these
-keys.
+    <dd>{{% md %}}List of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these keys.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>token<wbr>Reviewer<wbr>Jwt</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A service account JWT used to access the TokenReview API to validate other JWTs during login. If not set the JWT used
-for login will be used to access the API.
+    <dd>{{% md %}}A service account JWT used to access the TokenReview API to validate other JWTs during login. If not set the JWT used for login will be used to access the API.
 {{% /md %}}</dd>
 
 </dl>
@@ -310,333 +329,64 @@ for login will be used to access the API.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Unique name of the kubernetes backend to configure.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>issuer</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, kubernetes.io/serviceaccount will be used as the default issuer.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>kubernetes_<wbr>ca_<wbr>cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}PEM encoded CA cert for use by the TLS client used to talk with the Kubernetes API.
-{{% /md %}}</dd>
-
     <dt class="property-required"
             title="Required">
         <span>kubernetes_<wbr>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>pem_<wbr>keys</span>
+        <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Optional list of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account
-JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these
-keys.
+    <dd>{{% md %}}Unique name of the kubernetes backend to configure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>token_<wbr>reviewer_<wbr>jwt</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}A service account JWT used to access the TokenReview API to validate other JWTs during login. If not set the JWT used
-for login will be used to access the API.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## AuthBackendConfig Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Unique name of the kubernetes backend to configure.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Issuer</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, kubernetes.io/serviceaccount will be used as the default issuer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kubernetes<wbr>Ca<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}PEM encoded CA cert for use by the TLS client used to talk with the Kubernetes API.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kubernetes<wbr>Host</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pem<wbr>Keys</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Optional list of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account
-JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these
-keys.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Token<wbr>Reviewer<wbr>Jwt</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A service account JWT used to access the TokenReview API to validate other JWTs during login. If not set the JWT used
-for login will be used to access the API.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Unique name of the kubernetes backend to configure.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Issuer</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, kubernetes.io/serviceaccount will be used as the default issuer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kubernetes<wbr>Ca<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}PEM encoded CA cert for use by the TLS client used to talk with the Kubernetes API.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Kubernetes<wbr>Host</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pem<wbr>Keys</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Optional list of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account
-JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these
-keys.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Token<wbr>Reviewer<wbr>Jwt</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}A service account JWT used to access the TokenReview API to validate other JWTs during login. If not set the JWT used
-for login will be used to access the API.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Unique name of the kubernetes backend to configure.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>issuer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, kubernetes.io/serviceaccount will be used as the default issuer.
+    <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, `kubernetes.io/serviceaccount` will be used as the default issuer. 
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>kubernetes<wbr>Ca<wbr>Cert</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}PEM encoded CA cert for use by the TLS client used to talk with the Kubernetes API.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>kubernetes<wbr>Host</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>pem<wbr>Keys</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Optional list of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account
-JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these
-keys.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>token<wbr>Reviewer<wbr>Jwt</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}A service account JWT used to access the TokenReview API to validate other JWTs during login. If not set the JWT used
-for login will be used to access the API.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Unique name of the kubernetes backend to configure.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>issuer</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, kubernetes.io/serviceaccount will be used as the default issuer.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>kubernetes_<wbr>ca_<wbr>cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}PEM encoded CA cert for use by the TLS client used to talk with the Kubernetes API.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>kubernetes_<wbr>host</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>pem_<wbr>keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}Optional list of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account
-JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these
-keys.
+    <dd>{{% md %}}List of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these keys.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>token_<wbr>reviewer_<wbr>jwt</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A service account JWT used to access the TokenReview API to validate other JWTs during login. If not set the JWT used
-for login will be used to access the API.
+    <dd>{{% md %}}A service account JWT used to access the TokenReview API to validate other JWTs during login. If not set the JWT used for login will be used to access the API.
 {{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -660,7 +410,7 @@ Get an existing AuthBackendConfig resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackendConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/kubernetes?tab=doc#AuthBackendConfigState">AuthBackendConfigState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/kubernetes?tab=doc#AuthBackendConfig">AuthBackendConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackendConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/kubernetes?tab=doc#AuthBackendConfigState">AuthBackendConfigState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/kubernetes?tab=doc#AuthBackendConfig">AuthBackendConfig</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -774,7 +524,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Unique name of the kubernetes backend to configure.
 {{% /md %}}</dd>
@@ -783,16 +533,16 @@ The following state arguments are supported:
             title="Optional">
         <span>Issuer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, kubernetes.io/serviceaccount will be used as the default issuer.
+    <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, `kubernetes.io/serviceaccount` will be used as the default issuer. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Kubernetes<wbr>Ca<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}PEM encoded CA cert for use by the TLS client used to talk with the Kubernetes API.
 {{% /md %}}</dd>
@@ -801,7 +551,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Kubernetes<wbr>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.
 {{% /md %}}</dd>
@@ -810,21 +560,18 @@ The following state arguments are supported:
             title="Optional">
         <span>Pem<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Optional list of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account
-JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these
-keys.
+    <dd>{{% md %}}List of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these keys.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Token<wbr>Reviewer<wbr>Jwt</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A service account JWT used to access the TokenReview API to validate other JWTs during login. If not set the JWT used
-for login will be used to access the API.
+    <dd>{{% md %}}A service account JWT used to access the TokenReview API to validate other JWTs during login. If not set the JWT used for login will be used to access the API.
 {{% /md %}}</dd>
 
 </dl>
@@ -838,7 +585,7 @@ for login will be used to access the API.
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Unique name of the kubernetes backend to configure.
 {{% /md %}}</dd>
@@ -847,16 +594,16 @@ for login will be used to access the API.
             title="Optional">
         <span>Issuer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, kubernetes.io/serviceaccount will be used as the default issuer.
+    <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, `kubernetes.io/serviceaccount` will be used as the default issuer. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Kubernetes<wbr>Ca<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}PEM encoded CA cert for use by the TLS client used to talk with the Kubernetes API.
 {{% /md %}}</dd>
@@ -865,7 +612,7 @@ for login will be used to access the API.
             title="Optional">
         <span>Kubernetes<wbr>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.
 {{% /md %}}</dd>
@@ -874,21 +621,18 @@ for login will be used to access the API.
             title="Optional">
         <span>Pem<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}Optional list of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account
-JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these
-keys.
+    <dd>{{% md %}}List of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these keys.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Token<wbr>Reviewer<wbr>Jwt</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A service account JWT used to access the TokenReview API to validate other JWTs during login. If not set the JWT used
-for login will be used to access the API.
+    <dd>{{% md %}}A service account JWT used to access the TokenReview API to validate other JWTs during login. If not set the JWT used for login will be used to access the API.
 {{% /md %}}</dd>
 
 </dl>
@@ -902,7 +646,7 @@ for login will be used to access the API.
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Unique name of the kubernetes backend to configure.
 {{% /md %}}</dd>
@@ -911,16 +655,16 @@ for login will be used to access the API.
             title="Optional">
         <span>issuer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, kubernetes.io/serviceaccount will be used as the default issuer.
+    <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, `kubernetes.io/serviceaccount` will be used as the default issuer. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>kubernetes<wbr>Ca<wbr>Cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}PEM encoded CA cert for use by the TLS client used to talk with the Kubernetes API.
 {{% /md %}}</dd>
@@ -929,7 +673,7 @@ for login will be used to access the API.
             title="Optional">
         <span>kubernetes<wbr>Host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.
 {{% /md %}}</dd>
@@ -938,21 +682,18 @@ for login will be used to access the API.
             title="Optional">
         <span>pem<wbr>Keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}Optional list of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account
-JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these
-keys.
+    <dd>{{% md %}}List of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these keys.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>token<wbr>Reviewer<wbr>Jwt</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A service account JWT used to access the TokenReview API to validate other JWTs during login. If not set the JWT used
-for login will be used to access the API.
+    <dd>{{% md %}}A service account JWT used to access the TokenReview API to validate other JWTs during login. If not set the JWT used for login will be used to access the API.
 {{% /md %}}</dd>
 
 </dl>
@@ -966,7 +707,7 @@ for login will be used to access the API.
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Unique name of the kubernetes backend to configure.
 {{% /md %}}</dd>
@@ -975,16 +716,16 @@ for login will be used to access the API.
             title="Optional">
         <span>issuer</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, kubernetes.io/serviceaccount will be used as the default issuer.
+    <dd>{{% md %}}Optional JWT issuer. If no issuer is specified, `kubernetes.io/serviceaccount` will be used as the default issuer. 
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>kubernetes_<wbr>ca_<wbr>cert</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}PEM encoded CA cert for use by the TLS client used to talk with the Kubernetes API.
 {{% /md %}}</dd>
@@ -993,7 +734,7 @@ for login will be used to access the API.
             title="Optional">
         <span>kubernetes_<wbr>host</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Host must be a host string, a host:port pair, or a URL to the base of the Kubernetes API server.
 {{% /md %}}</dd>
@@ -1002,21 +743,18 @@ for login will be used to access the API.
             title="Optional">
         <span>pem_<wbr>keys</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}Optional list of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account
-JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these
-keys.
+    <dd>{{% md %}}List of PEM-formatted public keys or certificates used to verify the signatures of Kubernetes service account JWTs. If a certificate is given, its public key will be extracted. Not every installation of Kubernetes exposes these keys.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>token_<wbr>reviewer_<wbr>jwt</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A service account JWT used to access the TokenReview API to validate other JWTs during login. If not set the JWT used
-for login will be used to access the API.
+    <dd>{{% md %}}A service account JWT used to access the TokenReview API to validate other JWTs during login. If not set the JWT used for login will be used to access the API.
 {{% /md %}}</dd>
 
 </dl>
@@ -1038,6 +776,7 @@ for login will be used to access the API.
 	<dd><a href="https://github.com/pulumi/pulumi-vault">https://github.com/pulumi/pulumi-vault</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
 </dl>
 

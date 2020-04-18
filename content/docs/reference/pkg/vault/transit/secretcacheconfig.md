@@ -6,6 +6,30 @@ block_external_search_index: true
 
 
 
+Configure the cache for the Transit Secret Backend in Vault.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vault from "@pulumi/vault";
+
+const transit = new vault.Mount("transit", {
+    defaultLeaseTtlSeconds: 3600,
+    description: "Example description",
+    maxLeaseTtlSeconds: 86400,
+    path: "transit",
+    type: "transit",
+});
+const cfg = new vault.TransitSecretBackendCacheConfig("cfg", {
+    backend: transit.path,
+    size: 500,
+});
+```
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -14,7 +38,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/transit/#SecretCacheConfig">SecretCacheConfig</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/transit/#SecretCacheConfigArgs">SecretCacheConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/transit/#SecretCacheConfig">SecretCacheConfig</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/transit/#SecretCacheConfigArgs">SecretCacheConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,7 +46,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSecretCacheConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/transit?tab=doc#SecretCacheConfigArgs">SecretCacheConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/transit?tab=doc#SecretCacheConfig">SecretCacheConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSecretCacheConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/transit?tab=doc#SecretCacheConfigArgs">SecretCacheConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/transit?tab=doc#SecretCacheConfig">SecretCacheConfig</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -122,18 +146,18 @@ block_external_search_index: true
             title="Required">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Transit secret backend the resource belongs to.
+    <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of cache entries. A size of 0 mean unlimited.
+    <dd>{{% md %}}The number of cache entries. 0 means unlimited.
 {{% /md %}}</dd>
 
 </dl>
@@ -147,18 +171,18 @@ block_external_search_index: true
             title="Required">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Transit secret backend the resource belongs to.
+    <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of cache entries. A size of 0 mean unlimited.
+    <dd>{{% md %}}The number of cache entries. 0 means unlimited.
 {{% /md %}}</dd>
 
 </dl>
@@ -172,18 +196,18 @@ block_external_search_index: true
             title="Required">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Transit secret backend the resource belongs to.
+    <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Number of cache entries. A size of 0 mean unlimited.
+    <dd>{{% md %}}The number of cache entries. 0 means unlimited.
 {{% /md %}}</dd>
 
 </dl>
@@ -197,134 +221,24 @@ block_external_search_index: true
             title="Required">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Transit secret backend the resource belongs to.
+    <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Number of cache entries. A size of 0 mean unlimited.
+    <dd>{{% md %}}The number of cache entries. 0 means unlimited.
 {{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## SecretCacheConfig Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Transit secret backend the resource belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Number of cache entries. A size of 0 mean unlimited.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Transit secret backend the resource belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Number of cache entries. A size of 0 mean unlimited.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The Transit secret backend the resource belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Number of cache entries. A size of 0 mean unlimited.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Transit secret backend the resource belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}Number of cache entries. A size of 0 mean unlimited.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -348,7 +262,7 @@ Get an existing SecretCacheConfig resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretCacheConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/transit?tab=doc#SecretCacheConfigState">SecretCacheConfigState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/transit?tab=doc#SecretCacheConfig">SecretCacheConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretCacheConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/transit?tab=doc#SecretCacheConfigState">SecretCacheConfigState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/transit?tab=doc#SecretCacheConfig">SecretCacheConfig</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -462,18 +376,18 @@ The following state arguments are supported:
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Transit secret backend the resource belongs to.
+    <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of cache entries. A size of 0 mean unlimited.
+    <dd>{{% md %}}The number of cache entries. 0 means unlimited.
 {{% /md %}}</dd>
 
 </dl>
@@ -487,18 +401,18 @@ The following state arguments are supported:
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Transit secret backend the resource belongs to.
+    <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Number of cache entries. A size of 0 mean unlimited.
+    <dd>{{% md %}}The number of cache entries. 0 means unlimited.
 {{% /md %}}</dd>
 
 </dl>
@@ -512,18 +426,18 @@ The following state arguments are supported:
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Transit secret backend the resource belongs to.
+    <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Number of cache entries. A size of 0 mean unlimited.
+    <dd>{{% md %}}The number of cache entries. 0 means unlimited.
 {{% /md %}}</dd>
 
 </dl>
@@ -537,18 +451,18 @@ The following state arguments are supported:
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Transit secret backend the resource belongs to.
+    <dd>{{% md %}}The path the transit secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Number of cache entries. A size of 0 mean unlimited.
+    <dd>{{% md %}}The number of cache entries. 0 means unlimited.
 {{% /md %}}</dd>
 
 </dl>
@@ -570,6 +484,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-vault">https://github.com/pulumi/pulumi-vault</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
 </dl>
 

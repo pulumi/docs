@@ -6,6 +6,40 @@ block_external_search_index: true
 
 
 
+Creates a Database Secret Backend static role in Vault. Database secret backend
+static roles can be used to manage 1-to-1 mapping of a Vault Role to a user in a
+database for the database.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vault from "@pulumi/vault";
+
+const db = new vault.Mount("db", {
+    path: "postgres",
+    type: "database",
+});
+const postgres = new vault.database.SecretBackendConnection("postgres", {
+    allowedRoles: ["*"],
+    backend: db.path,
+    postgresql: {
+        connectionUrl: "postgres://username:password@host:port/database",
+    },
+});
+const staticRole = new vault.database.SecretBackendStaticRole("static_role", {
+    backend: db.path,
+    dbName: postgres.name,
+    rotationPeriod: 3600,
+    rotationStatements: ["ALTER USER \"{{name}}\" WITH PASSWORD '{{password}}';"],
+    username: "example",
+});
+```
+
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -14,7 +48,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/database/#SecretBackendStaticRole">SecretBackendStaticRole</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/database/#SecretBackendStaticRoleArgs">SecretBackendStaticRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/database/#SecretBackendStaticRole">SecretBackendStaticRole</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/database/#SecretBackendStaticRoleArgs">SecretBackendStaticRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,7 +56,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSecretBackendStaticRole<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/database?tab=doc#SecretBackendStaticRoleArgs">SecretBackendStaticRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/database?tab=doc#SecretBackendStaticRole">SecretBackendStaticRole</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSecretBackendStaticRole<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendStaticRoleArgs">SecretBackendStaticRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendStaticRole">SecretBackendStaticRole</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -122,54 +156,54 @@ block_external_search_index: true
             title="Required">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The path of the Database Secret Backend the role belongs to.
+    <dd>{{% md %}}The unique name of the Vault mount to configure.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Db<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Database connection to use for this role.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Unique name for the static role.
+    <dd>{{% md %}}The unique name of the database connection to use for the static role.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Rotation<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of time Vault should wait before rotating the password, in seconds.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Rotation<wbr>Statements</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Database statements to execute to rotate the password for the configured database user.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The database username that this role corresponds to.
+    <dd>{{% md %}}The database username that this static role corresponds to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to give the static role.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Rotation<wbr>Statements</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Database statements to execute to rotate the password for the configured database user.
 {{% /md %}}</dd>
 
 </dl>
@@ -183,54 +217,54 @@ block_external_search_index: true
             title="Required">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path of the Database Secret Backend the role belongs to.
+    <dd>{{% md %}}The unique name of the Vault mount to configure.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Db<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Database connection to use for this role.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Unique name for the static role.
+    <dd>{{% md %}}The unique name of the database connection to use for the static role.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Rotation<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of time Vault should wait before rotating the password, in seconds.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>Rotation<wbr>Statements</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Database statements to execute to rotate the password for the configured database user.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The database username that this role corresponds to.
+    <dd>{{% md %}}The database username that this static role corresponds to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to give the static role.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Rotation<wbr>Statements</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}Database statements to execute to rotate the password for the configured database user.
 {{% /md %}}</dd>
 
 </dl>
@@ -244,54 +278,54 @@ block_external_search_index: true
             title="Required">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path of the Database Secret Backend the role belongs to.
+    <dd>{{% md %}}The unique name of the Vault mount to configure.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>db<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Database connection to use for this role.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Unique name for the static role.
+    <dd>{{% md %}}The unique name of the database connection to use for the static role.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>rotation<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of time Vault should wait before rotating the password, in seconds.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>rotation<wbr>Statements</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Database statements to execute to rotate the password for the configured database user.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The database username that this role corresponds to.
+    <dd>{{% md %}}The database username that this static role corresponds to.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}A unique name to give the static role.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>rotation<wbr>Statements</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}Database statements to execute to rotate the password for the configured database user.
 {{% /md %}}</dd>
 
 </dl>
@@ -305,314 +339,60 @@ block_external_search_index: true
             title="Required">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The path of the Database Secret Backend the role belongs to.
+    <dd>{{% md %}}The unique name of the Vault mount to configure.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>db_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Database connection to use for this role.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Unique name for the static role.
+    <dd>{{% md %}}The unique name of the database connection to use for the static role.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>rotation_<wbr>period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of time Vault should wait before rotating the password, in seconds.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>rotation_<wbr>statements</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}Database statements to execute to rotate the password for the configured database user.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The database username that this role corresponds to.
+    <dd>{{% md %}}The database username that this static role corresponds to.
 {{% /md %}}</dd>
 
-</dl>
-{{% /choosable %}}
-
-
-
-
-
-
-
-## SecretBackendStaticRole Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The path of the Database Secret Backend the role belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Db<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Database connection to use for this role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Unique name for the static role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rotation<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The amount of time Vault should wait before rotating the password, in seconds.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rotation<wbr>Statements</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}Database statements to execute to rotate the password for the configured database user.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The database username that this role corresponds to.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The path of the Database Secret Backend the role belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Db<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Database connection to use for this role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Unique name for the static role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rotation<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The amount of time Vault should wait before rotating the password, in seconds.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Rotation<wbr>Statements</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}Database statements to execute to rotate the password for the configured database user.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The database username that this role corresponds to.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The path of the Database Secret Backend the role belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>db<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Database connection to use for this role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Unique name for the static role.
+    <dd>{{% md %}}A unique name to give the static role.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>rotation<wbr>Period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The amount of time Vault should wait before rotating the password, in seconds.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>rotation<wbr>Statements</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}Database statements to execute to rotate the password for the configured database user.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The database username that this role corresponds to.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The path of the Database Secret Backend the role belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>db_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Database connection to use for this role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Unique name for the static role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>rotation_<wbr>period</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The amount of time Vault should wait before rotating the password, in seconds.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
+    <dt class="property-optional"
+            title="Optional">
         <span>rotation_<wbr>statements</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Database statements to execute to rotate the password for the configured database user.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
-        <span>username</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The database username that this role corresponds to.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
+
+
 
 
 
@@ -636,7 +416,7 @@ Get an existing SecretBackendStaticRole resource's state with the given name, ID
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackendStaticRole<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/database?tab=doc#SecretBackendStaticRoleState">SecretBackendStaticRoleState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/database?tab=doc#SecretBackendStaticRole">SecretBackendStaticRole</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackendStaticRole<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendStaticRoleState">SecretBackendStaticRoleState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/database?tab=doc#SecretBackendStaticRole">SecretBackendStaticRole</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -750,34 +530,34 @@ The following state arguments are supported:
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The path of the Database Secret Backend the role belongs to.
+    <dd>{{% md %}}The unique name of the Vault mount to configure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Db<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Database connection to use for this role.
+    <dd>{{% md %}}The unique name of the database connection to use for the static role.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique name for the static role.
+    <dd>{{% md %}}A unique name to give the static role.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Rotation<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of time Vault should wait before rotating the password, in seconds.
 {{% /md %}}</dd>
@@ -786,7 +566,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rotation<wbr>Statements</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}Database statements to execute to rotate the password for the configured database user.
 {{% /md %}}</dd>
@@ -795,9 +575,9 @@ The following state arguments are supported:
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The database username that this role corresponds to.
+    <dd>{{% md %}}The database username that this static role corresponds to.
 {{% /md %}}</dd>
 
 </dl>
@@ -811,34 +591,34 @@ The following state arguments are supported:
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path of the Database Secret Backend the role belongs to.
+    <dd>{{% md %}}The unique name of the Vault mount to configure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Db<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Database connection to use for this role.
+    <dd>{{% md %}}The unique name of the database connection to use for the static role.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique name for the static role.
+    <dd>{{% md %}}A unique name to give the static role.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Rotation<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
     <dd>{{% md %}}The amount of time Vault should wait before rotating the password, in seconds.
 {{% /md %}}</dd>
@@ -847,7 +627,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Rotation<wbr>Statements</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}Database statements to execute to rotate the password for the configured database user.
 {{% /md %}}</dd>
@@ -856,9 +636,9 @@ The following state arguments are supported:
             title="Optional">
         <span>Username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The database username that this role corresponds to.
+    <dd>{{% md %}}The database username that this static role corresponds to.
 {{% /md %}}</dd>
 
 </dl>
@@ -872,34 +652,34 @@ The following state arguments are supported:
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path of the Database Secret Backend the role belongs to.
+    <dd>{{% md %}}The unique name of the Vault mount to configure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>db<wbr>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Database connection to use for this role.
+    <dd>{{% md %}}The unique name of the database connection to use for the static role.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique name for the static role.
+    <dd>{{% md %}}A unique name to give the static role.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>rotation<wbr>Period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}The amount of time Vault should wait before rotating the password, in seconds.
 {{% /md %}}</dd>
@@ -908,7 +688,7 @@ The following state arguments are supported:
             title="Optional">
         <span>rotation<wbr>Statements</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}Database statements to execute to rotate the password for the configured database user.
 {{% /md %}}</dd>
@@ -917,9 +697,9 @@ The following state arguments are supported:
             title="Optional">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The database username that this role corresponds to.
+    <dd>{{% md %}}The database username that this static role corresponds to.
 {{% /md %}}</dd>
 
 </dl>
@@ -933,34 +713,34 @@ The following state arguments are supported:
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The path of the Database Secret Backend the role belongs to.
+    <dd>{{% md %}}The unique name of the Vault mount to configure.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>db_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Database connection to use for this role.
+    <dd>{{% md %}}The unique name of the database connection to use for the static role.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Unique name for the static role.
+    <dd>{{% md %}}A unique name to give the static role.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>rotation_<wbr>period</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The amount of time Vault should wait before rotating the password, in seconds.
 {{% /md %}}</dd>
@@ -969,7 +749,7 @@ The following state arguments are supported:
             title="Optional">
         <span>rotation_<wbr>statements</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}Database statements to execute to rotate the password for the configured database user.
 {{% /md %}}</dd>
@@ -978,9 +758,9 @@ The following state arguments are supported:
             title="Optional">
         <span>username</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The database username that this role corresponds to.
+    <dd>{{% md %}}The database username that this static role corresponds to.
 {{% /md %}}</dd>
 
 </dl>
@@ -1002,6 +782,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-vault">https://github.com/pulumi/pulumi-vault</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
 </dl>
 

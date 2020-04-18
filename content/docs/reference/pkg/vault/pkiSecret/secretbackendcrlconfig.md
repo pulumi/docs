@@ -6,6 +6,31 @@ block_external_search_index: true
 
 
 
+Allows setting the duration for which the generated CRL should be marked valid. If the CRL is disabled, it will return a signed but zero-length CRL for any request. If enabled, it will re-build the CRL.
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vault from "@pulumi/vault";
+
+const pki = new vault.Mount("pki", {
+    defaultLeaseTtlSeconds: 3600,
+    maxLeaseTtlSeconds: 86400,
+    path: "%s",
+    type: "pki",
+});
+const crlConfig = new vault.pkiSecret.SecretBackendCrlConfig("crl_config", {
+    backend: pki.path,
+    disable: false,
+    expiry: "72h",
+});
+```
+
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -14,7 +39,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/pkiSecret/#SecretBackendCrlConfig">SecretBackendCrlConfig</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/pkiSecret/#SecretBackendCrlConfigArgs">SecretBackendCrlConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/pkiSecret/#SecretBackendCrlConfig">SecretBackendCrlConfig</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/pkiSecret/#SecretBackendCrlConfigArgs">SecretBackendCrlConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,7 +47,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSecretBackendCrlConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/pkiSecret?tab=doc#SecretBackendCrlConfigArgs">SecretBackendCrlConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/pkiSecret?tab=doc#SecretBackendCrlConfig">SecretBackendCrlConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSecretBackendCrlConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/pkiSecret?tab=doc#SecretBackendCrlConfigArgs">SecretBackendCrlConfigArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/pkiSecret?tab=doc#SecretBackendCrlConfig">SecretBackendCrlConfig</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -122,25 +147,25 @@ block_external_search_index: true
             title="Required">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The path of the PKI secret backend the resource belongs to.
+    <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Disable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Disables or enables CRL building
+    <dd>{{% md %}}Disables or enables CRL building.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Expiry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the time until expiration.
 {{% /md %}}</dd>
@@ -156,25 +181,25 @@ block_external_search_index: true
             title="Required">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path of the PKI secret backend the resource belongs to.
+    <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Disable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Disables or enables CRL building
+    <dd>{{% md %}}Disables or enables CRL building.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Expiry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the time until expiration.
 {{% /md %}}</dd>
@@ -190,25 +215,25 @@ block_external_search_index: true
             title="Required">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path of the PKI secret backend the resource belongs to.
+    <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>disable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Disables or enables CRL building
+    <dd>{{% md %}}Disables or enables CRL building.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>expiry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the time until expiration.
 {{% /md %}}</dd>
@@ -224,25 +249,25 @@ block_external_search_index: true
             title="Required">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The path of the PKI secret backend the resource belongs to.
+    <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>disable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Disables or enables CRL building
+    <dd>{{% md %}}Disables or enables CRL building.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>expiry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the time until expiration.
 {{% /md %}}</dd>
@@ -251,152 +276,6 @@ block_external_search_index: true
 {{% /choosable %}}
 
 
-
-
-
-
-
-## SecretBackendCrlConfig Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The path of the PKI secret backend the resource belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
-    </dt>
-    <dd>{{% md %}}Disables or enables CRL building
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Expiry</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the time until expiration.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The path of the PKI secret backend the resource belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Disable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
-    </dt>
-    <dd>{{% md %}}Disables or enables CRL building
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Expiry</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the time until expiration.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The path of the PKI secret backend the resource belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
-    </dt>
-    <dd>{{% md %}}Disables or enables CRL building
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>expiry</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Specifies the time until expiration.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The path of the PKI secret backend the resource belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>disable</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Disables or enables CRL building
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>expiry</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the time until expiration.
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -420,7 +299,7 @@ Get an existing SecretBackendCrlConfig resource's state with the given name, ID,
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackendCrlConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/pkiSecret?tab=doc#SecretBackendCrlConfigState">SecretBackendCrlConfigState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/pkiSecret?tab=doc#SecretBackendCrlConfig">SecretBackendCrlConfig</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackendCrlConfig<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/pkiSecret?tab=doc#SecretBackendCrlConfigState">SecretBackendCrlConfigState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/pkiSecret?tab=doc#SecretBackendCrlConfig">SecretBackendCrlConfig</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -534,25 +413,25 @@ The following state arguments are supported:
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The path of the PKI secret backend the resource belongs to.
+    <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Disable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Disables or enables CRL building
+    <dd>{{% md %}}Disables or enables CRL building.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Expiry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the time until expiration.
 {{% /md %}}</dd>
@@ -568,25 +447,25 @@ The following state arguments are supported:
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path of the PKI secret backend the resource belongs to.
+    <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Disable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Disables or enables CRL building
+    <dd>{{% md %}}Disables or enables CRL building.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Expiry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the time until expiration.
 {{% /md %}}</dd>
@@ -602,25 +481,25 @@ The following state arguments are supported:
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path of the PKI secret backend the resource belongs to.
+    <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>disable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Disables or enables CRL building
+    <dd>{{% md %}}Disables or enables CRL building.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>expiry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the time until expiration.
 {{% /md %}}</dd>
@@ -636,25 +515,25 @@ The following state arguments are supported:
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The path of the PKI secret backend the resource belongs to.
+    <dd>{{% md %}}The path the PKI secret backend is mounted at, with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>disable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Disables or enables CRL building
+    <dd>{{% md %}}Disables or enables CRL building.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>expiry</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the time until expiration.
 {{% /md %}}</dd>
@@ -678,6 +557,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-vault">https://github.com/pulumi/pulumi-vault</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
 </dl>
 

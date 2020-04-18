@@ -14,7 +14,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#SecretBackendRole">SecretBackendRole</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#SecretBackendRoleArgs">SecretBackendRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#SecretBackendRole">SecretBackendRole</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#SecretBackendRoleArgs">SecretBackendRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,7 +22,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSecretBackendRole<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/aws?tab=doc#SecretBackendRoleArgs">SecretBackendRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/aws?tab=doc#SecretBackendRole">SecretBackendRole</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewSecretBackendRole<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/aws?tab=doc#SecretBackendRoleArgs">SecretBackendRoleArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/aws?tab=doc#SecretBackendRole">SecretBackendRole</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -122,75 +122,94 @@ block_external_search_index: true
             title="Required">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The path of the AWS Secret Backend the role belongs to.
+    <dd>{{% md %}}The path the AWS secret backend is mounted at,
+with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Credential<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Role credential type.
+    <dd>{{% md %}}Specifies the type of credential to be used when
+retrieving credentials from the role. Must be one of `iam_user`, `assumed_role`, or
+`federation_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Default<wbr>Sts<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The default TTL in seconds for STS credentials. When a TTL is not specified when STS credentials are requested, and a
-default TTL is specified on the role, then this default TTL will be used. Valid only when credential_type is one of
-assumed_role or federation_token.
+    <dd>{{% md %}}The default TTL in seconds for STS credentials.
+When a TTL is not specified when STS credentials are requested,
+and a default TTL is specified on the role,
+then this default TTL will be used. Valid only when `credential_type` is one of
+`assumed_role` or `federation_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Max<wbr>Sts<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The max allowed TTL in seconds for STS credentials (credentials TTL are capped to max_sts_ttl). Valid only when
-credential_type is one of assumed_role or federation_token.
+    <dd>{{% md %}}The max allowed TTL in seconds for STS credentials
+(credentials TTL are capped to `max_sts_ttl`). Valid only when `credential_type` is
+one of `assumed_role` or `federation_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique name for the role.
+    <dd>{{% md %}}The name to identify this role within the backend.
+Must be unique within the backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Policy<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}ARN for an existing IAM policy the role should use.
+    <dd>{{% md %}}Specifies a list of AWS managed policy ARNs. The
+behavior depends on the credential type. With `iam_user`, the policies will be
+attached to IAM users when they are requested. With `assumed_role` and
+`federation_token`, the policy ARNs will act as a filter on what the credentials
+can do, similar to `policy_document`. When `credential_type` is `iam_user` or
+`federation_token`, at least one of `policy_document` or `policy_arns` must
+be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Policy<wbr>Document</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}IAM policy the role should use in JSON format.
+    <dd>{{% md %}}The IAM policy document for the role. The
+behavior depends on the credential type. With `iam_user`, the policy document
+will be attached to the IAM user generated and augment the permissions the IAM
+user has. With `assumed_role` and `federation_token`, the policy document will
+act as a filter on what the credentials can do, similar to `policy_arns`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Role<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}ARNs of AWS roles allowed to be assumed. Only valid when credential_type is 'assumed_role'
+    <dd>{{% md %}}Specifies the ARNs of the AWS roles this Vault role
+is allowed to assume. Required when `credential_type` is `assumed_role` and
+prohibited otherwise.
 {{% /md %}}</dd>
 
 </dl>
@@ -204,75 +223,94 @@ credential_type is one of assumed_role or federation_token.
             title="Required">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path of the AWS Secret Backend the role belongs to.
+    <dd>{{% md %}}The path the AWS secret backend is mounted at,
+with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>Credential<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Role credential type.
+    <dd>{{% md %}}Specifies the type of credential to be used when
+retrieving credentials from the role. Must be one of `iam_user`, `assumed_role`, or
+`federation_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Default<wbr>Sts<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The default TTL in seconds for STS credentials. When a TTL is not specified when STS credentials are requested, and a
-default TTL is specified on the role, then this default TTL will be used. Valid only when credential_type is one of
-assumed_role or federation_token.
+    <dd>{{% md %}}The default TTL in seconds for STS credentials.
+When a TTL is not specified when STS credentials are requested,
+and a default TTL is specified on the role,
+then this default TTL will be used. Valid only when `credential_type` is one of
+`assumed_role` or `federation_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Max<wbr>Sts<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The max allowed TTL in seconds for STS credentials (credentials TTL are capped to max_sts_ttl). Valid only when
-credential_type is one of assumed_role or federation_token.
+    <dd>{{% md %}}The max allowed TTL in seconds for STS credentials
+(credentials TTL are capped to `max_sts_ttl`). Valid only when `credential_type` is
+one of `assumed_role` or `federation_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique name for the role.
+    <dd>{{% md %}}The name to identify this role within the backend.
+Must be unique within the backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Policy<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}ARN for an existing IAM policy the role should use.
+    <dd>{{% md %}}Specifies a list of AWS managed policy ARNs. The
+behavior depends on the credential type. With `iam_user`, the policies will be
+attached to IAM users when they are requested. With `assumed_role` and
+`federation_token`, the policy ARNs will act as a filter on what the credentials
+can do, similar to `policy_document`. When `credential_type` is `iam_user` or
+`federation_token`, at least one of `policy_document` or `policy_arns` must
+be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Policy<wbr>Document</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}IAM policy the role should use in JSON format.
+    <dd>{{% md %}}The IAM policy document for the role. The
+behavior depends on the credential type. With `iam_user`, the policy document
+will be attached to the IAM user generated and augment the permissions the IAM
+user has. With `assumed_role` and `federation_token`, the policy document will
+act as a filter on what the credentials can do, similar to `policy_arns`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Role<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}ARNs of AWS roles allowed to be assumed. Only valid when credential_type is 'assumed_role'
+    <dd>{{% md %}}Specifies the ARNs of the AWS roles this Vault role
+is allowed to assume. Required when `credential_type` is `assumed_role` and
+prohibited otherwise.
 {{% /md %}}</dd>
 
 </dl>
@@ -286,75 +324,94 @@ credential_type is one of assumed_role or federation_token.
             title="Required">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path of the AWS Secret Backend the role belongs to.
+    <dd>{{% md %}}The path the AWS secret backend is mounted at,
+with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>credential<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Role credential type.
+    <dd>{{% md %}}Specifies the type of credential to be used when
+retrieving credentials from the role. Must be one of `iam_user`, `assumed_role`, or
+`federation_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>default<wbr>Sts<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The default TTL in seconds for STS credentials. When a TTL is not specified when STS credentials are requested, and a
-default TTL is specified on the role, then this default TTL will be used. Valid only when credential_type is one of
-assumed_role or federation_token.
+    <dd>{{% md %}}The default TTL in seconds for STS credentials.
+When a TTL is not specified when STS credentials are requested,
+and a default TTL is specified on the role,
+then this default TTL will be used. Valid only when `credential_type` is one of
+`assumed_role` or `federation_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>max<wbr>Sts<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The max allowed TTL in seconds for STS credentials (credentials TTL are capped to max_sts_ttl). Valid only when
-credential_type is one of assumed_role or federation_token.
+    <dd>{{% md %}}The max allowed TTL in seconds for STS credentials
+(credentials TTL are capped to `max_sts_ttl`). Valid only when `credential_type` is
+one of `assumed_role` or `federation_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique name for the role.
+    <dd>{{% md %}}The name to identify this role within the backend.
+Must be unique within the backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>policy<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}ARN for an existing IAM policy the role should use.
+    <dd>{{% md %}}Specifies a list of AWS managed policy ARNs. The
+behavior depends on the credential type. With `iam_user`, the policies will be
+attached to IAM users when they are requested. With `assumed_role` and
+`federation_token`, the policy ARNs will act as a filter on what the credentials
+can do, similar to `policy_document`. When `credential_type` is `iam_user` or
+`federation_token`, at least one of `policy_document` or `policy_arns` must
+be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>policy<wbr>Document</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}IAM policy the role should use in JSON format.
+    <dd>{{% md %}}The IAM policy document for the role. The
+behavior depends on the credential type. With `iam_user`, the policy document
+will be attached to the IAM user generated and augment the permissions the IAM
+user has. With `assumed_role` and `federation_token`, the policy document will
+act as a filter on what the credentials can do, similar to `policy_arns`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>role<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}ARNs of AWS roles allowed to be assumed. Only valid when credential_type is 'assumed_role'
+    <dd>{{% md %}}Specifies the ARNs of the AWS roles this Vault role
+is allowed to assume. Required when `credential_type` is `assumed_role` and
+prohibited otherwise.
 {{% /md %}}</dd>
 
 </dl>
@@ -368,419 +425,100 @@ credential_type is one of assumed_role or federation_token.
             title="Required">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The path of the AWS Secret Backend the role belongs to.
+    <dd>{{% md %}}The path the AWS secret backend is mounted at,
+with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
         <span>credential_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Role credential type.
+    <dd>{{% md %}}Specifies the type of credential to be used when
+retrieving credentials from the role. Must be one of `iam_user`, `assumed_role`, or
+`federation_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>default_<wbr>sts_<wbr>ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The default TTL in seconds for STS credentials. When a TTL is not specified when STS credentials are requested, and a
-default TTL is specified on the role, then this default TTL will be used. Valid only when credential_type is one of
-assumed_role or federation_token.
+    <dd>{{% md %}}The default TTL in seconds for STS credentials.
+When a TTL is not specified when STS credentials are requested,
+and a default TTL is specified on the role,
+then this default TTL will be used. Valid only when `credential_type` is one of
+`assumed_role` or `federation_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>max_<wbr>sts_<wbr>ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The max allowed TTL in seconds for STS credentials (credentials TTL are capped to max_sts_ttl). Valid only when
-credential_type is one of assumed_role or federation_token.
+    <dd>{{% md %}}The max allowed TTL in seconds for STS credentials
+(credentials TTL are capped to `max_sts_ttl`). Valid only when `credential_type` is
+one of `assumed_role` or `federation_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Unique name for the role.
+    <dd>{{% md %}}The name to identify this role within the backend.
+Must be unique within the backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>policy_<wbr>arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}ARN for an existing IAM policy the role should use.
+    <dd>{{% md %}}Specifies a list of AWS managed policy ARNs. The
+behavior depends on the credential type. With `iam_user`, the policies will be
+attached to IAM users when they are requested. With `assumed_role` and
+`federation_token`, the policy ARNs will act as a filter on what the credentials
+can do, similar to `policy_document`. When `credential_type` is `iam_user` or
+`federation_token`, at least one of `policy_document` or `policy_arns` must
+be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>policy_<wbr>document</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}IAM policy the role should use in JSON format.
+    <dd>{{% md %}}The IAM policy document for the role. The
+behavior depends on the credential type. With `iam_user`, the policy document
+will be attached to the IAM user generated and augment the permissions the IAM
+user has. With `assumed_role` and `federation_token`, the policy document will
+act as a filter on what the credentials can do, similar to `policy_arns`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>role_<wbr>arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}ARNs of AWS roles allowed to be assumed. Only valid when credential_type is 'assumed_role'
+    <dd>{{% md %}}Specifies the ARNs of the AWS roles this Vault role
+is allowed to assume. Required when `credential_type` is `assumed_role` and
+prohibited otherwise.
 {{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
 
 
-
-
-
-
-
-## SecretBackendRole Output Properties
-
-The following output properties are available:
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The path of the AWS Secret Backend the role belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Credential<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Role credential type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Sts<wbr>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The default TTL in seconds for STS credentials. When a TTL is not specified when STS credentials are requested, and a
-default TTL is specified on the role, then this default TTL will be used. Valid only when credential_type is one of
-assumed_role or federation_token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Sts<wbr>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The max allowed TTL in seconds for STS credentials (credentials TTL are capped to max_sts_ttl). Valid only when
-credential_type is one of assumed_role or federation_token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Unique name for the role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy<wbr>Arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}ARN for an existing IAM policy the role should use.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy<wbr>Document</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}IAM policy the role should use in JSON format.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role<wbr>Arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
-    </dt>
-    <dd>{{% md %}}ARNs of AWS roles allowed to be assumed. Only valid when credential_type is 'assumed_role'
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>Backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The path of the AWS Secret Backend the role belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Credential<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Role credential type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Default<wbr>Sts<wbr>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The default TTL in seconds for STS credentials. When a TTL is not specified when STS credentials are requested, and a
-default TTL is specified on the role, then this default TTL will be used. Valid only when credential_type is one of
-assumed_role or federation_token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Max<wbr>Sts<wbr>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}The max allowed TTL in seconds for STS credentials (credentials TTL are capped to max_sts_ttl). Valid only when
-credential_type is one of assumed_role or federation_token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Unique name for the role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy<wbr>Arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}ARN for an existing IAM policy the role should use.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Policy<wbr>Document</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}IAM policy the role should use in JSON format.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role<wbr>Arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}ARNs of AWS roles allowed to be assumed. Only valid when credential_type is 'assumed_role'
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The path of the AWS Secret Backend the role belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>credential<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Role credential type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>default<wbr>Sts<wbr>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The default TTL in seconds for STS credentials. When a TTL is not specified when STS credentials are requested, and a
-default TTL is specified on the role, then this default TTL will be used. Valid only when credential_type is one of
-assumed_role or federation_token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max<wbr>Sts<wbr>Ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}The max allowed TTL in seconds for STS credentials (credentials TTL are capped to max_sts_ttl). Valid only when
-credential_type is one of assumed_role or federation_token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Unique name for the role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy<wbr>Arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}ARN for an existing IAM policy the role should use.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy<wbr>Document</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}IAM policy the role should use in JSON format.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>role<wbr>Arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
-    </dt>
-    <dd>{{% md %}}ARNs of AWS roles allowed to be assumed. Only valid when credential_type is 'assumed_role'
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
-
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-"
-            title="">
-        <span>backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The path of the AWS Secret Backend the role belongs to.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>credential_<wbr>type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Role credential type.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>default_<wbr>sts_<wbr>ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The default TTL in seconds for STS credentials. When a TTL is not specified when STS credentials are requested, and a
-default TTL is specified on the role, then this default TTL will be used. Valid only when credential_type is one of
-assumed_role or federation_token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>max_<wbr>sts_<wbr>ttl</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">float</span>
-    </dt>
-    <dd>{{% md %}}The max allowed TTL in seconds for STS credentials (credentials TTL are capped to max_sts_ttl). Valid only when
-credential_type is one of assumed_role or federation_token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Unique name for the role.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy_<wbr>arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}ARN for an existing IAM policy the role should use.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>policy_<wbr>document</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}IAM policy the role should use in JSON format.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>role_<wbr>arns</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
-    </dt>
-    <dd>{{% md %}}ARNs of AWS roles allowed to be assumed. Only valid when credential_type is 'assumed_role'
-{{% /md %}}</dd>
-
-</dl>
-{{% /choosable %}}
 
 
 
@@ -804,7 +542,7 @@ Get an existing SecretBackendRole resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackendRole<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/aws?tab=doc#SecretBackendRoleState">SecretBackendRoleState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/aws?tab=doc#SecretBackendRole">SecretBackendRole</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetSecretBackendRole<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/aws?tab=doc#SecretBackendRoleState">SecretBackendRoleState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/aws?tab=doc#SecretBackendRole">SecretBackendRole</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -918,75 +656,94 @@ The following state arguments are supported:
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The path of the AWS Secret Backend the role belongs to.
+    <dd>{{% md %}}The path the AWS secret backend is mounted at,
+with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Credential<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Role credential type.
+    <dd>{{% md %}}Specifies the type of credential to be used when
+retrieving credentials from the role. Must be one of `iam_user`, `assumed_role`, or
+`federation_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Default<wbr>Sts<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The default TTL in seconds for STS credentials. When a TTL is not specified when STS credentials are requested, and a
-default TTL is specified on the role, then this default TTL will be used. Valid only when credential_type is one of
-assumed_role or federation_token.
+    <dd>{{% md %}}The default TTL in seconds for STS credentials.
+When a TTL is not specified when STS credentials are requested,
+and a default TTL is specified on the role,
+then this default TTL will be used. Valid only when `credential_type` is one of
+`assumed_role` or `federation_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Max<wbr>Sts<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}The max allowed TTL in seconds for STS credentials (credentials TTL are capped to max_sts_ttl). Valid only when
-credential_type is one of assumed_role or federation_token.
+    <dd>{{% md %}}The max allowed TTL in seconds for STS credentials
+(credentials TTL are capped to `max_sts_ttl`). Valid only when `credential_type` is
+one of `assumed_role` or `federation_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique name for the role.
+    <dd>{{% md %}}The name to identify this role within the backend.
+Must be unique within the backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Policy<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}ARN for an existing IAM policy the role should use.
+    <dd>{{% md %}}Specifies a list of AWS managed policy ARNs. The
+behavior depends on the credential type. With `iam_user`, the policies will be
+attached to IAM users when they are requested. With `assumed_role` and
+`federation_token`, the policy ARNs will act as a filter on what the credentials
+can do, similar to `policy_document`. When `credential_type` is `iam_user` or
+`federation_token`, at least one of `policy_document` or `policy_arns` must
+be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Policy<wbr>Document</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}IAM policy the role should use in JSON format.
+    <dd>{{% md %}}The IAM policy document for the role. The
+behavior depends on the credential type. With `iam_user`, the policy document
+will be attached to the IAM user generated and augment the permissions the IAM
+user has. With `assumed_role` and `federation_token`, the policy document will
+act as a filter on what the credentials can do, similar to `policy_arns`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Role<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}ARNs of AWS roles allowed to be assumed. Only valid when credential_type is 'assumed_role'
+    <dd>{{% md %}}Specifies the ARNs of the AWS roles this Vault role
+is allowed to assume. Required when `credential_type` is `assumed_role` and
+prohibited otherwise.
 {{% /md %}}</dd>
 
 </dl>
@@ -1000,75 +757,94 @@ credential_type is one of assumed_role or federation_token.
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path of the AWS Secret Backend the role belongs to.
+    <dd>{{% md %}}The path the AWS secret backend is mounted at,
+with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Credential<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Role credential type.
+    <dd>{{% md %}}Specifies the type of credential to be used when
+retrieving credentials from the role. Must be one of `iam_user`, `assumed_role`, or
+`federation_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Default<wbr>Sts<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The default TTL in seconds for STS credentials. When a TTL is not specified when STS credentials are requested, and a
-default TTL is specified on the role, then this default TTL will be used. Valid only when credential_type is one of
-assumed_role or federation_token.
+    <dd>{{% md %}}The default TTL in seconds for STS credentials.
+When a TTL is not specified when STS credentials are requested,
+and a default TTL is specified on the role,
+then this default TTL will be used. Valid only when `credential_type` is one of
+`assumed_role` or `federation_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Max<wbr>Sts<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}The max allowed TTL in seconds for STS credentials (credentials TTL are capped to max_sts_ttl). Valid only when
-credential_type is one of assumed_role or federation_token.
+    <dd>{{% md %}}The max allowed TTL in seconds for STS credentials
+(credentials TTL are capped to `max_sts_ttl`). Valid only when `credential_type` is
+one of `assumed_role` or `federation_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique name for the role.
+    <dd>{{% md %}}The name to identify this role within the backend.
+Must be unique within the backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Policy<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}ARN for an existing IAM policy the role should use.
+    <dd>{{% md %}}Specifies a list of AWS managed policy ARNs. The
+behavior depends on the credential type. With `iam_user`, the policies will be
+attached to IAM users when they are requested. With `assumed_role` and
+`federation_token`, the policy ARNs will act as a filter on what the credentials
+can do, similar to `policy_document`. When `credential_type` is `iam_user` or
+`federation_token`, at least one of `policy_document` or `policy_arns` must
+be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Policy<wbr>Document</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}IAM policy the role should use in JSON format.
+    <dd>{{% md %}}The IAM policy document for the role. The
+behavior depends on the credential type. With `iam_user`, the policy document
+will be attached to the IAM user generated and augment the permissions the IAM
+user has. With `assumed_role` and `federation_token`, the policy document will
+act as a filter on what the credentials can do, similar to `policy_arns`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Role<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}ARNs of AWS roles allowed to be assumed. Only valid when credential_type is 'assumed_role'
+    <dd>{{% md %}}Specifies the ARNs of the AWS roles this Vault role
+is allowed to assume. Required when `credential_type` is `assumed_role` and
+prohibited otherwise.
 {{% /md %}}</dd>
 
 </dl>
@@ -1082,75 +858,94 @@ credential_type is one of assumed_role or federation_token.
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The path of the AWS Secret Backend the role belongs to.
+    <dd>{{% md %}}The path the AWS secret backend is mounted at,
+with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>credential<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Role credential type.
+    <dd>{{% md %}}Specifies the type of credential to be used when
+retrieving credentials from the role. Must be one of `iam_user`, `assumed_role`, or
+`federation_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>default<wbr>Sts<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The default TTL in seconds for STS credentials. When a TTL is not specified when STS credentials are requested, and a
-default TTL is specified on the role, then this default TTL will be used. Valid only when credential_type is one of
-assumed_role or federation_token.
+    <dd>{{% md %}}The default TTL in seconds for STS credentials.
+When a TTL is not specified when STS credentials are requested,
+and a default TTL is specified on the role,
+then this default TTL will be used. Valid only when `credential_type` is one of
+`assumed_role` or `federation_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>max<wbr>Sts<wbr>Ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}The max allowed TTL in seconds for STS credentials (credentials TTL are capped to max_sts_ttl). Valid only when
-credential_type is one of assumed_role or federation_token.
+    <dd>{{% md %}}The max allowed TTL in seconds for STS credentials
+(credentials TTL are capped to `max_sts_ttl`). Valid only when `credential_type` is
+one of `assumed_role` or `federation_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Unique name for the role.
+    <dd>{{% md %}}The name to identify this role within the backend.
+Must be unique within the backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>policy<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}ARN for an existing IAM policy the role should use.
+    <dd>{{% md %}}Specifies a list of AWS managed policy ARNs. The
+behavior depends on the credential type. With `iam_user`, the policies will be
+attached to IAM users when they are requested. With `assumed_role` and
+`federation_token`, the policy ARNs will act as a filter on what the credentials
+can do, similar to `policy_document`. When `credential_type` is `iam_user` or
+`federation_token`, at least one of `policy_document` or `policy_arns` must
+be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>policy<wbr>Document</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}IAM policy the role should use in JSON format.
+    <dd>{{% md %}}The IAM policy document for the role. The
+behavior depends on the credential type. With `iam_user`, the policy document
+will be attached to the IAM user generated and augment the permissions the IAM
+user has. With `assumed_role` and `federation_token`, the policy document will
+act as a filter on what the credentials can do, similar to `policy_arns`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>role<wbr>Arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}ARNs of AWS roles allowed to be assumed. Only valid when credential_type is 'assumed_role'
+    <dd>{{% md %}}Specifies the ARNs of the AWS roles this Vault role
+is allowed to assume. Required when `credential_type` is `assumed_role` and
+prohibited otherwise.
 {{% /md %}}</dd>
 
 </dl>
@@ -1164,75 +959,94 @@ credential_type is one of assumed_role or federation_token.
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The path of the AWS Secret Backend the role belongs to.
+    <dd>{{% md %}}The path the AWS secret backend is mounted at,
+with no leading or trailing `/`s.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>credential_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Role credential type.
+    <dd>{{% md %}}Specifies the type of credential to be used when
+retrieving credentials from the role. Must be one of `iam_user`, `assumed_role`, or
+`federation_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>default_<wbr>sts_<wbr>ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The default TTL in seconds for STS credentials. When a TTL is not specified when STS credentials are requested, and a
-default TTL is specified on the role, then this default TTL will be used. Valid only when credential_type is one of
-assumed_role or federation_token.
+    <dd>{{% md %}}The default TTL in seconds for STS credentials.
+When a TTL is not specified when STS credentials are requested,
+and a default TTL is specified on the role,
+then this default TTL will be used. Valid only when `credential_type` is one of
+`assumed_role` or `federation_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>max_<wbr>sts_<wbr>ttl</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The max allowed TTL in seconds for STS credentials (credentials TTL are capped to max_sts_ttl). Valid only when
-credential_type is one of assumed_role or federation_token.
+    <dd>{{% md %}}The max allowed TTL in seconds for STS credentials
+(credentials TTL are capped to `max_sts_ttl`). Valid only when `credential_type` is
+one of `assumed_role` or `federation_token`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Unique name for the role.
+    <dd>{{% md %}}The name to identify this role within the backend.
+Must be unique within the backend.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>policy_<wbr>arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}ARN for an existing IAM policy the role should use.
+    <dd>{{% md %}}Specifies a list of AWS managed policy ARNs. The
+behavior depends on the credential type. With `iam_user`, the policies will be
+attached to IAM users when they are requested. With `assumed_role` and
+`federation_token`, the policy ARNs will act as a filter on what the credentials
+can do, similar to `policy_document`. When `credential_type` is `iam_user` or
+`federation_token`, at least one of `policy_document` or `policy_arns` must
+be specified.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>policy_<wbr>document</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}IAM policy the role should use in JSON format.
+    <dd>{{% md %}}The IAM policy document for the role. The
+behavior depends on the credential type. With `iam_user`, the policy document
+will be attached to the IAM user generated and augment the permissions the IAM
+user has. With `assumed_role` and `federation_token`, the policy document will
+act as a filter on what the credentials can do, similar to `policy_arns`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>role_<wbr>arns</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}ARNs of AWS roles allowed to be assumed. Only valid when credential_type is 'assumed_role'
+    <dd>{{% md %}}Specifies the ARNs of the AWS roles this Vault role
+is allowed to assume. Required when `credential_type` is `assumed_role` and
+prohibited otherwise.
 {{% /md %}}</dd>
 
 </dl>
@@ -1254,6 +1068,7 @@ credential_type is one of assumed_role or federation_token.
 	<dd><a href="https://github.com/pulumi/pulumi-vault">https://github.com/pulumi/pulumi-vault</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
 </dl>
 

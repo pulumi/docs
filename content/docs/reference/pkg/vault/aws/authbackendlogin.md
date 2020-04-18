@@ -6,6 +6,54 @@ block_external_search_index: true
 
 
 
+Logs into a Vault server using an AWS auth backend. Login can be
+accomplished using a signed identity request from IAM or using ec2
+instance metadata. For more information, see the [Vault
+documentation](https://www.vaultproject.io/docs/auth/aws.html).
+
+{{% examples %}}
+## Example Usage
+{{% example %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as vault from "@pulumi/vault";
+
+const aws = new vault.AuthBackend("aws", {
+    type: "aws",
+});
+const exampleAuthBackendClient = new vault.aws.AuthBackendClient("example", {
+    accessKey: "123456789012",
+    backend: aws.path,
+    secretKey: "AWSSECRETKEYGOESHERE",
+});
+const exampleAuthBackendRole = new vault.aws.AuthBackendRole("example", {
+    authType: "ec2",
+    backend: aws.path,
+    boundAccountId: "123456789012",
+    boundAmiId: "ami-8c1be5f6",
+    boundIamInstanceProfileArn: "arn:aws:iam::123456789012:instance-profile/MyProfile",
+    boundSubnetId: "vpc-133128f1",
+    boundVpcId: "vpc-b61106d4",
+    maxTtl: 120,
+    role: "test-role",
+    tokenPolicies: [
+        "default",
+        "dev",
+        "prod",
+    ],
+    ttl: 60,
+}, {dependsOn: [exampleAuthBackendClient]});
+const exampleAuthBackendLogin = new vault.aws.AuthBackendLogin("example", {
+    backend: vault_auth_backend_example.path,
+    identity: "BASE64ENCODEDIDENTITYDOCUMENT",
+    role: exampleAuthBackendRole.role,
+    signature: "BASE64ENCODEDSHA256IDENTITYDOCUMENTSIGNATURE",
+});
+```
+
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -14,7 +62,7 @@ block_external_search_index: true
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 {{% choosable language nodejs %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendLogin">AuthBackendLogin</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendLoginArgs">AuthBackendLoginArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">pulumi.CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">new </span><span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendLogin">AuthBackendLogin</a></span><span class="p">(</span><span class="nx">name</span>: <span class="nx"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span><span class="p">, </span><span class="nx">args</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/vault/aws/#AuthBackendLoginArgs">AuthBackendLoginArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions">CustomResourceOptions</a></span><span class="p">);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language python %}}
@@ -22,7 +70,7 @@ block_external_search_index: true
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAuthBackendLogin<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/aws?tab=doc#AuthBackendLoginArgs">AuthBackendLoginArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">pulumi.ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/aws?tab=doc#AuthBackendLogin">AuthBackendLogin</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>NewAuthBackendLogin<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">args</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/aws?tab=doc#AuthBackendLoginArgs">AuthBackendLoginArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/aws?tab=doc#AuthBackendLogin">AuthBackendLogin</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -122,90 +170,104 @@ block_external_search_index: true
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS Auth Backend to read the token from.
+    <dd>{{% md %}}The unique name of the AWS auth backend. Defaults to
+'aws'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Iam<wbr>Http<wbr>Request<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The HTTP method used in the signed request.
+    <dd>{{% md %}}The HTTP method used in the signed IAM
+request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Iam<wbr>Request<wbr>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Base64-encoded body of the signed request.
+    <dd>{{% md %}}The base64-encoded body of the signed
+request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Iam<wbr>Request<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Base64-encoded, JSON serialized representation of the sts:GetCallerIdentity HTTP request headers.
+    <dd>{{% md %}}The base64-encoded, JSON serialized
+representation of the GetCallerIdentity HTTP request headers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Iam<wbr>Request<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Base64-encoded HTTP URL used in the signed request.
+    <dd>{{% md %}}The base64-encoded HTTP URL used in the signed
+request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded EC2 instance identity document to authenticate with.
+    <dd>{{% md %}}The base64-encoded EC2 instance identity document to
+authenticate with. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Nonce</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The nonce to be used for subsequent login requests.
+    <dd>{{% md %}}The unique nonce to be used for login requests. Can be
+set to a user-specified value, or will contain the server-generated value
+once a token is issued. EC2 instances can only acquire a single token until
+the whitelist is tidied again unless they keep track of this nonce.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Pkcs7</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}PKCS7 signature of the identity document to authenticate with, with all newline characters removed.
+    <dd>{{% md %}}The PKCS#7 signature of the identity document to
+authenticate with, with all newline characters removed. Can be retrieved from
+the EC2 metadata server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS Auth Role to read the token from.
+    <dd>{{% md %}}The name of the AWS auth backend role to create tokens
+against.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Signature</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded SHA256 RSA signature of the instance identtiy document to authenticate with.
+    <dd>{{% md %}}The base64-encoded SHA256 RSA signature of the
+instance identity document to authenticate with, with all newline characters
+removed. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
 
 </dl>
@@ -219,90 +281,104 @@ block_external_search_index: true
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS Auth Backend to read the token from.
+    <dd>{{% md %}}The unique name of the AWS auth backend. Defaults to
+'aws'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Iam<wbr>Http<wbr>Request<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The HTTP method used in the signed request.
+    <dd>{{% md %}}The HTTP method used in the signed IAM
+request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Iam<wbr>Request<wbr>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Base64-encoded body of the signed request.
+    <dd>{{% md %}}The base64-encoded body of the signed
+request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Iam<wbr>Request<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Base64-encoded, JSON serialized representation of the sts:GetCallerIdentity HTTP request headers.
+    <dd>{{% md %}}The base64-encoded, JSON serialized
+representation of the GetCallerIdentity HTTP request headers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Iam<wbr>Request<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Base64-encoded HTTP URL used in the signed request.
+    <dd>{{% md %}}The base64-encoded HTTP URL used in the signed
+request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded EC2 instance identity document to authenticate with.
+    <dd>{{% md %}}The base64-encoded EC2 instance identity document to
+authenticate with. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Nonce</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The nonce to be used for subsequent login requests.
+    <dd>{{% md %}}The unique nonce to be used for login requests. Can be
+set to a user-specified value, or will contain the server-generated value
+once a token is issued. EC2 instances can only acquire a single token until
+the whitelist is tidied again unless they keep track of this nonce.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Pkcs7</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}PKCS7 signature of the identity document to authenticate with, with all newline characters removed.
+    <dd>{{% md %}}The PKCS#7 signature of the identity document to
+authenticate with, with all newline characters removed. Can be retrieved from
+the EC2 metadata server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS Auth Role to read the token from.
+    <dd>{{% md %}}The name of the AWS auth backend role to create tokens
+against.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Signature</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded SHA256 RSA signature of the instance identtiy document to authenticate with.
+    <dd>{{% md %}}The base64-encoded SHA256 RSA signature of the
+instance identity document to authenticate with, with all newline characters
+removed. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
 
 </dl>
@@ -316,90 +392,104 @@ block_external_search_index: true
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS Auth Backend to read the token from.
+    <dd>{{% md %}}The unique name of the AWS auth backend. Defaults to
+'aws'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>iam<wbr>Http<wbr>Request<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The HTTP method used in the signed request.
+    <dd>{{% md %}}The HTTP method used in the signed IAM
+request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>iam<wbr>Request<wbr>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Base64-encoded body of the signed request.
+    <dd>{{% md %}}The base64-encoded body of the signed
+request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>iam<wbr>Request<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Base64-encoded, JSON serialized representation of the sts:GetCallerIdentity HTTP request headers.
+    <dd>{{% md %}}The base64-encoded, JSON serialized
+representation of the GetCallerIdentity HTTP request headers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>iam<wbr>Request<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Base64-encoded HTTP URL used in the signed request.
+    <dd>{{% md %}}The base64-encoded HTTP URL used in the signed
+request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded EC2 instance identity document to authenticate with.
+    <dd>{{% md %}}The base64-encoded EC2 instance identity document to
+authenticate with. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>nonce</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The nonce to be used for subsequent login requests.
+    <dd>{{% md %}}The unique nonce to be used for login requests. Can be
+set to a user-specified value, or will contain the server-generated value
+once a token is issued. EC2 instances can only acquire a single token until
+the whitelist is tidied again unless they keep track of this nonce.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>pkcs7</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}PKCS7 signature of the identity document to authenticate with, with all newline characters removed.
+    <dd>{{% md %}}The PKCS#7 signature of the identity document to
+authenticate with, with all newline characters removed. Can be retrieved from
+the EC2 metadata server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS Auth Role to read the token from.
+    <dd>{{% md %}}The name of the AWS auth backend role to create tokens
+against.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>signature</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded SHA256 RSA signature of the instance identtiy document to authenticate with.
+    <dd>{{% md %}}The base64-encoded SHA256 RSA signature of the
+instance identity document to authenticate with, with all newline characters
+removed. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
 
 </dl>
@@ -413,90 +503,104 @@ block_external_search_index: true
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}AWS Auth Backend to read the token from.
+    <dd>{{% md %}}The unique name of the AWS auth backend. Defaults to
+'aws'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>iam_<wbr>http_<wbr>request_<wbr>method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The HTTP method used in the signed request.
+    <dd>{{% md %}}The HTTP method used in the signed IAM
+request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>iam_<wbr>request_<wbr>body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Base64-encoded body of the signed request.
+    <dd>{{% md %}}The base64-encoded body of the signed
+request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>iam_<wbr>request_<wbr>headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Base64-encoded, JSON serialized representation of the sts:GetCallerIdentity HTTP request headers.
+    <dd>{{% md %}}The base64-encoded, JSON serialized
+representation of the GetCallerIdentity HTTP request headers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>iam_<wbr>request_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Base64-encoded HTTP URL used in the signed request.
+    <dd>{{% md %}}The base64-encoded HTTP URL used in the signed
+request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded EC2 instance identity document to authenticate with.
+    <dd>{{% md %}}The base64-encoded EC2 instance identity document to
+authenticate with. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>nonce</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The nonce to be used for subsequent login requests.
+    <dd>{{% md %}}The unique nonce to be used for login requests. Can be
+set to a user-specified value, or will contain the server-generated value
+once a token is issued. EC2 instances can only acquire a single token until
+the whitelist is tidied again unless they keep track of this nonce.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>pkcs7</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}PKCS7 signature of the identity document to authenticate with, with all newline characters removed.
+    <dd>{{% md %}}The PKCS#7 signature of the identity document to
+authenticate with, with all newline characters removed. Can be retrieved from
+the EC2 metadata server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}AWS Auth Role to read the token from.
+    <dd>{{% md %}}The name of the AWS auth backend role to create tokens
+against.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>signature</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded SHA256 RSA signature of the instance identtiy document to authenticate with.
+    <dd>{{% md %}}The base64-encoded SHA256 RSA signature of the
+instance identity document to authenticate with, with all newline characters
+removed. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
 
 </dl>
@@ -522,97 +626,44 @@ The following output properties are available:
             title="">
         <span>Accessor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The accessor returned from Vault for this token.
+    <dd>{{% md %}}The token's accessor.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>Auth<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The auth method used to generate this token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}AWS Auth Backend to read the token from.
+    <dd>{{% md %}}The authentication type used to generate this token.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>Client<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The token returned by Vault.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Iam<wbr>Http<wbr>Request<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The HTTP method used in the signed request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Iam<wbr>Request<wbr>Body</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded body of the signed request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Iam<wbr>Request<wbr>Headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded, JSON serialized representation of the sts:GetCallerIdentity HTTP request headers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Iam<wbr>Request<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded HTTP URL used in the signed request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Identity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Base64-encoded EC2 instance identity document to authenticate with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Lease<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Lease duration in seconds relative to the time in lease_start_time.
+    <dd>{{% md %}}The duration in seconds the token will be valid, relative
+to the time in `lease_start_time`.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>Lease<wbr>Start<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Time at which the lease was read, using the clock of the system where Terraform was running
 {{% /md %}}</dd>
@@ -621,63 +672,28 @@ The following output properties are available:
             title="">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}The metadata reported by the Vault server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Nonce</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The nonce to be used for subsequent login requests.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pkcs7</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}PKCS7 signature of the identity document to authenticate with, with all newline characters removed.
+    <dd>{{% md %}}A map of information returned by the Vault server about the
+authentication used to generate this token.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The policies assigned to this token.
+    <dd>{{% md %}}The Vault policies assigned to this token.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>Renewable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}True if the duration of this lease can be extended through renewal.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}AWS Auth Role to read the token from.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Signature</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Base64-encoded SHA256 RSA signature of the instance identtiy document to authenticate with.
+    <dd>{{% md %}}Set to true if the token can be extended through renewal.
 {{% /md %}}</dd>
 
 </dl>
@@ -691,97 +707,44 @@ The following output properties are available:
             title="">
         <span>Accessor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The accessor returned from Vault for this token.
+    <dd>{{% md %}}The token's accessor.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>Auth<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The auth method used to generate this token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}AWS Auth Backend to read the token from.
+    <dd>{{% md %}}The authentication type used to generate this token.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>Client<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The token returned by Vault.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Iam<wbr>Http<wbr>Request<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The HTTP method used in the signed request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Iam<wbr>Request<wbr>Body</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded body of the signed request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Iam<wbr>Request<wbr>Headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded, JSON serialized representation of the sts:GetCallerIdentity HTTP request headers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Iam<wbr>Request<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded HTTP URL used in the signed request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Identity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Base64-encoded EC2 instance identity document to authenticate with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>Lease<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Lease duration in seconds relative to the time in lease_start_time.
+    <dd>{{% md %}}The duration in seconds the token will be valid, relative
+to the time in `lease_start_time`.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>Lease<wbr>Start<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Time at which the lease was read, using the clock of the system where Terraform was running
 {{% /md %}}</dd>
@@ -792,61 +755,26 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}The metadata reported by the Vault server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Nonce</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The nonce to be used for subsequent login requests.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Pkcs7</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}PKCS7 signature of the identity document to authenticate with, with all newline characters removed.
+    <dd>{{% md %}}A map of information returned by the Vault server about the
+authentication used to generate this token.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The policies assigned to this token.
+    <dd>{{% md %}}The Vault policies assigned to this token.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>Renewable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}True if the duration of this lease can be extended through renewal.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}AWS Auth Role to read the token from.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Signature</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
-    </dt>
-    <dd>{{% md %}}Base64-encoded SHA256 RSA signature of the instance identtiy document to authenticate with.
+    <dd>{{% md %}}Set to true if the token can be extended through renewal.
 {{% /md %}}</dd>
 
 </dl>
@@ -860,97 +788,44 @@ The following output properties are available:
             title="">
         <span>accessor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The accessor returned from Vault for this token.
+    <dd>{{% md %}}The token's accessor.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>auth<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The auth method used to generate this token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}AWS Auth Backend to read the token from.
+    <dd>{{% md %}}The authentication type used to generate this token.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>client<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The token returned by Vault.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>iam<wbr>Http<wbr>Request<wbr>Method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The HTTP method used in the signed request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>iam<wbr>Request<wbr>Body</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded body of the signed request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>iam<wbr>Request<wbr>Headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded, JSON serialized representation of the sts:GetCallerIdentity HTTP request headers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>iam<wbr>Request<wbr>Url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded HTTP URL used in the signed request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>identity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Base64-encoded EC2 instance identity document to authenticate with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>lease<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Lease duration in seconds relative to the time in lease_start_time.
+    <dd>{{% md %}}The duration in seconds the token will be valid, relative
+to the time in `lease_start_time`.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>lease<wbr>Start<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Time at which the lease was read, using the clock of the system where Terraform was running
 {{% /md %}}</dd>
@@ -961,61 +836,26 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}The metadata reported by the Vault server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>nonce</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The nonce to be used for subsequent login requests.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>pkcs7</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}PKCS7 signature of the identity document to authenticate with, with all newline characters removed.
+    <dd>{{% md %}}A map of information returned by the Vault server about the
+authentication used to generate this token.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The policies assigned to this token.
+    <dd>{{% md %}}The Vault policies assigned to this token.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>renewable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}True if the duration of this lease can be extended through renewal.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}AWS Auth Role to read the token from.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>signature</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
-    </dt>
-    <dd>{{% md %}}Base64-encoded SHA256 RSA signature of the instance identtiy document to authenticate with.
+    <dd>{{% md %}}Set to true if the token can be extended through renewal.
 {{% /md %}}</dd>
 
 </dl>
@@ -1029,97 +869,44 @@ The following output properties are available:
             title="">
         <span>accessor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The accessor returned from Vault for this token.
+    <dd>{{% md %}}The token's accessor.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>auth_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The auth method used to generate this token.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>backend</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}AWS Auth Backend to read the token from.
+    <dd>{{% md %}}The authentication type used to generate this token.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>client_<wbr>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The token returned by Vault.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>iam_<wbr>http_<wbr>request_<wbr>method</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The HTTP method used in the signed request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>iam_<wbr>request_<wbr>body</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded body of the signed request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>iam_<wbr>request_<wbr>headers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded, JSON serialized representation of the sts:GetCallerIdentity HTTP request headers.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>iam_<wbr>request_<wbr>url</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The Base64-encoded HTTP URL used in the signed request.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>identity</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Base64-encoded EC2 instance identity document to authenticate with.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
         <span>lease_<wbr>duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Lease duration in seconds relative to the time in lease_start_time.
+    <dd>{{% md %}}The duration in seconds the token will be valid, relative
+to the time in `lease_start_time`.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>lease_<wbr>start_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Time at which the lease was read, using the clock of the system where Terraform was running
 {{% /md %}}</dd>
@@ -1130,61 +917,26 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}The metadata reported by the Vault server.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>nonce</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The nonce to be used for subsequent login requests.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>pkcs7</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}PKCS7 signature of the identity document to authenticate with, with all newline characters removed.
+    <dd>{{% md %}}A map of information returned by the Vault server about the
+authentication used to generate this token.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The policies assigned to this token.
+    <dd>{{% md %}}The Vault policies assigned to this token.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
         <span>renewable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}True if the duration of this lease can be extended through renewal.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>role</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}AWS Auth Role to read the token from.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>signature</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Base64-encoded SHA256 RSA signature of the instance identtiy document to authenticate with.
+    <dd>{{% md %}}Set to true if the token can be extended through renewal.
 {{% /md %}}</dd>
 
 </dl>
@@ -1212,7 +964,7 @@ Get an existing AuthBackendLogin resource's state with the given name, ID, and o
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackendLogin<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/aws?tab=doc#AuthBackendLoginState">AuthBackendLoginState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/go/vault/aws?tab=doc#AuthBackendLogin">AuthBackendLogin</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>GetAuthBackendLogin<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span><span class="p">, </span><span class="nx">name</span> <span class="nx"><a href="https://golang.org/pkg/builtin/#string">string</a></span><span class="p">, </span><span class="nx">id</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#IDInput">IDInput</a></span><span class="p">, </span><span class="nx">state</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/aws?tab=doc#AuthBackendLoginState">AuthBackendLoginState</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#ResourceOption">ResourceOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-vault/sdk/v2/go/vault/aws?tab=doc#AuthBackendLogin">AuthBackendLogin</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language csharp %}}
@@ -1326,34 +1078,35 @@ The following state arguments are supported:
             title="Optional">
         <span>Accessor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The accessor returned from Vault for this token.
+    <dd>{{% md %}}The token's accessor.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Auth<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The auth method used to generate this token.
+    <dd>{{% md %}}The authentication type used to generate this token.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS Auth Backend to read the token from.
+    <dd>{{% md %}}The unique name of the AWS auth backend. Defaults to
+'aws'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Client<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The token returned by Vault.
 {{% /md %}}</dd>
@@ -1362,61 +1115,67 @@ The following state arguments are supported:
             title="Optional">
         <span>Iam<wbr>Http<wbr>Request<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The HTTP method used in the signed request.
+    <dd>{{% md %}}The HTTP method used in the signed IAM
+request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Iam<wbr>Request<wbr>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Base64-encoded body of the signed request.
+    <dd>{{% md %}}The base64-encoded body of the signed
+request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Iam<wbr>Request<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Base64-encoded, JSON serialized representation of the sts:GetCallerIdentity HTTP request headers.
+    <dd>{{% md %}}The base64-encoded, JSON serialized
+representation of the GetCallerIdentity HTTP request headers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Iam<wbr>Request<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Base64-encoded HTTP URL used in the signed request.
+    <dd>{{% md %}}The base64-encoded HTTP URL used in the signed
+request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded EC2 instance identity document to authenticate with.
+    <dd>{{% md %}}The base64-encoded EC2 instance identity document to
+authenticate with. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Lease<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">int?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
-    <dd>{{% md %}}Lease duration in seconds relative to the time in lease_start_time.
+    <dd>{{% md %}}The duration in seconds the token will be valid, relative
+to the time in `lease_start_time`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Lease<wbr>Start<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Time at which the lease was read, using the clock of the system where Terraform was running
 {{% /md %}}</dd>
@@ -1425,63 +1184,72 @@ The following state arguments are supported:
             title="Optional">
         <span>Metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}The metadata reported by the Vault server.
+    <dd>{{% md %}}A map of information returned by the Vault server about the
+authentication used to generate this token.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Nonce</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The nonce to be used for subsequent login requests.
+    <dd>{{% md %}}The unique nonce to be used for login requests. Can be
+set to a user-specified value, or will contain the server-generated value
+once a token is issued. EC2 instances can only acquire a single token until
+the whitelist is tidied again unless they keep track of this nonce.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Pkcs7</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}PKCS7 signature of the identity document to authenticate with, with all newline characters removed.
+    <dd>{{% md %}}The PKCS#7 signature of the identity document to
+authenticate with, with all newline characters removed. Can be retrieved from
+the EC2 metadata server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List<string>?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
-    <dd>{{% md %}}The policies assigned to this token.
+    <dd>{{% md %}}The Vault policies assigned to this token.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Renewable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}True if the duration of this lease can be extended through renewal.
+    <dd>{{% md %}}Set to true if the token can be extended through renewal.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS Auth Role to read the token from.
+    <dd>{{% md %}}The name of the AWS auth backend role to create tokens
+against.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Signature</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded SHA256 RSA signature of the instance identtiy document to authenticate with.
+    <dd>{{% md %}}The base64-encoded SHA256 RSA signature of the
+instance identity document to authenticate with, with all newline characters
+removed. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
 
 </dl>
@@ -1495,34 +1263,35 @@ The following state arguments are supported:
             title="Optional">
         <span>Accessor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The accessor returned from Vault for this token.
+    <dd>{{% md %}}The token's accessor.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Auth<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The auth method used to generate this token.
+    <dd>{{% md %}}The authentication type used to generate this token.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS Auth Backend to read the token from.
+    <dd>{{% md %}}The unique name of the AWS auth backend. Defaults to
+'aws'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Client<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The token returned by Vault.
 {{% /md %}}</dd>
@@ -1531,61 +1300,67 @@ The following state arguments are supported:
             title="Optional">
         <span>Iam<wbr>Http<wbr>Request<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The HTTP method used in the signed request.
+    <dd>{{% md %}}The HTTP method used in the signed IAM
+request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Iam<wbr>Request<wbr>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Base64-encoded body of the signed request.
+    <dd>{{% md %}}The base64-encoded body of the signed
+request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Iam<wbr>Request<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Base64-encoded, JSON serialized representation of the sts:GetCallerIdentity HTTP request headers.
+    <dd>{{% md %}}The base64-encoded, JSON serialized
+representation of the GetCallerIdentity HTTP request headers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Iam<wbr>Request<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Base64-encoded HTTP URL used in the signed request.
+    <dd>{{% md %}}The base64-encoded HTTP URL used in the signed
+request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded EC2 instance identity document to authenticate with.
+    <dd>{{% md %}}The base64-encoded EC2 instance identity document to
+authenticate with. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Lease<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*int</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
     </dt>
-    <dd>{{% md %}}Lease duration in seconds relative to the time in lease_start_time.
+    <dd>{{% md %}}The duration in seconds the token will be valid, relative
+to the time in `lease_start_time`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Lease<wbr>Start<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Time at which the lease was read, using the clock of the system where Terraform was running
 {{% /md %}}</dd>
@@ -1596,61 +1371,70 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}The metadata reported by the Vault server.
+    <dd>{{% md %}}A map of information returned by the Vault server about the
+authentication used to generate this token.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Nonce</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The nonce to be used for subsequent login requests.
+    <dd>{{% md %}}The unique nonce to be used for login requests. Can be
+set to a user-specified value, or will contain the server-generated value
+once a token is issued. EC2 instances can only acquire a single token until
+the whitelist is tidied again unless they keep track of this nonce.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Pkcs7</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}PKCS7 signature of the identity document to authenticate with, with all newline characters removed.
+    <dd>{{% md %}}The PKCS#7 signature of the identity document to
+authenticate with, with all newline characters removed. Can be retrieved from
+the EC2 metadata server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
-    <dd>{{% md %}}The policies assigned to this token.
+    <dd>{{% md %}}The Vault policies assigned to this token.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Renewable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*bool</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}True if the duration of this lease can be extended through renewal.
+    <dd>{{% md %}}Set to true if the token can be extended through renewal.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS Auth Role to read the token from.
+    <dd>{{% md %}}The name of the AWS auth backend role to create tokens
+against.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>Signature</span>
         <span class="property-indicator"></span>
-        <span class="property-type">*string</span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded SHA256 RSA signature of the instance identtiy document to authenticate with.
+    <dd>{{% md %}}The base64-encoded SHA256 RSA signature of the
+instance identity document to authenticate with, with all newline characters
+removed. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
 
 </dl>
@@ -1664,34 +1448,35 @@ The following state arguments are supported:
             title="Optional">
         <span>accessor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The accessor returned from Vault for this token.
+    <dd>{{% md %}}The token's accessor.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>auth<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The auth method used to generate this token.
+    <dd>{{% md %}}The authentication type used to generate this token.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS Auth Backend to read the token from.
+    <dd>{{% md %}}The unique name of the AWS auth backend. Defaults to
+'aws'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>client<wbr>Token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The token returned by Vault.
 {{% /md %}}</dd>
@@ -1700,61 +1485,67 @@ The following state arguments are supported:
             title="Optional">
         <span>iam<wbr>Http<wbr>Request<wbr>Method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The HTTP method used in the signed request.
+    <dd>{{% md %}}The HTTP method used in the signed IAM
+request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>iam<wbr>Request<wbr>Body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Base64-encoded body of the signed request.
+    <dd>{{% md %}}The base64-encoded body of the signed
+request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>iam<wbr>Request<wbr>Headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Base64-encoded, JSON serialized representation of the sts:GetCallerIdentity HTTP request headers.
+    <dd>{{% md %}}The base64-encoded, JSON serialized
+representation of the GetCallerIdentity HTTP request headers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>iam<wbr>Request<wbr>Url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Base64-encoded HTTP URL used in the signed request.
+    <dd>{{% md %}}The base64-encoded HTTP URL used in the signed
+request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded EC2 instance identity document to authenticate with.
+    <dd>{{% md %}}The base64-encoded EC2 instance identity document to
+authenticate with. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>lease<wbr>Duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">number?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
-    <dd>{{% md %}}Lease duration in seconds relative to the time in lease_start_time.
+    <dd>{{% md %}}The duration in seconds the token will be valid, relative
+to the time in `lease_start_time`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>lease<wbr>Start<wbr>Time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Time at which the lease was read, using the clock of the system where Terraform was running
 {{% /md %}}</dd>
@@ -1763,63 +1554,72 @@ The following state arguments are supported:
             title="Optional">
         <span>metadata</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}The metadata reported by the Vault server.
+    <dd>{{% md %}}A map of information returned by the Vault server about the
+authentication used to generate this token.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>nonce</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The nonce to be used for subsequent login requests.
+    <dd>{{% md %}}The unique nonce to be used for login requests. Can be
+set to a user-specified value, or will contain the server-generated value
+once a token is issued. EC2 instances can only acquire a single token until
+the whitelist is tidied again unless they keep track of this nonce.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>pkcs7</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}PKCS7 signature of the identity document to authenticate with, with all newline characters removed.
+    <dd>{{% md %}}The PKCS#7 signature of the identity document to
+authenticate with, with all newline characters removed. Can be retrieved from
+the EC2 metadata server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
-    <dd>{{% md %}}The policies assigned to this token.
+    <dd>{{% md %}}The Vault policies assigned to this token.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>renewable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">boolean?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}True if the duration of this lease can be extended through renewal.
+    <dd>{{% md %}}Set to true if the token can be extended through renewal.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}AWS Auth Role to read the token from.
+    <dd>{{% md %}}The name of the AWS auth backend role to create tokens
+against.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>signature</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string?</span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded SHA256 RSA signature of the instance identtiy document to authenticate with.
+    <dd>{{% md %}}The base64-encoded SHA256 RSA signature of the
+instance identity document to authenticate with, with all newline characters
+removed. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
 
 </dl>
@@ -1833,34 +1633,35 @@ The following state arguments are supported:
             title="Optional">
         <span>accessor</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The accessor returned from Vault for this token.
+    <dd>{{% md %}}The token's accessor.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>auth_<wbr>type</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The auth method used to generate this token.
+    <dd>{{% md %}}The authentication type used to generate this token.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>backend</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}AWS Auth Backend to read the token from.
+    <dd>{{% md %}}The unique name of the AWS auth backend. Defaults to
+'aws'.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>client_<wbr>token</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The token returned by Vault.
 {{% /md %}}</dd>
@@ -1869,61 +1670,67 @@ The following state arguments are supported:
             title="Optional">
         <span>iam_<wbr>http_<wbr>request_<wbr>method</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The HTTP method used in the signed request.
+    <dd>{{% md %}}The HTTP method used in the signed IAM
+request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>iam_<wbr>request_<wbr>body</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Base64-encoded body of the signed request.
+    <dd>{{% md %}}The base64-encoded body of the signed
+request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>iam_<wbr>request_<wbr>headers</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Base64-encoded, JSON serialized representation of the sts:GetCallerIdentity HTTP request headers.
+    <dd>{{% md %}}The base64-encoded, JSON serialized
+representation of the GetCallerIdentity HTTP request headers.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>iam_<wbr>request_<wbr>url</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Base64-encoded HTTP URL used in the signed request.
+    <dd>{{% md %}}The base64-encoded HTTP URL used in the signed
+request.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>identity</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded EC2 instance identity document to authenticate with.
+    <dd>{{% md %}}The base64-encoded EC2 instance identity document to
+authenticate with. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>lease_<wbr>duration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">float</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}Lease duration in seconds relative to the time in lease_start_time.
+    <dd>{{% md %}}The duration in seconds the token will be valid, relative
+to the time in `lease_start_time`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>lease_<wbr>start_<wbr>time</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Time at which the lease was read, using the clock of the system where Terraform was running
 {{% /md %}}</dd>
@@ -1934,61 +1741,70 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, Any]</span>
     </dt>
-    <dd>{{% md %}}The metadata reported by the Vault server.
+    <dd>{{% md %}}A map of information returned by the Vault server about the
+authentication used to generate this token.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>nonce</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The nonce to be used for subsequent login requests.
+    <dd>{{% md %}}The unique nonce to be used for login requests. Can be
+set to a user-specified value, or will contain the server-generated value
+once a token is issued. EC2 instances can only acquire a single token until
+the whitelist is tidied again unless they keep track of this nonce.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>pkcs7</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}PKCS7 signature of the identity document to authenticate with, with all newline characters removed.
+    <dd>{{% md %}}The PKCS#7 signature of the identity document to
+authenticate with, with all newline characters removed. Can be retrieved from
+the EC2 metadata server.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>policies</span>
         <span class="property-indicator"></span>
-        <span class="property-type">List[str]</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
-    <dd>{{% md %}}The policies assigned to this token.
+    <dd>{{% md %}}The Vault policies assigned to this token.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>renewable</span>
         <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}True if the duration of this lease can be extended through renewal.
+    <dd>{{% md %}}Set to true if the token can be extended through renewal.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>role</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}AWS Auth Role to read the token from.
+    <dd>{{% md %}}The name of the AWS auth backend role to create tokens
+against.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
         <span>signature</span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Base64-encoded SHA256 RSA signature of the instance identtiy document to authenticate with.
+    <dd>{{% md %}}The base64-encoded SHA256 RSA signature of the
+instance identity document to authenticate with, with all newline characters
+removed. Can be retrieved from the EC2 metadata server.
 {{% /md %}}</dd>
 
 </dl>
@@ -2010,6 +1826,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-vault">https://github.com/pulumi/pulumi-vault</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vault).</dd>
 </dl>
 
