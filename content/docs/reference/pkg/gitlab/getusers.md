@@ -18,11 +18,11 @@ Provides details about a list of users in the gitlab provider. The results inclu
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
 
-const example = gitlab.getUsers({
+const example = pulumi.output(gitlab.getUsers({
     createdBefore: "2019-01-01",
     orderBy: "name",
     sort: "desc",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

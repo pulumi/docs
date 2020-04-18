@@ -201,7 +201,13 @@ const example = new gitlab.ProjectHook("example", {
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## ProjectHook Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The ProjectHook resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -674,6 +680,9 @@ the hook.
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. The ProjectHook resource does not produce any additional output properties.
 
 
 

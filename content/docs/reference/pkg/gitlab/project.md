@@ -179,7 +179,13 @@ block_external_search_index: true
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## Project Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The Project resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -1064,8 +1070,9 @@ Repositories are created as private by default.
 
 
 
+### Outputs
 
-## Project Output Properties
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Project resource produces the following computed outputs.
 
 The following output properties are available:
 

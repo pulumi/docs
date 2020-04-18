@@ -16,9 +16,9 @@ Provides details about a specific project in the gitlab provider. The results in
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
 
-const example = gitlab.getProject({
+const example = pulumi.output(gitlab.getProject({
     id: 30,
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

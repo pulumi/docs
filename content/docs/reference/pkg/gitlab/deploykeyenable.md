@@ -210,7 +210,13 @@ const fooDeployKeyEnable = new gitlab.DeployKeyEnable("foo", {
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## DeployKeyEnable Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The DeployKeyEnable resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -415,6 +421,9 @@ const fooDeployKeyEnable = new gitlab.DeployKeyEnable("foo", {
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. The DeployKeyEnable resource does not produce any additional output properties.
 
 
 

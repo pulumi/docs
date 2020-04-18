@@ -209,7 +209,13 @@ const bar = new gitlab.GroupCluster("bar", {
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## GroupCluster Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The GroupCluster resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -606,8 +612,9 @@ const bar = new gitlab.GroupCluster("bar", {
 
 
 
+### Outputs
 
-## GroupCluster Output Properties
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the GroupCluster resource produces the following computed outputs.
 
 The following output properties are available:
 
