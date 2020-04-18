@@ -18,12 +18,12 @@ Gets Object IDs or UPNs for multiple Azure Active Directory users.
 import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
 
-const users = azuread.getUsers({
+const users = pulumi.output(azuread.getUsers({
     userPrincipalNames: [
         "kat@hashicorp.com",
         "byte@hashicorp.com",
     ],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

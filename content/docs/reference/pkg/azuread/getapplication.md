@@ -18,9 +18,9 @@ Use this data source to access information about an existing Application within 
 import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
 
-const example = azuread.getApplication({
+const example = pulumi.output(azuread.getApplication({
     name: "My First AzureAD Application",
-});
+}, { async: true }));
 
 export const azureAdObjectId = example.id;
 ```

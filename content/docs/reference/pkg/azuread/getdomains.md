@@ -18,7 +18,7 @@ Use this data source to access information about an existing Domains within Azur
 import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
 
-const aadDomains = azuread.getDomains();
+const aadDomains = pulumi.output(azuread.getDomains({ async: true }));
 
 export const domains = aadDomains.domains;
 ```

@@ -16,9 +16,9 @@ Gets information about an Azure Active Directory group.
 import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
 
-const example = azuread.getGroup({
+const example = pulumi.output(azuread.getGroup({
     name: "A-AD-Group",
-});
+}, { async: true }));
 ```
 
 

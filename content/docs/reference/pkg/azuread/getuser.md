@@ -18,9 +18,9 @@ Gets information about an Azure Active Directory user.
 import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
 
-const example = azuread.getUser({
+const example = pulumi.output(azuread.getUser({
     userPrincipalName: "user@hashicorp.com",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

@@ -16,9 +16,9 @@ Gets information about an existing Service Principal associated with an Applicat
 import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
 
-const example = azuread.getServicePrincipal({
+const example = pulumi.output(azuread.getServicePrincipal({
     displayName: "my-awesome-application",
-});
+}, { async: true }));
 ```
 
 ## Example Usage (by Application ID)
@@ -27,9 +27,9 @@ const example = azuread.getServicePrincipal({
 import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
 
-const example = azuread.getServicePrincipal({
+const example = pulumi.output(azuread.getServicePrincipal({
     applicationId: "00000000-0000-0000-0000-000000000000",
-});
+}, { async: true }));
 ```
 
 ## Example Usage (by Object ID)
@@ -38,9 +38,9 @@ const example = azuread.getServicePrincipal({
 import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
 
-const example = azuread.getServicePrincipal({
+const example = pulumi.output(azuread.getServicePrincipal({
     objectId: "00000000-0000-0000-0000-000000000000",
-});
+}, { async: true }));
 ```
 
 
