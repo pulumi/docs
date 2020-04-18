@@ -18,9 +18,9 @@ Note: This usually requires admin privileges.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const admins = openstack.identity.getGroup({
+const admins = pulumi.output(openstack.identity.getGroup({
     name: "admins",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

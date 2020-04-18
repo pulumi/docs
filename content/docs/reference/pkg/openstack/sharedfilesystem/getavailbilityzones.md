@@ -17,7 +17,7 @@ from OpenStack
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const zones = openstack.sharedfilesystem.getAvailbilityZones();
+const zones = pulumi.output(openstack.sharedfilesystem.getAvailbilityZones({ async: true }));
 ```
 
 {{% /example %}}

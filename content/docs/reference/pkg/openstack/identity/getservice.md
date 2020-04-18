@@ -18,9 +18,9 @@ Use this data source to get the ID of an OpenStack service.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const service1 = openstack.identity.getService({
+const service1 = pulumi.output(openstack.identity.getService({
     name: "keystone",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

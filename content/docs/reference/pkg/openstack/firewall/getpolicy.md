@@ -16,9 +16,9 @@ Use this data source to get firewall policy information of an available OpenStac
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const policy = openstack.firewall.getPolicy({
+const policy = pulumi.output(openstack.firewall.getPolicy({
     name: "tf_test_policy",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

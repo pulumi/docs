@@ -16,9 +16,9 @@ Use this data source to get the ID of an available OpenStack router.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const router = openstack.networking.getRouter({
+const router = pulumi.output(openstack.networking.getRouter({
     name: "router_1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

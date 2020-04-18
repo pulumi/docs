@@ -16,9 +16,9 @@ Use this data source to get the ID of an available OpenStack floating IP.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const floatingip1 = openstack.networking.getFloatingIp({
+const floatingip1 = pulumi.output(openstack.networking.getFloatingIp({
     address: "192.168.0.4",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

@@ -17,9 +17,9 @@ specified criteria.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const ports = openstack.networking.getPortIds({
+const ports = pulumi.output(openstack.networking.getPortIds({
     name: "port",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

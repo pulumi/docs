@@ -16,11 +16,11 @@ Use this data source to get the ID of an available OpenStack address-scope.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const publicAddressscope = openstack.networking.getAddressScope({
+const publicAddressscope = pulumi.output(openstack.networking.getAddressScope({
     ipVersion: 4,
     name: "public_addressscope",
     shared: true,
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

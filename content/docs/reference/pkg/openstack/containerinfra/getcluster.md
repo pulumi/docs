@@ -16,9 +16,9 @@ Use this data source to get the ID of an available OpenStack Magnum cluster.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const cluster1 = openstack.containerinfra.getCluster({
+const cluster1 = pulumi.output(openstack.containerinfra.getCluster({
     name: "cluster_1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

@@ -18,9 +18,9 @@ Use this data source to get the ID of an OpenStack endpoint.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const endpoint1 = openstack.identity.getEndpoint({
+const endpoint1 = pulumi.output(openstack.identity.getEndpoint({
     serviceName: "demo",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

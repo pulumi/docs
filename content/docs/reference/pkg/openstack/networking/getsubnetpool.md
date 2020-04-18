@@ -16,9 +16,9 @@ Use this data source to get the ID of an available OpenStack subnetpool.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const subnetpool1 = openstack.networking.getSubnetPool({
+const subnetpool1 = pulumi.output(openstack.networking.getSubnetPool({
     name: "subnetpool_1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

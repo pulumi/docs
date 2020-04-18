@@ -16,7 +16,7 @@ Use this data source to get a list of Block Storage availability zones from Open
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const zones = openstack.blockstorage.getAvailabilityZonesV3();
+const zones = pulumi.output(openstack.blockstorage.getAvailabilityZonesV3({ async: true }));
 ```
 
 {{% /example %}}

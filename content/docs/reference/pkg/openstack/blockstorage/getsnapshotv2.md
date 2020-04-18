@@ -16,10 +16,10 @@ Use this data source to get information about an existing snapshot.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const snapshot1 = openstack.blockstorage.getSnapshotV2({
+const snapshot1 = pulumi.output(openstack.blockstorage.getSnapshotV2({
     mostRecent: true,
     name: "snapshot_1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

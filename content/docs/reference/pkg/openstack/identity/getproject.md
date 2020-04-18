@@ -16,9 +16,9 @@ Use this data source to get the ID of an OpenStack project.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const project1 = openstack.identity.getProject({
+const project1 = pulumi.output(openstack.identity.getProject({
     name: "demo",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

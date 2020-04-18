@@ -16,9 +16,9 @@ Use this data source to get the ID of an available OpenStack QoS minimum bandwid
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const qosMinBwRule1 = openstack.networking.getQosMinimumBandwidthRule({
+const qosMinBwRule1 = pulumi.output(openstack.networking.getQosMinimumBandwidthRule({
     minKbps: 2000,
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

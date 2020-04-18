@@ -16,9 +16,9 @@ Use this data source to get the ID of an available OpenStack trunk.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const trunk1 = openstack.networking.getTrunk({
+const trunk1 = pulumi.output(openstack.networking.getTrunk({
     name: "trunk_1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

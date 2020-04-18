@@ -17,9 +17,9 @@ template.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const clustertemplate1 = openstack.containerinfra.getClusterTemplate({
+const clustertemplate1 = pulumi.output(openstack.containerinfra.getClusterTemplate({
     name: "clustertemplate_1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

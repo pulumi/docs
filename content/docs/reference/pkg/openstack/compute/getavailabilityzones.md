@@ -16,7 +16,7 @@ Use this data source to get a list of availability zones from OpenStack
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const zones = openstack.compute.getAvailabilityZones();
+const zones = pulumi.output(openstack.compute.getAvailabilityZones({ async: true }));
 ```
 
 {{% /example %}}

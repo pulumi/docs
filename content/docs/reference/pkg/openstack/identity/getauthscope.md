@@ -18,9 +18,9 @@ the username or project name currently in use.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const scope = openstack.identity.getAuthScope({
+const scope = pulumi.output(openstack.identity.getAuthScope({
     name: "my_scope",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

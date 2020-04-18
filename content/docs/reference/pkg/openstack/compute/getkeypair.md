@@ -16,9 +16,9 @@ Use this data source to get the ID and public key of an OpenStack keypair.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const kp = openstack.compute.getKeypair({
+const kp = pulumi.output(openstack.compute.getKeypair({
     name: "sand",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

@@ -16,9 +16,9 @@ Use this data source to get the ID of an available OpenStack subnet.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const subnet1 = openstack.networking.getSubnet({
+const subnet1 = pulumi.output(openstack.networking.getSubnet({
     name: "subnet_1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

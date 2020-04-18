@@ -16,9 +16,9 @@ Use this data source to get the ID of an available OpenStack security group.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const secgroup = openstack.networking.getSecGroup({
+const secgroup = pulumi.output(openstack.networking.getSecGroup({
     name: "tf_test_secgroup",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

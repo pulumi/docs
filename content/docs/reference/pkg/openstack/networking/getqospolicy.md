@@ -16,9 +16,9 @@ Use this data source to get the ID of an available OpenStack QoS policy.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const qosPolicy1 = openstack.networking.getQosPolicy({
+const qosPolicy1 = pulumi.output(openstack.networking.getQosPolicy({
     name: "qos_policy_1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
