@@ -4,10 +4,14 @@ title: "GetVolume"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to get information about an EBS volume for use in other
 resources.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -28,7 +32,8 @@ const ebsVolume = pulumi.output(aws.ebs.getVolume({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_volume.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

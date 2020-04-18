@@ -4,6 +4,8 @@ title: "IAMAuditConfig"
 block_external_search_index: true
 ---
 
+
+
 Four different resources help you manage your IAM policy for a project. Each of these resources serves a different use case:
 
 * `gcp.projects.IAMPolicy`: Authoritative. Sets the IAM policy for the project and replaces any existing policy already attached.
@@ -15,6 +17,86 @@ Four different resources help you manage your IAM policy for a project. Each of 
 > **Note:** `gcp.projects.IAMPolicy` **cannot** be used in conjunction with `gcp.projects.IAMBinding`, `gcp.projects.IAMMember`, or `gcp.projects.IAMAuditConfig` or they will fight over what your policy should be.
 
 > **Note:** `gcp.projects.IAMBinding` resources **can be** used in conjunction with `gcp.projects.IAMMember` resources **only if** they do not grant privilege to the same role.
+
+## google\_project\_iam\_binding
+
+> **Note:** If `role` is set to `roles/owner` and you don't specify a user or service account you have access to in `members`, you can lock yourself out of your project.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const project = new gcp.projects.IAMBinding("project", {
+    members: ["user:jane@example.com"],
+    project: "your-project-id",
+    role: "roles/editor",
+});
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const project = new gcp.projects.IAMBinding("project", {
+    condition: {
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        title: "expires_after_2019_12_31",
+    },
+    members: ["user:jane@example.com"],
+    project: "your-project-id",
+    role: "roles/editor",
+});
+```
+
+## google\_project\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const project = new gcp.projects.IAMMember("project", {
+    member: "user:jane@example.com",
+    project: "your-project-id",
+    role: "roles/editor",
+});
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const project = new gcp.projects.IAMMember("project", {
+    condition: {
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        title: "expires_after_2019_12_31",
+    },
+    member: "user:jane@example.com",
+    project: "your-project-id",
+    role: "roles/editor",
+});
+```
+
+## google\_project\_iam\_audit\_config
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const project = new gcp.projects.IAMAuditConfig("project", {
+    auditLogConfigs: [{
+        exemptedMembers: ["user:joebloggs@hashicorp.com"],
+        logType: "DATA_READ",
+    }],
+    project: "your-project-id",
+    service: "allServices",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_project_iam.html.markdown.
 
@@ -898,9 +980,13 @@ will not be inferred from the provider.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

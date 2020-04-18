@@ -4,6 +4,8 @@ title: "KeyRingIAMPolicy"
 block_external_search_index: true
 ---
 
+
+
 Three different resources help you manage your IAM policy for KMS key ring. Each of these resources serves a different use case:
 
 * `gcp.kms.KeyRingIAMPolicy`: Authoritative. Sets the IAM policy for the key ring and replaces any existing policy already attached.
@@ -13,6 +15,68 @@ Three different resources help you manage your IAM policy for KMS key ring. Each
 > **Note:** `gcp.kms.KeyRingIAMPolicy` **cannot** be used in conjunction with `gcp.kms.KeyRingIAMBinding` and `gcp.kms.KeyRingIAMMember` or they will fight over what your policy should be.
 
 > **Note:** `gcp.kms.KeyRingIAMBinding` resources **can be** used in conjunction with `gcp.kms.KeyRingIAMMember` resources **only if** they do not grant privilege to the same role.
+
+## google\_kms\_key\_ring\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyRing = new gcp.kms.KeyRingIAMBinding("key_ring", {
+    keyRingId: "your-key-ring-id",
+    members: ["user:jane@example.com"],
+    role: "roles/editor",
+});
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyRing = new gcp.kms.KeyRingIAMBinding("key_ring", {
+    condition: {
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        title: "expires_after_2019_12_31",
+    },
+    keyRingId: "your-key-ring-id",
+    members: ["user:jane@example.com"],
+    role: "roles/editor",
+});
+```
+
+## google\_kms\_key\_ring\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyRing = new gcp.kms.KeyRingIAMMember("key_ring", {
+    keyRingId: "your-key-ring-id",
+    member: "user:jane@example.com",
+    role: "roles/editor",
+});
+```
+
+With IAM Conditions:
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const keyRing = new gcp.kms.KeyRingIAMMember("key_ring", {
+    condition: {
+        description: "Expiring at midnight of 2019-12-31",
+        expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+        title: "expires_after_2019_12_31",
+    },
+    keyRingId: "your-key-ring-id",
+    member: "user:jane@example.com",
+    role: "roles/editor",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_kms_key_ring_iam.html.markdown.
 
@@ -692,9 +756,13 @@ a `gcp.organizations.getIAMPolicy` data source.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

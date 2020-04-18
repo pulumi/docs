@@ -4,6 +4,8 @@ title: "DomainIdentityVerification"
 block_external_search_index: true
 ---
 
+
+
 Represents a successful verification of an SES domain identity.
 
 Most commonly, this resource is used together with `aws.route53.Record` and
@@ -12,7 +14,9 @@ deploy the required DNS verification records, and wait for verification to compl
 
 > **WARNING:** This resource implements a part of the verification workflow. It does not represent a real-world entity in AWS, therefore changing or deleting this resource on its own has no immediate effect.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -33,7 +37,8 @@ const exampleVerification = new aws.ses.DomainIdentityVerification("example_veri
 }, { dependsOn: [exampleAmazonsesVerificationRecord] });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ses_domain_identity_verification.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -555,9 +560,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

@@ -4,10 +4,14 @@ title: "GetAmi"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to get the ID of a registered AMI for use in other
 resources.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -35,7 +39,8 @@ const example = pulumi.output(aws.getAmi({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ami.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

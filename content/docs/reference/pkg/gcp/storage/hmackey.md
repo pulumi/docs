@@ -4,6 +4,8 @@ title: "HmacKey"
 block_external_search_index: true
 ---
 
+
+
 The hmacKeys resource represents an HMAC key within Cloud Storage. The resource
 consists of a secret and HMAC key metadata. HMAC keys can be used as credentials
 for service accounts.
@@ -985,9 +987,13 @@ If it is not provided, the provider project is used.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

@@ -4,11 +4,15 @@ title: "Group"
 block_external_search_index: true
 ---
 
+
+
 Provides an AutoScaling Group resource.
 
 > **Note:** You must specify either `launch_configuration`, `launch_template`, or `mixed_instances_policy`.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -59,6 +63,8 @@ const bar = new aws.autoscaling.Group("bar", {
 } });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### With Latest Version Of Launch Template
 
 ```typescript
@@ -82,6 +88,8 @@ const bar = new aws.autoscaling.Group("bar", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Mixed Instances Policy
 
 ```typescript
@@ -118,6 +126,8 @@ const exampleGroup = new aws.autoscaling.Group("example", {
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## Interpolated tags
 
 ```typescript
@@ -211,8 +221,6 @@ If ASG creation takes more than a few minutes, this could indicate one of a
 number of configuration problems. See the [AWS Docs on Load Balancer
 Troubleshooting](https://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/elb-troubleshooting.html)
 for more information.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_group.html.markdown.
 
 
 
@@ -5551,9 +5559,14 @@ Amazon EC2 instances launched via this ASG
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

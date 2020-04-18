@@ -4,9 +4,13 @@ title: "GetFunction"
 block_external_search_index: true
 ---
 
+
+
 Provides information about a Lambda Function.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -20,7 +24,8 @@ const existing = pulumi.output(aws.lambda.getFunction({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lambda_function.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

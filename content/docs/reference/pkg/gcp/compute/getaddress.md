@@ -4,6 +4,8 @@ title: "GetAddress"
 block_external_search_index: true
 ---
 
+
+
 Get the IP address from a static address. For more information see
 the official [API](https://cloud.google.com/compute/docs/reference/latest/addresses/get) documentation.
 

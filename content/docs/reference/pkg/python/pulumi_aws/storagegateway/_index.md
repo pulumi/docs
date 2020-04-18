@@ -24,7 +24,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Manages an AWS Storage Gateway cache.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> The Storage Gateway API provides no method to remove a cache disk. Destroying this resource does not perform any Storage Gateway actions.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cache.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cache.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -111,10 +110,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>NOTE:</strong> The gateway must have cache added (e.g. via the <cite>``storagegateway.Cache`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/storagegateway_cache.html">https://www.terraform.io/docs/providers/aws/r/storagegateway_cache.html</a>&gt;`_ resource) before creating volumes otherwise the Storage Gateway API will return an error.</p>
 <p><strong>NOTE:</strong> The gateway must have an upload buffer added (e.g. via the <cite>``storagegateway.UploadBuffer`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/storagegateway_upload_buffer.html">https://www.terraform.io/docs/providers/aws/r/storagegateway_upload_buffer.html</a>&gt;`_ resource) before the volume is operational to clients, however the Storage Gateway API will allow volume creation without error in that case and return volume status as <code class="docutils literal notranslate"><span class="pre">UPLOAD</span> <span class="pre">BUFFER</span> <span class="pre">NOT</span> <span class="pre">CONFIGURED</span></code>.</p>
-</div></blockquote>
-<blockquote>
-<div><p><strong>NOTE:</strong> These examples are referencing the <cite>``storagegateway.Cache`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/storagegateway_cache.html">https://www.terraform.io/docs/providers/aws/r/storagegateway_cache.html</a>&gt;`_ resource <code class="docutils literal notranslate"><span class="pre">gateway_arn</span></code> attribute to ensure this provider properly adds cache before creating the volume. If you are not using this method, you may need to declare an expicit dependency (e.g. via <code class="docutils literal notranslate"><span class="pre">depends_on</span> <span class="pre">=</span> <span class="pre">[&quot;aws_storagegateway_cache.example&quot;]</span></code>) to ensure proper ordering.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cached_iscsi_volume.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_cached_iscsi_volume.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -289,7 +284,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages an AWS Storage Gateway file, tape, or volume gateway in the provider region.</p>
 <blockquote>
 <div><p>NOTE: The Storage Gateway API requires the gateway to be connected to properly return information after activation. If you are receiving <code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">specified</span> <span class="pre">gateway</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">connected</span></code> errors during resource creation (gateway activation), ensure your gateway instance meets the <a class="reference external" href="https://docs.aws.amazon.com/storagegateway/latest/userguide/Requirements.html">Storage Gateway requirements</a>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_gateway.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_gateway.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -489,9 +483,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.storagegateway.NfsFileShare">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.storagegateway.</code><code class="sig-name descname">NfsFileShare</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_lists=None</em>, <em class="sig-param">default_storage_class=None</em>, <em class="sig-param">gateway_arn=None</em>, <em class="sig-param">guess_mime_type_enabled=None</em>, <em class="sig-param">kms_encrypted=None</em>, <em class="sig-param">kms_key_arn=None</em>, <em class="sig-param">location_arn=None</em>, <em class="sig-param">nfs_file_share_defaults=None</em>, <em class="sig-param">object_acl=None</em>, <em class="sig-param">read_only=None</em>, <em class="sig-param">requester_pays=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">squash=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.NfsFileShare" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS Storage Gateway NFS File Share.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_nfs_file_share.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_nfs_file_share.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -594,6 +585,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.storagegateway.NfsFileShare.path">
+<code class="sig-name descname">path</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.storagegateway.NfsFileShare.path" title="Permalink to this definition">¶</a></dt>
+<dd><p>File share path used by the NFS client to identify the mount point.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.storagegateway.NfsFileShare.read_only">
 <code class="sig-name descname">read_only</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.storagegateway.NfsFileShare.read_only" title="Permalink to this definition">¶</a></dt>
 <dd><p>Boolean to indicate write status of file share. File share does not accept writes if <code class="docutils literal notranslate"><span class="pre">true</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
@@ -625,7 +622,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_aws.storagegateway.NfsFileShare.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">client_lists=None</em>, <em class="sig-param">default_storage_class=None</em>, <em class="sig-param">fileshare_id=None</em>, <em class="sig-param">gateway_arn=None</em>, <em class="sig-param">guess_mime_type_enabled=None</em>, <em class="sig-param">kms_encrypted=None</em>, <em class="sig-param">kms_key_arn=None</em>, <em class="sig-param">location_arn=None</em>, <em class="sig-param">nfs_file_share_defaults=None</em>, <em class="sig-param">object_acl=None</em>, <em class="sig-param">read_only=None</em>, <em class="sig-param">requester_pays=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">squash=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.NfsFileShare.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">client_lists=None</em>, <em class="sig-param">default_storage_class=None</em>, <em class="sig-param">fileshare_id=None</em>, <em class="sig-param">gateway_arn=None</em>, <em class="sig-param">guess_mime_type_enabled=None</em>, <em class="sig-param">kms_encrypted=None</em>, <em class="sig-param">kms_key_arn=None</em>, <em class="sig-param">location_arn=None</em>, <em class="sig-param">nfs_file_share_defaults=None</em>, <em class="sig-param">object_acl=None</em>, <em class="sig-param">path=None</em>, <em class="sig-param">read_only=None</em>, <em class="sig-param">requester_pays=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">squash=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.NfsFileShare.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing NfsFileShare resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -645,6 +642,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>location_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the backed storage used for storing file data.</p></li>
 <li><p><strong>nfs_file_share_defaults</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument with file share default values. More information below.</p></li>
 <li><p><strong>object_acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Access Control List permission for S3 bucket objects. Defaults to <code class="docutils literal notranslate"><span class="pre">private</span></code>.</p></li>
+<li><p><strong>path</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – File share path used by the NFS client to identify the mount point.</p></li>
 <li><p><strong>read_only</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean to indicate write status of file share. File share does not accept writes if <code class="docutils literal notranslate"><span class="pre">true</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>requester_pays</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean who pays the cost of the request and the data download from the Amazon S3 bucket. Set this value to <code class="docutils literal notranslate"><span class="pre">true</span></code> if you want the requester to pay instead of the bucket owner. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the AWS Identity and Access Management (IAM) role that a file gateway assumes when it accesses the underlying storage.</p></li>
@@ -704,9 +702,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.storagegateway.SmbFileShare">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.storagegateway.</code><code class="sig-name descname">SmbFileShare</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">authentication=None</em>, <em class="sig-param">default_storage_class=None</em>, <em class="sig-param">gateway_arn=None</em>, <em class="sig-param">guess_mime_type_enabled=None</em>, <em class="sig-param">invalid_user_lists=None</em>, <em class="sig-param">kms_encrypted=None</em>, <em class="sig-param">kms_key_arn=None</em>, <em class="sig-param">location_arn=None</em>, <em class="sig-param">object_acl=None</em>, <em class="sig-param">read_only=None</em>, <em class="sig-param">requester_pays=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">valid_user_lists=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.SmbFileShare" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an AWS Storage Gateway SMB File Share.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_smb_file_share.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_smb_file_share.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -901,7 +896,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages an AWS Storage Gateway upload buffer.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> The Storage Gateway API provides no method to remove an upload buffer disk. Destroying this resource does not perform any Storage Gateway actions.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_upload_buffer.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_upload_buffer.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -987,7 +981,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Manages an AWS Storage Gateway working storage.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> The Storage Gateway API provides no method to remove a working storage disk. Destroying this resource does not perform any Storage Gateway actions.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_working_storage.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_working_storage.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1071,9 +1064,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.storagegateway.get_local_disk">
 <code class="sig-prename descclassname">pulumi_aws.storagegateway.</code><code class="sig-name descname">get_local_disk</code><span class="sig-paren">(</span><em class="sig-param">disk_node=None</em>, <em class="sig-param">disk_path=None</em>, <em class="sig-param">gateway_arn=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.storagegateway.get_local_disk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Retrieve information about a Storage Gateway local disk. The disk identifier is useful for adding the disk as a cache or upload buffer to a gateway.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/storagegateway_local_disk.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/storagegateway_local_disk.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

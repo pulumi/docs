@@ -4,9 +4,13 @@ title: "SizeConstraintSet"
 block_external_search_index: true
 ---
 
+
+
 Provides a WAF Regional Size Constraint Set Resource for use with Application Load Balancer.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -24,7 +28,8 @@ const sizeConstraintSet = new aws.wafregional.SizeConstraintSet("size_constraint
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_size_constraint_set.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1001,9 +1006,14 @@ for all supported values.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

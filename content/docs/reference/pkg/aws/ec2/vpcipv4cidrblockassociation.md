@@ -4,12 +4,16 @@ title: "VpcIpv4CidrBlockAssociation"
 block_external_search_index: true
 ---
 
+
+
 Provides a resource to associate additional IPv4 CIDR blocks with a VPC.
 
 When a VPC is created, a primary IPv4 CIDR block for the VPC must be specified.
 The `aws.ec2.VpcIpv4CidrBlockAssociation` resource allows further IPv4 CIDR blocks to be added to the VPC.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -24,7 +28,8 @@ const secondaryCidr = new aws.ec2.VpcIpv4CidrBlockAssociation("secondary_cidr", 
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_ipv4_cidr_block_association.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -582,9 +587,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

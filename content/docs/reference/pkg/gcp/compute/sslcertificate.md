@@ -4,6 +4,8 @@ title: "SSLCertificate"
 block_external_search_index: true
 ---
 
+
+
 An SslCertificate resource, used for HTTPS load balancing. This resource
 provides a mechanism to upload an SSL key and certificate to
 the load balancer to serve secure connections from the user.
@@ -1305,9 +1307,13 @@ If it is not provided, the provider project is used.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

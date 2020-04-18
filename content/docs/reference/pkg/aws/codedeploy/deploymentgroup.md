@@ -4,11 +4,15 @@ title: "DeploymentGroup"
 block_external_search_index: true
 ---
 
+
+
 Provides a CodeDeploy Deployment Group for a CodeDeploy Application
 
 > **NOTE on blue/green deployments:** When using `green_fleet_provisioning_option` with the `COPY_AUTO_SCALING_GROUP` action, CodeDeploy will create a new ASG with a different name. This ASG is _not_ managed by this provider and will conflict with existing configuration and state. You may want to use a different approach to managing deployments that involve multiple ASG, such as `DISCOVER_EXISTING` with separate blue and green ASG.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -70,6 +74,8 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Blue Green Deployments with ECS
 
 ```typescript
@@ -123,6 +129,8 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Blue Green Deployments with Servers and Classic ELB
 
 ```typescript
@@ -158,7 +166,8 @@ const exampleDeploymentGroup = new aws.codedeploy.DeploymentGroup("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codedeploy_deployment_group.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -4493,9 +4502,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

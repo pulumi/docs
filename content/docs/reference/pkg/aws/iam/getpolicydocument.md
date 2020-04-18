@@ -4,6 +4,8 @@ title: "GetPolicyDocument"
 block_external_search_index: true
 ---
 
+
+
 Generates an IAM policy document in JSON format.
 
 This is a data source which can be used to construct a JSON representation of
@@ -204,8 +206,6 @@ const politik = pulumi.all([override, source]).apply(([override, source]) => aws
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 ```
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iam_policy_document.html.markdown.
 
 
 

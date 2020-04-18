@@ -4,6 +4,8 @@ title: "GetLoadBalancer"
 block_external_search_index: true
 ---
 
+
+
 > **Note:** `aws.alb.LoadBalancer` is known as `aws.lb.LoadBalancer`. The functionality is identical.
 
 Provides information about a Load Balancer.
@@ -12,7 +14,9 @@ This data source can prove useful when a module accepts an LB as an input
 variable and needs to, for example, determine the security groups associated
 with it, etc.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -28,7 +32,8 @@ const test = pulumi.output(aws.lb.getLoadBalancer({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/lb.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

@@ -4,9 +4,13 @@ title: "GetTable"
 block_external_search_index: true
 ---
 
+
+
 Provides information about a DynamoDB table.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -17,7 +21,8 @@ const tableName = pulumi.output(aws.dynamodb.getTable({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/dynamodb_table.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

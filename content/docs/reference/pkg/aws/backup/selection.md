@@ -4,10 +4,14 @@ title: "Selection"
 block_external_search_index: true
 ---
 
+
+
 Manages selection conditions for AWS Backup plan resources.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### IAM Role
 
 > For more information about creating and managing IAM Roles for backups and restores, see the [AWS Backup Developer Guide](https://docs.aws.amazon.com/aws-backup/latest/devguide/iam-service-roles.html).
@@ -42,6 +46,8 @@ const exampleSelection = new aws.backup.Selection("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Selecting Backups By Tag
 
 ```typescript
@@ -59,6 +65,8 @@ const example = new aws.backup.Selection("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Selecting Backups By Resource
 
 ```typescript
@@ -76,7 +84,8 @@ const example = new aws.backup.Selection("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/backup_selection.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1114,9 +1123,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

@@ -4,9 +4,13 @@ title: "GetLedger"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to fetch information about a Quantum Ledger Database.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -17,7 +21,8 @@ const example = pulumi.output(aws.qldb.getLedger({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/qldb_ledger.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

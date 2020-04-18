@@ -4,6 +4,8 @@ title: "Index"
 block_external_search_index: true
 ---
 
+
+
 Cloud Firestore indexes enable simple and complex queries against documents in a database.
  This resource manages composite indexes and not single
 field indexes.
@@ -14,6 +16,33 @@ To get more information about Index, see:
 * [API documentation](https://cloud.google.com/firestore/docs/reference/rest/v1/projects.databases.collectionGroups.indexes)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/firestore/docs/query-data/indexing)
+
+## Example Usage - Firestore Index Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const my_index = new gcp.firestore.Index("my-index", {
+    collection: "chatrooms",
+    fields: [
+        {
+            fieldPath: "name",
+            order: "ASCENDING",
+        },
+        {
+            fieldPath: "description",
+            order: "DESCENDING",
+        },
+        {
+            fieldPath: "__name__",
+            order: "DESCENDING",
+        },
+    ],
+    project: "my-project-name",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/firestore_index.html.markdown.
 
@@ -1169,9 +1198,13 @@ If it is not provided, the provider project is used.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

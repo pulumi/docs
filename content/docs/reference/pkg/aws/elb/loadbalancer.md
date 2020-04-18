@@ -4,6 +4,8 @@ title: "LoadBalancer"
 block_external_search_index: true
 ---
 
+
+
 Provides an Elastic Load Balancer resource, also known as a "Classic
 Load Balancer" after the release of
 [Application/Network Load Balancers](https://www.terraform.io/docs/providers/aws/r/lb.html).
@@ -15,7 +17,9 @@ provides both a standalone ELB Attachment resource
 instances in conjunction with a ELB Attachment resources. Doing so will cause a
 conflict and will overwrite attachments.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -66,6 +70,8 @@ const bar = new aws.elb.LoadBalancer("bar", {
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## Note on ECDSA Key Algorithm
 
 If the ARN of the `ssl_certificate_id` that is pointed to references a
@@ -73,8 +79,6 @@ certificate that was signed by an ECDSA key, note that ELB only supports the
 P256 and P384 curves.  Using a certificate signed by a key using a different
 curve could produce the error `ERR_SSL_VERSION_OR_CIPHER_MISMATCH` in your
 browser.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elb.html.markdown.
 
 
 
@@ -3158,9 +3162,14 @@ uploaded to AWS IAM. **Note ECDSA-specific restrictions below.  Only valid when 
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

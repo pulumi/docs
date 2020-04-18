@@ -4,9 +4,13 @@ title: "GetCluster"
 block_external_search_index: true
 ---
 
+
+
 Retrieve information about an EKS Cluster.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -22,7 +26,8 @@ export const kubeconfig_certificate_authority_data = example.certificateAuthorit
 export const identity_oidc_issuer = example.identities[0].oidcs[0].issuer;
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/eks_cluster.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

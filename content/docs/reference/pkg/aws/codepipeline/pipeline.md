@@ -4,11 +4,15 @@ title: "Pipeline"
 block_external_search_index: true
 ---
 
+
+
 Provides a CodePipeline.
 
 > **NOTE on `aws.codepipeline.Pipeline`:** - the `GITHUB_TOKEN` environment variable must be set if the GitHub provider is specified.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -129,7 +133,8 @@ const codepipeline = new aws.codepipeline.Pipeline("codepipeline", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codepipeline.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -248,7 +253,7 @@ const codepipeline = new aws.codepipeline.Pipeline("codepipeline", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}An artifact_store block. Artifact stores are documented below.
+    <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
 * `stage` (Minimum of at least two `stage` blocks is required) A stage block. Stages are documented below.
 {{% /md %}}</dd>
 
@@ -300,7 +305,7 @@ const codepipeline = new aws.codepipeline.Pipeline("codepipeline", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store</a></span>
     </dt>
-    <dd>{{% md %}}An artifact_store block. Artifact stores are documented below.
+    <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
 * `stage` (Minimum of at least two `stage` blocks is required) A stage block. Stages are documented below.
 {{% /md %}}</dd>
 
@@ -352,7 +357,7 @@ const codepipeline = new aws.codepipeline.Pipeline("codepipeline", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store</a></span>
     </dt>
-    <dd>{{% md %}}An artifact_store block. Artifact stores are documented below.
+    <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
 * `stage` (Minimum of at least two `stage` blocks is required) A stage block. Stages are documented below.
 {{% /md %}}</dd>
 
@@ -404,7 +409,7 @@ const codepipeline = new aws.codepipeline.Pipeline("codepipeline", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelineartifactstore">Dict[Pipeline<wbr>Artifact<wbr>Store]</a></span>
     </dt>
-    <dd>{{% md %}}An artifact_store block. Artifact stores are documented below.
+    <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
 * `stage` (Minimum of at least two `stage` blocks is required) A stage block. Stages are documented below.
 {{% /md %}}</dd>
 
@@ -477,7 +482,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store</a></span>
     </dt>
-    <dd>{{% md %}}An artifact_store block. Artifact stores are documented below.
+    <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
 * `stage` (Minimum of at least two `stage` blocks is required) A stage block. Stages are documented below.
 {{% /md %}}</dd>
 
@@ -538,7 +543,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store</a></span>
     </dt>
-    <dd>{{% md %}}An artifact_store block. Artifact stores are documented below.
+    <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
 * `stage` (Minimum of at least two `stage` blocks is required) A stage block. Stages are documented below.
 {{% /md %}}</dd>
 
@@ -599,7 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store</a></span>
     </dt>
-    <dd>{{% md %}}An artifact_store block. Artifact stores are documented below.
+    <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
 * `stage` (Minimum of at least two `stage` blocks is required) A stage block. Stages are documented below.
 {{% /md %}}</dd>
 
@@ -660,7 +665,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelineartifactstore">Dict[Pipeline<wbr>Artifact<wbr>Store]</a></span>
     </dt>
-    <dd>{{% md %}}An artifact_store block. Artifact stores are documented below.
+    <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
 * `stage` (Minimum of at least two `stage` blocks is required) A stage block. Stages are documented below.
 {{% /md %}}</dd>
 
@@ -849,7 +854,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store<wbr>Args?</a></span>
     </dt>
-    <dd>{{% md %}}An artifact_store block. Artifact stores are documented below.
+    <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
 * `stage` (Minimum of at least two `stage` blocks is required) A stage block. Stages are documented below.
 {{% /md %}}</dd>
 
@@ -910,7 +915,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelineartifactstore">*Pipeline<wbr>Artifact<wbr>Store</a></span>
     </dt>
-    <dd>{{% md %}}An artifact_store block. Artifact stores are documented below.
+    <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
 * `stage` (Minimum of at least two `stage` blocks is required) A stage block. Stages are documented below.
 {{% /md %}}</dd>
 
@@ -971,7 +976,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store?</a></span>
     </dt>
-    <dd>{{% md %}}An artifact_store block. Artifact stores are documented below.
+    <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
 * `stage` (Minimum of at least two `stage` blocks is required) A stage block. Stages are documented below.
 {{% /md %}}</dd>
 
@@ -1032,7 +1037,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#pipelineartifactstore">Dict[Pipeline<wbr>Artifact<wbr>Store]</a></span>
     </dt>
-    <dd>{{% md %}}An artifact_store block. Artifact stores are documented below.
+    <dd>{{% md %}}One or more artifact_store blocks. Artifact stores are documented below.
 * `stage` (Minimum of at least two `stage` blocks is required) A stage block. Stages are documented below.
 {{% /md %}}</dd>
 
@@ -1115,7 +1120,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location where AWS CodePipeline stores artifacts for a pipeline, such as an S3 bucket.
+    <dd>{{% md %}}The location where AWS CodePipeline stores artifacts for a pipeline; currently only `S3` is supported.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The region where the artifact store is located. Required for a cross-region CodePipeline, do not provide for a single-region CodePipeline.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1149,7 +1163,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location where AWS CodePipeline stores artifacts for a pipeline, such as an S3 bucket.
+    <dd>{{% md %}}The location where AWS CodePipeline stores artifacts for a pipeline; currently only `S3` is supported.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The region where the artifact store is located. Required for a cross-region CodePipeline, do not provide for a single-region CodePipeline.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1183,7 +1206,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The location where AWS CodePipeline stores artifacts for a pipeline, such as an S3 bucket.
+    <dd>{{% md %}}The location where AWS CodePipeline stores artifacts for a pipeline; currently only `S3` is supported.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The region where the artifact store is located. Required for a cross-region CodePipeline, do not provide for a single-region CodePipeline.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1217,7 +1249,16 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The location where AWS CodePipeline stores artifacts for a pipeline, such as an S3 bucket.
+    <dd>{{% md %}}The location where AWS CodePipeline stores artifacts for a pipeline; currently only `S3` is supported.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The region where the artifact store is located. Required for a cross-region CodePipeline, do not provide for a single-region CodePipeline.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1494,7 +1535,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dictionary<string, object>?</span>
+        <span class="property-type">Dictionary<string, string>?</span>
     </dt>
     <dd>{{% md %}}A Map of the action declaration's configuration. Find out more about configuring action configurations in the [Reference Pipeline Structure documentation](http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements).
 {{% /md %}}</dd>
@@ -1542,6 +1583,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider of the service being called by the action. Valid providers are determined by the action category. For example, an action in the Deploy category type might have a provider of AWS CodeDeploy, which would be specified as CodeDeploy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The region in which to run the action.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1591,7 +1641,7 @@ The following state arguments are supported:
             title="Optional">
         <span>Configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">map[string]interface{}</span>
+        <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A Map of the action declaration's configuration. Find out more about configuring action configurations in the [Reference Pipeline Structure documentation](http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements).
 {{% /md %}}</dd>
@@ -1643,6 +1693,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}The region in which to run the action.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Role<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">*string</span>
@@ -1688,7 +1747,7 @@ The following state arguments are supported:
             title="Optional">
         <span>configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: any}?</span>
+        <span class="property-type">{[key: string]: string}?</span>
     </dt>
     <dd>{{% md %}}A Map of the action declaration's configuration. Find out more about configuring action configurations in the [Reference Pipeline Structure documentation](http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements).
 {{% /md %}}</dd>
@@ -1736,6 +1795,15 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider of the service being called by the action. Valid providers are determined by the action category. For example, an action in the Deploy category type might have a provider of AWS CodeDeploy, which would be specified as CodeDeploy.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}The region in which to run the action.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1785,7 +1853,7 @@ The following state arguments are supported:
             title="Optional">
         <span>configuration</span>
         <span class="property-indicator"></span>
-        <span class="property-type">Dict[str, Any]</span>
+        <span class="property-type">Dict[str, str]</span>
     </dt>
     <dd>{{% md %}}A Map of the action declaration's configuration. Find out more about configuring action configurations in the [Reference Pipeline Structure documentation](http://docs.aws.amazon.com/codepipeline/latest/userguide/reference-pipeline-structure.html#action-requirements).
 {{% /md %}}</dd>
@@ -1837,6 +1905,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>region</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The region in which to run the action.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>role_<wbr>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1872,9 +1949,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

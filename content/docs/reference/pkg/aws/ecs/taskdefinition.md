@@ -4,35 +4,12 @@ title: "TaskDefinition"
 block_external_search_index: true
 ---
 
+
+
 Manages a revision of an ECS task definition to be used in `aws.ecs.Service`.
 
-## Example Usage
-
-### With AppMesh Proxy
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as aws from "@pulumi/aws";
-import * as fs from "fs";
-
-const service = new aws.ecs.TaskDefinition("service", {
-    containerDefinitions: fs.readFileSync("task-definitions/service.json", "utf-8"),
-    family: "service",
-    proxyConfiguration: {
-        containerName: "applicationContainerName",
-        properties: {
-            AppPorts: "8080",
-            EgressIgnoredIPs: "169.254.170.2,169.254.169.254",
-            IgnoredUID: "1337",
-            ProxyEgressPort: 15001,
-            ProxyIngressPort: 15000,
-        },
-        type: "APPMESH",
-    },
-});
-```
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_task_definition.html.markdown.
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -3125,9 +3102,14 @@ parameter of container definition in the `mountPoints` section.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

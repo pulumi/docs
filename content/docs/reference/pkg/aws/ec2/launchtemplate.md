@@ -4,9 +4,12 @@ title: "LaunchTemplate"
 block_external_search_index: true
 ---
 
+
+
 Provides an EC2 launch template resource. Can be used to create instances or auto scaling groups.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/launch_template.html.markdown.
+{{% examples %}}
+{{% /examples %}}
 
 
 
@@ -19,7 +22,7 @@ Provides an EC2 launch template resource. Can be used to create instances or aut
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LaunchTemplate</span><span class="p">(resource_name, opts=None, </span>block_device_mappings=None<span class="p">, </span>capacity_reservation_specification=None<span class="p">, </span>cpu_options=None<span class="p">, </span>credit_specification=None<span class="p">, </span>description=None<span class="p">, </span>disable_api_termination=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>elastic_gpu_specifications=None<span class="p">, </span>elastic_inference_accelerator=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>instance_initiated_shutdown_behavior=None<span class="p">, </span>instance_market_options=None<span class="p">, </span>instance_type=None<span class="p">, </span>kernel_id=None<span class="p">, </span>key_name=None<span class="p">, </span>license_specifications=None<span class="p">, </span>metadata_options=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>placement=None<span class="p">, </span>ram_disk_id=None<span class="p">, </span>security_group_names=None<span class="p">, </span>tag_specifications=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>vpc_security_group_ids=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LaunchTemplate</span><span class="p">(resource_name, opts=None, </span>block_device_mappings=None<span class="p">, </span>capacity_reservation_specification=None<span class="p">, </span>cpu_options=None<span class="p">, </span>credit_specification=None<span class="p">, </span>description=None<span class="p">, </span>disable_api_termination=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>elastic_gpu_specifications=None<span class="p">, </span>elastic_inference_accelerator=None<span class="p">, </span>hibernation_options=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>instance_initiated_shutdown_behavior=None<span class="p">, </span>instance_market_options=None<span class="p">, </span>instance_type=None<span class="p">, </span>kernel_id=None<span class="p">, </span>key_name=None<span class="p">, </span>license_specifications=None<span class="p">, </span>metadata_options=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>placement=None<span class="p">, </span>ram_disk_id=None<span class="p">, </span>security_group_names=None<span class="p">, </span>tag_specifications=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>vpc_security_group_ids=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -202,6 +205,15 @@ below for more details.
         <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Hibernation<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -483,6 +495,15 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Hibernation<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchtemplatehibernationoptions">*Launch<wbr>Template<wbr>Hibernation<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateiaminstanceprofile">*Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile</a></span>
@@ -760,6 +781,15 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
+        <span>hibernation<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options?</a></span>
+    </dt>
+    <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile?</a></span>
@@ -1033,6 +1063,15 @@ below for more details.
         <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Dict[Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>hibernation_<wbr>options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchtemplatehibernationoptions">Dict[Launch<wbr>Template<wbr>Hibernation<wbr>Options]</a></span>
+    </dt>
+    <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1344,6 +1383,15 @@ below for more details.
 
     <dt class="property-"
             title="">
+        <span>Hibernation<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options?</a></span>
+    </dt>
+    <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile?</a></span>
@@ -1644,6 +1692,15 @@ below for more details.
         <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">*Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Hibernation<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchtemplatehibernationoptions">*Launch<wbr>Template<wbr>Hibernation<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -1952,6 +2009,15 @@ below for more details.
 
     <dt class="property-"
             title="">
+        <span>hibernation<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options?</a></span>
+    </dt>
+    <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile?</a></span>
@@ -2256,6 +2322,15 @@ below for more details.
 
     <dt class="property-"
             title="">
+        <span>hibernation_<wbr>options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchtemplatehibernationoptions">Dict[Launch<wbr>Template<wbr>Hibernation<wbr>Options]</a></span>
+    </dt>
+    <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>iam_<wbr>instance_<wbr>profile</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Dict[Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile]</a></span>
@@ -2469,7 +2544,7 @@ Get an existing LaunchTemplate resource's state with the given name, ID, and opt
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>block_device_mappings=None<span class="p">, </span>capacity_reservation_specification=None<span class="p">, </span>cpu_options=None<span class="p">, </span>credit_specification=None<span class="p">, </span>default_version=None<span class="p">, </span>description=None<span class="p">, </span>disable_api_termination=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>elastic_gpu_specifications=None<span class="p">, </span>elastic_inference_accelerator=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>instance_initiated_shutdown_behavior=None<span class="p">, </span>instance_market_options=None<span class="p">, </span>instance_type=None<span class="p">, </span>kernel_id=None<span class="p">, </span>key_name=None<span class="p">, </span>latest_version=None<span class="p">, </span>license_specifications=None<span class="p">, </span>metadata_options=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>placement=None<span class="p">, </span>ram_disk_id=None<span class="p">, </span>security_group_names=None<span class="p">, </span>tag_specifications=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>vpc_security_group_ids=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>arn=None<span class="p">, </span>block_device_mappings=None<span class="p">, </span>capacity_reservation_specification=None<span class="p">, </span>cpu_options=None<span class="p">, </span>credit_specification=None<span class="p">, </span>default_version=None<span class="p">, </span>description=None<span class="p">, </span>disable_api_termination=None<span class="p">, </span>ebs_optimized=None<span class="p">, </span>elastic_gpu_specifications=None<span class="p">, </span>elastic_inference_accelerator=None<span class="p">, </span>hibernation_options=None<span class="p">, </span>iam_instance_profile=None<span class="p">, </span>image_id=None<span class="p">, </span>instance_initiated_shutdown_behavior=None<span class="p">, </span>instance_market_options=None<span class="p">, </span>instance_type=None<span class="p">, </span>kernel_id=None<span class="p">, </span>key_name=None<span class="p">, </span>latest_version=None<span class="p">, </span>license_specifications=None<span class="p">, </span>metadata_options=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>name_prefix=None<span class="p">, </span>network_interfaces=None<span class="p">, </span>placement=None<span class="p">, </span>ram_disk_id=None<span class="p">, </span>security_group_names=None<span class="p">, </span>tag_specifications=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>vpc_security_group_ids=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2684,6 +2759,15 @@ below for more details.
         <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator<wbr>Args?</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Hibernation<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options<wbr>Args?</a></span>
+    </dt>
+    <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2992,6 +3076,15 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
+        <span>Hibernation<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchtemplatehibernationoptions">*Launch<wbr>Template<wbr>Hibernation<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateiaminstanceprofile">*Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile</a></span>
@@ -3296,6 +3389,15 @@ below for more details.
 
     <dt class="property-optional"
             title="Optional">
+        <span>hibernation<wbr>Options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options?</a></span>
+    </dt>
+    <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>iam<wbr>Instance<wbr>Profile</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile?</a></span>
@@ -3596,6 +3698,15 @@ below for more details.
         <span class="property-type"><a href="#launchtemplateelasticinferenceaccelerator">Dict[Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block containing an Elastic Inference Accelerator to attach to the instance. See Elastic Inference Accelerator below for more details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>hibernation_<wbr>options</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#launchtemplatehibernationoptions">Dict[Launch<wbr>Template<wbr>Hibernation<wbr>Options]</a></span>
+    </dt>
+    <dd>{{% md %}}The hibernation options for the instance. See Hibernation Options below for more details.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4853,6 +4964,85 @@ Otherwise, specify the default value of 2.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Accelerator type.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4>Launch<wbr>Template<wbr>Hibernation<wbr>Options</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateHibernationOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateHibernationOptions">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LaunchTemplateHibernationOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws/ec2?tab=doc#LaunchTemplateHibernationOptionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Configured</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, the launched EC2 instance will hibernation enabled.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Configured</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, the launched EC2 instance will hibernation enabled.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>configured</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, the launched EC2 instance will hibernation enabled.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>configured</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to `true`, the launched EC2 instance will hibernation enabled.
 {{% /md %}}</dd>
 
 </dl>
@@ -6480,9 +6670,14 @@ Otherwise, specify the default value of 2.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

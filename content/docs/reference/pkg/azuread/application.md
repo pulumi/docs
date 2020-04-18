@@ -4,9 +4,64 @@ title: "Application"
 block_external_search_index: true
 ---
 
+
+
 Manages an Application within Azure Active Directory.
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to both `Read and write owned by applications` and `Sign in and read user profile` within the `Windows Azure Active Directory` API.
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azuread from "@pulumi/azuread";
+
+const example = new azuread.Application("example", {
+    appRoles: [{
+        allowedMemberTypes: [
+            "User",
+            "Application",
+        ],
+        description: "Admins can manage roles and perform all task actions",
+        displayName: "Admin",
+        isEnabled: true,
+        value: "Admin",
+    }],
+    availableToOtherTenants: false,
+    homepage: "https://homepage",
+    identifierUris: ["https://uri"],
+    oauth2AllowImplicitFlow: true,
+    owners: ["00000004-0000-0000-c000-000000000000"],
+    replyUrls: ["https://replyurl"],
+    requiredResourceAccesses: [
+        {
+            resourceAccesses: [
+                {
+                    id: "...",
+                    type: "Role",
+                },
+                {
+                    id: "...",
+                    type: "Scope",
+                },
+                {
+                    id: "...",
+                    type: "Scope",
+                },
+            ],
+            resourceAppId: "00000003-0000-0000-c000-000000000000",
+        },
+        {
+            resourceAccesses: [{
+                id: "...",
+                type: "Scope",
+            }],
+            resourceAppId: "00000002-0000-0000-c000-000000000000",
+        },
+    ],
+    type: "webapp/api",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/application.html.markdown.
 
@@ -2831,9 +2886,13 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azuread">https://github.com/pulumi/pulumi-azuread</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

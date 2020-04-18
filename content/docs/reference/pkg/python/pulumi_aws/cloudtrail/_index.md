@@ -43,7 +43,6 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><em>NOTE:</em> For a multi-region trail, this resource must be in the home region of the trail.</p>
 <p><em>NOTE:</em> For an organization trail, this resource must be in the master account of the organization.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudtrail.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudtrail.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -295,9 +294,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_aws.cloudtrail.</code><code class="sig-name descname">get_service_account</code><span class="sig-paren">(</span><em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudtrail.get_service_account" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the Account ID of the <a class="reference external" href="http://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-supported-regions.html">AWS CloudTrail Service Account</a>
 in a given region for the purpose of allowing CloudTrail to store trail data in S3.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudtrail_service_account.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudtrail_service_account.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>region</strong> (<em>str</em>) – Name of the region whose AWS CloudTrail account ID is desired.

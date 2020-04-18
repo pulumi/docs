@@ -4,6 +4,8 @@ title: "GetAuthorizationRule"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to access information about an existing Event Hubs Authorization Rule within an Event Hub.
 
 ## Example Usage

@@ -4,6 +4,8 @@ title: "Trigger"
 block_external_search_index: true
 ---
 
+
+
 Configuration for an automated build in response to source repository changes.
 
 
@@ -12,6 +14,26 @@ To get more information about Trigger, see:
 * [API documentation](https://cloud.google.com/cloud-build/docs/api/reference/rest/)
 * How-to Guides
     * [Automating builds using build triggers](https://cloud.google.com/cloud-build/docs/running-builds/automate-builds)
+
+## Example Usage - Cloudbuild Trigger Filename
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const filename_trigger = new gcp.cloudbuild.Trigger("filename-trigger", {
+    filename: "cloudbuild.yaml",
+    substitutions: {
+        _BAZ: "qux",
+        _FOO: "bar",
+    },
+    triggerTemplate: {
+        branchName: "master",
+        repoName: "my-repo",
+    },
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloudbuild_trigger.html.markdown.
 
@@ -3133,9 +3155,13 @@ One of 'trigger_template' or 'github' must be provided.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

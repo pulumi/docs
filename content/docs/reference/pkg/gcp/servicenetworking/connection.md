@@ -4,6 +4,8 @@ title: "Connection"
 block_external_search_index: true
 ---
 
+
+
 Manages a private VPC connection with a GCP service provider. For more information see
 [the official documentation](https://cloud.google.com/vpc/docs/configure-private-services-access#creating-connection)
 and
@@ -787,9 +789,13 @@ service provider organization. For Google services that support this functionali
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

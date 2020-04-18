@@ -4,11 +4,15 @@ title: "GetBucketObjects"
 block_external_search_index: true
 ---
 
+
+
 > **NOTE on `max_keys`:** Retrieving very large numbers of keys can adversely affect this provider's performance.
 
 The bucket-objects data source returns keys (i.e., file names) and other metadata about objects in an S3 bucket.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 The following example retrieves a list of all object keys in an S3 bucket and creates corresponding object data sources:
 
@@ -28,7 +32,8 @@ for (let i = 0; i < myObjects.apply(myObjects => myObjects.keys.length); i++) {
 }
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/s3_bucket_objects.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

@@ -4,6 +4,8 @@ title: "GetDateTimeVariable"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to access information about an existing Automation Datetime Variable.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/automation_variable_datetime.html.markdown.

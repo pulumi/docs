@@ -4,6 +4,8 @@ title: "CryptoKeyIAMBinding"
 block_external_search_index: true
 ---
 
+
+
 Three different resources help you manage your IAM policy for KMS crypto key. Each of these resources serves a different use case:
 
 * `gcp.kms.CryptoKeyIAMPolicy`: Authoritative. Sets the IAM policy for the crypto key and replaces any existing policy already attached.
@@ -16,6 +18,22 @@ Three different resources help you manage your IAM policy for KMS crypto key. Ea
 
 With IAM Conditions:
 
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const admin = pulumi.output(gcp.organizations.getIAMPolicy({
+    bindings: [{
+        condition: {
+            description: "Expiring at midnight of 2019-12-31",
+            expression: "request.time < timestamp(\"2020-01-01T00:00:00Z\")",
+            title: "expires_after_2019_12_31",
+        },
+        members: ["user:jane@example.com"],
+        role: "roles/cloudkms.cryptoKeyEncrypter",
+    }],
+}, { async: true }));
+```
 
 With IAM Conditions:
 
@@ -1072,9 +1090,13 @@ the provider's project setting will be used as a fallback.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

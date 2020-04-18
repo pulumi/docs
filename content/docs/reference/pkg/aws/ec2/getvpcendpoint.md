@@ -4,10 +4,14 @@ title: "GetVpcEndpoint"
 block_external_search_index: true
 ---
 
+
+
 The VPC Endpoint data source provides details about
 a specific VPC endpoint.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -24,7 +28,8 @@ const privateS3 = new aws.ec2.VpcEndpointRouteTableAssociation("private_s3", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_endpoint.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

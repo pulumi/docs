@@ -4,9 +4,13 @@ title: "MainRouteTableAssociation"
 block_external_search_index: true
 ---
 
+
+
 Provides a resource for managing the main routing table of a VPC.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -18,6 +22,8 @@ const mainRouteTableAssociation = new aws.ec2.MainRouteTableAssociation("a", {
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## Notes
 
 On VPC creation, the AWS API always creates an initial Main Route Table. This
@@ -26,8 +32,6 @@ The "Delete" action for a `main_route_table_association` consists of resetting
 this original table as the Main Route Table for the VPC. You'll see this
 additional Route Table in the AWS console; it must remain intact in order for
 the `main_route_table_association` delete to work properly.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/main_route_table_association.html.markdown.
 
 
 
@@ -669,9 +673,14 @@ main route table for the target VPC
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

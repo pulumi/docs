@@ -62,7 +62,6 @@ anything, please consult the source <a class="reference external" href="https://
 <div><p><strong>NOTE on CodeCommit Availability</strong>: The CodeCommit is not yet rolled out
 in all regions - available regions are listed
 <a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/rande.html#codecommit_region">the AWS Docs</a>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codecommit_repository.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codecommit_repository.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -194,7 +193,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE on CodeCommit</strong>: The CodeCommit is not yet rolled out
 in all regions - available regions are listed
 <a class="reference external" href="https://docs.aws.amazon.com/general/latest/gr/rande.html#codecommit_region">the AWS Docs</a>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codecommit_trigger.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/codecommit_trigger.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -286,9 +284,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.codecommit.get_repository">
 <code class="sig-prename descclassname">pulumi_aws.codecommit.</code><code class="sig-name descname">get_repository</code><span class="sig-paren">(</span><em class="sig-param">repository_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.codecommit.get_repository" title="Permalink to this definition">¶</a></dt>
 <dd><p>The CodeCommit Repository data source allows the ARN, Repository ID, Repository URL for HTTP and Repository URL for SSH to be retrieved for an CodeCommit repository.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/codecommit_repository.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/codecommit_repository.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>repository_name</strong> (<em>str</em>) – The name for the repository. This needs to be less than 100 characters.</p>

@@ -4,11 +4,15 @@ title: "ConfigurationTemplate"
 block_external_search_index: true
 ---
 
+
+
 Provides an Elastic Beanstalk Configuration Template, which are associated with
 a specific application and are used to deploy different versions of the
 application with the same configuration settings.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -23,6 +27,8 @@ const tfTemplate = new aws.elasticbeanstalk.ConfigurationTemplate("tf_template",
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## Option Settings
 
 The `setting` field supports the following format:
@@ -31,8 +37,6 @@ The `setting` field supports the following format:
 * `name` - name of the configuration option
 * `value` - value for the configuration option
 * `resource` - (Optional) resource name for [scheduled action](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/command-options-general.html#command-options-general-autoscalingscheduledaction)
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elastic_beanstalk_configuration_template.html.markdown.
 
 
 
@@ -1238,9 +1242,14 @@ off of. Example stacks can be found in the [Amazon API documentation][1]
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

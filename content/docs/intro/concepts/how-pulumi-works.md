@@ -83,15 +83,20 @@ contentBucket, _ := s3.NewBucket(ctx, "content-bucket", nil)
 ```csharp
 using System.Threading.Tasks;
 using Pulumi;
-using Pulumi.Aws;
+using Aws = Pulumi.Aws;
 
 class Program
 {
-    static Task Main() =>
-        Deployment.Run(() => {
-            var mediaBucket = new Aws.S3.Bucket("media-bucket");
-            var contentBucket = new Aws.S3.Bucket("content-bucket");
-        });
+    static Task<int> Main() => Deployment.RunAsync<MyStack>();
+}
+
+public MyStack : Stack
+{
+    public MyStack()
+    {
+        var mediaBucket = new Aws.S3.Bucket("media-bucket");
+        var contentBucket = new Aws.S3.Bucket("content-bucket");
+    }
 }
 ```
 
@@ -162,18 +167,23 @@ contentBucket, _ := s3.NewBucket(ctx, "content-bucket", nil)
 ```csharp
 using System.Threading.Tasks;
 using Pulumi;
-using Pulumi.Aws;
+using Aws = Pulumi.Aws;
 
 class Program
 {
-    static Task Main() =>
-        Deployment.Run(() => {
-            var mediaBucket = new Aws.S3.Bucket("media-bucket", new Aws.S3.BucketArgs
-            {
-                Acl = "public-read",   // add acl
-            });
-            var contentBucket = new Aws.S3.Bucket("content-bucket");
+    static Task<int> Main() => Deployment.RunAsync<MyStack>();
+}
+
+public MyStack : Stack
+{
+    public MyStack()
+    {
+        var mediaBucket = new Aws.S3.Bucket("media-bucket", new Aws.S3.BucketArgs
+        {
+            Acl = "public-read",   // add acl
         });
+        var contentBucket = new Aws.S3.Bucket("content-bucket");
+    }
 }
 ```
 
@@ -230,18 +240,23 @@ appBucket, _ := s3.NewBucket(ctx, "app-bucket", nil)
 ```csharp
 using System.Threading.Tasks;
 using Pulumi;
-using Pulumi.Aws;
+using Aws = Pulumi.Aws;
 
 class Program
 {
-    static Task Main() =>
-        Deployment.Run(() => {
-            var mediaBucket = new Aws.S3.Bucket("media-bucket", new Aws.S3.BucketArgs
-            {
-                Acl = "public-read",   // add acl
-            });
-            var appBucket = new Aws.S3.Bucket("app-bucket");
+    static Task<int> Main() => Deployment.RunAsync<MyStack>();
+}
+
+public MyStack : Stack
+{
+    public MyStack()
+    {
+        var mediaBucket = new Aws.S3.Bucket("media-bucket", new Aws.S3.BucketArgs
+        {
+            Acl = "public-read",   // add acl
         });
+        var contentBucket = new Aws.S3.Bucket("app-bucket");
+    }
 }
 ```
 

@@ -36,12 +36,34 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="class">
 <dt id="pulumi_aws.ecs.CapacityProvider">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">CapacityProvider</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_scaling_group_provider=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.CapacityProvider" title="Permalink to this definition">¶</a></dt>
-<dd><p>Create a CapacityProvider resource with the given unique name, props, and options.
-:param str resource_name: The name of the resource.
-:param pulumi.ResourceOptions opts: Options for the resource.
-:param pulumi.Input[dict] auto_scaling_group_provider: Nested argument defining the provider for the ECS auto scaling group. Defined below.
-:param pulumi.Input[str] name: The name of the capacity provider.
-:param pulumi.Input[dict] tags: Key-value mapping of resource tags.</p>
+<dd><p>Provides an ECS cluster capacity provider. More information can be found on the <a class="reference external" href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cluster-capacity-providers.html">ECS Developer Guide</a>.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> The AWS API does not currently support deleting ECS cluster capacity providers. Removing this resource will only remove the state for it.</p>
+</div></blockquote>
+<p>The <code class="docutils literal notranslate"><span class="pre">auto_scaling_group_provider</span></code> block supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">auto_scaling_group_arn</span></code> - (Required) - The Amazon Resource Name (ARN) of the associated auto scaling group.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managed_scaling</span></code> - (Optional) - Nested argument defining the parameters of the auto scaling. Defined below.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">managed_termination_protection</span></code> - (Optional) - Enables or disables container-aware termination of instances in the auto scaling group when scale-in happens. Valid values are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>.</p></li>
+</ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">managed_scaling</span></code> block supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">maximum_scaling_step_size</span></code> - (Optional) The maximum step adjustment size. A number between 1 and 10,000.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">minimum_scaling_step_size</span></code> - (Optional) The minimum step adjustment size. A number between 1 and 10,000.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">status</span></code> - (Optional) Whether auto scaling is managed by ECS. Valid values are <code class="docutils literal notranslate"><span class="pre">ENABLED</span></code> and <code class="docutils literal notranslate"><span class="pre">DISABLED</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">target_capacity</span></code> - (Optional) The target utilization for the capacity provider. A number between 1 and 100.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auto_scaling_group_provider</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Nested argument defining the provider for the ECS auto scaling group. Defined below.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the capacity provider.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of resource tags.</p></li>
+</ul>
+</dd>
+</dl>
 <p>The <strong>auto_scaling_group_provider</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">autoScalingGroupArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
@@ -177,9 +199,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">weight</span></code> - (Optional) The relative percentage of the total number of launched tasks that should use the specified capacity provider.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">base</span></code> - (Optional) The number of tasks, at a minimum, to run on the specified capacity provider. Only one capacity provider in a capacity provider strategy can have a base defined.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -574,9 +593,6 @@ Guide</a>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">container_port</span></code> - (Optional) The port value, already specified in the task definition, to be used for your service discovery service.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">container_name</span></code> - (Optional) The container name value, already specified in the task definition, to be used for your service discovery service.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_service.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -934,11 +950,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.ecs.TaskDefinition">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">TaskDefinition</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">container_definitions=None</em>, <em class="sig-param">cpu=None</em>, <em class="sig-param">execution_role_arn=None</em>, <em class="sig-param">family=None</em>, <em class="sig-param">ipc_mode=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">network_mode=None</em>, <em class="sig-param">pid_mode=None</em>, <em class="sig-param">placement_constraints=None</em>, <em class="sig-param">proxy_configuration=None</em>, <em class="sig-param">requires_compatibilities=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">task_role_arn=None</em>, <em class="sig-param">volumes=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.TaskDefinition" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">TaskDefinition</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">container_definitions=None</em>, <em class="sig-param">cpu=None</em>, <em class="sig-param">execution_role_arn=None</em>, <em class="sig-param">family=None</em>, <em class="sig-param">inference_accelerators=None</em>, <em class="sig-param">ipc_mode=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">network_mode=None</em>, <em class="sig-param">pid_mode=None</em>, <em class="sig-param">placement_constraints=None</em>, <em class="sig-param">proxy_configuration=None</em>, <em class="sig-param">requires_compatibilities=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">task_role_arn=None</em>, <em class="sig-param">volumes=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.TaskDefinition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages a revision of an ECS task definition to be used in <code class="docutils literal notranslate"><span class="pre">ecs.Service</span></code>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_task_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_task_definition.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -953,6 +966,7 @@ official <a class="reference external" href="https://docs.aws.amazon.com/AmazonE
 <li><p><strong>cpu</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The number of cpu units used by the task. If the <code class="docutils literal notranslate"><span class="pre">requires_compatibilities</span></code> is <code class="docutils literal notranslate"><span class="pre">FARGATE</span></code> this field is required.</p></li>
 <li><p><strong>execution_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the task execution role that the Amazon ECS container agent and the Docker daemon can assume.</p></li>
 <li><p><strong>family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for your task definition.</p></li>
+<li><p><strong>inference_accelerators</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Configuration block(s) with Inference Accelerators settings. Detailed below.</p></li>
 <li><p><strong>ipc_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPC resource namespace to be used for the containers in the task The valid values are <code class="docutils literal notranslate"><span class="pre">host</span></code>, <code class="docutils literal notranslate"><span class="pre">task</span></code>, and <code class="docutils literal notranslate"><span class="pre">none</span></code>.</p></li>
 <li><p><strong>memory</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The amount (in MiB) of memory used by the task. If the <code class="docutils literal notranslate"><span class="pre">requires_compatibilities</span></code> is <code class="docutils literal notranslate"><span class="pre">FARGATE</span></code> this field is required.</p></li>
 <li><p><strong>network_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Docker networking mode to use for the containers in the task. The valid values are <code class="docutils literal notranslate"><span class="pre">none</span></code>, <code class="docutils literal notranslate"><span class="pre">bridge</span></code>, <code class="docutils literal notranslate"><span class="pre">awsvpc</span></code>, and <code class="docutils literal notranslate"><span class="pre">host</span></code>.</p></li>
@@ -966,6 +980,11 @@ official <a class="reference external" href="https://docs.aws.amazon.com/AmazonE
 </ul>
 </dd>
 </dl>
+<p>The <strong>inference_accelerators</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Elastic Inference accelerator device name. The deviceName must also be referenced in a container definition as a ResourceRequirement.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Elastic Inference accelerator type to use.</p></li>
+</ul>
 <p>The <strong>placement_constraints</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Cluster Query Language expression to apply to the constraint.
@@ -1034,6 +1053,16 @@ official <a class="reference external" href="https://docs.aws.amazon.com/AmazonE
 <dt id="pulumi_aws.ecs.TaskDefinition.family">
 <code class="sig-name descname">family</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.TaskDefinition.family" title="Permalink to this definition">¶</a></dt>
 <dd><p>A unique name for your task definition.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.ecs.TaskDefinition.inference_accelerators">
+<code class="sig-name descname">inference_accelerators</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ecs.TaskDefinition.inference_accelerators" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration block(s) with Inference Accelerators settings. Detailed below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Elastic Inference accelerator device name. The deviceName must also be referenced in a container definition as a ResourceRequirement.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceType</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Elastic Inference accelerator type to use.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -1136,7 +1165,7 @@ parameter of container definition in the <code class="docutils literal notransla
 
 <dl class="method">
 <dt id="pulumi_aws.ecs.TaskDefinition.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">container_definitions=None</em>, <em class="sig-param">cpu=None</em>, <em class="sig-param">execution_role_arn=None</em>, <em class="sig-param">family=None</em>, <em class="sig-param">ipc_mode=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">network_mode=None</em>, <em class="sig-param">pid_mode=None</em>, <em class="sig-param">placement_constraints=None</em>, <em class="sig-param">proxy_configuration=None</em>, <em class="sig-param">requires_compatibilities=None</em>, <em class="sig-param">revision=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">task_role_arn=None</em>, <em class="sig-param">volumes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.TaskDefinition.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">container_definitions=None</em>, <em class="sig-param">cpu=None</em>, <em class="sig-param">execution_role_arn=None</em>, <em class="sig-param">family=None</em>, <em class="sig-param">inference_accelerators=None</em>, <em class="sig-param">ipc_mode=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">network_mode=None</em>, <em class="sig-param">pid_mode=None</em>, <em class="sig-param">placement_constraints=None</em>, <em class="sig-param">proxy_configuration=None</em>, <em class="sig-param">requires_compatibilities=None</em>, <em class="sig-param">revision=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">task_role_arn=None</em>, <em class="sig-param">volumes=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.TaskDefinition.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing TaskDefinition resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1156,6 +1185,7 @@ official <a class="reference external" href="https://docs.aws.amazon.com/AmazonE
 <li><p><strong>cpu</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The number of cpu units used by the task. If the <code class="docutils literal notranslate"><span class="pre">requires_compatibilities</span></code> is <code class="docutils literal notranslate"><span class="pre">FARGATE</span></code> this field is required.</p></li>
 <li><p><strong>execution_role_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Amazon Resource Name (ARN) of the task execution role that the Amazon ECS container agent and the Docker daemon can assume.</p></li>
 <li><p><strong>family</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique name for your task definition.</p></li>
+<li><p><strong>inference_accelerators</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Configuration block(s) with Inference Accelerators settings. Detailed below.</p></li>
 <li><p><strong>ipc_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The IPC resource namespace to be used for the containers in the task The valid values are <code class="docutils literal notranslate"><span class="pre">host</span></code>, <code class="docutils literal notranslate"><span class="pre">task</span></code>, and <code class="docutils literal notranslate"><span class="pre">none</span></code>.</p></li>
 <li><p><strong>memory</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The amount (in MiB) of memory used by the task. If the <code class="docutils literal notranslate"><span class="pre">requires_compatibilities</span></code> is <code class="docutils literal notranslate"><span class="pre">FARGATE</span></code> this field is required.</p></li>
 <li><p><strong>network_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Docker networking mode to use for the containers in the task. The valid values are <code class="docutils literal notranslate"><span class="pre">none</span></code>, <code class="docutils literal notranslate"><span class="pre">bridge</span></code>, <code class="docutils literal notranslate"><span class="pre">awsvpc</span></code>, and <code class="docutils literal notranslate"><span class="pre">host</span></code>.</p></li>
@@ -1170,6 +1200,11 @@ official <a class="reference external" href="https://docs.aws.amazon.com/AmazonE
 </ul>
 </dd>
 </dl>
+<p>The <strong>inference_accelerators</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Elastic Inference accelerator device name. The deviceName must also be referenced in a container definition as a ResourceRequirement.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deviceType</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Elastic Inference accelerator type to use.</p></li>
+</ul>
 <p>The <strong>placement_constraints</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">expression</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Cluster Query Language expression to apply to the constraint.
@@ -1250,9 +1285,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">get_cluster</code><span class="sig-paren">(</span><em class="sig-param">cluster_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.get_cluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ECS Cluster data source allows access to details of a specific
 cluster within an AWS ECS service.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_cluster.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>cluster_name</strong> (<em>str</em>) – The name of the ECS Cluster</p>
@@ -1265,9 +1297,6 @@ cluster within an AWS ECS service.</p>
 <code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">get_container_definition</code><span class="sig-paren">(</span><em class="sig-param">container_name=None</em>, <em class="sig-param">task_definition=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.get_container_definition" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ECS container definition data source allows access to details of
 a specific container within an AWS ECS service.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_container_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_container_definition.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1283,9 +1312,6 @@ a specific container within an AWS ECS service.</p>
 <code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">get_service</code><span class="sig-paren">(</span><em class="sig-param">cluster_arn=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.get_service" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ECS Service data source allows access to details of a specific
 Service within a AWS ECS Cluster.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_service.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1301,9 +1327,6 @@ Service within a AWS ECS Cluster.</p>
 <code class="sig-prename descclassname">pulumi_aws.ecs.</code><code class="sig-name descname">get_task_definition</code><span class="sig-paren">(</span><em class="sig-param">task_definition=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.ecs.get_task_definition" title="Permalink to this definition">¶</a></dt>
 <dd><p>The ECS task definition data source allows access to details of
 a specific AWS ECS task definition.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_task_definition.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_task_definition.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>task_definition</strong> (<em>str</em>) – The family for the latest ACTIVE revision, family and revision (family:revision) for a specific revision in the family, the ARN of the task definition to access to.</p>

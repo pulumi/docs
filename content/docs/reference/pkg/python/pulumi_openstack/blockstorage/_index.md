@@ -1845,11 +1845,13 @@ client. If omitted, the <code class="docutils literal notranslate"><span class="
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>bootable</strong> (<em>str</em>) – Indicates if the volume is bootable.</p></li>
 <li><p><strong>metadata</strong> (<em>dict</em>) – Metadata key/value pairs associated with the volume.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The name of the volume.</p></li>
 <li><p><strong>region</strong> (<em>str</em>) – The region in which to obtain the V2 Block Storage
 client. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.</p></li>
 <li><p><strong>status</strong> (<em>str</em>) – The status of the volume.</p></li>
+<li><p><strong>volume_type</strong> (<em>str</em>) – The type of the volume.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1865,11 +1867,13 @@ client. If omitted, the <code class="docutils literal notranslate"><span class="
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>bootable</strong> (<em>str</em>) – Indicates if the volume is bootable.</p></li>
 <li><p><strong>metadata</strong> (<em>dict</em>) – Metadata key/value pairs associated with the volume.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The name of the volume.</p></li>
 <li><p><strong>region</strong> (<em>str</em>) – The region in which to obtain the V3 Block Storage
 client. If omitted, the <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.</p></li>
 <li><p><strong>status</strong> (<em>str</em>) – The status of the volume.</p></li>
+<li><p><strong>volume_type</strong> (<em>str</em>) – The type of the volume.</p></li>
 </ul>
 </dd>
 </dl>

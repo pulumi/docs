@@ -1,5 +1,5 @@
 ---
-title: "aws"
+title: "AWS"
 block_external_search_index: true
 menu:
     reference:
@@ -11,154 +11,151 @@ menu:
 
 A Pulumi package for creating and managing Amazon Web Services (AWS) cloud resources.
 
-> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws)
-> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
-> first check the [`pulumi/pulumi-aws` repo](https://github.com/pulumi/pulumi-aws/issues); however, if that doesn't turn up anything,
-> please consult the source [`terraform-providers/terraform-provider-aws` repo](https://github.com/terraform-providers/terraform-provider-aws/issues).
-
 <h3>Modules</h3>
 <ul class="api">
-    <li><a href="accessanalyzer/"><span class="symbol module"></span>accessanalyzer</a></li>
-    <li><a href="acm/"><span class="symbol module"></span>acm</a></li>
-    <li><a href="acmpca/"><span class="symbol module"></span>acmpca</a></li>
-    <li><a href="alb/"><span class="symbol module"></span>alb</a></li>
-    <li><a href="apigateway/"><span class="symbol module"></span>apigateway</a></li>
-    <li><a href="apigatewayv2/"><span class="symbol module"></span>apigatewayv2</a></li>
-    <li><a href="appautoscaling/"><span class="symbol module"></span>appautoscaling</a></li>
-    <li><a href="applicationloadbalancing/"><span class="symbol module"></span>applicationloadbalancing</a></li>
-    <li><a href="appmesh/"><span class="symbol module"></span>appmesh</a></li>
-    <li><a href="appsync/"><span class="symbol module"></span>appsync</a></li>
-    <li><a href="athena/"><span class="symbol module"></span>athena</a></li>
-    <li><a href="autoscaling/"><span class="symbol module"></span>autoscaling</a></li>
-    <li><a href="backup/"><span class="symbol module"></span>backup</a></li>
-    <li><a href="batch/"><span class="symbol module"></span>batch</a></li>
-    <li><a href="budgets/"><span class="symbol module"></span>budgets</a></li>
-    <li><a href="cfg/"><span class="symbol module"></span>cfg</a></li>
-    <li><a href="cloud9/"><span class="symbol module"></span>cloud9</a></li>
-    <li><a href="cloudformation/"><span class="symbol module"></span>cloudformation</a></li>
-    <li><a href="cloudfront/"><span class="symbol module"></span>cloudfront</a></li>
-    <li><a href="cloudhsmv2/"><span class="symbol module"></span>cloudhsmv2</a></li>
-    <li><a href="cloudtrail/"><span class="symbol module"></span>cloudtrail</a></li>
-    <li><a href="cloudwatch/"><span class="symbol module"></span>cloudwatch</a></li>
-    <li><a href="codebuild/"><span class="symbol module"></span>codebuild</a></li>
-    <li><a href="codecommit/"><span class="symbol module"></span>codecommit</a></li>
-    <li><a href="codedeploy/"><span class="symbol module"></span>codedeploy</a></li>
-    <li><a href="codepipeline/"><span class="symbol module"></span>codepipeline</a></li>
-    <li><a href="codestarnotifications/"><span class="symbol module"></span>codestarnotifications</a></li>
-    <li><a href="cognito/"><span class="symbol module"></span>cognito</a></li>
-    <li><a href="cur/"><span class="symbol module"></span>cur</a></li>
-    <li><a href="datapipeline/"><span class="symbol module"></span>datapipeline</a></li>
-    <li><a href="datasync/"><span class="symbol module"></span>datasync</a></li>
-    <li><a href="dax/"><span class="symbol module"></span>dax</a></li>
-    <li><a href="devicefarm/"><span class="symbol module"></span>devicefarm</a></li>
-    <li><a href="directconnect/"><span class="symbol module"></span>directconnect</a></li>
-    <li><a href="directoryservice/"><span class="symbol module"></span>directoryservice</a></li>
-    <li><a href="dlm/"><span class="symbol module"></span>dlm</a></li>
-    <li><a href="dms/"><span class="symbol module"></span>dms</a></li>
-    <li><a href="docdb/"><span class="symbol module"></span>docdb</a></li>
-    <li><a href="dynamodb/"><span class="symbol module"></span>dynamodb</a></li>
-    <li><a href="ebs/"><span class="symbol module"></span>ebs</a></li>
-    <li><a href="ec2/"><span class="symbol module"></span>ec2</a></li>
-    <li><a href="ec2clientvpn/"><span class="symbol module"></span>ec2clientvpn</a></li>
-    <li><a href="ec2transitgateway/"><span class="symbol module"></span>ec2transitgateway</a></li>
-    <li><a href="ecr/"><span class="symbol module"></span>ecr</a></li>
-    <li><a href="ecs/"><span class="symbol module"></span>ecs</a></li>
-    <li><a href="efs/"><span class="symbol module"></span>efs</a></li>
-    <li><a href="eks/"><span class="symbol module"></span>eks</a></li>
-    <li><a href="elasticache/"><span class="symbol module"></span>elasticache</a></li>
-    <li><a href="elasticbeanstalk/"><span class="symbol module"></span>elasticbeanstalk</a></li>
-    <li><a href="elasticloadbalancing/"><span class="symbol module"></span>elasticloadbalancing</a></li>
-    <li><a href="elasticloadbalancingv2/"><span class="symbol module"></span>elasticloadbalancingv2</a></li>
-    <li><a href="elasticsearch/"><span class="symbol module"></span>elasticsearch</a></li>
-    <li><a href="elastictranscoder/"><span class="symbol module"></span>elastictranscoder</a></li>
-    <li><a href="elb/"><span class="symbol module"></span>elb</a></li>
-    <li><a href="emr/"><span class="symbol module"></span>emr</a></li>
-    <li><a href="fms/"><span class="symbol module"></span>fms</a></li>
-    <li><a href="fsx/"><span class="symbol module"></span>fsx</a></li>
-    <li><a href="gamelift/"><span class="symbol module"></span>gamelift</a></li>
-    <li><a href="glacier/"><span class="symbol module"></span>glacier</a></li>
-    <li><a href="globalaccelerator/"><span class="symbol module"></span>globalaccelerator</a></li>
-    <li><a href="glue/"><span class="symbol module"></span>glue</a></li>
-    <li><a href="guardduty/"><span class="symbol module"></span>guardduty</a></li>
-    <li><a href="iam/"><span class="symbol module"></span>iam</a></li>
-    <li><a href="inspector/"><span class="symbol module"></span>inspector</a></li>
-    <li><a href="iot/"><span class="symbol module"></span>iot</a></li>
-    <li><a href="kinesis/"><span class="symbol module"></span>kinesis</a></li>
-    <li><a href="kms/"><span class="symbol module"></span>kms</a></li>
-    <li><a href="lambda/"><span class="symbol module"></span>lambda</a></li>
-    <li><a href="lb/"><span class="symbol module"></span>lb</a></li>
-    <li><a href="licensemanager/"><span class="symbol module"></span>licensemanager</a></li>
-    <li><a href="lightsail/"><span class="symbol module"></span>lightsail</a></li>
-    <li><a href="macie/"><span class="symbol module"></span>macie</a></li>
-    <li><a href="mediaconvert/"><span class="symbol module"></span>mediaconvert</a></li>
-    <li><a href="mediapackage/"><span class="symbol module"></span>mediapackage</a></li>
-    <li><a href="mediastore/"><span class="symbol module"></span>mediastore</a></li>
-    <li><a href="mq/"><span class="symbol module"></span>mq</a></li>
-    <li><a href="msk/"><span class="symbol module"></span>msk</a></li>
-    <li><a href="neptune/"><span class="symbol module"></span>neptune</a></li>
-    <li><a href="opsworks/"><span class="symbol module"></span>opsworks</a></li>
-    <li><a href="organizations/"><span class="symbol module"></span>organizations</a></li>
-    <li><a href="pinpoint/"><span class="symbol module"></span>pinpoint</a></li>
-    <li><a href="pricing/"><span class="symbol module"></span>pricing</a></li>
-    <li><a href="qldb/"><span class="symbol module"></span>qldb</a></li>
-    <li><a href="quicksight/"><span class="symbol module"></span>quicksight</a></li>
-    <li><a href="ram/"><span class="symbol module"></span>ram</a></li>
-    <li><a href="rds/"><span class="symbol module"></span>rds</a></li>
-    <li><a href="redshift/"><span class="symbol module"></span>redshift</a></li>
-    <li><a href="resourcegroups/"><span class="symbol module"></span>resourcegroups</a></li>
-    <li><a href="route53/"><span class="symbol module"></span>route53</a></li>
-    <li><a href="s3/"><span class="symbol module"></span>s3</a></li>
-    <li><a href="sagemaker/"><span class="symbol module"></span>sagemaker</a></li>
-    <li><a href="secretsmanager/"><span class="symbol module"></span>secretsmanager</a></li>
-    <li><a href="securityhub/"><span class="symbol module"></span>securityhub</a></li>
-    <li><a href="servicecatalog/"><span class="symbol module"></span>servicecatalog</a></li>
-    <li><a href="servicediscovery/"><span class="symbol module"></span>servicediscovery</a></li>
-    <li><a href="servicequotas/"><span class="symbol module"></span>servicequotas</a></li>
-    <li><a href="ses/"><span class="symbol module"></span>ses</a></li>
-    <li><a href="sfn/"><span class="symbol module"></span>sfn</a></li>
-    <li><a href="shield/"><span class="symbol module"></span>shield</a></li>
-    <li><a href="simpledb/"><span class="symbol module"></span>simpledb</a></li>
-    <li><a href="sns/"><span class="symbol module"></span>sns</a></li>
-    <li><a href="sqs/"><span class="symbol module"></span>sqs</a></li>
-    <li><a href="ssm/"><span class="symbol module"></span>ssm</a></li>
-    <li><a href="storagegateway/"><span class="symbol module"></span>storagegateway</a></li>
-    <li><a href="swf/"><span class="symbol module"></span>swf</a></li>
-    <li><a href="transfer/"><span class="symbol module"></span>transfer</a></li>
-    <li><a href="waf/"><span class="symbol module"></span>waf</a></li>
-    <li><a href="wafregional/"><span class="symbol module"></span>wafregional</a></li>
-    <li><a href="worklink/"><span class="symbol module"></span>worklink</a></li>
-    <li><a href="workspaces/"><span class="symbol module"></span>workspaces</a></li>
-    <li><a href="xray/"><span class="symbol module"></span>xray</a></li>
+    <li><a href="accessanalyzer/" title="accessanalyzer"><span class="symbol module"></span>accessanalyzer</a></li>
+    <li><a href="acm/" title="acm"><span class="symbol module"></span>acm</a></li>
+    <li><a href="acmpca/" title="acmpca"><span class="symbol module"></span>acmpca</a></li>
+    <li><a href="alb/" title="alb"><span class="symbol module"></span>alb</a></li>
+    <li><a href="apigateway/" title="apigateway"><span class="symbol module"></span>apigateway</a></li>
+    <li><a href="apigatewayv2/" title="apigatewayv2"><span class="symbol module"></span>apigatewayv2</a></li>
+    <li><a href="appautoscaling/" title="appautoscaling"><span class="symbol module"></span>appautoscaling</a></li>
+    <li><a href="applicationloadbalancing/" title="applicationloadbalancing"><span class="symbol module"></span>applicationloadbalancing</a></li>
+    <li><a href="appmesh/" title="appmesh"><span class="symbol module"></span>appmesh</a></li>
+    <li><a href="appsync/" title="appsync"><span class="symbol module"></span>appsync</a></li>
+    <li><a href="athena/" title="athena"><span class="symbol module"></span>athena</a></li>
+    <li><a href="autoscaling/" title="autoscaling"><span class="symbol module"></span>autoscaling</a></li>
+    <li><a href="backup/" title="backup"><span class="symbol module"></span>backup</a></li>
+    <li><a href="batch/" title="batch"><span class="symbol module"></span>batch</a></li>
+    <li><a href="budgets/" title="budgets"><span class="symbol module"></span>budgets</a></li>
+    <li><a href="cfg/" title="cfg"><span class="symbol module"></span>cfg</a></li>
+    <li><a href="cloud9/" title="cloud9"><span class="symbol module"></span>cloud9</a></li>
+    <li><a href="cloudformation/" title="cloudformation"><span class="symbol module"></span>cloudformation</a></li>
+    <li><a href="cloudfront/" title="cloudfront"><span class="symbol module"></span>cloudfront</a></li>
+    <li><a href="cloudhsmv2/" title="cloudhsmv2"><span class="symbol module"></span>cloudhsmv2</a></li>
+    <li><a href="cloudtrail/" title="cloudtrail"><span class="symbol module"></span>cloudtrail</a></li>
+    <li><a href="cloudwatch/" title="cloudwatch"><span class="symbol module"></span>cloudwatch</a></li>
+    <li><a href="codebuild/" title="codebuild"><span class="symbol module"></span>codebuild</a></li>
+    <li><a href="codecommit/" title="codecommit"><span class="symbol module"></span>codecommit</a></li>
+    <li><a href="codedeploy/" title="codedeploy"><span class="symbol module"></span>codedeploy</a></li>
+    <li><a href="codepipeline/" title="codepipeline"><span class="symbol module"></span>codepipeline</a></li>
+    <li><a href="codestarnotifications/" title="codestarnotifications"><span class="symbol module"></span>codestarnotifications</a></li>
+    <li><a href="cognito/" title="cognito"><span class="symbol module"></span>cognito</a></li>
+    <li><a href="cur/" title="cur"><span class="symbol module"></span>cur</a></li>
+    <li><a href="datapipeline/" title="datapipeline"><span class="symbol module"></span>datapipeline</a></li>
+    <li><a href="datasync/" title="datasync"><span class="symbol module"></span>datasync</a></li>
+    <li><a href="dax/" title="dax"><span class="symbol module"></span>dax</a></li>
+    <li><a href="devicefarm/" title="devicefarm"><span class="symbol module"></span>devicefarm</a></li>
+    <li><a href="directconnect/" title="directconnect"><span class="symbol module"></span>directconnect</a></li>
+    <li><a href="directoryservice/" title="directoryservice"><span class="symbol module"></span>directoryservice</a></li>
+    <li><a href="dlm/" title="dlm"><span class="symbol module"></span>dlm</a></li>
+    <li><a href="dms/" title="dms"><span class="symbol module"></span>dms</a></li>
+    <li><a href="docdb/" title="docdb"><span class="symbol module"></span>docdb</a></li>
+    <li><a href="dynamodb/" title="dynamodb"><span class="symbol module"></span>dynamodb</a></li>
+    <li><a href="ebs/" title="ebs"><span class="symbol module"></span>ebs</a></li>
+    <li><a href="ec2/" title="ec2"><span class="symbol module"></span>ec2</a></li>
+    <li><a href="ec2clientvpn/" title="ec2clientvpn"><span class="symbol module"></span>ec2clientvpn</a></li>
+    <li><a href="ec2transitgateway/" title="ec2transitgateway"><span class="symbol module"></span>ec2transitgateway</a></li>
+    <li><a href="ecr/" title="ecr"><span class="symbol module"></span>ecr</a></li>
+    <li><a href="ecs/" title="ecs"><span class="symbol module"></span>ecs</a></li>
+    <li><a href="efs/" title="efs"><span class="symbol module"></span>efs</a></li>
+    <li><a href="eks/" title="eks"><span class="symbol module"></span>eks</a></li>
+    <li><a href="elasticache/" title="elasticache"><span class="symbol module"></span>elasticache</a></li>
+    <li><a href="elasticbeanstalk/" title="elasticbeanstalk"><span class="symbol module"></span>elasticbeanstalk</a></li>
+    <li><a href="elasticloadbalancing/" title="elasticloadbalancing"><span class="symbol module"></span>elasticloadbalancing</a></li>
+    <li><a href="elasticloadbalancingv2/" title="elasticloadbalancingv2"><span class="symbol module"></span>elasticloadbalancingv2</a></li>
+    <li><a href="elasticsearch/" title="elasticsearch"><span class="symbol module"></span>elasticsearch</a></li>
+    <li><a href="elastictranscoder/" title="elastictranscoder"><span class="symbol module"></span>elastictranscoder</a></li>
+    <li><a href="elb/" title="elb"><span class="symbol module"></span>elb</a></li>
+    <li><a href="emr/" title="emr"><span class="symbol module"></span>emr</a></li>
+    <li><a href="fms/" title="fms"><span class="symbol module"></span>fms</a></li>
+    <li><a href="fsx/" title="fsx"><span class="symbol module"></span>fsx</a></li>
+    <li><a href="gamelift/" title="gamelift"><span class="symbol module"></span>gamelift</a></li>
+    <li><a href="glacier/" title="glacier"><span class="symbol module"></span>glacier</a></li>
+    <li><a href="globalaccelerator/" title="globalaccelerator"><span class="symbol module"></span>globalaccelerator</a></li>
+    <li><a href="glue/" title="glue"><span class="symbol module"></span>glue</a></li>
+    <li><a href="guardduty/" title="guardduty"><span class="symbol module"></span>guardduty</a></li>
+    <li><a href="iam/" title="iam"><span class="symbol module"></span>iam</a></li>
+    <li><a href="inspector/" title="inspector"><span class="symbol module"></span>inspector</a></li>
+    <li><a href="iot/" title="iot"><span class="symbol module"></span>iot</a></li>
+    <li><a href="kinesis/" title="kinesis"><span class="symbol module"></span>kinesis</a></li>
+    <li><a href="kms/" title="kms"><span class="symbol module"></span>kms</a></li>
+    <li><a href="lambda/" title="lambda"><span class="symbol module"></span>lambda</a></li>
+    <li><a href="lb/" title="lb"><span class="symbol module"></span>lb</a></li>
+    <li><a href="licensemanager/" title="licensemanager"><span class="symbol module"></span>licensemanager</a></li>
+    <li><a href="lightsail/" title="lightsail"><span class="symbol module"></span>lightsail</a></li>
+    <li><a href="macie/" title="macie"><span class="symbol module"></span>macie</a></li>
+    <li><a href="mediaconvert/" title="mediaconvert"><span class="symbol module"></span>mediaconvert</a></li>
+    <li><a href="mediapackage/" title="mediapackage"><span class="symbol module"></span>mediapackage</a></li>
+    <li><a href="mediastore/" title="mediastore"><span class="symbol module"></span>mediastore</a></li>
+    <li><a href="mq/" title="mq"><span class="symbol module"></span>mq</a></li>
+    <li><a href="msk/" title="msk"><span class="symbol module"></span>msk</a></li>
+    <li><a href="neptune/" title="neptune"><span class="symbol module"></span>neptune</a></li>
+    <li><a href="opsworks/" title="opsworks"><span class="symbol module"></span>opsworks</a></li>
+    <li><a href="organizations/" title="organizations"><span class="symbol module"></span>organizations</a></li>
+    <li><a href="pinpoint/" title="pinpoint"><span class="symbol module"></span>pinpoint</a></li>
+    <li><a href="pricing/" title="pricing"><span class="symbol module"></span>pricing</a></li>
+    <li><a href="qldb/" title="qldb"><span class="symbol module"></span>qldb</a></li>
+    <li><a href="quicksight/" title="quicksight"><span class="symbol module"></span>quicksight</a></li>
+    <li><a href="ram/" title="ram"><span class="symbol module"></span>ram</a></li>
+    <li><a href="rds/" title="rds"><span class="symbol module"></span>rds</a></li>
+    <li><a href="redshift/" title="redshift"><span class="symbol module"></span>redshift</a></li>
+    <li><a href="resourcegroups/" title="resourcegroups"><span class="symbol module"></span>resourcegroups</a></li>
+    <li><a href="route53/" title="route53"><span class="symbol module"></span>route53</a></li>
+    <li><a href="s3/" title="s3"><span class="symbol module"></span>s3</a></li>
+    <li><a href="sagemaker/" title="sagemaker"><span class="symbol module"></span>sagemaker</a></li>
+    <li><a href="secretsmanager/" title="secretsmanager"><span class="symbol module"></span>secretsmanager</a></li>
+    <li><a href="securityhub/" title="securityhub"><span class="symbol module"></span>securityhub</a></li>
+    <li><a href="servicecatalog/" title="servicecatalog"><span class="symbol module"></span>servicecatalog</a></li>
+    <li><a href="servicediscovery/" title="servicediscovery"><span class="symbol module"></span>servicediscovery</a></li>
+    <li><a href="servicequotas/" title="servicequotas"><span class="symbol module"></span>servicequotas</a></li>
+    <li><a href="ses/" title="ses"><span class="symbol module"></span>ses</a></li>
+    <li><a href="sfn/" title="sfn"><span class="symbol module"></span>sfn</a></li>
+    <li><a href="shield/" title="shield"><span class="symbol module"></span>shield</a></li>
+    <li><a href="simpledb/" title="simpledb"><span class="symbol module"></span>simpledb</a></li>
+    <li><a href="sns/" title="sns"><span class="symbol module"></span>sns</a></li>
+    <li><a href="sqs/" title="sqs"><span class="symbol module"></span>sqs</a></li>
+    <li><a href="ssm/" title="ssm"><span class="symbol module"></span>ssm</a></li>
+    <li><a href="storagegateway/" title="storagegateway"><span class="symbol module"></span>storagegateway</a></li>
+    <li><a href="swf/" title="swf"><span class="symbol module"></span>swf</a></li>
+    <li><a href="transfer/" title="transfer"><span class="symbol module"></span>transfer</a></li>
+    <li><a href="waf/" title="waf"><span class="symbol module"></span>waf</a></li>
+    <li><a href="wafregional/" title="wafregional"><span class="symbol module"></span>wafregional</a></li>
+    <li><a href="worklink/" title="worklink"><span class="symbol module"></span>worklink</a></li>
+    <li><a href="workspaces/" title="workspaces"><span class="symbol module"></span>workspaces</a></li>
+    <li><a href="xray/" title="xray"><span class="symbol module"></span>xray</a></li>
 </ul>
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
 </ul>
 
 <h3>Functions</h3>
 <ul class="api">
-    <li><a href="getami"><span class="symbol datasource"></span>GetAmi</a></li>
-    <li><a href="getamiids"><span class="symbol datasource"></span>GetAmiIds</a></li>
-    <li><a href="getarn"><span class="symbol datasource"></span>GetArn</a></li>
-    <li><a href="getautoscalinggroups"><span class="symbol datasource"></span>GetAutoscalingGroups</a></li>
-    <li><a href="getavailabilityzone"><span class="symbol datasource"></span>GetAvailabilityZone</a></li>
-    <li><a href="getavailabilityzones"><span class="symbol datasource"></span>GetAvailabilityZones</a></li>
-    <li><a href="getbillingserviceaccount"><span class="symbol datasource"></span>GetBillingServiceAccount</a></li>
-    <li><a href="getcalleridentity"><span class="symbol datasource"></span>GetCallerIdentity</a></li>
-    <li><a href="getcanonicaluserid"><span class="symbol datasource"></span>GetCanonicalUserId</a></li>
-    <li><a href="getelasticip"><span class="symbol datasource"></span>GetElasticIp</a></li>
-    <li><a href="getipranges"><span class="symbol datasource"></span>GetIpRanges</a></li>
-    <li><a href="getpartition"><span class="symbol datasource"></span>GetPartition</a></li>
-    <li><a href="getprefixlist"><span class="symbol datasource"></span>GetPrefixList</a></li>
-    <li><a href="getregion"><span class="symbol datasource"></span>GetRegion</a></li>
+    <li><a href="getami" title="GetAmi"><span class="symbol function"></span>GetAmi</a></li>
+    <li><a href="getamiids" title="GetAmiIds"><span class="symbol function"></span>GetAmiIds</a></li>
+    <li><a href="getarn" title="GetArn"><span class="symbol function"></span>GetArn</a></li>
+    <li><a href="getautoscalinggroups" title="GetAutoscalingGroups"><span class="symbol function"></span>GetAutoscalingGroups</a></li>
+    <li><a href="getavailabilityzone" title="GetAvailabilityZone"><span class="symbol function"></span>GetAvailabilityZone</a></li>
+    <li><a href="getavailabilityzones" title="GetAvailabilityZones"><span class="symbol function"></span>GetAvailabilityZones</a></li>
+    <li><a href="getbillingserviceaccount" title="GetBillingServiceAccount"><span class="symbol function"></span>GetBillingServiceAccount</a></li>
+    <li><a href="getcalleridentity" title="GetCallerIdentity"><span class="symbol function"></span>GetCallerIdentity</a></li>
+    <li><a href="getcanonicaluserid" title="GetCanonicalUserId"><span class="symbol function"></span>GetCanonicalUserId</a></li>
+    <li><a href="getelasticip" title="GetElasticIp"><span class="symbol function"></span>GetElasticIp</a></li>
+    <li><a href="getipranges" title="GetIpRanges"><span class="symbol function"></span>GetIpRanges</a></li>
+    <li><a href="getpartition" title="GetPartition"><span class="symbol function"></span>GetPartition</a></li>
+    <li><a href="getprefixlist" title="GetPrefixList"><span class="symbol function"></span>GetPrefixList</a></li>
+    <li><a href="getregion" title="GetRegion"><span class="symbol function"></span>GetRegion</a></li>
 </ul>
 
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
-	<dd>https://github.com/pulumi/pulumi-aws</dd>
+	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 </dl>
 

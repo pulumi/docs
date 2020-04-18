@@ -4,10 +4,14 @@ title: "ResolverRule"
 block_external_search_index: true
 ---
 
+
+
 Provides a Route53 Resolver rule.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### System rule
 
 ```typescript
@@ -20,6 +24,8 @@ const sys = new aws.route53.ResolverRule("sys", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Forward rule
 
 ```typescript
@@ -39,7 +45,8 @@ const fwd = new aws.route53.ResolverRule("fwd", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_resolver_rule.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1397,9 +1404,14 @@ This argument should only be specified for `FORWARD` type rules.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

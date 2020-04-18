@@ -4,10 +4,14 @@ title: "GetServer"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to get the ARN of an AWS Transfer Server for use in other
 resources.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -18,7 +22,8 @@ const example = pulumi.output(aws.transfer.getServer({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/transfer_server.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

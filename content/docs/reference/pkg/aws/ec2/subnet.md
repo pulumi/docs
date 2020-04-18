@@ -4,12 +4,16 @@ title: "Subnet"
 block_external_search_index: true
 ---
 
+
+
 Provides an VPC subnet resource.
 
 > **NOTE:** Due to [AWS Lambda improved VPC networking changes that began deploying in September 2019](https://aws.amazon.com/blogs/compute/announcing-improved-vpc-networking-for-aws-lambda-functions/), subnets associated with Lambda Functions can take up to 45 minutes to successfully delete.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Basic Usage
 
 ```typescript
@@ -25,6 +29,8 @@ const main = new aws.ec2.Subnet("main", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Subnets In Secondary VPC CIDR Blocks
 
 When managing subnets in one of a VPC's secondary CIDR blocks created using a `aws.ec2.VpcIpv4CidrBlockAssociation`
@@ -44,7 +50,8 @@ const inSecondaryCidr = new aws.ec2.Subnet("in_secondary_cidr", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/subnet.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1526,9 +1533,14 @@ a public IP address. Default is `false`.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

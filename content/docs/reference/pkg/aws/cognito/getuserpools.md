@@ -4,9 +4,13 @@ title: "GetUserPools"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to get a list of cognito user pools.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -25,7 +29,8 @@ const cognito = new aws.apigateway.Authorizer("cognito", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cognito_user_pools.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

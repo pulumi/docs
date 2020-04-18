@@ -4,6 +4,8 @@ title: "Function"
 block_external_search_index: true
 ---
 
+
+
 Creates a new Cloud Function. For more information see
 [the official documentation](https://cloud.google.com/functions/docs/)
 and
@@ -2791,9 +2793,13 @@ which to observe events. For example, `"myBucket"` or `"projects/my-project/topi
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

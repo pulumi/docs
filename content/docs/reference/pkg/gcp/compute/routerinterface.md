@@ -4,10 +4,26 @@ title: "RouterInterface"
 block_external_search_index: true
 ---
 
+
+
 Manages a Cloud Router interface. For more information see
 [the official documentation](https://cloud.google.com/compute/docs/cloudrouter)
 and
 [API](https://cloud.google.com/compute/docs/reference/latest/routers).
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const foobar = new gcp.compute.RouterInterface("foobar", {
+    ipRange: "169.254.1.1/30",
+    region: "us-central1",
+    router: "router-1",
+    vpnTunnel: "tunnel-1",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_router_interface.html.markdown.
 
@@ -1239,9 +1255,13 @@ one of `vpn_tunnel` and `interconnect_attachment` can be specified.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

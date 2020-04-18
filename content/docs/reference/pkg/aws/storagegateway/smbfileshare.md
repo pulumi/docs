@@ -4,10 +4,14 @@ title: "SmbFileShare"
 block_external_search_index: true
 ---
 
+
+
 Manages an AWS Storage Gateway SMB File Share.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Active Directory Authentication
 
 > **NOTE:** The gateway must have already joined the Active Directory domain prior to SMB file share creation. e.g. via "SMB Settings" in the AWS Storage Gateway console or `smb_active_directory_settings` in the [`aws.storagegateway.Gateway` resource](https://www.terraform.io/docs/providers/aws/r/storagegateway_gateway.html).
@@ -24,6 +28,8 @@ const example = new aws.storagegateway.SmbFileShare("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Guest Authentication
 
 > **NOTE:** The gateway must have already had the SMB guest password set prior to SMB file share creation. e.g. via "SMB Settings" in the AWS Storage Gateway console or `smb_guest_password` in the [`aws.storagegateway.Gateway` resource](https://www.terraform.io/docs/providers/aws/r/storagegateway_gateway.html).
@@ -40,7 +46,8 @@ const example = new aws.storagegateway.SmbFileShare("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/storagegateway_smb_file_share.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -2038,9 +2045,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

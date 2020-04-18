@@ -4,6 +4,8 @@ title: "VpcEndpointServiceAllowedPrinciple"
 block_external_search_index: true
 ---
 
+
+
 Provides a resource to allow a principal to discover a VPC endpoint service.
 
 > **NOTE on VPC Endpoint Services and VPC Endpoint Service Allowed Principals:** This provider provides
@@ -12,7 +14,9 @@ and a VPC Endpoint Service resource with an `allowed_principals` attribute. Do n
 a VPC Endpoint Service resource and a VPC Endpoint Service Allowed Principal resource. Doing so will cause a conflict
 and will overwrite the association.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 Basic usage:
 
@@ -27,7 +31,8 @@ const allowMeToFoo = new aws.ec2.VpcEndpointServiceAllowedPrinciple("allow_me_to
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint_service_allowed_principal.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -585,9 +590,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

@@ -4,9 +4,13 @@ title: "GetInstanceTypeOffering"
 block_external_search_index: true
 ---
 
+
+
 Information about single EC2 Instance Type Offering.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -29,7 +33,8 @@ const example = pulumi.output(aws.ec2.getInstanceTypeOffering({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ec2_instance_type_offering.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

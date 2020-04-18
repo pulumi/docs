@@ -4,6 +4,8 @@ title: "GetRegion"
 block_external_search_index: true
 ---
 
+
+
 `aws..getRegion` provides details about a specific AWS region.
 
 As well as validating a given region name this resource can be used to
@@ -11,7 +13,9 @@ discover the name of the region configured within the provider. The latter
 can be useful in a child module which is inheriting an AWS provider
 configuration from its parent module.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 The following example shows how the resource might be used to obtain
 the name of the AWS region configured on the provider.
@@ -23,7 +27,8 @@ import * as aws from "@pulumi/aws";
 const current = pulumi.output(aws.getRegion({ async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/region.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

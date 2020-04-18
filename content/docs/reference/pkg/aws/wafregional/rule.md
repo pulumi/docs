@@ -4,9 +4,13 @@ title: "Rule"
 block_external_search_index: true
 ---
 
+
+
 Provides an WAF Regional Rule Resource for use with Application Load Balancer.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -28,6 +32,8 @@ const wafrule = new aws.wafregional.Rule("wafrule", {
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## Nested Fields
 
 ### `predicate`
@@ -39,8 +45,6 @@ See the [WAF Documentation](https://docs.aws.amazon.com/waf/latest/APIReference/
 * `type` - (Required) The type of predicate in a rule. Valid values: `ByteMatch`, `GeoMatch`, `IPMatch`, `RegexMatch`, `SizeConstraint`, `SqlInjectionMatch`, or `XssMatch`
 * `data_id` - (Required) The unique identifier of a predicate, such as the ID of a `ByteMatchSet` or `IPSet`.
 * `negated` - (Required) Whether to use the settings or the negated settings that you specified in the objects.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/wafregional_rule.html.markdown.
 
 
 
@@ -1030,9 +1034,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

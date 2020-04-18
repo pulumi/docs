@@ -4,6 +4,8 @@ title: "GetLBIPRanges"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to access IP ranges in your firewall rules.
 
 https://cloud.google.com/compute/docs/load-balancing/health-checks#health_check_source_ips_and_firewall_rules

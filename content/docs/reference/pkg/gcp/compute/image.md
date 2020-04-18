@@ -4,6 +4,8 @@ title: "Image"
 block_external_search_index: true
 ---
 
+
+
 Represents an Image resource.
 
 Google Compute Engine uses operating system images to create the root
@@ -27,6 +29,41 @@ To get more information about Image, see:
 * [API documentation](https://cloud.google.com/compute/docs/reference/v1/images)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/compute/docs/images)
+
+## Example Usage - Image Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const example = new gcp.compute.Image("example", {
+    rawDisk: {
+        source: "https://storage.googleapis.com/bosh-cpi-artifacts/bosh-stemcell-3262.4-google-kvm-ubuntu-trusty-go_agent-raw.tar.gz",
+    },
+});
+```
+## Example Usage - Image Guest Os
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const example = new gcp.compute.Image("example", {
+    guestOsFeatures: [
+        {
+            type: "SECURE_BOOT",
+        },
+        {
+            type: "MULTI_IP_SUBNET",
+        },
+    ],
+    rawDisk: {
+        source: "https://storage.googleapis.com/bosh-cpi-artifacts/bosh-stemcell-3262.4-google-kvm-ubuntu-trusty-go_agent-raw.tar.gz",
+    },
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/compute_image.html.markdown.
 
@@ -2041,9 +2078,13 @@ not both to create an image.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

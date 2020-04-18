@@ -4,6 +4,8 @@ title: "QueryLog"
 block_external_search_index: true
 ---
 
+
+
 Provides a Route53 query logging configuration resource.
 
 > **NOTE:** There are restrictions on the configuration of query logging. Notably,
@@ -12,7 +14,9 @@ a permissive CloudWatch log resource policy must be in place, and
 the Route53 hosted zone must be public.
 See [Configuring Logging for DNS Queries](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/query-logs.html?console_help=true#query-logs-configuring) for additional details.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -48,7 +52,8 @@ const exampleComQueryLog = new aws.route53.QueryLog("example_com", {
 }, { dependsOn: [route53_query_logging_policyLogResourcePolicy] });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_query_log.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -606,9 +611,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

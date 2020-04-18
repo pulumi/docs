@@ -4,11 +4,30 @@ title: "SourceRepresentationInstance"
 block_external_search_index: true
 ---
 
+
+
 A source representation instance is a Cloud SQL instance that represents
 the source database server to the Cloud SQL replica. It is visible in the
 Cloud Console and appears the same as a regular Cloud SQL instance, but it
 contains no data, requires no configuration or maintenance, and does not
 affect billing. You cannot update the source representation instance.
+
+
+
+## Example Usage - Sql Source Representation Instance Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.sql.SourceRepresentationInstance("instance", {
+    databaseVersion: "MYSQL_5_7",
+    host: "10.20.30.40",
+    port: 3306,
+    region: "us-central1",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/sql_source_representation_instance.html.markdown.
 
@@ -1012,9 +1031,13 @@ If it is not provided, the provider project is used.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

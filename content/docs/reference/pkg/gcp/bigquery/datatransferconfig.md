@@ -4,6 +4,8 @@ title: "DataTransferConfig"
 block_external_search_index: true
 ---
 
+
+
 Represents a data transfer configuration. A transfer configuration
 contains all metadata needed to perform a data transfer.
 
@@ -1512,9 +1514,13 @@ NOTE: the granularity should be at least 8 hours, or less frequent.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

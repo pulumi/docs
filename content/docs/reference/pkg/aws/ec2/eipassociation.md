@@ -4,6 +4,8 @@ title: "EipAssociation"
 block_external_search_index: true
 ---
 
+
+
 Provides an AWS EIP Association as a top level resource, to associate and
 disassociate Elastic IPs from AWS Instances and Network Interfaces.
 
@@ -12,7 +14,9 @@ disassociate Elastic IPs from AWS Instances and Network Interfaces.
 > **NOTE:** `aws.ec2.EipAssociation` is useful in scenarios where EIPs are either
 pre-existing or distributed to customers or users and therefore cannot be changed.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -35,7 +39,8 @@ const eipAssoc = new aws.ec2.EipAssociation("eip_assoc", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eip_association.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1133,9 +1138,14 @@ address.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

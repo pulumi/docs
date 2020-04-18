@@ -4,6 +4,8 @@ title: "Agent"
 block_external_search_index: true
 ---
 
+
+
 A Dialogflow agent is a virtual agent that handles conversations with your end-users. It is a natural language
 understanding module that understands the nuances of human language. Dialogflow translates end-user text or audio
 during a conversation to structured data that your apps and services can understand. You design and build a Dialogflow
@@ -15,6 +17,32 @@ To get more information about Agent, see:
 * [API documentation](https://cloud.google.com/dialogflow/docs/reference/rest/v2/projects/agent)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/dialogflow/docs/)
+
+## Example Usage - Dialogflow Agent Full
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const fullAgent = new gcp.diagflow.Agent("full_agent", {
+    apiVersion: "API_VERSION_V2_BETA_1",
+    avatarUri: "https://cloud.google.com/_static/images/cloud/icons/favicons/onecloud/super_cloud.png",
+    classificationThreshold: 0.3,
+    defaultLanguageCode: "en",
+    description: "Example description.",
+    displayName: "dialogflow-agent",
+    enableLogging: true,
+    matchMode: "MATCH_MODE_ML_ONLY",
+    supportedLanguageCodes: [
+        "fr",
+        "de",
+        "es",
+    ],
+    tier: "TIER_STANDARD",
+    timeZone: "America/New_York",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/dialogflow_agent.html.markdown.
 
@@ -1926,9 +1954,13 @@ Europe/Paris.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

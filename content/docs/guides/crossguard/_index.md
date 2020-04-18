@@ -12,6 +12,18 @@ CrossGuard is Pulumi's new Policy as Code offering. CrossGuard empowers you to s
 
 Using CrossGuard, organization administrators can apply these rules to particular stacks within their organization. When policies are executed as part of your Pulumi deployments, any violation will gate or block that update from proceeding.
 
+## Languages
+
+Policies can be written in TypeScript/JavaScript (Node.js) or Python and can be applied to Pulumi stacks written in any language.
+
+|                                                        | Language                                                                | Status                                                            |
+| ------------------------------------------------------ | ----------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| <img src="/logos/tech/logo-ts.png" class="h-10" />     | [TypeScript]({{< relref "/docs/reference/pkg/nodejs/pulumi/policy" >}}) | Stable                                                            |
+| <img src="/logos/tech/logo-js.png" class="h-10" />     | [JavaScript]({{< relref "/docs/reference/pkg/nodejs/pulumi/policy" >}}) | Stable                                                            |
+| <img src="/logos/tech/logo-python.png" class="h-10" /> | [Python]({{< relref "/docs/reference/pkg/python/pulumi_policy" >}})     | Preview                                                           |
+| <img src="/logos/tech/dotnet.png" class="h-10" />      | .NET                                                                    | [Coming Soon](https://github.com/pulumi/pulumi-policy/issues/229) |
+| <img src="/logos/tech/logo-golang.png" class="h-10" /> | Go                                                                      | [Coming Soon](https://github.com/pulumi/pulumi-policy/issues/230) |
+
 ## Getting Started
 
 To get started with Pulumi CrossGuard, [download and install Pulumi]({{< relref "/docs/get-started/install" >}}). Afterwards,
@@ -29,10 +41,26 @@ Using configurable Policy Packs, you can write flexible policies that can be re-
 
 If you're looking for some example Policy Packs, take a look at these:
 
-* [AWS](https://github.com/pulumi/examples/tree/master/policy-packs/aws)
-* [Azure](https://github.com/pulumi/examples/tree/master/policy-packs/azure)
-* [GCP](https://github.com/pulumi/examples/tree/master/policy-packs/gcp)
-* [Kubernetes](https://github.com/pulumi/examples/tree/master/policy-packs/kubernetes)
+{{< chooser language "typescript,python" >}}
+
+{{% choosable language typescript %}}
+
+* [AWS](https://github.com/pulumi/examples/tree/master/policy-packs/aws-ts)
+* [Azure](https://github.com/pulumi/examples/tree/master/policy-packs/azure-ts)
+* [Google Cloud](https://github.com/pulumi/examples/tree/master/policy-packs/gcp-ts)
+* [Kubernetes](https://github.com/pulumi/examples/tree/master/policy-packs/kubernetes-ts)
+
+{{% /choosable %}}
+{{% choosable language python %}}
+
+* [AWS](https://github.com/pulumi/examples/tree/master/policy-packs/aws-python)
+* [Azure](https://github.com/pulumi/examples/tree/master/policy-packs/azure-python)
+* [Google Cloud](https://github.com/pulumi/examples/tree/master/policy-packs/gcp-python)
+* [Kubernetes](https://github.com/pulumi/examples/tree/master/policy-packs/kubernetes-python)
+
+{{% /choosable %}}
+
+{{< /chooser >}}
 
 ## FAQs
 

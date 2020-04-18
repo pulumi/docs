@@ -4,10 +4,14 @@ title: "GetHostedZoneId"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to get the HostedZoneId of the AWS Elastic Load Balancing HostedZoneId
 in a given region for the purpose of using in an AWS Route53 Alias.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -26,7 +30,8 @@ const www = new aws.route53.Record("www", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/elb_hosted_zone_id.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

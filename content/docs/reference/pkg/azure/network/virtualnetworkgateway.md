@@ -4,6 +4,8 @@ title: "VirtualNetworkGateway"
 block_external_search_index: true
 ---
 
+
+
 Manages a Virtual Network Gateway to establish secure, cross-premises connectivity.
 
 > **Note:** Please be aware that provisioning a Virtual Network Gateway takes a long time (between 30 minutes and 1 hour)
@@ -3038,9 +3040,13 @@ revoked.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

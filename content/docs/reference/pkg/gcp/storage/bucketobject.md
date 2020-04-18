@@ -4,12 +4,29 @@ title: "BucketObject"
 block_external_search_index: true
 ---
 
+
+
 Creates a new object inside an existing bucket in Google cloud storage service (GCS). 
 [ACLs](https://cloud.google.com/storage/docs/access-control/lists) can be applied using the `gcp.storage.ObjectACL` resource.
  For more information see 
 [the official documentation](https://cloud.google.com/storage/docs/key-terms#objects) 
 and 
 [API](https://cloud.google.com/storage/docs/json_api/v1/objects).
+
+
+## Example Usage
+
+Example creating a public object in an existing `image-store` bucket.
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const picture = new gcp.storage.BucketObject("picture", {
+    bucket: "image-store",
+    source: new pulumi.asset.FileAsset("/images/nature/garden-tiger-moth.jpg"),
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/storage_bucket_object.html.markdown.
 
@@ -1981,9 +1998,13 @@ storage class or to a [standard](https://cloud.google.com/storage/docs/storage-c
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

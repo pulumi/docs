@@ -4,6 +4,8 @@ title: "Environment"
 block_external_search_index: true
 ---
 
+
+
 An environment for running orchestration tasks.
 
 Environments run Apache Airflow software on Google infrastructure.
@@ -26,6 +28,42 @@ To get more information about Environments, see:
     against GCP Cloud Composer before filing bugs against this provider. 
   * **Environments create Google Cloud Storage buckets that do not get cleaned up automatically** on environment 
     deletion. [More about Composer's use of Cloud Storage](https://cloud.google.com/composer/docs/concepts/cloud-storage).
+
+## Example Usage
+
+### Basic Usage
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const test = new gcp.composer.Environment("test", {
+    region: "us-central1",
+});
+```
+
+### With Software (Airflow) Config
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const test = new gcp.composer.Environment("test", {
+    config: {
+        softwareConfig: {
+            airflowConfigOverrides: {
+                "core-load_example": "True",
+            },
+            envVariables: {
+                FOO: "bar",
+            },
+            pypiPackages: {
+                numpy: "",
+                scipy: "==1.1.0",
+            },
+        },
+    },
+    region: "us-central1",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/composer_environment.html.markdown.
 
@@ -2033,9 +2071,13 @@ Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be update
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

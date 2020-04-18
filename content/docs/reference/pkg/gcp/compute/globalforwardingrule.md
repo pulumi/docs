@@ -4,6 +4,8 @@ title: "GlobalForwardingRule"
 block_external_search_index: true
 ---
 
+
+
 Represents a GlobalForwardingRule resource. Global forwarding rules are
 used to forward traffic to the correct load balancer for HTTP load
 balancing. Global forwarding rules can only be used for HTTP load
@@ -2421,9 +2423,13 @@ the target object. For INTERNAL_SELF_MANAGED load balancing, only HTTP and HTTPS
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

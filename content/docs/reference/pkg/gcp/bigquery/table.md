@@ -4,6 +4,8 @@ title: "Table"
 block_external_search_index: true
 ---
 
+
+
 Creates a table resource in a dataset for Google BigQuery. For more information see
 [the official documentation](https://cloud.google.com/bigquery/docs/) and
 [API](https://cloud.google.com/bigquery/docs/reference/rest/v2/tables).
@@ -4359,9 +4361,13 @@ The default value is true. If set to false, the view will use BigQuery's standar
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

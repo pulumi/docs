@@ -4,9 +4,25 @@ title: "GetGroups"
 block_external_search_index: true
 ---
 
+
+
 Gets Object IDs or Display Names for multiple Azure Active Directory groups.
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to `Read directory data` within the `Windows Azure Active Directory` API.
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azuread from "@pulumi/azuread";
+
+const groups = pulumi.output(azuread.getGroups({
+    names: [
+        "group-a",
+        "group-b",
+    ],
+}, { async: true }));
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/d/groups.html.markdown.
 

@@ -70,9 +70,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.transfer.Server">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.transfer.</code><code class="sig-name descname">Server</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">endpoint_details=None</em>, <em class="sig-param">endpoint_type=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">host_key=None</em>, <em class="sig-param">identity_provider_type=None</em>, <em class="sig-param">invocation_role=None</em>, <em class="sig-param">logging_role=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">url=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.Server" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a AWS Transfer Server resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_server.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_server.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -251,9 +248,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.transfer.SshKey">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.transfer.</code><code class="sig-name descname">SshKey</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">body=None</em>, <em class="sig-param">server_id=None</em>, <em class="sig-param">user_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.SshKey" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a AWS Transfer User SSH Key resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_ssh_key.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_ssh_key.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -344,9 +338,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.transfer.User">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.transfer.</code><code class="sig-name descname">User</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">home_directory=None</em>, <em class="sig-param">policy=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">server_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">user_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.User" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a AWS Transfer User resource. Managing SSH keys can be accomplished with the <cite>``transfer.SshKey`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/transfer_ssh_key.html">https://www.terraform.io/docs/providers/aws/r/transfer_ssh_key.html</a>&gt;`_.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_user.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/transfer_user.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -469,9 +460,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <code class="sig-prename descclassname">pulumi_aws.transfer.</code><code class="sig-name descname">get_server</code><span class="sig-paren">(</span><em class="sig-param">server_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.transfer.get_server" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get the ARN of an AWS Transfer Server for use in other
 resources.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/transfer_server.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/transfer_server.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>server_id</strong> (<em>str</em>) – ID for an SFTP server.</p>

@@ -4,6 +4,8 @@ title: "Source"
 block_external_search_index: true
 ---
 
+
+
 A Cloud Security Command Center's (Cloud SCC) finding source. A finding
 source is an entity or a mechanism that can produce a finding. A source is
 like a container of findings that come from the same scanner, logger,
@@ -15,6 +17,20 @@ To get more information about Source, see:
 * [API documentation](https://cloud.google.com/security-command-center/docs/reference/rest/v1beta1/organizations.sources)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/binary-authorization/)
+
+## Example Usage - Scc Source Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const customSource = new gcp.securitycenter.Source("custom_source", {
+    description: "My custom Cloud Security Command Center Finding Source",
+    displayName: "My Source",
+    organization: "123456789",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/scc_source.html.markdown.
 
@@ -778,9 +794,13 @@ contain letters, digits, spaces, hyphens, and underscores, and can be no longer 
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

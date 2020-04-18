@@ -4,9 +4,13 @@ title: "GetMountTarget"
 block_external_search_index: true
 ---
 
+
+
 Provides information about an Elastic File System Mount Target (EFS).
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -20,7 +24,8 @@ const byId = pulumi.output(aws.efs.getMountTarget({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/efs_mount_target.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

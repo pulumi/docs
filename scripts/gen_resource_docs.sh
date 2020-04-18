@@ -4,11 +4,17 @@
 
 set -o nounset -o errexit -o pipefail
 
+# The first argument is the override for the repo for which this script will generate the resource docs. 
 REPO_OVERRIDE=${1:-}
+# Pass a 2nd argument (value does not matter) to indicate that the resource plugin must be installed.
+# The latest release tag (not beta or dev) is used as the version to install the plugin. 
+INSTALL_RESOURCE_PLUGIN=${2:-}
+# Pass a 3rd argument to override the resource plugin version installed by this script.
+INSTALL_RESOURCE_PLUGIN_VERSION=${3:-}
 
 PACKDIR="./content/docs/reference/pkg"
 ABSOLUTEPACKDIR="$(pwd)/content/docs/reference/pkg"
-TOOL_RESDOCGEN="go run ./tools/resourcedocsgen/*.go -logtostderr"
+TOOL_RESDOCGEN="./tools/resourcedocsgen/"
 
 PROVIDERS=(
     "aws"
@@ -35,26 +41,37 @@ generate_docs() {
     echo -e "\033[0;93mPulling changes\033[0m"
     git checkout master >/dev/null
     git pull origin master >/dev/null
-    popd
 
-    echo "Removing the ${PACKDIR}/${provider} dir..."
-    rm -rf "${PACKDIR}/${provider}"
+    if [ -n "${INSTALL_RESOURCE_PLUGIN:-}" ]; then
+        git fetch --tags
+        plugin_version=$(git describe --tags `git rev-list --max-count=1 --tags --not --tags='*-dev' --tags='*beta*'`)
+        if [ -n "${INSTALL_RESOURCE_PLUGIN_VERSION:-}" ]; then
+            plugin_version=${INSTALL_RESOURCE_PLUGIN_VERSION}
+        elif [[ ${plugin_version} = sdk* ]]; then
+            plugin_version=${plugin_version:4}
+        fi
+        echo "Installing resource plugin for ${provider}. Version: ${plugin_version}"
+        pulumi plugin install resource ${provider} ${plugin_version}
+    fi
 
     TFGEN=pulumi-tfgen-${provider}
-
-    pushd ../pulumi-${provider}
     echo "Running pulumi-tfgen-${TFGEN} to generate provider schema..."
     make generate_schema
     popd
 
     if [ $provider = "kubernetes" ]; then
-        SCHEMA_FILE="../pulumi-${provider}/sdk/schema/schema.json"
+        SCHEMA_FILE="../../../pulumi-kubernetes/sdk/schema/schema.json"
     else
-        SCHEMA_FILE="../pulumi-${provider}/provider/cmd/pulumi-resource-${provider}/schema.json"
+        SCHEMA_FILE="../../../pulumi-${provider}/provider/cmd/pulumi-resource-${provider}/schema.json"
     fi
 
+    echo "Removing the ${PACKDIR}/${provider} dir..."
+    rm -rf "${PACKDIR}/${provider}"
+
     echo "Running docs generator from schema for ${provider}..."
-    ${TOOL_RESDOCGEN} ${ABSOLUTEPACKDIR}/${provider} ${SCHEMA_FILE} || exit 3
+    pushd ${TOOL_RESDOCGEN}
+    go run . -logtostderr ${ABSOLUTEPACKDIR}/${provider} ${SCHEMA_FILE} || exit 3
+    popd
 
     echo "Done generating resource docs for ${provider}"
     echo ""

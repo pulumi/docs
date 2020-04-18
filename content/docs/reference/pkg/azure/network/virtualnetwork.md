@@ -4,6 +4,8 @@ title: "VirtualNetwork"
 block_external_search_index: true
 ---
 
+
+
 Manages a virtual network including any configured subnets. Each subnet can
 optionally be configured with a security group to be associated with the subnet.
 
@@ -1604,9 +1606,13 @@ the subnet. (Referenced by `id`, ie. `azurerm_network_security_group.example.id`
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

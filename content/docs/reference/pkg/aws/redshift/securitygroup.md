@@ -4,9 +4,13 @@ title: "SecurityGroup"
 block_external_search_index: true
 ---
 
+
+
 Creates a new Amazon Redshift security group. You use security groups to control access to non-VPC clusters
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -19,7 +23,8 @@ const defaultSecurityGroup = new aws.redshift.SecurityGroup("default", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_security_group.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -845,9 +850,14 @@ by `security_group_name`.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

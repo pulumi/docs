@@ -4,13 +4,17 @@ title: "GetSubnet"
 block_external_search_index: true
 ---
 
+
+
 `aws.ec2.Subnet` provides details about a specific VPC subnet.
 
 This resource can prove useful when a module accepts a subnet id as
 an input variable and needs to, for example, determine the id of the
 VPC that the subnet belongs to.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 The following example shows how one might accept a subnet id as a variable
 and use this data source to obtain the data necessary to create a security
@@ -37,7 +41,8 @@ const subnet = new aws.ec2.SecurityGroup("subnet", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/subnet.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

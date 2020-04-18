@@ -17,9 +17,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.appmesh.Mesh">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appmesh.</code><code class="sig-name descname">Mesh</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appmesh.Mesh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS App Mesh service mesh resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_mesh.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_mesh.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -157,16 +154,13 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appmesh.Route">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appmesh.</code><code class="sig-name descname">Route</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">mesh_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">virtual_router_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appmesh.Route" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS App Mesh route resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_route.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_route.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>mesh_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the service mesh in which to create the route.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for the HTTP header in the client request that will be matched on.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name to use for the route.</p></li>
 <li><p><strong>spec</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The route specification to apply.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>virtual_router_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the virtual router in which to create the route.</p></li>
@@ -188,7 +182,7 @@ You can specify one or more targets and their relative weights with which to dis
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">match</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The method and value to match the header value sent with a request. Specify one match method.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">match</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The criteria for determining an HTTP request match.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The client request headers to match on.</p>
 <ul>
@@ -196,7 +190,8 @@ You can specify one or more targets and their relative weights with which to dis
 <li><p><code class="docutils literal notranslate"><span class="pre">match</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The method and value to match the header value sent with a request. Specify one match method.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">exact</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The header value sent by the client must match the specified value exactly.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The header value sent by the client must begin with the specified characters.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the path with which to match requests.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">range</span></code>- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.</p></li>
 </ul>
@@ -215,7 +210,8 @@ You can specify one or more targets and their relative weights with which to dis
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">method</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The client request header method to match on. Valid values: <code class="docutils literal notranslate"><span class="pre">GET</span></code>, <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>, <code class="docutils literal notranslate"><span class="pre">POST</span></code>, <code class="docutils literal notranslate"><span class="pre">PUT</span></code>, <code class="docutils literal notranslate"><span class="pre">DELETE</span></code>, <code class="docutils literal notranslate"><span class="pre">CONNECT</span></code>, <code class="docutils literal notranslate"><span class="pre">OPTIONS</span></code>, <code class="docutils literal notranslate"><span class="pre">TRACE</span></code>, <code class="docutils literal notranslate"><span class="pre">PATCH</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The header value sent by the client must begin with the specified characters.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the path with which to match requests.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">range</span></code>- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.</p></li>
 </ul>
@@ -270,7 +266,7 @@ You can specify one or more targets and their relative weights with which to dis
 <dl class="attribute">
 <dt id="pulumi_aws.appmesh.Route.name">
 <code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.appmesh.Route.name" title="Permalink to this definition">¶</a></dt>
-<dd><p>A name for the HTTP header in the client request that will be matched on.</p>
+<dd><p>The name to use for the route.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -291,7 +287,7 @@ You can specify one or more targets and their relative weights with which to dis
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">match</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The method and value to match the header value sent with a request. Specify one match method.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">match</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The criteria for determining an HTTP request match.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - The client request headers to match on.</p>
 <ul>
@@ -299,7 +295,8 @@ You can specify one or more targets and their relative weights with which to dis
 <li><p><code class="docutils literal notranslate"><span class="pre">match</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The method and value to match the header value sent with a request. Specify one match method.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">exact</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The header value sent by the client must match the specified value exactly.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The header value sent by the client must begin with the specified characters.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the path with which to match requests.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">range</span></code>- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.</p></li>
 </ul>
@@ -318,7 +315,8 @@ You can specify one or more targets and their relative weights with which to dis
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">method</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The client request header method to match on. Valid values: <code class="docutils literal notranslate"><span class="pre">GET</span></code>, <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>, <code class="docutils literal notranslate"><span class="pre">POST</span></code>, <code class="docutils literal notranslate"><span class="pre">PUT</span></code>, <code class="docutils literal notranslate"><span class="pre">DELETE</span></code>, <code class="docutils literal notranslate"><span class="pre">CONNECT</span></code>, <code class="docutils literal notranslate"><span class="pre">OPTIONS</span></code>, <code class="docutils literal notranslate"><span class="pre">TRACE</span></code>, <code class="docutils literal notranslate"><span class="pre">PATCH</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The header value sent by the client must begin with the specified characters.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the path with which to match requests.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">range</span></code>- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.</p></li>
 </ul>
@@ -375,7 +373,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>created_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The creation date of the route.</p></li>
 <li><p><strong>last_updated_date</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The last update date of the route.</p></li>
 <li><p><strong>mesh_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the service mesh in which to create the route.</p></li>
-<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for the HTTP header in the client request that will be matched on.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name to use for the route.</p></li>
 <li><p><strong>spec</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The route specification to apply.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 <li><p><strong>virtual_router_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the virtual router in which to create the route.</p></li>
@@ -397,7 +395,7 @@ You can specify one or more targets and their relative weights with which to dis
 </li>
 </ul>
 </li>
-<li><p><code class="docutils literal notranslate"><span class="pre">match</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The method and value to match the header value sent with a request. Specify one match method.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">match</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The criteria for determining an HTTP request match.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">headers</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - The client request headers to match on.</p>
 <ul>
@@ -405,7 +403,8 @@ You can specify one or more targets and their relative weights with which to dis
 <li><p><code class="docutils literal notranslate"><span class="pre">match</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The method and value to match the header value sent with a request. Specify one match method.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">exact</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The header value sent by the client must match the specified value exactly.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The header value sent by the client must begin with the specified characters.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the path with which to match requests.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">range</span></code>- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.</p></li>
 </ul>
@@ -424,7 +423,8 @@ You can specify one or more targets and their relative weights with which to dis
 </ul>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">method</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The client request header method to match on. Valid values: <code class="docutils literal notranslate"><span class="pre">GET</span></code>, <code class="docutils literal notranslate"><span class="pre">HEAD</span></code>, <code class="docutils literal notranslate"><span class="pre">POST</span></code>, <code class="docutils literal notranslate"><span class="pre">PUT</span></code>, <code class="docutils literal notranslate"><span class="pre">DELETE</span></code>, <code class="docutils literal notranslate"><span class="pre">CONNECT</span></code>, <code class="docutils literal notranslate"><span class="pre">OPTIONS</span></code>, <code class="docutils literal notranslate"><span class="pre">TRACE</span></code>, <code class="docutils literal notranslate"><span class="pre">PATCH</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The header value sent by the client must begin with the specified characters.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the path with which to match requests.
+This parameter must always start with /, which by itself matches all requests to the virtual router service name.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">range</span></code>- (Optional) The object that specifies the range of numbers that the header value sent by the client must be included in.</p></li>
 </ul>
@@ -503,9 +503,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 setting <code class="docutils literal notranslate"><span class="pre">virtual_service_name</span></code> to the name of the service.</p></li>
 </ul>
 <p>The state associated with existing resources will automatically be migrated.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_node.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_node.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -548,8 +545,8 @@ setting <code class="docutils literal notranslate"><span class="pre">virtual_ser
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">portMapping</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The port mapping information for the listener.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The destination port for the health check request. This port must match the port defined in the <code class="docutils literal notranslate"><span class="pre">port_mapping</span></code> for the listener.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol for the health check request. Valid values are <code class="docutils literal notranslate"><span class="pre">http</span></code> and <code class="docutils literal notranslate"><span class="pre">tcp</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port used for the port mapping.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol used for the port mapping. Valid values are <code class="docutils literal notranslate"><span class="pre">http</span></code> and <code class="docutils literal notranslate"><span class="pre">tcp</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -560,7 +557,7 @@ setting <code class="docutils literal notranslate"><span class="pre">virtual_ser
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">file</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The file object to send virtual node access logs to.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The destination path for the health check request. This is only required if the specified protocol is <code class="docutils literal notranslate"><span class="pre">http</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The file path to write access logs to. You can use <code class="docutils literal notranslate"><span class="pre">/dev/stdout</span></code> to send access logs to standard out.</p></li>
 </ul>
 </li>
 </ul>
@@ -648,8 +645,8 @@ Use the <cite>``servicediscovery.HttpNamespace`</cite> &lt;<a class="reference e
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">portMapping</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The port mapping information for the listener.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The destination port for the health check request. This port must match the port defined in the <code class="docutils literal notranslate"><span class="pre">port_mapping</span></code> for the listener.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The protocol for the health check request. Valid values are <code class="docutils literal notranslate"><span class="pre">http</span></code> and <code class="docutils literal notranslate"><span class="pre">tcp</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The port used for the port mapping.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The protocol used for the port mapping. Valid values are <code class="docutils literal notranslate"><span class="pre">http</span></code> and <code class="docutils literal notranslate"><span class="pre">tcp</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -660,7 +657,7 @@ Use the <cite>``servicediscovery.HttpNamespace`</cite> &lt;<a class="reference e
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">file</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The file object to send virtual node access logs to.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The destination path for the health check request. This is only required if the specified protocol is <code class="docutils literal notranslate"><span class="pre">http</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The file path to write access logs to. You can use <code class="docutils literal notranslate"><span class="pre">/dev/stdout</span></code> to send access logs to standard out.</p></li>
 </ul>
 </li>
 </ul>
@@ -744,8 +741,8 @@ properties used to qualify the lookup.</p>
 </li>
 <li><p><code class="docutils literal notranslate"><span class="pre">portMapping</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The port mapping information for the listener.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The destination port for the health check request. This port must match the port defined in the <code class="docutils literal notranslate"><span class="pre">port_mapping</span></code> for the listener.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol for the health check request. Valid values are <code class="docutils literal notranslate"><span class="pre">http</span></code> and <code class="docutils literal notranslate"><span class="pre">tcp</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">port</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The port used for the port mapping.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">protocol</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The protocol used for the port mapping. Valid values are <code class="docutils literal notranslate"><span class="pre">http</span></code> and <code class="docutils literal notranslate"><span class="pre">tcp</span></code>.</p></li>
 </ul>
 </li>
 </ul>
@@ -756,7 +753,7 @@ properties used to qualify the lookup.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">file</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The file object to send virtual node access logs to.</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The destination path for the health check request. This is only required if the specified protocol is <code class="docutils literal notranslate"><span class="pre">http</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">path</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The file path to write access logs to. You can use <code class="docutils literal notranslate"><span class="pre">/dev/stdout</span></code> to send access logs to standard out.</p></li>
 </ul>
 </li>
 </ul>
@@ -833,9 +830,6 @@ These resource can be imported using <code class="docutils literal notranslate">
 <li><p>Add a <code class="docutils literal notranslate"><span class="pre">listener</span></code> configuration block to the <code class="docutils literal notranslate"><span class="pre">spec</span></code> argument.</p></li>
 </ul>
 <p>The state associated with existing resources will automatically be migrated.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_router.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_router.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -996,9 +990,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.appmesh.VirtualService">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.appmesh.</code><code class="sig-name descname">VirtualService</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">mesh_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">spec=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.appmesh.VirtualService" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an AWS App Mesh virtual service resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_service.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/appmesh_virtual_service.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

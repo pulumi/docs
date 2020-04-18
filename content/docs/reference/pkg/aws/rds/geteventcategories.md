@@ -4,7 +4,11 @@ title: "GetEventCategories"
 block_external_search_index: true
 ---
 
+
+
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 List the event categories of all the RDS resources. 
 
@@ -30,7 +34,8 @@ const exampleEventCategories = pulumi.output(aws.rds.getEventCategories({
 export const example = exampleEventCategories.eventCategories;
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/db_event_categories.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

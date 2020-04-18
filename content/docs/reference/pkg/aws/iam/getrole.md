@@ -4,11 +4,15 @@ title: "GetRole"
 block_external_search_index: true
 ---
 
+
+
 This data source can be used to fetch information about a specific
 IAM role. By using this data source, you can reference IAM role
 properties without having to hard code ARNs as input.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -19,7 +23,8 @@ const example = pulumi.output(aws.iam.getRole({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/iam_role.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

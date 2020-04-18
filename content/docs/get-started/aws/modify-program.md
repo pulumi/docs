@@ -143,42 +143,38 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Pulumi;
 using Aws = Pulumi.Aws;
 
-class Program
+class MyStack : Stack
 {
-    static Task Main()
+    public MyStack()
     {
-        return Deployment.RunAsync(() =>
-        {
-            // Create a KMS Key for S3 server-side encryption
-            var key = new Aws.Kms.Key("my-key");
+        // Create a KMS Key for S3 server-side encryption
+        var key = new Aws.Kms.Key("my-key");
 
-            // Create an AWS resource (S3 Bucket)
-            var bucket = new Aws.S3.Bucket("my-bucket", new Aws.S3.BucketArgs
+        // Create an AWS resource (S3 Bucket)
+        var bucket = new Aws.S3.Bucket("my-bucket", new Aws.S3.BucketArgs
+        {
+            ServerSideEncryptionConfiguration = new Aws.S3.Inputs.BucketServerSideEncryptionConfigurationArgs
             {
-                ServerSideEncryptionConfiguration = new Aws.S3.Inputs.BucketServerSideEncryptionConfigurationArgs
+                Rule = new Aws.S3.Inputs.BucketServerSideEncryptionConfigurationRuleArgs
                 {
-                    Rule = new Aws.S3.Inputs.BucketServerSideEncryptionConfigurationRuleArgs
+                    ApplyServerSideEncryptionByDefault = new Aws.S3.Inputs.BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs
                     {
-                        ApplyServerSideEncryptionByDefault = new Aws.S3.Inputs.BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs
-                        {
-                            SseAlgorithm = "aws:kms",
-                            KmsMasterKeyId = key.Id,
-                        },
+                        SseAlgorithm = "aws:kms",
+                        KmsMasterKeyId = key.Id,
                     },
                 },
-            });
-
-            // Export the name of the bucket
-            return new Dictionary<string, object> {
-                { "bucket_name", bucket.Id },
-            };
+            },
         });
+
+        // Export the name of the bucket
+        this.BucketName = bucket.Id;
     }
+
+    [Output]
+    public Output<string> BucketName { get; set; }
 }
 ```
 

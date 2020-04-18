@@ -4,6 +4,8 @@ title: "Job"
 block_external_search_index: true
 ---
 
+
+
 Manages a job resource within a Dataproc cluster within GCE. For more information see
 [the official dataproc documentation](https://cloud.google.com/dataproc/).
 
@@ -4497,9 +4499,13 @@ Conflicts with `query_list`
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

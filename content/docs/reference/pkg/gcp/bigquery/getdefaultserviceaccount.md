@@ -4,7 +4,20 @@ title: "GetDefaultServiceAccount"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to retrieve default service account for this project
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultDefaultServiceAccount = pulumi.output(gcp.bigquery.getDefaultServiceAccount({ async: true }));
+
+export const defaultAccount = defaultDefaultServiceAccount.email;
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/google_bigquery_default_service_account.html.markdown.
 

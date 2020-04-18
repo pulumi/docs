@@ -4,6 +4,8 @@ title: "VPNTunnel"
 block_external_search_index: true
 ---
 
+
+
 VPN tunnel resource.
 
 
@@ -2744,9 +2746,13 @@ resource is created. This field must reference a 'google_compute_ha_vpn_gateway'
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

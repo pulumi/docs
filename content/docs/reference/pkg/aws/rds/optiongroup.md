@@ -4,6 +4,8 @@ title: "OptionGroup"
 block_external_search_index: true
 ---
 
+
+
 Provides an RDS DB option group resource. Documentation of the available options for various RDS engines can be found at:
 
 * [MariaDB Options](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.MariaDB.Options.html)
@@ -11,7 +13,9 @@ Provides an RDS DB option group resource. Documentation of the available options
 * [MySQL Options](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.MySQL.Options.html)
 * [Oracle Options](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Appendix.Oracle.Options.html)
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -45,7 +49,8 @@ const example = new aws.rds.OptionGroup("example", {
 
 > **Note**: Any modifications to the `db_option_group` are set to happen immediately as we default to applying immediately.
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/db_option_group.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1594,9 +1599,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

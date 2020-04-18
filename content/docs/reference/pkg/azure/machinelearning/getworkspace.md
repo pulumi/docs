@@ -4,6 +4,8 @@ title: "GetWorkspace"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to access information about an existing Machine Learning Workspace.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/machine_learning_workspace.html.markdown.

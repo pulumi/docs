@@ -4,6 +4,8 @@ title: "GetOrganizationPolicy"
 block_external_search_index: true
 ---
 
+
+
 Allows management of Organization policies for a Google Project. For more information see
 [the official
 documentation](https://cloud.google.com/resource-manager/docs/organization-policy/overview)

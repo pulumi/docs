@@ -4,6 +4,8 @@ title: "GetGroup"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to access information about an existing Management Group.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/management_group.html.markdown.
@@ -23,7 +25,7 @@ Use this data source to access information about an existing Management Group.
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_group(</span>group_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_group(</span>group_id=None<span class="p">, </span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -47,13 +49,22 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string?</span>
     </dt>
-    <dd>{{% md %}}Specifies the UUID of this Management Group.
+    <dd>{{% md %}}Specifies the name or UUID of this Management Group.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name or UUID of this Management Group.
 {{% /md %}}</dd>
 
 </dl>
@@ -63,13 +74,22 @@ The following arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>Group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">*string</span>
     </dt>
-    <dd>{{% md %}}Specifies the UUID of this Management Group.
+    <dd>{{% md %}}Specifies the name or UUID of this Management Group.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">*string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name or UUID of this Management Group.
 {{% /md %}}</dd>
 
 </dl>
@@ -79,13 +99,22 @@ The following arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>group<wbr>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">string?</span>
     </dt>
-    <dd>{{% md %}}Specifies the UUID of this Management Group.
+    <dd>{{% md %}}Specifies the name or UUID of this Management Group.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string?</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name or UUID of this Management Group.
 {{% /md %}}</dd>
 
 </dl>
@@ -95,13 +124,22 @@ The following arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>group_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Specifies the UUID of this Management Group.
+    <dd>{{% md %}}Specifies the name or UUID of this Management Group.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the name or UUID of this Management Group.
 {{% /md %}}</dd>
 
 </dl>
@@ -133,13 +171,13 @@ The following output properties are available:
     <dd>{{% md %}}A friendly name for the Management Group.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span>Group<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -149,6 +187,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -184,13 +230,13 @@ The following output properties are available:
     <dd>{{% md %}}A friendly name for the Management Group.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span>Group<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -200,6 +246,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -235,13 +289,13 @@ The following output properties are available:
     <dd>{{% md %}}A friendly name for the Management Group.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span>group<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -251,6 +305,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -286,13 +348,13 @@ The following output properties are available:
     <dd>{{% md %}}A friendly name for the Management Group.
 {{% /md %}}</dd>
 
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span>group_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -302,6 +364,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">

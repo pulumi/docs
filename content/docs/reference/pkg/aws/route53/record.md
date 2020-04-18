@@ -4,10 +4,14 @@ title: "Record"
 block_external_search_index: true
 ---
 
+
+
 Provides a Route53 record resource.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Simple routing policy
 
 ```typescript
@@ -23,6 +27,8 @@ const www = new aws.route53.Record("www", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Weighted routing policy
 Other routing policies are configured similarly. See [AWS Route53 Developer Guide](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-policy.html) for details.
 
@@ -54,6 +60,8 @@ const www_live = new aws.route53.Record("www-live", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Alias record
 See [related part of AWS Route53 Developer Guide](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resource-record-sets-choosing-alias-non-alias.html)
 to understand differences between alias and non-alias records.
@@ -86,6 +94,8 @@ const www = new aws.route53.Record("www", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### NS and SOA Record Management
 
 When creating Route 53 zones, the `NS` and `SOA` records for the zone are automatically created. Enabling the `allow_overwrite` argument will allow managing these records in a single deployment without the requirement for `import`.
@@ -110,7 +120,8 @@ const exampleRecord = new aws.route53.Record("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/route53_record.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -2592,9 +2603,14 @@ Alias record documented below.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

@@ -4,12 +4,16 @@ title: "GetStream"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to get information about a Kinesis Stream for use in other
 resources.
 
 For more details, see the [Amazon Kinesis Documentation][1].
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -20,7 +24,8 @@ const stream = pulumi.output(aws.kinesis.getStream({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kinesis_stream.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

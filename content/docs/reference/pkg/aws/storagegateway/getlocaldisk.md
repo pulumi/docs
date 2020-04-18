@@ -4,9 +4,13 @@ title: "GetLocalDisk"
 block_external_search_index: true
 ---
 
+
+
 Retrieve information about a Storage Gateway local disk. The disk identifier is useful for adding the disk as a cache or upload buffer to a gateway.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -18,7 +22,8 @@ const test = pulumi.all([aws_volume_attachment_test.deviceName, aws_storagegatew
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/storagegateway_local_disk.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

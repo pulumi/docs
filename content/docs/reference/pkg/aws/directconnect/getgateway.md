@@ -4,9 +4,13 @@ title: "GetGateway"
 block_external_search_index: true
 ---
 
+
+
 Retrieve information about a Direct Connect Gateway.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -17,7 +21,8 @@ const example = pulumi.output(aws.directconnect.getGateway({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/dx_gateway.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

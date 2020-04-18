@@ -4,6 +4,8 @@ title: "ServicePerimeter"
 block_external_search_index: true
 ---
 
+
+
 ServicePerimeter describes a set of GCP resources which can freely import
 and export data amongst themselves, but not export outside of the
 ServicePerimeter. If a request with a source within this ServicePerimeter
@@ -20,6 +22,45 @@ To get more information about ServicePerimeter, see:
 * [API documentation](https://cloud.google.com/access-context-manager/docs/reference/rest/v1/accessPolicies.servicePerimeters)
 * How-to Guides
     * [Service Perimeter Quickstart](https://cloud.google.com/vpc-service-controls/docs/quickstart)
+
+## Example Usage - Access Context Manager Service Perimeter Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const access_policy = new gcp.accesscontextmanager.AccessPolicy("access-policy", {
+    parent: "organizations/123456789",
+    title: "my policy",
+});
+const service_perimeter = new gcp.accesscontextmanager.ServicePerimeter("service-perimeter", {
+    parent: pulumi.interpolate`accessPolicies/${access_policy.name}`,
+    status: {
+        restrictedServices: ["storage.googleapis.com"],
+    },
+    title: "restrict_all",
+});
+const access_level = new gcp.accesscontextmanager.AccessLevel("access-level", {
+    basic: {
+        conditions: [{
+            devicePolicy: {
+                osConstraints: [{
+                    osType: "DESKTOP_CHROME_OS",
+                }],
+                requireScreenLock: false,
+            },
+            regions: [
+                "CH",
+                "IT",
+                "US",
+            ],
+        }],
+    },
+    parent: pulumi.interpolate`accessPolicies/${access_policy.name}`,
+    title: "chromeos_no_lock",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/access_context_manager_service_perimeter.html.markdown.
 
@@ -1407,9 +1448,13 @@ perimeter content and boundaries.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

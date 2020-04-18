@@ -4,10 +4,14 @@ title: "Permission"
 block_external_search_index: true
 ---
 
+
+
 Creates a Lambda permission to allow external sources invoking the Lambda function
 (e.g. CloudWatch Event Rule, SNS or S3).
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -49,6 +53,8 @@ const allowCloudwatch = new aws.lambda.Permission("allow_cloudwatch", {
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## Usage with SNS
 
 ```typescript
@@ -107,8 +113,6 @@ const lambdaPermission = new aws.lambda.Permission("lambda_permission", {
     sourceArn: pulumi.interpolate`${myDemoAPI.executionArn}/*/*/*`,
 });
 ```
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/lambda_permission.html.markdown.
 
 
 
@@ -1530,9 +1534,14 @@ API Gateway ARNs have a unique structure described
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

@@ -4,6 +4,8 @@ title: "Distribution"
 block_external_search_index: true
 ---
 
+
+
 Creates an Amazon CloudFront web distribution.
 
 For information about CloudFront distributions, see the
@@ -16,7 +18,9 @@ after creation or modification. During this time, deletes to resources will be
 blocked. If you need to delete a distribution that is enabled and you do not
 want to wait, you need to use the `retain_on_delete` flag.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 The following example below creates a CloudFront distribution with an S3 origin.
 
@@ -202,7 +206,8 @@ const s3Distribution = new aws.cloudfront.Distribution("s3_distribution", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_distribution.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -7817,9 +7822,14 @@ must be specified.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

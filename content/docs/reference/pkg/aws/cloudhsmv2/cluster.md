@@ -4,6 +4,8 @@ title: "Cluster"
 block_external_search_index: true
 ---
 
+
+
 Creates an Amazon CloudHSM v2 cluster.
 
 For information about CloudHSM v2, see the
@@ -15,7 +17,9 @@ Practically no single attribute can be updated except TAGS.
 If you need to delete a cluster, you have to remove its HSM modules first.
 To initialize cluster, you have to add an hsm instance to the cluster then sign CSR and upload it.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 The following example below creates a CloudHSM cluster.
 
@@ -51,7 +55,8 @@ const cloudhsmV2Cluster = new aws.cloudhsmv2.Cluster("cloudhsm_v2_cluster", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudhsm_v2_cluster.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1433,9 +1438,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

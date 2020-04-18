@@ -22,9 +22,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.cloudwatch.Dashboard">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">Dashboard</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dashboard_body=None</em>, <em class="sig-param">dashboard_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.Dashboard" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Dashboard resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_dashboard.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_dashboard.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -115,9 +112,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.EventPermission">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">EventPermission</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">action=None</em>, <em class="sig-param">condition=None</em>, <em class="sig-param">principal=None</em>, <em class="sig-param">statement_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.EventPermission" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to create a CloudWatch Events permission to support cross-account events in the current account default event bus.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_event_permission.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_event_permission.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -233,9 +227,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.EventRule">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">EventRule</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">event_pattern=None</em>, <em class="sig-param">is_enabled=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">schedule_expression=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.EventRule" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Event Rule resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_event_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_event_rule.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -383,9 +374,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.EventTarget">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">EventTarget</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">batch_target=None</em>, <em class="sig-param">ecs_target=None</em>, <em class="sig-param">input=None</em>, <em class="sig-param">input_path=None</em>, <em class="sig-param">input_transformer=None</em>, <em class="sig-param">kinesis_target=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">rule=None</em>, <em class="sig-param">run_command_targets=None</em>, <em class="sig-param">sqs_target=None</em>, <em class="sig-param">target_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.EventTarget" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Event Target resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_event_target.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_event_target.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -708,9 +696,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.LogDestination">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">LogDestination</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">target_arn=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogDestination" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Logs destination resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_destination.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_destination.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -808,9 +793,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.LogDestinationPolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">LogDestinationPolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_policy=None</em>, <em class="sig-param">destination_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogDestinationPolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Logs destination policy resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_destination_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_destination_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -893,9 +875,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.LogGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">LogGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_prefix=None</em>, <em class="sig-param">retention_in_days=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Log Group resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1018,9 +997,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.LogMetricFilter">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">LogMetricFilter</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">log_group_name=None</em>, <em class="sig-param">metric_transformation=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">pattern=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogMetricFilter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Log Metric Filter resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_metric_filter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_metric_filter.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1037,10 +1013,10 @@ for extracting metric data out of ingested log events.</p></li>
 </dl>
 <p>The <strong>metric_transformation</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">default_value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name for the metric filter.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value to emit when a filter pattern does not match a log event.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the CloudWatch metric to which the monitored log information should be published (e.g. <code class="docutils literal notranslate"><span class="pre">ErrorCount</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The destination namespace of the CloudWatch metric.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - What to publish to the metric. For example, if you’re counting the occurrences of a particular term like “Error”, the value will be “1” for each occurrence. If you’re counting the bytes transferred the published value will be the value in the log event.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_aws.cloudwatch.LogMetricFilter.log_group_name">
@@ -1054,10 +1030,10 @@ for extracting metric data out of ingested log events.</p></li>
 <dd><p>A block defining collection of information
 needed to define how metric data gets emitted. See below.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">default_value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A name for the metric filter.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The value to emit when a filter pattern does not match a log event.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the CloudWatch metric to which the monitored log information should be published (e.g. <code class="docutils literal notranslate"><span class="pre">ErrorCount</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The destination namespace of the CloudWatch metric.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - What to publish to the metric. For example, if you’re counting the occurrences of a particular term like “Error”, the value will be “1” for each occurrence. If you’re counting the bytes transferred the published value will be the value in the log event.</p></li>
 </ul>
 </dd></dl>
 
@@ -1097,10 +1073,10 @@ for extracting metric data out of ingested log events.</p>
 </dl>
 <p>The <strong>metric_transformation</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">default_value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A name for the metric filter.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">default_value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The value to emit when a filter pattern does not match a log event.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the CloudWatch metric to which the monitored log information should be published (e.g. <code class="docutils literal notranslate"><span class="pre">ErrorCount</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">namespace</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The destination namespace of the CloudWatch metric.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">value</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - What to publish to the metric. For example, if you’re counting the occurrences of a particular term like “Error”, the value will be “1” for each occurrence. If you’re counting the bytes transferred the published value will be the value in the log event.</p></li>
 </ul>
 </dd></dl>
 
@@ -1146,9 +1122,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.LogResourcePolicy">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">LogResourcePolicy</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">policy_document=None</em>, <em class="sig-param">policy_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogResourcePolicy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to manage a CloudWatch log resource policy.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_resource_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_resource_policy.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1231,9 +1204,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.LogStream">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">LogStream</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">log_group_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogStream" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Log Stream resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_stream.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_stream.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1323,9 +1293,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.LogSubscriptionFilter">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">LogSubscriptionFilter</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">destination_arn=None</em>, <em class="sig-param">distribution=None</em>, <em class="sig-param">filter_pattern=None</em>, <em class="sig-param">log_group=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.LogSubscriptionFilter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Logs subscription filter resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_subscription_filter.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_log_subscription_filter.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1440,9 +1407,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.MetricAlarm">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">MetricAlarm</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">actions_enabled=None</em>, <em class="sig-param">alarm_actions=None</em>, <em class="sig-param">alarm_description=None</em>, <em class="sig-param">comparison_operator=None</em>, <em class="sig-param">datapoints_to_alarm=None</em>, <em class="sig-param">dimensions=None</em>, <em class="sig-param">evaluate_low_sample_count_percentiles=None</em>, <em class="sig-param">evaluation_periods=None</em>, <em class="sig-param">extended_statistic=None</em>, <em class="sig-param">insufficient_data_actions=None</em>, <em class="sig-param">metric_name=None</em>, <em class="sig-param">metric_queries=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">namespace=None</em>, <em class="sig-param">ok_actions=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">statistic=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">threshold=None</em>, <em class="sig-param">threshold_metric_id=None</em>, <em class="sig-param">treat_missing_data=None</em>, <em class="sig-param">unit=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.MetricAlarm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CloudWatch Metric Alarm resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_metric_alarm.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudwatch_metric_alarm.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1779,12 +1743,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.cloudwatch.get_log_group">
 <code class="sig-prename descclassname">pulumi_aws.cloudwatch.</code><code class="sig-name descname">get_log_group</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.cloudwatch.get_log_group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to get information about an AWS Cloudwatch Log Group</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudwatch_log_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/cloudwatch_log_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>name</strong> (<em>str</em>) – The name of the Cloudwatch log group</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – The name of the Cloudwatch log group</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags to assign to the resource.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

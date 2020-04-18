@@ -4,6 +4,8 @@ title: "SecurityGroup"
 block_external_search_index: true
 ---
 
+
+
 Provides a security group resource.
 
 > **NOTE on Security Groups and Security Group Rules:** This provider currently
@@ -17,6 +19,8 @@ a conflict of rule settings and will overwrite rules.
 
 > **NOTE:** Due to [AWS Lambda improved VPC networking changes that began deploying in September 2019](https://aws.amazon.com/blogs/compute/announcing-improved-vpc-networking-for-aws-lambda-functions/), security groups associated with Lambda Functions can take up to 45 minutes to successfully delete.
 
+{{% examples %}}
+{{% /examples %}}
 ## Usage with prefix list IDs
 
 Prefix list IDs are managed by AWS internally. Prefix list IDs
@@ -30,8 +34,6 @@ import * as aws from "@pulumi/aws";
 // ...
 const myEndpoint = new aws.ec2.VpcEndpoint("my_endpoint", {});
 ```
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/security_group.html.markdown.
 
 
 
@@ -2264,9 +2266,14 @@ a source to this egress rule.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

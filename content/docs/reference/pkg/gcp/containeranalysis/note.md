@@ -4,6 +4,8 @@ title: "Note"
 block_external_search_index: true
 ---
 
+
+
 Provides a detailed description of a Note.
 
 
@@ -12,6 +14,22 @@ To get more information about Note, see:
 * [API documentation](https://cloud.google.com/container-analysis/api/reference/rest/)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/container-analysis/)
+
+## Example Usage - Container Analysis Note Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const note = new gcp.containeranalysis.Note("note", {
+    attestationAuthority: {
+        hint: {
+            humanReadableName: "Attestor Note",
+        },
+    },
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/container_analysis_note.html.markdown.
 
@@ -894,9 +912,13 @@ If it is not provided, the provider project is used.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

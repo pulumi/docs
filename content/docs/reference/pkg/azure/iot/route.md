@@ -4,6 +4,8 @@ title: "Route"
 block_external_search_index: true
 ---
 
+
+
 Manages an IotHub Route
 
 > **NOTE:** Routes can be defined either directly on the `azure.iot.IoTHub` resource, or using the `azure.iot.Route` resourcs - but the two cannot be used together. If both are used against the same IoTHub, spurious changes will occur.
@@ -1106,9 +1108,13 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

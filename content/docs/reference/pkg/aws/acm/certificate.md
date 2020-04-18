@@ -4,6 +4,8 @@ title: "Certificate"
 block_external_search_index: true
 ---
 
+
+
 The ACM certificate resource allows requesting and management of certificates
 from the Amazon Certificate Manager.
 
@@ -22,8 +24,10 @@ of this provider.
 It's recommended to specify `create_before_destroy = true` in a [lifecycle][1] block to replace a certificate
 which is currently in use (eg, by `aws.lb.Listener`).
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Certificate creation
 
 ```typescript
@@ -39,6 +43,8 @@ const cert = new aws.acm.Certificate("cert", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Importing an existing certificate
 
 ```typescript
@@ -69,13 +75,13 @@ const cert = new aws.acm.Certificate("cert", {
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## options Configuration Block
 
 Supported nested arguments for the `options` configuration block:
 
 * `certificate_transparency_logging_preference` - (Optional) Specifies whether certificate details should be added to a certificate transparency log. Valid values are `ENABLED` or `DISABLED`. See https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-transparency for more details.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/acm_certificate.html.markdown.
 
 
 
@@ -1884,9 +1890,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

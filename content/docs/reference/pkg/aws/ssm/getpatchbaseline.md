@@ -4,9 +4,13 @@ title: "GetPatchBaseline"
 block_external_search_index: true
 ---
 
+
+
 Provides an SSM Patch Baseline data source. Useful if you wish to reuse the default baselines provided.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 To retrieve a baseline provided by AWS:
 
@@ -35,7 +39,8 @@ const defaultCustom = pulumi.output(aws.ssm.getPatchBaseline({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ssm_patch_baseline.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

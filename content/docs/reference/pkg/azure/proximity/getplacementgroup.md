@@ -4,6 +4,8 @@ title: "GetPlacementGroup"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to access information about an existing Proximity Placement Group.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/proximity_placement_group.html.markdown.

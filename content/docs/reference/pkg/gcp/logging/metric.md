@@ -4,6 +4,8 @@ title: "Metric"
 block_external_search_index: true
 ---
 
+
+
 Logs-based metric can also be used to extract values from logs and create a a distribution
 of the values. The distribution records the statistics of the extracted values along with
 an optional histogram of the values as specified by the bucket options.
@@ -14,6 +16,86 @@ To get more information about Metric, see:
 * [API documentation](https://cloud.google.com/logging/docs/reference/v2/rest/v2/projects.metrics/create)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/logging/docs/apis)
+
+## Example Usage - Logging Metric Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const loggingMetric = new gcp.logging.Metric("logging_metric", {
+    bucketOptions: {
+        linearBuckets: {
+            numFiniteBuckets: 3,
+            offset: 1,
+            width: 1,
+        },
+    },
+    filter: "resource.type=gae_app AND severity>=ERROR",
+    labelExtractors: {
+        mass: "EXTRACT(jsonPayload.request)",
+        sku: "EXTRACT(jsonPayload.id)",
+    },
+    metricDescriptor: {
+        displayName: "My metric",
+        labels: [
+            {
+                description: "amount of matter",
+                key: "mass",
+                valueType: "STRING",
+            },
+            {
+                description: "Identifying number for item",
+                key: "sku",
+                valueType: "INT64",
+            },
+        ],
+        metricKind: "DELTA",
+        unit: "1",
+        valueType: "DISTRIBUTION",
+    },
+    valueExtractor: "EXTRACT(jsonPayload.request)",
+});
+```
+## Example Usage - Logging Metric Counter Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const loggingMetric = new gcp.logging.Metric("logging_metric", {
+    filter: "resource.type=gae_app AND severity>=ERROR",
+    metricDescriptor: {
+        metricKind: "DELTA",
+        valueType: "INT64",
+    },
+});
+```
+## Example Usage - Logging Metric Counter Labels
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const loggingMetric = new gcp.logging.Metric("logging_metric", {
+    filter: "resource.type=gae_app AND severity>=ERROR",
+    labelExtractors: {
+        mass: "EXTRACT(jsonPayload.request)",
+    },
+    metricDescriptor: {
+        labels: [{
+            description: "amount of matter",
+            key: "mass",
+            valueType: "STRING",
+        }],
+        metricKind: "DELTA",
+        valueType: "INT64",
+    },
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/logging_metric.html.markdown.
 
@@ -2204,9 +2286,13 @@ to specify a regex that does not include exactly one capture group.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

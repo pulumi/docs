@@ -4,6 +4,8 @@ title: "GetInstances"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to get IDs or IPs of Amazon EC2 instances to be referenced elsewhere,
 e.g. to allow easier migration from another management solution
 or to make it easier for an operator to connect through bastion host(s).
@@ -12,7 +14,9 @@ or to make it easier for an operator to connect through bastion host(s).
 instances (e.g. managed via autoscaling group), as the output may change at any time
 and you'd need to re-run `apply` every time an instance comes up or dies.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -39,7 +43,8 @@ for (let i = 0; i < testInstances.apply(testInstances => testInstances.ids.lengt
 }
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/instances.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

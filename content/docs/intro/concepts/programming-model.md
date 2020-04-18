@@ -138,31 +138,36 @@ func main() {
 {{% choosable language csharp %}}
 
 ```csharp
+using System.Threading.Tasks;
 using Pulumi;
 using Pulumi.Aws.Ec2;
 using Pulumi.Aws.Ec2.Inputs;
 
 class Program
 {
-    static Task<int> Main()
+    static Task<int> Main() => Deployment.RunAsync<MyStack>();
+}
+
+
+class MyStack : Stack
+{
+    public MyStack()
     {
-        return Deployment.RunAsync(async () => {
-            var group = new SecurityGroup("web-sg", new SecurityGroupArgs {
-                Description = "Enable HTTP access",
-                Ingress = {
-                    new SecurityGroupIngressArgs {
-                        Protocol = "tcp",
-                        FromPort = 80,
-                        ToPort = 80,
-                        CidrBlocks = { "0.0.0.0/0" }
-                    }
+        var group = new SecurityGroup("web-sg", new SecurityGroupArgs {
+            Description = "Enable HTTP access",
+            Ingress = {
+                new SecurityGroupIngressArgs {
+                    Protocol = "tcp",
+                    FromPort = 80,
+                    ToPort = 80,
+                    CidrBlocks = { "0.0.0.0/0" }
                 }
-            });
-            var server = new Instance("web-server", new InstanceArgs {
-                Ami = "ami-6869aa05",
-                InstanceType = "t2.micro",
-                SecurityGroups = { group.Name }
-            });
+            }
+        });
+        var server = new Instance("web-server", new InstanceArgs {
+            Ami = "ami-6869aa05",
+            InstanceType = "t2.micro",
+            SecurityGroups = { group.Name }
         });
     }
 }
@@ -223,12 +228,12 @@ pulumi.export('public_dns', server.public_dns)
 
 ```csharp
 // ...
-            return new Dictionary<string, object?> {
-                { "publicIp",  server.PublicIp },
-                { "publicDns",  server.PublicDns }
-            };
-        });
+        this.PublicIp = server.PublicIp;
+        this.PublicDns = server.PublicDns;
     }
+
+    [Output] Output<string> PublicIp { get; set; }
+    [Output] Output<string> PublicDns { get; set; }
 }
 ```
 
@@ -516,7 +521,7 @@ role, _ := iam.NewRole(ctx, "my-role", &iam.RoleArgs{
 ```csharp
 var role = new Aws.Iam.Role("my-role", new Aws.Iam.RoleArgs
     {
-        Name = "my-role-" + Deployment.Instance.ProjectName + "-" + Deployment.Instance.StackName,
+        Name = string.Format($"my-role-{Deployment.Instance.ProjectName}-{Deployment.Instance.StackName}"),
     },
     new CustomResourceOptions { DeleteBeforeReplace = true }
 );
@@ -773,7 +778,9 @@ db, err := NewDatabase(ctx, "db", &DatabaseArgs{ /*...*/ },
 
 ```csharp
 var db = new Database("db", new DatabaseArgs(),
-    new CustomResourceOptions { CustomTimeouts = new CustomTimeouts { Create = TimeSpan.FromMinutes(30) } });
+    new CustomResourceOptions {
+        CustomTimeouts = new CustomTimeouts { Create = TimeSpan.FromMinutes(30) }
+    });
 ```
 
 {{% /choosable %}}
@@ -880,7 +887,8 @@ res2, _ := NewMyResource(ctx, "res2", &MyResourceArgs{/*...*/}, pulumi.DependsOn
 
 ```csharp
 var res1 = new MyResource("res1", new MyResourceArgs());
-var res2 = new MyResource("res2", new MyResourceArgs(), new CustomResourceOptions { DependsOn = { res1 } });
+var res2 = new MyResource("res2", new MyResourceArgs(),
+    new CustomResourceOptions { DependsOn = { res1 } });
 ```
 
 {{% /choosable %}}
@@ -1197,7 +1205,8 @@ db, _ := NewDatabase(ctx, "db", &DatabaseArgs{}, pulumi.Protect(true));
 {{% choosable language csharp %}}
 
 ```csharp
-var db = new Database("db", new DatabaseArgs(), new CustomResourceOptions { Protect = true });
+var db = new Database("db", new DatabaseArgs(),
+    new CustomResourceOptions { Protect = true });
 ```
 
 {{% /choosable %}}
@@ -1246,7 +1255,8 @@ vpc, _ := ec2.NewVpc(ctx, "vpc", &ec2.VpcArgs{}, pulumi.Provider(provider))
 
 ```csharp
 var provider = new Aws.Provider("provider", new Aws.ProviderArgs { Region = "us-west-2" });
-var vpc = new Aws.Ec2.Vpc("vpc", new Aws.Ec2.VpcArgs(), new CustomResourceOptions { Provider = provider });
+var vpc = new Aws.Ec2.Vpc("vpc", new Aws.Ec2.VpcArgs(),
+    new CustomResourceOptions { Provider = provider });
 ```
 
 {{% /choosable %}}
@@ -1360,7 +1370,24 @@ var vpc = new MyVpcComponent("vpc", new ComponentResourceOptions
 
 {{< /chooser >}}
 
+{{% choosable language "typescript,javascript,python,go" %}}
 Transformations can also be applied in bulk to many resources in a stack by using the `registerStackTransformation` function.
+{{% /choosable %}}
+
+{{% choosable language "csharp" %}}
+Transformations can also be applied in bulk to many resources in a stack by using the `Stack` constructor's `StackOptions.ResourceTransformations` property:
+
+```csharp
+public class MyStack : Stack
+{
+    public MyStack() : base(new StackOptions { ResourceTransformations = ... })
+    {
+        ...
+    }
+}
+```
+
+{{% /choosable %}}
 
 ##### Resource Getter Functions {#resource-get}
 
@@ -1449,18 +1476,16 @@ using Pulumi;
 using Pulumi.Aws.Ec2;
 using Pulumi.Aws.Ec2.Inputs;
 
-class Program
+class MyStack : Stack
 {
-    static Task<int> Main()
+    public MyStack()
     {
-        return Deployment.RunAsync(async () => {
-            var group = SecurityGroup.Get("sg-0dfd33cdac25b1ec9");
+        var group = SecurityGroup.Get("sg-0dfd33cdac25b1ec9");
 
-            var server = new Instance("web-server", new InstanceArgs {
-                Ami = "ami-6869aa05",
-                InstanceType = "t2.micro",
-                SecurityGroups = { group.Name }
-            });
+        var server = new Instance("web-server", new InstanceArgs {
+            Ami = "ami-6869aa05",
+            InstanceType = "t2.micro",
+            SecurityGroups = { group.Name }
         });
     }
 }
@@ -2171,7 +2196,7 @@ url := pulumi.All(hostname, port).ApplyString(func (args []interface{}) string {
 {{% choosable language csharp %}}
 
 ```csharp
-var url = pulumi.Tuple(hostname, port).Apply(t => `http://{t.Item1}:{t.Item2}/`);
+var url = Output.Tuple(hostname, port).Apply(t => $"http://{t.Item1}:{t.Item2}/");
 ```
 
 {{% /choosable %}}
@@ -2216,7 +2241,7 @@ url := pulumi.Sprintf("http://%s:%d/", hostname, port)
 {{% choosable language csharp %}}
 
 ```csharp
-// Interpolate takes a JavaScript "template literal" and expands outputs correctly:
+// Format takes a FormattableString and expands outputs correctly:
 var url = Output.Format($"http://{hostname}:{port}/");
 ```
 
@@ -2465,15 +2490,18 @@ ctx.Export("url", resource.Url)
 {{% choosable language csharp %}}
 
 ```csharp
-// The dictionary returned by the function passed to Deployment.Run will be used to provide all the exported values.
-static Task Main() =>
-    Deployment.Run(async () =>
+public class MyStack : Stack
+{
+    public MyStack()
     {
-        return new Dictionary<string, object> {
-            { "url", resource.Url }
-        };
-    });
-```
+        ...
+        this.Url = resource.Url;
+    }
+
+    // 'url' is the output name. By default, it would take the property name 'Url'.
+    [Output("url")] Output<string> Url { get; set; }
+}
+ ```
 
 {{% /choosable %}}
 
@@ -2526,16 +2554,19 @@ ctx.Export("o", pulumi.Map(map[string]pulumi.Input{
 {{% choosable language csharp %}}
 
 ```csharp
-// The dictionary returned by the function passed to Deployment.Run will be used to provide all the exported values.
-static Task Main() =>
-    Deployment.Run(async () =>
+class MyStack : Stack
+{
+    [Output] public Output<string> x { get; set; }
+    [Output] public Output<ImmutableDictionary<string, int>> o { get; set; }
+
+    public MyStack()
     {
-        return new Dictionary<string, object>
-        {
-            { "x", "hello" },
-            { "o", new Dictionary<string, int> { { "num", 42 } } },
-        };
-    });
+        this.x = Output.Create("hello");
+        this.o = Output.Create(
+            new Dictionary<string, int> { { "num", 42 } }
+                .ToImmutableDictionary());
+    }
+}
 ```
 
 {{% /choosable %}}
@@ -2617,9 +2648,8 @@ otherOutput := other.GetOutput(pulumi.String("x"))
 {{% choosable language csharp %}}
 
 ```csharp
-// StackReference is not currently supported in .NET.
-//
-// https://github.com/pulumi/pulumi/issues/3406.
+var other = new StackReference("acmecorp/infra/other");
+var otherOutput = other.GetOutput("x");
 ```
 
 {{% /choosable %}}
@@ -2861,9 +2891,6 @@ vpc, err := ec2.NewInstance(ctx, "myInstance", &ec2.InstanceArgs{
 {{% choosable language csharp %}}
 
 ```csharp
-using Pulumi.Aws;
-
-// Inside call to Deployment.Run(...)
 var instance = new Aws.Ec2.Instance("myInstance", new Aws.Ec2.InstanceArgs
 {
     InstanceType = "t2.micro",
@@ -3013,40 +3040,30 @@ if err != nil {
 {{% choosable language csharp %}}
 
 ```csharp
-using Pulumi;
-using Pulumi.Aws;
+// Create an AWS provider for the us-east-1 region.
+var useast1 = new Aws.Provider("useast1", new Aws.ProviderArgs { Region = "us-east-1" });
 
-class Program
+// Create an ACM certificate in us-east-1.
+var cert = new Aws.Acm.Certificate("cert", new Aws.Acm.CertifiateArgs
 {
-   async Task Main() =>
-       Deployment.Run(() =>
-       {
-           // Create an AWS provider for the us-east-1 region.
-           var useast1 = new Aws.Provider("useast1", new Aws.ProviderArgs { Region = "us-east-1" });
+    DomainName = "foo.com",
+    ValidationMethod = "EMAIL",
+}, new ResourceArgs { Provider = useast1 });
 
-           // Create an ACM certificate in us-east-1.
-           var cert = new Aws.Acm.Certificate("cert", new Aws.Acm.CertifiateArgs
-           {
-               DomainName = "foo.com",
-               ValidationMethod = "EMAIL",
-           }, new ResourceArgs { Provider = useast1 });
-
-           // Create an ALB listener in the default region that references the ACM certificate created above.
-           var listener = new Aws.Lb.Listener("listener", new Aws.Lb.ListenerArgs
-           {
-               LoadBalancerArn = loadBalancerArn,
-               Port = 443,
-               Protocol = "HTTPS",
-               SslPolicy = "ELBSecurityPolicy-2016-08",
-               CertificateArn = cert.arn,
-               DefaultAction: new Aws.Lb.ListenerDefaultAction
-               {
-                   TargetGroupArn = targetGroupArn,
-                   Type = "forward",
-               },
-           });
-       });
-}
+// Create an ALB listener in the default region that references the ACM certificate created above.
+var listener = new Aws.Lb.Listener("listener", new Aws.Lb.ListenerArgs
+{
+    LoadBalancerArn = loadBalancerArn,
+    Port = 443,
+    Protocol = "HTTPS",
+    SslPolicy = "ELBSecurityPolicy-2016-08",
+    CertificateArn = cert.arn,
+    DefaultAction: new Aws.Lb.ListenerDefaultAction
+    {
+        TargetGroupArn = targetGroupArn,
+        Type = "forward",
+    },
+});
 ```
 
 {{% /choosable %}}
@@ -3139,10 +3156,10 @@ if err != nil {
 
 ```csharp
 using Pulumi;
-using Pulumi.Aws;
-using Pulumi.Kubernetes;
+using Aws = Pulumi.Aws;
+using Kubernetes = Pulumi.Kubernetes;
 
-class MyResource : pulumi.ComponentResource
+class MyResource : ComponentResource
 {
     public MyResource(string name, ComponentResourceOptions opts)
         : base(name, opts)
@@ -3152,15 +3169,17 @@ class MyResource : pulumi.ComponentResource
     }
 }
 
-class Program
+class MyStack
 {
-   async Task Main() =>
-       Deployment.Run(() =>
-       {
-           var useast1 = new Aws.Provider("useast1", new Aws.ProviderArgs { Region = "us-east-1" });
-           var myk8s = new Kubernetes.Provider("myk8s", new Kubernetes.ProviderArgs { Context = "test-ci" });
-           var myResource = new MyResource("myResource", new ComponentResourceOptions { Providers = { useast1, myk8s } });
-       });
+    public MyStack()
+    {
+        var useast1 = new Aws.Provider("useast1",
+            new Aws.ProviderArgs { Region = "us-east-1" });
+        var myk8s = new Kubernetes.Provider("myk8s",
+            new Kubernetes.ProviderArgs { Context = "test-ci" });
+        var myResource = new MyResource("myResource",
+            new ComponentResourceOptions { Providers = { useast1, myk8s } });
+    }
 }
 ```
 
@@ -3605,7 +3624,7 @@ This example generates a random number using a dynamic provider. It highlights u
 
 Implementing this example requires that we have a provider and resource type:
 
-{{< chooser language "javascript,typescript,python,go" >}}
+{{< chooser language "javascript,typescript,python,go,csharp" >}}
 
 {{% choosable language javascript %}}
 
@@ -3672,6 +3691,14 @@ class Random(Resource):
 
 ```go
 // Dynamic Providers are currently not supported in Go.
+```
+
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+
+```csharp
+// Dynamic Providers are currently not supported in .NET.
 ```
 
 {{% /choosable %}}
@@ -3850,8 +3877,6 @@ export("label_url", label.url)
 
 #### Additional Examples
 
-* [Enable Azure Storage’s Static Websites Feature](https://github.com/pulumi/examples/tree/master/azure-ts-static-website)
-    * The Azure resource provider does not support enabling the static website feature for a storage account. However, there is a REST API that can be called to enable the feature, so we can easily call the API from within the dynamic provider.
 * [Add a Custom Domain to an Azure CDN endpoint](https://github.com/pulumi/examples/tree/master/azure-ts-dynamicresource)
     * Similar to the previous example, this is another example of a shortcoming of the regular Azure resource provider available in Pulumi. However, due to the availability of a REST API, we can easily add a custom domain to an Azure CDN resource using a dynamic provider.
 * [Dynamic Providers as Provisioners](https://github.com/pulumi/examples/tree/master/aws-ts-ec2-provisioners)
@@ -3906,8 +3931,8 @@ stack := ctx.Stack()
 {{% choosable language csharp %}}
 
 ```csharp
-var project = Deployment.Instance.ProjectName
-var stack = Deployment.Instance.StackName
+var project = Deployment.Instance.ProjectName;
+var stack = Deployment.Instance.StackName;
 ```
 
 {{% /choosable %}}

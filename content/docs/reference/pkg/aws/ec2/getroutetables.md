@@ -4,9 +4,13 @@ title: "GetRouteTables"
 block_external_search_index: true
 ---
 
+
+
 This resource can be useful for getting back a list of route table ids to be referenced elsewhere.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 The following adds a route for a particular cidr block to every (private
 kops) route table in a specified vpc to use a particular vpc peering
@@ -33,7 +37,8 @@ for (let i = 0; i < rts.apply(rts => rts.ids.length); i++) {
 }
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route_tables.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

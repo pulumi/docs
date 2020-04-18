@@ -4,6 +4,8 @@ title: "GetScheduledQueryRulesLog"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to access the properties of a LogToMetricAction scheduled query rule.
 
 ## Example Usage
@@ -12,7 +14,7 @@ Use this data source to access the properties of a LogToMetricAction scheduled q
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = pulumi.output(azure.MonitorScheduledQueryRulesLog({
+const example = pulumi.output(azure.monitoring.getScheduledQueryRulesLog({
     name: "tfex-queryrule",
     resourceGroupName: "example-rg",
 }, { async: true }));

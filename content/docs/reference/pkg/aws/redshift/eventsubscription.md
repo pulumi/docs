@@ -4,9 +4,13 @@ title: "EventSubscription"
 block_external_search_index: true
 ---
 
+
+
 Provides a Redshift event subscription resource.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -34,6 +38,8 @@ const defaultEventSubscription = new aws.redshift.EventSubscription("default", {
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## Attributes
 
 The following additional atttributes are provided:
@@ -41,8 +47,6 @@ The following additional atttributes are provided:
 * `arn` - Amazon Resource Name (ARN) of the Redshift event notification subscription
 * `id` - The name of the Redshift event notification subscription
 * `customer_aws_id` - The AWS customer account associated with the Redshift event notification subscription
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/redshift_event_subscription.html.markdown.
 
 
 
@@ -1440,9 +1444,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

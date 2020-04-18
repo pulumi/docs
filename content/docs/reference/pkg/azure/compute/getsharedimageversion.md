@@ -4,6 +4,8 @@ title: "GetSharedImageVersion"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to access information about an existing Version of a Shared Image within a Shared Image Gallery.
 
 ## Example Usage

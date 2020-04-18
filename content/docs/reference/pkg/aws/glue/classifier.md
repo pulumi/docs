@@ -4,12 +4,16 @@ title: "Classifier"
 block_external_search_index: true
 ---
 
+
+
 Provides a Glue Classifier resource.
 
 > **NOTE:** It is only valid to create one type of classifier (csv, grok, JSON, or XML). Changing classifier types will recreate the classifier.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Csv Classifier
 
 ```typescript
@@ -31,6 +35,8 @@ const example = new aws.glue.Classifier("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Grok Classifier
 
 ```typescript
@@ -45,6 +51,8 @@ const example = new aws.glue.Classifier("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### JSON Classifier
 
 ```typescript
@@ -58,6 +66,8 @@ const example = new aws.glue.Classifier("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### XML Classifier
 
 ```typescript
@@ -72,7 +82,8 @@ const example = new aws.glue.Classifier("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_classifier.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1563,9 +1574,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

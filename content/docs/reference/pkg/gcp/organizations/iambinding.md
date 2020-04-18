@@ -4,6 +4,8 @@ title: "IAMBinding"
 block_external_search_index: true
 ---
 
+
+
 Allows creation and management of a single binding within IAM policy for
 an existing Google Cloud Platform Organization.
 
@@ -14,6 +16,19 @@ an existing Google Cloud Platform Organization.
 > **Note:** On create, this resource will overwrite members of any existing roles.
     Use `pulumi import` and inspect the `output to ensure
     your existing members are preserved.
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const binding = new gcp.organizations.IAMBinding("binding", {
+    members: ["user:alice@gmail.com"],
+    orgId: "123456789",
+    role: "roles/browser",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/google_organization_iam_binding.html.markdown.
 
@@ -1017,9 +1032,13 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

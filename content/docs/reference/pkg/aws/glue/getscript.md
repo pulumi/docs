@@ -4,10 +4,14 @@ title: "GetScript"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to generate a Glue script from a Directed Acyclic Graph (DAG).
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Generate Python Script
 
 ```typescript
@@ -103,6 +107,8 @@ const example = pulumi.all([aws_glue_catalog_database_source.name, aws_glue_cata
 export const pythonScript = example.pythonScript;
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Generate Scala Code
 
 ```typescript
@@ -198,7 +204,8 @@ const example = pulumi.all([aws_glue_catalog_database_source.name, aws_glue_cata
 export const scalaCode = example.scalaCode;
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/glue_script.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

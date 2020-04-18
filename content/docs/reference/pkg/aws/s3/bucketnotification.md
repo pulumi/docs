@@ -4,12 +4,16 @@ title: "BucketNotification"
 block_external_search_index: true
 ---
 
+
+
 Manages a S3 Bucket Notification Configuration. For additional information, see the [Configuring S3 Event Notifications section in the Amazon S3 Developer Guide](https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html).
 
 > **NOTE:** S3 Buckets only support a single notification configuration. Declaring multiple `aws.s3.BucketNotification` resources to the same S3 Bucket will cause a perpetual difference in configuration. See the example "Trigger multiple Lambda functions" for an option.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Add notification configuration to SNS Topic
 
 ```typescript
@@ -42,6 +46,8 @@ const bucketNotification = new aws.s3.BucketNotification("bucket_notification", 
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Add notification configuration to SQS Queue
 
 ```typescript
@@ -76,6 +82,8 @@ const bucketNotification = new aws.s3.BucketNotification("bucket_notification", 
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Add multiple notification configurations to SQS Queue
 
 ```typescript
@@ -119,7 +127,8 @@ const bucketNotification = new aws.s3.BucketNotification("bucket_notification", 
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/s3_bucket_notification.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1567,9 +1576,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

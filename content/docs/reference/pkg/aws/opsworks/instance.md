@@ -4,9 +4,13 @@ title: "Instance"
 block_external_search_index: true
 ---
 
+
+
 Provides an OpsWorks instance resource.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -21,6 +25,8 @@ const my_instance = new aws.opsworks.Instance("my-instance", {
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## Block devices
 
 Each of the `*_block_device` attributes controls a portion of the AWS
@@ -74,8 +80,6 @@ identified by the `virtual_name` in the format `"ephemeral{0..N}"`.
 resources cannot be automatically detected by this provider. After making updates
 to block device configuration, resource recreation can be manually triggered by
 using the [`up` command with the --replace argument](https://www.pulumi.com/docs/reference/cli/pulumi_up/).
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/opsworks_instance.html.markdown.
 
 
 
@@ -5639,9 +5643,14 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

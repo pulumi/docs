@@ -4,6 +4,8 @@ title: "NotificationChannel"
 block_external_search_index: true
 ---
 
+
+
 A NotificationChannel is a medium through which an alert is delivered
 when a policy violation is detected. Examples of channels include email, SMS,
 and third-party messaging applications. Fields containing sensitive information
@@ -28,6 +30,40 @@ To get more information about NotificationChannel, see:
 * How-to Guides
     * [Notification Options](https://cloud.google.com/monitoring/support/notification-options)
     * [Monitoring API Documentation](https://cloud.google.com/monitoring/api/v3/)
+
+## Example Usage - Notification Channel Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const basic = new gcp.monitoring.NotificationChannel("basic", {
+    displayName: "Test Notification Channel",
+    labels: {
+        email_address: "fake_email@blahblah.com",
+    },
+    type: "email",
+});
+```
+## Example Usage - Notification Channel Sensitive
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultNotificationChannel = new gcp.monitoring.NotificationChannel("default", {
+    displayName: "Test Slack Channel",
+    labels: {
+        channel_name: "#foobar",
+    },
+    sensitiveLabels: {
+        authToken: "one",
+    },
+    type: "slack",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/monitoring_notification_channel.html.markdown.
 
@@ -1819,9 +1855,13 @@ UpdateNotificationChannel operation. To change the value of this field, you must
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

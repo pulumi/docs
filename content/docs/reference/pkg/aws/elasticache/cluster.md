@@ -4,6 +4,8 @@ title: "Cluster"
 block_external_search_index: true
 ---
 
+
+
 Provides an ElastiCache Cluster resource, which manages a Memcached cluster or Redis instance.
 For working with Redis (Cluster Mode Enabled) replication groups, see the
 [`aws.elasticache.ReplicationGroup` resource](https://www.terraform.io/docs/providers/aws/r/elasticache_replication_group.html).
@@ -15,8 +17,10 @@ place. You can use the `apply_immediately` flag to instruct the service to apply
 change immediately. Using `apply_immediately` can result in a brief downtime as the server reboots.
 See the AWS Docs on [Modifying an ElastiCache Cache Cluster][2] for more information.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Memcached Cluster
 
 ```typescript
@@ -32,6 +36,8 @@ const example = new aws.elasticache.Cluster("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Redis Instance
 
 ```typescript
@@ -48,6 +54,8 @@ const example = new aws.elasticache.Cluster("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Redis Cluster Mode Disabled Read Replica Instance
 
 These inherit their settings from the replication group.
@@ -61,7 +69,8 @@ const replica = new aws.elasticache.Cluster("replica", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/elasticache_cluster.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -3575,9 +3584,14 @@ for the cache cluster.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

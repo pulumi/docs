@@ -4,6 +4,8 @@ title: "LocalNetworkGateway"
 block_external_search_index: true
 ---
 
+
+
 Manages a local network gateway connection over which specific connections can be configured.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/r/local_network_gateway.html.markdown.
@@ -1340,9 +1342,13 @@ BGP speaker.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

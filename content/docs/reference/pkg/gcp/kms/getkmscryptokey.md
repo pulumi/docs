@@ -4,6 +4,8 @@ title: "GetKMSCryptoKey"
 block_external_search_index: true
 ---
 
+
+
 Provides access to a Google Cloud Platform KMS CryptoKey. For more information see
 [the official documentation](https://cloud.google.com/kms/docs/object-hierarchy#key)
 and

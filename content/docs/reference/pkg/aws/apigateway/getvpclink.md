@@ -4,12 +4,16 @@ title: "GetVpcLink"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to get the id of a VPC Link in
 API Gateway. To fetch the VPC Link you must provide a name to match against. 
 As there is no unique name constraint on API Gateway VPC Links this data source will 
 error if there is more than one match.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -20,7 +24,8 @@ const myApiGatewayVpcLink = pulumi.output(aws.apigateway.getVpcLink({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/api_gateway_vpc_link.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

@@ -4,6 +4,8 @@ title: "OriginAccessIdentity"
 block_external_search_index: true
 ---
 
+
+
 Creates an Amazon CloudFront origin access identity.
 
 For information about CloudFront distributions, see the
@@ -11,7 +13,9 @@ For information about CloudFront distributions, see the
 origin access identities, see
 [Using an Origin Access Identity to Restrict Access to Your Amazon S3 Content][2].
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 The following example below creates a CloudFront origin access identity.
 
@@ -24,6 +28,8 @@ const originAccessIdentity = new aws.cloudfront.OriginAccessIdentity("origin_acc
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## Using With CloudFront
 
 Normally, when referencing an origin access identity in CloudFront, you need to
@@ -77,8 +83,6 @@ const example = new aws.s3.BucketPolicy("example", {
 [2]: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html
 [3]: https://www.terraform.io/docs/providers/aws/r/cloudfront_distribution.html
 [4]: https://www.terraform.io/docs/providers/aws/r/s3_bucket.html
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/cloudfront_origin_access_identity.html.markdown.
 
 
 
@@ -944,9 +948,14 @@ permission to an object in Amazon S3.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

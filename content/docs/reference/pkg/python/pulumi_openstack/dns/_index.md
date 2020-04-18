@@ -458,15 +458,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>attributes</strong> (<em>dict</em>) – Attributes of the DNS Service scheduler.</p></li>
+<li><p><strong>created_at</strong> (<em>str</em>) – The time the zone was created.</p></li>
 <li><p><strong>description</strong> (<em>str</em>) – A description of the zone.</p></li>
 <li><p><strong>email</strong> (<em>str</em>) – The email contact for the zone record.</p></li>
+<li><p><strong>masters</strong> (<em>list</em>) – An array of master DNS servers. When <code class="docutils literal notranslate"><span class="pre">type</span></code> is  <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The name of the zone.</p></li>
+<li><p><strong>pool_id</strong> (<em>str</em>) – The ID of the pool hosting the zone.</p></li>
+<li><p><strong>project_id</strong> (<em>str</em>) – The project ID that owns the zone.</p></li>
 <li><p><strong>region</strong> (<em>str</em>) – The region in which to obtain the V2 DNS client.
 A DNS client is needed to retrieve zone ids. If omitted, the
 <code class="docutils literal notranslate"><span class="pre">region</span></code> argument of the provider is used.</p></li>
+<li><p><strong>serial</strong> (<em>float</em>) – The serial number of the zone.</p></li>
 <li><p><strong>status</strong> (<em>str</em>) – The zone’s status.</p></li>
+<li><p><strong>transferred_at</strong> (<em>str</em>) – The time the zone was transferred.</p></li>
 <li><p><strong>ttl</strong> (<em>float</em>) – The time to live (TTL) of the zone.</p></li>
 <li><p><strong>type</strong> (<em>str</em>) – The type of the zone. Can either be <code class="docutils literal notranslate"><span class="pre">PRIMARY</span></code> or <code class="docutils literal notranslate"><span class="pre">SECONDARY</span></code>.</p></li>
+<li><p><strong>updated_at</strong> (<em>str</em>) – The time the zone was last updated.</p></li>
+<li><p><strong>version</strong> (<em>float</em>) – The version of the zone.</p></li>
 </ul>
 </dd>
 </dl>

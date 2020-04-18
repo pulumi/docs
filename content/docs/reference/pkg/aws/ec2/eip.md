@@ -4,13 +4,17 @@ title: "Eip"
 block_external_search_index: true
 ---
 
+
+
 Provides an Elastic IP resource.
 
 > **Note:** EIP may require IGW to exist prior to association. Use `depends_on` to set an explicit dependency on the IGW.
 
 > **Note:** Do not use `network_interface` to associate the EIP to `aws.lb.LoadBalancer` or `aws.ec2.NatGateway` resources. Instead use the `allocation_id` available in those resources to allow AWS to manage the association, otherwise you will see `AuthFailure` errors.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 Single EIP associated with an instance:
 
@@ -93,7 +97,8 @@ const byoip_ip = new aws.ec2.Eip("byoip-ip", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/eip.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -1587,9 +1592,14 @@ the Elastic IP address is associated with the primary private IP address.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

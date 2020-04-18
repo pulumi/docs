@@ -4,9 +4,13 @@ title: "JobDefinition"
 block_external_search_index: true
 ---
 
+
+
 Provides a Batch Job Definition resource.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -49,6 +53,8 @@ const test = new aws.batch.JobDefinition("test", {
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## retry_strategy
 
 `retry_strategy` supports the following:
@@ -60,8 +66,6 @@ const test = new aws.batch.JobDefinition("test", {
 `timeout` supports the following:
 
 * `attempt_duration_seconds` - (Optional) The time duration in seconds after which AWS Batch terminates your jobs if they have not finished. The minimum value for the timeout is `60` seconds.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/batch_job_definition.html.markdown.
 
 
 
@@ -1374,9 +1378,14 @@ Maximum number of `retry_strategy` is `1`.  Defined below.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

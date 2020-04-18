@@ -4,6 +4,8 @@ title: "FhirStoreIamBinding"
 block_external_search_index: true
 ---
 
+
+
 Three different resources help you manage your IAM policy for Healthcare FHIR store. Each of these resources serves a different use case:
 
 * `gcp.healthcare.FhirStoreIamPolicy`: Authoritative. Sets the IAM policy for the FHIR store and replaces any existing policy already attached.
@@ -13,6 +15,32 @@ Three different resources help you manage your IAM policy for Healthcare FHIR st
 > **Note:** `gcp.healthcare.FhirStoreIamPolicy` **cannot** be used in conjunction with `gcp.healthcare.FhirStoreIamBinding` and `gcp.healthcare.FhirStoreIamMember` or they will fight over what your policy should be.
 
 > **Note:** `gcp.healthcare.FhirStoreIamBinding` resources **can be** used in conjunction with `gcp.healthcare.FhirStoreIamMember` resources **only if** they do not grant privilege to the same role.
+
+## google\_healthcare\_fhir\_store\_iam\_binding
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const fhirStore = new gcp.healthcare.FhirStoreIamBinding("fhir_store", {
+    fhirStoreId: "your-fhir-store-id",
+    members: ["user:jane@example.com"],
+    role: "roles/editor",
+});
+```
+
+## google\_healthcare\_fhir\_store\_iam\_member
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const fhirStore = new gcp.healthcare.FhirStoreIamMember("fhir_store", {
+    fhirStoreId: "your-fhir-store-id",
+    member: "user:jane@example.com",
+    role: "roles/editor",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/healthcare_fhir_store_iam.html.markdown.
 
@@ -1040,9 +1068,13 @@ project setting will be used as a fallback.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

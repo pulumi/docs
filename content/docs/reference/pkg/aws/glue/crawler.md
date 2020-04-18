@@ -4,10 +4,14 @@ title: "Crawler"
 block_external_search_index: true
 ---
 
+
+
 Manages a Glue Crawler. More information can be found in the [AWS Glue Developer Guide](https://docs.aws.amazon.com/glue/latest/dg/add-crawler.html)
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### DynamoDB Target
 
 ```typescript
@@ -23,6 +27,8 @@ const example = new aws.glue.Crawler("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### JDBC Target
 
 ```typescript
@@ -39,6 +45,8 @@ const example = new aws.glue.Crawler("example", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### S3 Target
 
 ```typescript
@@ -55,6 +63,8 @@ const example = new aws.glue.Crawler("example", {
 ```
 
 
+{{% /example %}}
+{{% example %}}
 ### Catalog Target
 
 ```typescript
@@ -81,7 +91,8 @@ const example = new aws.glue.Crawler("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/glue_crawler.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -2683,9 +2694,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

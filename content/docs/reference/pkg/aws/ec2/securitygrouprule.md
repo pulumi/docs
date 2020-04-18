@@ -4,6 +4,8 @@ title: "SecurityGroupRule"
 block_external_search_index: true
 ---
 
+
+
 Provides a security group rule resource. Represents a single `ingress` or
 `egress` group rule, which can be added to external Security Groups.
 
@@ -18,6 +20,8 @@ a conflict of rule settings and will overwrite rules.
 
 > **NOTE:** Referencing Security Groups across VPC peering has certain restrictions. More information is available in the [VPC Peering User Guide](https://docs.aws.amazon.com/vpc/latest/peering/vpc-peering-security-groups.html).
 
+{{% examples %}}
+{{% /examples %}}
 ## Usage with prefix list IDs
 
 Prefix list IDs are manged by AWS internally. Prefix list IDs
@@ -39,8 +43,6 @@ const allowAll = new aws.ec2.SecurityGroupRule("allow_all", {
     type: "egress",
 });
 ```
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/security_group_rule.html.markdown.
 
 
 
@@ -1618,9 +1620,14 @@ or `egress` (outbound).
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

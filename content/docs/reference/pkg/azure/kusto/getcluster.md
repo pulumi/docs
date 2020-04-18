@@ -4,6 +4,8 @@ title: "GetCluster"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to access information about an existing Kusto (also known as Azure Data Explorer) Cluster
 
 ## Example Usage

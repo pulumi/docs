@@ -4,6 +4,8 @@ title: "Group"
 block_external_search_index: true
 ---
 
+
+
 The description of a dynamic collection of monitored resources. Each group
 has a filter that is matched against monitored resources and their
 associated metadata. If a group's filter matches an available monitored
@@ -15,6 +17,19 @@ To get more information about Group, see:
 * [API documentation](https://cloud.google.com/monitoring/api/ref_v3/rest/v3/projects.groups)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/monitoring/groups/)
+
+## Example Usage - Monitoring Group Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const basic = new gcp.monitoring.Group("basic", {
+    displayName: "tf-test MonitoringGroup",
+    filter: "resource.metadata.region=\"europe-west2\"",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/monitoring_group.html.markdown.
 
@@ -1006,9 +1021,13 @@ If it is not provided, the provider project is used.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

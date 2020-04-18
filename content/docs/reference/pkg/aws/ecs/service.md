@@ -4,14 +4,18 @@ title: "Service"
 block_external_search_index: true
 ---
 
+
+
 > **Note:** To prevent a race condition during service deletion, make sure to set `depends_on` to the related `aws.iam.RolePolicy`; otherwise, the policy may be destroyed too soon and the ECS service will then get stuck in the `DRAINING` state.
 
 Provides an ECS service - effectively a task that is expected to run until an error occurs or a user terminates it (typically a webserver or a database).
 
 See [ECS Services section in AWS developer guide](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html).
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Ignoring Changes to Desired Count
 
 You can use [`ignoreChanges`](https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges) to create an ECS service with an initial count of running instances, then ignore any changes to that count caused externally (e.g. Application Autoscaling).
@@ -26,6 +30,8 @@ const example = new aws.ecs.Service("example", {
 }, { ignoreChanges: ["desiredCount"] });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Daemon Scheduling Strategy
 
 ```typescript
@@ -39,6 +45,8 @@ const bar = new aws.ecs.Service("bar", {
 });
 ```
 
+{{% /example %}}
+{{% /examples %}}
 ## capacity_provider_strategy
 
 The `capacity_provider_strategy` configuration block supports the following:
@@ -105,8 +113,6 @@ For more information, see [Task Networking](https://docs.aws.amazon.com/AmazonEC
 * `port` - (Optional) The port value used if your Service Discovery service specified an SRV record.
 * `container_port` - (Optional) The port value, already specified in the task definition, to be used for your service discovery service.
 * `container_name` - (Optional) The container name value, already specified in the task definition, to be used for your service discovery service.
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/ecs_service.html.markdown.
 
 
 
@@ -3750,9 +3756,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

@@ -22,9 +22,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.directoryservice.ConditionalForwader">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directoryservice.</code><code class="sig-name descname">ConditionalForwader</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">directory_id=None</em>, <em class="sig-param">dns_ips=None</em>, <em class="sig-param">remote_domain_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.ConditionalForwader" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a conditional forwarder for managed Microsoft AD in AWS Directory Service.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_conditional_forwarder.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_conditional_forwarder.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -118,7 +115,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <blockquote>
 <div><p><strong>Note:</strong> All arguments including the password and customer username will be stored in the raw state as plain-text.
 <a class="reference external" href="https://www.terraform.io/docs/state/sensitive-data.html">Read more about sensitive data in state</a>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_directory.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_directory.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -421,9 +417,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.directoryservice.LogService">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.directoryservice.</code><code class="sig-name descname">LogService</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">directory_id=None</em>, <em class="sig-param">log_group_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.LogService" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Log subscription for AWS Directory Service that pushes logs to cloudwatch.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_log_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/directory_service_log_subscription.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -506,12 +499,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.directoryservice.get_directory">
 <code class="sig-prename descclassname">pulumi_aws.directoryservice.</code><code class="sig-name descname">get_directory</code><span class="sig-paren">(</span><em class="sig-param">directory_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.directoryservice.get_directory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get attributes of AWS Directory Service directory (SimpleAD, Managed AD, AD Connector). It’s especially useful to refer AWS Managed AD or on-premise AD in AD Connector configuration.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/directory_service_directory.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/directory_service_directory.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>directory_id</strong> (<em>str</em>) – The ID of the directory.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>directory_id</strong> (<em>str</em>) – The ID of the directory.</p></li>
+<li><p><strong>tags</strong> (<em>dict</em>) – A mapping of tags assigned to the directory/connector.</p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>

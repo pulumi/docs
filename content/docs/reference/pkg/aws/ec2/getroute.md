@@ -4,13 +4,17 @@ title: "GetRoute"
 block_external_search_index: true
 ---
 
+
+
 `aws.ec2.Route` provides details about a specific Route.
 
 This resource can prove useful when finding the resource
 associated with a CIDR. For example, finding the peering
 connection associated with a CIDR value.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 The following example shows how one might use a CIDR value to find a network interface id
 and use this to create a data source of that network interface.
@@ -34,7 +38,8 @@ const interfaceNetworkInterface = route.apply(route => aws.ec2.getNetworkInterfa
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/route.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

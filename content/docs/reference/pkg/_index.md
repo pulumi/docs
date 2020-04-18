@@ -21,13 +21,13 @@ Kubernetes cluster, and building and publishing containers to private registries
 Reference documentation and examples for major cloud providers.
 
 <div class="tiles">
-    <a class="tile" href="{{< relref "/docs/reference/pkg/aws" >}}">
+    <a class="tile flex-1 p-8" href="{{< relref "/docs/reference/pkg/aws" >}}">
         <img class="h-10 mx-auto" src="/logos/tech/aws.svg" alt="AWS">
     </a>
-    <a class="tile md:mx-4 my-4 md:my-0" href="{{< relref "/docs/reference/pkg/azure" >}}">
+    <a class="tile flex-1 p-8 md:mx-4 my-4 md:my-0" href="{{< relref "/docs/reference/pkg/azure" >}}">
         <img class="h-10 mx-auto" src="/logos/tech/azure.svg" alt="Azure">
     </a>
-    <a class="tile" href="{{< relref "/docs/reference/pkg/gcp" >}}">
+    <a class="tile flex-1 p-8" href="{{< relref "/docs/reference/pkg/gcp" >}}">
         <img class="h-10 mx-auto" src="/logos/tech/gcp.svg" alt="Google Cloud">
     </a>
 </div>
@@ -49,13 +49,14 @@ used across all cloud platforms:
 {{% choosable language "javascript,typescript" %}}
 * [**Pulumi SDK** (`@pulumi/pulumi`)]({{< relref "nodejs/pulumi/pulumi" >}})
 * [**Docker** (`@pulumi/docker`)]({{< relref "nodejs/pulumi/docker" >}})
-* [**Policy** (`@pulumi/policy`) <span class="badge badge-preview">PREVIEW</span>]({{< relref "nodejs/pulumi/policy" >}})
+* [**Policy** (`@pulumi/policy`)]({{< relref "nodejs/pulumi/policy" >}})
 * [**Random** (`@pulumi/random`)]({{< relref "nodejs/pulumi/random" >}})
 {{% /choosable %}}
 
 {{% choosable language python %}}
 * [**Pulumi SDK** (`pulumi`)]({{< relref "python/pulumi" >}})
 * [**Docker** (`pulumi_docker`)]({{< relref "python/pulumi_docker" >}})
+* [**Policy** (`pulumi_policy`) <span class="badge badge-preview">PREVIEW</span>]({{< relref "python/pulumi_policy" >}})
 * [**Random** (`pulumi_random`)]({{< relref "python/pulumi_random" >}})
 {{% /choosable %}}
 
@@ -155,10 +156,10 @@ Each cloud vendor has a dedicated package for deploying resources to it:
 
 {{% choosable language go %}}
 * [**AWS** (`aws`)](https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/go/aws)
-* [**Azure** (`azure`)](https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/go/azure)
+* [**Azure** (`azure`)](https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v2/go/azure)
     * [**Azure Active Directory** (`pulumi_azuread`)](https://pkg.go.dev/github.com/pulumi/pulumi-azuread/sdk/go/azuread)
-* [**Google Cloud** (`gcp`)](https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/go/gcp)
-* **Kubernetes** (`kubernetes`): Coming soon!
+* [**Google Cloud** (`gcp`)](https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v2/go/gcp)
+* [**Kubernetes** (`kubernetes`)](https://pkg.go.dev/github.com/pulumi/pulumi-kubernetes/sdk/go/kubernetes)
 * [**Aiven** (`aiven`)](https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/go/aiven)
 * [**Alibaba Cloud** (`alicloud`)](https://pkg.go.dev/github.com/pulumi/pulumi-alicloud/sdk/go/alicloud)
 * [**CloudAMQP** (`cloudamqp`)](https://pkg.go.dev/github.com/pulumi/pulumi-cloudamqp/sdk/go/cloudamqp)

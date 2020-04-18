@@ -4,6 +4,8 @@ title: "GetDatabase"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to access information about an existing SQL database.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/mssql_database.html.markdown.

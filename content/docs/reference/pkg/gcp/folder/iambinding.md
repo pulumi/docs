@@ -4,6 +4,8 @@ title: "IAMBinding"
 block_external_search_index: true
 ---
 
+
+
 Allows creation and management of a single binding within IAM policy for
 an existing Google Cloud Platform folder.
 
@@ -1089,9 +1091,13 @@ Each entry can have one of the following values:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

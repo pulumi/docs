@@ -4,6 +4,8 @@ title: "GetKMSSecretCiphertext"
 block_external_search_index: true
 ---
 
+
+
 !> **Warning:** This data source is deprecated. Use the `gcp.kms.SecretCiphertext` **resource** instead.
 
 This data source allows you to encrypt data with Google Cloud KMS and use the

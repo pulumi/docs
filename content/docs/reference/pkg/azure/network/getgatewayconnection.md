@@ -4,6 +4,8 @@ title: "GetGatewayConnection"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to access information about an existing Virtual Network Gateway Connection.
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azurerm/blob/master/website/docs/d/virtual_network_gateway_connection.html.markdown.

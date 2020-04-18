@@ -1,5 +1,5 @@
 ---
-title: "azuread"
+title: "Azure AD"
 block_external_search_index: true
 menu:
     reference:
@@ -18,33 +18,34 @@ A Pulumi package for creating and managing azuread cloud resources.
 
 <h3>Resources</h3>
 <ul class="api">
-    <li><a href="application"><span class="symbol resource"></span>Application</a></li>
-    <li><a href="applicationpassword"><span class="symbol resource"></span>ApplicationPassword</a></li>
-    <li><a href="group"><span class="symbol resource"></span>Group</a></li>
-    <li><a href="groupmember"><span class="symbol resource"></span>GroupMember</a></li>
-    <li><a href="provider"><span class="symbol resource"></span>Provider</a></li>
-    <li><a href="serviceprincipal"><span class="symbol resource"></span>ServicePrincipal</a></li>
-    <li><a href="serviceprincipalpassword"><span class="symbol resource"></span>ServicePrincipalPassword</a></li>
-    <li><a href="user"><span class="symbol resource"></span>User</a></li>
+    <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
+    <li><a href="applicationpassword" title="ApplicationPassword"><span class="symbol resource"></span>ApplicationPassword</a></li>
+    <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
+    <li><a href="groupmember" title="GroupMember"><span class="symbol resource"></span>GroupMember</a></li>
+    <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
+    <li><a href="serviceprincipal" title="ServicePrincipal"><span class="symbol resource"></span>ServicePrincipal</a></li>
+    <li><a href="serviceprincipalpassword" title="ServicePrincipalPassword"><span class="symbol resource"></span>ServicePrincipalPassword</a></li>
+    <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
 </ul>
 
 <h3>Functions</h3>
 <ul class="api">
-    <li><a href="getapplication"><span class="symbol datasource"></span>GetApplication</a></li>
-    <li><a href="getclientconfig"><span class="symbol datasource"></span>GetClientConfig</a></li>
-    <li><a href="getdomains"><span class="symbol datasource"></span>GetDomains</a></li>
-    <li><a href="getgroup"><span class="symbol datasource"></span>GetGroup</a></li>
-    <li><a href="getgroups"><span class="symbol datasource"></span>GetGroups</a></li>
-    <li><a href="getserviceprincipal"><span class="symbol datasource"></span>GetServicePrincipal</a></li>
-    <li><a href="getuser"><span class="symbol datasource"></span>GetUser</a></li>
-    <li><a href="getusers"><span class="symbol datasource"></span>GetUsers</a></li>
+    <li><a href="getapplication" title="GetApplication"><span class="symbol function"></span>GetApplication</a></li>
+    <li><a href="getclientconfig" title="GetClientConfig"><span class="symbol function"></span>GetClientConfig</a></li>
+    <li><a href="getdomains" title="GetDomains"><span class="symbol function"></span>GetDomains</a></li>
+    <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
+    <li><a href="getgroups" title="GetGroups"><span class="symbol function"></span>GetGroups</a></li>
+    <li><a href="getserviceprincipal" title="GetServicePrincipal"><span class="symbol function"></span>GetServicePrincipal</a></li>
+    <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
+    <li><a href="getusers" title="GetUsers"><span class="symbol function"></span>GetUsers</a></li>
 </ul>
 
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
-	<dd>https://github.com/pulumi/pulumi-azuread</dd>
+	<dd><a href="https://github.com/pulumi/pulumi-azuread">https://github.com/pulumi/pulumi-azuread</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
+    
 </dl>
 

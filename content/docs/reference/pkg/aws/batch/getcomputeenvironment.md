@@ -4,10 +4,14 @@ title: "GetComputeEnvironment"
 block_external_search_index: true
 ---
 
+
+
 The Batch Compute Environment data source allows access to details of a specific
 compute environment within AWS Batch.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -18,7 +22,8 @@ const batch_mongo = pulumi.output(aws.batch.getComputeEnvironment({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/batch_compute_environment.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

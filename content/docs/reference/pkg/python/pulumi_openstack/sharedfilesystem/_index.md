@@ -1097,6 +1097,7 @@ length.</p></li>
 <li><p><strong>metadata</strong> (<em>dict</em>) – One or more metadata key and value pairs as a dictionary of
 strings.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The name of the share.</p></li>
+<li><p><strong>region</strong> (<em>str</em>) – The region in which to obtain the V2 Shared File System client.</p></li>
 <li><p><strong>share_network_id</strong> (<em>str</em>) – The UUID of the share’s share network.</p></li>
 <li><p><strong>snapshot_id</strong> (<em>str</em>) – The UUID of the share’s base snapshot.</p></li>
 <li><p><strong>status</strong> (<em>str</em>) – A share status filter. A valid value is <code class="docutils literal notranslate"><span class="pre">creating</span></code>,
@@ -1150,6 +1151,7 @@ the share network.</p></li>
 <li><p><strong>description</strong> (<em>str</em>) – The human-readable description of the snapshot.</p></li>
 <li><p><strong>name</strong> (<em>str</em>) – The name of the snapshot.</p></li>
 <li><p><strong>region</strong> (<em>str</em>) – The region in which to obtain the V2 Shared File System client.</p></li>
+<li><p><strong>share_id</strong> (<em>str</em>) – The UUID of the source share that was used to create the snapshot.</p></li>
 <li><p><strong>status</strong> (<em>str</em>) – A snapshot status filter. A valid value is <code class="docutils literal notranslate"><span class="pre">available</span></code>, <code class="docutils literal notranslate"><span class="pre">error</span></code>,
 <code class="docutils literal notranslate"><span class="pre">creating</span></code>, <code class="docutils literal notranslate"><span class="pre">deleting</span></code>, <code class="docutils literal notranslate"><span class="pre">manage_starting</span></code>, <code class="docutils literal notranslate"><span class="pre">manage_error</span></code>, <code class="docutils literal notranslate"><span class="pre">unmanage_starting</span></code>,
 <code class="docutils literal notranslate"><span class="pre">unmanage_error</span></code> or <code class="docutils literal notranslate"><span class="pre">error_deleting</span></code>.</p></li>

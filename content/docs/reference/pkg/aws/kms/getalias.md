@@ -4,11 +4,15 @@ title: "GetAlias"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to get the ARN of a KMS key alias.
 By using this data source, you can reference key alias
 without having to hard code the ARN as input.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -19,7 +23,8 @@ const s3 = pulumi.output(aws.kms.getAlias({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/kms_alias.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

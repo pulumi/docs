@@ -4,10 +4,14 @@ title: "Certificate"
 block_external_search_index: true
 ---
 
+
+
 Creates and manages an AWS IoT certificate.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### With CSR
 
 ```typescript
@@ -21,6 +25,8 @@ const cert = new aws.iot.Certificate("cert", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Without CSR
 
 ```typescript
@@ -32,7 +38,8 @@ const cert = new aws.iot.Certificate("cert", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/iot_certificate.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -926,9 +933,14 @@ for more information on generating keys and a certificate.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

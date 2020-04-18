@@ -4,9 +4,13 @@ title: "GetDetector"
 block_external_search_index: true
 ---
 
+
+
 Retrieve information about a GuardDuty detector.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -15,7 +19,8 @@ import * as aws from "@pulumi/aws";
 const example = pulumi.output(aws.guardduty.getDetector({ async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/guardduty_detector.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

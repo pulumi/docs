@@ -4,11 +4,15 @@ title: "GetVpcEndpointService"
 block_external_search_index: true
 ---
 
+
+
 The VPC Endpoint Service data source details about a specific service that
 can be specified when creating a VPC endpoint within the region configured in the provider.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### AWS Service
 
 ```typescript
@@ -30,6 +34,8 @@ const ep = new aws.ec2.VpcEndpoint("ep", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Non-AWS Service
 
 ```typescript
@@ -41,6 +47,8 @@ const custome = pulumi.output(aws.ec2.getVpcEndpointService({
 }, { async: true }));
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Filter
 
 ```typescript
@@ -55,7 +63,8 @@ const test = pulumi.output(aws.ec2.getVpcEndpointService({
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/vpc_endpoint_service.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

@@ -17,9 +17,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dt id="pulumi_aws.inspector.AssessmentTarget">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.inspector.</code><code class="sig-name descname">AssessmentTarget</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_arn=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.inspector.AssessmentTarget" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Inspector assessment target</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/inspector_assessment_target.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/inspector_assessment_target.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -107,11 +104,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.inspector.AssessmentTemplate">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.inspector.</code><code class="sig-name descname">AssessmentTemplate</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">duration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rules_package_arns=None</em>, <em class="sig-param">target_arn=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.inspector.AssessmentTemplate" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.inspector.</code><code class="sig-name descname">AssessmentTemplate</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">duration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rules_package_arns=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_arn=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.inspector.AssessmentTemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Inspector assessment template</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/inspector_assessment_template.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/inspector_assessment_template.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -120,6 +114,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>duration</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The duration of the inspector run.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the assessment template.</p></li>
 <li><p><strong>rules_package_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The rules to be used during the run.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of tags for the Inspector assessment template.</p></li>
 <li><p><strong>target_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The assessment target ARN to attach the template to.</p></li>
 </ul>
 </dd>
@@ -149,6 +144,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.inspector.AssessmentTemplate.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.inspector.AssessmentTemplate.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Key-value mapping of tags for the Inspector assessment template.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.inspector.AssessmentTemplate.target_arn">
 <code class="sig-name descname">target_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.inspector.AssessmentTemplate.target_arn" title="Permalink to this definition">¶</a></dt>
 <dd><p>The assessment target ARN to attach the template to.</p>
@@ -156,7 +157,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_aws.inspector.AssessmentTemplate.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">duration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rules_package_arns=None</em>, <em class="sig-param">target_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.inspector.AssessmentTemplate.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">duration=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">rules_package_arns=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">target_arn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.inspector.AssessmentTemplate.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing AssessmentTemplate resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -169,6 +170,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>duration</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The duration of the inspector run.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the assessment template.</p></li>
 <li><p><strong>rules_package_arns</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The rules to be used during the run.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Key-value mapping of tags for the Inspector assessment template.</p></li>
 <li><p><strong>target_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The assessment target ARN to attach the template to.</p></li>
 </ul>
 </dd>
@@ -240,9 +242,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_aws.inspector.ResourceGroup">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.inspector.</code><code class="sig-name descname">ResourceGroup</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.inspector.ResourceGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Amazon Inspector resource group resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/inspector_resource_group.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/inspector_resource_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -327,9 +326,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>The AWS Inspector Rules Packages data source allows access to the list of AWS
 Inspector Rules Packages which can be used by AWS Inspector within the region
 configured in the provider.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/inspector_rules_packages.html.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/inspector_rules_packages.html.markdown</a>.</p>
-</div></blockquote>
 </dd></dl>
 
 </div>

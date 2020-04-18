@@ -4,9 +4,13 @@ title: "GetDefaultKmsKey"
 block_external_search_index: true
 ---
 
+
+
 Use this data source to get the default EBS encryption KMS key in the current region.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -20,7 +24,8 @@ const example = new aws.ebs.Volume("example", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ebs_default_kms_key.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

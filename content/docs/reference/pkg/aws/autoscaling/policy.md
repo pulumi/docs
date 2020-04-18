@@ -4,6 +4,8 @@ title: "Policy"
 block_external_search_index: true
 ---
 
+
+
 Provides an AutoScaling Scaling Policy resource.
 
 > **NOTE:** You may want to omit `desired_capacity` attribute from attached `aws.autoscaling.Group`
@@ -12,7 +14,9 @@ when using autoscaling policies. It's good practice to pick either
 or [dynamic](https://docs.aws.amazon.com/AutoScaling/latest/DeveloperGuide/as-scale-based-on-demand.html)
 (policy-based) scaling.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -35,7 +39,8 @@ const bat = new aws.autoscaling.Policy("bat", {
 });
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/autoscaling_policy.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -2485,9 +2490,14 @@ up. A negative value scales down.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

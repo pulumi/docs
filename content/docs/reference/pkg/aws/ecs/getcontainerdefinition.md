@@ -4,10 +4,14 @@ title: "GetContainerDefinition"
 block_external_search_index: true
 ---
 
+
+
 The ECS container definition data source allows access to details of
 a specific container within an AWS ECS service.
 
+{{% examples %}}
 ## Example Usage
+{{% example %}}
 
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
@@ -19,7 +23,8 @@ const ecs_mongo = aws_ecs_task_definition_mongo.id.apply(id => aws.ecs.getContai
 }, { async: true }));
 ```
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/d/ecs_container_definition.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 

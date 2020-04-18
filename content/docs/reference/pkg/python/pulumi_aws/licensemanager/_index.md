@@ -19,7 +19,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Provides a License Manager association.</p>
 <blockquote>
 <div><p><strong>Note:</strong> License configurations can also be associated with launch templates by specifying the <code class="docutils literal notranslate"><span class="pre">license_specifications</span></code> block for an <code class="docutils literal notranslate"><span class="pre">ec2.LaunchTemplate</span></code>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/licensemanager_association.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/licensemanager_association.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -116,9 +115,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><code class="docutils literal notranslate"><span class="pre">maximumSockets</span></code> - Resource must have maximum socket count in order to use the license. Default: unbounded, limit: 10000</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowedTenancy</span></code> - Defines where the license can be used. If set, restricts license usage to selected tenancies. Specify a comma delimited list of <code class="docutils literal notranslate"><span class="pre">EC2-Default</span></code>, <code class="docutils literal notranslate"><span class="pre">EC2-DedicatedHost</span></code>, <code class="docutils literal notranslate"><span class="pre">EC2-DedicatedInstance</span></code></p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/licensemanager_license_configuration.markdown">https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/licensemanager_license_configuration.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

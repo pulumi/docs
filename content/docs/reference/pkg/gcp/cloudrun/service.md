@@ -4,6 +4,8 @@ title: "Service"
 block_external_search_index: true
 ---
 
+
+
 Service acts as a top-level container that manages a set of Routes and
 Configurations which implement a network service. Service exists to provide a
 singular abstraction which can be access controlled, reasoned about, and
@@ -24,6 +26,92 @@ To get more information about Service, see:
 * [API documentation](https://cloud.google.com/run/docs/reference/rest/v1/projects.locations.services)
 * How-to Guides
     * [Official Documentation](https://cloud.google.com/run/docs/)
+
+## Example Usage - Cloud Run Service Basic
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultService = new gcp.cloudrun.Service("default", {
+    location: "us-central1",
+    template: {
+        spec: {
+            containers: [{
+                image: "gcr.io/cloudrun/hello",
+            }],
+        },
+    },
+    traffics: [{
+        latestRevision: true,
+        percent: 100,
+    }],
+});
+```
+## Example Usage - Cloud Run Service Sql
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.sql.DatabaseInstance("instance", {
+    region: "us-east1",
+    settings: {
+        tier: "db-f1-micro",
+    },
+});
+const defaultService = new gcp.cloudrun.Service("default", {
+    location: "us-central1",
+    template: {
+        metadata: {
+            annotations: {
+                "autoscaling.knative.dev/maxScale": "1000",
+                "run.googleapis.com/client-name": "cloud-console",
+                "run.googleapis.com/cloudsql-instances": pulumi.interpolate`my-project-name:us-central1:${instance.name}`,
+            },
+        },
+        spec: {
+            containers: [{
+                image: "gcr.io/cloudrun/hello",
+            }],
+        },
+    },
+});
+```
+## Example Usage - Cloud Run Service Multiple Environment Variables
+
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const defaultService = new gcp.cloudrun.Service("default", {
+    location: "us-central1",
+    template: {
+        spec: {
+            containers: [{
+                envs: [
+                    {
+                        name: "SOURCE",
+                        value: "remote",
+                    },
+                    {
+                        name: "TARGET",
+                        value: "home",
+                    },
+                ],
+                image: "gcr.io/cloudrun/hello",
+            }],
+        },
+    },
+    traffics: [{
+        latestRevision: true,
+        percent: 100,
+    }],
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/r/cloud_run_service.html.markdown.
 
@@ -3541,9 +3629,13 @@ source.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

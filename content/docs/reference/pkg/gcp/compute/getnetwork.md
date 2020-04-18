@@ -4,7 +4,20 @@ title: "GetNetwork"
 block_external_search_index: true
 ---
 
+
+
 Get a network within GCE from its name.
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const my_network = pulumi.output(gcp.compute.getNetwork({
+    name: "default-us-east1",
+}, { async: true }));
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-google/blob/master/website/docs/d/datasource_compute_network.html.markdown.
 

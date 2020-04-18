@@ -1862,8 +1862,8 @@ LB pool.</p></li>
 <li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network on which the members of the pool will be
 located. Only members that are on this network can be added to the pool.
 Changing this creates a new pool.</p></li>
-<li><p><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the pool. Required if admin wants to
-create a pool member for another tenant. Changing this creates a new pool.</p></li>
+<li><p><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the member. Required if admin wants to
+create a pool member for another tenant. Changing this creates a new member.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1923,8 +1923,8 @@ Changing this creates a new pool.</p>
 <dl class="attribute">
 <dt id="pulumi_openstack.loadbalancer.PoolV1.tenant_id">
 <code class="sig-name descname">tenant_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_openstack.loadbalancer.PoolV1.tenant_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>The owner of the pool. Required if admin wants to
-create a pool member for another tenant. Changing this creates a new pool.</p>
+<dd><p>The owner of the member. Required if admin wants to
+create a pool member for another tenant. Changing this creates a new member.</p>
 </dd></dl>
 
 <dl class="method">
@@ -1956,8 +1956,8 @@ LB pool.</p></li>
 <li><p><strong>subnet_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The network on which the members of the pool will be
 located. Only members that are on this network can be added to the pool.
 Changing this creates a new pool.</p></li>
-<li><p><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the pool. Required if admin wants to
-create a pool member for another tenant. Changing this creates a new pool.</p></li>
+<li><p><strong>tenant_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The owner of the member. Required if admin wants to
+create a pool member for another tenant. Changing this creates a new member.</p></li>
 </ul>
 </dd>
 </dl>

@@ -4,9 +4,25 @@ title: "User"
 block_external_search_index: true
 ---
 
+
+
 Manages a User within Azure Active Directory.
 
 > **NOTE:** If you're authenticating using a Service Principal then it must have permissions to `Directory.ReadWrite.All` within the `Windows Azure Active Directory` API.
+
+## Example Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azuread from "@pulumi/azuread";
+
+const example = new azuread.User("example", {
+    displayName: "J. Doe",
+    mailNickname: "jdoe",
+    password: "SecretP@sswd99!",
+    userPrincipalName: "jdo@hashicorp.com",
+});
+```
 
 > This content is derived from https://github.com/terraform-providers/terraform-provider-azuread/blob/master/website/docs/r/user.html.markdown.
 
@@ -1502,9 +1518,13 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azuread">https://github.com/pulumi/pulumi-azuread</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    
+</dl>
+

@@ -4,6 +4,8 @@ title: "Project"
 block_external_search_index: true
 ---
 
+
+
 Provides a resource to manage AWS Device Farm Projects. 
 Please keep in mind that this feature is only supported on the "us-west-2" region.
 This resource will error if you try to create a project in another region.
@@ -20,8 +22,6 @@ import * as aws from "@pulumi/aws";
 
 const awesomeDevices = new aws.devicefarm.Project("awesome_devices", {});
 ```
-
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/devicefarm_project.html.markdown.
 
 
 
@@ -543,9 +543,14 @@ The following state arguments are supported:
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

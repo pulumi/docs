@@ -4,6 +4,8 @@ title: "VpcEndpoint"
 block_external_search_index: true
 ---
 
+
+
 Provides a VPC Endpoint resource.
 
 > **NOTE on VPC Endpoints and VPC Endpoint Associations:** This provider provides both standalone VPC Endpoint Associations for
@@ -13,8 +15,10 @@ a VPC Endpoint resource with `route_table_ids` and `subnet_ids` attributes.
 Do not use the same resource ID in both a VPC Endpoint resource and a VPC Endpoint Association resource.
 Doing so will cause a conflict of associations and will overwrite the association.
 
+{{% examples %}}
 ## Example Usage
 
+{{% example %}}
 ### Basic
 
 ```typescript
@@ -27,6 +31,8 @@ const s3 = new aws.ec2.VpcEndpoint("s3", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Basic w/ Tags
 
 ```typescript
@@ -42,6 +48,8 @@ const s3 = new aws.ec2.VpcEndpoint("s3", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Interface Endpoint Type
 
 ```typescript
@@ -57,6 +65,8 @@ const ec2 = new aws.ec2.VpcEndpoint("ec2", {
 });
 ```
 
+{{% /example %}}
+{{% example %}}
 ### Non-AWS Service
 
 ```typescript
@@ -87,7 +97,8 @@ const ptfeServiceRecord = new aws.route53.Record("ptfe_service", {
 
 > **NOTE The `dns_entry` output is a list of maps:** This provider interpolation support for lists of maps requires the `lookup` and `[]` until full support of lists of maps is available
 
-> This content is derived from https://github.com/terraform-providers/terraform-provider-aws/blob/master/website/docs/r/vpc_endpoint.html.markdown.
+{{% /example %}}
+{{% /examples %}}
 
 
 
@@ -2145,9 +2156,14 @@ Defaults to `false`.
 
 
 
+
 <h3>Package Details</h3>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
 	<dt>License</dt>
-	<dd>Apache-2.0</dd></dl>
+	<dd>Apache-2.0</dd>
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+</dl>
+

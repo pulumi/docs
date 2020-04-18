@@ -4,6 +4,8 @@ title: "GetKMSSecret"
 block_external_search_index: true
 ---
 
+
+
 This data source allows you to use data encrypted with Google Cloud KMS
 within your resource definitions.
 
