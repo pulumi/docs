@@ -191,7 +191,13 @@ const myExtension = new postgresql.Extension("my_extension", {});
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## Extension Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The Extension resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -372,6 +378,9 @@ const myExtension = new postgresql.Extension("my_extension", {});
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. The Extension resource does not produce any additional output properties.
 
 
 

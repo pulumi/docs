@@ -215,7 +215,13 @@ const mySchema = new postgresql.Schema("my_schema", {
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## Schema Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The Schema resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -476,6 +482,9 @@ policy block supports fields documented below.
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. The Schema resource does not produce any additional output properties.
 
 
 
