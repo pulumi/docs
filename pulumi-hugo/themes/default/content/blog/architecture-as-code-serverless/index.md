@@ -2,11 +2,11 @@
 title: "Architecture as Code: Serverless"
 date: 2020-04-20
 meta_desc: "Serverless can benefit from reusable resources created by infrastructure as code."
-meta_image: meta.png
+meta_image: serverless.png
 authors:
     - sophia-parafina
 tags:
-    - change-me
+    - serverless
 ---
 
 In this fourth installment of Architecture as Code series, we’ll take a look at serverless, an architectural pattern that has quickly gained popularity among cloud practitioners. There are two reasons why serverless usage has proliferated: a cost-saving pay as you go model and elasticity that goes from zero to as many as needed to complete the task without managing servers.
@@ -161,7 +161,7 @@ Despite the many advantages of serverless, one of the challenges of serverless i
 - scheduled profile is warming scheduled during peak use
 - autoscaling based utilization adds workers by measuring utilization
 
-Deploying infrastructure with code let’s implement these [strategies]({{< relref “/blog/aws-lambda-provisioned-concurrency-no-cold-starts” >}}) attuned to your application requirements. A [worked example](https://github.com/pulumi/examples/tree/master/aws-ts-serverless-raw) is available on Github.
+Deploying infrastructure with code let’s implement these [strategies]({{< relref "/blog/aws-lambda-provisioned-concurrency-no-cold-starts" >}}) attuned to your application requirements. A [worked example](https://github.com/pulumi/examples/tree/master/aws-ts-serverless-raw) is available on Github.
 
 ## Conclusion
 
