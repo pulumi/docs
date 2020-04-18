@@ -17,7 +17,7 @@ resources.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const foo = aws.ec2.getInstance({
+const foo = pulumi.output(aws.ec2.getInstance({
     filters: [
         {
             name: "image-id",
@@ -29,7 +29,7 @@ const foo = aws.ec2.getInstance({
         },
     ],
     instanceId: "i-instanceid",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -39,7 +39,7 @@ const foo = aws.ec2.getInstance({
 
 
 
-## Using GetInstance
+## Using GetInstance {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -333,7 +333,7 @@ exactly match a pair on the desired Instance.
 
 
 
-## GetInstance Result
+## GetInstance Result {#result}
 
 The following output properties are available:
 
@@ -1744,7 +1744,8 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 ## Supporting Types
 
-<h4>Get<wbr>Instance<wbr>Credit<wbr>Specification</h4>
+
+<h4 id="getinstancecreditspecification">Get<wbr>Instance<wbr>Credit<wbr>Specification</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstanceCreditSpecification">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1819,7 +1820,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 
 
-<h4>Get<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device</h4>
+<h4 id="getinstanceebsblockdevice">Get<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstanceEbsBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2178,7 +2179,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 
 
-<h4>Get<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device</h4>
+<h4 id="getinstanceephemeralblockdevice">Get<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstanceEphemeralBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2329,7 +2330,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 
 
-<h4>Get<wbr>Instance<wbr>Filter</h4>
+<h4 id="getinstancefilter">Get<wbr>Instance<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetInstanceFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstanceFilter">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2436,7 +2437,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 
 
-<h4>Get<wbr>Instance<wbr>Metadata<wbr>Option</h4>
+<h4 id="getinstancemetadataoption">Get<wbr>Instance<wbr>Metadata<wbr>Option</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstanceMetadataOption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2587,7 +2588,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 
 
-<h4>Get<wbr>Instance<wbr>Root<wbr>Block<wbr>Device</h4>
+<h4 id="getinstancerootblockdevice">Get<wbr>Instance<wbr>Root<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstanceRootBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}

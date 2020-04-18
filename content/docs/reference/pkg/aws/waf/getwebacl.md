@@ -16,9 +16,9 @@ block_external_search_index: true
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.waf.getWebAcl({
+const example = pulumi.output(aws.waf.getWebAcl({
     name: "tfWAFWebACL",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const example = aws.waf.getWebAcl({
 
 
 
-## Using GetWebAcl
+## Using GetWebAcl {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -130,7 +130,7 @@ The following arguments are supported:
 
 
 
-## GetWebAcl Result
+## GetWebAcl Result {#result}
 
 The following output properties are available:
 

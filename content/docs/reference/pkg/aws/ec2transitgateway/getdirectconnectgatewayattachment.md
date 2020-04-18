@@ -21,7 +21,7 @@ import * as aws from "@pulumi/aws";
 const example = pulumi.all([aws_dx_gateway_example.id, aws_ec2_transit_gateway_example.id]).apply(([aws_dx_gateway_exampleId, aws_ec2_transit_gateway_exampleId]) => aws.ec2transitgateway.getDirectConnectGatewayAttachment({
     dxGatewayId: aws_dx_gateway_exampleId,
     transitGatewayId: aws_ec2_transit_gateway_exampleId,
-}));
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -31,7 +31,7 @@ const example = pulumi.all([aws_dx_gateway_example.id, aws_ec2_transit_gateway_e
 
 
 
-## Using GetDirectConnectGatewayAttachment
+## Using GetDirectConnectGatewayAttachment {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -241,7 +241,7 @@ The following arguments are supported:
 
 
 
-## GetDirectConnectGatewayAttachment Result
+## GetDirectConnectGatewayAttachment Result {#result}
 
 The following output properties are available:
 
@@ -452,7 +452,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Direct<wbr>Connect<wbr>Gateway<wbr>Attachment<wbr>Filter</h4>
+
+<h4 id="getdirectconnectgatewayattachmentfilter">Get<wbr>Direct<wbr>Connect<wbr>Gateway<wbr>Attachment<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetDirectConnectGatewayAttachmentFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDirectConnectGatewayAttachmentFilter">output</a> API doc for this type.
 {{% /choosable %}}

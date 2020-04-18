@@ -19,9 +19,9 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const mountTargetId = config.get("mountTargetId") || "";
 
-const byId = aws.efs.getMountTarget({
+const byId = pulumi.output(aws.efs.getMountTarget({
     mountTargetId: mountTargetId,
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -31,7 +31,7 @@ const byId = aws.efs.getMountTarget({
 
 
 
-## Using GetMountTarget
+## Using GetMountTarget {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -133,7 +133,7 @@ The following arguments are supported:
 
 
 
-## GetMountTarget Result
+## GetMountTarget Result {#result}
 
 The following output properties are available:
 

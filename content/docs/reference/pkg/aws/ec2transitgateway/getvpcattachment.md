@@ -18,12 +18,12 @@ Get information on an EC2 Transit Gateway VPC Attachment.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.ec2transitgateway.getVpcAttachment({
+const example = pulumi.output(aws.ec2transitgateway.getVpcAttachment({
     filters: [{
         name: "vpc-id",
         values: ["vpc-12345678"],
     }],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -34,9 +34,9 @@ const example = aws.ec2transitgateway.getVpcAttachment({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.ec2transitgateway.getVpcAttachment({
+const example = pulumi.output(aws.ec2transitgateway.getVpcAttachment({
     id: "tgw-attach-12345678",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -46,7 +46,7 @@ const example = aws.ec2transitgateway.getVpcAttachment({
 
 
 
-## Using GetVpcAttachment
+## Using GetVpcAttachment {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -220,7 +220,7 @@ The following arguments are supported:
 
 
 
-## GetVpcAttachment Result
+## GetVpcAttachment Result {#result}
 
 The following output properties are available:
 
@@ -583,7 +583,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Vpc<wbr>Attachment<wbr>Filter</h4>
+
+<h4 id="getvpcattachmentfilter">Get<wbr>Vpc<wbr>Attachment<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetVpcAttachmentFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpcAttachmentFilter">output</a> API doc for this type.
 {{% /choosable %}}

@@ -16,7 +16,7 @@ Use this data source to get the default EBS encryption KMS key in the current re
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const current = aws.ebs.getDefaultKmsKey();
+const current = pulumi.output(aws.ebs.getDefaultKmsKey({ async: true }));
 const example = new aws.ebs.Volume("example", {
     availabilityZone: "us-west-2a",
     encrypted: true,
@@ -31,7 +31,7 @@ const example = new aws.ebs.Volume("example", {
 
 
 
-## Using GetDefaultKmsKey
+## Using GetDefaultKmsKey {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -60,7 +60,7 @@ const example = new aws.ebs.Volume("example", {
 
 
 
-## GetDefaultKmsKey Result
+## GetDefaultKmsKey Result {#result}
 
 The following output properties are available:
 

@@ -19,10 +19,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 // Find a RSA 4096 bit certificate
-const example = aws.acm.getCertificate({
+const example = pulumi.output(aws.acm.getCertificate({
     domain: "tf.example.com",
     keyTypes: ["RSA_4096"],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -32,7 +32,7 @@ const example = aws.acm.getCertificate({
 
 
 
-## Using GetCertificate
+## Using GetCertificate {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -286,7 +286,7 @@ are returned.
 
 
 
-## GetCertificate Result
+## GetCertificate Result {#result}
 
 The following output properties are available:
 

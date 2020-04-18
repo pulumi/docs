@@ -17,7 +17,7 @@ This resource can be useful for getting back a set of subnet ids for a vpc.
 
 
 
-## Using GetSubnetIds
+## Using GetSubnetIds {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -195,7 +195,7 @@ a pair on the desired subnets.
 
 
 
-## GetSubnetIds Result
+## GetSubnetIds Result {#result}
 
 The following output properties are available:
 
@@ -406,7 +406,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Subnet<wbr>Ids<wbr>Filter</h4>
+
+<h4 id="getsubnetidsfilter">Get<wbr>Subnet<wbr>Ids<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSubnetIdsFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSubnetIdsFilter">output</a> API doc for this type.
 {{% /choosable %}}

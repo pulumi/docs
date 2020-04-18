@@ -33,13 +33,13 @@ const prod = new aws.rds.Instance("prod", {
 const latestProdSnapshot = prod.id.apply(id => aws.rds.getSnapshot({
     dbInstanceIdentifier: id,
     mostRecent: true,
-}));
+}, { async: true }));
 // Use the latest production snapshot to create a dev instance.
 const dev = new aws.rds.Instance("dev", {
     instanceClass: "db.t2.micro",
     name: "mydbdev",
     snapshotIdentifier: latestProdSnapshot.id,
-}, {ignoreChanges: ["snapshotIdentifier"]});
+}, { ignoreChanges: ["snapshotIdentifier"] });
 ```
 
 {{% /example %}}
@@ -49,7 +49,7 @@ const dev = new aws.rds.Instance("dev", {
 
 
 
-## Using GetSnapshot
+## Using GetSnapshot {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -355,7 +355,7 @@ included in the returned results by default. Possible values are, `automated`, `
 
 
 
-## GetSnapshot Result
+## GetSnapshot Result {#result}
 
 The following output properties are available:
 

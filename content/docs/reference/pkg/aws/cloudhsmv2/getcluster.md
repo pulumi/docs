@@ -16,9 +16,9 @@ Use this data source to get information about a CloudHSM v2 cluster
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const cluster = aws.cloudhsmv2.getCluster({
+const cluster = pulumi.output(aws.cloudhsmv2.getCluster({
     clusterId: "cluster-testclusterid",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const cluster = aws.cloudhsmv2.getCluster({
 
 
 
-## Using GetCluster
+## Using GetCluster {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -166,7 +166,7 @@ The following arguments are supported:
 
 
 
-## GetCluster Result
+## GetCluster Result {#result}
 
 The following output properties are available:
 
@@ -477,7 +477,8 @@ The number of available cluster certificates may vary depending on state of the 
 
 ## Supporting Types
 
-<h4>Get<wbr>Cluster<wbr>Cluster<wbr>Certificates</h4>
+
+<h4 id="getclusterclustercertificates">Get<wbr>Cluster<wbr>Cluster<wbr>Certificates</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterClusterCertificates">output</a> API doc for this type.
 {{% /choosable %}}

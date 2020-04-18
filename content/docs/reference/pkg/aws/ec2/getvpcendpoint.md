@@ -21,7 +21,7 @@ import * as aws from "@pulumi/aws";
 const s3 = aws_vpc_foo.id.apply(id => aws.ec2.getVpcEndpoint({
     serviceName: "com.amazonaws.us-west-2.s3",
     vpcId: id,
-}));
+}, { async: true }));
 const privateS3 = new aws.ec2.VpcEndpointRouteTableAssociation("private_s3", {
     routeTableId: aws_route_table_private.id,
     vpcEndpointId: s3.id!,
@@ -35,7 +35,7 @@ const privateS3 = new aws.ec2.VpcEndpointRouteTableAssociation("private_s3", {
 
 
 
-## Using GetVpcEndpoint
+## Using GetVpcEndpoint {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -321,7 +321,7 @@ a pair on the specific VPC Endpoint to retrieve.
 
 
 
-## GetVpcEndpoint Result
+## GetVpcEndpoint Result {#result}
 
 The following output properties are available:
 
@@ -988,7 +988,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Vpc<wbr>Endpoint<wbr>Dns<wbr>Entry</h4>
+
+<h4 id="getvpcendpointdnsentry">Get<wbr>Vpc<wbr>Endpoint<wbr>Dns<wbr>Entry</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpcEndpointDnsEntry">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1103,7 +1104,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Vpc<wbr>Endpoint<wbr>Filter</h4>
+<h4 id="getvpcendpointfilter">Get<wbr>Vpc<wbr>Endpoint<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetVpcEndpointFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpcEndpointFilter">output</a> API doc for this type.
 {{% /choosable %}}

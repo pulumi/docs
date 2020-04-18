@@ -16,9 +16,9 @@ Get information on a AWS Certificate Manager Private Certificate Authority (ACM 
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.acmpca.getCertificateAuthority({
+const example = pulumi.output(aws.acmpca.getCertificateAuthority({
     arn: "arn:aws:acm-pca:us-east-1:123456789012:certificate-authority/12345678-1234-1234-1234-123456789012",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const example = aws.acmpca.getCertificateAuthority({
 
 
 
-## Using GetCertificateAuthority
+## Using GetCertificateAuthority {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -222,7 +222,7 @@ The following arguments are supported:
 
 
 
-## GetCertificateAuthority Result
+## GetCertificateAuthority Result {#result}
 
 The following output properties are available:
 
@@ -713,7 +713,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration</h4>
+
+<h4 id="getcertificateauthorityrevocationconfiguration">Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetCertificateAuthorityRevocationConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetCertificateAuthorityRevocationConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -788,7 +789,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration</h4>
+<h4 id="getcertificateauthorityrevocationconfigurationcrlconfiguration">Get<wbr>Certificate<wbr>Authority<wbr>Revocation<wbr>Configuration<wbr>Crl<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetCertificateAuthorityRevocationConfigurationCrlConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetCertificateAuthorityRevocationConfigurationCrlConfiguration">output</a> API doc for this type.
 {{% /choosable %}}

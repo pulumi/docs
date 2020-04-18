@@ -16,9 +16,9 @@ block_external_search_index: true
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.waf.getIpset({
+const example = pulumi.output(aws.waf.getIpset({
     name: "tfWAFIPSet",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const example = aws.waf.getIpset({
 
 
 
-## Using GetIpset
+## Using GetIpset {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -130,7 +130,7 @@ The following arguments are supported:
 
 
 
-## GetIpset Result
+## GetIpset Result {#result}
 
 The following output properties are available:
 

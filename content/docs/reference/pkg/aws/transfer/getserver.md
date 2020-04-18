@@ -17,9 +17,9 @@ resources.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.transfer.getServer({
+const example = pulumi.output(aws.transfer.getServer({
     serverId: "s-1234567",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -29,7 +29,7 @@ const example = aws.transfer.getServer({
 
 
 
-## Using GetServer
+## Using GetServer {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -131,7 +131,7 @@ The following arguments are supported:
 
 
 
-## GetServer Result
+## GetServer Result {#result}
 
 The following output properties are available:
 

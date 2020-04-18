@@ -17,9 +17,9 @@ job queue within AWS Batch.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const test_queue = aws.batch.getJobQueue({
+const test_queue = pulumi.output(aws.batch.getJobQueue({
     name: "tf-test-batch-job-queue",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -29,7 +29,7 @@ const test_queue = aws.batch.getJobQueue({
 
 
 
-## Using GetJobQueue
+## Using GetJobQueue {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -131,7 +131,7 @@ The following arguments are supported:
 
 
 
-## GetJobQueue Result
+## GetJobQueue Result {#result}
 
 The following output properties are available:
 
@@ -478,7 +478,8 @@ of the job queue.
 
 ## Supporting Types
 
-<h4>Get<wbr>Job<wbr>Queue<wbr>Compute<wbr>Environment<wbr>Order</h4>
+
+<h4 id="getjobqueuecomputeenvironmentorder">Get<wbr>Job<wbr>Queue<wbr>Compute<wbr>Environment<wbr>Order</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetJobQueueComputeEnvironmentOrder">output</a> API doc for this type.
 {{% /choosable %}}

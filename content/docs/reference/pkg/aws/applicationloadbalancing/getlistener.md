@@ -25,16 +25,16 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const listenerArn = config.require("listenerArn");
 
-const listener = aws.lb.getListener({
+const listener = pulumi.output(aws.lb.getListener({
     arn: listenerArn,
-});
-const selected = aws.lb.getLoadBalancer({
+}, { async: true }));
+const selected = pulumi.output(aws.lb.getLoadBalancer({
     name: "default-public",
-});
-const selected443 = aws.lb.getListener({
+}, { async: true }));
+const selected443 = selected.apply(selected => aws.lb.getListener({
     loadBalancerArn: selected.arn!,
     port: 443,
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -44,7 +44,7 @@ const selected443 = aws.lb.getListener({
 
 
 
-## Using GetListener
+## Using GetListener {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -218,7 +218,7 @@ The following arguments are supported:
 
 
 
-## GetListener Result
+## GetListener Result {#result}
 
 The following output properties are available:
 
@@ -521,7 +521,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Listener<wbr>Default<wbr>Action</h4>
+
+<h4 id="getlistenerdefaultaction">Get<wbr>Listener<wbr>Default<wbr>Action</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultAction">output</a> API doc for this type.
 {{% /choosable %}}
@@ -788,7 +789,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito</h4>
+<h4 id="getlistenerdefaultactionauthenticatecognito">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionAuthenticateCognito">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1087,7 +1088,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc</h4>
+<h4 id="getlistenerdefaultactionauthenticateoidc">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionAuthenticateOidc">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1482,7 +1483,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response</h4>
+<h4 id="getlistenerdefaultactionfixedresponse">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionFixedResponse">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1621,7 +1622,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect</h4>
+<h4 id="getlistenerdefaultactionredirect">Get<wbr>Listener<wbr>Default<wbr>Action<wbr>Redirect</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetListenerDefaultActionRedirect">output</a> API doc for this type.
 {{% /choosable %}}

@@ -18,11 +18,11 @@ To retrieve a baseline provided by AWS:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const centos = aws.ssm.getPatchBaseline({
+const centos = pulumi.output(aws.ssm.getPatchBaseline({
     namePrefix: "AWS-",
     operatingSystem: "CENTOS",
     owner: "AWS",
-});
+}, { async: true }));
 ```
 
 To retrieve a baseline on your account:
@@ -31,12 +31,12 @@ To retrieve a baseline on your account:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const defaultCustom = aws.ssm.getPatchBaseline({
+const defaultCustom = pulumi.output(aws.ssm.getPatchBaseline({
     defaultBaseline: true,
     namePrefix: "MyCustomBaseline",
     operatingSystem: "WINDOWS",
     owner: "Self",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -46,7 +46,7 @@ const defaultCustom = aws.ssm.getPatchBaseline({
 
 
 
-## Using GetPatchBaseline
+## Using GetPatchBaseline {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -256,7 +256,7 @@ The following arguments are supported:
 
 
 
-## GetPatchBaseline Result
+## GetPatchBaseline Result {#result}
 
 The following output properties are available:
 

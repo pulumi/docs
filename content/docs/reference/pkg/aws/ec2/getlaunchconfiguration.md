@@ -16,9 +16,9 @@ Provides information about a Launch Configuration.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ubuntu = aws.ec2.getLaunchConfiguration({
+const ubuntu = pulumi.output(aws.ec2.getLaunchConfiguration({
     name: "test-launch-config",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const ubuntu = aws.ec2.getLaunchConfiguration({
 
 
 
-## Using GetLaunchConfiguration
+## Using GetLaunchConfiguration {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -130,7 +130,7 @@ The following arguments are supported:
 
 
 
-## GetLaunchConfiguration Result
+## GetLaunchConfiguration Result {#result}
 
 The following output properties are available:
 
@@ -857,7 +857,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device</h4>
+
+<h4 id="getlaunchconfigurationebsblockdevice">Get<wbr>Launch<wbr>Configuration<wbr>Ebs<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchConfigurationEbsBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1152,7 +1153,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device</h4>
+<h4 id="getlaunchconfigurationephemeralblockdevice">Get<wbr>Launch<wbr>Configuration<wbr>Ephemeral<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchConfigurationEphemeralBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1267,7 +1268,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device</h4>
+<h4 id="getlaunchconfigurationrootblockdevice">Get<wbr>Launch<wbr>Configuration<wbr>Root<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLaunchConfigurationRootBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}

@@ -18,10 +18,10 @@ To get the contents of the document owned by AWS.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const foo = aws.ssm.getDocument({
+const foo = pulumi.output(aws.ssm.getDocument({
     documentFormat: "YAML",
     name: "AWS-GatherSoftwareInventory",
-});
+}, { async: true }));
 
 export const content = foo.content;
 ```
@@ -35,7 +35,7 @@ import * as aws from "@pulumi/aws";
 const test = aws_ssm_document_test.name.apply(name => aws.ssm.getDocument({
     documentFormat: "JSON",
     name: name,
-}));
+}, { async: true }));
 ```
 
 
@@ -46,7 +46,7 @@ const test = aws_ssm_document_test.name.apply(name => aws.ssm.getDocument({
 
 
 
-## Using GetDocument
+## Using GetDocument {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -220,7 +220,7 @@ The following arguments are supported:
 
 
 
-## GetDocument Result
+## GetDocument Result {#result}
 
 The following output properties are available:
 

@@ -16,9 +16,9 @@ The following shows outputing all network ACL ids in a vpc.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleNetworkAcls = aws.ec2.getNetworkAcls({
+const exampleNetworkAcls = pulumi.output(aws.ec2.getNetworkAcls({
     vpcId: var_vpc_id,
-});
+}, { async: true }));
 
 export const example = exampleNetworkAcls.ids;
 ```
@@ -30,12 +30,12 @@ tag of `Tier` set to a value of "Private".
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.ec2.getNetworkAcls({
+const example = pulumi.output(aws.ec2.getNetworkAcls({
     tags: {
         Tier: "Private",
     },
     vpcId: var_vpc_id,
-});
+}, { async: true }));
 ```
 
 The following example retrieves a network ACL id in a VPC which associated
@@ -51,7 +51,7 @@ const example = aws_subnet_test.id.apply(id => aws.ec2.getNetworkAcls({
         values: [id],
     }],
     vpcId: var_vpc_id,
-}));
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -61,7 +61,7 @@ const example = aws_subnet_test.id.apply(id => aws.ec2.getNetworkAcls({
 
 
 
-## Using GetNetworkAcls
+## Using GetNetworkAcls {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -239,7 +239,7 @@ a pair on the desired network ACLs.
 
 
 
-## GetNetworkAcls Result
+## GetNetworkAcls Result {#result}
 
 The following output properties are available:
 
@@ -450,7 +450,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Network<wbr>Acls<wbr>Filter</h4>
+
+<h4 id="getnetworkaclsfilter">Get<wbr>Network<wbr>Acls<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetNetworkAclsFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetNetworkAclsFilter">output</a> API doc for this type.
 {{% /choosable %}}

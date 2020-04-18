@@ -27,7 +27,7 @@ All Local Zones (regardless of opt-in status):
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.getAvailabilityZones({
+const example = pulumi.output(aws.getAvailabilityZones({
     allAvailabilityZones: true,
     filters: [{
         name: "opt-in-status",
@@ -36,7 +36,7 @@ const example = aws.getAvailabilityZones({
             "opted-in",
         ],
     }],
-});
+}, { async: true }));
 ```
 
 Only Availability Zones (no Local Zones):
@@ -45,12 +45,12 @@ Only Availability Zones (no Local Zones):
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.getAvailabilityZones({
+const example = pulumi.output(aws.getAvailabilityZones({
     filters: [{
         name: "opt-in-status",
         values: ["opt-in-not-required"],
     }],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -60,7 +60,7 @@ const example = aws.getAvailabilityZones({
 
 
 
-## Using GetAvailabilityZones
+## Using GetAvailabilityZones {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -350,7 +350,7 @@ to which the underlying AWS account has access, regardless of their state.
 
 
 
-## GetAvailabilityZones Result
+## GetAvailabilityZones Result {#result}
 
 The following output properties are available:
 
@@ -693,7 +693,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Availability<wbr>Zones<wbr>Filter</h4>
+
+<h4 id="getavailabilityzonesfilter">Get<wbr>Availability<wbr>Zones<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetAvailabilityZonesFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAvailabilityZonesFilter">output</a> API doc for this type.
 {{% /choosable %}}

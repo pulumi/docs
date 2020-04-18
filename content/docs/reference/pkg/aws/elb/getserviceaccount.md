@@ -17,10 +17,10 @@ in a given region for the purpose of whitelisting in S3 bucket policy.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const main = aws.elb.getServiceAccount();
+const main = pulumi.output(aws.elb.getServiceAccount({ async: true }));
 const elbLogs = new aws.s3.Bucket("elb_logs", {
     acl: "private",
-    policy: `{
+    policy: pulumi.interpolate`{
   "Id": "Policy",
   "Version": "2012-10-17",
   "Statement": [
@@ -62,7 +62,7 @@ const bar = new aws.elb.LoadBalancer("bar", {
 
 
 
-## Using GetServiceAccount
+## Using GetServiceAccount {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -168,7 +168,7 @@ Defaults to the region from the AWS provider configuration.
 
 
 
-## GetServiceAccount Result
+## GetServiceAccount Result {#result}
 
 The following output properties are available:
 

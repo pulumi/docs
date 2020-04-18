@@ -19,9 +19,9 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const fileSystemId = config.get("fileSystemId") || "";
 
-const byId = aws.efs.getFileSystem({
+const byId = pulumi.output(aws.efs.getFileSystem({
     fileSystemId: fileSystemId,
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -31,7 +31,7 @@ const byId = aws.efs.getFileSystem({
 
 
 
-## Using GetFileSystem
+## Using GetFileSystem {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -201,7 +201,7 @@ The following arguments are supported:
 
 
 
-## GetFileSystem Result
+## GetFileSystem Result {#result}
 
 The following output properties are available:
 
@@ -668,7 +668,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>File<wbr>System<wbr>Lifecycle<wbr>Policy</h4>
+
+<h4 id="getfilesystemlifecyclepolicy">Get<wbr>File<wbr>System<wbr>Lifecycle<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetFileSystemLifecyclePolicy">output</a> API doc for this type.
 {{% /choosable %}}

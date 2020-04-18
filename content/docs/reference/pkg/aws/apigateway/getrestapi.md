@@ -19,9 +19,9 @@ error if there is more than one match.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const myRestApi = aws.apigateway.getRestApi({
+const myRestApi = pulumi.output(aws.apigateway.getRestApi({
     name: "my-rest-api",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -31,7 +31,7 @@ const myRestApi = aws.apigateway.getRestApi({
 
 
 
-## Using GetRestApi
+## Using GetRestApi {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -169,7 +169,7 @@ The following arguments are supported:
 
 
 
-## GetRestApi Result
+## GetRestApi Result {#result}
 
 The following output properties are available:
 
@@ -640,7 +640,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Rest<wbr>Api<wbr>Endpoint<wbr>Configuration</h4>
+
+<h4 id="getrestapiendpointconfiguration">Get<wbr>Rest<wbr>Api<wbr>Endpoint<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetRestApiEndpointConfiguration">output</a> API doc for this type.
 {{% /choosable %}}

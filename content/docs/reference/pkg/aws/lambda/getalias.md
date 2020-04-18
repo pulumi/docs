@@ -16,10 +16,10 @@ Provides information about a Lambda Alias.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const production = aws.lambda.getAlias({
+const production = pulumi.output(aws.lambda.getAlias({
     functionName: "my-lambda-func",
     name: "production",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -29,7 +29,7 @@ const production = aws.lambda.getAlias({
 
 
 
-## Using GetAlias
+## Using GetAlias {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -167,7 +167,7 @@ The following arguments are supported:
 
 
 
-## GetAlias Result
+## GetAlias Result {#result}
 
 The following output properties are available:
 

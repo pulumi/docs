@@ -16,9 +16,9 @@ Use this data source to get information about an Elasticache Replication Group.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const bar = aws.elasticache.getReplicationGroup({
+const bar = pulumi.output(aws.elasticache.getReplicationGroup({
     replicationGroupId: "example",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const bar = aws.elasticache.getReplicationGroup({
 
 
 
-## Using GetReplicationGroup
+## Using GetReplicationGroup {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -130,7 +130,7 @@ The following arguments are supported:
 
 
 
-## GetReplicationGroup Result
+## GetReplicationGroup Result {#result}
 
 The following output properties are available:
 

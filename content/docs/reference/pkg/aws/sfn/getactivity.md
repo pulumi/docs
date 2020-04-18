@@ -16,9 +16,9 @@ Provides a Step Functions Activity data source
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const sfnActivity = aws.sfn.getActivity({
+const sfnActivity = pulumi.output(aws.sfn.getActivity({
     name: "my-activity",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const sfnActivity = aws.sfn.getActivity({
 
 
 
-## Using GetActivity
+## Using GetActivity {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -166,7 +166,7 @@ The following arguments are supported:
 
 
 
-## GetActivity Result
+## GetActivity Result {#result}
 
 The following output properties are available:
 

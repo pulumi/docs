@@ -16,9 +16,9 @@ Provides an SSM Parameter data source.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const foo = aws.ssm.getParameter({
+const foo = pulumi.output(aws.ssm.getParameter({
     name: "foo",
-});
+}, { async: true }));
 ```
 
 
@@ -32,7 +32,7 @@ const foo = aws.ssm.getParameter({
 
 
 
-## Using GetParameter
+## Using GetParameter {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -170,7 +170,7 @@ The following arguments are supported:
 
 
 
-## GetParameter Result
+## GetParameter Result {#result}
 
 The following output properties are available:
 

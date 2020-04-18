@@ -19,9 +19,9 @@ import * as aws from "@pulumi/aws";
 const config = new pulumi.Config();
 const layerName = config.require("layerName");
 
-const existing = aws.lambda.getLayerVersion({
+const existing = pulumi.output(aws.lambda.getLayerVersion({
     layerName: layerName,
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -31,7 +31,7 @@ const existing = aws.lambda.getLayerVersion({
 
 
 
-## Using GetLayerVersion
+## Using GetLayerVersion {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -205,7 +205,7 @@ The following arguments are supported:
 
 
 
-## GetLayerVersion Result
+## GetLayerVersion Result {#result}
 
 The following output properties are available:
 

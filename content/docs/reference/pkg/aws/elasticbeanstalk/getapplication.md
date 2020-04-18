@@ -16,9 +16,9 @@ Retrieve information about an Elastic Beanstalk Application.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.elasticbeanstalk.getApplication({
+const example = pulumi.output(aws.elasticbeanstalk.getApplication({
     name: "example",
-});
+}, { async: true }));
 
 export const arn = example.arn;
 export const description = example.description;
@@ -31,7 +31,7 @@ export const description = example.description;
 
 
 
-## Using GetApplication
+## Using GetApplication {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -133,7 +133,7 @@ The following arguments are supported:
 
 
 
-## GetApplication Result
+## GetApplication Result {#result}
 
 The following output properties are available:
 
@@ -348,7 +348,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Application<wbr>Appversion<wbr>Lifecycle</h4>
+
+<h4 id="getapplicationappversionlifecycle">Get<wbr>Application<wbr>Appversion<wbr>Lifecycle</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetApplicationAppversionLifecycle">output</a> API doc for this type.
 {{% /choosable %}}

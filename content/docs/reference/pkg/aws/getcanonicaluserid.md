@@ -17,7 +17,7 @@ for the effective account in which this provider is working.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const current = aws.getCanonicalUserId();
+const current = pulumi.output(aws.getCanonicalUserId({ async: true }));
 
 export const canonicalUserId = current.id;
 ```
@@ -29,7 +29,7 @@ export const canonicalUserId = current.id;
 
 
 
-## Using GetCanonicalUserId
+## Using GetCanonicalUserId {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -58,7 +58,7 @@ export const canonicalUserId = current.id;
 
 
 
-## GetCanonicalUserId Result
+## GetCanonicalUserId Result {#result}
 
 The following output properties are available:
 

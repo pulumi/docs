@@ -8,18 +8,18 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="directory" title="Directory"><span class="symbol resource"></span>Directory</a></li>
     <li><a href="ipgroup" title="IpGroup"><span class="symbol resource"></span>IpGroup</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getbundle" title="GetBundle"><span class="symbol function"></span>GetBundle</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
@@ -27,5 +27,7 @@ block_external_search_index: true
 	<dd>Apache-2.0</dd>
     <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dt>Version</dt>
+	<dd>2.1.0-alpha.1587080706+ge06ce6456</dd>
 </dl>
 

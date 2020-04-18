@@ -102,7 +102,7 @@ const example = pulumi.all([aws_glue_catalog_database_source.name, aws_glue_cata
         },
     ],
     language: "PYTHON",
-}));
+}, { async: true }));
 
 export const pythonScript = example.pythonScript;
 ```
@@ -199,7 +199,7 @@ const example = pulumi.all([aws_glue_catalog_database_source.name, aws_glue_cata
         },
     ],
     language: "SCALA",
-}));
+}, { async: true }));
 
 export const scalaCode = example.scalaCode;
 ```
@@ -211,7 +211,7 @@ export const scalaCode = example.scalaCode;
 
 
 
-## Using GetScript
+## Using GetScript {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -385,7 +385,7 @@ The following arguments are supported:
 
 
 
-## GetScript Result
+## GetScript Result {#result}
 
 The following output properties are available:
 
@@ -632,7 +632,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Script<wbr>Dag<wbr>Edge</h4>
+
+<h4 id="getscriptdagedge">Get<wbr>Script<wbr>Dag<wbr>Edge</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetScriptDagEdge">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetScriptDagEdge">output</a> API doc for this type.
 {{% /choosable %}}
@@ -783,7 +784,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Script<wbr>Dag<wbr>Node</h4>
+<h4 id="getscriptdagnode">Get<wbr>Script<wbr>Dag<wbr>Node</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetScriptDagNode">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetScriptDagNode">output</a> API doc for this type.
 {{% /choosable %}}
@@ -970,7 +971,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Script<wbr>Dag<wbr>Node<wbr>Arg</h4>
+<h4 id="getscriptdagnodearg">Get<wbr>Script<wbr>Dag<wbr>Node<wbr>Arg</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetScriptDagNodeArg">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetScriptDagNodeArg">output</a> API doc for this type.
 {{% /choosable %}}

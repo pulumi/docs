@@ -17,12 +17,12 @@ a specific VPN gateway.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const selected = aws.ec2.getVpnGateway({
+const selected = pulumi.output(aws.ec2.getVpnGateway({
     filters: [{
         name: "tag:Name",
         values: ["vpn-gw"],
     }],
-});
+}, { async: true }));
 
 export const vpnGatewayId = selected.id!;
 ```
@@ -34,7 +34,7 @@ export const vpnGatewayId = selected.id!;
 
 
 
-## Using GetVpnGateway
+## Using GetVpnGateway {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -356,7 +356,7 @@ a pair on the desired VPN Gateway.
 
 
 
-## GetVpnGateway Result
+## GetVpnGateway Result {#result}
 
 The following output properties are available:
 
@@ -623,7 +623,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Vpn<wbr>Gateway<wbr>Filter</h4>
+
+<h4 id="getvpngatewayfilter">Get<wbr>Vpn<wbr>Gateway<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetVpnGatewayFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpnGatewayFilter">output</a> API doc for this type.
 {{% /choosable %}}

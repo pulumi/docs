@@ -16,12 +16,12 @@ Get an existing AWS Customer Gateway.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const foo = aws.ec2.getCustomerGateway({
+const foo = pulumi.output(aws.ec2.getCustomerGateway({
     filters: [{
         name: "tag:Name",
         values: ["foo-prod"],
     }],
-});
+}, { async: true }));
 const main = new aws.ec2.VpnGateway("main", {
     amazonSideAsn: "7224",
     vpcId: aws_vpc_main.id,
@@ -41,7 +41,7 @@ const transit = new aws.ec2.VpnConnection("transit", {
 
 
 
-## Using GetCustomerGateway
+## Using GetCustomerGateway {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -215,7 +215,7 @@ The following arguments are supported:
 
 
 
-## GetCustomerGateway Result
+## GetCustomerGateway Result {#result}
 
 The following output properties are available:
 
@@ -466,7 +466,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Customer<wbr>Gateway<wbr>Filter</h4>
+
+<h4 id="getcustomergatewayfilter">Get<wbr>Customer<wbr>Gateway<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetCustomerGatewayFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetCustomerGatewayFilter">output</a> API doc for this type.
 {{% /choosable %}}

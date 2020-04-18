@@ -30,7 +30,7 @@ const oauth = oauthConfig.keyId.apply(keyId => aws.kms.getCipherText({
   "client_secret": "8289575d00000ace55e1815ec13673955721b8a5"
 }
 `,
-}));
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -40,7 +40,7 @@ const oauth = oauthConfig.keyId.apply(keyId => aws.kms.getCipherText({
 
 
 
-## Using GetCipherText
+## Using GetCipherText {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -214,7 +214,7 @@ The following arguments are supported:
 
 
 
-## GetCipherText Result
+## GetCipherText Result {#result}
 
 The following output properties are available:
 

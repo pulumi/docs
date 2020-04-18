@@ -17,7 +17,7 @@ criteria.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ebsVolumes = aws.ebs.getSnapshotIds({
+const ebsVolumes = pulumi.output(aws.ebs.getSnapshotIds({
     filters: [
         {
             name: "volume-size",
@@ -29,7 +29,7 @@ const ebsVolumes = aws.ebs.getSnapshotIds({
         },
     ],
     owners: ["self"],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -39,7 +39,7 @@ const ebsVolumes = aws.ebs.getSnapshotIds({
 
 
 
-## Using GetSnapshotIds
+## Using GetSnapshotIds {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -221,7 +221,7 @@ several valid keys, for a full reference, check out
 
 
 
-## GetSnapshotIds Result
+## GetSnapshotIds Result {#result}
 
 The following output properties are available:
 
@@ -428,7 +428,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Snapshot<wbr>Ids<wbr>Filter</h4>
+
+<h4 id="getsnapshotidsfilter">Get<wbr>Snapshot<wbr>Ids<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSnapshotIdsFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSnapshotIdsFilter">output</a> API doc for this type.
 {{% /choosable %}}

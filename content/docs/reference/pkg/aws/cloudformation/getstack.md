@@ -17,13 +17,13 @@ outputs and other useful data including the template body.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const network = aws.cloudformation.getStack({
+const network = pulumi.output(aws.cloudformation.getStack({
     name: "my-network-stack",
-});
+}, { async: true }));
 const web = new aws.ec2.Instance("web", {
     ami: "ami-abb07bcb",
     instanceType: "t1.micro",
-    subnetId: network.outputs["SubnetId"],
+    subnetId: network.apply(network => network.outputs["SubnetId"]),
     tags: {
         Name: "HelloWorld",
     },
@@ -37,7 +37,7 @@ const web = new aws.ec2.Instance("web", {
 
 
 
-## Using GetStack
+## Using GetStack {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -175,7 +175,7 @@ The following arguments are supported:
 
 
 
-## GetStack Result
+## GetStack Result {#result}
 
 The following output properties are available:
 
