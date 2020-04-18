@@ -205,7 +205,13 @@ const read = new consul.AclRole("read", {
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## AclRole Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The AclRole resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -426,6 +432,9 @@ be applied to the role.
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. The AclRole resource does not produce any additional output properties.
 
 
 

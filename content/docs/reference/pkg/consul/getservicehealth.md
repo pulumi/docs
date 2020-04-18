@@ -15,21 +15,6 @@ This resource is likely to change as frequently as the health-checks are being
 updated, you should expect different results in a frequent basis.
 
 {{% examples %}}
-## Example Usage
-{{% example %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-import * as consul from "@pulumi/consul";
-import * as vault from "@pulumi/vault";
-
-const vaultServiceHealth = consul.getServiceHealth({
-    passing: true,
-    service: "vault",
-});
-```
-
-{{% /example %}}
 {{% /examples %}}
 
 

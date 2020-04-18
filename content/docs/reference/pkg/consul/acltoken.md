@@ -206,7 +206,13 @@ const test = new consul.AclToken("test", {
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## AclToken Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The AclToken resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -463,6 +469,9 @@ generate a random uuid.
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. The AclToken resource does not produce any additional output properties.
 
 
 

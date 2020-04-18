@@ -207,7 +207,13 @@ const app = new consul.AgentService("app", {
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## AgentService Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The AgentService resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -396,6 +402,9 @@ but can be used to distinguish between services or nodes.
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. The AgentService resource does not produce any additional output properties.
 
 
 

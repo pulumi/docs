@@ -20,9 +20,9 @@ If you want to get the secret ID associated with a token, use the
 import * as pulumi from "@pulumi/pulumi";
 import * as consul from "@pulumi/consul";
 
-const test = consul.getAclToken({
+const test = pulumi.output(consul.getAclToken({
     accessorId: "00000000-0000-0000-0000-000000000002",
-});
+}, { async: true }));
 
 export const consulAclPolicies = test.policies!;
 ```
