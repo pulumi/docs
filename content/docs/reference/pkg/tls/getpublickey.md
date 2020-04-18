@@ -18,9 +18,9 @@ import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
 import * as tls from "@pulumi/tls";
 
-const example = tls.getPublicKey({
+const example = pulumi.output(tls.getPublicKey({
     privateKeyPem: fs.readFileSync("~/.ssh/id_rsa", "utf-8"),
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
