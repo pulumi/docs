@@ -1,7 +1,7 @@
 ---
 title: "Architecture as Code: Serverless"
 date: 2020-04-20
-meta_desc:
+meta_desc: "Serverless can benefit from reusable resources created by infrastructure as code."
 meta_image: meta.png
 authors:
     - sophia-parafina
@@ -19,7 +19,7 @@ Serverless is a pattern for building services without having to manage servers. 
 
 Developers can write the application in any language that the service provider supports. That means developers can choose the language that best meets the needs of their application. For example, a compiled application may respond more quickly than a scripting language. Serverless applications can be either synchronous or asynchronous, depending on the task.
 
-Another component of serverless architecture is an API Gateway which maps HTTP operations such as GET, PUT, POST, and DELETE to functions. A gateway simplifies implementing REST interfaces for functions and applications. 
+Another component of serverless architecture is an API Gateway which maps HTTP operations such as GET, PUT, POST, and DELETE to functions. A gateway simplifies implementing REST interfaces for functions and applications.
 
 Let’s take a look at examples where we can apply Architecture as Code to serverless.
 
