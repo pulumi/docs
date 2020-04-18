@@ -901,9 +901,7 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Job resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Job resource produces the following output properties:
 
 
 
@@ -919,6 +917,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Job
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -936,6 +942,14 @@ The following output properties are available:
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Job
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -951,6 +965,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Job
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -968,9 +990,16 @@ The following output properties are available:
     <dd>{{% md %}}Amazon Resource Name (ARN) of Glue Job
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
-
 
 
 

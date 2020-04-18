@@ -348,9 +348,7 @@ Valid values are `Active` and `Inactive`.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the AccessKey resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the AccessKey resource produces the following output properties:
 
 
 
@@ -367,6 +365,14 @@ The following output properties are available:
     <dd>{{% md %}}The encrypted secret, base64 encoded, if `pgp_key` was specified.
 > **NOTE:** The encrypted secret may be decrypted using the command line,
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -433,6 +439,14 @@ As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southe
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Key<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -493,6 +507,14 @@ As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southe
     <dd>{{% md %}}The encrypted secret, base64 encoded, if `pgp_key` was specified.
 > **NOTE:** The encrypted secret may be decrypted using the command line,
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -559,6 +581,14 @@ As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southe
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>key_<wbr>fingerprint</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -605,7 +635,6 @@ As SigV4 is region specific, valid Provider regions are `ap-south-1`, `ap-southe
 
 </dl>
 {{% /choosable %}}
-
 
 
 

@@ -529,9 +529,7 @@ guarantees that no filesystem writes will be underway at the time of snapshot.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the AmiFromInstance resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the AmiFromInstance resource produces the following output properties:
 
 
 
@@ -556,6 +554,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -660,6 +666,14 @@ changes the set of further arguments that are required, as described below.
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Image<wbr>Location</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -758,6 +772,14 @@ changes the set of further arguments that are required, as described below.
     </dt>
     <dd>{{% md %}}Specifies whether enhanced networking with ENA is enabled. Defaults to `false`.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -862,6 +884,14 @@ changes the set of further arguments that are required, as described below.
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>image_<wbr>location</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -938,7 +968,6 @@ changes the set of further arguments that are required, as described below.
 
 </dl>
 {{% /choosable %}}
-
 
 
 
@@ -2051,6 +2080,16 @@ snapshot.
 
     <dt class="property-optional"
             title="Optional">
+        <span>volume<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of EBS volume to create. Can be one of "standard" (the
+default), "io1" or "gp2".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>volume_<wbr>size</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -2058,16 +2097,6 @@ snapshot.
     <dd>{{% md %}}The size of created volumes in GiB.
 If `snapshot_id` is set and `volume_size` is omitted then the volume will have the same size
 as the selected snapshot.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>volume<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The type of EBS volume to create. Can be one of "standard" (the
-default), "io1" or "gp2".
 {{% /md %}}</dd>
 
 </dl>

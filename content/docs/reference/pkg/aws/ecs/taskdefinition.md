@@ -788,9 +788,7 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the TaskDefinition resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the TaskDefinition resource produces the following output properties:
 
 
 
@@ -806,6 +804,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Full ARN of the Task Definition (including both `family` and `revision`).
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -834,6 +840,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Revision</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
@@ -856,6 +870,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Full ARN of the Task Definition (including both `family` and `revision`).
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -884,6 +906,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>revision</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -893,7 +923,6 @@ The following output properties are available:
 
 </dl>
 {{% /choosable %}}
-
 
 
 
@@ -1785,20 +1814,20 @@ official [Developer Guide](https://docs.aws.amazon.com/AmazonECS/latest/develope
 
     <dt class="property-required"
             title="Required">
-        <span>device_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The Elastic Inference accelerator device name. The deviceName must also be referenced in a container definition as a ResourceRequirement.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>device<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Elastic Inference accelerator type to use.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>device_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Elastic Inference accelerator device name. The deviceName must also be referenced in a container definition as a ResourceRequirement.
 {{% /md %}}</dd>
 
 </dl>

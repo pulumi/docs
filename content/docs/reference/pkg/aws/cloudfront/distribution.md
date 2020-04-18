@@ -1210,9 +1210,7 @@ region and the credentials configuring this argument must have
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Distribution resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Distribution resource produces the following output properties:
 
 
 
@@ -1280,6 +1278,14 @@ web site of your custom origin.
 route an [Alias Resource Record Set][7] to. This attribute is simply an
 alias for the zone ID `Z2FDTNDATAQYW2`.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1381,6 +1387,14 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>In<wbr>Progress<wbr>Validation<wbr>Batches</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
@@ -1476,6 +1490,14 @@ web site of your custom origin.
 route an [Alias Resource Record Set][7] to. This attribute is simply an
 alias for the zone ID `Z2FDTNDATAQYW2`.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1577,6 +1599,14 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>in_<wbr>progress_<wbr>validation_<wbr>batches</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1607,7 +1637,6 @@ CloudFront system.
 
 </dl>
 {{% /choosable %}}
-
 
 
 

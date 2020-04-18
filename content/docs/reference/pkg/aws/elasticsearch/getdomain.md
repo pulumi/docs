@@ -1691,20 +1691,20 @@ attached to data nodes.
 
     <dt class="property-required"
             title="Required">
-        <span>volume_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GB).
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>volume<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of EBS volumes attached to data nodes.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>volume_<wbr>size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GB).
 {{% /md %}}</dd>
 
 </dl>

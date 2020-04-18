@@ -926,7 +926,72 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The FirehoseDeliveryStream resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the FirehoseDeliveryStream resource produces the following output properties:
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 
@@ -2138,20 +2203,20 @@ Server-side encryption should not be enabled when a kinesis stream is configured
 
     <dt class="property-optional"
             title="Optional">
-        <span>log_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>log_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
 
 </dl>
@@ -3153,20 +3218,20 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>log_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
 
 </dl>
@@ -5714,20 +5779,20 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>log_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
 
 </dl>
@@ -6455,20 +6520,20 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>log_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
 
 </dl>
@@ -7290,20 +7355,20 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>log_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
 
 </dl>
@@ -7780,20 +7845,20 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>log_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
 
 </dl>
@@ -8341,20 +8406,20 @@ be used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>log_<wbr>group_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>log<wbr>Stream<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The CloudWatch log stream name for logging. This value is required if `enabled` is true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>log_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch group name for logging. This value is required if `enabled` is true.
 {{% /md %}}</dd>
 
 </dl>

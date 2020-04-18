@@ -1130,20 +1130,20 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>volume_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The Size of the volume.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>volume<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Type of the volume.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>volume_<wbr>size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The Size of the volume.
 {{% /md %}}</dd>
 
 </dl>
@@ -1468,20 +1468,20 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>volume_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The Size of the volume.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>volume<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Type of the volume.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>volume_<wbr>size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The Size of the volume.
 {{% /md %}}</dd>
 
 </dl>

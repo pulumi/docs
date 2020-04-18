@@ -427,9 +427,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Accelerator resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Accelerator resource produces the following output properties:
 
 
 
@@ -456,6 +454,14 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -495,6 +501,14 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Ip<wbr>Sets</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#acceleratoripset">[]Accelerator<wbr>Ip<wbr>Set</a></span>
@@ -528,6 +542,14 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -567,6 +589,14 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>ip_<wbr>sets</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#acceleratoripset">List[Accelerator<wbr>Ip<wbr>Set]</a></span>
@@ -576,7 +606,6 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
 </dl>
 {{% /choosable %}}
-
 
 
 
@@ -1283,20 +1312,20 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>addresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of IP addresses in the IP address set.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>ip<wbr>Family</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The types of IP addresses included in this IP set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ip_<wbr>addresses</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of IP addresses in the IP address set.
 {{% /md %}}</dd>
 
 </dl>

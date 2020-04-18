@@ -889,9 +889,7 @@ instances. Use this for Classic or Default VPC only.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the LoadBalancer resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the LoadBalancer resource produces the following output properties:
 
 
 
@@ -916,6 +914,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The DNS name of the ELB
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -964,6 +970,14 @@ instances. Only available on ELBs launched in a VPC.
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Source<wbr>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1006,6 +1020,14 @@ instances. Only available on ELBs launched in a VPC.
     </dt>
     <dd>{{% md %}}The DNS name of the ELB
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1054,6 +1076,14 @@ instances. Only available on ELBs launched in a VPC.
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>source_<wbr>security_<wbr>group_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1074,7 +1104,6 @@ instances. Only available on ELBs launched in a VPC.
 
 </dl>
 {{% /choosable %}}
-
 
 
 
@@ -2590,15 +2619,6 @@ uploaded to AWS IAM. **Note ECDSA-specific restrictions below.  Only valid when 
 
     <dt class="property-required"
             title="Required">
-        <span>instance_<wbr>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The port on the instance to route to
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>instance<wbr>Protocol</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2609,11 +2629,11 @@ values are `HTTP`, `HTTPS`, `TCP`, or `SSL`
 
     <dt class="property-required"
             title="Required">
-        <span>lb_<wbr>port</span>
+        <span>instance_<wbr>port</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The port to listen on for the load balancer
+    <dd>{{% md %}}The port on the instance to route to
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2624,6 +2644,15 @@ values are `HTTP`, `HTTPS`, `TCP`, or `SSL`
     </dt>
     <dd>{{% md %}}The protocol to listen on. Valid values are `HTTP`,
 `HTTPS`, `TCP`, or `SSL`
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>lb_<wbr>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The port to listen on for the load balancer
 {{% /md %}}</dd>
 
     <dt class="property-optional"

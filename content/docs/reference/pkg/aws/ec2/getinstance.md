@@ -2148,6 +2148,15 @@ is only available if you've enabled DNS hostnames for your VPC.
 
     <dt class="property-required"
             title="Required">
+        <span>volume<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the volume.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>volume_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2161,15 +2170,6 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The size of the volume, in GiB.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>volume<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The type of the volume.
 {{% /md %}}</dd>
 
 </dl>
@@ -2844,6 +2844,15 @@ is only available if you've enabled DNS hostnames for your VPC.
 
     <dt class="property-required"
             title="Required">
+        <span>volume<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the volume.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>volume_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2857,15 +2866,6 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The size of the volume, in GiB.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>volume<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The type of the volume.
 {{% /md %}}</dd>
 
 </dl>
