@@ -16,7 +16,7 @@ Get TensorFlow versions available for a project. For more information see the [o
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const available = gcp.tpu.getTensorflowVersions();
+const available = pulumi.output(gcp.tpu.getTensorflowVersions({ async: true }));
 ```
 
 {{% /example %}}

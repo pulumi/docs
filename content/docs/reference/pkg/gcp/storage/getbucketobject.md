@@ -22,10 +22,10 @@ Example picture stored within a folder.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const picture = gcp.storage.getBucketObject({
+const picture = pulumi.output(gcp.storage.getBucketObject({
     bucket: "image-store",
     name: "folder/butterfly01.jpg",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

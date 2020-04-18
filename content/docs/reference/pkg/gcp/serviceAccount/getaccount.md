@@ -17,9 +17,9 @@ the official [API](https://cloud.google.com/compute/docs/access/service-accounts
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const objectViewer = gcp.serviceAccount.getAccount({
+const objectViewer = pulumi.output(gcp.serviceAccount.getAccount({
     accountId: "object-viewer",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

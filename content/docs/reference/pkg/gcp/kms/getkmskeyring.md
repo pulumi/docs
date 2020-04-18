@@ -22,10 +22,10 @@ and resides in a specific location.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const myKeyRing = gcp.kms.getKMSKeyRing({
+const myKeyRing = pulumi.output(gcp.kms.getKMSKeyRing({
     location: "us-central1",
     name: "my-key-ring",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

@@ -16,9 +16,9 @@ Get information about a BackendBucket.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const my_backend_bucket = gcp.compute.getBackendBucket({
+const my_backend_bucket = pulumi.output(gcp.compute.getBackendBucket({
     name: "my-backend",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

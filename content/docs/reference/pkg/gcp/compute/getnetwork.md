@@ -16,9 +16,9 @@ Get a network within GCE from its name.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const my_network = gcp.compute.getNetwork({
+const my_network = pulumi.output(gcp.compute.getNetwork({
     name: "default-us-east1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

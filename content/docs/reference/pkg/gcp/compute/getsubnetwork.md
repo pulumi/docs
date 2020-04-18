@@ -16,10 +16,10 @@ Get a subnetwork within GCE from its name and region.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const my_subnetwork = gcp.compute.getSubnetwork({
+const my_subnetwork = pulumi.output(gcp.compute.getSubnetwork({
     name: "default-us-east1",
     region: "us-east1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

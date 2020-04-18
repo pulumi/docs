@@ -16,10 +16,10 @@ Get a router within GCE from its name and VPC.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const my_router = gcp.compute.getRouter({
+const my_router = pulumi.output(gcp.compute.getRouter({
     name: "myrouter-us-east1",
     network: "my-network",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

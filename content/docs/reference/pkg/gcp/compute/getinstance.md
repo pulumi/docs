@@ -20,10 +20,10 @@ and
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const appserver = gcp.compute.getInstance({
+const appserver = pulumi.output(gcp.compute.getInstance({
     name: "primary-application-server",
     zone: "us-central1-a",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}

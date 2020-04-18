@@ -14,10 +14,10 @@ and [API](https://cloud.google.com/compute/docs/reference/latest/instanceGroups)
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const all = gcp.compute.getInstanceGroup({
+const all = pulumi.output(gcp.compute.getInstanceGroup({
     name: "instance-group-name",
     zone: "us-central1-a",
-});
+}, { async: true }));
 ```
 
 

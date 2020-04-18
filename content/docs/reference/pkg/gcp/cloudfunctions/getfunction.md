@@ -18,9 +18,9 @@ and [API](https://cloud.google.com/functions/docs/apis).
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const my_function = gcp.cloudfunctions.getFunction({
+const my_function = pulumi.output(gcp.cloudfunctions.getFunction({
     name: "function",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
