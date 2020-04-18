@@ -61,9 +61,6 @@ imported parameters by defining them in your template with your desired new valu
 </ul>
 </li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_gke.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/elastigroup_gke.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -436,9 +433,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_spotinst.gke.OceanImport">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.gke.</code><code class="sig-name descname">OceanImport</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backend_services=None</em>, <em class="sig-param">cluster_name=None</em>, <em class="sig-param">desired_capacity=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">max_size=None</em>, <em class="sig-param">min_size=None</em>, <em class="sig-param">scheduled_tasks=None</em>, <em class="sig-param">whitelists=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.gke.OceanImport" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Spotinst Ocean GKE import resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_gke_import.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_gke_import.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -622,9 +616,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_spotinst.gke.OceanLaunchSpec">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.gke.</code><code class="sig-name descname">OceanLaunchSpec</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">autoscale_headrooms=None</em>, <em class="sig-param">labels=None</em>, <em class="sig-param">metadatas=None</em>, <em class="sig-param">ocean_id=None</em>, <em class="sig-param">source_image=None</em>, <em class="sig-param">taints=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.gke.OceanLaunchSpec" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a custom Spotinst Ocean GKE Launch Spec resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_gke_launch_spec.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_gke_launch_spec.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -804,9 +795,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_spotinst.gke.OceanLaunchSpecImport">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_spotinst.gke.</code><code class="sig-name descname">OceanLaunchSpecImport</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">node_pool_name=None</em>, <em class="sig-param">ocean_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_spotinst.gke.OceanLaunchSpecImport" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a custom Spotinst Ocean GKE Launch Spec Import resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_gke_launch_spec_import.html.markdown">https://github.com/terraform-providers/terraform-provider-spotinst/blob/master/website/docs/r/ocean_gke_launch_spec_import.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
