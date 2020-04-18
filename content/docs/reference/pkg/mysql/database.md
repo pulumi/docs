@@ -201,7 +201,13 @@ const app = new mysql.Database("app", {});
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## Database Resource Properties
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The Database resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -374,6 +380,9 @@ the operating system on which the MySQL server is running.
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. The Database resource does not produce any additional output properties.
 
 
 
