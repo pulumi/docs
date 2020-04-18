@@ -16,10 +16,10 @@ Use this data source to get Packet Spot Market Price.
 import * as pulumi from "@pulumi/pulumi";
 import * as packet from "@pulumi/packet";
 
-const example = packet.getSpotMarketPrice({
+const example = pulumi.output(packet.getSpotMarketPrice({
     facility: "ewr1",
     plan: "c1.small.x86",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
