@@ -10,9 +10,8 @@
     <ul class="p-0 list-none">
         <!-- Only show "Edit this Page" for pages that are not generated. -->
         {{ $isCLICommand := hasPrefix .Path "docs/reference/cli/" }}
-        {{ $isNodePackage := hasPrefix .Path "docs/reference/pkg/nodejs/pulumi" }}
-        {{ $isPythonPackage := hasPrefix .Path "docs/reference/pkg/python/pulumi" }}
-        {{ if not (or $isCLICommand $isNodePackage $isPythonPackage $.Page.Params.no_edit_this_page) }}
+        {{ $isAPIDoc := and (hasPrefix .Path "docs/reference/pkg/") (ne .Path "docs/reference/pkg/_index.md") }}
+        {{ if not (or $isCLICommand $isAPIDoc $.Page.Params.no_edit_this_page) }}
             <li>
                 <a data-track="edit-page" class="text-gray-600 hover:text-blue-700 text-xs" href="{{ $.Site.Params.repositoryURL }}/edit/{{ $.Site.Params.repositoryBranch }}/content/{{ .Path }}" target="_blank">
                     <i class="fas fa-edit mr-2" style="width: 14px"></i>Edit this Page
