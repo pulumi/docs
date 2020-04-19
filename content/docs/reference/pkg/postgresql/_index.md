@@ -11,7 +11,7 @@ menu:
 
 A Pulumi package for creating and managing postgresql cloud resources.
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
     <li><a href="defaultprivileg" title="DefaultPrivileg"><span class="symbol resource"></span>DefaultPrivileg</a></li>
@@ -23,7 +23,7 @@ A Pulumi package for creating and managing postgresql cloud resources.
     <li><a href="schema" title="Schema"><span class="symbol resource"></span>Schema</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-postgresql">https://github.com/pulumi/pulumi-postgresql</a></dd>
