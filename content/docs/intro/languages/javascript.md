@@ -143,23 +143,17 @@ When using Pulumi's built in TypeScript support, a `tsconfig.json` file is optio
 ```json
 {
     "compilerOptions": {
+        "strict": true,
         "outDir": "bin",
-        "target": "es6",
-        "lib": [
-            "es6"
-        ],
+        "target": "es2016",
         "module": "commonjs",
         "moduleResolution": "node",
-        "declaration": true,
         "sourceMap": true,
-        "stripInternal": true,
         "experimentalDecorators": true,
         "pretty": true,
         "noFallthroughCasesInSwitch": true,
-        "noImplicitAny": true,
         "noImplicitReturns": true,
-        "forceConsistentCasingInFileNames": true,
-        "strictNullChecks": true
+        "forceConsistentCasingInFileNames": true
     },
     "files": [
         "index.ts"
