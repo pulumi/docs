@@ -76,7 +76,7 @@ import * as pulumi from "@pulumi/pulumi";
 
 
 
-## Create a OceanImport Resource
+## Create a OceanImport Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -166,7 +166,7 @@ import * as pulumi from "@pulumi/pulumi";
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -243,7 +243,7 @@ import * as pulumi from "@pulumi/pulumi";
 
 {{% /choosable %}}
 
-## OceanImport Resource Properties
+## OceanImport Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -568,9 +568,7 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the OceanImport resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the OceanImport resource produces the following output properties:
 
 
 
@@ -585,6 +583,14 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -601,6 +607,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -615,6 +629,14 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -631,6 +653,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -640,8 +670,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing OceanImport Resource
+## Look up an Existing OceanImport Resource {#look-up}
 
 Get an existing OceanImport resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1112,7 +1141,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Ocean<wbr>Import<wbr>Backend<wbr>Service</h4>
+
+<h4 id="oceanimportbackendservice">Ocean<wbr>Import<wbr>Backend<wbr>Service</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanImportBackendService">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanImportBackendService">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1295,7 +1325,7 @@ The following state arguments are supported:
 
 
 
-<h4>Ocean<wbr>Import<wbr>Backend<wbr>Service<wbr>Named<wbr>Port</h4>
+<h4 id="oceanimportbackendservicenamedport">Ocean<wbr>Import<wbr>Backend<wbr>Service<wbr>Named<wbr>Port</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanImportBackendServiceNamedPort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanImportBackendServiceNamedPort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1406,7 +1436,7 @@ The following state arguments are supported:
 
 
 
-<h4>Ocean<wbr>Import<wbr>Scheduled<wbr>Task</h4>
+<h4 id="oceanimportscheduledtask">Ocean<wbr>Import<wbr>Scheduled<wbr>Task</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanImportScheduledTask">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanImportScheduledTask">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1513,7 +1543,7 @@ The following state arguments are supported:
 
 
 
-<h4>Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours</h4>
+<h4 id="oceanimportscheduledtaskshutdownhours">Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanImportScheduledTaskShutdownHours">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanImportScheduledTaskShutdownHours">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1620,7 +1650,7 @@ The following state arguments are supported:
 
 
 
-<h4>Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Task</h4>
+<h4 id="oceanimportscheduledtasktask">Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Task</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#OceanImportScheduledTaskTask">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#OceanImportScheduledTaskTask">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1795,7 +1825,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-spotinst">https://github.com/pulumi/pulumi-spotinst</a></dd>

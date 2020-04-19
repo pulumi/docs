@@ -12,7 +12,7 @@ block_external_search_index: true
 
 
 
-## Create a Elastigroup Resource
+## Create a Elastigroup Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -102,7 +102,7 @@ block_external_search_index: true
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -179,7 +179,7 @@ block_external_search_index: true
 
 {{% /choosable %}}
 
-## Elastigroup Resource Properties
+## Elastigroup Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -2648,12 +2648,77 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The Elastigroup resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Elastigroup resource produces the following output properties:
 
 
 
 
-## Look up an Existing Elastigroup Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing Elastigroup Resource {#look-up}
 
 Get an existing Elastigroup resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -5236,7 +5301,8 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 ## Supporting Types
 
-<h4>Elastigroup<wbr>Ebs<wbr>Block<wbr>Device</h4>
+
+<h4 id="elastigroupebsblockdevice">Elastigroup<wbr>Ebs<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupEbsBlockDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupEbsBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5535,7 +5601,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Ephemeral<wbr>Block<wbr>Device</h4>
+<h4 id="elastigroupephemeralblockdevice">Elastigroup<wbr>Ephemeral<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupEphemeralBlockDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupEphemeralBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5642,7 +5708,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Instance<wbr>Types<wbr>Weight</h4>
+<h4 id="elastigroupinstancetypesweight">Elastigroup<wbr>Instance<wbr>Types<wbr>Weight</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupInstanceTypesWeight">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupInstanceTypesWeight">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5757,7 +5823,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Beanstalk</h4>
+<h4 id="elastigroupintegrationbeanstalk">Elastigroup<wbr>Integration<wbr>Beanstalk</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationBeanstalk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationBeanstalk">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5896,7 +5962,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Deployment<wbr>Preferences</h4>
+<h4 id="elastigroupintegrationbeanstalkdeploymentpreferences">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Deployment<wbr>Preferences</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationBeanstalkDeploymentPreferences">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationBeanstalkDeploymentPreferences">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6067,7 +6133,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Strategy</h4>
+<h4 id="elastigroupintegrationbeanstalkdeploymentpreferencesstrategy">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Strategy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationBeanstalkDeploymentPreferencesStrategy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationBeanstalkDeploymentPreferencesStrategy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6174,7 +6240,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Managed<wbr>Actions</h4>
+<h4 id="elastigroupintegrationbeanstalkmanagedactions">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Managed<wbr>Actions</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationBeanstalkManagedActions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationBeanstalkManagedActions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6249,7 +6315,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Managed<wbr>Actions<wbr>Platform<wbr>Update</h4>
+<h4 id="elastigroupintegrationbeanstalkmanagedactionsplatformupdate">Elastigroup<wbr>Integration<wbr>Beanstalk<wbr>Managed<wbr>Actions<wbr>Platform<wbr>Update</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationBeanstalkManagedActionsPlatformUpdate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationBeanstalkManagedActionsPlatformUpdate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6392,7 +6458,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Codedeploy</h4>
+<h4 id="elastigroupintegrationcodedeploy">Elastigroup<wbr>Integration<wbr>Codedeploy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationCodedeploy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationCodedeploy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6531,7 +6597,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Codedeploy<wbr>Deployment<wbr>Group</h4>
+<h4 id="elastigroupintegrationcodedeploydeploymentgroup">Elastigroup<wbr>Integration<wbr>Codedeploy<wbr>Deployment<wbr>Group</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationCodedeployDeploymentGroup">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationCodedeployDeploymentGroup">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6638,7 +6704,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm</h4>
+<h4 id="elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationDockerSwarm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationDockerSwarm">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6873,7 +6939,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Autoscale<wbr>Down</h4>
+<h4 id="elastigroupintegrationdockerswarmautoscaledown">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Autoscale<wbr>Down</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationDockerSwarmAutoscaleDown">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationDockerSwarmAutoscaleDown">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6948,7 +7014,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Autoscale<wbr>Headroom</h4>
+<h4 id="elastigroupintegrationdockerswarmautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Autoscale<wbr>Headroom</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationDockerSwarmAutoscaleHeadroom">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationDockerSwarmAutoscaleHeadroom">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7087,7 +7153,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Ecs</h4>
+<h4 id="elastigroupintegrationecs">Elastigroup<wbr>Integration<wbr>Ecs</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationEcs">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationEcs">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7386,7 +7452,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Attribute</h4>
+<h4 id="elastigroupintegrationecsautoscaleattribute">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Attribute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationEcsAutoscaleAttribute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationEcsAutoscaleAttribute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7493,7 +7559,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Down</h4>
+<h4 id="elastigroupintegrationecsautoscaledown">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Down</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationEcsAutoscaleDown">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationEcsAutoscaleDown">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7600,7 +7666,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Headroom</h4>
+<h4 id="elastigroupintegrationecsautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Ecs<wbr>Autoscale<wbr>Headroom</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationEcsAutoscaleHeadroom">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationEcsAutoscaleHeadroom">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7739,7 +7805,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Gitlab</h4>
+<h4 id="elastigroupintegrationgitlab">Elastigroup<wbr>Integration<wbr>Gitlab</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationGitlab">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationGitlab">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7814,7 +7880,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Gitlab<wbr>Runner</h4>
+<h4 id="elastigroupintegrationgitlabrunner">Elastigroup<wbr>Integration<wbr>Gitlab<wbr>Runner</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationGitlabRunner">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationGitlabRunner">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7889,7 +7955,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Kubernetes</h4>
+<h4 id="elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationKubernetes">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationKubernetes">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8252,7 +8318,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Down</h4>
+<h4 id="elastigroupintegrationkubernetesautoscaledown">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Down</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationKubernetesAutoscaleDown">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationKubernetesAutoscaleDown">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8327,7 +8393,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Headroom</h4>
+<h4 id="elastigroupintegrationkubernetesautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Headroom</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationKubernetesAutoscaleHeadroom">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationKubernetesAutoscaleHeadroom">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8466,7 +8532,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Label</h4>
+<h4 id="elastigroupintegrationkubernetesautoscalelabel">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Autoscale<wbr>Label</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationKubernetesAutoscaleLabel">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationKubernetesAutoscaleLabel">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8573,7 +8639,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Mesosphere</h4>
+<h4 id="elastigroupintegrationmesosphere">Elastigroup<wbr>Integration<wbr>Mesosphere</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationMesosphere">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationMesosphere">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8648,7 +8714,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime</h4>
+<h4 id="elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationMultaiRuntime">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationMultaiRuntime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8723,7 +8789,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Nomad</h4>
+<h4 id="elastigroupintegrationnomad">Elastigroup<wbr>Integration<wbr>Nomad</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationNomad">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationNomad">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9022,7 +9088,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Constraint</h4>
+<h4 id="elastigroupintegrationnomadautoscaleconstraint">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Constraint</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationNomadAutoscaleConstraint">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationNomadAutoscaleConstraint">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9129,7 +9195,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Down</h4>
+<h4 id="elastigroupintegrationnomadautoscaledown">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Down</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationNomadAutoscaleDown">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationNomadAutoscaleDown">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9204,7 +9270,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Headroom</h4>
+<h4 id="elastigroupintegrationnomadautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Nomad<wbr>Autoscale<wbr>Headroom</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationNomadAutoscaleHeadroom">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationNomadAutoscaleHeadroom">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9343,7 +9409,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Rancher</h4>
+<h4 id="elastigroupintegrationrancher">Elastigroup<wbr>Integration<wbr>Rancher</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationRancher">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationRancher">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9514,7 +9580,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Route53</h4>
+<h4 id="elastigroupintegrationroute53">Elastigroup<wbr>Integration<wbr>Route53</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationRoute53">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationRoute53">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9589,7 +9655,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Route53Domain</h4>
+<h4 id="elastigroupintegrationroute53domain">Elastigroup<wbr>Integration<wbr>Route53Domain</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationRoute53Domain">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationRoute53Domain">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9728,7 +9794,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Route53Domain<wbr>Record<wbr>Set</h4>
+<h4 id="elastigroupintegrationroute53domainrecordset">Elastigroup<wbr>Integration<wbr>Route53Domain<wbr>Record<wbr>Set</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationRoute53DomainRecordSet">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationRoute53DomainRecordSet">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9839,7 +9905,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Multai<wbr>Target<wbr>Set</h4>
+<h4 id="elastigroupmultaitargetset">Elastigroup<wbr>Multai<wbr>Target<wbr>Set</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupMultaiTargetSet">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupMultaiTargetSet">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9946,7 +10012,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Network<wbr>Interface</h4>
+<h4 id="elastigroupnetworkinterface">Elastigroup<wbr>Network<wbr>Interface</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupNetworkInterface">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupNetworkInterface">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10249,7 +10315,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Revert<wbr>To<wbr>Spot</h4>
+<h4 id="elastigroupreverttospot">Elastigroup<wbr>Revert<wbr>To<wbr>Spot</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupRevertToSpot">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupRevertToSpot">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10364,7 +10430,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy</h4>
+<h4 id="elastigroupscalingdownpolicy">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingDownPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingDownPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11047,7 +11113,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension</h4>
+<h4 id="elastigroupscalingdownpolicydimension">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingDownPolicyDimension">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingDownPolicyDimension">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11158,7 +11224,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Scaling<wbr>Strategy</h4>
+<h4 id="elastigroupscalingstrategy">Elastigroup<wbr>Scaling<wbr>Strategy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingStrategy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingStrategy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11273,7 +11339,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy</h4>
+<h4 id="elastigroupscalingtargetpolicy">Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingTargetPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingTargetPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11636,7 +11702,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Dimension</h4>
+<h4 id="elastigroupscalingtargetpolicydimension">Elastigroup<wbr>Scaling<wbr>Target<wbr>Policy<wbr>Dimension</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingTargetPolicyDimension">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingTargetPolicyDimension">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11747,7 +11813,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy</h4>
+<h4 id="elastigroupscalinguppolicy">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingUpPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingUpPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -12430,7 +12496,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension</h4>
+<h4 id="elastigroupscalinguppolicydimension">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingUpPolicyDimension">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingUpPolicyDimension">output</a> API doc for this type.
 {{% /choosable %}}
@@ -12541,7 +12607,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Scheduled<wbr>Task</h4>
+<h4 id="elastigroupscheduledtask">Elastigroup<wbr>Scheduled<wbr>Task</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScheduledTask">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScheduledTask">output</a> API doc for this type.
 {{% /choosable %}}
@@ -13064,7 +13130,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Signal</h4>
+<h4 id="elastigroupsignal">Elastigroup<wbr>Signal</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupSignal">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupSignal">output</a> API doc for this type.
 {{% /choosable %}}
@@ -13175,7 +13241,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Stateful<wbr>Deallocation</h4>
+<h4 id="elastigroupstatefuldeallocation">Elastigroup<wbr>Stateful<wbr>Deallocation</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupStatefulDeallocation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupStatefulDeallocation">output</a> API doc for this type.
 {{% /choosable %}}
@@ -13346,7 +13412,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Tag</h4>
+<h4 id="elastigrouptag">Elastigroup<wbr>Tag</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupTag">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupTag">output</a> API doc for this type.
 {{% /choosable %}}
@@ -13453,7 +13519,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Update<wbr>Policy</h4>
+<h4 id="elastigroupupdatepolicy">Elastigroup<wbr>Update<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupUpdatePolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupUpdatePolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -13624,7 +13690,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</h4>
+<h4 id="elastigroupupdatepolicyrollconfig">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupUpdatePolicyRollConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupUpdatePolicyRollConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -13863,7 +13929,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h4>Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Strategy</h4>
+<h4 id="elastigroupupdatepolicyrollconfigstrategy">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Strategy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupUpdatePolicyRollConfigStrategy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupUpdatePolicyRollConfigStrategy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -14006,7 +14072,7 @@ Note: When this parameter is set, `availability_zones` should be left unused.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-spotinst">https://github.com/pulumi/pulumi-spotinst</a></dd>

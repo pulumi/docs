@@ -12,7 +12,7 @@ block_external_search_index: true
 
 
 
-## Create a MrScalar Resource
+## Create a MrScalar Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -102,7 +102,7 @@ block_external_search_index: true
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -179,7 +179,7 @@ block_external_search_index: true
 
 {{% /choosable %}}
 
-## MrScalar Resource Properties
+## MrScalar Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -2036,15 +2036,21 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the MrScalar resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the MrScalar resource produces the following output properties:
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2063,6 +2069,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Output<wbr>Cluster<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -2075,6 +2089,14 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2093,6 +2115,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>output_<wbr>cluster_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2108,8 +2138,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing MrScalar Resource
+## Look up an Existing MrScalar Resource {#look-up}
 
 Get an existing MrScalar resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -4112,7 +4141,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Mr<wbr>Scalar<wbr>Application</h4>
+
+<h4 id="mrscalarapplication">Mr<wbr>Scalar<wbr>Application</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#MrScalarApplication">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#MrScalarApplication">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4255,7 +4285,7 @@ The following state arguments are supported:
 
 
 
-<h4>Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File</h4>
+<h4 id="mrscalarbootstrapactionsfile">Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#MrScalarBootstrapActionsFile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#MrScalarBootstrapActionsFile">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4362,7 +4392,7 @@ The following state arguments are supported:
 
 
 
-<h4>Mr<wbr>Scalar<wbr>Configurations<wbr>File</h4>
+<h4 id="mrscalarconfigurationsfile">Mr<wbr>Scalar<wbr>Configurations<wbr>File</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#MrScalarConfigurationsFile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#MrScalarConfigurationsFile">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4469,7 +4499,7 @@ The following state arguments are supported:
 
 
 
-<h4>Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device</h4>
+<h4 id="mrscalarcoreebsblockdevice">Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#MrScalarCoreEbsBlockDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#MrScalarCoreEbsBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4640,7 +4670,7 @@ The following state arguments are supported:
 
 
 
-<h4>Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Down<wbr>Policy</h4>
+<h4 id="mrscalarcorescalingdownpolicy">Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Down<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#MrScalarCoreScalingDownPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#MrScalarCoreScalingDownPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5259,7 +5289,7 @@ The following state arguments are supported:
 
 
 
-<h4>Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy</h4>
+<h4 id="mrscalarcorescalinguppolicy">Mr<wbr>Scalar<wbr>Core<wbr>Scaling<wbr>Up<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#MrScalarCoreScalingUpPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#MrScalarCoreScalingUpPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5878,7 +5908,7 @@ The following state arguments are supported:
 
 
 
-<h4>Mr<wbr>Scalar<wbr>Instance<wbr>Weight</h4>
+<h4 id="mrscalarinstanceweight">Mr<wbr>Scalar<wbr>Instance<wbr>Weight</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#MrScalarInstanceWeight">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#MrScalarInstanceWeight">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5985,7 +6015,7 @@ The following state arguments are supported:
 
 
 
-<h4>Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device</h4>
+<h4 id="mrscalarmasterebsblockdevice">Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#MrScalarMasterEbsBlockDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#MrScalarMasterEbsBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6156,7 +6186,7 @@ The following state arguments are supported:
 
 
 
-<h4>Mr<wbr>Scalar<wbr>Provisioning<wbr>Timeout</h4>
+<h4 id="mrscalarprovisioningtimeout">Mr<wbr>Scalar<wbr>Provisioning<wbr>Timeout</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#MrScalarProvisioningTimeout">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#MrScalarProvisioningTimeout">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6263,7 +6293,7 @@ The following state arguments are supported:
 
 
 
-<h4>Mr<wbr>Scalar<wbr>Scheduled<wbr>Task</h4>
+<h4 id="mrscalarscheduledtask">Mr<wbr>Scalar<wbr>Scheduled<wbr>Task</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#MrScalarScheduledTask">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#MrScalarScheduledTask">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6530,7 +6560,7 @@ The following state arguments are supported:
 
 
 
-<h4>Mr<wbr>Scalar<wbr>Steps<wbr>File</h4>
+<h4 id="mrscalarstepsfile">Mr<wbr>Scalar<wbr>Steps<wbr>File</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#MrScalarStepsFile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#MrScalarStepsFile">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6637,7 +6667,7 @@ The following state arguments are supported:
 
 
 
-<h4>Mr<wbr>Scalar<wbr>Tag</h4>
+<h4 id="mrscalartag">Mr<wbr>Scalar<wbr>Tag</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#MrScalarTag">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#MrScalarTag">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6744,7 +6774,7 @@ The following state arguments are supported:
 
 
 
-<h4>Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device</h4>
+<h4 id="mrscalartaskebsblockdevice">Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#MrScalarTaskEbsBlockDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#MrScalarTaskEbsBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6915,7 +6945,7 @@ The following state arguments are supported:
 
 
 
-<h4>Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Down<wbr>Policy</h4>
+<h4 id="mrscalartaskscalingdownpolicy">Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Down<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#MrScalarTaskScalingDownPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#MrScalarTaskScalingDownPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7534,7 +7564,7 @@ The following state arguments are supported:
 
 
 
-<h4>Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Up<wbr>Policy</h4>
+<h4 id="mrscalartaskscalinguppolicy">Mr<wbr>Scalar<wbr>Task<wbr>Scaling<wbr>Up<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#MrScalarTaskScalingUpPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#MrScalarTaskScalingUpPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8157,7 +8187,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-spotinst">https://github.com/pulumi/pulumi-spotinst</a></dd>

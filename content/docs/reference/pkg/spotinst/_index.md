@@ -11,7 +11,7 @@ menu:
 
 A Pulumi package for creating and managing spotinst cloud resources.
 
-<h3>Modules</h3>
+<h2 id="modules">Modules</h2>
 <ul class="api">
     <li><a href="aws/" title="aws"><span class="symbol module"></span>aws</a></li>
     <li><a href="azure/" title="azure"><span class="symbol module"></span>azure</a></li>
@@ -21,14 +21,14 @@ A Pulumi package for creating and managing spotinst cloud resources.
     <li><a href="multai/" title="multai"><span class="symbol module"></span>multai</a></li>
 </ul>
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="healthcheck" title="HealthCheck"><span class="symbol resource"></span>HealthCheck</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="subscription" title="Subscription"><span class="symbol resource"></span>Subscription</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-spotinst">https://github.com/pulumi/pulumi-spotinst</a></dd>

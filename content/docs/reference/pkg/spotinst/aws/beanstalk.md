@@ -81,7 +81,7 @@ import * as pulumi from "@pulumi/pulumi";
 
 
 
-## Create a Beanstalk Resource
+## Create a Beanstalk Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -171,7 +171,7 @@ import * as pulumi from "@pulumi/pulumi";
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -248,7 +248,7 @@ import * as pulumi from "@pulumi/pulumi";
 
 {{% /choosable %}}
 
-## Beanstalk Resource Properties
+## Beanstalk Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -757,12 +757,77 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The Beanstalk resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Beanstalk resource produces the following output properties:
 
 
 
 
-## Look up an Existing Beanstalk Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing Beanstalk Resource {#look-up}
 
 Get an existing Beanstalk resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1385,7 +1450,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
 ## Supporting Types
 
-<h4>Beanstalk<wbr>Deployment<wbr>Preferences</h4>
+
+<h4 id="beanstalkdeploymentpreferences">Beanstalk<wbr>Deployment<wbr>Preferences</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#BeanstalkDeploymentPreferences">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#BeanstalkDeploymentPreferences">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1572,7 +1638,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
 
 
-<h4>Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Strategy</h4>
+<h4 id="beanstalkdeploymentpreferencesstrategy">Beanstalk<wbr>Deployment<wbr>Preferences<wbr>Strategy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#BeanstalkDeploymentPreferencesStrategy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#BeanstalkDeploymentPreferencesStrategy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1687,7 +1753,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
 
 
-<h4>Beanstalk<wbr>Managed<wbr>Actions</h4>
+<h4 id="beanstalkmanagedactions">Beanstalk<wbr>Managed<wbr>Actions</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#BeanstalkManagedActions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#BeanstalkManagedActions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1766,7 +1832,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
 
 
-<h4>Beanstalk<wbr>Managed<wbr>Actions<wbr>Platform<wbr>Update</h4>
+<h4 id="beanstalkmanagedactionsplatformupdate">Beanstalk<wbr>Managed<wbr>Actions<wbr>Platform<wbr>Update</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#BeanstalkManagedActionsPlatformUpdate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#BeanstalkManagedActionsPlatformUpdate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1917,7 +1983,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
 
 
-<h4>Beanstalk<wbr>Scheduled<wbr>Task</h4>
+<h4 id="beanstalkscheduledtask">Beanstalk<wbr>Scheduled<wbr>Task</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#BeanstalkScheduledTask">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#BeanstalkScheduledTask">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2452,7 +2518,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-spotinst">https://github.com/pulumi/pulumi-spotinst</a></dd>
