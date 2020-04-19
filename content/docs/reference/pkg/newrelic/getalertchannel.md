@@ -11,7 +11,7 @@ block_external_search_index: true
 
 
 
-## Using GetAlertChannel
+## Using GetAlertChannel {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -113,7 +113,7 @@ The following arguments are supported:
 
 
 
-## GetAlertChannel Result
+## GetAlertChannel Result {#result}
 
 The following output properties are available:
 
@@ -332,7 +332,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Alert<wbr>Channel<wbr>Config</h4>
+
+<h4 id="getalertchannelconfig">Get<wbr>Alert<wbr>Channel<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/newrelic/types/output/#GetAlertChannelConfig">output</a> API doc for this type.
 {{% /choosable %}}

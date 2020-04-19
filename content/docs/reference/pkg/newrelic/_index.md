@@ -11,14 +11,14 @@ menu:
 
 A Pulumi package for creating and managing New Relic resources.
 
-<h3>Modules</h3>
+<h2 id="modules">Modules</h2>
 <ul class="api">
     <li><a href="insights/" title="insights"><span class="symbol module"></span>insights</a></li>
     <li><a href="plugins/" title="plugins"><span class="symbol module"></span>plugins</a></li>
     <li><a href="synthetics/" title="synthetics"><span class="symbol module"></span>synthetics</a></li>
 </ul>
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="alertchannel" title="AlertChannel"><span class="symbol resource"></span>AlertChannel</a></li>
     <li><a href="alertcondition" title="AlertCondition"><span class="symbol resource"></span>AlertCondition</a></li>
@@ -30,7 +30,7 @@ A Pulumi package for creating and managing New Relic resources.
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getalertchannel" title="GetAlertChannel"><span class="symbol function"></span>GetAlertChannel</a></li>
     <li><a href="getalertpolicy" title="GetAlertPolicy"><span class="symbol function"></span>GetAlertPolicy</a></li>
@@ -38,7 +38,7 @@ A Pulumi package for creating and managing New Relic resources.
     <li><a href="getkeytransaction" title="GetKeyTransaction"><span class="symbol function"></span>GetKeyTransaction</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-newrelic">https://github.com/pulumi/pulumi-newrelic</a></dd>

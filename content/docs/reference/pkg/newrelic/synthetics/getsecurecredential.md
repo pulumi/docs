@@ -30,7 +30,7 @@ const foo = pulumi.output(newrelic.synthetics.getSecureCredential({
 
 
 
-## Using GetSecureCredential
+## Using GetSecureCredential {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -132,7 +132,7 @@ The following arguments are supported:
 
 
 
-## GetSecureCredential Result
+## GetSecureCredential Result {#result}
 
 The following output properties are available:
 
