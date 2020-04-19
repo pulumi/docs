@@ -18,9 +18,9 @@ import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
 import * as tls from "@pulumi/tls";
 
-const example = tls.getPublicKey({
+const example = pulumi.output(tls.getPublicKey({
     privateKeyPem: fs.readFileSync("~/.ssh/id_rsa", "utf-8"),
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -30,7 +30,7 @@ const example = tls.getPublicKey({
 
 
 
-## Using GetPublicKey
+## Using GetPublicKey {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -132,7 +132,7 @@ The following arguments are supported:
 
 
 
-## GetPublicKey Result
+## GetPublicKey Result {#result}
 
 The following output properties are available:
 
