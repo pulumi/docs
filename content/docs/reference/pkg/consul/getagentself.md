@@ -21,7 +21,7 @@ from the agent specified in the `provider`.
 
 
 
-## Using GetAgentSelf
+## Using GetAgentSelf {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -50,7 +50,7 @@ from the agent specified in the `provider`.
 
 
 
-## GetAgentSelf Result
+## GetAgentSelf Result {#result}
 
 The following output properties are available:
 

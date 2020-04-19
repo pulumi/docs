@@ -11,7 +11,7 @@ block_external_search_index: true
 
 
 
-## Using GetKeyPrefix
+## Using GetKeyPrefix {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -277,7 +277,7 @@ token that the agent provides by default.
 
 
 
-## GetKeyPrefix Result
+## GetKeyPrefix Result {#result}
 
 The following output properties are available:
 
@@ -604,7 +604,8 @@ block is provided.
 
 ## Supporting Types
 
-<h4>Get<wbr>Key<wbr>Prefix<wbr>Subkey<wbr>Collection</h4>
+
+<h4 id="getkeyprefixsubkeycollection">Get<wbr>Key<wbr>Prefix<wbr>Subkey<wbr>Collection</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/input/#GetKeyPrefixSubkeyCollection">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/output/#GetKeyPrefixSubkeyCollection">output</a> API doc for this type.
 {{% /choosable %}}

@@ -22,7 +22,7 @@ from the agent specified in the `provider`.
 import * as pulumi from "@pulumi/pulumi";
 import * as consul from "@pulumi/consul";
 
-const remoteAgent = consul.getAgentConfig();
+const remoteAgent = pulumi.output(consul.getAgentConfig({ async: true }));
 
 export const consulVersion = remoteAgent.version;
 ```
@@ -34,7 +34,7 @@ export const consulVersion = remoteAgent.version;
 
 
 
-## Using GetAgentConfig
+## Using GetAgentConfig {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -63,7 +63,7 @@ export const consulVersion = remoteAgent.version;
 
 
 
-## GetAgentConfig Result
+## GetAgentConfig Result {#result}
 
 The following output properties are available:
 

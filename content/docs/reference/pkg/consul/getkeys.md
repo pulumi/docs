@@ -18,7 +18,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 import * as consul from "@pulumi/consul";
 
-const appKeys = consul.getKeys({
+const appKeys = pulumi.output(consul.getKeys({
     datacenter: "nyc1",
     // Read the launch AMI from Consul
     keys: [{
@@ -27,7 +27,7 @@ const appKeys = consul.getKeys({
         path: "service/app/launch_ami",
     }],
     token: "abcd",
-});
+}, { async: true }));
 // Start our instance with the dynamic ami value
 const appInstance = new aws.ec2.Instance("app", {
     ami: appKeys.var.ami,
@@ -41,7 +41,7 @@ const appInstance = new aws.ec2.Instance("app", {
 
 
 
-## Using GetKeys
+## Using GetKeys {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -263,7 +263,7 @@ token that the agent provides by default.
 
 
 
-## GetKeys Result
+## GetKeys Result {#result}
 
 The following output properties are available:
 
@@ -514,7 +514,8 @@ has the value of the key.
 
 ## Supporting Types
 
-<h4>Get<wbr>Keys<wbr>Key</h4>
+
+<h4 id="getkeyskey">Get<wbr>Keys<wbr>Key</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/input/#GetKeysKey">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/output/#GetKeysKey">output</a> API doc for this type.
 {{% /choosable %}}

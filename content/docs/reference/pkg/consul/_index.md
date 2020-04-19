@@ -11,7 +11,7 @@ menu:
 
 A Pulumi package for creating and managing consul resources.
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="aclauthmethod" title="AclAuthMethod"><span class="symbol resource"></span>AclAuthMethod</a></li>
     <li><a href="aclbindingrule" title="AclBindingRule"><span class="symbol resource"></span>AclBindingRule</a></li>
@@ -32,7 +32,7 @@ A Pulumi package for creating and managing consul resources.
     <li><a href="service" title="Service"><span class="symbol resource"></span>Service</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getaclauthmethod" title="GetAclAuthMethod"><span class="symbol function"></span>GetAclAuthMethod</a></li>
     <li><a href="getaclpolicy" title="GetAclPolicy"><span class="symbol function"></span>GetAclPolicy</a></li>
@@ -53,7 +53,7 @@ A Pulumi package for creating and managing consul resources.
     <li><a href="getservices" title="GetServices"><span class="symbol function"></span>GetServices</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-consul">https://github.com/pulumi/pulumi-consul</a></dd>

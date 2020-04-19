@@ -16,7 +16,7 @@ The `consul..AclAuthMethod` data source returns the information related to a
 
 
 
-## Using GetAclAuthMethod
+## Using GetAclAuthMethod {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -262,7 +262,7 @@ The following arguments are supported:
 
 
 
-## GetAclAuthMethod Result
+## GetAclAuthMethod Result {#result}
 
 The following output properties are available:
 

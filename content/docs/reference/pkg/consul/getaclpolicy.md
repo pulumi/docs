@@ -17,7 +17,7 @@ The `consul..AclPolicy` data source returns the information related to a
 
 
 
-## Using GetAclPolicy
+## Using GetAclPolicy {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -263,7 +263,7 @@ The following arguments are supported:
 
 
 
-## GetAclPolicy Result
+## GetAclPolicy Result {#result}
 
 The following output properties are available:
 

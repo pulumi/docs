@@ -20,9 +20,9 @@ If you want to get the secret ID associated with a token, use the
 import * as pulumi from "@pulumi/pulumi";
 import * as consul from "@pulumi/consul";
 
-const test = consul.getAclToken({
+const test = pulumi.output(consul.getAclToken({
     accessorId: "00000000-0000-0000-0000-000000000002",
-});
+}, { async: true }));
 
 export const consulAclPolicies = test.policies!;
 ```
@@ -35,7 +35,7 @@ export const consulAclPolicies = test.policies!;
 
 
 
-## Using GetAclToken
+## Using GetAclToken {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -285,7 +285,7 @@ an `id` and a `name` attribute.
 
 
 
-## GetAclToken Result
+## GetAclToken Result {#result}
 
 The following output properties are available:
 
@@ -540,7 +540,8 @@ an `id` and a `name` attribute.
 
 ## Supporting Types
 
-<h4>Get<wbr>Acl<wbr>Token<wbr>Policy</h4>
+
+<h4 id="getacltokenpolicy">Get<wbr>Acl<wbr>Token<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/input/#GetAclTokenPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/output/#GetAclTokenPolicy">output</a> API doc for this type.
 {{% /choosable %}}

@@ -18,7 +18,7 @@ about the current Consul cluster.
 import * as pulumi from "@pulumi/pulumi";
 import * as consul from "@pulumi/consul";
 
-const read = consul.getAutopilotHealth();
+const read = pulumi.output(consul.getAutopilotHealth({ async: true }));
 
 export const health = read.healthy;
 ```
@@ -30,7 +30,7 @@ export const health = read.healthy;
 
 
 
-## Using GetAutopilotHealth
+## Using GetAutopilotHealth {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -136,7 +136,7 @@ default datacenter and the datacenter in the provider setup.
 
 
 
-## GetAutopilotHealth Result
+## GetAutopilotHealth Result {#result}
 
 The following output properties are available:
 
@@ -367,7 +367,8 @@ available information.
 
 ## Supporting Types
 
-<h4>Get<wbr>Autopilot<wbr>Health<wbr>Server</h4>
+
+<h4 id="getautopilothealthserver">Get<wbr>Autopilot<wbr>Health<wbr>Server</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/output/#GetAutopilotHealthServer">output</a> API doc for this type.
 {{% /choosable %}}

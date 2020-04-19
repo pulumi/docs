@@ -11,7 +11,7 @@ block_external_search_index: true
 
 
 
-## Using GetCatalogServices
+## Using GetCatalogServices {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -109,7 +109,7 @@ The following arguments are supported:
 
 
 
-## GetCatalogServices Result
+## GetCatalogServices Result {#result}
 
 The following output properties are available:
 
@@ -316,7 +316,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Catalog<wbr>Services<wbr>Query<wbr>Option</h4>
+
+<h4 id="getcatalogservicesqueryoption">Get<wbr>Catalog<wbr>Services<wbr>Query<wbr>Option</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/input/#GetCatalogServicesQueryOption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/output/#GetCatalogServicesQueryOption">output</a> API doc for this type.
 {{% /choosable %}}

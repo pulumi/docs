@@ -22,7 +22,7 @@ source, which provides a summary of the current Consul services.
 
 
 
-## Using GetService
+## Using GetService {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -248,7 +248,7 @@ to return based on a single matching tag..
 
 
 
-## GetService Result
+## GetService Result {#result}
 
 The following output properties are available:
 
@@ -511,7 +511,8 @@ each individual node.  The list of per-node attributes is detailed below.
 
 ## Supporting Types
 
-<h4>Get<wbr>Service<wbr>Query<wbr>Option</h4>
+
+<h4 id="getservicequeryoption">Get<wbr>Service<wbr>Query<wbr>Option</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/input/#GetServiceQueryOption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/output/#GetServiceQueryOption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -906,7 +907,7 @@ to return.
 
 
 
-<h4>Get<wbr>Service<wbr>Service</h4>
+<h4 id="getserviceservice">Get<wbr>Service<wbr>Service</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/output/#GetServiceService">output</a> API doc for this type.
 {{% /choosable %}}
