@@ -16,7 +16,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
 
 
 
-## Create a RateLimit Resource
+## Create a RateLimit Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -106,7 +106,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -183,7 +183,7 @@ Provides a Cloudflare rate limit resource for a given zone. This can be used to 
 
 {{% /choosable %}}
 
-## RateLimit Resource Properties
+## RateLimit Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -552,12 +552,77 @@ The RateLimit resource accepts the following [input]({{< relref "/docs/intro/con
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The RateLimit resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the RateLimit resource produces the following output properties:
 
 
 
 
-## Look up an Existing RateLimit Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing RateLimit Resource {#look-up}
 
 Get an existing RateLimit resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1040,7 +1105,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Rate<wbr>Limit<wbr>Action</h4>
+
+<h4 id="ratelimitaction">Rate<wbr>Limit<wbr>Action</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#RateLimitAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#RateLimitAction">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1191,7 +1257,7 @@ The following state arguments are supported:
 
 
 
-<h4>Rate<wbr>Limit<wbr>Action<wbr>Response</h4>
+<h4 id="ratelimitactionresponse">Rate<wbr>Limit<wbr>Action<wbr>Response</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#RateLimitActionResponse">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#RateLimitActionResponse">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1306,7 +1372,7 @@ The following state arguments are supported:
 
 
 
-<h4>Rate<wbr>Limit<wbr>Correlate</h4>
+<h4 id="ratelimitcorrelate">Rate<wbr>Limit<wbr>Correlate</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#RateLimitCorrelate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#RateLimitCorrelate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1385,7 +1451,7 @@ The following state arguments are supported:
 
 
 
-<h4>Rate<wbr>Limit<wbr>Match</h4>
+<h4 id="ratelimitmatch">Rate<wbr>Limit<wbr>Match</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#RateLimitMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#RateLimitMatch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1500,7 +1566,7 @@ The following state arguments are supported:
 
 
 
-<h4>Rate<wbr>Limit<wbr>Match<wbr>Request</h4>
+<h4 id="ratelimitmatchrequest">Rate<wbr>Limit<wbr>Match<wbr>Request</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#RateLimitMatchRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#RateLimitMatchRequest">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1651,7 +1717,7 @@ The following state arguments are supported:
 
 
 
-<h4>Rate<wbr>Limit<wbr>Match<wbr>Response</h4>
+<h4 id="ratelimitmatchresponse">Rate<wbr>Limit<wbr>Match<wbr>Response</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#RateLimitMatchResponse">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#RateLimitMatchResponse">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1770,7 +1836,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-cloudflare">https://github.com/pulumi/pulumi-cloudflare</a></dd>

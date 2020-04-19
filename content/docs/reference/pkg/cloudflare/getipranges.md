@@ -15,7 +15,7 @@ Use this data source to get the [IP ranges][1] of Cloudflare edge nodes.
 
 
 
-## Using GetIpRanges
+## Using GetIpRanges {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -44,7 +44,7 @@ Use this data source to get the [IP ranges][1] of Cloudflare edge nodes.
 
 
 
-## GetIpRanges Result
+## GetIpRanges Result {#result}
 
 The following output properties are available:
 

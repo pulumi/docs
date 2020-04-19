@@ -15,7 +15,7 @@ Use this data source to look up [WAF Rules][1].
 
 
 
-## Using GetWafRules
+## Using GetWafRules {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -177,7 +177,7 @@ The following arguments are supported:
 
 
 
-## GetWafRules Result
+## GetWafRules Result {#result}
 
 The following output properties are available:
 
@@ -384,7 +384,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Waf<wbr>Rules<wbr>Filter</h4>
+
+<h4 id="getwafrulesfilter">Get<wbr>Waf<wbr>Rules<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#GetWafRulesFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#GetWafRulesFilter">output</a> API doc for this type.
 {{% /choosable %}}
@@ -523,7 +524,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Waf<wbr>Rules<wbr>Rule</h4>
+<h4 id="getwafrulesrule">Get<wbr>Waf<wbr>Rules<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#GetWafRulesRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -769,7 +770,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>group_<wbr>id</span>
+        <span>group<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -777,7 +778,7 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>group<wbr>Name</span>
+        <span>group_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

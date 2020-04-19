@@ -16,7 +16,7 @@ Provides a resource which customizes Cloudflare zone settings. Note that after d
 
 
 
-## Create a ZoneSettingsOverride Resource
+## Create a ZoneSettingsOverride Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -106,7 +106,7 @@ Provides a resource which customizes Cloudflare zone settings. Note that after d
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -183,7 +183,7 @@ Provides a resource which customizes Cloudflare zone settings. Note that after d
 
 {{% /choosable %}}
 
-## ZoneSettingsOverride Resource Properties
+## ZoneSettingsOverride Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -300,15 +300,21 @@ The ZoneSettingsOverride resource accepts the following [input]({{< relref "/doc
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the ZoneSettingsOverride resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the ZoneSettingsOverride resource produces the following output properties:
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -363,6 +369,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Initial<wbr>Settings</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#zonesettingsoverrideinitialsettings">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings</a></span>
@@ -411,6 +425,14 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -465,6 +487,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>initial_<wbr>settings</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#zonesettingsoverrideinitialsettings">Dict[Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings]</a></span>
@@ -516,8 +546,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing ZoneSettingsOverride Resource
+## Look up an Existing ZoneSettingsOverride Resource {#look-up}
 
 Get an existing ZoneSettingsOverride resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -924,7 +953,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings</h4>
+
+<h4 id="zonesettingsoverrideinitialsettings">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#ZoneSettingsOverrideInitialSettings">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2439,7 +2469,7 @@ The following state arguments are supported:
 
 
 
-<h4>Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Minify</h4>
+<h4 id="zonesettingsoverrideinitialsettingsminify">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Minify</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#ZoneSettingsOverrideInitialSettingsMinify">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2590,7 +2620,7 @@ The following state arguments are supported:
 
 
 
-<h4>Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Mobile<wbr>Redirect</h4>
+<h4 id="zonesettingsoverrideinitialsettingsmobileredirect">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Mobile<wbr>Redirect</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#ZoneSettingsOverrideInitialSettingsMobileRedirect">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2741,7 +2771,7 @@ The following state arguments are supported:
 
 
 
-<h4>Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Security<wbr>Header</h4>
+<h4 id="zonesettingsoverrideinitialsettingssecurityheader">Zone<wbr>Settings<wbr>Override<wbr>Initial<wbr>Settings<wbr>Security<wbr>Header</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#ZoneSettingsOverrideInitialSettingsSecurityHeader">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2964,7 +2994,7 @@ The following state arguments are supported:
 
 
 
-<h4>Zone<wbr>Settings<wbr>Override<wbr>Settings</h4>
+<h4 id="zonesettingsoverridesettings">Zone<wbr>Settings<wbr>Override<wbr>Settings</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#ZoneSettingsOverrideSettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#ZoneSettingsOverrideSettings">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4479,7 +4509,7 @@ The following state arguments are supported:
 
 
 
-<h4>Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Minify</h4>
+<h4 id="zonesettingsoverridesettingsminify">Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Minify</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#ZoneSettingsOverrideSettingsMinify">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#ZoneSettingsOverrideSettingsMinify">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4630,7 +4660,7 @@ The following state arguments are supported:
 
 
 
-<h4>Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Mobile<wbr>Redirect</h4>
+<h4 id="zonesettingsoverridesettingsmobileredirect">Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Mobile<wbr>Redirect</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#ZoneSettingsOverrideSettingsMobileRedirect">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#ZoneSettingsOverrideSettingsMobileRedirect">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4781,7 +4811,7 @@ The following state arguments are supported:
 
 
 
-<h4>Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Security<wbr>Header</h4>
+<h4 id="zonesettingsoverridesettingssecurityheader">Zone<wbr>Settings<wbr>Override<wbr>Settings<wbr>Security<wbr>Header</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#ZoneSettingsOverrideSettingsSecurityHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#ZoneSettingsOverrideSettingsSecurityHeader">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5008,7 +5038,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-cloudflare">https://github.com/pulumi/pulumi-cloudflare</a></dd>
