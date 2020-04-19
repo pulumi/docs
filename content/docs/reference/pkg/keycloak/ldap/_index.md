@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="fullnamemapper" title="FullNameMapper"><span class="symbol resource"></span>FullNameMapper</a></li>
     <li><a href="groupmapper" title="GroupMapper"><span class="symbol resource"></span>GroupMapper</a></li>
@@ -19,7 +19,7 @@ block_external_search_index: true
     <li><a href="userfederation" title="UserFederation"><span class="symbol resource"></span>UserFederation</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-keycloak">https://github.com/pulumi/pulumi-keycloak</a></dd>

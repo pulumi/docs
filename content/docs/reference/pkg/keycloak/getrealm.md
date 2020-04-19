@@ -25,7 +25,7 @@ See the docs for the `keycloak..Realm` resource for details on the exported attr
 
 
 
-## Using GetRealm
+## Using GetRealm {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -283,7 +283,7 @@ The following arguments are supported:
 
 
 
-## GetRealm Result
+## GetRealm Result {#result}
 
 The following output properties are available:
 
@@ -1642,7 +1642,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Realm<wbr>Internationalization</h4>
+
+<h4 id="getrealminternationalization">Get<wbr>Realm<wbr>Internationalization</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#GetRealmInternationalization">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#GetRealmInternationalization">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1749,7 +1750,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Realm<wbr>Security<wbr>Defense</h4>
+<h4 id="getrealmsecuritydefense">Get<wbr>Realm<wbr>Security<wbr>Defense</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#GetRealmSecurityDefense">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#GetRealmSecurityDefense">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1856,7 +1857,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Realm<wbr>Security<wbr>Defense<wbr>Brute<wbr>Force<wbr>Detection</h4>
+<h4 id="getrealmsecuritydefensebruteforcedetection">Get<wbr>Realm<wbr>Security<wbr>Defense<wbr>Brute<wbr>Force<wbr>Detection</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#GetRealmSecurityDefenseBruteForceDetection">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#GetRealmSecurityDefenseBruteForceDetection">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2123,7 +2124,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Realm<wbr>Security<wbr>Defense<wbr>Header</h4>
+<h4 id="getrealmsecuritydefenseheader">Get<wbr>Realm<wbr>Security<wbr>Defense<wbr>Header</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#GetRealmSecurityDefenseHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#GetRealmSecurityDefenseHeader">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2390,7 +2391,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Realm<wbr>Smtp<wbr>Server</h4>
+<h4 id="getrealmsmtpserver">Get<wbr>Realm<wbr>Smtp<wbr>Server</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#GetRealmSmtpServer">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#GetRealmSmtpServer">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2753,7 +2754,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Realm<wbr>Smtp<wbr>Server<wbr>Auth</h4>
+<h4 id="getrealmsmtpserverauth">Get<wbr>Realm<wbr>Smtp<wbr>Server<wbr>Auth</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/input/#GetRealmSmtpServerAuth">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#GetRealmSmtpServerAuth">output</a> API doc for this type.
 {{% /choosable %}}

@@ -24,7 +24,7 @@ const realm = new keycloak.Realm("realm", {
 const offlineAccess = realm.id.apply(id => keycloak.getRole({
     name: "offline_access",
     realmId: id,
-}));
+}, { async: true }));
 const group = new keycloak.Group("group", {
     realmId: realm.id,
 });
@@ -56,7 +56,7 @@ In addition to the arguments listed above, the following computed attributes are
 
 
 
-## Using GetRole
+## Using GetRole {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -218,7 +218,7 @@ The following arguments are supported:
 
 
 
-## GetRole Result
+## GetRole Result {#result}
 
 The following output properties are available:
 

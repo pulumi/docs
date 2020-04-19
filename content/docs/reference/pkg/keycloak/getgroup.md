@@ -24,11 +24,11 @@ const realm = new keycloak.Realm("realm", {
 const offlineAccess = realm.id.apply(id => keycloak.getRole({
     name: "offline_access",
     realmId: id,
-}));
+}, { async: true }));
 const group = realm.id.apply(id => keycloak.getGroup({
     name: "group",
     realmId: id,
-}));
+}, { async: true }));
 const groupRoles = new keycloak.GroupRoles("group_roles", {
     groupId: group.id,
     realmId: realm.id,
@@ -54,7 +54,7 @@ In addition to the arguments listed above, the following computed attributes are
 
 
 
-## Using GetGroup
+## Using GetGroup {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -184,7 +184,7 @@ The following arguments are supported:
 
 
 
-## GetGroup Result
+## GetGroup Result {#result}
 
 The following output properties are available:
 
