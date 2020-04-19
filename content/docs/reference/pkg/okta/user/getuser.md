@@ -16,7 +16,7 @@ Use this data source to retrieve a users from Okta.
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
-const example = okta.user.getUser({
+const example = pulumi.output(okta.user.getUser({
     searches: [
         {
             name: "profile.firstName",
@@ -27,7 +27,7 @@ const example = okta.user.getUser({
             value: "Doe",
         },
     ],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -37,7 +37,7 @@ const example = okta.user.getUser({
 
 
 
-## Using GetUser
+## Using GetUser {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -139,7 +139,7 @@ The following arguments are supported:
 
 
 
-## GetUser Result
+## GetUser Result {#result}
 
 The following output properties are available:
 
@@ -1510,7 +1510,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>User<wbr>Search</h4>
+
+<h4 id="getusersearch">Get<wbr>User<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#GetUserSearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#GetUserSearch">output</a> API doc for this type.
 {{% /choosable %}}

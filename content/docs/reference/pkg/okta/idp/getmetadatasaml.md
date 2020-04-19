@@ -16,9 +16,9 @@ Use this data source to retrieve SAML IdP metadata from Okta.
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
-const example = okta.idp.getMetadataSaml({
+const example = pulumi.output(okta.idp.getMetadataSaml({
     id: "<idp id>",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const example = okta.idp.getMetadataSaml({
 
 
 
-## Using GetMetadataSaml
+## Using GetMetadataSaml {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -130,7 +130,7 @@ The following arguments are supported:
 
 
 
-## GetMetadataSaml Result
+## GetMetadataSaml Result {#result}
 
 The following output properties are available:
 

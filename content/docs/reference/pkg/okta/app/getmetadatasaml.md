@@ -16,10 +16,10 @@ Use this data source to retrieve the collaborators for a given repository.
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
-const example = okta.app.getMetadataSaml({
+const example = pulumi.output(okta.app.getMetadataSaml({
     appId: "<app id>",
     keyId: "<cert key id>",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -29,7 +29,7 @@ const example = okta.app.getMetadataSaml({
 
 
 
-## Using GetMetadataSaml
+## Using GetMetadataSaml {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -167,7 +167,7 @@ The following arguments are supported:
 
 
 
-## GetMetadataSaml Result
+## GetMetadataSaml Result {#result}
 
 The following output properties are available:
 

@@ -16,7 +16,7 @@ Use this data source to retrieve the Everyone group from Okta. The same can be a
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
-const example = okta.group.getEveryoneGroup();
+const example = pulumi.output(okta.group.getEveryoneGroup({ async: true }));
 ```
 
 {{% /example %}}
@@ -26,7 +26,7 @@ const example = okta.group.getEveryoneGroup();
 
 
 
-## Using GetEveryoneGroup
+## Using GetEveryoneGroup {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -124,7 +124,7 @@ The following arguments are supported:
 
 
 
-## GetEveryoneGroup Result
+## GetEveryoneGroup Result {#result}
 
 The following output properties are available:
 

@@ -16,9 +16,9 @@ Use this data source to retrieve an auth server from Okta.
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
-const example = okta.auth.getServer({
+const example = pulumi.output(okta.auth.getServer({
     name: "Example Auth",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const example = okta.auth.getServer({
 
 
 
-## Using GetServer
+## Using GetServer {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -130,7 +130,7 @@ The following arguments are supported:
 
 
 
-## GetServer Result
+## GetServer Result {#result}
 
 The following output properties are available:
 

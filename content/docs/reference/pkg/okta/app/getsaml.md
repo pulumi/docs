@@ -16,9 +16,9 @@ Use this data source to retrieve the collaborators for a given repository.
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
-const example = okta.app.getSaml({
+const example = pulumi.output(okta.app.getSaml({
     label: "Example App",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const example = okta.app.getSaml({
 
 
 
-## Using GetSaml
+## Using GetSaml {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -1246,7 +1246,7 @@ The following arguments are supported:
 
 
 
-## GetSaml Result
+## GetSaml Result {#result}
 
 The following output properties are available:
 
@@ -2577,7 +2577,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Saml<wbr>Attribute<wbr>Statement</h4>
+
+<h4 id="getsamlattributestatement">Get<wbr>Saml<wbr>Attribute<wbr>Statement</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#GetSamlAttributeStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#GetSamlAttributeStatement">output</a> API doc for this type.
 {{% /choosable %}}

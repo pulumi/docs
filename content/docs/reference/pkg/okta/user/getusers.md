@@ -16,13 +16,13 @@ Use this data source to retrieve a list of users from Okta.
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
-const example = okta.user.getUsers({
+const example = pulumi.output(okta.user.getUsers({
     searches: [{
         comparison: "sw",
         name: "profile.company",
         value: "Articulate",
     }],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -32,7 +32,7 @@ const example = okta.user.getUsers({
 
 
 
-## Using GetUsers
+## Using GetUsers {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -170,7 +170,7 @@ The following arguments are supported:
 
 
 
-## GetUsers Result
+## GetUsers Result {#result}
 
 The following output properties are available:
 
@@ -317,7 +317,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Users<wbr>Search</h4>
+
+<h4 id="getuserssearch">Get<wbr>Users<wbr>Search</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#GetUsersSearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#GetUsersSearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -468,7 +469,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Users<wbr>User</h4>
+<h4 id="getusersuser">Get<wbr>Users<wbr>User</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#GetUsersUser">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#GetUsersUser">output</a> API doc for this type.
 {{% /choosable %}}

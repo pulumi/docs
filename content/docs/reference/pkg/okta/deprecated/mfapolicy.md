@@ -12,7 +12,7 @@ block_external_search_index: true
 
 
 
-## Create a MfaPolicy Resource
+## Create a MfaPolicy Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -102,7 +102,7 @@ block_external_search_index: true
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -179,7 +179,13 @@ block_external_search_index: true
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## MfaPolicy Resource Properties {#properties}
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The MfaPolicy resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -816,11 +822,79 @@ priority is provided. API defaults it to the last/lowest if not there.
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the MfaPolicy resource produces the following output properties:
 
 
 
 
-## Look up an Existing MfaPolicy Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing MfaPolicy Resource {#look-up}
 
 Get an existing MfaPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1579,7 +1653,8 @@ priority is provided. API defaults it to the last/lowest if not there.
 
 ## Supporting Types
 
-<h4>Mfa<wbr>Policy<wbr>Duo</h4>
+
+<h4 id="mfapolicyduo">Mfa<wbr>Policy<wbr>Duo</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaPolicyDuo">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaPolicyDuo">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1686,7 +1761,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 
 
 
-<h4>Mfa<wbr>Policy<wbr>Fido<wbr>U2f</h4>
+<h4 id="mfapolicyfidou2f">Mfa<wbr>Policy<wbr>Fido<wbr>U2f</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaPolicyFidoU2f">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaPolicyFidoU2f">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1793,7 +1868,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 
 
 
-<h4>Mfa<wbr>Policy<wbr>Fido<wbr>Webauthn</h4>
+<h4 id="mfapolicyfidowebauthn">Mfa<wbr>Policy<wbr>Fido<wbr>Webauthn</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaPolicyFidoWebauthn">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaPolicyFidoWebauthn">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1900,7 +1975,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 
 
 
-<h4>Mfa<wbr>Policy<wbr>Google<wbr>Otp</h4>
+<h4 id="mfapolicygoogleotp">Mfa<wbr>Policy<wbr>Google<wbr>Otp</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaPolicyGoogleOtp">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaPolicyGoogleOtp">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2007,7 +2082,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 
 
 
-<h4>Mfa<wbr>Policy<wbr>Okta<wbr>Call</h4>
+<h4 id="mfapolicyoktacall">Mfa<wbr>Policy<wbr>Okta<wbr>Call</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaPolicyOktaCall">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaPolicyOktaCall">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2114,7 +2189,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 
 
 
-<h4>Mfa<wbr>Policy<wbr>Okta<wbr>Otp</h4>
+<h4 id="mfapolicyoktaotp">Mfa<wbr>Policy<wbr>Okta<wbr>Otp</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaPolicyOktaOtp">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaPolicyOktaOtp">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2221,7 +2296,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 
 
 
-<h4>Mfa<wbr>Policy<wbr>Okta<wbr>Password</h4>
+<h4 id="mfapolicyoktapassword">Mfa<wbr>Policy<wbr>Okta<wbr>Password</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaPolicyOktaPassword">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaPolicyOktaPassword">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2328,7 +2403,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 
 
 
-<h4>Mfa<wbr>Policy<wbr>Okta<wbr>Push</h4>
+<h4 id="mfapolicyoktapush">Mfa<wbr>Policy<wbr>Okta<wbr>Push</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaPolicyOktaPush">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaPolicyOktaPush">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2435,7 +2510,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 
 
 
-<h4>Mfa<wbr>Policy<wbr>Okta<wbr>Question</h4>
+<h4 id="mfapolicyoktaquestion">Mfa<wbr>Policy<wbr>Okta<wbr>Question</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaPolicyOktaQuestion">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaPolicyOktaQuestion">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2542,7 +2617,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 
 
 
-<h4>Mfa<wbr>Policy<wbr>Okta<wbr>Sms</h4>
+<h4 id="mfapolicyoktasms">Mfa<wbr>Policy<wbr>Okta<wbr>Sms</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaPolicyOktaSms">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaPolicyOktaSms">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2649,7 +2724,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 
 
 
-<h4>Mfa<wbr>Policy<wbr>Rsa<wbr>Token</h4>
+<h4 id="mfapolicyrsatoken">Mfa<wbr>Policy<wbr>Rsa<wbr>Token</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaPolicyRsaToken">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaPolicyRsaToken">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2756,7 +2831,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 
 
 
-<h4>Mfa<wbr>Policy<wbr>Symantec<wbr>Vip</h4>
+<h4 id="mfapolicysymantecvip">Mfa<wbr>Policy<wbr>Symantec<wbr>Vip</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaPolicySymantecVip">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaPolicySymantecVip">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2863,7 +2938,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 
 
 
-<h4>Mfa<wbr>Policy<wbr>Yubikey<wbr>Token</h4>
+<h4 id="mfapolicyyubikeytoken">Mfa<wbr>Policy<wbr>Yubikey<wbr>Token</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaPolicyYubikeyToken">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaPolicyYubikeyToken">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2974,7 +3049,7 @@ priority is provided. API defaults it to the last/lowest if not there.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-okta">https://github.com/pulumi/pulumi-okta</a></dd>

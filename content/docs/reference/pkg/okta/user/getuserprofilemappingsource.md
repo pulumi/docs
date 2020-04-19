@@ -16,7 +16,7 @@ Use this data source to retrieve the base user Profile Mapping source or target 
 import * as pulumi from "@pulumi/pulumi";
 import * as okta from "@pulumi/okta";
 
-const example = okta.user.getUserProfileMappingSource();
+const example = pulumi.output(okta.user.getUserProfileMappingSource({ async: true }));
 ```
 
 {{% /example %}}
@@ -26,7 +26,7 @@ const example = okta.user.getUserProfileMappingSource();
 
 
 
-## Using GetUserProfileMappingSource
+## Using GetUserProfileMappingSource {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -55,7 +55,7 @@ const example = okta.user.getUserProfileMappingSource();
 
 
 
-## GetUserProfileMappingSource Result
+## GetUserProfileMappingSource Result {#result}
 
 The following output properties are available:
 

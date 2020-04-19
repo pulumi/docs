@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="autologin" title="AutoLogin"><span class="symbol resource"></span>AutoLogin</a></li>
     <li><a href="basicauth" title="BasicAuth"><span class="symbol resource"></span>BasicAuth</a></li>
@@ -25,14 +25,14 @@ block_external_search_index: true
     <li><a href="userschema" title="UserSchema"><span class="symbol resource"></span>UserSchema</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getapp" title="GetApp"><span class="symbol function"></span>GetApp</a></li>
     <li><a href="getmetadatasaml" title="GetMetadataSaml"><span class="symbol function"></span>GetMetadataSaml</a></li>
     <li><a href="getsaml" title="GetSaml"><span class="symbol function"></span>GetSaml</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-okta">https://github.com/pulumi/pulumi-okta</a></dd>
