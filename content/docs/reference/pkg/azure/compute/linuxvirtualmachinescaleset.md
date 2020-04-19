@@ -22,7 +22,7 @@ Manages a Linux Virtual Machine Scale Set.
 
 
 
-## Create a LinuxVirtualMachineScaleSet Resource
+## Create a LinuxVirtualMachineScaleSet Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -112,7 +112,7 @@ Manages a Linux Virtual Machine Scale Set.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -189,7 +189,7 @@ Manages a Linux Virtual Machine Scale Set.
 
 {{% /choosable %}}
 
-## LinuxVirtualMachineScaleSet Resource Properties
+## LinuxVirtualMachineScaleSet Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -1598,15 +1598,21 @@ The LinuxVirtualMachineScaleSet resource accepts the following [input]({{< relre
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the LinuxVirtualMachineScaleSet resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the LinuxVirtualMachineScaleSet resource produces the following output properties:
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1626,6 +1632,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Unique<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1639,6 +1653,14 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1658,6 +1680,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>unique_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1674,8 +1704,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing LinuxVirtualMachineScaleSet Resource
+## Look up an Existing LinuxVirtualMachineScaleSet Resource {#look-up}
 
 Get an existing LinuxVirtualMachineScaleSet resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -3234,7 +3263,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Capabilities</h4>
+
+<h4 id="linuxvirtualmachinescalesetadditionalcapabilities">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Additional<wbr>Capabilities</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineScaleSetAdditionalCapabilities">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinuxVirtualMachineScaleSetAdditionalCapabilities">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3313,7 +3343,7 @@ The following state arguments are supported:
 
 
 
-<h4>Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Admin<wbr>Ssh<wbr>Key</h4>
+<h4 id="linuxvirtualmachinescalesetadminsshkey">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Admin<wbr>Ssh<wbr>Key</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineScaleSetAdminSshKey">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinuxVirtualMachineScaleSetAdminSshKey">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3428,7 +3458,7 @@ The following state arguments are supported:
 
 
 
-<h4>Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Os<wbr>Upgrade<wbr>Policy</h4>
+<h4 id="linuxvirtualmachinescalesetautomaticosupgradepolicy">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Automatic<wbr>Os<wbr>Upgrade<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinuxVirtualMachineScaleSetAutomaticOsUpgradePolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3543,7 +3573,7 @@ The following state arguments are supported:
 
 
 
-<h4>Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Boot<wbr>Diagnostics</h4>
+<h4 id="linuxvirtualmachinescalesetbootdiagnostics">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Boot<wbr>Diagnostics</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineScaleSetBootDiagnostics">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinuxVirtualMachineScaleSetBootDiagnostics">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3622,7 +3652,7 @@ The following state arguments are supported:
 
 
 
-<h4>Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk</h4>
+<h4 id="linuxvirtualmachinescalesetdatadisk">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Data<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineScaleSetDataDisk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinuxVirtualMachineScaleSetDataDisk">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3881,7 +3911,7 @@ The following state arguments are supported:
 
 
 
-<h4>Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity</h4>
+<h4 id="linuxvirtualmachinescalesetidentity">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Identity</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineScaleSetIdentity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinuxVirtualMachineScaleSetIdentity">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4032,7 +4062,7 @@ The following state arguments are supported:
 
 
 
-<h4>Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface</h4>
+<h4 id="linuxvirtualmachinescalesetnetworkinterface">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineScaleSetNetworkInterface">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinuxVirtualMachineScaleSetNetworkInterface">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4327,7 +4357,7 @@ The following state arguments are supported:
 
 
 
-<h4>Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration</h4>
+<h4 id="linuxvirtualmachinescalesetnetworkinterfaceipconfiguration">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineScaleSetNetworkInterfaceIpConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinuxVirtualMachineScaleSetNetworkInterfaceIpConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4694,7 +4724,7 @@ The following state arguments are supported:
 
 
 
-<h4>Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address</h4>
+<h4 id="linuxvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddress">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddress">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4917,7 +4947,7 @@ The following state arguments are supported:
 
 
 
-<h4>Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Ip<wbr>Tag</h4>
+<h4 id="linuxvirtualmachinescalesetnetworkinterfaceipconfigurationpublicipaddressiptag">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Network<wbr>Interface<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Ip<wbr>Tag</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinuxVirtualMachineScaleSetNetworkInterfaceIpConfigurationPublicIpAddressIpTag">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5032,7 +5062,7 @@ The following state arguments are supported:
 
 
 
-<h4>Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk</h4>
+<h4 id="linuxvirtualmachinescalesetosdisk">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineScaleSetOsDisk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinuxVirtualMachineScaleSetOsDisk">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5291,7 +5321,7 @@ The following state arguments are supported:
 
 
 
-<h4>Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk<wbr>Diff<wbr>Disk<wbr>Settings</h4>
+<h4 id="linuxvirtualmachinescalesetosdiskdiffdisksettings">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Os<wbr>Disk<wbr>Diff<wbr>Disk<wbr>Settings</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineScaleSetOsDiskDiffDiskSettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinuxVirtualMachineScaleSetOsDiskDiffDiskSettings">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5366,7 +5396,7 @@ The following state arguments are supported:
 
 
 
-<h4>Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Plan</h4>
+<h4 id="linuxvirtualmachinescalesetplan">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Plan</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineScaleSetPlan">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinuxVirtualMachineScaleSetPlan">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5509,7 +5539,7 @@ The following state arguments are supported:
 
 
 
-<h4>Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy</h4>
+<h4 id="linuxvirtualmachinescalesetrollingupgradepolicy">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineScaleSetRollingUpgradePolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinuxVirtualMachineScaleSetRollingUpgradePolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5696,7 +5726,7 @@ The following state arguments are supported:
 
 
 
-<h4>Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret</h4>
+<h4 id="linuxvirtualmachinescalesetsecret">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineScaleSetSecret">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinuxVirtualMachineScaleSetSecret">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5811,7 +5841,7 @@ The following state arguments are supported:
 
 
 
-<h4>Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret<wbr>Certificate</h4>
+<h4 id="linuxvirtualmachinescalesetsecretcertificate">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Secret<wbr>Certificate</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineScaleSetSecretCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinuxVirtualMachineScaleSetSecretCertificate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5890,7 +5920,7 @@ The following state arguments are supported:
 
 
 
-<h4>Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Source<wbr>Image<wbr>Reference</h4>
+<h4 id="linuxvirtualmachinescalesetsourceimagereference">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Source<wbr>Image<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineScaleSetSourceImageReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinuxVirtualMachineScaleSetSourceImageReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6069,7 +6099,7 @@ The following state arguments are supported:
 
 
 
-<h4>Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Terminate<wbr>Notification</h4>
+<h4 id="linuxvirtualmachinescalesetterminatenotification">Linux<wbr>Virtual<wbr>Machine<wbr>Scale<wbr>Set<wbr>Terminate<wbr>Notification</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinuxVirtualMachineScaleSetTerminateNotification">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinuxVirtualMachineScaleSetTerminateNotification">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6188,7 +6218,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

@@ -16,7 +16,7 @@ Manages a VPN Server Configuration.
 
 
 
-## Create a VpnServerConfiguration Resource
+## Create a VpnServerConfiguration Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -106,7 +106,7 @@ Manages a VPN Server Configuration.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -183,7 +183,7 @@ Manages a VPN Server Configuration.
 
 {{% /choosable %}}
 
-## VpnServerConfiguration Resource Properties
+## VpnServerConfiguration Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -624,12 +624,77 @@ The VpnServerConfiguration resource accepts the following [input]({{< relref "/d
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The VpnServerConfiguration resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the VpnServerConfiguration resource produces the following output properties:
 
 
 
 
-## Look up an Existing VpnServerConfiguration Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing VpnServerConfiguration Resource {#look-up}
 
 Get an existing VpnServerConfiguration resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1184,7 +1249,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication</h4>
+
+<h4 id="vpnserverconfigurationazureactivedirectoryauthentication">Vpn<wbr>Server<wbr>Configuration<wbr>Azure<wbr>Active<wbr>Directory<wbr>Authentication</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationAzureActiveDirectoryAuthentication">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnServerConfigurationAzureActiveDirectoryAuthentication">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1335,7 +1401,7 @@ The following state arguments are supported:
 
 
 
-<h4>Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate</h4>
+<h4 id="vpnserverconfigurationclientrevokedcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Revoked<wbr>Certificate</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationClientRevokedCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnServerConfigurationClientRevokedCertificate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1450,7 +1516,7 @@ The following state arguments are supported:
 
 
 
-<h4>Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate</h4>
+<h4 id="vpnserverconfigurationclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Client<wbr>Root<wbr>Certificate</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationClientRootCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnServerConfigurationClientRootCertificate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1565,7 +1631,7 @@ The following state arguments are supported:
 
 
 
-<h4>Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy</h4>
+<h4 id="vpnserverconfigurationipsecpolicy">Vpn<wbr>Server<wbr>Configuration<wbr>Ipsec<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationIpsecPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnServerConfigurationIpsecPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1896,7 +1962,7 @@ The following state arguments are supported:
 
 
 
-<h4>Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</h4>
+<h4 id="vpnserverconfigurationradiusserver">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationRadiusServer">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnServerConfigurationRadiusServer">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2083,7 +2149,7 @@ The following state arguments are supported:
 
 
 
-<h4>Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate</h4>
+<h4 id="vpnserverconfigurationradiusserverclientrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Client<wbr>Root<wbr>Certificate</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationRadiusServerClientRootCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnServerConfigurationRadiusServerClientRootCertificate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2198,7 +2264,7 @@ The following state arguments are supported:
 
 
 
-<h4>Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Server<wbr>Root<wbr>Certificate</h4>
+<h4 id="vpnserverconfigurationradiusserverserverrootcertificate">Vpn<wbr>Server<wbr>Configuration<wbr>Radius<wbr>Server<wbr>Server<wbr>Root<wbr>Certificate</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VpnServerConfigurationRadiusServerServerRootCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VpnServerConfigurationRadiusServerServerRootCertificate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2317,7 +2383,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

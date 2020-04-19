@@ -15,7 +15,7 @@ Manages an App Service Slot (within an App Service).
 
 
 
-## Create a Slot Resource
+## Create a Slot Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -105,7 +105,7 @@ Manages an App Service Slot (within an App Service).
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -182,7 +182,7 @@ Manages an App Service Slot (within an App Service).
 
 {{% /choosable %}}
 
-## Slot Resource Properties
+## Slot Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -763,9 +763,7 @@ The Slot resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Slot resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Slot resource produces the following output properties:
 
 
 
@@ -781,6 +779,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Default Hostname associated with the App Service Slot - such as `mysite.azurewebsites.net`
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -809,6 +815,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Site<wbr>Credentials</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slotsitecredential">[]Slot<wbr>Site<wbr>Credential</a></span>
@@ -831,6 +845,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Default Hostname associated with the App Service Slot - such as `mysite.azurewebsites.net`
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -859,6 +881,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>site_<wbr>credentials</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#slotsitecredential">List[Slot<wbr>Site<wbr>Credential]</a></span>
@@ -875,8 +905,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Slot Resource
+## Look up an Existing Slot Resource {#look-up}
 
 Get an existing Slot resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1643,7 +1672,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Slot<wbr>Auth<wbr>Settings</h4>
+
+<h4 id="slotauthsettings">Slot<wbr>Auth<wbr>Settings</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SlotAuthSettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotAuthSettings">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2190,7 +2220,7 @@ The following state arguments are supported:
 
 
 
-<h4>Slot<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory</h4>
+<h4 id="slotauthsettingsactivedirectory">Slot<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SlotAuthSettingsActiveDirectory">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotAuthSettingsActiveDirectory">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2341,7 +2371,7 @@ The following state arguments are supported:
 
 
 
-<h4>Slot<wbr>Auth<wbr>Settings<wbr>Facebook</h4>
+<h4 id="slotauthsettingsfacebook">Slot<wbr>Auth<wbr>Settings<wbr>Facebook</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SlotAuthSettingsFacebook">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotAuthSettingsFacebook">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2492,7 +2522,7 @@ The following state arguments are supported:
 
 
 
-<h4>Slot<wbr>Auth<wbr>Settings<wbr>Google</h4>
+<h4 id="slotauthsettingsgoogle">Slot<wbr>Auth<wbr>Settings<wbr>Google</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SlotAuthSettingsGoogle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotAuthSettingsGoogle">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2643,7 +2673,7 @@ The following state arguments are supported:
 
 
 
-<h4>Slot<wbr>Auth<wbr>Settings<wbr>Microsoft</h4>
+<h4 id="slotauthsettingsmicrosoft">Slot<wbr>Auth<wbr>Settings<wbr>Microsoft</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SlotAuthSettingsMicrosoft">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotAuthSettingsMicrosoft">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2794,7 +2824,7 @@ The following state arguments are supported:
 
 
 
-<h4>Slot<wbr>Auth<wbr>Settings<wbr>Twitter</h4>
+<h4 id="slotauthsettingstwitter">Slot<wbr>Auth<wbr>Settings<wbr>Twitter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SlotAuthSettingsTwitter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotAuthSettingsTwitter">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2901,7 +2931,7 @@ The following state arguments are supported:
 
 
 
-<h4>Slot<wbr>Connection<wbr>String</h4>
+<h4 id="slotconnectionstring">Slot<wbr>Connection<wbr>String</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SlotConnectionString">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotConnectionString">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3052,7 +3082,7 @@ The following state arguments are supported:
 
 
 
-<h4>Slot<wbr>Identity</h4>
+<h4 id="slotidentity">Slot<wbr>Identity</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SlotIdentity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotIdentity">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3231,7 +3261,7 @@ The following state arguments are supported:
 
 
 
-<h4>Slot<wbr>Logs</h4>
+<h4 id="slotlogs">Slot<wbr>Logs</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SlotLogs">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotLogs">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3346,7 +3376,7 @@ The following state arguments are supported:
 
 
 
-<h4>Slot<wbr>Logs<wbr>Application<wbr>Logs</h4>
+<h4 id="slotlogsapplicationlogs">Slot<wbr>Logs<wbr>Application<wbr>Logs</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SlotLogsApplicationLogs">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotLogsApplicationLogs">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3425,7 +3455,7 @@ The following state arguments are supported:
 
 
 
-<h4>Slot<wbr>Logs<wbr>Application<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage</h4>
+<h4 id="slotlogsapplicationlogsazureblobstorage">Slot<wbr>Logs<wbr>Application<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SlotLogsApplicationLogsAzureBlobStorage">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotLogsApplicationLogsAzureBlobStorage">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3576,7 +3606,7 @@ The following state arguments are supported:
 
 
 
-<h4>Slot<wbr>Logs<wbr>Http<wbr>Logs</h4>
+<h4 id="slotlogshttplogs">Slot<wbr>Logs<wbr>Http<wbr>Logs</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SlotLogsHttpLogs">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotLogsHttpLogs">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3691,7 +3721,7 @@ The following state arguments are supported:
 
 
 
-<h4>Slot<wbr>Logs<wbr>Http<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage</h4>
+<h4 id="slotlogshttplogsazureblobstorage">Slot<wbr>Logs<wbr>Http<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SlotLogsHttpLogsAzureBlobStorage">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotLogsHttpLogsAzureBlobStorage">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3806,7 +3836,7 @@ The following state arguments are supported:
 
 
 
-<h4>Slot<wbr>Logs<wbr>Http<wbr>Logs<wbr>File<wbr>System</h4>
+<h4 id="slotlogshttplogsfilesystem">Slot<wbr>Logs<wbr>Http<wbr>Logs<wbr>File<wbr>System</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SlotLogsHttpLogsFileSystem">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotLogsHttpLogsFileSystem">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3898,20 +3928,20 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>retention_<wbr>in_<wbr>days</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The number of days to retain logs for.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>retention<wbr>In<wbr>Mb</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum size in megabytes that http log files can use before being removed.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>retention_<wbr>in_<wbr>days</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The number of days to retain logs for.
 {{% /md %}}</dd>
 
 </dl>
@@ -3921,7 +3951,7 @@ The following state arguments are supported:
 
 
 
-<h4>Slot<wbr>Site<wbr>Config</h4>
+<h4 id="slotsiteconfig">Slot<wbr>Site<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SlotSiteConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotSiteConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4816,7 +4846,7 @@ The following state arguments are supported:
 
 
 
-<h4>Slot<wbr>Site<wbr>Config<wbr>Cors</h4>
+<h4 id="slotsiteconfigcors">Slot<wbr>Site<wbr>Config<wbr>Cors</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SlotSiteConfigCors">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotSiteConfigCors">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4931,7 +4961,7 @@ The following state arguments are supported:
 
 
 
-<h4>Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction</h4>
+<h4 id="slotsiteconfigiprestriction">Slot<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#SlotSiteConfigIpRestriction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotSiteConfigIpRestriction">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5046,7 +5076,7 @@ The following state arguments are supported:
 
 
 
-<h4>Slot<wbr>Site<wbr>Credential</h4>
+<h4 id="slotsitecredential">Slot<wbr>Site<wbr>Credential</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#SlotSiteCredential">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5165,7 +5195,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

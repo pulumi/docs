@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
     <li><a href="kubernetescluster" title="KubernetesCluster"><span class="symbol resource"></span>KubernetesCluster</a></li>
@@ -18,14 +18,14 @@ block_external_search_index: true
     <li><a href="registrywebook" title="RegistryWebook"><span class="symbol resource"></span>RegistryWebook</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getkubernetescluster" title="GetKubernetesCluster"><span class="symbol function"></span>GetKubernetesCluster</a></li>
     <li><a href="getkubernetesserviceversions" title="GetKubernetesServiceVersions"><span class="symbol function"></span>GetKubernetesServiceVersions</a></li>
     <li><a href="getregistry" title="GetRegistry"><span class="symbol function"></span>GetRegistry</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

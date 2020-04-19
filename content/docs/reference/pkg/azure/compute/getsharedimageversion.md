@@ -31,7 +31,7 @@ const example = pulumi.output(azure.compute.getSharedImageVersion({
 
 
 
-## Using GetSharedImageVersion
+## Using GetSharedImageVersion {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -241,7 +241,7 @@ The following arguments are supported:
 
 
 
-## GetSharedImageVersion Result
+## GetSharedImageVersion Result {#result}
 
 The following output properties are available:
 
@@ -632,7 +632,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Shared<wbr>Image<wbr>Version<wbr>Target<wbr>Region</h4>
+
+<h4 id="getsharedimageversiontargetregion">Get<wbr>Shared<wbr>Image<wbr>Version<wbr>Target<wbr>Region</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetSharedImageVersionTargetRegion">output</a> API doc for this type.
 {{% /choosable %}}

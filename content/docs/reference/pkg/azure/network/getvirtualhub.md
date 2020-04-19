@@ -12,7 +12,7 @@ Uses this data source to access information about an existing Virtual Hub.
 
 
 
-## Using GetVirtualHub
+## Using GetVirtualHub {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -150,7 +150,7 @@ The following arguments are supported:
 
 
 
-## GetVirtualHub Result
+## GetVirtualHub Result {#result}
 
 The following output properties are available:
 

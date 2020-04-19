@@ -15,7 +15,7 @@ Use this data source to access information about an existing MariaDB Server.
 
 
 
-## Using GetMariaDbServer
+## Using GetMariaDbServer {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetMariaDbServer Result
+## GetMariaDbServer Result {#result}
 
 The following output properties are available:
 
@@ -624,7 +624,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Maria<wbr>Db<wbr>Server<wbr>Storage<wbr>Profile</h4>
+
+<h4 id="getmariadbserverstorageprofile">Get<wbr>Maria<wbr>Db<wbr>Server<wbr>Storage<wbr>Profile</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetMariaDbServerStorageProfile">output</a> API doc for this type.
 {{% /choosable %}}

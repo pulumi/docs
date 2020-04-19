@@ -15,7 +15,7 @@ Use this data source to access information about an existing IotHub Shared Acces
 
 
 
-## Using GetSharedAccessPolicy
+## Using GetSharedAccessPolicy {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetSharedAccessPolicy Result
+## GetSharedAccessPolicy Result {#result}
 
 The following output properties are available:
 

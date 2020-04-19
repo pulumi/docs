@@ -18,7 +18,7 @@ Manages a Private Link Service.
 
 
 
-## Create a LinkService Resource
+## Create a LinkService Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -108,7 +108,7 @@ Manages a Private Link Service.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -185,7 +185,7 @@ Manages a Private Link Service.
 
 {{% /choosable %}}
 
-## LinkService Resource Properties
+## LinkService Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -554,9 +554,7 @@ The LinkService resource accepts the following [input]({{< relref "/docs/intro/c
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the LinkService resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the LinkService resource produces the following output properties:
 
 
 
@@ -572,6 +570,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A globally unique DNS Name for your Private Link Service. You can use this alias to request a connection to your Private Link Service.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -589,6 +595,14 @@ The following output properties are available:
     <dd>{{% md %}}A globally unique DNS Name for your Private Link Service. You can use this alias to request a connection to your Private Link Service.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -604,6 +618,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A globally unique DNS Name for your Private Link Service. You can use this alias to request a connection to your Private Link Service.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -621,6 +643,14 @@ The following output properties are available:
     <dd>{{% md %}}A globally unique DNS Name for your Private Link Service. You can use this alias to request a connection to your Private Link Service.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -630,8 +660,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing LinkService Resource
+## Look up an Existing LinkService Resource {#look-up}
 
 Get an existing LinkService resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1150,7 +1179,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Link<wbr>Service<wbr>Nat<wbr>Ip<wbr>Configuration</h4>
+
+<h4 id="linkservicenatipconfiguration">Link<wbr>Service<wbr>Nat<wbr>Ip<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#LinkServiceNatIpConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#LinkServiceNatIpConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1350,20 +1380,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>private_<wbr>ip_<wbr>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies a Private Static IP Address for this IP Configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>private<wbr>Ip<wbr>Address<wbr>Version</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The version of the IP Protocol which should be used. At this time the only supported value is `IPv4`. Defaults to `IPv4`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>private_<wbr>ip_<wbr>address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a Private Static IP Address for this IP Configuration.
 {{% /md %}}</dd>
 
 </dl>
@@ -1377,7 +1407,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

@@ -16,7 +16,7 @@ Manages a Managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Servi
 
 
 
-## Create a KubernetesCluster Resource
+## Create a KubernetesCluster Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -106,7 +106,7 @@ Manages a Managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Servi
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -183,7 +183,7 @@ Manages a Managed Kubernetes Cluster (also known as AKS / Azure Kubernetes Servi
 
 {{% /choosable %}}
 
-## KubernetesCluster Resource Properties
+## KubernetesCluster Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -872,9 +872,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the KubernetesCluster resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the KubernetesCluster resource produces the following output properties:
 
 
 
@@ -890,6 +888,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The FQDN of the Azure Kubernetes Managed Cluster.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -954,6 +960,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Kube<wbr>Admin<wbr>Config<wbr>Raw</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1012,6 +1026,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The FQDN of the Azure Kubernetes Managed Cluster.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1076,6 +1098,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>kube_<wbr>admin_<wbr>config_<wbr>raw</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1128,8 +1158,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing KubernetesCluster Resource
+## Look up an Existing KubernetesCluster Resource {#look-up}
 
 Get an existing KubernetesCluster resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -2148,7 +2177,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile</h4>
+
+<h4 id="kubernetesclusteraddonprofile">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterAddonProfile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterAddonProfile">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2371,7 +2401,7 @@ The following state arguments are supported:
 
 
 
-<h4>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Aci<wbr>Connector<wbr>Linux</h4>
+<h4 id="kubernetesclusteraddonprofileaciconnectorlinux">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Aci<wbr>Connector<wbr>Linux</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterAddonProfileAciConnectorLinux">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterAddonProfileAciConnectorLinux">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2486,7 +2516,7 @@ The following state arguments are supported:
 
 
 
-<h4>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy</h4>
+<h4 id="kubernetesclusteraddonprofileazurepolicy">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Azure<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterAddonProfileAzurePolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterAddonProfileAzurePolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2565,7 +2595,7 @@ The following state arguments are supported:
 
 
 
-<h4>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing</h4>
+<h4 id="kubernetesclusteraddonprofilehttpapplicationrouting">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Http<wbr>Application<wbr>Routing</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterAddonProfileHttpApplicationRouting">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterAddonProfileHttpApplicationRouting">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2680,7 +2710,7 @@ The following state arguments are supported:
 
 
 
-<h4>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard</h4>
+<h4 id="kubernetesclusteraddonprofilekubedashboard">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Kube<wbr>Dashboard</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterAddonProfileKubeDashboard">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterAddonProfileKubeDashboard">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2759,7 +2789,7 @@ The following state arguments are supported:
 
 
 
-<h4>Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent</h4>
+<h4 id="kubernetesclusteraddonprofileomsagent">Kubernetes<wbr>Cluster<wbr>Addon<wbr>Profile<wbr>Oms<wbr>Agent</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterAddonProfileOmsAgent">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterAddonProfileOmsAgent">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2874,7 +2904,7 @@ The following state arguments are supported:
 
 
 
-<h4>Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool</h4>
+<h4 id="kubernetesclusterdefaultnodepool">Kubernetes<wbr>Cluster<wbr>Default<wbr>Node<wbr>Pool</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterDefaultNodePool">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterDefaultNodePool">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3457,7 +3487,7 @@ The following state arguments are supported:
 
 
 
-<h4>Kubernetes<wbr>Cluster<wbr>Identity</h4>
+<h4 id="kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterIdentity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterIdentity">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3608,7 +3638,7 @@ The following state arguments are supported:
 
 
 
-<h4>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config</h4>
+<h4 id="kubernetesclusterkubeadminconfig">Kubernetes<wbr>Cluster<wbr>Kube<wbr>Admin<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterKubeAdminConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3867,7 +3897,7 @@ The following state arguments are supported:
 
 
 
-<h4>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config</h4>
+<h4 id="kubernetesclusterkubeconfig">Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterKubeConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4126,7 +4156,7 @@ The following state arguments are supported:
 
 
 
-<h4>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile</h4>
+<h4 id="kubernetesclusterlinuxprofile">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterLinuxProfile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterLinuxProfile">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4241,7 +4271,7 @@ The following state arguments are supported:
 
 
 
-<h4>Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key</h4>
+<h4 id="kubernetesclusterlinuxprofilesshkey">Kubernetes<wbr>Cluster<wbr>Linux<wbr>Profile<wbr>Ssh<wbr>Key</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterLinuxProfileSshKey">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterLinuxProfileSshKey">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4320,7 +4350,7 @@ The following state arguments are supported:
 
 
 
-<h4>Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile</h4>
+<h4 id="kubernetesclusternetworkprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterNetworkProfile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterNetworkProfile">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4687,7 +4717,7 @@ The following state arguments are supported:
 
 
 
-<h4>Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Load<wbr>Balancer<wbr>Profile</h4>
+<h4 id="kubernetesclusternetworkprofileloadbalancerprofile">Kubernetes<wbr>Cluster<wbr>Network<wbr>Profile<wbr>Load<wbr>Balancer<wbr>Profile</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterNetworkProfileLoadBalancerProfile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterNetworkProfileLoadBalancerProfile">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4874,7 +4904,7 @@ The following state arguments are supported:
 
 
 
-<h4>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control</h4>
+<h4 id="kubernetesclusterrolebasedaccesscontrol">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterRoleBasedAccessControl">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterRoleBasedAccessControl">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4989,7 +5019,7 @@ The following state arguments are supported:
 
 
 
-<h4>Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory</h4>
+<h4 id="kubernetesclusterrolebasedaccesscontrolazureactivedirectory">Kubernetes<wbr>Cluster<wbr>Role<wbr>Based<wbr>Access<wbr>Control<wbr>Azure<wbr>Active<wbr>Directory</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterRoleBasedAccessControlAzureActiveDirectory">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterRoleBasedAccessControlAzureActiveDirectory">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5176,7 +5206,7 @@ The following state arguments are supported:
 
 
 
-<h4>Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal</h4>
+<h4 id="kubernetesclusterserviceprincipal">Kubernetes<wbr>Cluster<wbr>Service<wbr>Principal</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterServicePrincipal">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterServicePrincipal">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5291,7 +5321,7 @@ The following state arguments are supported:
 
 
 
-<h4>Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile</h4>
+<h4 id="kubernetesclusterwindowsprofile">Kubernetes<wbr>Cluster<wbr>Windows<wbr>Profile</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#KubernetesClusterWindowsProfile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#KubernetesClusterWindowsProfile">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5410,7 +5440,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

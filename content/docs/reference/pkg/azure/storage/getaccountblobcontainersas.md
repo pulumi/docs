@@ -17,7 +17,7 @@ Shared access signatures allow fine-grained, ephemeral access control to various
 
 
 
-## Using GetAccountBlobContainerSAS
+## Using GetAccountBlobContainerSAS {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -515,7 +515,7 @@ The following arguments are supported:
 
 
 
-## GetAccountBlobContainerSAS Result
+## GetAccountBlobContainerSAS Result {#result}
 
 The following output properties are available:
 
@@ -1014,7 +1014,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Account<wbr>Blob<wbr>Container<wbr>SASPermissions</h4>
+
+<h4 id="getaccountblobcontainersaspermissions">Get<wbr>Account<wbr>Blob<wbr>Container<wbr>SASPermissions</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetAccountBlobContainerSASPermissions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountBlobContainerSASPermissions">output</a> API doc for this type.
 {{% /choosable %}}

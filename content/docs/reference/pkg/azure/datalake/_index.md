@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="analyticsaccount" title="AnalyticsAccount"><span class="symbol resource"></span>AnalyticsAccount</a></li>
     <li><a href="analyticsfirewallrule" title="AnalyticsFirewallRule"><span class="symbol resource"></span>AnalyticsFirewallRule</a></li>
@@ -17,12 +17,12 @@ block_external_search_index: true
     <li><a href="storefirewallrule" title="StoreFirewallRule"><span class="symbol resource"></span>StoreFirewallRule</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getstore" title="GetStore"><span class="symbol function"></span>GetStore</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

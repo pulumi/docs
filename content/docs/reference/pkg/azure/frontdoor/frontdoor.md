@@ -23,7 +23,7 @@ Below are some of the key scenarios that Azure Front Door Service addresses:
 
 
 
-## Create a Frontdoor Resource
+## Create a Frontdoor Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -113,7 +113,7 @@ Below are some of the key scenarios that Azure Front Door Service addresses:
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -190,7 +190,7 @@ Below are some of the key scenarios that Azure Front Door Service addresses:
 
 {{% /choosable %}}
 
-## Frontdoor Resource Properties
+## Frontdoor Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -663,9 +663,7 @@ The Frontdoor resource accepts the following [input]({{< relref "/docs/intro/con
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Frontdoor resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Frontdoor resource produces the following output properties:
 
 
 
@@ -681,6 +679,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The host that each frontendEndpoint must CNAME to.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -698,6 +704,14 @@ The following output properties are available:
     <dd>{{% md %}}The host that each frontendEndpoint must CNAME to.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -713,6 +727,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The host that each frontendEndpoint must CNAME to.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -730,6 +752,14 @@ The following output properties are available:
     <dd>{{% md %}}The host that each frontendEndpoint must CNAME to.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -739,8 +769,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Frontdoor Resource
+## Look up an Existing Frontdoor Resource {#look-up}
 
 Get an existing Frontdoor resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1363,7 +1392,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Frontdoor<wbr>Backend<wbr>Pool</h4>
+
+<h4 id="frontdoorbackendpool">Frontdoor<wbr>Backend<wbr>Pool</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorBackendPool">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorBackendPool">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1586,7 +1616,7 @@ The following state arguments are supported:
 
 
 
-<h4>Frontdoor<wbr>Backend<wbr>Pool<wbr>Backend</h4>
+<h4 id="frontdoorbackendpoolbackend">Frontdoor<wbr>Backend<wbr>Pool<wbr>Backend</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorBackendPoolBackend">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorBackendPoolBackend">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1881,7 +1911,7 @@ The following state arguments are supported:
 
 
 
-<h4>Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe</h4>
+<h4 id="frontdoorbackendpoolhealthprobe">Frontdoor<wbr>Backend<wbr>Pool<wbr>Health<wbr>Probe</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorBackendPoolHealthProbe">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorBackendPoolHealthProbe">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2176,7 +2206,7 @@ The following state arguments are supported:
 
 
 
-<h4>Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing</h4>
+<h4 id="frontdoorbackendpoolloadbalancing">Frontdoor<wbr>Backend<wbr>Pool<wbr>Load<wbr>Balancing</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorBackendPoolLoadBalancing">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorBackendPoolLoadBalancing">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2399,7 +2429,7 @@ The following state arguments are supported:
 
 
 
-<h4>Frontdoor<wbr>Frontend<wbr>Endpoint</h4>
+<h4 id="frontdoorfrontendendpoint">Frontdoor<wbr>Frontend<wbr>Endpoint</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorFrontendEndpoint">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorFrontendEndpoint">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2730,7 +2760,7 @@ The following state arguments are supported:
 
 
 
-<h4>Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Custom<wbr>Https<wbr>Configuration</h4>
+<h4 id="frontdoorfrontendendpointcustomhttpsconfiguration">Frontdoor<wbr>Frontend<wbr>Endpoint<wbr>Custom<wbr>Https<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorFrontendEndpointCustomHttpsConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorFrontendEndpointCustomHttpsConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3025,7 +3055,7 @@ The following state arguments are supported:
 
 
 
-<h4>Frontdoor<wbr>Routing<wbr>Rule</h4>
+<h4 id="frontdoorroutingrule">Frontdoor<wbr>Routing<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorRoutingRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorRoutingRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3356,7 +3386,7 @@ The following state arguments are supported:
 
 
 
-<h4>Frontdoor<wbr>Routing<wbr>Rule<wbr>Forwarding<wbr>Configuration</h4>
+<h4 id="frontdoorroutingruleforwardingconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Forwarding<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorRoutingRuleForwardingConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorRoutingRuleForwardingConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3615,7 +3645,7 @@ The following state arguments are supported:
 
 
 
-<h4>Frontdoor<wbr>Routing<wbr>Rule<wbr>Redirect<wbr>Configuration</h4>
+<h4 id="frontdoorroutingruleredirectconfiguration">Frontdoor<wbr>Routing<wbr>Rule<wbr>Redirect<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FrontdoorRoutingRuleRedirectConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FrontdoorRoutingRuleRedirectConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3878,7 +3908,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

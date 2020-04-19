@@ -16,7 +16,7 @@ Manages a File Share within Azure Storage.
 
 
 
-## Create a Share Resource
+## Create a Share Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -106,7 +106,7 @@ Manages a File Share within Azure Storage.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -183,7 +183,7 @@ Manages a File Share within Azure Storage.
 
 {{% /choosable %}}
 
-## Share Resource Properties
+## Share Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -412,15 +412,21 @@ Changing this forces a new resource to be created.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Share resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Share resource produces the following output properties:
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -449,6 +455,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Resource<wbr>Manager<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -471,6 +485,14 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -499,6 +521,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>resource_<wbr>manager_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -524,8 +554,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Share Resource
+## Look up an Existing Share Resource {#look-up}
 
 Get an existing Share resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -940,7 +969,8 @@ Changing this forces a new resource to be created.
 
 ## Supporting Types
 
-<h4>Share<wbr>Acl</h4>
+
+<h4 id="shareacl">Share<wbr>Acl</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ShareAcl">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ShareAcl">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1055,7 +1085,7 @@ Changing this forces a new resource to be created.
 
 
 
-<h4>Share<wbr>Acl<wbr>Access<wbr>Policy</h4>
+<h4 id="shareaclaccesspolicy">Share<wbr>Acl<wbr>Access<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ShareAclAccessPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ShareAclAccessPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1210,7 +1240,7 @@ Changing this forces a new resource to be created.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

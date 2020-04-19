@@ -15,7 +15,7 @@ Use this data source to access information about the permissions from the Manage
 
 
 
-## Using GetAccessPolicy
+## Using GetAccessPolicy {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -125,7 +125,7 @@ The following arguments are supported:
 
 
 
-## GetAccessPolicy Result
+## GetAccessPolicy Result {#result}
 
 The following output properties are available:
 

@@ -12,7 +12,7 @@ Use this data source to access information about an existing Redis Cache
 
 
 
-## Using GetCache
+## Using GetCache {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetCache Result
+## GetCache Result {#result}
 
 The following output properties are available:
 
@@ -1025,7 +1025,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Cache<wbr>Patch<wbr>Schedule</h4>
+
+<h4 id="getcachepatchschedule">Get<wbr>Cache<wbr>Patch<wbr>Schedule</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetCachePatchSchedule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1140,7 +1141,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cache<wbr>Redis<wbr>Configuration</h4>
+<h4 id="getcacheredisconfiguration">Get<wbr>Cache<wbr>Redis<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetCacheRedisConfiguration">output</a> API doc for this type.
 {{% /choosable %}}

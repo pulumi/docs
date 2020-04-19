@@ -16,7 +16,7 @@ Manages an API Management Service.
 
 
 
-## Create a Service Resource
+## Create a Service Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -106,7 +106,7 @@ Manages an API Management Service.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -183,7 +183,7 @@ Manages an API Management Service.
 
 {{% /choosable %}}
 
-## Service Resource Properties
+## Service Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -840,9 +840,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Service resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Service resource produces the following output properties:
 
 
 
@@ -867,6 +865,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The URL of the Gateway for the API Management Service.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -931,6 +937,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Management<wbr>Api<wbr>Url</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -989,6 +1003,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The URL of the Gateway for the API Management Service.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1053,6 +1075,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>management_<wbr>api_<wbr>url</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1096,8 +1126,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Service Resource
+## Look up an Existing Service Resource {#look-up}
 
 Get an existing Service resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -2084,7 +2113,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Service<wbr>Additional<wbr>Location</h4>
+
+<h4 id="serviceadditionallocation">Service<wbr>Additional<wbr>Location</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceAdditionalLocation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceAdditionalLocation">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2235,7 +2265,7 @@ The following state arguments are supported:
 
 
 
-<h4>Service<wbr>Certificate</h4>
+<h4 id="servicecertificate">Service<wbr>Certificate</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceCertificate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2386,7 +2416,7 @@ The following state arguments are supported:
 
 
 
-<h4>Service<wbr>Hostname<wbr>Configuration</h4>
+<h4 id="servicehostnameconfiguration">Service<wbr>Hostname<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceHostnameConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceHostnameConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2573,7 +2603,7 @@ The following state arguments are supported:
 
 
 
-<h4>Service<wbr>Hostname<wbr>Configuration<wbr>Management</h4>
+<h4 id="servicehostnameconfigurationmanagement">Service<wbr>Hostname<wbr>Configuration<wbr>Management</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceHostnameConfigurationManagement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceHostnameConfigurationManagement">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2796,7 +2826,7 @@ The following state arguments are supported:
 
 
 
-<h4>Service<wbr>Hostname<wbr>Configuration<wbr>Portal</h4>
+<h4 id="servicehostnameconfigurationportal">Service<wbr>Hostname<wbr>Configuration<wbr>Portal</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceHostnameConfigurationPortal">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceHostnameConfigurationPortal">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3019,7 +3049,7 @@ The following state arguments are supported:
 
 
 
-<h4>Service<wbr>Hostname<wbr>Configuration<wbr>Proxy</h4>
+<h4 id="servicehostnameconfigurationproxy">Service<wbr>Hostname<wbr>Configuration<wbr>Proxy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceHostnameConfigurationProxy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceHostnameConfigurationProxy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3278,7 +3308,7 @@ The following state arguments are supported:
 
 
 
-<h4>Service<wbr>Hostname<wbr>Configuration<wbr>Scm</h4>
+<h4 id="servicehostnameconfigurationscm">Service<wbr>Hostname<wbr>Configuration<wbr>Scm</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceHostnameConfigurationScm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceHostnameConfigurationScm">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3501,7 +3531,7 @@ The following state arguments are supported:
 
 
 
-<h4>Service<wbr>Identity</h4>
+<h4 id="serviceidentity">Service<wbr>Identity</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceIdentity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceIdentity">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3652,7 +3682,7 @@ The following state arguments are supported:
 
 
 
-<h4>Service<wbr>Policy</h4>
+<h4 id="servicepolicy">Service<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServicePolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServicePolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3767,7 +3797,7 @@ The following state arguments are supported:
 
 
 
-<h4>Service<wbr>Protocols</h4>
+<h4 id="serviceprotocols">Service<wbr>Protocols</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceProtocols">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceProtocols">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3846,7 +3876,7 @@ The following state arguments are supported:
 
 
 
-<h4>Service<wbr>Security</h4>
+<h4 id="servicesecurity">Service<wbr>Security</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSecurity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceSecurity">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4141,7 +4171,7 @@ The following state arguments are supported:
 
 
 
-<h4>Service<wbr>Sign<wbr>In</h4>
+<h4 id="servicesignin">Service<wbr>Sign<wbr>In</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSignIn">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceSignIn">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4220,7 +4250,7 @@ The following state arguments are supported:
 
 
 
-<h4>Service<wbr>Sign<wbr>Up</h4>
+<h4 id="servicesignup">Service<wbr>Sign<wbr>Up</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSignUp">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceSignUp">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4335,7 +4365,7 @@ The following state arguments are supported:
 
 
 
-<h4>Service<wbr>Sign<wbr>Up<wbr>Terms<wbr>Of<wbr>Service</h4>
+<h4 id="servicesignuptermsofservice">Service<wbr>Sign<wbr>Up<wbr>Terms<wbr>Of<wbr>Service</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ServiceSignUpTermsOfService">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ServiceSignUpTermsOfService">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4490,7 +4520,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

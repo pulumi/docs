@@ -15,7 +15,7 @@ Use this data source to access information about an existing ExpressRoute circui
 
 
 
-## Using GetExpressRouteCircuit
+## Using GetExpressRouteCircuit {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetExpressRouteCircuit Result
+## GetExpressRouteCircuit Result {#result}
 
 The following output properties are available:
 
@@ -512,7 +512,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering</h4>
+
+<h4 id="getexpressroutecircuitpeering">Get<wbr>Express<wbr>Route<wbr>Circuit<wbr>Peering</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetExpressRouteCircuitPeering">output</a> API doc for this type.
 {{% /choosable %}}
@@ -807,7 +808,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Express<wbr>Route<wbr>Circuit<wbr>Service<wbr>Provider<wbr>Property</h4>
+<h4 id="getexpressroutecircuitserviceproviderproperty">Get<wbr>Express<wbr>Route<wbr>Circuit<wbr>Service<wbr>Provider<wbr>Property</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetExpressRouteCircuitServiceProviderProperty">output</a> API doc for this type.
 {{% /choosable %}}
@@ -958,7 +959,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Express<wbr>Route<wbr>Circuit<wbr>Sku</h4>
+<h4 id="getexpressroutecircuitsku">Get<wbr>Express<wbr>Route<wbr>Circuit<wbr>Sku</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetExpressRouteCircuitSku">output</a> API doc for this type.
 {{% /choosable %}}

@@ -16,7 +16,7 @@ Manages a HDInsight ML Services Cluster.
 
 
 
-## Create a MLServicesCluster Resource
+## Create a MLServicesCluster Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -106,7 +106,7 @@ Manages a HDInsight ML Services Cluster.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -183,7 +183,7 @@ Manages a HDInsight ML Services Cluster.
 
 {{% /choosable %}}
 
-## MLServicesCluster Resource Properties
+## MLServicesCluster Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -588,9 +588,7 @@ The MLServicesCluster resource accepts the following [input]({{< relref "/docs/i
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the MLServicesCluster resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the MLServicesCluster resource produces the following output properties:
 
 
 
@@ -615,6 +613,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The HTTPS Connectivity Endpoint for this HDInsight ML Services Cluster.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -652,6 +658,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Ssh<wbr>Endpoint</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -683,6 +697,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The HTTPS Connectivity Endpoint for this HDInsight ML Services Cluster.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -720,6 +742,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>ssh_<wbr>endpoint</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -736,8 +766,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing MLServicesCluster Resource
+## Look up an Existing MLServicesCluster Resource {#look-up}
 
 Get an existing MLServicesCluster resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1364,7 +1393,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>MLServices<wbr>Cluster<wbr>Gateway</h4>
+
+<h4 id="mlservicesclustergateway">MLServices<wbr>Cluster<wbr>Gateway</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MLServicesClusterGateway">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MLServicesClusterGateway">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1515,7 +1545,7 @@ The following state arguments are supported:
 
 
 
-<h4>MLServices<wbr>Cluster<wbr>Roles</h4>
+<h4 id="mlservicesclusterroles">MLServices<wbr>Cluster<wbr>Roles</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MLServicesClusterRoles">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MLServicesClusterRoles">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1702,7 +1732,7 @@ The following state arguments are supported:
 
 
 
-<h4>MLServices<wbr>Cluster<wbr>Roles<wbr>Edge<wbr>Node</h4>
+<h4 id="mlservicesclusterrolesedgenode">MLServices<wbr>Cluster<wbr>Roles<wbr>Edge<wbr>Node</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MLServicesClusterRolesEdgeNode">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MLServicesClusterRolesEdgeNode">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1961,7 +1991,7 @@ The following state arguments are supported:
 
 
 
-<h4>MLServices<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node</h4>
+<h4 id="mlservicesclusterrolesheadnode">MLServices<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MLServicesClusterRolesHeadNode">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MLServicesClusterRolesHeadNode">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2220,7 +2250,7 @@ The following state arguments are supported:
 
 
 
-<h4>MLServices<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node</h4>
+<h4 id="mlservicesclusterrolesworkernode">MLServices<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MLServicesClusterRolesWorkerNode">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MLServicesClusterRolesWorkerNode">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2551,7 +2581,7 @@ The following state arguments are supported:
 
 
 
-<h4>MLServices<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node</h4>
+<h4 id="mlservicesclusterroleszookeepernode">MLServices<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MLServicesClusterRolesZookeeperNode">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MLServicesClusterRolesZookeeperNode">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2810,7 +2840,7 @@ The following state arguments are supported:
 
 
 
-<h4>MLServices<wbr>Cluster<wbr>Storage<wbr>Account</h4>
+<h4 id="mlservicesclusterstorageaccount">MLServices<wbr>Cluster<wbr>Storage<wbr>Account</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#MLServicesClusterStorageAccount">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#MLServicesClusterStorageAccount">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2965,7 +2995,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

@@ -16,7 +16,7 @@ Manages an Azure Front Door Web Application Firewall Policy instance.
 
 
 
-## Create a FirewallPolicy Resource
+## Create a FirewallPolicy Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -106,7 +106,7 @@ Manages an Azure Front Door Web Application Firewall Policy instance.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -183,7 +183,7 @@ Manages an Azure Front Door Web Application Firewall Policy instance.
 
 {{% /choosable %}}
 
-## FirewallPolicy Resource Properties
+## FirewallPolicy Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -588,9 +588,7 @@ The FirewallPolicy resource accepts the following [input]({{< relref "/docs/intr
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the FirewallPolicy resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the FirewallPolicy resource produces the following output properties:
 
 
 
@@ -606,6 +604,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}the Frontend Endpoints associated with this Front Door Web Application Firewall policy.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -634,6 +640,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Location</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -656,6 +670,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}the Frontend Endpoints associated with this Front Door Web Application Firewall policy.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -684,6 +706,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>location</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -700,8 +730,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing FirewallPolicy Resource
+## Look up an Existing FirewallPolicy Resource {#look-up}
 
 Get an existing FirewallPolicy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1292,7 +1321,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Firewall<wbr>Policy<wbr>Custom<wbr>Rule</h4>
+
+<h4 id="firewallpolicycustomrule">Firewall<wbr>Policy<wbr>Custom<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallPolicyCustomRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallPolicyCustomRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1623,7 +1653,7 @@ The following state arguments are supported:
 
 
 
-<h4>Firewall<wbr>Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition</h4>
+<h4 id="firewallpolicycustomrulematchcondition">Firewall<wbr>Policy<wbr>Custom<wbr>Rule<wbr>Match<wbr>Condition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallPolicyCustomRuleMatchCondition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallPolicyCustomRuleMatchCondition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1882,7 +1912,7 @@ The following state arguments are supported:
 
 
 
-<h4>Firewall<wbr>Policy<wbr>Managed<wbr>Rule</h4>
+<h4 id="firewallpolicymanagedrule">Firewall<wbr>Policy<wbr>Managed<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallPolicyManagedRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallPolicyManagedRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2069,7 +2099,7 @@ The following state arguments are supported:
 
 
 
-<h4>Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Exclusion</h4>
+<h4 id="firewallpolicymanagedruleexclusion">Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Exclusion</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallPolicyManagedRuleExclusion">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallPolicyManagedRuleExclusion">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2220,7 +2250,7 @@ The following state arguments are supported:
 
 
 
-<h4>Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override</h4>
+<h4 id="firewallpolicymanagedruleoverride">Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallPolicyManagedRuleOverride">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallPolicyManagedRuleOverride">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2371,7 +2401,7 @@ The following state arguments are supported:
 
 
 
-<h4>Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Exclusion</h4>
+<h4 id="firewallpolicymanagedruleoverrideexclusion">Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Exclusion</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallPolicyManagedRuleOverrideExclusion">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallPolicyManagedRuleOverrideExclusion">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2522,7 +2552,7 @@ The following state arguments are supported:
 
 
 
-<h4>Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Rule</h4>
+<h4 id="firewallpolicymanagedruleoverriderule">Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallPolicyManagedRuleOverrideRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallPolicyManagedRuleOverrideRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2709,7 +2739,7 @@ The following state arguments are supported:
 
 
 
-<h4>Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Rule<wbr>Exclusion</h4>
+<h4 id="firewallpolicymanagedruleoverrideruleexclusion">Firewall<wbr>Policy<wbr>Managed<wbr>Rule<wbr>Override<wbr>Rule<wbr>Exclusion</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#FirewallPolicyManagedRuleOverrideRuleExclusion">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#FirewallPolicyManagedRuleOverrideRuleExclusion">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2864,7 +2894,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

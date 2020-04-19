@@ -12,7 +12,7 @@ Use this data source to access information about an existing Disk Encryption Set
 
 
 
-## Using GetDiskEncryptionSet
+## Using GetDiskEncryptionSet {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -150,7 +150,7 @@ The following arguments are supported:
 
 
 
-## GetDiskEncryptionSet Result
+## GetDiskEncryptionSet Result {#result}
 
 The following output properties are available:
 

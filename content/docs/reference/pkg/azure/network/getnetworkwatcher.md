@@ -15,7 +15,7 @@ Use this data source to access information about an existing Network Watcher.
 
 
 
-## Using GetNetworkWatcher
+## Using GetNetworkWatcher {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetNetworkWatcher Result
+## GetNetworkWatcher Result {#result}
 
 The following output properties are available:
 

@@ -13,7 +13,7 @@ Manages a Key Vault Certificate.
 
 
 
-## Create a Certifiate Resource
+## Create a Certifiate Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -103,7 +103,7 @@ Manages a Key Vault Certificate.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -180,7 +180,7 @@ Manages a Key Vault Certificate.
 
 {{% /choosable %}}
 
-## Certifiate Resource Properties
+## Certifiate Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -405,9 +405,7 @@ The Certifiate resource accepts the following [input]({{< relref "/docs/intro/co
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Certifiate resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Certifiate resource produces the following output properties:
 
 
 
@@ -423,6 +421,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The raw Key Vault Certificate data represented as a hexadecimal string.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -469,6 +475,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Secret<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -509,6 +523,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The raw Key Vault Certificate data represented as a hexadecimal string.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -555,6 +577,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>secret_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -589,8 +619,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Certifiate Resource
+## Look up an Existing Certifiate Resource {#look-up}
 
 Get an existing Certifiate resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -716,15 +745,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>Key<wbr>Vault<wbr>Certificate</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#certifiatecertificate">Certifiate<wbr>Certificate<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}A `certificate` block as defined below, used to Import an existing certificate.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Certificate<wbr>Data</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -739,6 +759,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="#certifiatecertificatepolicy">Certifiate<wbr>Certificate<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}A `certificate_policy` block as defined below.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Key<wbr>Vault<wbr>Certificate</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#certifiatecertificate">Certifiate<wbr>Certificate<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A `certificate` block as defined below, used to Import an existing certificate.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1073,7 +1102,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Certifiate<wbr>Certificate</h4>
+
+<h4 id="certifiatecertificate">Certifiate<wbr>Certificate</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1188,7 +1218,7 @@ The following state arguments are supported:
 
 
 
-<h4>Certifiate<wbr>Certificate<wbr>Policy</h4>
+<h4 id="certifiatecertificatepolicy">Certifiate<wbr>Certificate<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificatePolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1411,7 +1441,7 @@ The following state arguments are supported:
 
 
 
-<h4>Certifiate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameters</h4>
+<h4 id="certifiatecertificatepolicyissuerparameters">Certifiate<wbr>Certificate<wbr>Policy<wbr>Issuer<wbr>Parameters</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificatePolicyIssuerParameters">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicyIssuerParameters">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1490,7 +1520,7 @@ The following state arguments are supported:
 
 
 
-<h4>Certifiate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Properties</h4>
+<h4 id="certifiatecertificatepolicykeyproperties">Certifiate<wbr>Certificate<wbr>Policy<wbr>Key<wbr>Properties</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificatePolicyKeyProperties">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicyKeyProperties">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1677,7 +1707,7 @@ The following state arguments are supported:
 
 
 
-<h4>Certifiate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action</h4>
+<h4 id="certifiatecertificatepolicylifetimeaction">Certifiate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificatePolicyLifetimeAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicyLifetimeAction">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1792,7 +1822,7 @@ The following state arguments are supported:
 
 
 
-<h4>Certifiate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action</h4>
+<h4 id="certifiatecertificatepolicylifetimeactionaction">Certifiate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Action</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificatePolicyLifetimeActionAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicyLifetimeActionAction">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1871,7 +1901,7 @@ The following state arguments are supported:
 
 
 
-<h4>Certifiate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger</h4>
+<h4 id="certifiatecertificatepolicylifetimeactiontrigger">Certifiate<wbr>Certificate<wbr>Policy<wbr>Lifetime<wbr>Action<wbr>Trigger</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificatePolicyLifetimeActionTrigger">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicyLifetimeActionTrigger">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1986,7 +2016,7 @@ The following state arguments are supported:
 
 
 
-<h4>Certifiate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Properties</h4>
+<h4 id="certifiatecertificatepolicysecretproperties">Certifiate<wbr>Certificate<wbr>Policy<wbr>Secret<wbr>Properties</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificatePolicySecretProperties">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicySecretProperties">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2065,7 +2095,7 @@ The following state arguments are supported:
 
 
 
-<h4>Certifiate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties</h4>
+<h4 id="certifiatecertificatepolicyx509certificateproperties">Certifiate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificatePolicyX509CertificateProperties">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicyX509CertificateProperties">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2288,7 +2318,7 @@ The following state arguments are supported:
 
 
 
-<h4>Certifiate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Subject<wbr>Alternative<wbr>Names</h4>
+<h4 id="certifiatecertificatepolicyx509certificatepropertiessubjectalternativenames">Certifiate<wbr>Certificate<wbr>Policy<wbr>X509Certificate<wbr>Properties<wbr>Subject<wbr>Alternative<wbr>Names</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#CertifiateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#CertifiateCertificatePolicyX509CertificatePropertiesSubjectAlternativeNames">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2443,7 +2473,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

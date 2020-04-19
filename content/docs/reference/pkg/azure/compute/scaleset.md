@@ -17,7 +17,7 @@ Manages a virtual machine scale set.
 
 
 
-## Create a ScaleSet Resource
+## Create a ScaleSet Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -107,7 +107,7 @@ Manages a virtual machine scale set.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -184,7 +184,7 @@ Manages a virtual machine scale set.
 
 {{% /choosable %}}
 
-## ScaleSet Resource Properties
+## ScaleSet Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -1233,12 +1233,77 @@ The ScaleSet resource accepts the following [input]({{< relref "/docs/intro/conc
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The ScaleSet resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the ScaleSet resource produces the following output properties:
 
 
 
 
-## Look up an Existing ScaleSet Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing ScaleSet Resource {#look-up}
 
 Get an existing ScaleSet resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -2401,7 +2466,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Scale<wbr>Set<wbr>Boot<wbr>Diagnostics</h4>
+
+<h4 id="scalesetbootdiagnostics">Scale<wbr>Set<wbr>Boot<wbr>Diagnostics</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetBootDiagnostics">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetBootDiagnostics">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2508,7 +2574,7 @@ The following state arguments are supported:
 
 
 
-<h4>Scale<wbr>Set<wbr>Extension</h4>
+<h4 id="scalesetextension">Scale<wbr>Set<wbr>Extension</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetExtension">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetExtension">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2839,7 +2905,7 @@ The following state arguments are supported:
 
 
 
-<h4>Scale<wbr>Set<wbr>Identity</h4>
+<h4 id="scalesetidentity">Scale<wbr>Set<wbr>Identity</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetIdentity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetIdentity">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2986,7 +3052,7 @@ The following state arguments are supported:
 
 
 
-<h4>Scale<wbr>Set<wbr>Network<wbr>Profile</h4>
+<h4 id="scalesetnetworkprofile">Scale<wbr>Set<wbr>Network<wbr>Profile</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetNetworkProfile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetNetworkProfile">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3281,7 +3347,7 @@ The following state arguments are supported:
 
 
 
-<h4>Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Dns<wbr>Settings</h4>
+<h4 id="scalesetnetworkprofilednssettings">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Dns<wbr>Settings</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetNetworkProfileDnsSettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetNetworkProfileDnsSettings">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3360,7 +3426,7 @@ The following state arguments are supported:
 
 
 
-<h4>Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration</h4>
+<h4 id="scalesetnetworkprofileipconfiguration">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetNetworkProfileIpConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetNetworkProfileIpConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3691,7 +3757,7 @@ The following state arguments are supported:
 
 
 
-<h4>Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</h4>
+<h4 id="scalesetnetworkprofileipconfigurationpublicipaddressconfiguration">Scale<wbr>Set<wbr>Network<wbr>Profile<wbr>Ip<wbr>Configuration<wbr>Public<wbr>Ip<wbr>Address<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetNetworkProfileIpConfigurationPublicIpAddressConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetNetworkProfileIpConfigurationPublicIpAddressConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3842,7 +3908,7 @@ The following state arguments are supported:
 
 
 
-<h4>Scale<wbr>Set<wbr>Os<wbr>Profile</h4>
+<h4 id="scalesetosprofile">Scale<wbr>Set<wbr>Os<wbr>Profile</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetOsProfile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetOsProfile">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4029,7 +4095,7 @@ The following state arguments are supported:
 
 
 
-<h4>Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config</h4>
+<h4 id="scalesetosprofilelinuxconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetOsProfileLinuxConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetOsProfileLinuxConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4144,7 +4210,7 @@ The following state arguments are supported:
 
 
 
-<h4>Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key</h4>
+<h4 id="scalesetosprofilelinuxconfigsshkey">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetOsProfileLinuxConfigSshKey">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetOsProfileLinuxConfigSshKey">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4251,7 +4317,7 @@ The following state arguments are supported:
 
 
 
-<h4>Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret</h4>
+<h4 id="scalesetosprofilesecret">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetOsProfileSecret">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetOsProfileSecret">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4366,7 +4432,7 @@ The following state arguments are supported:
 
 
 
-<h4>Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate</h4>
+<h4 id="scalesetosprofilesecretvaultcertificate">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetOsProfileSecretVaultCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetOsProfileSecretVaultCertificate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4481,7 +4547,7 @@ The following state arguments are supported:
 
 
 
-<h4>Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config</h4>
+<h4 id="scalesetosprofilewindowsconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetOsProfileWindowsConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetOsProfileWindowsConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4668,7 +4734,7 @@ The following state arguments are supported:
 
 
 
-<h4>Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config</h4>
+<h4 id="scalesetosprofilewindowsconfigadditionalunattendconfig">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetOsProfileWindowsConfigAdditionalUnattendConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetOsProfileWindowsConfigAdditionalUnattendConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4855,7 +4921,7 @@ The following state arguments are supported:
 
 
 
-<h4>Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm</h4>
+<h4 id="scalesetosprofilewindowsconfigwinrm">Scale<wbr>Set<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetOsProfileWindowsConfigWinrm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetOsProfileWindowsConfigWinrm">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4970,7 +5036,7 @@ The following state arguments are supported:
 
 
 
-<h4>Scale<wbr>Set<wbr>Plan</h4>
+<h4 id="scalesetplan">Scale<wbr>Set<wbr>Plan</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetPlan">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetPlan">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5121,7 +5187,7 @@ The following state arguments are supported:
 
 
 
-<h4>Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy</h4>
+<h4 id="scalesetrollingupgradepolicy">Scale<wbr>Set<wbr>Rolling<wbr>Upgrade<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetRollingUpgradePolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetRollingUpgradePolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5308,7 +5374,7 @@ The following state arguments are supported:
 
 
 
-<h4>Scale<wbr>Set<wbr>Sku</h4>
+<h4 id="scalesetsku">Scale<wbr>Set<wbr>Sku</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetSku">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetSku">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5459,7 +5525,7 @@ The following state arguments are supported:
 
 
 
-<h4>Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk</h4>
+<h4 id="scalesetstorageprofiledatadisk">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Data<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetStorageProfileDataDisk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetStorageProfileDataDisk">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5682,7 +5748,7 @@ The following state arguments are supported:
 
 
 
-<h4>Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference</h4>
+<h4 id="scalesetstorageprofileimagereference">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Image<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetStorageProfileImageReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetStorageProfileImageReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5909,7 +5975,7 @@ machine scale set, as in the example below.
 
 
 
-<h4>Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk</h4>
+<h4 id="scalesetstorageprofileosdisk">Scale<wbr>Set<wbr>Storage<wbr>Profile<wbr>Os<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ScaleSetStorageProfileOsDisk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ScaleSetStorageProfileOsDisk">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6216,7 +6282,7 @@ When setting this field `os_type` needs to be specified. Cannot be used when `vh
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

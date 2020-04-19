@@ -16,7 +16,7 @@ Manages an Azure Storage Account.
 
 
 
-## Create a Account Resource
+## Create a Account Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -106,7 +106,7 @@ Manages an Azure Storage Account.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -183,7 +183,7 @@ Manages an Azure Storage Account.
 
 {{% /choosable %}}
 
-## Account Resource Properties
+## Account Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -808,15 +808,21 @@ for more information. Defaults to `true`.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Account resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Account resource produces the following output properties:
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1115,6 +1121,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Primary<wbr>Access<wbr>Key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1407,6 +1421,14 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1705,6 +1727,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>primary_<wbr>access_<wbr>key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2000,8 +2030,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Account Resource
+## Look up an Existing Account Resource {#look-up}
 
 Get an existing Account resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -3892,7 +3921,8 @@ for more information. Defaults to `true`.
 
 ## Supporting Types
 
-<h4>Account<wbr>Blob<wbr>Properties</h4>
+
+<h4 id="accountblobproperties">Account<wbr>Blob<wbr>Properties</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountBlobProperties">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountBlobProperties">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4007,7 +4037,7 @@ for more information. Defaults to `true`.
 
 
 
-<h4>Account<wbr>Blob<wbr>Properties<wbr>Cors<wbr>Rule</h4>
+<h4 id="accountblobpropertiescorsrule">Account<wbr>Blob<wbr>Properties<wbr>Cors<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountBlobPropertiesCorsRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountBlobPropertiesCorsRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4234,7 +4264,7 @@ for more information. Defaults to `true`.
 
 
 
-<h4>Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy</h4>
+<h4 id="accountblobpropertiesdeleteretentionpolicy">Account<wbr>Blob<wbr>Properties<wbr>Delete<wbr>Retention<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountBlobPropertiesDeleteRetentionPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountBlobPropertiesDeleteRetentionPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4313,7 +4343,7 @@ for more information. Defaults to `true`.
 
 
 
-<h4>Account<wbr>Custom<wbr>Domain</h4>
+<h4 id="accountcustomdomain">Account<wbr>Custom<wbr>Domain</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountCustomDomain">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountCustomDomain">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4428,7 +4458,7 @@ for more information. Defaults to `true`.
 
 
 
-<h4>Account<wbr>Identity</h4>
+<h4 id="accountidentity">Account<wbr>Identity</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountIdentity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountIdentity">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4579,7 +4609,7 @@ for more information. Defaults to `true`.
 
 
 
-<h4>Account<wbr>Network<wbr>Rules</h4>
+<h4 id="accountnetworkrules">Account<wbr>Network<wbr>Rules</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountNetworkRules">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountNetworkRules">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4770,7 +4800,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
 
 
-<h4>Account<wbr>Queue<wbr>Properties</h4>
+<h4 id="accountqueueproperties">Account<wbr>Queue<wbr>Properties</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountQueueProperties">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountQueueProperties">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4957,7 +4987,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
 
 
-<h4>Account<wbr>Queue<wbr>Properties<wbr>Cors<wbr>Rule</h4>
+<h4 id="accountqueuepropertiescorsrule">Account<wbr>Queue<wbr>Properties<wbr>Cors<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountQueuePropertiesCorsRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountQueuePropertiesCorsRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5184,7 +5214,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
 
 
-<h4>Account<wbr>Queue<wbr>Properties<wbr>Hour<wbr>Metrics</h4>
+<h4 id="accountqueuepropertieshourmetrics">Account<wbr>Queue<wbr>Properties<wbr>Hour<wbr>Metrics</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountQueuePropertiesHourMetrics">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountQueuePropertiesHourMetrics">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5371,7 +5401,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
 
 
-<h4>Account<wbr>Queue<wbr>Properties<wbr>Logging</h4>
+<h4 id="accountqueuepropertieslogging">Account<wbr>Queue<wbr>Properties<wbr>Logging</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountQueuePropertiesLogging">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountQueuePropertiesLogging">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5594,7 +5624,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
 
 
-<h4>Account<wbr>Queue<wbr>Properties<wbr>Minute<wbr>Metrics</h4>
+<h4 id="accountqueuepropertiesminutemetrics">Account<wbr>Queue<wbr>Properties<wbr>Minute<wbr>Metrics</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountQueuePropertiesMinuteMetrics">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountQueuePropertiesMinuteMetrics">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5781,7 +5811,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
 
 
-<h4>Account<wbr>Static<wbr>Website</h4>
+<h4 id="accountstaticwebsite">Account<wbr>Static<wbr>Website</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountStaticWebsite">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountStaticWebsite">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5900,7 +5930,7 @@ any combination of `Logging`, `Metrics`, `AzureServices`, or `None`.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

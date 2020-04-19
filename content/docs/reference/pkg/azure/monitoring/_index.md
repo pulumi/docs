@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="actiongroup" title="ActionGroup"><span class="symbol resource"></span>ActionGroup</a></li>
     <li><a href="activitylogalert" title="ActivityLogAlert"><span class="symbol resource"></span>ActivityLogAlert</a></li>
@@ -20,7 +20,7 @@ block_external_search_index: true
     <li><a href="scheduledqueryruleslog" title="ScheduledQueryRulesLog"><span class="symbol resource"></span>ScheduledQueryRulesLog</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getactiongroup" title="GetActionGroup"><span class="symbol function"></span>GetActionGroup</a></li>
     <li><a href="getdiagnosticcategories" title="GetDiagnosticCategories"><span class="symbol function"></span>GetDiagnosticCategories</a></li>
@@ -29,7 +29,7 @@ block_external_search_index: true
     <li><a href="getscheduledqueryruleslog" title="GetScheduledQueryRulesLog"><span class="symbol function"></span>GetScheduledQueryRulesLog</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

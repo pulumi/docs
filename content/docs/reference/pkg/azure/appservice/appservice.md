@@ -18,7 +18,7 @@ Manages an App Service (within an App Service Plan).
 
 
 
-## Create a AppService Resource
+## Create a AppService Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -108,7 +108,7 @@ Manages an App Service (within an App Service Plan).
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -185,7 +185,7 @@ Manages an App Service (within an App Service Plan).
 
 {{% /choosable %}}
 
-## AppService Resource Properties
+## AppService Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -842,9 +842,7 @@ The AppService resource accepts the following [input]({{< relref "/docs/intro/co
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the AppService resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the AppService resource produces the following output properties:
 
 
 
@@ -860,6 +858,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Default Hostname associated with the App Service - such as `mysite.azurewebsites.net`
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -915,6 +921,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Outbound<wbr>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -964,6 +978,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Default Hostname associated with the App Service - such as `mysite.azurewebsites.net`
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1019,6 +1041,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>outbound_<wbr>ip_<wbr>addresses</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1062,8 +1092,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing AppService Resource
+## Look up an Existing AppService Resource {#look-up}
 
 Get an existing AppService resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -2014,7 +2043,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>App<wbr>Service<wbr>Auth<wbr>Settings</h4>
+
+<h4 id="appserviceauthsettings">App<wbr>Service<wbr>Auth<wbr>Settings</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceAuthSettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceAuthSettings">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2561,7 +2591,7 @@ The following state arguments are supported:
 
 
 
-<h4>App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory</h4>
+<h4 id="appserviceauthsettingsactivedirectory">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Active<wbr>Directory</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceAuthSettingsActiveDirectory">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceAuthSettingsActiveDirectory">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2712,7 +2742,7 @@ The following state arguments are supported:
 
 
 
-<h4>App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Facebook</h4>
+<h4 id="appserviceauthsettingsfacebook">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Facebook</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceAuthSettingsFacebook">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceAuthSettingsFacebook">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2863,7 +2893,7 @@ The following state arguments are supported:
 
 
 
-<h4>App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Google</h4>
+<h4 id="appserviceauthsettingsgoogle">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Google</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceAuthSettingsGoogle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceAuthSettingsGoogle">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3014,7 +3044,7 @@ The following state arguments are supported:
 
 
 
-<h4>App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Microsoft</h4>
+<h4 id="appserviceauthsettingsmicrosoft">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Microsoft</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceAuthSettingsMicrosoft">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceAuthSettingsMicrosoft">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3165,7 +3195,7 @@ The following state arguments are supported:
 
 
 
-<h4>App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Twitter</h4>
+<h4 id="appserviceauthsettingstwitter">App<wbr>Service<wbr>Auth<wbr>Settings<wbr>Twitter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceAuthSettingsTwitter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceAuthSettingsTwitter">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3272,7 +3302,7 @@ The following state arguments are supported:
 
 
 
-<h4>App<wbr>Service<wbr>Backup</h4>
+<h4 id="appservicebackup">App<wbr>Service<wbr>Backup</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceBackup">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceBackup">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3459,7 +3489,7 @@ The following state arguments are supported:
 
 
 
-<h4>App<wbr>Service<wbr>Backup<wbr>Schedule</h4>
+<h4 id="appservicebackupschedule">App<wbr>Service<wbr>Backup<wbr>Schedule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceBackupSchedule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceBackupSchedule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3682,7 +3712,7 @@ The following state arguments are supported:
 
 
 
-<h4>App<wbr>Service<wbr>Connection<wbr>String</h4>
+<h4 id="appserviceconnectionstring">App<wbr>Service<wbr>Connection<wbr>String</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceConnectionString">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceConnectionString">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3833,7 +3863,7 @@ The following state arguments are supported:
 
 
 
-<h4>App<wbr>Service<wbr>Identity</h4>
+<h4 id="appserviceidentity">App<wbr>Service<wbr>Identity</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceIdentity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceIdentity">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4020,7 +4050,7 @@ The following state arguments are supported:
 
 
 
-<h4>App<wbr>Service<wbr>Logs</h4>
+<h4 id="appservicelogs">App<wbr>Service<wbr>Logs</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceLogs">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceLogs">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4135,7 +4165,7 @@ The following state arguments are supported:
 
 
 
-<h4>App<wbr>Service<wbr>Logs<wbr>Application<wbr>Logs</h4>
+<h4 id="appservicelogsapplicationlogs">App<wbr>Service<wbr>Logs<wbr>Application<wbr>Logs</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceLogsApplicationLogs">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceLogsApplicationLogs">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4214,7 +4244,7 @@ The following state arguments are supported:
 
 
 
-<h4>App<wbr>Service<wbr>Logs<wbr>Application<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage</h4>
+<h4 id="appservicelogsapplicationlogsazureblobstorage">App<wbr>Service<wbr>Logs<wbr>Application<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceLogsApplicationLogsAzureBlobStorage">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceLogsApplicationLogsAzureBlobStorage">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4365,7 +4395,7 @@ The following state arguments are supported:
 
 
 
-<h4>App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs</h4>
+<h4 id="appservicelogshttplogs">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceLogsHttpLogs">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceLogsHttpLogs">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4480,7 +4510,7 @@ The following state arguments are supported:
 
 
 
-<h4>App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage</h4>
+<h4 id="appservicelogshttplogsazureblobstorage">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>Azure<wbr>Blob<wbr>Storage</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceLogsHttpLogsAzureBlobStorage">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceLogsHttpLogsAzureBlobStorage">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4595,7 +4625,7 @@ The following state arguments are supported:
 
 
 
-<h4>App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>File<wbr>System</h4>
+<h4 id="appservicelogshttplogsfilesystem">App<wbr>Service<wbr>Logs<wbr>Http<wbr>Logs<wbr>File<wbr>System</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceLogsHttpLogsFileSystem">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceLogsHttpLogsFileSystem">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4687,20 +4717,20 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>retention_<wbr>in_<wbr>days</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The number of days to retain logs for.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>retention<wbr>In<wbr>Mb</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The maximum size in megabytes that http log files can use before being removed.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>retention_<wbr>in_<wbr>days</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The number of days to retain logs for.
 {{% /md %}}</dd>
 
 </dl>
@@ -4710,7 +4740,7 @@ The following state arguments are supported:
 
 
 
-<h4>App<wbr>Service<wbr>Site<wbr>Config</h4>
+<h4 id="appservicesiteconfig">App<wbr>Service<wbr>Site<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceSiteConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceSiteConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5613,7 +5643,7 @@ The following state arguments are supported:
 
 
 
-<h4>App<wbr>Service<wbr>Site<wbr>Config<wbr>Cors</h4>
+<h4 id="appservicesiteconfigcors">App<wbr>Service<wbr>Site<wbr>Config<wbr>Cors</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceSiteConfigCors">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceSiteConfigCors">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5728,7 +5758,7 @@ The following state arguments are supported:
 
 
 
-<h4>App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction</h4>
+<h4 id="appservicesiteconfigiprestriction">App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceSiteConfigIpRestriction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceSiteConfigIpRestriction">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5843,7 +5873,7 @@ The following state arguments are supported:
 
 
 
-<h4>App<wbr>Service<wbr>Site<wbr>Credential</h4>
+<h4 id="appservicesitecredential">App<wbr>Service<wbr>Site<wbr>Credential</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceSiteCredential">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5958,7 +5988,7 @@ The following state arguments are supported:
 
 
 
-<h4>App<wbr>Service<wbr>Source<wbr>Control</h4>
+<h4 id="appservicesourcecontrol">App<wbr>Service<wbr>Source<wbr>Control</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceSourceControl">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6073,7 +6103,7 @@ The following state arguments are supported:
 
 
 
-<h4>App<wbr>Service<wbr>Storage<wbr>Account</h4>
+<h4 id="appservicestorageaccount">App<wbr>Service<wbr>Storage<wbr>Account</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AppServiceStorageAccount">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AppServiceStorageAccount">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6336,7 +6366,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

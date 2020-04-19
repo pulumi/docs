@@ -16,7 +16,7 @@ Manages an Application Gateway.
 
 
 
-## Create a ApplicationGateway Resource
+## Create a ApplicationGateway Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -106,7 +106,7 @@ Manages an Application Gateway.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -183,7 +183,7 @@ Manages an Application Gateway.
 
 {{% /choosable %}}
 
-## ApplicationGateway Resource Properties
+## ApplicationGateway Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -1164,12 +1164,77 @@ The ApplicationGateway resource accepts the following [input]({{< relref "/docs/
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The ApplicationGateway resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the ApplicationGateway resource produces the following output properties:
 
 
 
 
-## Look up an Existing ApplicationGateway Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing ApplicationGateway Resource {#look-up}
 
 Get an existing ApplicationGateway resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -2264,7 +2329,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Application<wbr>Gateway<wbr>Authentication<wbr>Certificate</h4>
+
+<h4 id="applicationgatewayauthenticationcertificate">Application<wbr>Gateway<wbr>Authentication<wbr>Certificate</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayAuthenticationCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayAuthenticationCertificate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2415,7 +2481,7 @@ The following state arguments are supported:
 
 
 
-<h4>Application<wbr>Gateway<wbr>Autoscale<wbr>Configuration</h4>
+<h4 id="applicationgatewayautoscaleconfiguration">Application<wbr>Gateway<wbr>Autoscale<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayAutoscaleConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayAutoscaleConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2530,7 +2596,7 @@ The following state arguments are supported:
 
 
 
-<h4>Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool</h4>
+<h4 id="applicationgatewaybackendaddresspool">Application<wbr>Gateway<wbr>Backend<wbr>Address<wbr>Pool</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayBackendAddressPool">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayBackendAddressPool">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2717,7 +2783,7 @@ The following state arguments are supported:
 
 
 
-<h4>Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting</h4>
+<h4 id="applicationgatewaybackendhttpsetting">Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayBackendHttpSetting">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayBackendHttpSetting">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3259,20 +3325,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>probe_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the associated Probe.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>probe<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The name of an associated HTTP Probe.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>probe_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the associated Probe.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3300,7 +3366,7 @@ The following state arguments are supported:
 
 
 
-<h4>Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Authentication<wbr>Certificate</h4>
+<h4 id="applicationgatewaybackendhttpsettingauthenticationcertificate">Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Authentication<wbr>Certificate</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayBackendHttpSettingAuthenticationCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayBackendHttpSettingAuthenticationCertificate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3415,7 +3481,7 @@ The following state arguments are supported:
 
 
 
-<h4>Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Connection<wbr>Draining</h4>
+<h4 id="applicationgatewaybackendhttpsettingconnectiondraining">Application<wbr>Gateway<wbr>Backend<wbr>Http<wbr>Setting<wbr>Connection<wbr>Draining</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayBackendHttpSettingConnectionDraining">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayBackendHttpSettingConnectionDraining">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3530,7 +3596,7 @@ The following state arguments are supported:
 
 
 
-<h4>Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Configuration</h4>
+<h4 id="applicationgatewaycustomerrorconfiguration">Application<wbr>Gateway<wbr>Custom<wbr>Error<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayCustomErrorConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayCustomErrorConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3681,7 +3747,7 @@ The following state arguments are supported:
 
 
 
-<h4>Application<wbr>Gateway<wbr>Frontend<wbr>Ip<wbr>Configuration</h4>
+<h4 id="applicationgatewayfrontendipconfiguration">Application<wbr>Gateway<wbr>Frontend<wbr>Ip<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayFrontendIpConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayFrontendIpConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3899,20 +3965,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>private_<wbr>ip_<wbr>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The Private IP Address to use for the Application Gateway.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>private<wbr>Ip<wbr>Address<wbr>Allocation</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Allocation Method for the Private IP Address. Possible values are `Dynamic` and `Static`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>private_<wbr>ip_<wbr>address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Private IP Address to use for the Application Gateway.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3940,7 +4006,7 @@ The following state arguments are supported:
 
 
 
-<h4>Application<wbr>Gateway<wbr>Frontend<wbr>Port</h4>
+<h4 id="applicationgatewayfrontendport">Application<wbr>Gateway<wbr>Frontend<wbr>Port</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayFrontendPort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayFrontendPort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4091,7 +4157,7 @@ The following state arguments are supported:
 
 
 
-<h4>Application<wbr>Gateway<wbr>Gateway<wbr>Ip<wbr>Configuration</h4>
+<h4 id="applicationgatewaygatewayipconfiguration">Application<wbr>Gateway<wbr>Gateway<wbr>Ip<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayGatewayIpConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayGatewayIpConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4242,7 +4308,7 @@ The following state arguments are supported:
 
 
 
-<h4>Application<wbr>Gateway<wbr>Http<wbr>Listener</h4>
+<h4 id="applicationgatewayhttplistener">Application<wbr>Gateway<wbr>Http<wbr>Listener</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayHttpListener">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayHttpListener">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4604,20 +4670,20 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>frontend_<wbr>ip_<wbr>configuration_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The Name of the Frontend IP Configuration used for this HTTP Listener.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>frontend<wbr>Port<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Frontend Port use for this HTTP Listener.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>frontend_<wbr>ip_<wbr>configuration_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Name of the Frontend IP Configuration used for this HTTP Listener.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -4649,20 +4715,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>frontend_<wbr>ip_<wbr>configuration_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the associated Frontend Configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>frontend<wbr>Port<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The ID of the associated Frontend Port.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>frontend_<wbr>ip_<wbr>configuration_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the associated Frontend Configuration.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4717,7 +4783,7 @@ The following state arguments are supported:
 
 
 
-<h4>Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Custom<wbr>Error<wbr>Configuration</h4>
+<h4 id="applicationgatewayhttplistenercustomerrorconfiguration">Application<wbr>Gateway<wbr>Http<wbr>Listener<wbr>Custom<wbr>Error<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayHttpListenerCustomErrorConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayHttpListenerCustomErrorConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4868,7 +4934,7 @@ The following state arguments are supported:
 
 
 
-<h4>Application<wbr>Gateway<wbr>Identity</h4>
+<h4 id="applicationgatewayidentity">Application<wbr>Gateway<wbr>Identity</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayIdentity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayIdentity">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4983,7 +5049,7 @@ The following state arguments are supported:
 
 
 
-<h4>Application<wbr>Gateway<wbr>Probe</h4>
+<h4 id="applicationgatewayprobe">Application<wbr>Gateway<wbr>Probe</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayProbe">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayProbe">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5422,7 +5488,7 @@ The following state arguments are supported:
 
 
 
-<h4>Application<wbr>Gateway<wbr>Probe<wbr>Match</h4>
+<h4 id="applicationgatewayprobematch">Application<wbr>Gateway<wbr>Probe<wbr>Match</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayProbeMatch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayProbeMatch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5537,7 +5603,7 @@ The following state arguments are supported:
 
 
 
-<h4>Application<wbr>Gateway<wbr>Redirect<wbr>Configuration</h4>
+<h4 id="applicationgatewayredirectconfiguration">Application<wbr>Gateway<wbr>Redirect<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayRedirectConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayRedirectConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5864,7 +5930,7 @@ The following state arguments are supported:
 
 
 
-<h4>Application<wbr>Gateway<wbr>Request<wbr>Routing<wbr>Rule</h4>
+<h4 id="applicationgatewayrequestroutingrule">Application<wbr>Gateway<wbr>Request<wbr>Routing<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayRequestRoutingRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayRequestRoutingRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6334,15 +6400,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend_<wbr>address_<wbr>pool_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the associated Backend Address Pool.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>backend<wbr>Address<wbr>Pool<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -6366,6 +6423,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Backend HTTP Settings Collection which should be used for this Routing Rule. Cannot be set if `redirect_configuration_name` is set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>backend_<wbr>address_<wbr>pool_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the associated Backend Address Pool.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -6447,7 +6513,7 @@ The following state arguments are supported:
 
 
 
-<h4>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set</h4>
+<h4 id="applicationgatewayrewriteruleset">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayRewriteRuleSet">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayRewriteRuleSet">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6598,7 +6664,7 @@ The following state arguments are supported:
 
 
 
-<h4>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule</h4>
+<h4 id="applicationgatewayrewriterulesetrewriterule">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayRewriteRuleSetRewriteRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayRewriteRuleSetRewriteRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6821,7 +6887,7 @@ The following state arguments are supported:
 
 
 
-<h4>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Condition</h4>
+<h4 id="applicationgatewayrewriterulesetrewriterulecondition">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Condition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayRewriteRuleSetRewriteRuleCondition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayRewriteRuleSetRewriteRuleCondition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7008,7 +7074,7 @@ The following state arguments are supported:
 
 
 
-<h4>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Request<wbr>Header<wbr>Configuration</h4>
+<h4 id="applicationgatewayrewriterulesetrewriterulerequestheaderconfiguration">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Request<wbr>Header<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayRewriteRuleSetRewriteRuleRequestHeaderConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7123,7 +7189,7 @@ The following state arguments are supported:
 
 
 
-<h4>Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Response<wbr>Header<wbr>Configuration</h4>
+<h4 id="applicationgatewayrewriterulesetrewriteruleresponseheaderconfiguration">Application<wbr>Gateway<wbr>Rewrite<wbr>Rule<wbr>Set<wbr>Rewrite<wbr>Rule<wbr>Response<wbr>Header<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayRewriteRuleSetRewriteRuleResponseHeaderConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7238,7 +7304,7 @@ The following state arguments are supported:
 
 
 
-<h4>Application<wbr>Gateway<wbr>Sku</h4>
+<h4 id="applicationgatewaysku">Application<wbr>Gateway<wbr>Sku</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewaySku">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewaySku">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7389,7 +7455,7 @@ The following state arguments are supported:
 
 
 
-<h4>Application<wbr>Gateway<wbr>Ssl<wbr>Certificate</h4>
+<h4 id="applicationgatewaysslcertificate">Application<wbr>Gateway<wbr>Ssl<wbr>Certificate</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewaySslCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewaySslCertificate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7648,7 +7714,7 @@ The following state arguments are supported:
 
 
 
-<h4>Application<wbr>Gateway<wbr>Ssl<wbr>Policy</h4>
+<h4 id="applicationgatewaysslpolicy">Application<wbr>Gateway<wbr>Ssl<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewaySslPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewaySslPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7875,7 +7941,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
 
 
-<h4>Application<wbr>Gateway<wbr>Trusted<wbr>Root<wbr>Certificate</h4>
+<h4 id="applicationgatewaytrustedrootcertificate">Application<wbr>Gateway<wbr>Trusted<wbr>Root<wbr>Certificate</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayTrustedRootCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayTrustedRootCertificate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8026,7 +8092,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
 
 
-<h4>Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map</h4>
+<h4 id="applicationgatewayurlpathmap">Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayUrlPathMap">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayUrlPathMap">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8461,7 +8527,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
 
 
-<h4>Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Path<wbr>Rule</h4>
+<h4 id="applicationgatewayurlpathmappathrule">Application<wbr>Gateway<wbr>Url<wbr>Path<wbr>Map<wbr>Path<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayUrlPathMapPathRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayUrlPathMapPathRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8814,15 +8880,6 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
     <dt class="property-optional"
             title="Optional">
-        <span>backend_<wbr>address_<wbr>pool_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the associated Backend Address Pool.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>backend<wbr>Address<wbr>Pool<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -8846,6 +8903,15 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Name of the Backend HTTP Settings Collection to use for this Path Rule. Cannot be set if `redirect_configuration_name` is set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>backend_<wbr>address_<wbr>pool_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the associated Backend Address Pool.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8900,7 +8966,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
 
 
-<h4>Application<wbr>Gateway<wbr>Waf<wbr>Configuration</h4>
+<h4 id="applicationgatewaywafconfiguration">Application<wbr>Gateway<wbr>Waf<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayWafConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayWafConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9267,7 +9333,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
 
 
-<h4>Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Disabled<wbr>Rule<wbr>Group</h4>
+<h4 id="applicationgatewaywafconfigurationdisabledrulegroup">Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Disabled<wbr>Rule<wbr>Group</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayWafConfigurationDisabledRuleGroup">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayWafConfigurationDisabledRuleGroup">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9382,7 +9448,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
 
 
-<h4>Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Exclusion</h4>
+<h4 id="applicationgatewaywafconfigurationexclusion">Application<wbr>Gateway<wbr>Waf<wbr>Configuration<wbr>Exclusion</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApplicationGatewayWafConfigurationExclusion">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApplicationGatewayWafConfigurationExclusion">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9537,7 +9603,7 @@ are published here https://docs.microsoft.com/en-us/azure/application-gateway/ap
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

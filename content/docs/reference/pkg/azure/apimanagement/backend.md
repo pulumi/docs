@@ -16,7 +16,7 @@ Manages a backend within an API Management Service.
 
 
 
-## Create a Backend Resource
+## Create a Backend Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -106,7 +106,7 @@ Manages a backend within an API Management Service.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -183,7 +183,7 @@ Manages a backend within an API Management Service.
 
 {{% /choosable %}}
 
-## Backend Resource Properties
+## Backend Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -660,12 +660,77 @@ The Backend resource accepts the following [input]({{< relref "/docs/intro/conce
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The Backend resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Backend resource produces the following output properties:
 
 
 
 
-## Look up an Existing Backend Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing Backend Resource {#look-up}
 
 Get an existing Backend resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1256,7 +1321,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Backend<wbr>Credentials</h4>
+
+<h4 id="backendcredentials">Backend<wbr>Credentials</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendCredentials">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#BackendCredentials">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1443,7 +1509,7 @@ The following state arguments are supported:
 
 
 
-<h4>Backend<wbr>Credentials<wbr>Authorization</h4>
+<h4 id="backendcredentialsauthorization">Backend<wbr>Credentials<wbr>Authorization</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendCredentialsAuthorization">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#BackendCredentialsAuthorization">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1558,7 +1624,7 @@ The following state arguments are supported:
 
 
 
-<h4>Backend<wbr>Proxy</h4>
+<h4 id="backendproxy">Backend<wbr>Proxy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendProxy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#BackendProxy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1709,7 +1775,7 @@ The following state arguments are supported:
 
 
 
-<h4>Backend<wbr>Service<wbr>Fabric<wbr>Cluster</h4>
+<h4 id="backendservicefabriccluster">Backend<wbr>Service<wbr>Fabric<wbr>Cluster</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendServiceFabricCluster">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#BackendServiceFabricCluster">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1932,7 +1998,7 @@ The following state arguments are supported:
 
 
 
-<h4>Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Server<wbr>X509Name</h4>
+<h4 id="backendservicefabricclusterserverx509name">Backend<wbr>Service<wbr>Fabric<wbr>Cluster<wbr>Server<wbr>X509Name</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendServiceFabricClusterServerX509Name">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#BackendServiceFabricClusterServerX509Name">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2047,7 +2113,7 @@ The following state arguments are supported:
 
 
 
-<h4>Backend<wbr>Tls</h4>
+<h4 id="backendtls">Backend<wbr>Tls</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#BackendTls">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#BackendTls">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2166,7 +2232,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

@@ -15,7 +15,7 @@ Use this data source to access information about a Policy Definition, both custo
 
 
 
-## Using GetPolicyDefintion
+## Using GetPolicyDefintion {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetPolicyDefintion Result
+## GetPolicyDefintion Result {#result}
 
 The following output properties are available:
 

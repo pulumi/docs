@@ -16,7 +16,7 @@ Manages an Action Group within Azure Monitor.
 
 
 
-## Create a ActionGroup Resource
+## Create a ActionGroup Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -106,7 +106,7 @@ Manages an Action Group within Azure Monitor.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -183,7 +183,7 @@ Manages an Action Group within Azure Monitor.
 
 {{% /choosable %}}
 
-## ActionGroup Resource Properties
+## ActionGroup Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -768,12 +768,77 @@ The ActionGroup resource accepts the following [input]({{< relref "/docs/intro/c
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The ActionGroup resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the ActionGroup resource produces the following output properties:
 
 
 
 
-## Look up an Existing ActionGroup Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing ActionGroup Resource {#look-up}
 
 Get an existing ActionGroup resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1472,7 +1537,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver</h4>
+
+<h4 id="actiongrouparmrolereceiver">Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupArmRoleReceiver">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupArmRoleReceiver">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1623,7 +1689,7 @@ The following state arguments are supported:
 
 
 
-<h4>Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver</h4>
+<h4 id="actiongroupautomationrunbookreceiver">Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupAutomationRunbookReceiver">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupAutomationRunbookReceiver">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1918,7 +1984,7 @@ The following state arguments are supported:
 
 
 
-<h4>Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver</h4>
+<h4 id="actiongroupazureapppushreceiver">Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupAzureAppPushReceiver">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupAzureAppPushReceiver">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2033,7 +2099,7 @@ The following state arguments are supported:
 
 
 
-<h4>Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver</h4>
+<h4 id="actiongroupazurefunctionreceiver">Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupAzureFunctionReceiver">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupAzureFunctionReceiver">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2252,7 +2318,7 @@ The following state arguments are supported:
 
 
 
-<h4>Action<wbr>Group<wbr>Email<wbr>Receiver</h4>
+<h4 id="actiongroupemailreceiver">Action<wbr>Group<wbr>Email<wbr>Receiver</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupEmailReceiver">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupEmailReceiver">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2403,7 +2469,7 @@ The following state arguments are supported:
 
 
 
-<h4>Action<wbr>Group<wbr>Itsm<wbr>Receiver</h4>
+<h4 id="actiongroupitsmreceiver">Action<wbr>Group<wbr>Itsm<wbr>Receiver</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupItsmReceiver">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupItsmReceiver">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2626,7 +2692,7 @@ The following state arguments are supported:
 
 
 
-<h4>Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver</h4>
+<h4 id="actiongrouplogicappreceiver">Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupLogicAppReceiver">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupLogicAppReceiver">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2813,7 +2879,7 @@ The following state arguments are supported:
 
 
 
-<h4>Action<wbr>Group<wbr>Sms<wbr>Receiver</h4>
+<h4 id="actiongroupsmsreceiver">Action<wbr>Group<wbr>Sms<wbr>Receiver</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupSmsReceiver">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupSmsReceiver">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2964,7 +3030,7 @@ The following state arguments are supported:
 
 
 
-<h4>Action<wbr>Group<wbr>Voice<wbr>Receiver</h4>
+<h4 id="actiongroupvoicereceiver">Action<wbr>Group<wbr>Voice<wbr>Receiver</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupVoiceReceiver">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupVoiceReceiver">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3115,7 +3181,7 @@ The following state arguments are supported:
 
 
 
-<h4>Action<wbr>Group<wbr>Webhook<wbr>Receiver</h4>
+<h4 id="actiongroupwebhookreceiver">Action<wbr>Group<wbr>Webhook<wbr>Receiver</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ActionGroupWebhookReceiver">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ActionGroupWebhookReceiver">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3270,7 +3336,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

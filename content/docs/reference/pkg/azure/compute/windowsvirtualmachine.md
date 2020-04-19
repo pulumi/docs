@@ -26,7 +26,7 @@ Manages a Windows Virtual Machine.
 
 
 
-## Create a WindowsVirtualMachine Resource
+## Create a WindowsVirtualMachine Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -116,7 +116,7 @@ Manages a Windows Virtual Machine.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -193,7 +193,7 @@ Manages a Windows Virtual Machine.
 
 {{% /choosable %}}
 
-## WindowsVirtualMachine Resource Properties
+## WindowsVirtualMachine Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -1386,15 +1386,21 @@ The WindowsVirtualMachine resource accepts the following [input]({{< relref "/do
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the WindowsVirtualMachine resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the WindowsVirtualMachine resource produces the following output properties:
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1450,6 +1456,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Private<wbr>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1499,6 +1513,14 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1554,6 +1576,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>private_<wbr>ip_<wbr>address</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1606,8 +1636,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing WindowsVirtualMachine Resource
+## Look up an Existing WindowsVirtualMachine Resource {#look-up}
 
 Get an existing WindowsVirtualMachine resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -3094,7 +3123,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Windows<wbr>Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities</h4>
+
+<h4 id="windowsvirtualmachineadditionalcapabilities">Windows<wbr>Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WindowsVirtualMachineAdditionalCapabilities">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#WindowsVirtualMachineAdditionalCapabilities">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3173,7 +3203,7 @@ The following state arguments are supported:
 
 
 
-<h4>Windows<wbr>Virtual<wbr>Machine<wbr>Additional<wbr>Unattend<wbr>Content</h4>
+<h4 id="windowsvirtualmachineadditionalunattendcontent">Windows<wbr>Virtual<wbr>Machine<wbr>Additional<wbr>Unattend<wbr>Content</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WindowsVirtualMachineAdditionalUnattendContent">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#WindowsVirtualMachineAdditionalUnattendContent">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3288,7 +3318,7 @@ The following state arguments are supported:
 
 
 
-<h4>Windows<wbr>Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics</h4>
+<h4 id="windowsvirtualmachinebootdiagnostics">Windows<wbr>Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WindowsVirtualMachineBootDiagnostics">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#WindowsVirtualMachineBootDiagnostics">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3367,7 +3397,7 @@ The following state arguments are supported:
 
 
 
-<h4>Windows<wbr>Virtual<wbr>Machine<wbr>Identity</h4>
+<h4 id="windowsvirtualmachineidentity">Windows<wbr>Virtual<wbr>Machine<wbr>Identity</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WindowsVirtualMachineIdentity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#WindowsVirtualMachineIdentity">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3518,7 +3548,7 @@ The following state arguments are supported:
 
 
 
-<h4>Windows<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk</h4>
+<h4 id="windowsvirtualmachineosdisk">Windows<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WindowsVirtualMachineOsDisk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#WindowsVirtualMachineOsDisk">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3813,7 +3843,7 @@ The following state arguments are supported:
 
 
 
-<h4>Windows<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk<wbr>Diff<wbr>Disk<wbr>Settings</h4>
+<h4 id="windowsvirtualmachineosdiskdiffdisksettings">Windows<wbr>Virtual<wbr>Machine<wbr>Os<wbr>Disk<wbr>Diff<wbr>Disk<wbr>Settings</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WindowsVirtualMachineOsDiskDiffDiskSettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#WindowsVirtualMachineOsDiskDiffDiskSettings">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3892,7 +3922,7 @@ The following state arguments are supported:
 
 
 
-<h4>Windows<wbr>Virtual<wbr>Machine<wbr>Plan</h4>
+<h4 id="windowsvirtualmachineplan">Windows<wbr>Virtual<wbr>Machine<wbr>Plan</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WindowsVirtualMachinePlan">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#WindowsVirtualMachinePlan">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4043,7 +4073,7 @@ The following state arguments are supported:
 
 
 
-<h4>Windows<wbr>Virtual<wbr>Machine<wbr>Secret</h4>
+<h4 id="windowsvirtualmachinesecret">Windows<wbr>Virtual<wbr>Machine<wbr>Secret</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WindowsVirtualMachineSecret">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#WindowsVirtualMachineSecret">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4158,7 +4188,7 @@ The following state arguments are supported:
 
 
 
-<h4>Windows<wbr>Virtual<wbr>Machine<wbr>Secret<wbr>Certificate</h4>
+<h4 id="windowsvirtualmachinesecretcertificate">Windows<wbr>Virtual<wbr>Machine<wbr>Secret<wbr>Certificate</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WindowsVirtualMachineSecretCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#WindowsVirtualMachineSecretCertificate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4273,7 +4303,7 @@ The following state arguments are supported:
 
 
 
-<h4>Windows<wbr>Virtual<wbr>Machine<wbr>Source<wbr>Image<wbr>Reference</h4>
+<h4 id="windowsvirtualmachinesourceimagereference">Windows<wbr>Virtual<wbr>Machine<wbr>Source<wbr>Image<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WindowsVirtualMachineSourceImageReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#WindowsVirtualMachineSourceImageReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4448,7 +4478,7 @@ The following state arguments are supported:
 
 
 
-<h4>Windows<wbr>Virtual<wbr>Machine<wbr>Winrm<wbr>Listener</h4>
+<h4 id="windowsvirtualmachinewinrmlistener">Windows<wbr>Virtual<wbr>Machine<wbr>Winrm<wbr>Listener</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#WindowsVirtualMachineWinrmListener">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#WindowsVirtualMachineWinrmListener">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4563,7 +4593,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

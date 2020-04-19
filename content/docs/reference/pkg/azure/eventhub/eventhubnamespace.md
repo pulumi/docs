@@ -16,7 +16,7 @@ Manages an EventHub Namespace.
 
 
 
-## Create a EventHubNamespace Resource
+## Create a EventHubNamespace Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -106,7 +106,7 @@ Manages an EventHub Namespace.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -183,7 +183,7 @@ Manages an EventHub Namespace.
 
 {{% /choosable %}}
 
-## EventHubNamespace Resource Properties
+## EventHubNamespace Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -552,9 +552,7 @@ The EventHubNamespace resource accepts the following [input]({{< relref "/docs/i
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the EventHubNamespace resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the EventHubNamespace resource produces the following output properties:
 
 
 
@@ -599,6 +597,14 @@ authorization rule `RootManageSharedAccessKey`.
     </dt>
     <dd>{{% md %}}The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -645,6 +651,14 @@ authorization rule `RootManageSharedAccessKey`.
     <dd>{{% md %}}The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -689,6 +703,14 @@ authorization rule `RootManageSharedAccessKey`.
     </dt>
     <dd>{{% md %}}The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -735,6 +757,14 @@ authorization rule `RootManageSharedAccessKey`.
     <dd>{{% md %}}The secondary access key for the authorization rule `RootManageSharedAccessKey`.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -744,8 +774,7 @@ authorization rule `RootManageSharedAccessKey`.
 
 
 
-
-## Look up an Existing EventHubNamespace Resource
+## Look up an Existing EventHubNamespace Resource {#look-up}
 
 Get an existing EventHubNamespace resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1380,7 +1409,8 @@ authorization rule `RootManageSharedAccessKey`.
 
 ## Supporting Types
 
-<h4>Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets</h4>
+
+<h4 id="eventhubnamespacenetworkrulesets">Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventHubNamespaceNetworkRulesets">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventHubNamespaceNetworkRulesets">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1531,7 +1561,7 @@ authorization rule `RootManageSharedAccessKey`.
 
 
 
-<h4>Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Ip<wbr>Rule</h4>
+<h4 id="eventhubnamespacenetworkrulesetsiprule">Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Ip<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventHubNamespaceNetworkRulesetsIpRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventHubNamespaceNetworkRulesetsIpRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1646,7 +1676,7 @@ authorization rule `RootManageSharedAccessKey`.
 
 
 
-<h4>Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Virtual<wbr>Network<wbr>Rule</h4>
+<h4 id="eventhubnamespacenetworkrulesetsvirtualnetworkrule">Event<wbr>Hub<wbr>Namespace<wbr>Network<wbr>Rulesets<wbr>Virtual<wbr>Network<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#EventHubNamespaceNetworkRulesetsVirtualNetworkRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#EventHubNamespaceNetworkRulesetsVirtualNetworkRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1765,7 +1795,7 @@ authorization rule `RootManageSharedAccessKey`.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

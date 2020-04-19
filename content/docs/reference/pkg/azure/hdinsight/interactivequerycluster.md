@@ -16,7 +16,7 @@ Manages a HDInsight Interactive Query Cluster.
 
 
 
-## Create a InteractiveQueryCluster Resource
+## Create a InteractiveQueryCluster Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -106,7 +106,7 @@ Manages a HDInsight Interactive Query Cluster.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -183,7 +183,7 @@ Manages a HDInsight Interactive Query Cluster.
 
 {{% /choosable %}}
 
-## InteractiveQueryCluster Resource Properties
+## InteractiveQueryCluster Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -624,9 +624,7 @@ The InteractiveQueryCluster resource accepts the following [input]({{< relref "/
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the InteractiveQueryCluster resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the InteractiveQueryCluster resource produces the following output properties:
 
 
 
@@ -642,6 +640,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The HTTPS Connectivity Endpoint for this HDInsight Interactive Query Cluster.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -670,6 +676,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Ssh<wbr>Endpoint</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -692,6 +706,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The HTTPS Connectivity Endpoint for this HDInsight Interactive Query Cluster.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -720,6 +742,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>ssh_<wbr>endpoint</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -736,8 +766,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing InteractiveQueryCluster Resource
+## Look up an Existing InteractiveQueryCluster Resource {#look-up}
 
 Get an existing InteractiveQueryCluster resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1364,7 +1393,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Interactive<wbr>Query<wbr>Cluster<wbr>Component<wbr>Version</h4>
+
+<h4 id="interactivequeryclustercomponentversion">Interactive<wbr>Query<wbr>Cluster<wbr>Component<wbr>Version</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterComponentVersion">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#InteractiveQueryClusterComponentVersion">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1439,7 +1469,7 @@ The following state arguments are supported:
 
 
 
-<h4>Interactive<wbr>Query<wbr>Cluster<wbr>Gateway</h4>
+<h4 id="interactivequeryclustergateway">Interactive<wbr>Query<wbr>Cluster<wbr>Gateway</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterGateway">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#InteractiveQueryClusterGateway">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1590,7 +1620,7 @@ The following state arguments are supported:
 
 
 
-<h4>Interactive<wbr>Query<wbr>Cluster<wbr>Roles</h4>
+<h4 id="interactivequeryclusterroles">Interactive<wbr>Query<wbr>Cluster<wbr>Roles</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterRoles">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#InteractiveQueryClusterRoles">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1741,7 +1771,7 @@ The following state arguments are supported:
 
 
 
-<h4>Interactive<wbr>Query<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node</h4>
+<h4 id="interactivequeryclusterrolesheadnode">Interactive<wbr>Query<wbr>Cluster<wbr>Roles<wbr>Head<wbr>Node</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterRolesHeadNode">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#InteractiveQueryClusterRolesHeadNode">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2000,7 +2030,7 @@ The following state arguments are supported:
 
 
 
-<h4>Interactive<wbr>Query<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node</h4>
+<h4 id="interactivequeryclusterrolesworkernode">Interactive<wbr>Query<wbr>Cluster<wbr>Roles<wbr>Worker<wbr>Node</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterRolesWorkerNode">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#InteractiveQueryClusterRolesWorkerNode">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2331,7 +2361,7 @@ The following state arguments are supported:
 
 
 
-<h4>Interactive<wbr>Query<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node</h4>
+<h4 id="interactivequeryclusterroleszookeepernode">Interactive<wbr>Query<wbr>Cluster<wbr>Roles<wbr>Zookeeper<wbr>Node</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterRolesZookeeperNode">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#InteractiveQueryClusterRolesZookeeperNode">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2590,7 +2620,7 @@ The following state arguments are supported:
 
 
 
-<h4>Interactive<wbr>Query<wbr>Cluster<wbr>Storage<wbr>Account</h4>
+<h4 id="interactivequeryclusterstorageaccount">Interactive<wbr>Query<wbr>Cluster<wbr>Storage<wbr>Account</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterStorageAccount">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#InteractiveQueryClusterStorageAccount">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2741,7 +2771,7 @@ The following state arguments are supported:
 
 
 
-<h4>Interactive<wbr>Query<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2</h4>
+<h4 id="interactivequeryclusterstorageaccountgen2">Interactive<wbr>Query<wbr>Cluster<wbr>Storage<wbr>Account<wbr>Gen2</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#InteractiveQueryClusterStorageAccountGen2">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#InteractiveQueryClusterStorageAccountGen2">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2932,7 +2962,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

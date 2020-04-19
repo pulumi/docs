@@ -19,7 +19,7 @@ Manages a Virtual Machine.
 
 
 
-## Create a VirtualMachine Resource
+## Create a VirtualMachine Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -109,7 +109,7 @@ Manages a Virtual Machine.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -186,7 +186,7 @@ Manages a Virtual Machine.
 
 {{% /choosable %}}
 
-## VirtualMachine Resource Properties
+## VirtualMachine Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -1095,12 +1095,77 @@ The VirtualMachine resource accepts the following [input]({{< relref "/docs/intr
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The VirtualMachine resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the VirtualMachine resource produces the following output properties:
 
 
 
 
-## Look up an Existing VirtualMachine Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing VirtualMachine Resource {#look-up}
 
 Get an existing VirtualMachine resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -2123,7 +2188,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities</h4>
+
+<h4 id="virtualmachineadditionalcapabilities">Virtual<wbr>Machine<wbr>Additional<wbr>Capabilities</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineAdditionalCapabilities">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineAdditionalCapabilities">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2202,7 +2268,7 @@ The following state arguments are supported:
 
 
 
-<h4>Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics</h4>
+<h4 id="virtualmachinebootdiagnostics">Virtual<wbr>Machine<wbr>Boot<wbr>Diagnostics</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineBootDiagnostics">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineBootDiagnostics">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2317,7 +2383,7 @@ The following state arguments are supported:
 
 
 
-<h4>Virtual<wbr>Machine<wbr>Identity</h4>
+<h4 id="virtualmachineidentity">Virtual<wbr>Machine<wbr>Identity</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineIdentity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineIdentity">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2468,7 +2534,7 @@ The following state arguments are supported:
 
 
 
-<h4>Virtual<wbr>Machine<wbr>Os<wbr>Profile</h4>
+<h4 id="virtualmachineosprofile">Virtual<wbr>Machine<wbr>Os<wbr>Profile</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineOsProfile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineOsProfile">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2655,7 +2721,7 @@ The following state arguments are supported:
 
 
 
-<h4>Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config</h4>
+<h4 id="virtualmachineosprofilelinuxconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineOsProfileLinuxConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineOsProfileLinuxConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2770,7 +2836,7 @@ The following state arguments are supported:
 
 
 
-<h4>Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key</h4>
+<h4 id="virtualmachineosprofilelinuxconfigsshkey">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Linux<wbr>Config<wbr>Ssh<wbr>Key</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineOsProfileLinuxConfigSshKey">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineOsProfileLinuxConfigSshKey">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2885,7 +2951,7 @@ The following state arguments are supported:
 
 
 
-<h4>Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret</h4>
+<h4 id="virtualmachineosprofilesecret">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineOsProfileSecret">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineOsProfileSecret">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3000,7 +3066,7 @@ The following state arguments are supported:
 
 
 
-<h4>Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate</h4>
+<h4 id="virtualmachineosprofilesecretvaultcertificate">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Secret<wbr>Vault<wbr>Certificate</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineOsProfileSecretVaultCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineOsProfileSecretVaultCertificate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3115,7 +3181,7 @@ The following state arguments are supported:
 
 
 
-<h4>Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config</h4>
+<h4 id="virtualmachineosprofilewindowsconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineOsProfileWindowsConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineOsProfileWindowsConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3338,7 +3404,7 @@ The following state arguments are supported:
 
 
 
-<h4>Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config</h4>
+<h4 id="virtualmachineosprofilewindowsconfigadditionalunattendconfig">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Additional<wbr>Unattend<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineOsProfileWindowsConfigAdditionalUnattendConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3525,7 +3591,7 @@ The following state arguments are supported:
 
 
 
-<h4>Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm</h4>
+<h4 id="virtualmachineosprofilewindowsconfigwinrm">Virtual<wbr>Machine<wbr>Os<wbr>Profile<wbr>Windows<wbr>Config<wbr>Winrm</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineOsProfileWindowsConfigWinrm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineOsProfileWindowsConfigWinrm">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3640,7 +3706,7 @@ The following state arguments are supported:
 
 
 
-<h4>Virtual<wbr>Machine<wbr>Plan</h4>
+<h4 id="virtualmachineplan">Virtual<wbr>Machine<wbr>Plan</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachinePlan">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachinePlan">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3791,7 +3857,7 @@ The following state arguments are supported:
 
 
 
-<h4>Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk</h4>
+<h4 id="virtualmachinestoragedatadisk">Virtual<wbr>Machine<wbr>Storage<wbr>Data<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineStorageDataDisk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineStorageDataDisk">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4117,20 +4183,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed_<wbr>disk_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the ID of an Existing Managed Disk which should be attached to this Virtual Machine. When this field is set `create_option` must be set to `Attach`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>managed<wbr>Disk<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of managed disk to create. Possible values are either `Standard_LRS`, `StandardSSD_LRS`, `Premium_LRS` or `UltraSSD_LRS`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>managed_<wbr>disk_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the ID of an Existing Managed Disk which should be attached to this Virtual Machine. When this field is set `create_option` must be set to `Attach`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4158,7 +4224,7 @@ The following state arguments are supported:
 
 
 
-<h4>Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference</h4>
+<h4 id="virtualmachinestorageimagereference">Virtual<wbr>Machine<wbr>Storage<wbr>Image<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineStorageImageReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineStorageImageReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4381,7 +4447,7 @@ The following state arguments are supported:
 
 
 
-<h4>Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk</h4>
+<h4 id="virtualmachinestorageosdisk">Virtual<wbr>Machine<wbr>Storage<wbr>Os<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#VirtualMachineStorageOsDisk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#VirtualMachineStorageOsDisk">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4734,20 +4800,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>managed_<wbr>disk_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the ID of an existing Managed Disk which should be attached as the OS Disk of this Virtual Machine. If this is set then the `create_option` must be set to `Attach`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>managed<wbr>Disk<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the type of Managed Disk which should be created. Possible values are `Standard_LRS`, `StandardSSD_LRS` or `Premium_LRS`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>managed_<wbr>disk_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the ID of an existing Managed Disk which should be attached as the OS Disk of this Virtual Machine. If this is set then the `create_option` must be set to `Attach`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4788,7 +4854,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

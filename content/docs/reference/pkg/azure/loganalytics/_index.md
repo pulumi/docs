@@ -8,14 +8,14 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="datasourcewindowsevent" title="DataSourceWindowsEvent"><span class="symbol resource"></span>DataSourceWindowsEvent</a></li>
     <li><a href="datasourcewindowsperformancecounter" title="DataSourceWindowsPerformanceCounter"><span class="symbol resource"></span>DataSourceWindowsPerformanceCounter</a></li>
     <li><a href="linkedservice" title="LinkedService"><span class="symbol resource"></span>LinkedService</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

@@ -15,7 +15,7 @@ Use this data source to access information about an existing App Configuration.
 
 
 
-## Using GetConfigurationStore
+## Using GetConfigurationStore {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetConfigurationStore Result
+## GetConfigurationStore Result {#result}
 
 The following output properties are available:
 
@@ -584,7 +584,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Configuration<wbr>Store<wbr>Primary<wbr>Read<wbr>Key</h4>
+
+<h4 id="getconfigurationstoreprimaryreadkey">Get<wbr>Configuration<wbr>Store<wbr>Primary<wbr>Read<wbr>Key</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetConfigurationStorePrimaryReadKey">output</a> API doc for this type.
 {{% /choosable %}}
@@ -735,7 +736,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Configuration<wbr>Store<wbr>Primary<wbr>Write<wbr>Key</h4>
+<h4 id="getconfigurationstoreprimarywritekey">Get<wbr>Configuration<wbr>Store<wbr>Primary<wbr>Write<wbr>Key</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetConfigurationStorePrimaryWriteKey">output</a> API doc for this type.
 {{% /choosable %}}
@@ -886,7 +887,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Configuration<wbr>Store<wbr>Secondary<wbr>Read<wbr>Key</h4>
+<h4 id="getconfigurationstoresecondaryreadkey">Get<wbr>Configuration<wbr>Store<wbr>Secondary<wbr>Read<wbr>Key</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetConfigurationStoreSecondaryReadKey">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1037,7 +1038,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Configuration<wbr>Store<wbr>Secondary<wbr>Write<wbr>Key</h4>
+<h4 id="getconfigurationstoresecondarywritekey">Get<wbr>Configuration<wbr>Store<wbr>Secondary<wbr>Write<wbr>Key</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetConfigurationStoreSecondaryWriteKey">output</a> API doc for this type.
 {{% /choosable %}}

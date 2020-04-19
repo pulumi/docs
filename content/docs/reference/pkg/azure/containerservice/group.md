@@ -16,7 +16,7 @@ Manages as an Azure Container Group instance.
 
 
 
-## Create a Group Resource
+## Create a Group Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -106,7 +106,7 @@ Manages as an Azure Container Group instance.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -183,7 +183,7 @@ Manages as an Azure Container Group instance.
 
 {{% /choosable %}}
 
-## Group Resource Properties
+## Group Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -696,9 +696,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Group resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Group resource produces the following output properties:
 
 
 
@@ -714,6 +712,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The FQDN of the container group derived from `dns_name_label`.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -742,6 +748,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -764,6 +778,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The FQDN of the container group derived from `dns_name_label`.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -792,6 +814,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>ip_<wbr>address</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -808,8 +838,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Group Resource
+## Look up an Existing Group Resource {#look-up}
 
 Get an existing Group resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1508,7 +1537,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Group<wbr>Container</h4>
+
+<h4 id="groupcontainer">Group<wbr>Container</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupContainer">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupContainer">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1983,7 +2013,7 @@ The following state arguments are supported:
 
 
 
-<h4>Group<wbr>Container<wbr>Gpu</h4>
+<h4 id="groupcontainergpu">Group<wbr>Container<wbr>Gpu</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupContainerGpu">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupContainerGpu">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2098,7 +2128,7 @@ The following state arguments are supported:
 
 
 
-<h4>Group<wbr>Container<wbr>Liveness<wbr>Probe</h4>
+<h4 id="groupcontainerlivenessprobe">Group<wbr>Container<wbr>Liveness<wbr>Probe</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupContainerLivenessProbe">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupContainerLivenessProbe">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2393,7 +2423,7 @@ The following state arguments are supported:
 
 
 
-<h4>Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Http<wbr>Get</h4>
+<h4 id="groupcontainerlivenessprobehttpget">Group<wbr>Container<wbr>Liveness<wbr>Probe<wbr>Http<wbr>Get</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupContainerLivenessProbeHttpGet">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupContainerLivenessProbeHttpGet">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2544,7 +2574,7 @@ The following state arguments are supported:
 
 
 
-<h4>Group<wbr>Container<wbr>Port</h4>
+<h4 id="groupcontainerport">Group<wbr>Container<wbr>Port</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupContainerPort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupContainerPort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2659,7 +2689,7 @@ The following state arguments are supported:
 
 
 
-<h4>Group<wbr>Container<wbr>Readiness<wbr>Probe</h4>
+<h4 id="groupcontainerreadinessprobe">Group<wbr>Container<wbr>Readiness<wbr>Probe</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupContainerReadinessProbe">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupContainerReadinessProbe">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2954,7 +2984,7 @@ The following state arguments are supported:
 
 
 
-<h4>Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Http<wbr>Get</h4>
+<h4 id="groupcontainerreadinessprobehttpget">Group<wbr>Container<wbr>Readiness<wbr>Probe<wbr>Http<wbr>Get</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupContainerReadinessProbeHttpGet">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupContainerReadinessProbeHttpGet">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3105,7 +3135,7 @@ The following state arguments are supported:
 
 
 
-<h4>Group<wbr>Container<wbr>Volume</h4>
+<h4 id="groupcontainervolume">Group<wbr>Container<wbr>Volume</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupContainerVolume">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupContainerVolume">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3364,7 +3394,7 @@ The following state arguments are supported:
 
 
 
-<h4>Group<wbr>Diagnostics</h4>
+<h4 id="groupdiagnostics">Group<wbr>Diagnostics</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupDiagnostics">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupDiagnostics">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3443,7 +3473,7 @@ The following state arguments are supported:
 
 
 
-<h4>Group<wbr>Diagnostics<wbr>Log<wbr>Analytics</h4>
+<h4 id="groupdiagnosticsloganalytics">Group<wbr>Diagnostics<wbr>Log<wbr>Analytics</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupDiagnosticsLogAnalytics">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupDiagnosticsLogAnalytics">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3589,20 +3619,20 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>workspace_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The Workspace ID of the Log Analytics Workspace. Changing this forces a new resource to be created.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>workspace<wbr>Key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Workspace Key of the Log Analytics Workspace. Changing this forces a new resource to be created.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>workspace_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The Workspace ID of the Log Analytics Workspace. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3630,7 +3660,7 @@ The following state arguments are supported:
 
 
 
-<h4>Group<wbr>Identity</h4>
+<h4 id="groupidentity">Group<wbr>Identity</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupIdentity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupIdentity">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3777,7 +3807,7 @@ The following state arguments are supported:
 
 
 
-<h4>Group<wbr>Image<wbr>Registry<wbr>Credential</h4>
+<h4 id="groupimageregistrycredential">Group<wbr>Image<wbr>Registry<wbr>Credential</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GroupImageRegistryCredential">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GroupImageRegistryCredential">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3932,7 +3962,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

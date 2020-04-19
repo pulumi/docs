@@ -16,7 +16,7 @@ Use this data source to access information about an existing Automation Int Vari
 
 
 
-## Using GetIntVariable
+## Using GetIntVariable {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -190,7 +190,7 @@ The following arguments are supported:
 
 
 
-## GetIntVariable Result
+## GetIntVariable Result {#result}
 
 The following output properties are available:
 

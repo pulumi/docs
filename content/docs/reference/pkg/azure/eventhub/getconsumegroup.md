@@ -31,7 +31,7 @@ const test = pulumi.all([azurerm_eventhub_test.name, azurerm_eventhub_consumer_g
 
 
 
-## Using GetConsumeGroup
+## Using GetConsumeGroup {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -241,7 +241,7 @@ The following arguments are supported:
 
 
 
-## GetConsumeGroup Result
+## GetConsumeGroup Result {#result}
 
 The following output properties are available:
 

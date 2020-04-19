@@ -16,7 +16,7 @@ Manages a Service Fabric Cluster.
 
 
 
-## Create a Cluster Resource
+## Create a Cluster Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -106,7 +106,7 @@ Manages a Service Fabric Cluster.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -183,7 +183,7 @@ Manages a Service Fabric Cluster.
 
 {{% /choosable %}}
 
-## Cluster Resource Properties
+## Cluster Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -912,9 +912,7 @@ The Cluster resource accepts the following [input]({{< relref "/docs/intro/conce
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Cluster resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Cluster resource produces the following output properties:
 
 
 
@@ -930,6 +928,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Cluster Endpoint for this Service Fabric Cluster.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -947,6 +953,14 @@ The following output properties are available:
     <dd>{{% md %}}The Cluster Endpoint for this Service Fabric Cluster.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -962,6 +976,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Cluster Endpoint for this Service Fabric Cluster.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -979,6 +1001,14 @@ The following output properties are available:
     <dd>{{% md %}}The Cluster Endpoint for this Service Fabric Cluster.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -988,8 +1018,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Cluster Resource
+## Look up an Existing Cluster Resource {#look-up}
 
 Get an existing Cluster resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1868,7 +1897,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Cluster<wbr>Azure<wbr>Active<wbr>Directory</h4>
+
+<h4 id="clusterazureactivedirectory">Cluster<wbr>Azure<wbr>Active<wbr>Directory</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterAzureActiveDirectory">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterAzureActiveDirectory">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2019,7 +2049,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Certificate</h4>
+<h4 id="clustercertificate">Cluster<wbr>Certificate</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterCertificate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2170,7 +2200,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Certificate<wbr>Common<wbr>Names</h4>
+<h4 id="clustercertificatecommonnames">Cluster<wbr>Certificate<wbr>Common<wbr>Names</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterCertificateCommonNames">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterCertificateCommonNames">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2285,7 +2315,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name</h4>
+<h4 id="clustercertificatecommonnamescommonname">Cluster<wbr>Certificate<wbr>Common<wbr>Names<wbr>Common<wbr>Name</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterCertificateCommonNamesCommonName">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterCertificateCommonNamesCommonName">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2400,7 +2430,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name</h4>
+<h4 id="clusterclientcertificatecommonname">Cluster<wbr>Client<wbr>Certificate<wbr>Common<wbr>Name</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterClientCertificateCommonName">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterClientCertificateCommonName">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2543,7 +2573,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint</h4>
+<h4 id="clusterclientcertificatethumbprint">Cluster<wbr>Client<wbr>Certificate<wbr>Thumbprint</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterClientCertificateThumbprint">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterClientCertificateThumbprint">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2658,7 +2688,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Diagnostics<wbr>Config</h4>
+<h4 id="clusterdiagnosticsconfig">Cluster<wbr>Diagnostics<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterDiagnosticsConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterDiagnosticsConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2881,7 +2911,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Fabric<wbr>Setting</h4>
+<h4 id="clusterfabricsetting">Cluster<wbr>Fabric<wbr>Setting</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterFabricSetting">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterFabricSetting">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2996,7 +3026,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Node<wbr>Type</h4>
+<h4 id="clusternodetype">Cluster<wbr>Node<wbr>Type</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterNodeType">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterNodeType">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3435,7 +3465,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Node<wbr>Type<wbr>Application<wbr>Ports</h4>
+<h4 id="clusternodetypeapplicationports">Cluster<wbr>Node<wbr>Type<wbr>Application<wbr>Ports</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterNodeTypeApplicationPorts">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterNodeTypeApplicationPorts">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3550,7 +3580,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Node<wbr>Type<wbr>Ephemeral<wbr>Ports</h4>
+<h4 id="clusternodetypeephemeralports">Cluster<wbr>Node<wbr>Type<wbr>Ephemeral<wbr>Ports</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterNodeTypeEphemeralPorts">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterNodeTypeEphemeralPorts">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3665,7 +3695,7 @@ The following state arguments are supported:
 
 
 
-<h4>Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate</h4>
+<h4 id="clusterreverseproxycertificate">Cluster<wbr>Reverse<wbr>Proxy<wbr>Certificate</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ClusterReverseProxyCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ClusterReverseProxyCertificate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3820,7 +3850,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

@@ -8,20 +8,20 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="authorizationrule" title="AuthorizationRule"><span class="symbol resource"></span>AuthorizationRule</a></li>
     <li><a href="hub" title="Hub"><span class="symbol resource"></span>Hub</a></li>
     <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="gethub" title="GetHub"><span class="symbol function"></span>GetHub</a></li>
     <li><a href="getnamespace" title="GetNamespace"><span class="symbol function"></span>GetNamespace</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

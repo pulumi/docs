@@ -31,7 +31,7 @@ const test = pulumi.all([azurerm_eventhub_test.name, azurerm_eventhub_namespace_
 
 
 
-## Using GetAuthorizationRule
+## Using GetAuthorizationRule {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -337,7 +337,7 @@ The following arguments are supported:
 
 
 
-## GetAuthorizationRule Result
+## GetAuthorizationRule Result {#result}
 
 The following output properties are available:
 

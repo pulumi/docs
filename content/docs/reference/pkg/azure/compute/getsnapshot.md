@@ -29,7 +29,7 @@ const example = pulumi.output(azure.compute.getSnapshot({
 
 
 
-## Using GetSnapshot
+## Using GetSnapshot {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -167,7 +167,7 @@ The following arguments are supported:
 
 
 
-## GetSnapshot Result
+## GetSnapshot Result {#result}
 
 The following output properties are available:
 
@@ -582,7 +582,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Snapshot<wbr>Encryption<wbr>Setting</h4>
+
+<h4 id="getsnapshotencryptionsetting">Get<wbr>Snapshot<wbr>Encryption<wbr>Setting</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetSnapshotEncryptionSetting">output</a> API doc for this type.
 {{% /choosable %}}
@@ -721,7 +722,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Snapshot<wbr>Encryption<wbr>Setting<wbr>Disk<wbr>Encryption<wbr>Key</h4>
+<h4 id="getsnapshotencryptionsettingdiskencryptionkey">Get<wbr>Snapshot<wbr>Encryption<wbr>Setting<wbr>Disk<wbr>Encryption<wbr>Key</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetSnapshotEncryptionSettingDiskEncryptionKey">output</a> API doc for this type.
 {{% /choosable %}}
@@ -828,7 +829,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Snapshot<wbr>Encryption<wbr>Setting<wbr>Key<wbr>Encryption<wbr>Key</h4>
+<h4 id="getsnapshotencryptionsettingkeyencryptionkey">Get<wbr>Snapshot<wbr>Encryption<wbr>Setting<wbr>Key<wbr>Encryption<wbr>Key</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetSnapshotEncryptionSettingKeyEncryptionKey">output</a> API doc for this type.
 {{% /choosable %}}

@@ -15,7 +15,7 @@ Use this data source to access information about an existing Network Security Gr
 
 
 
-## Using GetNetworkSecurityGroup
+## Using GetNetworkSecurityGroup {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetNetworkSecurityGroup Result
+## GetNetworkSecurityGroup Result {#result}
 
 The following output properties are available:
 
@@ -408,7 +408,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Network<wbr>Security<wbr>Group<wbr>Security<wbr>Rule</h4>
+
+<h4 id="getnetworksecuritygroupsecurityrule">Get<wbr>Network<wbr>Security<wbr>Group<wbr>Security<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetNetworkSecurityGroupSecurityRule">output</a> API doc for this type.
 {{% /choosable %}}

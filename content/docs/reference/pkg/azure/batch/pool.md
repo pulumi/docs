@@ -16,7 +16,7 @@ Manages an Azure Batch pool.
 
 
 
-## Create a Pool Resource
+## Create a Pool Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -106,7 +106,7 @@ Manages an Azure Batch pool.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -183,7 +183,7 @@ Manages an Azure Batch pool.
 
 {{% /choosable %}}
 
-## Pool Resource Properties
+## Pool Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -800,12 +800,77 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The Pool resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Pool resource produces the following output properties:
 
 
 
 
-## Look up an Existing Pool Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing Pool Resource {#look-up}
 
 Get an existing Pool resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1536,7 +1601,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Pool<wbr>Auto<wbr>Scale</h4>
+
+<h4 id="poolautoscale">Pool<wbr>Auto<wbr>Scale</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolAutoScale">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolAutoScale">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1651,7 +1717,7 @@ The following state arguments are supported:
 
 
 
-<h4>Pool<wbr>Certificate</h4>
+<h4 id="poolcertificate">Pool<wbr>Certificate</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolCertificate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1838,7 +1904,7 @@ The following state arguments are supported:
 
 
 
-<h4>Pool<wbr>Container<wbr>Configuration</h4>
+<h4 id="poolcontainerconfiguration">Pool<wbr>Container<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolContainerConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolContainerConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1953,7 +2019,7 @@ The following state arguments are supported:
 
 
 
-<h4>Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry</h4>
+<h4 id="poolcontainerconfigurationcontainerregistry">Pool<wbr>Container<wbr>Configuration<wbr>Container<wbr>Registry</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolContainerConfigurationContainerRegistry">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolContainerConfigurationContainerRegistry">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2104,7 +2170,7 @@ The following state arguments are supported:
 
 
 
-<h4>Pool<wbr>Fixed<wbr>Scale</h4>
+<h4 id="poolfixedscale">Pool<wbr>Fixed<wbr>Scale</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolFixedScale">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolFixedScale">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2255,7 +2321,7 @@ The following state arguments are supported:
 
 
 
-<h4>Pool<wbr>Network<wbr>Configuration</h4>
+<h4 id="poolnetworkconfiguration">Pool<wbr>Network<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolNetworkConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolNetworkConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2406,7 +2472,7 @@ The following state arguments are supported:
 
 
 
-<h4>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration</h4>
+<h4 id="poolnetworkconfigurationendpointconfiguration">Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolNetworkConfigurationEndpointConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolNetworkConfigurationEndpointConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2629,7 +2695,7 @@ The following state arguments are supported:
 
 
 
-<h4>Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule</h4>
+<h4 id="poolnetworkconfigurationendpointconfigurationnetworksecuritygrouprule">Pool<wbr>Network<wbr>Configuration<wbr>Endpoint<wbr>Configuration<wbr>Network<wbr>Security<wbr>Group<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolNetworkConfigurationEndpointConfigurationNetworkSecurityGroupRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2780,7 +2846,7 @@ The following state arguments are supported:
 
 
 
-<h4>Pool<wbr>Start<wbr>Task</h4>
+<h4 id="poolstarttask">Pool<wbr>Start<wbr>Task</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolStartTask">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolStartTask">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3039,7 +3105,7 @@ The following state arguments are supported:
 
 
 
-<h4>Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File</h4>
+<h4 id="poolstarttaskresourcefile">Pool<wbr>Start<wbr>Task<wbr>Resource<wbr>File</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolStartTaskResourceFile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolStartTaskResourceFile">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3298,7 +3364,7 @@ The following state arguments are supported:
 
 
 
-<h4>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity</h4>
+<h4 id="poolstarttaskuseridentity">Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolStartTaskUserIdentity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolStartTaskUserIdentity">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3413,7 +3479,7 @@ The following state arguments are supported:
 
 
 
-<h4>Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User</h4>
+<h4 id="poolstarttaskuseridentityautouser">Pool<wbr>Start<wbr>Task<wbr>User<wbr>Identity<wbr>Auto<wbr>User</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolStartTaskUserIdentityAutoUser">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolStartTaskUserIdentityAutoUser">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3528,7 +3594,7 @@ The following state arguments are supported:
 
 
 
-<h4>Pool<wbr>Storage<wbr>Image<wbr>Reference</h4>
+<h4 id="poolstorageimagereference">Pool<wbr>Storage<wbr>Image<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#PoolStorageImageReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#PoolStorageImageReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3759,7 +3825,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

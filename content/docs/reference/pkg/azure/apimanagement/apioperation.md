@@ -16,7 +16,7 @@ Manages an API Operation within an API Management Service.
 
 
 
-## Create a ApiOperation Resource
+## Create a ApiOperation Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -106,7 +106,7 @@ Manages an API Operation within an API Management Service.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -183,7 +183,7 @@ Manages an API Operation within an API Management Service.
 
 {{% /choosable %}}
 
-## ApiOperation Resource Properties
+## ApiOperation Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -624,12 +624,77 @@ The ApiOperation resource accepts the following [input]({{< relref "/docs/intro/
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The ApiOperation resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the ApiOperation resource produces the following output properties:
 
 
 
 
-## Look up an Existing ApiOperation Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing ApiOperation Resource {#look-up}
 
 Get an existing ApiOperation resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1184,7 +1249,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Api<wbr>Operation<wbr>Request</h4>
+
+<h4 id="apioperationrequest">Api<wbr>Operation<wbr>Request</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationRequest">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1371,7 +1437,7 @@ The following state arguments are supported:
 
 
 
-<h4>Api<wbr>Operation<wbr>Request<wbr>Header</h4>
+<h4 id="apioperationrequestheader">Api<wbr>Operation<wbr>Request<wbr>Header</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationRequestHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationRequestHeader">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1630,7 +1696,7 @@ The following state arguments are supported:
 
 
 
-<h4>Api<wbr>Operation<wbr>Request<wbr>Query<wbr>Parameter</h4>
+<h4 id="apioperationrequestqueryparameter">Api<wbr>Operation<wbr>Request<wbr>Query<wbr>Parameter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationRequestQueryParameter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationRequestQueryParameter">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1889,7 +1955,7 @@ The following state arguments are supported:
 
 
 
-<h4>Api<wbr>Operation<wbr>Request<wbr>Representation</h4>
+<h4 id="apioperationrequestrepresentation">Api<wbr>Operation<wbr>Request<wbr>Representation</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationRequestRepresentation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationRequestRepresentation">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2112,7 +2178,7 @@ The following state arguments are supported:
 
 
 
-<h4>Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Form<wbr>Parameter</h4>
+<h4 id="apioperationrequestrepresentationformparameter">Api<wbr>Operation<wbr>Request<wbr>Representation<wbr>Form<wbr>Parameter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationRequestRepresentationFormParameter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationRequestRepresentationFormParameter">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2371,7 +2437,7 @@ The following state arguments are supported:
 
 
 
-<h4>Api<wbr>Operation<wbr>Response</h4>
+<h4 id="apioperationresponse">Api<wbr>Operation<wbr>Response</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationResponse">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationResponse">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2558,7 +2624,7 @@ The following state arguments are supported:
 
 
 
-<h4>Api<wbr>Operation<wbr>Response<wbr>Header</h4>
+<h4 id="apioperationresponseheader">Api<wbr>Operation<wbr>Response<wbr>Header</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationResponseHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationResponseHeader">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2817,7 +2883,7 @@ The following state arguments are supported:
 
 
 
-<h4>Api<wbr>Operation<wbr>Response<wbr>Representation</h4>
+<h4 id="apioperationresponserepresentation">Api<wbr>Operation<wbr>Response<wbr>Representation</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationResponseRepresentation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationResponseRepresentation">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3040,7 +3106,7 @@ The following state arguments are supported:
 
 
 
-<h4>Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Form<wbr>Parameter</h4>
+<h4 id="apioperationresponserepresentationformparameter">Api<wbr>Operation<wbr>Response<wbr>Representation<wbr>Form<wbr>Parameter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationResponseRepresentationFormParameter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationResponseRepresentationFormParameter">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3299,7 +3365,7 @@ The following state arguments are supported:
 
 
 
-<h4>Api<wbr>Operation<wbr>Template<wbr>Parameter</h4>
+<h4 id="apioperationtemplateparameter">Api<wbr>Operation<wbr>Template<wbr>Parameter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#ApiOperationTemplateParameter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#ApiOperationTemplateParameter">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3562,7 +3628,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>

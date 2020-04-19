@@ -15,7 +15,7 @@ Use this data source to access information about an existing Dev Test Lab Virtua
 
 
 
-## Using GetVirtualNetwork
+## Using GetVirtualNetwork {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetVirtualNetwork Result
+## GetVirtualNetwork Result {#result}
 
 The following output properties are available:
 
@@ -472,7 +472,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Virtual<wbr>Network<wbr>Allowed<wbr>Subnet</h4>
+
+<h4 id="getvirtualnetworkallowedsubnet">Get<wbr>Virtual<wbr>Network<wbr>Allowed<wbr>Subnet</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetVirtualNetworkAllowedSubnet">output</a> API doc for this type.
 {{% /choosable %}}
@@ -623,7 +624,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Virtual<wbr>Network<wbr>Subnet<wbr>Override</h4>
+<h4 id="getvirtualnetworksubnetoverride">Get<wbr>Virtual<wbr>Network<wbr>Subnet<wbr>Override</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetVirtualNetworkSubnetOverride">output</a> API doc for this type.
 {{% /choosable %}}

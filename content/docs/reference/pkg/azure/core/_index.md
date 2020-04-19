@@ -8,14 +8,14 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="customprovider" title="CustomProvider"><span class="symbol resource"></span>CustomProvider</a></li>
     <li><a href="resourcegroup" title="ResourceGroup"><span class="symbol resource"></span>ResourceGroup</a></li>
     <li><a href="templatedeployment" title="TemplateDeployment"><span class="symbol resource"></span>TemplateDeployment</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getclientconfig" title="GetClientConfig"><span class="symbol function"></span>GetClientConfig</a></li>
     <li><a href="getresourcegroup" title="GetResourceGroup"><span class="symbol function"></span>GetResourceGroup</a></li>
@@ -25,7 +25,7 @@ block_external_search_index: true
     <li><a href="getuserassignedidentity" title="GetUserAssignedIdentity"><span class="symbol function"></span>GetUserAssignedIdentity</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
