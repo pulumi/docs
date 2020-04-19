@@ -28,7 +28,7 @@ const example = pulumi.output(digitalocean.getAccount({ async: true }));
 
 
 
-## Using GetAccount
+## Using GetAccount {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -57,7 +57,7 @@ const example = pulumi.output(digitalocean.getAccount({ async: true }));
 
 
 
-## GetAccount Result
+## GetAccount Result {#result}
 
 The following output properties are available:
 

@@ -17,7 +17,7 @@ will be returned.
 
 
 
-## Using GetSizes
+## Using GetSizes {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -163,7 +163,7 @@ The `sort` block is documented below.
 
 
 
-## GetSizes Result
+## GetSizes Result {#result}
 
 The following output properties are available:
 
@@ -338,7 +338,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Sizes<wbr>Filter</h4>
+
+<h4 id="getsizesfilter">Get<wbr>Sizes<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#GetSizesFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetSizesFilter">output</a> API doc for this type.
 {{% /choosable %}}
@@ -465,7 +466,7 @@ one of the values provided here.
 
 
 
-<h4>Get<wbr>Sizes<wbr>Size</h4>
+<h4 id="getsizessize">Get<wbr>Sizes<wbr>Size</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetSizesSize">output</a> API doc for this type.
 {{% /choosable %}}
@@ -832,7 +833,7 @@ one of the values provided here.
 
 
 
-<h4>Get<wbr>Sizes<wbr>Sort</h4>
+<h4 id="getsizessort">Get<wbr>Sizes<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#GetSizesSort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetSizesSort">output</a> API doc for this type.
 {{% /choosable %}}

@@ -34,7 +34,7 @@ const web_snapshot = pulumi.output(digitalocean.getDropletSnapshot({
 
 
 
-## Using GetDropletSnapshot
+## Using GetDropletSnapshot {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -244,7 +244,7 @@ The following arguments are supported:
 
 
 
-## GetDropletSnapshot Result
+## GetDropletSnapshot Result {#result}
 
 The following output properties are available:
 

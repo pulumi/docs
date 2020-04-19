@@ -11,7 +11,7 @@ block_external_search_index: true
 
 
 
-## Using GetKubernetesCluster
+## Using GetKubernetesCluster {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -149,7 +149,7 @@ The following arguments are supported:
 
 
 
-## GetKubernetesCluster Result
+## GetKubernetesCluster Result {#result}
 
 The following output properties are available:
 
@@ -784,7 +784,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config</h4>
+
+<h4 id="getkubernetesclusterkubeconfig">Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetKubernetesClusterKubeConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1051,7 +1052,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool</h4>
+<h4 id="getkubernetesclusternodepool">Get<wbr>Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetKubernetesClusterNodePool">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1458,7 +1459,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node</h4>
+<h4 id="getkubernetesclusternodepoolnode">Get<wbr>Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetKubernetesClusterNodePoolNode">output</a> API doc for this type.
 {{% /choosable %}}

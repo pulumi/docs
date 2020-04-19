@@ -17,7 +17,7 @@ modify, and delete Load Balancers.
 
 
 
-## Create a LoadBalancer Resource
+## Create a LoadBalancer Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -107,7 +107,7 @@ modify, and delete Load Balancers.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -184,7 +184,7 @@ modify, and delete Load Balancers.
 
 {{% /choosable %}}
 
-## LoadBalancer Resource Properties
+## LoadBalancer Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -625,15 +625,21 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the LoadBalancer resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the LoadBalancer resource produces the following output properties:
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -669,6 +675,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Ip</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -698,6 +712,14 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -733,6 +755,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>ip</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -765,8 +795,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing LoadBalancer Resource
+## Look up an Existing LoadBalancer Resource {#look-up}
 
 Get an existing LoadBalancer resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1421,7 +1450,8 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 
 ## Supporting Types
 
-<h4>Load<wbr>Balancer<wbr>Forwarding<wbr>Rule</h4>
+
+<h4 id="loadbalancerforwardingrule">Load<wbr>Balancer<wbr>Forwarding<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#LoadBalancerForwardingRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#LoadBalancerForwardingRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1680,7 +1710,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 
 
 
-<h4>Load<wbr>Balancer<wbr>Healthcheck</h4>
+<h4 id="loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Healthcheck</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#LoadBalancerHealthcheck">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#LoadBalancerHealthcheck">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1975,7 +2005,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 
 
 
-<h4>Load<wbr>Balancer<wbr>Sticky<wbr>Sessions</h4>
+<h4 id="loadbalancerstickysessions">Load<wbr>Balancer<wbr>Sticky<wbr>Sessions</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#LoadBalancerStickySessions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#LoadBalancerStickySessions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2130,7 +2160,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-digitalocean">https://github.com/pulumi/pulumi-digitalocean</a></dd>

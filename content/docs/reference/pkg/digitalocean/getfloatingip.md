@@ -11,7 +11,7 @@ block_external_search_index: true
 
 
 
-## Using GetFloatingIp
+## Using GetFloatingIp {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -113,7 +113,7 @@ The following arguments are supported:
 
 
 
-## GetFloatingIp Result
+## GetFloatingIp Result {#result}
 
 The following output properties are available:
 
