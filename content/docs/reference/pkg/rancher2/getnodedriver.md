@@ -28,7 +28,7 @@ const foo = pulumi.output(rancher2.getNodeDriver({
 
 
 
-## Using GetNodeDriver
+## Using GetNodeDriver {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -166,7 +166,7 @@ The following arguments are supported:
 
 
 
-## GetNodeDriver Result
+## GetNodeDriver Result {#result}
 
 The following output properties are available:
 

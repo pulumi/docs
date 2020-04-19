@@ -28,7 +28,7 @@ const library = pulumi.output(rancher2.getCatalog({
 
 
 
-## Using GetCatalog
+## Using GetCatalog {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -166,7 +166,7 @@ The following arguments are supported:
 
 
 
-## GetCatalog Result
+## GetCatalog Result {#result}
 
 The following output properties are available:
 

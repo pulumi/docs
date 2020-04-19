@@ -29,7 +29,7 @@ const foo = pulumi.output(rancher2.getProjectRoleTemplateBinding({
 
 
 
-## Using GetProjectRoleTemplateBinding
+## Using GetProjectRoleTemplateBinding {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -203,7 +203,7 @@ The following arguments are supported:
 
 
 
-## GetProjectRoleTemplateBinding Result
+## GetProjectRoleTemplateBinding Result {#result}
 
 The following output properties are available:
 

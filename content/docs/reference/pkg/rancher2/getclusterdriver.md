@@ -28,7 +28,7 @@ const foo = pulumi.output(rancher2.getClusterDriver({
 
 
 
-## Using GetClusterDriver
+## Using GetClusterDriver {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -166,7 +166,7 @@ The following arguments are supported:
 
 
 
-## GetClusterDriver Result
+## GetClusterDriver Result {#result}
 
 The following output properties are available:
 

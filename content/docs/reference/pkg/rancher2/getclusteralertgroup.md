@@ -29,7 +29,7 @@ const foo = pulumi.output(rancher2.getClusterAlertGroup({
 
 
 
-## Using GetClusterAlertGroup
+## Using GetClusterAlertGroup {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -167,7 +167,7 @@ The following arguments are supported:
 
 
 
-## GetClusterAlertGroup Result
+## GetClusterAlertGroup Result {#result}
 
 The following output properties are available:
 
@@ -562,7 +562,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Cluster<wbr>Alert<wbr>Group<wbr>Recipient</h4>
+
+<h4 id="getclusteralertgrouprecipient">Get<wbr>Cluster<wbr>Alert<wbr>Group<wbr>Recipient</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterAlertGroupRecipient">output</a> API doc for this type.
 {{% /choosable %}}

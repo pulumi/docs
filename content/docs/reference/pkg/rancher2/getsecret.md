@@ -46,7 +46,7 @@ const foo = pulumi.output(rancher2.getSecret({
 
 
 
-## Using GetSecret
+## Using GetSecret {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -220,7 +220,7 @@ The following arguments are supported:
 
 
 
-## GetSecret Result
+## GetSecret Result {#result}
 
 The following output properties are available:
 

@@ -29,7 +29,7 @@ const foo = pulumi.output(rancher2.getEtcdBackup({
 
 
 
-## Using GetEtcdBackup
+## Using GetEtcdBackup {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -167,7 +167,7 @@ The following arguments are supported:
 
 
 
-## GetEtcdBackup Result
+## GetEtcdBackup Result {#result}
 
 The following output properties are available:
 
@@ -526,7 +526,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Etcd<wbr>Backup<wbr>Backup<wbr>Config</h4>
+
+<h4 id="getetcdbackupbackupconfig">Get<wbr>Etcd<wbr>Backup<wbr>Backup<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetEtcdBackupBackupConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -729,7 +730,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Etcd<wbr>Backup<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config</h4>
+<h4 id="getetcdbackupbackupconfigs3backupconfig">Get<wbr>Etcd<wbr>Backup<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetEtcdBackupBackupConfigS3BackupConfig">output</a> API doc for this type.
 {{% /choosable %}}

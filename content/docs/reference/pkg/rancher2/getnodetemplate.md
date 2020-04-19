@@ -28,7 +28,7 @@ const foo = pulumi.output(rancher2.getNodeTemplate({
 
 
 
-## Using GetNodeTemplate
+## Using GetNodeTemplate {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -166,7 +166,7 @@ The following arguments are supported:
 
 
 
-## GetNodeTemplate Result
+## GetNodeTemplate Result {#result}
 
 The following output properties are available:
 

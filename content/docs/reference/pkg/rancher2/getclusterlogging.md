@@ -28,7 +28,7 @@ const foo = pulumi.output(rancher2.getClusterLogging({
 
 
 
-## Using GetClusterLogging
+## Using GetClusterLogging {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -130,7 +130,7 @@ The following arguments are supported:
 
 
 
-## GetClusterLogging Result
+## GetClusterLogging Result {#result}
 
 The following output properties are available:
 
@@ -737,7 +737,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Cluster<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config</h4>
+
+<h4 id="getclusterloggingcustomtargetconfig">Get<wbr>Cluster<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterLoggingCustomTargetConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -908,7 +909,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Logging<wbr>Elasticsearch<wbr>Config</h4>
+<h4 id="getclusterloggingelasticsearchconfig">Get<wbr>Cluster<wbr>Logging<wbr>Elasticsearch<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterLoggingElasticsearchConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1303,7 +1304,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Logging<wbr>Fluentd<wbr>Config</h4>
+<h4 id="getclusterloggingfluentdconfig">Get<wbr>Cluster<wbr>Logging<wbr>Fluentd<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterLoggingFluentdConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1474,7 +1475,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Fluent<wbr>Server</h4>
+<h4 id="getclusterloggingfluentdconfigfluentserver">Get<wbr>Cluster<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Fluent<wbr>Server</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterLoggingFluentdConfigFluentServer">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1741,7 +1742,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Logging<wbr>Kafka<wbr>Config</h4>
+<h4 id="getclusterloggingkafkaconfig">Get<wbr>Cluster<wbr>Logging<wbr>Kafka<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterLoggingKafkaConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1976,7 +1977,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Logging<wbr>Splunk<wbr>Config</h4>
+<h4 id="getclusterloggingsplunkconfig">Get<wbr>Cluster<wbr>Logging<wbr>Splunk<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterLoggingSplunkConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2307,7 +2308,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Logging<wbr>Syslog<wbr>Config</h4>
+<h4 id="getclusterloggingsyslogconfig">Get<wbr>Cluster<wbr>Logging<wbr>Syslog<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterLoggingSyslogConfig">output</a> API doc for this type.
 {{% /choosable %}}

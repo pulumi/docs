@@ -29,7 +29,7 @@ const foo = pulumi.output(rancher2.getGlobalRoleBinding({
 
 
 
-## Using GetGlobalRoleBinding
+## Using GetGlobalRoleBinding {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -167,7 +167,7 @@ The following arguments are supported:
 
 
 
-## GetGlobalRoleBinding Result
+## GetGlobalRoleBinding Result {#result}
 
 The following output properties are available:
 

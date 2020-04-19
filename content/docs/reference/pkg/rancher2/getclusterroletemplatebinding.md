@@ -29,7 +29,7 @@ const foo = pulumi.output(rancher2.getClusterRoleTemplateBinding({
 
 
 
-## Using GetClusterRoleTemplateBinding
+## Using GetClusterRoleTemplateBinding {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -203,7 +203,7 @@ The following arguments are supported:
 
 
 
-## GetClusterRoleTemplateBinding Result
+## GetClusterRoleTemplateBinding Result {#result}
 
 The following output properties are available:
 

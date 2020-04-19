@@ -11,7 +11,7 @@ block_external_search_index: true
 
 
 
-## Using GetClusterScan
+## Using GetClusterScan {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -141,7 +141,7 @@ The following arguments are supported:
 
 
 
-## GetClusterScan Result
+## GetClusterScan Result {#result}
 
 The following output properties are available:
 
@@ -476,7 +476,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config</h4>
+
+<h4 id="getclusterscanscanconfig">Get<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterScanScanConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -551,7 +552,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Cis<wbr>Scan<wbr>Config</h4>
+<h4 id="getclusterscanscanconfigcisscanconfig">Get<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Cis<wbr>Scan<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterScanScanConfigCisScanConfig">output</a> API doc for this type.
 {{% /choosable %}}

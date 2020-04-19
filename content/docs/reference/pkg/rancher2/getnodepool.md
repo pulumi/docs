@@ -29,7 +29,7 @@ const foo = rancher2_cluster_foo_custom.id.apply(id => rancher2.getNodePool({
 
 
 
-## Using GetNodePool
+## Using GetNodePool {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -203,7 +203,7 @@ The following arguments are supported:
 
 
 
-## GetNodePool Result
+## GetNodePool Result {#result}
 
 The following output properties are available:
 
@@ -702,7 +702,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Node<wbr>Pool<wbr>Node<wbr>Taint</h4>
+
+<h4 id="getnodepoolnodetaint">Get<wbr>Node<wbr>Pool<wbr>Node<wbr>Taint</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetNodePoolNodeTaint">output</a> API doc for this type.
 {{% /choosable %}}

@@ -29,7 +29,7 @@ const foo = pulumi.output(rancher2.getProjectAlertGroup({
 
 
 
-## Using GetProjectAlertGroup
+## Using GetProjectAlertGroup {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -167,7 +167,7 @@ The following arguments are supported:
 
 
 
-## GetProjectAlertGroup Result
+## GetProjectAlertGroup Result {#result}
 
 The following output properties are available:
 
@@ -562,7 +562,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Project<wbr>Alert<wbr>Group<wbr>Recipient</h4>
+
+<h4 id="getprojectalertgrouprecipient">Get<wbr>Project<wbr>Alert<wbr>Group<wbr>Recipient</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetProjectAlertGroupRecipient">output</a> API doc for this type.
 {{% /choosable %}}

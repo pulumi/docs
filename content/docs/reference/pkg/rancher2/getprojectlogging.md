@@ -28,7 +28,7 @@ const foo = pulumi.output(rancher2.getProjectLogging({
 
 
 
-## Using GetProjectLogging
+## Using GetProjectLogging {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -130,7 +130,7 @@ The following arguments are supported:
 
 
 
-## GetProjectLogging Result
+## GetProjectLogging Result {#result}
 
 The following output properties are available:
 
@@ -737,7 +737,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config</h4>
+
+<h4 id="getprojectloggingcustomtargetconfig">Get<wbr>Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetProjectLoggingCustomTargetConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -908,7 +909,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Project<wbr>Logging<wbr>Elasticsearch<wbr>Config</h4>
+<h4 id="getprojectloggingelasticsearchconfig">Get<wbr>Project<wbr>Logging<wbr>Elasticsearch<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetProjectLoggingElasticsearchConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1303,7 +1304,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Project<wbr>Logging<wbr>Fluentd<wbr>Config</h4>
+<h4 id="getprojectloggingfluentdconfig">Get<wbr>Project<wbr>Logging<wbr>Fluentd<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetProjectLoggingFluentdConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1474,7 +1475,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Project<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Fluent<wbr>Server</h4>
+<h4 id="getprojectloggingfluentdconfigfluentserver">Get<wbr>Project<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Fluent<wbr>Server</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetProjectLoggingFluentdConfigFluentServer">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1741,7 +1742,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Project<wbr>Logging<wbr>Kafka<wbr>Config</h4>
+<h4 id="getprojectloggingkafkaconfig">Get<wbr>Project<wbr>Logging<wbr>Kafka<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetProjectLoggingKafkaConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1976,7 +1977,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Project<wbr>Logging<wbr>Splunk<wbr>Config</h4>
+<h4 id="getprojectloggingsplunkconfig">Get<wbr>Project<wbr>Logging<wbr>Splunk<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetProjectLoggingSplunkConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2307,7 +2308,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Project<wbr>Logging<wbr>Syslog<wbr>Config</h4>
+<h4 id="getprojectloggingsyslogconfig">Get<wbr>Project<wbr>Logging<wbr>Syslog<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetProjectLoggingSyslogConfig">output</a> API doc for this type.
 {{% /choosable %}}

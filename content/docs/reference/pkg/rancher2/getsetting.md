@@ -28,7 +28,7 @@ const server_image = pulumi.output(rancher2.getSetting({
 
 
 
-## Using GetSetting
+## Using GetSetting {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -130,7 +130,7 @@ The following arguments are supported:
 
 
 
-## GetSetting Result
+## GetSetting Result {#result}
 
 The following output properties are available:
 

@@ -46,7 +46,7 @@ const foo = pulumi.output(rancher2.getCertificate({
 
 
 
-## Using GetCertificate
+## Using GetCertificate {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -220,7 +220,7 @@ The following arguments are supported:
 
 
 
-## GetCertificate Result
+## GetCertificate Result {#result}
 
 The following output properties are available:
 

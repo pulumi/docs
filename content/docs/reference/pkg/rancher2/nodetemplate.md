@@ -70,7 +70,7 @@ const fooNodeTemplate = new rancher2.NodeTemplate("foo", {
 
 
 
-## Create a NodeTemplate Resource
+## Create a NodeTemplate Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -160,7 +160,7 @@ const fooNodeTemplate = new rancher2.NodeTemplate("foo", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -237,7 +237,7 @@ const fooNodeTemplate = new rancher2.NodeTemplate("foo", {
 
 {{% /choosable %}}
 
-## NodeTemplate Resource Properties
+## NodeTemplate Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -1110,9 +1110,7 @@ The NodeTemplate resource accepts the following [input]({{< relref "/docs/intro/
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the NodeTemplate resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the NodeTemplate resource produces the following output properties:
 
 
 
@@ -1128,6 +1126,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}(Computed) The driver of the node template (string)
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1145,6 +1151,14 @@ The following output properties are available:
     <dd>{{% md %}}(Computed) The driver of the node template (string)
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1160,6 +1174,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}(Computed) The driver of the node template (string)
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1177,6 +1199,14 @@ The following output properties are available:
     <dd>{{% md %}}(Computed) The driver of the node template (string)
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1186,8 +1216,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing NodeTemplate Resource
+## Look up an Existing NodeTemplate Resource {#look-up}
 
 Get an existing NodeTemplate resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -2210,7 +2239,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Node<wbr>Template<wbr>Amazonec2Config</h4>
+
+<h4 id="nodetemplateamazonec2config">Node<wbr>Template<wbr>Amazonec2Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#NodeTemplateAmazonec2Config">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#NodeTemplateAmazonec2Config">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3369,7 +3399,7 @@ The following state arguments are supported:
 
 
 
-<h4>Node<wbr>Template<wbr>Azure<wbr>Config</h4>
+<h4 id="nodetemplateazureconfig">Node<wbr>Template<wbr>Azure<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#NodeTemplateAzureConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#NodeTemplateAzureConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4348,7 +4378,7 @@ The following state arguments are supported:
 
 
 
-<h4>Node<wbr>Template<wbr>Digitalocean<wbr>Config</h4>
+<h4 id="nodetemplatedigitaloceanconfig">Node<wbr>Template<wbr>Digitalocean<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#NodeTemplateDigitaloceanConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#NodeTemplateDigitaloceanConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4895,7 +4925,7 @@ The following state arguments are supported:
 
 
 
-<h4>Node<wbr>Template<wbr>Linode<wbr>Config</h4>
+<h4 id="nodetemplatelinodeconfig">Node<wbr>Template<wbr>Linode<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#NodeTemplateLinodeConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#NodeTemplateLinodeConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5514,7 +5544,7 @@ The following state arguments are supported:
 
 
 
-<h4>Node<wbr>Template<wbr>Opennebula<wbr>Config</h4>
+<h4 id="nodetemplateopennebulaconfig">Node<wbr>Template<wbr>Opennebula<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#NodeTemplateOpennebulaConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#NodeTemplateOpennebulaConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6241,7 +6271,7 @@ The following state arguments are supported:
 
 
 
-<h4>Node<wbr>Template<wbr>Openstack<wbr>Config</h4>
+<h4 id="nodetemplateopenstackconfig">Node<wbr>Template<wbr>Openstack<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#NodeTemplateOpenstackConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#NodeTemplateOpenstackConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7292,20 +7322,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>tenant_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}OpenStack tenant id. Conflicts with `tenant_name` (string)
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>tenant<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}OpenStack tenant name. Conflicts with `tenant_id` (string)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>tenant_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}OpenStack tenant id. Conflicts with `tenant_name` (string)
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -7324,7 +7354,7 @@ The following state arguments are supported:
 
 
 
-<h4>Node<wbr>Template<wbr>Vsphere<wbr>Config</h4>
+<h4 id="nodetemplatevsphereconfig">Node<wbr>Template<wbr>Vsphere<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#NodeTemplateVsphereConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#NodeTemplateVsphereConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8487,7 +8517,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-rancher2">https://github.com/pulumi/pulumi-rancher2</a></dd>

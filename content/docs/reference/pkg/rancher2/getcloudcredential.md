@@ -28,7 +28,7 @@ const test = pulumi.output(rancher2.getCloudCredential({
 
 
 
-## Using GetCloudCredential
+## Using GetCloudCredential {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -130,7 +130,7 @@ The following arguments are supported:
 
 
 
-## GetCloudCredential Result
+## GetCloudCredential Result {#result}
 
 The following output properties are available:
 
