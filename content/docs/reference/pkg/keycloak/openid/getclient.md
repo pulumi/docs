@@ -25,7 +25,7 @@ See the docs for the `keycloak.openid.Client` resource for details on the export
 
 
 
-## Using GetClient
+## Using GetClient {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -155,7 +155,7 @@ The following arguments are supported:
 
 
 
-## GetClient Result
+## GetClient Result {#result}
 
 The following output properties are available:
 
@@ -778,7 +778,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Client<wbr>Authorization</h4>
+
+<h4 id="getclientauthorization">Get<wbr>Client<wbr>Authorization</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#GetClientAuthorization">output</a> API doc for this type.
 {{% /choosable %}}
