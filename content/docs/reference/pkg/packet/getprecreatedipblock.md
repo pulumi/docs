@@ -16,7 +16,7 @@ You can then use the cidrsubnet TF builtin function to derive subnets.
 
 
 
-## Using GetPrecreatedIpBlock
+## Using GetPrecreatedIpBlock {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -262,7 +262,7 @@ The following arguments are supported:
 
 
 
-## GetPrecreatedIpBlock Result
+## GetPrecreatedIpBlock Result {#result}
 
 The following output properties are available:
 

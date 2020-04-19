@@ -29,7 +29,7 @@ const example = pulumi.output(packet.getSpotMarketPrice({
 
 
 
-## Using GetSpotMarketPrice
+## Using GetSpotMarketPrice {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -167,7 +167,7 @@ The following arguments are supported:
 
 
 
-## GetSpotMarketPrice Result
+## GetSpotMarketPrice Result {#result}
 
 The following output properties are available:
 

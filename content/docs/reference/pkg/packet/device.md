@@ -22,7 +22,7 @@ modify, and delete devices.
 
 
 
-## Create a Device Resource
+## Create a Device Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -112,7 +112,7 @@ modify, and delete devices.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -189,7 +189,7 @@ modify, and delete devices.
 
 {{% /choosable %}}
 
-## Device Resource Properties
+## Device Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -938,9 +938,7 @@ information is in the
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Device resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Device resource produces the following output properties:
 
 
 
@@ -992,6 +990,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1115,6 +1121,14 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Locked</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
@@ -1232,6 +1246,14 @@ The fields of the network attributes are:
     </dt>
     <dd>{{% md %}}The facility where the device is deployed.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1355,6 +1377,14 @@ The fields of the network attributes are:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>locked</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1430,8 +1460,7 @@ The fields of the network attributes are:
 
 
 
-
-## Look up an Existing Device Resource
+## Look up an Existing Device Resource {#look-up}
 
 Get an existing Device resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -2746,7 +2775,8 @@ information is in the
 
 ## Supporting Types
 
-<h4>Device<wbr>Ip<wbr>Address</h4>
+
+<h4 id="deviceipaddress">Device<wbr>Ip<wbr>Address</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/packet/types/input/#DeviceIpAddress">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/packet/types/output/#DeviceIpAddress">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2893,7 +2923,7 @@ information is in the
 
 
 
-<h4>Device<wbr>Network</h4>
+<h4 id="devicenetwork">Device<wbr>Network</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/packet/types/output/#DeviceNetwork">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3116,7 +3146,7 @@ information is in the
 
 
 
-<h4>Device<wbr>Port</h4>
+<h4 id="deviceport">Device<wbr>Port</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/packet/types/output/#DevicePort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3347,7 +3377,7 @@ information is in the
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-packet">https://github.com/pulumi/pulumi-packet</a></dd>

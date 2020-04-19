@@ -15,7 +15,7 @@ Use this data source to get Packet Operating System image.
 
 
 
-## Using GetOperatingSystem
+## Using GetOperatingSystem {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -225,7 +225,7 @@ The following arguments are supported:
 
 
 
-## GetOperatingSystem Result
+## GetOperatingSystem Result {#result}
 
 The following output properties are available:
 

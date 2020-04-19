@@ -17,7 +17,7 @@ Provides a Packet spot_market_request datasource. The datasource will contain li
 
 
 
-## Using GetSpotMarketRequest
+## Using GetSpotMarketRequest {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -119,7 +119,7 @@ The following arguments are supported:
 
 
 
-## GetSpotMarketRequest Result
+## GetSpotMarketRequest Result {#result}
 
 The following output properties are available:
 
