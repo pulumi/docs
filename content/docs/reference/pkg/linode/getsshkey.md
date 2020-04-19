@@ -18,9 +18,9 @@ The following example shows how the resource might be used to obtain the name of
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const foo = linode.getSshKey({
+const foo = pulumi.output(linode.getSshKey({
     label: "foo",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -30,7 +30,7 @@ const foo = linode.getSshKey({
 
 
 
-## Using GetSshKey
+## Using GetSshKey {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -128,7 +128,7 @@ The following arguments are supported:
 
 
 
-## GetSshKey Result
+## GetSshKey Result {#result}
 
 The following output properties are available:
 

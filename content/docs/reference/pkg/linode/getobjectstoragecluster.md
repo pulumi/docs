@@ -18,9 +18,9 @@ The following example shows how one might use this data source to access informa
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const primary = linode.getObjectStorageCluster({
+const primary = pulumi.output(linode.getObjectStorageCluster({
     id: "us-east-1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -41,7 +41,7 @@ The Linode Object Storage Cluster resource exports the following attributes:
 
 
 
-## Using GetObjectStorageCluster
+## Using GetObjectStorageCluster {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -271,7 +271,7 @@ The following arguments are supported:
 
 
 
-## GetObjectStorageCluster Result
+## GetObjectStorageCluster Result {#result}
 
 The following output properties are available:
 

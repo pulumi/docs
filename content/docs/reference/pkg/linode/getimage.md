@@ -18,9 +18,9 @@ The following example shows how one might use this data source to access informa
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const k8Master = linode.getImage({
+const k8Master = pulumi.output(linode.getImage({
     id: "linode/debian8",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -51,7 +51,7 @@ The Linode Image resource exports the following attributes:
 
 
 
-## Using GetImage
+## Using GetImage {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetImage Result
+## GetImage Result {#result}
 
 The following output properties are available:
 

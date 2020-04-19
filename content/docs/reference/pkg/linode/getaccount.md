@@ -20,7 +20,7 @@ The following example shows how one might use this data source to access account
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const account = linode.getAccount();
+const account = pulumi.output(linode.getAccount({ async: true }));
 ```
 
 {{% /example %}}
@@ -57,7 +57,7 @@ The Linode Account resource exports the following attributes:
 
 
 
-## Using GetAccount
+## Using GetAccount {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -86,7 +86,7 @@ The Linode Account resource exports the following attributes:
 
 
 
-## GetAccount Result
+## GetAccount Result {#result}
 
 The following output properties are available:
 

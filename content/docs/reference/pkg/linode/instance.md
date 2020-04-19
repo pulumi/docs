@@ -12,7 +12,7 @@ block_external_search_index: true
 
 
 
-## Create a Instance Resource
+## Create a Instance Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -102,7 +102,7 @@ block_external_search_index: true
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -179,7 +179,13 @@ block_external_search_index: true
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## Instance Resource Properties {#properties}
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The Instance resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -928,10 +934,9 @@ block_external_search_index: true
 
 
 
+### Outputs
 
-## Instance Output Properties
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Instance resource produces the following output properties:
 
 
 
@@ -947,6 +952,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Information about this Linode's backups status.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1022,6 +1035,14 @@ Instances in a region.
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Ip<wbr>Address</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1091,6 +1112,14 @@ Instances in a region.
     </dt>
     <dd>{{% md %}}Information about this Linode's backups status.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1166,6 +1195,14 @@ Instances in a region.
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>ip_<wbr>address</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1229,8 +1266,7 @@ Instances in a region.
 
 
 
-
-## Look up an Existing Instance Resource
+## Look up an Existing Instance Resource {#look-up}
 
 Get an existing Instance resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -2361,7 +2397,8 @@ Instances in a region.
 
 ## Supporting Types
 
-<h4>Instance<wbr>Alerts</h4>
+
+<h4 id="instancealerts">Instance<wbr>Alerts</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceAlerts">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceAlerts">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2564,7 +2601,7 @@ Instances in a region.
 
 
 
-<h4>Instance<wbr>Backups</h4>
+<h4 id="instancebackups">Instance<wbr>Backups</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceBackups">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2671,7 +2708,7 @@ Instances in a region.
 
 
 
-<h4>Instance<wbr>Backups<wbr>Schedule</h4>
+<h4 id="instancebackupsschedule">Instance<wbr>Backups<wbr>Schedule</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceBackupsSchedule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2778,7 +2815,7 @@ Instances in a region.
 
 
 
-<h4>Instance<wbr>Config</h4>
+<h4 id="instanceconfig">Instance<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3145,7 +3182,7 @@ Instances in a region.
 
 
 
-<h4>Instance<wbr>Config<wbr>Devices</h4>
+<h4 id="instanceconfigdevices">Instance<wbr>Config<wbr>Devices</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevices">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevices">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3444,7 +3481,7 @@ Instances in a region.
 
 
 
-<h4>Instance<wbr>Config<wbr>Devices<wbr>Sda</h4>
+<h4 id="instanceconfigdevicessda">Instance<wbr>Config<wbr>Devices<wbr>Sda</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevicesSda">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevicesSda">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3563,20 +3600,20 @@ Instances in a region.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>disk<wbr>Label</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>disk_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3595,7 +3632,7 @@ Instances in a region.
 
 
 
-<h4>Instance<wbr>Config<wbr>Devices<wbr>Sdb</h4>
+<h4 id="instanceconfigdevicessdb">Instance<wbr>Config<wbr>Devices<wbr>Sdb</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevicesSdb">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevicesSdb">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3714,20 +3751,20 @@ Instances in a region.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>disk<wbr>Label</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>disk_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3746,7 +3783,7 @@ Instances in a region.
 
 
 
-<h4>Instance<wbr>Config<wbr>Devices<wbr>Sdc</h4>
+<h4 id="instanceconfigdevicessdc">Instance<wbr>Config<wbr>Devices<wbr>Sdc</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevicesSdc">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevicesSdc">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3865,20 +3902,20 @@ Instances in a region.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>disk<wbr>Label</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>disk_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3897,7 +3934,7 @@ Instances in a region.
 
 
 
-<h4>Instance<wbr>Config<wbr>Devices<wbr>Sdd</h4>
+<h4 id="instanceconfigdevicessdd">Instance<wbr>Config<wbr>Devices<wbr>Sdd</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevicesSdd">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevicesSdd">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4016,20 +4053,20 @@ Instances in a region.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>disk<wbr>Label</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>disk_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4048,7 +4085,7 @@ Instances in a region.
 
 
 
-<h4>Instance<wbr>Config<wbr>Devices<wbr>Sde</h4>
+<h4 id="instanceconfigdevicessde">Instance<wbr>Config<wbr>Devices<wbr>Sde</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevicesSde">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevicesSde">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4167,20 +4204,20 @@ Instances in a region.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>disk<wbr>Label</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>disk_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4199,7 +4236,7 @@ Instances in a region.
 
 
 
-<h4>Instance<wbr>Config<wbr>Devices<wbr>Sdf</h4>
+<h4 id="instanceconfigdevicessdf">Instance<wbr>Config<wbr>Devices<wbr>Sdf</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevicesSdf">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevicesSdf">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4318,20 +4355,20 @@ Instances in a region.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>disk<wbr>Label</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>disk_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4350,7 +4387,7 @@ Instances in a region.
 
 
 
-<h4>Instance<wbr>Config<wbr>Devices<wbr>Sdg</h4>
+<h4 id="instanceconfigdevicessdg">Instance<wbr>Config<wbr>Devices<wbr>Sdg</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevicesSdg">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevicesSdg">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4469,20 +4506,20 @@ Instances in a region.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>disk<wbr>Label</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>disk_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4501,7 +4538,7 @@ Instances in a region.
 
 
 
-<h4>Instance<wbr>Config<wbr>Devices<wbr>Sdh</h4>
+<h4 id="instanceconfigdevicessdh">Instance<wbr>Config<wbr>Devices<wbr>Sdh</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigDevicesSdh">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigDevicesSdh">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4620,20 +4657,20 @@ Instances in a region.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>disk<wbr>Label</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The `label` of the `disk` to map to this `device` slot.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>disk_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The Disk ID of the associated `disk_label`, if used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -4652,7 +4689,7 @@ Instances in a region.
 
 
 
-<h4>Instance<wbr>Config<wbr>Helpers</h4>
+<h4 id="instanceconfighelpers">Instance<wbr>Config<wbr>Helpers</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceConfigHelpers">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceConfigHelpers">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4871,7 +4908,7 @@ Instances in a region.
 
 
 
-<h4>Instance<wbr>Disk</h4>
+<h4 id="instancedisk">Instance<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#InstanceDisk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceDisk">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5298,7 +5335,7 @@ Instances in a region.
 
 
 
-<h4>Instance<wbr>Specs</h4>
+<h4 id="instancespecs">Instance<wbr>Specs</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#InstanceSpecs">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5473,7 +5510,7 @@ Instances in a region.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-linode">https://github.com/pulumi/pulumi-linode</a></dd>

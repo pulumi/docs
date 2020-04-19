@@ -11,7 +11,7 @@ menu:
 
 A Pulumi package for creating and managing linode cloud resources.
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="domain" title="Domain"><span class="symbol resource"></span>Domain</a></li>
     <li><a href="domainrecord" title="DomainRecord"><span class="symbol resource"></span>DomainRecord</a></li>
@@ -30,7 +30,7 @@ A Pulumi package for creating and managing linode cloud resources.
     <li><a href="volume" title="Volume"><span class="symbol resource"></span>Volume</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
     <li><a href="getdomain" title="GetDomain"><span class="symbol function"></span>GetDomain</a></li>
@@ -47,7 +47,7 @@ A Pulumi package for creating and managing linode cloud resources.
     <li><a href="getvolume" title="GetVolume"><span class="symbol function"></span>GetVolume</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-linode">https://github.com/pulumi/pulumi-linode</a></dd>

@@ -18,9 +18,9 @@ The following example shows how the resource might be used to obtain additional 
 import * as pulumi from "@pulumi/pulumi";
 import * as linode from "@pulumi/linode";
 
-const region = linode.getRegion({
+const region = pulumi.output(linode.getRegion({
     id: "us-east",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -30,7 +30,7 @@ const region = linode.getRegion({
 
 
 
-## Using GetRegion
+## Using GetRegion {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -160,7 +160,7 @@ The following arguments are supported:
 
 
 
-## GetRegion Result
+## GetRegion Result {#result}
 
 The following output properties are available:
 
