@@ -21,7 +21,7 @@ updated, you should expect different results in a frequent basis.
 
 
 
-## Using GetServiceHealth
+## Using GetServiceHealth {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -351,7 +351,7 @@ based on a single matching tag.
 
 
 
-## GetServiceHealth Result
+## GetServiceHealth Result {#result}
 
 The following output properties are available:
 
@@ -734,7 +734,8 @@ passing state.
 
 ## Supporting Types
 
-<h4>Get<wbr>Service<wbr>Health<wbr>Result</h4>
+
+<h4 id="getservicehealthresult">Get<wbr>Service<wbr>Health<wbr>Result</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/output/#GetServiceHealthResult">output</a> API doc for this type.
 {{% /choosable %}}
@@ -877,7 +878,7 @@ passing state.
 
 
 
-<h4>Get<wbr>Service<wbr>Health<wbr>Result<wbr>Check</h4>
+<h4 id="getservicehealthresultcheck">Get<wbr>Service<wbr>Health<wbr>Result<wbr>Check</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/output/#GetServiceHealthResultCheck">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1203,15 +1204,6 @@ passing state.
 
     <dt class="property-required"
             title="Required">
-        <span>service_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The ID of the service associated to this health-check.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>service<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1230,6 +1222,15 @@ passing state.
 
     <dt class="property-required"
             title="Required">
+        <span>service_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the service associated to this health-check.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1244,7 +1245,7 @@ passing state.
 
 
 
-<h4>Get<wbr>Service<wbr>Health<wbr>Result<wbr>Node</h4>
+<h4 id="getservicehealthresultnode">Get<wbr>Service<wbr>Health<wbr>Result<wbr>Node</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/output/#GetServiceHealthResultNode">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1499,7 +1500,7 @@ passing state.
 
 
 
-<h4>Get<wbr>Service<wbr>Health<wbr>Result<wbr>Service</h4>
+<h4 id="getservicehealthresultservice">Get<wbr>Service<wbr>Health<wbr>Result<wbr>Service</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/output/#GetServiceHealthResultService">output</a> API doc for this type.
 {{% /choosable %}}

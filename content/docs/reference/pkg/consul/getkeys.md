@@ -41,7 +41,7 @@ const appInstance = new aws.ec2.Instance("app", {
 
 
 
-## Using GetKeys
+## Using GetKeys {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -263,7 +263,7 @@ token that the agent provides by default.
 
 
 
-## GetKeys Result
+## GetKeys Result {#result}
 
 The following output properties are available:
 
@@ -514,7 +514,8 @@ has the value of the key.
 
 ## Supporting Types
 
-<h4>Get<wbr>Keys<wbr>Key</h4>
+
+<h4 id="getkeyskey">Get<wbr>Keys<wbr>Key</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/input/#GetKeysKey">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/output/#GetKeysKey">output</a> API doc for this type.
 {{% /choosable %}}

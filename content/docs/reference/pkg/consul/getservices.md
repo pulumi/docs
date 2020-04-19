@@ -21,7 +21,7 @@ source, which provides a detailed response about a specific Consul service.
 
 
 
-## Using GetServices
+## Using GetServices {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -123,7 +123,7 @@ The following arguments are supported:
 
 
 
-## GetServices Result
+## GetServices Result {#result}
 
 The following output properties are available:
 
@@ -334,7 +334,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Services<wbr>Query<wbr>Option</h4>
+
+<h4 id="getservicesqueryoption">Get<wbr>Services<wbr>Query<wbr>Option</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/input/#GetServicesQueryOption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/output/#GetServicesQueryOption">output</a> API doc for this type.
 {{% /choosable %}}

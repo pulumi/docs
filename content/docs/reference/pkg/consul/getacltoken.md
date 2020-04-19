@@ -35,7 +35,7 @@ export const consulAclPolicies = test.policies!;
 
 
 
-## Using GetAclToken
+## Using GetAclToken {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -285,7 +285,7 @@ an `id` and a `name` attribute.
 
 
 
-## GetAclToken Result
+## GetAclToken Result {#result}
 
 The following output properties are available:
 
@@ -540,7 +540,8 @@ an `id` and a `name` attribute.
 
 ## Supporting Types
 
-<h4>Get<wbr>Acl<wbr>Token<wbr>Policy</h4>
+
+<h4 id="getacltokenpolicy">Get<wbr>Acl<wbr>Token<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/input/#GetAclTokenPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/output/#GetAclTokenPolicy">output</a> API doc for this type.
 {{% /choosable %}}

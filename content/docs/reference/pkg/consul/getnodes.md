@@ -18,7 +18,7 @@ nodes from a different WAN-attached Consul datacenter.
 
 
 
-## Using GetNodes
+## Using GetNodes {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -120,7 +120,7 @@ The following arguments are supported:
 
 
 
-## GetNodes Result
+## GetNodes Result {#result}
 
 The following output properties are available:
 
@@ -379,7 +379,8 @@ per-node attributes is detailed below.
 
 ## Supporting Types
 
-<h4>Get<wbr>Nodes<wbr>Node</h4>
+
+<h4 id="getnodesnode">Get<wbr>Nodes<wbr>Node</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/output/#GetNodesNode">output</a> API doc for this type.
 {{% /choosable %}}
@@ -618,7 +619,7 @@ List of explicit LAN and WAN IP addresses for the agent.
 
 
 
-<h4>Get<wbr>Nodes<wbr>Query<wbr>Option</h4>
+<h4 id="getnodesqueryoption">Get<wbr>Nodes<wbr>Query<wbr>Option</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/input/#GetNodesQueryOption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/output/#GetNodesQueryOption">output</a> API doc for this type.
 {{% /choosable %}}

@@ -34,7 +34,7 @@ export const consulVersion = remoteAgent.version;
 
 
 
-## Using GetAgentConfig
+## Using GetAgentConfig {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -63,7 +63,7 @@ export const consulVersion = remoteAgent.version;
 
 
 
-## GetAgentConfig Result
+## GetAgentConfig Result {#result}
 
 The following output properties are available:
 

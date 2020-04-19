@@ -16,7 +16,7 @@ The `consul..AclRole` data source returns the information related to a
 
 
 
-## Using GetAclRole
+## Using GetAclRole {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -270,7 +270,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
 
 
-## GetAclRole Result
+## GetAclRole Result {#result}
 
 The following output properties are available:
 
@@ -529,7 +529,8 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
 ## Supporting Types
 
-<h4>Get<wbr>Acl<wbr>Role<wbr>Policy</h4>
+
+<h4 id="getaclrolepolicy">Get<wbr>Acl<wbr>Role<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/input/#GetAclRolePolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/output/#GetAclRolePolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -640,7 +641,7 @@ Role. Each entry has a `service_name` attribute and a list of `datacenters`.
 
 
 
-<h4>Get<wbr>Acl<wbr>Role<wbr>Service<wbr>Identity</h4>
+<h4 id="getaclroleserviceidentity">Get<wbr>Acl<wbr>Role<wbr>Service<wbr>Identity</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/input/#GetAclRoleServiceIdentity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/consul/types/output/#GetAclRoleServiceIdentity">output</a> API doc for this type.
 {{% /choosable %}}
