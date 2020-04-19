@@ -18,9 +18,9 @@ Note that the secure credential's value is not returned as an attribute for secu
 import * as pulumi from "@pulumi/pulumi";
 import * as newrelic from "@pulumi/newrelic";
 
-const foo = newrelic.synthetics.getSecureCredential({
+const foo = pulumi.output(newrelic.synthetics.getSecureCredential({
     key: "MY_KEY",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -30,7 +30,7 @@ const foo = newrelic.synthetics.getSecureCredential({
 
 
 
-## Using GetSecureCredential
+## Using GetSecureCredential {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -132,7 +132,7 @@ The following arguments are supported:
 
 
 
-## GetSecureCredential Result
+## GetSecureCredential Result {#result}
 
 The following output properties are available:
 
