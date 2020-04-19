@@ -66,7 +66,7 @@ This resource exports the following attributes:
 
 
 
-## Using GetStackScript
+## Using GetStackScript {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -200,7 +200,7 @@ The following arguments are supported:
 
 
 
-## GetStackScript Result
+## GetStackScript Result {#result}
 
 The following output properties are available:
 
@@ -691,7 +691,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field</h4>
+
+<h4 id="getstackscriptuserdefinedfield">Get<wbr>Stack<wbr>Script<wbr>User<wbr>Defined<wbr>Field</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/input/#GetStackScriptUserDefinedField">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#GetStackScriptUserDefinedField">output</a> API doc for this type.
 {{% /choosable %}}

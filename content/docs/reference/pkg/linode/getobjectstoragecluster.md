@@ -41,7 +41,7 @@ The Linode Object Storage Cluster resource exports the following attributes:
 
 
 
-## Using GetObjectStorageCluster
+## Using GetObjectStorageCluster {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -271,7 +271,7 @@ The following arguments are supported:
 
 
 
-## GetObjectStorageCluster Result
+## GetObjectStorageCluster Result {#result}
 
 The following output properties are available:
 

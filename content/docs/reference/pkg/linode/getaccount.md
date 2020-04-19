@@ -57,7 +57,7 @@ The Linode Account resource exports the following attributes:
 
 
 
-## Using GetAccount
+## Using GetAccount {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -86,7 +86,7 @@ The Linode Account resource exports the following attributes:
 
 
 
-## GetAccount Result
+## GetAccount Result {#result}
 
 The following output properties are available:
 

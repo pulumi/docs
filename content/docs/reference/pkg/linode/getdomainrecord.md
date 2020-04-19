@@ -62,7 +62,7 @@ The Linode Volume resource exports the following attributes:
 
 
 
-## Using GetDomainRecord
+## Using GetDomainRecord {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -224,7 +224,7 @@ The following arguments are supported:
 
 
 
-## GetDomainRecord Result
+## GetDomainRecord Result {#result}
 
 The following output properties are available:
 

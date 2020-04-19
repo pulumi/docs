@@ -30,7 +30,7 @@ const region = pulumi.output(linode.getRegion({
 
 
 
-## Using GetRegion
+## Using GetRegion {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -160,7 +160,7 @@ The following arguments are supported:
 
 
 
-## GetRegion Result
+## GetRegion Result {#result}
 
 The following output properties are available:
 

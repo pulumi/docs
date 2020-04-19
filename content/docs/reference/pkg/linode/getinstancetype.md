@@ -49,7 +49,7 @@ The Linode Instance Type resource exports the following attributes:
 
 
 
-## Using GetInstanceType
+## Using GetInstanceType {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -183,7 +183,7 @@ The following arguments are supported:
 
 
 
-## GetInstanceType Result
+## GetInstanceType Result {#result}
 
 The following output properties are available:
 
@@ -546,7 +546,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Instance<wbr>Type<wbr>Addons</h4>
+
+<h4 id="getinstancetypeaddons">Get<wbr>Instance<wbr>Type<wbr>Addons</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#GetInstanceTypeAddons">output</a> API doc for this type.
 {{% /choosable %}}
@@ -621,7 +622,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Instance<wbr>Type<wbr>Addons<wbr>Backups</h4>
+<h4 id="getinstancetypeaddonsbackups">Get<wbr>Instance<wbr>Type<wbr>Addons<wbr>Backups</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#GetInstanceTypeAddonsBackups">output</a> API doc for this type.
 {{% /choosable %}}
@@ -696,7 +697,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Instance<wbr>Type<wbr>Addons<wbr>Backups<wbr>Price</h4>
+<h4 id="getinstancetypeaddonsbackupsprice">Get<wbr>Instance<wbr>Type<wbr>Addons<wbr>Backups<wbr>Price</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#GetInstanceTypeAddonsBackupsPrice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -803,7 +804,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Instance<wbr>Type<wbr>Price</h4>
+<h4 id="getinstancetypeprice">Get<wbr>Instance<wbr>Type<wbr>Price</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/linode/types/output/#GetInstanceTypePrice">output</a> API doc for this type.
 {{% /choosable %}}

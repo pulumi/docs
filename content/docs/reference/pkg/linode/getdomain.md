@@ -64,7 +64,7 @@ The Linode Domain resource exports the following attributes:
 
 
 
-## Using GetDomain
+## Using GetDomain {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -202,7 +202,7 @@ The following arguments are supported:
 
 
 
-## GetDomain Result
+## GetDomain Result {#result}
 
 The following output properties are available:
 
