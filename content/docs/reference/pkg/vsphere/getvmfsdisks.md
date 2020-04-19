@@ -42,7 +42,7 @@ const available = host.apply(host => vsphere.getVmfsDisks({
 
 
 
-## Using GetVmfsDisks
+## Using GetVmfsDisks {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -232,7 +232,7 @@ search. Default: `false`.
 
 
 
-## GetVmfsDisks Result
+## GetVmfsDisks Result {#result}
 
 The following output properties are available:
 

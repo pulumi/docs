@@ -30,7 +30,7 @@ const folder = pulumi.output(vsphere.getFolder({
 
 
 
-## Using GetFolder
+## Using GetFolder {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -128,7 +128,7 @@ The following arguments are supported:
 
 
 
-## GetFolder Result
+## GetFolder Result {#result}
 
 The following output properties are available:
 

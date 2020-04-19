@@ -37,7 +37,7 @@ const datastore = datacenter.apply(datacenter => vsphere.getDatastore({
 
 
 
-## Using GetDatastore
+## Using GetDatastore {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -191,7 +191,7 @@ data source.
 
 
 
-## GetDatastore Result
+## GetDatastore Result {#result}
 
 The following output properties are available:
 

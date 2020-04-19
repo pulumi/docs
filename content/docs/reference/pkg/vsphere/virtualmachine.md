@@ -12,7 +12,7 @@ block_external_search_index: true
 
 
 
-## Create a VirtualMachine Resource
+## Create a VirtualMachine Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -102,7 +102,7 @@ block_external_search_index: true
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -179,7 +179,7 @@ block_external_search_index: true
 
 {{% /choosable %}}
 
-## VirtualMachine Resource Properties
+## VirtualMachine Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -2952,9 +2952,7 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the VirtualMachine resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the VirtualMachine resource produces the following output properties:
 
 
 
@@ -2994,6 +2992,14 @@ on the virtual machine, or if the VM is powered off, this list will be empty.
 * `moid`: The [managed object reference ID][docs-about-morefs] of the created
 virtual machine.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -3108,6 +3114,14 @@ virtual machine.
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Imported</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
@@ -3216,6 +3230,14 @@ on the virtual machine, or if the VM is powered off, this list will be empty.
 * `moid`: The [managed object reference ID][docs-about-morefs] of the created
 virtual machine.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -3330,6 +3352,14 @@ virtual machine.
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>imported</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3408,8 +3438,7 @@ datastore.
 
 
 
-
-## Look up an Existing VirtualMachine Resource
+## Look up an Existing VirtualMachine Resource {#look-up}
 
 Get an existing VirtualMachine resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -6712,7 +6741,8 @@ instead. A value less than 1 disables the waiter. Default: 5 minutes.
 
 ## Supporting Types
 
-<h4>Virtual<wbr>Machine<wbr>Cdrom</h4>
+
+<h4 id="virtualmachinecdrom">Virtual<wbr>Machine<wbr>Cdrom</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineCdrom">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#VirtualMachineCdrom">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6943,7 +6973,7 @@ ISO. Conflicts with `client_device`.
 
 
 
-<h4>Virtual<wbr>Machine<wbr>Clone</h4>
+<h4 id="virtualmachineclone">Virtual<wbr>Machine<wbr>Clone</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineClone">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#VirtualMachineClone">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7178,7 +7208,7 @@ ISO. Conflicts with `client_device`.
 
 
 
-<h4>Virtual<wbr>Machine<wbr>Clone<wbr>Customize</h4>
+<h4 id="virtualmachineclonecustomize">Virtual<wbr>Machine<wbr>Clone<wbr>Customize</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineCloneCustomize">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#VirtualMachineCloneCustomize">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7521,7 +7551,7 @@ below.
 
 
 
-<h4>Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Linux<wbr>Options</h4>
+<h4 id="virtualmachineclonecustomizelinuxoptions">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Linux<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineCloneCustomizeLinuxOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#VirtualMachineCloneCustomizeLinuxOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7692,7 +7722,7 @@ below.
 
 
 
-<h4>Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Network<wbr>Interface</h4>
+<h4 id="virtualmachineclonecustomizenetworkinterface">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Network<wbr>Interface</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineCloneCustomizeNetworkInterface">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#VirtualMachineCloneCustomizeNetworkInterface">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7890,17 +7920,17 @@ below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv4_<wbr>address</span>
+        <span>ipv4Netmask</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>ipv4Netmask</span>
+        <span>ipv4_<wbr>address</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -7927,7 +7957,7 @@ below.
 
 
 
-<h4>Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Windows<wbr>Options</h4>
+<h4 id="virtualmachineclonecustomizewindowsoptions">Virtual<wbr>Machine<wbr>Clone<wbr>Customize<wbr>Windows<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineCloneCustomizeWindowsOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#VirtualMachineCloneCustomizeWindowsOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8386,7 +8416,7 @@ below.
 
 
 
-<h4>Virtual<wbr>Machine<wbr>Disk</h4>
+<h4 id="virtualmachinedisk">Virtual<wbr>Machine<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineDisk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#VirtualMachineDisk">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9333,7 +9363,7 @@ directly to the filesystem immediately instead of being buffered. Default:
 
 
 
-<h4>Virtual<wbr>Machine<wbr>Network<wbr>Interface</h4>
+<h4 id="virtualmachinenetworkinterface">Virtual<wbr>Machine<wbr>Network<wbr>Interface</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineNetworkInterface">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#VirtualMachineNetworkInterface">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9820,7 +9850,7 @@ a static MAC address and set accordingly. Setting this to `true` requires
 
 
 
-<h4>Virtual<wbr>Machine<wbr>Vapp</h4>
+<h4 id="virtualmachinevapp">Virtual<wbr>Machine<wbr>Vapp</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#VirtualMachineVapp">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#VirtualMachineVapp">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9899,7 +9929,7 @@ a static MAC address and set accordingly. Setting this to `true` requires
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-vsphere">https://github.com/pulumi/pulumi-vsphere</a></dd>

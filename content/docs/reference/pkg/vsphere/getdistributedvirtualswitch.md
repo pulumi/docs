@@ -11,7 +11,7 @@ block_external_search_index: true
 
 
 
-## Using GetDistributedVirtualSwitch
+## Using GetDistributedVirtualSwitch {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -169,7 +169,7 @@ source.
 
 
 
-## GetDistributedVirtualSwitch Result
+## GetDistributedVirtualSwitch Result {#result}
 
 The following output properties are available:
 

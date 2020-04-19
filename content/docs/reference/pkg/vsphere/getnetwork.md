@@ -11,7 +11,7 @@ block_external_search_index: true
 
 
 
-## Using GetNetwork
+## Using GetNetwork {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -213,7 +213,7 @@ Distributed virtual switch ID.
 
 
 
-## GetNetwork Result
+## GetNetwork Result {#result}
 
 The following output properties are available:
 

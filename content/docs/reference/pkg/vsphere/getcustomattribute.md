@@ -11,7 +11,7 @@ block_external_search_index: true
 
 
 
-## Using GetCustomAttribute
+## Using GetCustomAttribute {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -113,7 +113,7 @@ The following arguments are supported:
 
 
 
-## GetCustomAttribute Result
+## GetCustomAttribute Result {#result}
 
 The following output properties are available:
 

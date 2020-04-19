@@ -42,7 +42,7 @@ const datastoreCluster = vsphere_datacenter_dc.id.apply(id => vsphere.getDatasto
 
 
 
-## Using GetDatastoreCluster
+## Using GetDatastoreCluster {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -196,7 +196,7 @@ For default datacenters, use the id attribute from an empty
 
 
 
-## GetDatastoreCluster Result
+## GetDatastoreCluster Result {#result}
 
 The following output properties are available:
 

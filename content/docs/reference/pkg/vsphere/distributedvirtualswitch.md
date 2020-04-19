@@ -12,7 +12,7 @@ block_external_search_index: true
 
 
 
-## Create a DistributedVirtualSwitch Resource
+## Create a DistributedVirtualSwitch Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -102,7 +102,7 @@ block_external_search_index: true
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -179,7 +179,7 @@ block_external_search_index: true
 
 {{% /choosable %}}
 
-## DistributedVirtualSwitch Resource Properties
+## DistributedVirtualSwitch Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -3680,9 +3680,7 @@ below:
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the DistributedVirtualSwitch resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the DistributedVirtualSwitch resource produces the following output properties:
 
 
 
@@ -3698,6 +3696,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The version string of the configuration that this spec is trying to change.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3715,6 +3721,14 @@ The following output properties are available:
     <dd>{{% md %}}The version string of the configuration that this spec is trying to change.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -3730,6 +3744,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The version string of the configuration that this spec is trying to change.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -3747,6 +3769,14 @@ The following output properties are available:
     <dd>{{% md %}}The version string of the configuration that this spec is trying to change.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -3756,8 +3786,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing DistributedVirtualSwitch Resource
+## Look up an Existing DistributedVirtualSwitch Resource {#look-up}
 
 Get an existing DistributedVirtualSwitch resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -7408,7 +7437,8 @@ below:
 
 ## Supporting Types
 
-<h4>Distributed<wbr>Virtual<wbr>Switch<wbr>Host</h4>
+
+<h4 id="distributedvirtualswitchhost">Distributed<wbr>Virtual<wbr>Switch<wbr>Host</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#DistributedVirtualSwitchHost">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#DistributedVirtualSwitchHost">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7531,7 +7561,7 @@ DVS.
 
 
 
-<h4>Distributed<wbr>Virtual<wbr>Switch<wbr>Vlan<wbr>Range</h4>
+<h4 id="distributedvirtualswitchvlanrange">Distributed<wbr>Virtual<wbr>Switch<wbr>Vlan<wbr>Range</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#DistributedVirtualSwitchVlanRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#DistributedVirtualSwitchVlanRange">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7642,7 +7672,7 @@ DVS.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-vsphere">https://github.com/pulumi/pulumi-vsphere</a></dd>

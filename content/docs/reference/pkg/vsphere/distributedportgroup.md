@@ -148,7 +148,7 @@ const pg = new vsphere.DistributedPortGroup("pg", {
 
 
 
-## Create a DistributedPortGroup Resource
+## Create a DistributedPortGroup Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -238,7 +238,7 @@ const pg = new vsphere.DistributedPortGroup("pg", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -315,7 +315,7 @@ const pg = new vsphere.DistributedPortGroup("pg", {
 
 {{% /choosable %}}
 
-## DistributedPortGroup Resource Properties
+## DistributedPortGroup Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -2124,9 +2124,7 @@ on this port group to be overridden on an individual port.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the DistributedPortGroup resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the DistributedPortGroup resource produces the following output properties:
 
 
 
@@ -2142,6 +2140,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Version string of the configuration that this spec is trying to change.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2170,6 +2176,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -2192,6 +2206,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Version string of the configuration that this spec is trying to change.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2220,6 +2242,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2236,8 +2266,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing DistributedPortGroup Resource
+## Look up an Existing DistributedPortGroup Resource {#look-up}
 
 Get an existing DistributedPortGroup resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -4232,7 +4261,8 @@ on this port group to be overridden on an individual port.
 
 ## Supporting Types
 
-<h4>Distributed<wbr>Port<wbr>Group<wbr>Vlan<wbr>Range</h4>
+
+<h4 id="distributedportgroupvlanrange">Distributed<wbr>Port<wbr>Group<wbr>Vlan<wbr>Range</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/input/#DistributedPortGroupVlanRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#DistributedPortGroupVlanRange">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4343,7 +4373,7 @@ on this port group to be overridden on an individual port.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-vsphere">https://github.com/pulumi/pulumi-vsphere</a></dd>

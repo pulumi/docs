@@ -33,7 +33,7 @@ const datacenter = pulumi.output(vsphere.getDatacenter({
 
 
 
-## Using GetDatacenter
+## Using GetDatacenter {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -139,7 +139,7 @@ Can be omitted if there is only one datacenter in your inventory.
 
 
 
-## GetDatacenter Result
+## GetDatacenter Result {#result}
 
 The following output properties are available:
 
