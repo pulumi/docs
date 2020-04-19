@@ -12,7 +12,7 @@ block_external_search_index: true
 PersistentVolumeList is a list of PersistentVolume items.
 
 
-## Create a PersistentVolumeList Resource
+## Create a PersistentVolumeList Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -102,7 +102,7 @@ PersistentVolumeList is a list of PersistentVolume items.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -179,7 +179,7 @@ PersistentVolumeList is a list of PersistentVolume items.
 
 {{% /choosable %}}
 
-## PersistentVolumeList Resource Properties
+## PersistentVolumeList Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -288,7 +288,72 @@ The PersistentVolumeList resource accepts the following [input]({{< relref "/doc
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The PersistentVolumeList resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the PersistentVolumeList resource produces the following output properties:
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 
@@ -299,7 +364,8 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 ## Supporting Types
 
-<h4>AWSElastic<wbr>Block<wbr>Store<wbr>Volume<wbr>Source</h4>
+
+<h4 id="awselasticblockstorevolumesource">AWSElastic<wbr>Block<wbr>Store<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#AWSElasticBlockStoreVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#AWSElasticBlockStoreVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -470,7 +536,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>Azure<wbr>Disk<wbr>Volume<wbr>Source</h4>
+<h4 id="azurediskvolumesource">Azure<wbr>Disk<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#AzureDiskVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#AzureDiskVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -673,7 +739,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>Azure<wbr>File<wbr>Persistent<wbr>Volume<wbr>Source</h4>
+<h4 id="azurefilepersistentvolumesource">Azure<wbr>File<wbr>Persistent<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#AzureFilePersistentVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#AzureFilePersistentVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -844,7 +910,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>CSIPersistent<wbr>Volume<wbr>Source</h4>
+<h4 id="csipersistentvolumesource">CSIPersistent<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CSIPersistentVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CSIPersistentVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1175,7 +1241,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>Ceph<wbr>FSPersistent<wbr>Volume<wbr>Source</h4>
+<h4 id="cephfspersistentvolumesource">Ceph<wbr>FSPersistent<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CephFSPersistentVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CephFSPersistentVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1410,7 +1476,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>Cinder<wbr>Persistent<wbr>Volume<wbr>Source</h4>
+<h4 id="cinderpersistentvolumesource">Cinder<wbr>Persistent<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CinderPersistentVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CinderPersistentVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1581,7 +1647,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>FCVolume<wbr>Source</h4>
+<h4 id="fcvolumesource">FCVolume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#FCVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#FCVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1784,7 +1850,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>Flex<wbr>Persistent<wbr>Volume<wbr>Source</h4>
+<h4 id="flexpersistentvolumesource">Flex<wbr>Persistent<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#FlexPersistentVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#FlexPersistentVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1987,7 +2053,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>Flocker<wbr>Volume<wbr>Source</h4>
+<h4 id="flockervolumesource">Flocker<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#FlockerVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#FlockerVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2094,7 +2160,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>GCEPersistent<wbr>Disk<wbr>Volume<wbr>Source</h4>
+<h4 id="gcepersistentdiskvolumesource">GCEPersistent<wbr>Disk<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#GCEPersistentDiskVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#GCEPersistentDiskVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2265,7 +2331,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>Glusterfs<wbr>Persistent<wbr>Volume<wbr>Source</h4>
+<h4 id="glusterfspersistentvolumesource">Glusterfs<wbr>Persistent<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#GlusterfsPersistentVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#GlusterfsPersistentVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2436,7 +2502,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>Host<wbr>Path<wbr>Volume<wbr>Source</h4>
+<h4 id="hostpathvolumesource">Host<wbr>Path<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#HostPathVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HostPathVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2543,7 +2609,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>ISCSIPersistent<wbr>Volume<wbr>Source</h4>
+<h4 id="iscsipersistentvolumesource">ISCSIPersistent<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ISCSIPersistentVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ISCSIPersistentVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2938,7 +3004,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>List<wbr>Meta</h4>
+<h4 id="listmeta">List<wbr>Meta</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ListMeta">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3117,7 +3183,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 
 
-<h4>Local<wbr>Volume<wbr>Source</h4>
+<h4 id="localvolumesource">Local<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#LocalVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#LocalVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3224,7 +3290,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 
 
-<h4>Managed<wbr>Fields<wbr>Entry</h4>
+<h4 id="managedfieldsentry">Managed<wbr>Fields<wbr>Entry</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ManagedFieldsEntry">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ManagedFieldsEntry">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3427,7 +3493,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 
 
-<h4>NFSVolume<wbr>Source</h4>
+<h4 id="nfsvolumesource">NFSVolume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NFSVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NFSVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3566,7 +3632,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 
 
-<h4>Node<wbr>Selector</h4>
+<h4 id="nodeselector">Node<wbr>Selector</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NodeSelector">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NodeSelector">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3641,7 +3707,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 
 
-<h4>Node<wbr>Selector<wbr>Requirement</h4>
+<h4 id="nodeselectorrequirement">Node<wbr>Selector<wbr>Requirement</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NodeSelectorRequirement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NodeSelectorRequirement">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3780,7 +3846,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 
 
-<h4>Node<wbr>Selector<wbr>Term</h4>
+<h4 id="nodeselectorterm">Node<wbr>Selector<wbr>Term</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NodeSelectorTerm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NodeSelectorTerm">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3887,7 +3953,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 
 
-<h4>Object<wbr>Meta</h4>
+<h4 id="objectmeta">Object<wbr>Meta</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4506,7 +4572,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Object<wbr>Reference</h4>
+<h4 id="objectreference">Object<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4709,7 +4775,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Owner<wbr>Reference</h4>
+<h4 id="ownerreference">Owner<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#OwnerReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#OwnerReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4880,7 +4946,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Persistent<wbr>Volume</h4>
+<h4 id="persistentvolume">Persistent<wbr>Volume</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PersistentVolume">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PersistentVolume">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5019,7 +5085,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Persistent<wbr>Volume<wbr>Spec</h4>
+<h4 id="persistentvolumespec">Persistent<wbr>Volume<wbr>Spec</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PersistentVolumeSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PersistentVolumeSpec">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6022,7 +6088,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Persistent<wbr>Volume<wbr>Status</h4>
+<h4 id="persistentvolumestatus">Persistent<wbr>Volume<wbr>Status</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PersistentVolumeStatus">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PersistentVolumeStatus">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6161,7 +6227,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Photon<wbr>Persistent<wbr>Disk<wbr>Volume<wbr>Source</h4>
+<h4 id="photonpersistentdiskvolumesource">Photon<wbr>Persistent<wbr>Disk<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PhotonPersistentDiskVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PhotonPersistentDiskVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6268,7 +6334,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Portworx<wbr>Volume<wbr>Source</h4>
+<h4 id="portworxvolumesource">Portworx<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PortworxVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PortworxVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6407,7 +6473,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Quobyte<wbr>Volume<wbr>Source</h4>
+<h4 id="quobytevolumesource">Quobyte<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#QuobyteVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#QuobyteVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6642,7 +6708,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>RBDPersistent<wbr>Volume<wbr>Source</h4>
+<h4 id="rbdpersistentvolumesource">RBDPersistent<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#RBDPersistentVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#RBDPersistentVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6941,7 +7007,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Scale<wbr>IOPersistent<wbr>Volume<wbr>Source</h4>
+<h4 id="scaleiopersistentvolumesource">Scale<wbr>IOPersistent<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ScaleIOPersistentVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ScaleIOPersistentVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7304,7 +7370,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Secret<wbr>Reference</h4>
+<h4 id="secretreference">Secret<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#SecretReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#SecretReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7411,7 +7477,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Storage<wbr>OSPersistent<wbr>Volume<wbr>Source</h4>
+<h4 id="storageospersistentvolumesource">Storage<wbr>OSPersistent<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#StorageOSPersistentVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#StorageOSPersistentVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7614,7 +7680,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Volume<wbr>Node<wbr>Affinity</h4>
+<h4 id="volumenodeaffinity">Volume<wbr>Node<wbr>Affinity</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#VolumeNodeAffinity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#VolumeNodeAffinity">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7689,7 +7755,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Vsphere<wbr>Virtual<wbr>Disk<wbr>Volume<wbr>Source</h4>
+<h4 id="vspherevirtualdiskvolumesource">Vsphere<wbr>Virtual<wbr>Disk<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#VsphereVirtualDiskVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#VsphereVirtualDiskVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7864,7 +7930,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-kubernetes">https://github.com/pulumi/pulumi-kubernetes</a></dd>

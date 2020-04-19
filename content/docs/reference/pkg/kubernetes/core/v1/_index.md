@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="binding" title="Binding"><span class="symbol resource"></span>Binding</a></li>
     <li><a href="componentstatus" title="ComponentStatus"><span class="symbol resource"></span>ComponentStatus</a></li>
@@ -45,7 +45,7 @@ block_external_search_index: true
     <li><a href="servicelist" title="ServiceList"><span class="symbol resource"></span>ServiceList</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-kubernetes">https://github.com/pulumi/pulumi-kubernetes</a></dd>

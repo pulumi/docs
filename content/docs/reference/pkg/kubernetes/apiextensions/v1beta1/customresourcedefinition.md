@@ -12,7 +12,7 @@ block_external_search_index: true
 CustomResourceDefinition represents a resource that should be exposed on the API server.  Its name MUST be in the format <.spec.name>.<.spec.group>. Deprecated in v1.16, planned for removal in v1.19. Use apiextensions.k8s.io/v1 CustomResourceDefinition instead.
 
 
-## Create a CustomResourceDefinition Resource
+## Create a CustomResourceDefinition Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -102,7 +102,7 @@ CustomResourceDefinition represents a resource that should be exposed on the API
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -179,7 +179,7 @@ CustomResourceDefinition represents a resource that should be exposed on the API
 
 {{% /choosable %}}
 
-## CustomResourceDefinition Resource Properties
+## CustomResourceDefinition Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -288,15 +288,21 @@ The CustomResourceDefinition resource accepts the following [input]({{< relref "
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the CustomResourceDefinition resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the CustomResourceDefinition resource produces the following output properties:
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -315,6 +321,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitionstatus">Custom<wbr>Resource<wbr>Definition<wbr>Status</a></span>
@@ -330,6 +344,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#customresourcedefinitionstatus">Custom<wbr>Resource<wbr>Definition<wbr>Status</a></span>
@@ -342,6 +364,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -364,10 +394,10 @@ The following output properties are available:
 
 
 
-
 ## Supporting Types
 
-<h4>Custom<wbr>Resource<wbr>Column<wbr>Definition</h4>
+
+<h4 id="customresourcecolumndefinition">Custom<wbr>Resource<wbr>Column<wbr>Definition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CustomResourceColumnDefinition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceColumnDefinition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -384,14 +414,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>JSONPath</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}JSONPath is a simple JSON path (i.e. with array notation) which is evaluated against each custom resource to produce the value for this column.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -405,6 +427,14 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}format is an optional OpenAPI type definition for this column. The 'name' format is applied to the primary identifier column to assist in clients identifying column is the resource name. See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types for details.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>JSONPath</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}JSONPath is a simple JSON path (i.e. with array notation) which is evaluated against each custom resource to produce the value for this column.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -439,14 +469,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>JSONPath</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}JSONPath is a simple JSON path (i.e. with array notation) which is evaluated against each custom resource to produce the value for this column.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Description</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -460,6 +482,14 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}format is an optional OpenAPI type definition for this column. The 'name' format is applied to the primary identifier column to assist in clients identifying column is the resource name. See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types for details.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>JSONPath</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}JSONPath is a simple JSON path (i.e. with array notation) which is evaluated against each custom resource to produce the value for this column.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -549,14 +579,6 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span>json_<wbr>path</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}JSONPath is a simple JSON path (i.e. with array notation) which is evaluated against each custom resource to produce the value for this column.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>description</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -570,6 +592,14 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}format is an optional OpenAPI type definition for this column. The 'name' format is applied to the primary identifier column to assist in clients identifying column is the resource name. See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types for details.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>json_<wbr>path</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}JSONPath is a simple JSON path (i.e. with array notation) which is evaluated against each custom resource to produce the value for this column.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -602,7 +632,7 @@ The following output properties are available:
 
 
 
-<h4>Custom<wbr>Resource<wbr>Conversion</h4>
+<h4 id="customresourceconversion">Custom<wbr>Resource<wbr>Conversion</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CustomResourceConversion">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceConversion">output</a> API doc for this type.
 {{% /choosable %}}
@@ -745,7 +775,7 @@ The following output properties are available:
 
 
 
-<h4>Custom<wbr>Resource<wbr>Definition<wbr>Condition</h4>
+<h4 id="customresourcedefinitioncondition">Custom<wbr>Resource<wbr>Definition<wbr>Condition</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceDefinitionCondition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -948,7 +978,7 @@ The following output properties are available:
 
 
 
-<h4>Custom<wbr>Resource<wbr>Definition<wbr>Names</h4>
+<h4 id="customresourcedefinitionnames">Custom<wbr>Resource<wbr>Definition<wbr>Names</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CustomResourceDefinitionNames">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceDefinitionNames">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1151,7 +1181,7 @@ The following output properties are available:
 
 
 
-<h4>Custom<wbr>Resource<wbr>Definition<wbr>Spec</h4>
+<h4 id="customresourcedefinitionspec">Custom<wbr>Resource<wbr>Definition<wbr>Spec</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CustomResourceDefinitionSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceDefinitionSpec">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1514,7 +1544,7 @@ The following output properties are available:
 
 
 
-<h4>Custom<wbr>Resource<wbr>Definition<wbr>Status</h4>
+<h4 id="customresourcedefinitionstatus">Custom<wbr>Resource<wbr>Definition<wbr>Status</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceDefinitionStatus">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1653,7 +1683,7 @@ The following output properties are available:
 
 
 
-<h4>Custom<wbr>Resource<wbr>Definition<wbr>Version</h4>
+<h4 id="customresourcedefinitionversion">Custom<wbr>Resource<wbr>Definition<wbr>Version</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CustomResourceDefinitionVersion">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceDefinitionVersion">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1888,7 +1918,7 @@ The following output properties are available:
 
 
 
-<h4>Custom<wbr>Resource<wbr>Subresource<wbr>Scale</h4>
+<h4 id="customresourcesubresourcescale">Custom<wbr>Resource<wbr>Subresource<wbr>Scale</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CustomResourceSubresourceScale">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceSubresourceScale">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2027,7 +2057,7 @@ The following output properties are available:
 
 
 
-<h4>Custom<wbr>Resource<wbr>Subresources</h4>
+<h4 id="customresourcesubresources">Custom<wbr>Resource<wbr>Subresources</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CustomResourceSubresources">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceSubresources">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2134,7 +2164,7 @@ The following output properties are available:
 
 
 
-<h4>Custom<wbr>Resource<wbr>Validation</h4>
+<h4 id="customresourcevalidation">Custom<wbr>Resource<wbr>Validation</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CustomResourceValidation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CustomResourceValidation">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2209,7 +2239,7 @@ The following output properties are available:
 
 
 
-<h4>External<wbr>Documentation</h4>
+<h4 id="externaldocumentation">External<wbr>Documentation</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ExternalDocumentation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ExternalDocumentation">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2316,7 +2346,7 @@ The following output properties are available:
 
 
 
-<h4>JSONSchema<wbr>Props</h4>
+<h4 id="jsonschemaprops">JSONSchema<wbr>Props</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#JSONSchemaProps">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#JSONSchemaProps">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3875,7 +3905,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
 
 
-<h4>Managed<wbr>Fields<wbr>Entry</h4>
+<h4 id="managedfieldsentry">Managed<wbr>Fields<wbr>Entry</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ManagedFieldsEntry">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ManagedFieldsEntry">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4078,7 +4108,7 @@ Defaults to atomic for arrays.{{% /md %}}</dd>
 
 
 
-<h4>Object<wbr>Meta</h4>
+<h4 id="objectmeta">Object<wbr>Meta</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4697,7 +4727,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Owner<wbr>Reference</h4>
+<h4 id="ownerreference">Owner<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#OwnerReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#OwnerReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4868,7 +4898,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Service<wbr>Reference</h4>
+<h4 id="servicereference">Service<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ServiceReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ServiceReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5039,7 +5069,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Webhook<wbr>Client<wbr>Config</h4>
+<h4 id="webhookclientconfig">Webhook<wbr>Client<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#WebhookClientConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#WebhookClientConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5230,7 +5260,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-kubernetes">https://github.com/pulumi/pulumi-kubernetes</a></dd>

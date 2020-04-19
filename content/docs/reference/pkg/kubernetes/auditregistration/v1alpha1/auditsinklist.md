@@ -12,7 +12,7 @@ block_external_search_index: true
 AuditSinkList is a list of AuditSink items.
 
 
-## Create a AuditSinkList Resource
+## Create a AuditSinkList Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -102,7 +102,7 @@ AuditSinkList is a list of AuditSink items.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -179,7 +179,7 @@ AuditSinkList is a list of AuditSink items.
 
 {{% /choosable %}}
 
-## AuditSinkList Resource Properties
+## AuditSinkList Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -288,7 +288,72 @@ The AuditSinkList resource accepts the following [input]({{< relref "/docs/intro
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The AuditSinkList resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the AuditSinkList resource produces the following output properties:
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 
@@ -299,7 +364,8 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 ## Supporting Types
 
-<h4>Audit<wbr>Sink</h4>
+
+<h4 id="auditsink">Audit<wbr>Sink</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#AuditSink">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#AuditSink">output</a> API doc for this type.
 {{% /choosable %}}
@@ -406,7 +472,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>Audit<wbr>Sink<wbr>Spec</h4>
+<h4 id="auditsinkspec">Audit<wbr>Sink<wbr>Spec</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#AuditSinkSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#AuditSinkSpec">output</a> API doc for this type.
 {{% /choosable %}}
@@ -513,7 +579,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>List<wbr>Meta</h4>
+<h4 id="listmeta">List<wbr>Meta</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ListMeta">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta">output</a> API doc for this type.
 {{% /choosable %}}
@@ -692,7 +758,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 
 
-<h4>Managed<wbr>Fields<wbr>Entry</h4>
+<h4 id="managedfieldsentry">Managed<wbr>Fields<wbr>Entry</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ManagedFieldsEntry">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ManagedFieldsEntry">output</a> API doc for this type.
 {{% /choosable %}}
@@ -895,7 +961,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 
 
-<h4>Object<wbr>Meta</h4>
+<h4 id="objectmeta">Object<wbr>Meta</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1514,7 +1580,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Owner<wbr>Reference</h4>
+<h4 id="ownerreference">Owner<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#OwnerReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#OwnerReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1685,7 +1751,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Policy</h4>
+<h4 id="policy">Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Policy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Policy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1792,7 +1858,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Service<wbr>Reference</h4>
+<h4 id="servicereference">Service<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ServiceReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ServiceReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1963,7 +2029,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Webhook</h4>
+<h4 id="webhook">Webhook</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Webhook">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Webhook">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2070,7 +2136,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Webhook<wbr>Client<wbr>Config</h4>
+<h4 id="webhookclientconfig">Webhook<wbr>Client<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#WebhookClientConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#WebhookClientConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2257,7 +2323,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 
 
 
-<h4>Webhook<wbr>Throttle<wbr>Config</h4>
+<h4 id="webhookthrottleconfig">Webhook<wbr>Throttle<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#WebhookThrottleConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#WebhookThrottleConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2368,7 +2434,7 @@ Attempting to use a user or basic auth e.g. "user:password@" is not allowed. Fra
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-kubernetes">https://github.com/pulumi/pulumi-kubernetes</a></dd>

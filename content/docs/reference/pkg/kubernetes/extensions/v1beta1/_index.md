@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="daemonset" title="DaemonSet"><span class="symbol resource"></span>DaemonSet</a></li>
     <li><a href="daemonsetlist" title="DaemonSetList"><span class="symbol resource"></span>DaemonSetList</a></li>
@@ -24,7 +24,7 @@ block_external_search_index: true
     <li><a href="replicasetlist" title="ReplicaSetList"><span class="symbol resource"></span>ReplicaSetList</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-kubernetes">https://github.com/pulumi/pulumi-kubernetes</a></dd>

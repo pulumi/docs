@@ -12,7 +12,7 @@ block_external_search_index: true
 NodeList is the whole list of all Nodes which have been registered with master.
 
 
-## Create a NodeList Resource
+## Create a NodeList Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -102,7 +102,7 @@ NodeList is the whole list of all Nodes which have been registered with master.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -179,7 +179,7 @@ NodeList is the whole list of all Nodes which have been registered with master.
 
 {{% /choosable %}}
 
-## NodeList Resource Properties
+## NodeList Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -288,7 +288,72 @@ The NodeList resource accepts the following [input]({{< relref "/docs/intro/conc
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The NodeList resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the NodeList resource produces the following output properties:
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 
@@ -299,7 +364,8 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 ## Supporting Types
 
-<h4>Attached<wbr>Volume</h4>
+
+<h4 id="attachedvolume">Attached<wbr>Volume</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#AttachedVolume">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#AttachedVolume">output</a> API doc for this type.
 {{% /choosable %}}
@@ -406,7 +472,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>Config<wbr>Map<wbr>Node<wbr>Config<wbr>Source</h4>
+<h4 id="configmapnodeconfigsource">Config<wbr>Map<wbr>Node<wbr>Config<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ConfigMapNodeConfigSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ConfigMapNodeConfigSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -609,7 +675,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>Container<wbr>Image</h4>
+<h4 id="containerimage">Container<wbr>Image</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ContainerImage">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ContainerImage">output</a> API doc for this type.
 {{% /choosable %}}
@@ -716,7 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>Daemon<wbr>Endpoint</h4>
+<h4 id="daemonendpoint">Daemon<wbr>Endpoint</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#DaemonEndpoint">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#DaemonEndpoint">output</a> API doc for this type.
 {{% /choosable %}}
@@ -791,7 +857,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>List<wbr>Meta</h4>
+<h4 id="listmeta">List<wbr>Meta</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ListMeta">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta">output</a> API doc for this type.
 {{% /choosable %}}
@@ -970,7 +1036,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 
 
-<h4>Managed<wbr>Fields<wbr>Entry</h4>
+<h4 id="managedfieldsentry">Managed<wbr>Fields<wbr>Entry</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ManagedFieldsEntry">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ManagedFieldsEntry">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1173,7 +1239,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 
 
-<h4>Node</h4>
+<h4 id="node">Node</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Node">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Node">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1312,7 +1378,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 
 
-<h4>Node<wbr>Address</h4>
+<h4 id="nodeaddress">Node<wbr>Address</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NodeAddress">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NodeAddress">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1419,7 +1485,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 
 
-<h4>Node<wbr>Condition</h4>
+<h4 id="nodecondition">Node<wbr>Condition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NodeCondition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NodeCondition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1654,7 +1720,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 
 
-<h4>Node<wbr>Config<wbr>Source</h4>
+<h4 id="nodeconfigsource">Node<wbr>Config<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NodeConfigSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NodeConfigSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1729,7 +1795,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 
 
-<h4>Node<wbr>Config<wbr>Status</h4>
+<h4 id="nodeconfigstatus">Node<wbr>Config<wbr>Status</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NodeConfigStatus">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NodeConfigStatus">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1900,7 +1966,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 
 
-<h4>Node<wbr>Daemon<wbr>Endpoints</h4>
+<h4 id="nodedaemonendpoints">Node<wbr>Daemon<wbr>Endpoints</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NodeDaemonEndpoints">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NodeDaemonEndpoints">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1975,7 +2041,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 
 
-<h4>Node<wbr>Spec</h4>
+<h4 id="nodespec">Node<wbr>Spec</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NodeSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NodeSpec">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2197,19 +2263,19 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
     <dt class="property-optional"
             title="Optional">
-        <span>pod_<wbr>cidr</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}PodCIDR represents the pod IP range assigned to the node.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>pod_<wbr>cid_<wbr>rs</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}podCIDRs represents the IP ranges assigned to the node for usage by Pods on that node. If this field is specified, the 0th entry must match the podCIDR field. It may contain at most 1 value for each of IPv4 and IPv6.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>pod_<wbr>cidr</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}PodCIDR represents the pod IP range assigned to the node.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2242,7 +2308,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 
 
-<h4>Node<wbr>Status</h4>
+<h4 id="nodestatus">Node<wbr>Status</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NodeStatus">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NodeStatus">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2637,7 +2703,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 
 
-<h4>Node<wbr>System<wbr>Info</h4>
+<h4 id="nodesysteminfo">Node<wbr>System<wbr>Info</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NodeSystemInfo">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NodeSystemInfo">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3000,7 +3066,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 
 
-<h4>Object<wbr>Meta</h4>
+<h4 id="objectmeta">Object<wbr>Meta</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3619,7 +3685,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Owner<wbr>Reference</h4>
+<h4 id="ownerreference">Owner<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#OwnerReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#OwnerReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3790,7 +3856,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Taint</h4>
+<h4 id="taint">Taint</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Taint">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Taint">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3965,7 +4031,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-kubernetes">https://github.com/pulumi/pulumi-kubernetes</a></dd>

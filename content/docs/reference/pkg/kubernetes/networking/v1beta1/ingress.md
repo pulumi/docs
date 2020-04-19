@@ -26,7 +26,7 @@ time out and mark the resource update as Failed. You can override the default ti
 by setting the 'customTimeouts' option on the resource.
 
 
-## Create a Ingress Resource
+## Create a Ingress Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -116,7 +116,7 @@ by setting the 'customTimeouts' option on the resource.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -193,7 +193,7 @@ by setting the 'customTimeouts' option on the resource.
 
 {{% /choosable %}}
 
-## Ingress Resource Properties
+## Ingress Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -302,15 +302,21 @@ The Ingress resource accepts the following [input]({{< relref "/docs/intro/conce
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Ingress resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Ingress resource produces the following output properties:
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -329,6 +335,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ingressstatus">Ingress<wbr>Status</a></span>
@@ -344,6 +358,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#ingressstatus">Ingress<wbr>Status</a></span>
@@ -356,6 +378,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -378,10 +408,10 @@ The following output properties are available:
 
 
 
-
 ## Supporting Types
 
-<h4>HTTPIngress<wbr>Path</h4>
+
+<h4 id="httpingresspath">HTTPIngress<wbr>Path</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#HTTPIngressPath">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HTTPIngressPath">output</a> API doc for this type.
 {{% /choosable %}}
@@ -560,7 +590,7 @@ Implementations are required to support all path types. Defaults to Implementati
 
 
 
-<h4>HTTPIngress<wbr>Rule<wbr>Value</h4>
+<h4 id="httpingressrulevalue">HTTPIngress<wbr>Rule<wbr>Value</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#HTTPIngressRuleValue">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HTTPIngressRuleValue">output</a> API doc for this type.
 {{% /choosable %}}
@@ -635,7 +665,7 @@ Implementations are required to support all path types. Defaults to Implementati
 
 
 
-<h4>Ingress<wbr>Backend</h4>
+<h4 id="ingressbackend">Ingress<wbr>Backend</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#IngressBackend">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#IngressBackend">output</a> API doc for this type.
 {{% /choosable %}}
@@ -774,7 +804,7 @@ Implementations are required to support all path types. Defaults to Implementati
 
 
 
-<h4>Ingress<wbr>Rule</h4>
+<h4 id="ingressrule">Ingress<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#IngressRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#IngressRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -909,7 +939,7 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
 
 
 
-<h4>Ingress<wbr>Spec</h4>
+<h4 id="ingressspec">Ingress<wbr>Spec</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#IngressSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#IngressSpec">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1080,7 +1110,7 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
 
 
 
-<h4>Ingress<wbr>Status</h4>
+<h4 id="ingressstatus">Ingress<wbr>Status</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#IngressStatus">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1155,7 +1185,7 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
 
 
 
-<h4>Ingress<wbr>TLS</h4>
+<h4 id="ingresstls">Ingress<wbr>TLS</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#IngressTLS">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#IngressTLS">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1262,7 +1292,7 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
 
 
 
-<h4>Load<wbr>Balancer<wbr>Ingress</h4>
+<h4 id="loadbalanceringress">Load<wbr>Balancer<wbr>Ingress</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#LoadBalancerIngress">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1369,7 +1399,7 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
 
 
 
-<h4>Load<wbr>Balancer<wbr>Status</h4>
+<h4 id="loadbalancerstatus">Load<wbr>Balancer<wbr>Status</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#LoadBalancerStatus">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1444,7 +1474,7 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
 
 
 
-<h4>Managed<wbr>Fields<wbr>Entry</h4>
+<h4 id="managedfieldsentry">Managed<wbr>Fields<wbr>Entry</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ManagedFieldsEntry">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ManagedFieldsEntry">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1647,7 +1677,7 @@ Host can be "precise" which is a domain name without the terminating dot of a ne
 
 
 
-<h4>Object<wbr>Meta</h4>
+<h4 id="objectmeta">Object<wbr>Meta</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2266,7 +2296,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Owner<wbr>Reference</h4>
+<h4 id="ownerreference">Owner<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#OwnerReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#OwnerReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2437,7 +2467,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Typed<wbr>Local<wbr>Object<wbr>Reference</h4>
+<h4 id="typedlocalobjectreference">Typed<wbr>Local<wbr>Object<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#TypedLocalObjectReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#TypedLocalObjectReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2548,7 +2578,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-kubernetes">https://github.com/pulumi/pulumi-kubernetes</a></dd>

@@ -27,7 +27,7 @@ time out and mark the resource update as Failed. You can override the default ti
 by setting the 'customTimeouts' option on the resource.
 
 
-## Create a Job Resource
+## Create a Job Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -117,7 +117,7 @@ by setting the 'customTimeouts' option on the resource.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -194,7 +194,7 @@ by setting the 'customTimeouts' option on the resource.
 
 {{% /choosable %}}
 
-## Job Resource Properties
+## Job Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -303,15 +303,21 @@ The Job resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Job resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Job resource produces the following output properties:
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -330,6 +336,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstatus">Job<wbr>Status</a></span>
@@ -345,6 +359,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstatus">Job<wbr>Status</a></span>
@@ -357,6 +379,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -379,10 +409,10 @@ The following output properties are available:
 
 
 
-
 ## Supporting Types
 
-<h4>AWSElastic<wbr>Block<wbr>Store<wbr>Volume<wbr>Source</h4>
+
+<h4 id="awselasticblockstorevolumesource">AWSElastic<wbr>Block<wbr>Store<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#AWSElasticBlockStoreVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#AWSElasticBlockStoreVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -553,7 +583,7 @@ The following output properties are available:
 
 
 
-<h4>Affinity</h4>
+<h4 id="affinity">Affinity</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Affinity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Affinity">output</a> API doc for this type.
 {{% /choosable %}}
@@ -692,7 +722,7 @@ The following output properties are available:
 
 
 
-<h4>Azure<wbr>Disk<wbr>Volume<wbr>Source</h4>
+<h4 id="azurediskvolumesource">Azure<wbr>Disk<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#AzureDiskVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#AzureDiskVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -895,7 +925,7 @@ The following output properties are available:
 
 
 
-<h4>Azure<wbr>File<wbr>Volume<wbr>Source</h4>
+<h4 id="azurefilevolumesource">Azure<wbr>File<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#AzureFileVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#AzureFileVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1034,7 +1064,7 @@ The following output properties are available:
 
 
 
-<h4>CSIVolume<wbr>Source</h4>
+<h4 id="csivolumesource">CSIVolume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CSIVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CSIVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1237,7 +1267,7 @@ The following output properties are available:
 
 
 
-<h4>Capabilities</h4>
+<h4 id="capabilities">Capabilities</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Capabilities">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Capabilities">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1344,7 +1374,7 @@ The following output properties are available:
 
 
 
-<h4>Ceph<wbr>FSVolume<wbr>Source</h4>
+<h4 id="cephfsvolumesource">Ceph<wbr>FSVolume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CephFSVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CephFSVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1579,7 +1609,7 @@ The following output properties are available:
 
 
 
-<h4>Cinder<wbr>Volume<wbr>Source</h4>
+<h4 id="cindervolumesource">Cinder<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CinderVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CinderVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1750,7 +1780,7 @@ The following output properties are available:
 
 
 
-<h4>Config<wbr>Map<wbr>Env<wbr>Source</h4>
+<h4 id="configmapenvsource">Config<wbr>Map<wbr>Env<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ConfigMapEnvSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ConfigMapEnvSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1857,7 +1887,7 @@ The following output properties are available:
 
 
 
-<h4>Config<wbr>Map<wbr>Key<wbr>Selector</h4>
+<h4 id="configmapkeyselector">Config<wbr>Map<wbr>Key<wbr>Selector</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ConfigMapKeySelector">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ConfigMapKeySelector">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1996,7 +2026,7 @@ The following output properties are available:
 
 
 
-<h4>Config<wbr>Map<wbr>Projection</h4>
+<h4 id="configmapprojection">Config<wbr>Map<wbr>Projection</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ConfigMapProjection">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ConfigMapProjection">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2135,7 +2165,7 @@ The following output properties are available:
 
 
 
-<h4>Config<wbr>Map<wbr>Volume<wbr>Source</h4>
+<h4 id="configmapvolumesource">Config<wbr>Map<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ConfigMapVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ConfigMapVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2306,7 +2336,7 @@ The following output properties are available:
 
 
 
-<h4>Container</h4>
+<h4 id="container">Container</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Container">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Container">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3053,7 +3083,7 @@ The following output properties are available:
 
 
 
-<h4>Container<wbr>Port</h4>
+<h4 id="containerport">Container<wbr>Port</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ContainerPort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ContainerPort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3256,7 +3286,7 @@ The following output properties are available:
 
 
 
-<h4>Downward<wbr>APIProjection</h4>
+<h4 id="downwardapiprojection">Downward<wbr>APIProjection</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#DownwardAPIProjection">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#DownwardAPIProjection">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3331,7 +3361,7 @@ The following output properties are available:
 
 
 
-<h4>Downward<wbr>APIVolume<wbr>File</h4>
+<h4 id="downwardapivolumefile">Downward<wbr>APIVolume<wbr>File</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#DownwardAPIVolumeFile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#DownwardAPIVolumeFile">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3502,7 +3532,7 @@ The following output properties are available:
 
 
 
-<h4>Downward<wbr>APIVolume<wbr>Source</h4>
+<h4 id="downwardapivolumesource">Downward<wbr>APIVolume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#DownwardAPIVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#DownwardAPIVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3609,7 +3639,7 @@ The following output properties are available:
 
 
 
-<h4>Empty<wbr>Dir<wbr>Volume<wbr>Source</h4>
+<h4 id="emptydirvolumesource">Empty<wbr>Dir<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#EmptyDirVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#EmptyDirVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3716,7 +3746,7 @@ The following output properties are available:
 
 
 
-<h4>Env<wbr>From<wbr>Source</h4>
+<h4 id="envfromsource">Env<wbr>From<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#EnvFromSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#EnvFromSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3855,7 +3885,7 @@ The following output properties are available:
 
 
 
-<h4>Env<wbr>Var</h4>
+<h4 id="envvar">Env<wbr>Var</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#EnvVar">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#EnvVar">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3994,7 +4024,7 @@ The following output properties are available:
 
 
 
-<h4>Env<wbr>Var<wbr>Source</h4>
+<h4 id="envvarsource">Env<wbr>Var<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#EnvVarSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#EnvVarSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4165,7 +4195,7 @@ The following output properties are available:
 
 
 
-<h4>Ephemeral<wbr>Container</h4>
+<h4 id="ephemeralcontainer">Ephemeral<wbr>Container</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#EphemeralContainer">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#EphemeralContainer">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4944,7 +4974,7 @@ The following output properties are available:
 
 
 
-<h4>Exec<wbr>Action</h4>
+<h4 id="execaction">Exec<wbr>Action</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ExecAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ExecAction">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5019,7 +5049,7 @@ The following output properties are available:
 
 
 
-<h4>FCVolume<wbr>Source</h4>
+<h4 id="fcvolumesource">FCVolume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#FCVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#FCVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5222,7 +5252,7 @@ The following output properties are available:
 
 
 
-<h4>Flex<wbr>Volume<wbr>Source</h4>
+<h4 id="flexvolumesource">Flex<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#FlexVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#FlexVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5425,7 +5455,7 @@ The following output properties are available:
 
 
 
-<h4>Flocker<wbr>Volume<wbr>Source</h4>
+<h4 id="flockervolumesource">Flocker<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#FlockerVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#FlockerVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5532,7 +5562,7 @@ The following output properties are available:
 
 
 
-<h4>GCEPersistent<wbr>Disk<wbr>Volume<wbr>Source</h4>
+<h4 id="gcepersistentdiskvolumesource">GCEPersistent<wbr>Disk<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#GCEPersistentDiskVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#GCEPersistentDiskVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5703,7 +5733,7 @@ The following output properties are available:
 
 
 
-<h4>Git<wbr>Repo<wbr>Volume<wbr>Source</h4>
+<h4 id="gitrepovolumesource">Git<wbr>Repo<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#GitRepoVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#GitRepoVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5842,7 +5872,7 @@ The following output properties are available:
 
 
 
-<h4>Glusterfs<wbr>Volume<wbr>Source</h4>
+<h4 id="glusterfsvolumesource">Glusterfs<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#GlusterfsVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#GlusterfsVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5981,7 +6011,7 @@ The following output properties are available:
 
 
 
-<h4>HTTPGet<wbr>Action</h4>
+<h4 id="httpgetaction">HTTPGet<wbr>Action</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#HTTPGetAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HTTPGetAction">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6184,7 +6214,7 @@ The following output properties are available:
 
 
 
-<h4>HTTPHeader</h4>
+<h4 id="httpheader">HTTPHeader</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#HTTPHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HTTPHeader">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6291,7 +6321,7 @@ The following output properties are available:
 
 
 
-<h4>Handler</h4>
+<h4 id="handler">Handler</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Handler">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Handler">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6430,7 +6460,7 @@ The following output properties are available:
 
 
 
-<h4>Host<wbr>Alias</h4>
+<h4 id="hostalias">Host<wbr>Alias</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#HostAlias">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HostAlias">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6537,7 +6567,7 @@ The following output properties are available:
 
 
 
-<h4>Host<wbr>Path<wbr>Volume<wbr>Source</h4>
+<h4 id="hostpathvolumesource">Host<wbr>Path<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#HostPathVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HostPathVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6644,7 +6674,7 @@ The following output properties are available:
 
 
 
-<h4>ISCSIVolume<wbr>Source</h4>
+<h4 id="iscsivolumesource">ISCSIVolume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ISCSIVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ISCSIVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7039,7 +7069,7 @@ The following output properties are available:
 
 
 
-<h4>Job<wbr>Condition</h4>
+<h4 id="jobcondition">Job<wbr>Condition</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#JobCondition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7274,7 +7304,7 @@ The following output properties are available:
 
 
 
-<h4>Job<wbr>Spec</h4>
+<h4 id="jobspec">Job<wbr>Spec</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#JobSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#JobSpec">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7573,7 +7603,7 @@ The following output properties are available:
 
 
 
-<h4>Job<wbr>Status</h4>
+<h4 id="jobstatus">Job<wbr>Status</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#JobStatus">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7808,7 +7838,7 @@ The following output properties are available:
 
 
 
-<h4>Key<wbr>To<wbr>Path</h4>
+<h4 id="keytopath">Key<wbr>To<wbr>Path</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#KeyToPath">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#KeyToPath">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7947,7 +7977,7 @@ The following output properties are available:
 
 
 
-<h4>Label<wbr>Selector</h4>
+<h4 id="labelselector">Label<wbr>Selector</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#LabelSelector">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#LabelSelector">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8054,7 +8084,7 @@ The following output properties are available:
 
 
 
-<h4>Label<wbr>Selector<wbr>Requirement</h4>
+<h4 id="labelselectorrequirement">Label<wbr>Selector<wbr>Requirement</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#LabelSelectorRequirement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#LabelSelectorRequirement">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8193,7 +8223,7 @@ The following output properties are available:
 
 
 
-<h4>Lifecycle</h4>
+<h4 id="lifecycle">Lifecycle</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Lifecycle">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Lifecycle">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8300,7 +8330,7 @@ The following output properties are available:
 
 
 
-<h4>Local<wbr>Object<wbr>Reference</h4>
+<h4 id="localobjectreference">Local<wbr>Object<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#LocalObjectReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#LocalObjectReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8375,7 +8405,7 @@ The following output properties are available:
 
 
 
-<h4>Managed<wbr>Fields<wbr>Entry</h4>
+<h4 id="managedfieldsentry">Managed<wbr>Fields<wbr>Entry</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ManagedFieldsEntry">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ManagedFieldsEntry">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8578,7 +8608,7 @@ The following output properties are available:
 
 
 
-<h4>NFSVolume<wbr>Source</h4>
+<h4 id="nfsvolumesource">NFSVolume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NFSVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NFSVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8717,7 +8747,7 @@ The following output properties are available:
 
 
 
-<h4>Node<wbr>Affinity</h4>
+<h4 id="nodeaffinity">Node<wbr>Affinity</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NodeAffinity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NodeAffinity">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8824,7 +8854,7 @@ The following output properties are available:
 
 
 
-<h4>Node<wbr>Selector</h4>
+<h4 id="nodeselector">Node<wbr>Selector</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NodeSelector">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NodeSelector">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8899,7 +8929,7 @@ The following output properties are available:
 
 
 
-<h4>Node<wbr>Selector<wbr>Requirement</h4>
+<h4 id="nodeselectorrequirement">Node<wbr>Selector<wbr>Requirement</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NodeSelectorRequirement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NodeSelectorRequirement">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9038,7 +9068,7 @@ The following output properties are available:
 
 
 
-<h4>Node<wbr>Selector<wbr>Term</h4>
+<h4 id="nodeselectorterm">Node<wbr>Selector<wbr>Term</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NodeSelectorTerm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NodeSelectorTerm">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9145,7 +9175,7 @@ The following output properties are available:
 
 
 
-<h4>Object<wbr>Field<wbr>Selector</h4>
+<h4 id="objectfieldselector">Object<wbr>Field<wbr>Selector</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectFieldSelector">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectFieldSelector">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9220,7 +9250,7 @@ The following output properties are available:
 
 
 
-<h4>Object<wbr>Meta</h4>
+<h4 id="objectmeta">Object<wbr>Meta</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9839,7 +9869,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Owner<wbr>Reference</h4>
+<h4 id="ownerreference">Owner<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#OwnerReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#OwnerReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10010,7 +10040,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Persistent<wbr>Volume<wbr>Claim<wbr>Volume<wbr>Source</h4>
+<h4 id="persistentvolumeclaimvolumesource">Persistent<wbr>Volume<wbr>Claim<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PersistentVolumeClaimVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PersistentVolumeClaimVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10117,7 +10147,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Photon<wbr>Persistent<wbr>Disk<wbr>Volume<wbr>Source</h4>
+<h4 id="photonpersistentdiskvolumesource">Photon<wbr>Persistent<wbr>Disk<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PhotonPersistentDiskVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PhotonPersistentDiskVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10224,7 +10254,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Pod<wbr>Affinity</h4>
+<h4 id="podaffinity">Pod<wbr>Affinity</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodAffinity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodAffinity">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10331,7 +10361,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Pod<wbr>Affinity<wbr>Term</h4>
+<h4 id="podaffinityterm">Pod<wbr>Affinity<wbr>Term</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodAffinityTerm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodAffinityTerm">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10470,7 +10500,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Pod<wbr>Anti<wbr>Affinity</h4>
+<h4 id="podantiaffinity">Pod<wbr>Anti<wbr>Affinity</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodAntiAffinity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodAntiAffinity">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10577,7 +10607,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Pod<wbr>DNSConfig</h4>
+<h4 id="poddnsconfig">Pod<wbr>DNSConfig</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodDNSConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodDNSConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10716,7 +10746,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Pod<wbr>DNSConfig<wbr>Option</h4>
+<h4 id="poddnsconfigoption">Pod<wbr>DNSConfig<wbr>Option</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodDNSConfigOption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodDNSConfigOption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10823,7 +10853,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Pod<wbr>Readiness<wbr>Gate</h4>
+<h4 id="podreadinessgate">Pod<wbr>Readiness<wbr>Gate</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodReadinessGate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodReadinessGate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10898,7 +10928,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Pod<wbr>Security<wbr>Context</h4>
+<h4 id="podsecuritycontext">Pod<wbr>Security<wbr>Context</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodSecurityContext">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodSecurityContext">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11245,7 +11275,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Pod<wbr>Spec</h4>
+<h4 id="podspec">Pod<wbr>Spec</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodSpec">output</a> API doc for this type.
 {{% /choosable %}}
@@ -12376,7 +12406,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Pod<wbr>Template<wbr>Spec</h4>
+<h4 id="podtemplatespec">Pod<wbr>Template<wbr>Spec</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodTemplateSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodTemplateSpec">output</a> API doc for this type.
 {{% /choosable %}}
@@ -12483,7 +12513,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Portworx<wbr>Volume<wbr>Source</h4>
+<h4 id="portworxvolumesource">Portworx<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PortworxVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PortworxVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -12622,7 +12652,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Preferred<wbr>Scheduling<wbr>Term</h4>
+<h4 id="preferredschedulingterm">Preferred<wbr>Scheduling<wbr>Term</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PreferredSchedulingTerm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PreferredSchedulingTerm">output</a> API doc for this type.
 {{% /choosable %}}
@@ -12729,7 +12759,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Probe</h4>
+<h4 id="probe">Probe</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Probe">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Probe">output</a> API doc for this type.
 {{% /choosable %}}
@@ -13028,7 +13058,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Projected<wbr>Volume<wbr>Source</h4>
+<h4 id="projectedvolumesource">Projected<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ProjectedVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ProjectedVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -13135,7 +13165,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Quobyte<wbr>Volume<wbr>Source</h4>
+<h4 id="quobytevolumesource">Quobyte<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#QuobyteVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#QuobyteVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -13370,7 +13400,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>RBDVolume<wbr>Source</h4>
+<h4 id="rbdvolumesource">RBDVolume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#RBDVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#RBDVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -13669,7 +13699,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Resource<wbr>Field<wbr>Selector</h4>
+<h4 id="resourcefieldselector">Resource<wbr>Field<wbr>Selector</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ResourceFieldSelector">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ResourceFieldSelector">output</a> API doc for this type.
 {{% /choosable %}}
@@ -13808,7 +13838,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Resource<wbr>Requirements</h4>
+<h4 id="resourcerequirements">Resource<wbr>Requirements</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ResourceRequirements">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ResourceRequirements">output</a> API doc for this type.
 {{% /choosable %}}
@@ -13915,7 +13945,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>SELinux<wbr>Options</h4>
+<h4 id="selinuxoptions">SELinux<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#SELinuxOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#SELinuxOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -14086,7 +14116,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Scale<wbr>IOVolume<wbr>Source</h4>
+<h4 id="scaleiovolumesource">Scale<wbr>IOVolume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ScaleIOVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ScaleIOVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -14449,7 +14479,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Secret<wbr>Env<wbr>Source</h4>
+<h4 id="secretenvsource">Secret<wbr>Env<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#SecretEnvSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#SecretEnvSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -14556,7 +14586,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Secret<wbr>Key<wbr>Selector</h4>
+<h4 id="secretkeyselector">Secret<wbr>Key<wbr>Selector</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#SecretKeySelector">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#SecretKeySelector">output</a> API doc for this type.
 {{% /choosable %}}
@@ -14695,7 +14725,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Secret<wbr>Projection</h4>
+<h4 id="secretprojection">Secret<wbr>Projection</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#SecretProjection">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#SecretProjection">output</a> API doc for this type.
 {{% /choosable %}}
@@ -14834,7 +14864,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Secret<wbr>Volume<wbr>Source</h4>
+<h4 id="secretvolumesource">Secret<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#SecretVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#SecretVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -15005,7 +15035,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Security<wbr>Context</h4>
+<h4 id="securitycontext">Security<wbr>Context</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#SecurityContext">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#SecurityContext">output</a> API doc for this type.
 {{% /choosable %}}
@@ -15368,7 +15398,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Service<wbr>Account<wbr>Token<wbr>Projection</h4>
+<h4 id="serviceaccounttokenprojection">Service<wbr>Account<wbr>Token<wbr>Projection</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ServiceAccountTokenProjection">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ServiceAccountTokenProjection">output</a> API doc for this type.
 {{% /choosable %}}
@@ -15507,7 +15537,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Storage<wbr>OSVolume<wbr>Source</h4>
+<h4 id="storageosvolumesource">Storage<wbr>OSVolume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#StorageOSVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#StorageOSVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -15710,7 +15740,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Sysctl</h4>
+<h4 id="sysctl">Sysctl</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Sysctl">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Sysctl">output</a> API doc for this type.
 {{% /choosable %}}
@@ -15817,7 +15847,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>TCPSocket<wbr>Action</h4>
+<h4 id="tcpsocketaction">TCPSocket<wbr>Action</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#TCPSocketAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#TCPSocketAction">output</a> API doc for this type.
 {{% /choosable %}}
@@ -15924,7 +15954,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Toleration</h4>
+<h4 id="toleration">Toleration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Toleration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Toleration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -16127,7 +16157,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Topology<wbr>Spread<wbr>Constraint</h4>
+<h4 id="topologyspreadconstraint">Topology<wbr>Spread<wbr>Constraint</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#TopologySpreadConstraint">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#TopologySpreadConstraint">output</a> API doc for this type.
 {{% /choosable %}}
@@ -16298,7 +16328,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Volume</h4>
+<h4 id="volume">Volume</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Volume">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Volume">output</a> API doc for this type.
 {{% /choosable %}}
@@ -17269,7 +17299,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Volume<wbr>Device</h4>
+<h4 id="volumedevice">Volume<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#VolumeDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#VolumeDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -17376,7 +17406,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Volume<wbr>Mount</h4>
+<h4 id="volumemount">Volume<wbr>Mount</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#VolumeMount">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#VolumeMount">output</a> API doc for this type.
 {{% /choosable %}}
@@ -17611,7 +17641,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Volume<wbr>Projection</h4>
+<h4 id="volumeprojection">Volume<wbr>Projection</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#VolumeProjection">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#VolumeProjection">output</a> API doc for this type.
 {{% /choosable %}}
@@ -17782,7 +17812,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Vsphere<wbr>Virtual<wbr>Disk<wbr>Volume<wbr>Source</h4>
+<h4 id="vspherevirtualdiskvolumesource">Vsphere<wbr>Virtual<wbr>Disk<wbr>Volume<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#VsphereVirtualDiskVolumeSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#VsphereVirtualDiskVolumeSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -17953,7 +17983,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Weighted<wbr>Pod<wbr>Affinity<wbr>Term</h4>
+<h4 id="weightedpodaffinityterm">Weighted<wbr>Pod<wbr>Affinity<wbr>Term</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#WeightedPodAffinityTerm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#WeightedPodAffinityTerm">output</a> API doc for this type.
 {{% /choosable %}}
@@ -18060,7 +18090,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h4>Windows<wbr>Security<wbr>Context<wbr>Options</h4>
+<h4 id="windowssecuritycontextoptions">Windows<wbr>Security<wbr>Context<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#WindowsSecurityContextOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#WindowsSecurityContextOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -18203,7 +18233,7 @@ If unset, the Kubelet will not modify the ownership and permissions of any volum
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-kubernetes">https://github.com/pulumi/pulumi-kubernetes</a></dd>

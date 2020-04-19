@@ -8,13 +8,13 @@ block_external_search_index: true
 
 
 
-<h3>Modules</h3>
+<h2 id="modules">Modules</h2>
 <ul class="api">
     <li><a href="v2/" title="v2"><span class="symbol module"></span>v2</a></li>
     <li><a href="v3/" title="v3"><span class="symbol module"></span>v3</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-kubernetes">https://github.com/pulumi/pulumi-kubernetes</a></dd>

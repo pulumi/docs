@@ -12,7 +12,7 @@ block_external_search_index: true
 FlowSchemaList is a list of FlowSchema objects.
 
 
-## Create a FlowSchemaList Resource
+## Create a FlowSchemaList Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -102,7 +102,7 @@ FlowSchemaList is a list of FlowSchema objects.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -179,7 +179,7 @@ FlowSchemaList is a list of FlowSchema objects.
 
 {{% /choosable %}}
 
-## FlowSchemaList Resource Properties
+## FlowSchemaList Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -288,7 +288,72 @@ The FlowSchemaList resource accepts the following [input]({{< relref "/docs/intr
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The FlowSchemaList resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the FlowSchemaList resource produces the following output properties:
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 
@@ -299,7 +364,8 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 ## Supporting Types
 
-<h4>Flow<wbr>Distinguisher<wbr>Method</h4>
+
+<h4 id="flowdistinguishermethod">Flow<wbr>Distinguisher<wbr>Method</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#FlowDistinguisherMethod">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#FlowDistinguisherMethod">output</a> API doc for this type.
 {{% /choosable %}}
@@ -374,7 +440,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>Flow<wbr>Schema</h4>
+<h4 id="flowschema">Flow<wbr>Schema</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#FlowSchema">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#FlowSchema">output</a> API doc for this type.
 {{% /choosable %}}
@@ -513,7 +579,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>Flow<wbr>Schema<wbr>Condition</h4>
+<h4 id="flowschemacondition">Flow<wbr>Schema<wbr>Condition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#FlowSchemaCondition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#FlowSchemaCondition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -716,7 +782,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>Flow<wbr>Schema<wbr>Spec</h4>
+<h4 id="flowschemaspec">Flow<wbr>Schema<wbr>Spec</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#FlowSchemaSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#FlowSchemaSpec">output</a> API doc for this type.
 {{% /choosable %}}
@@ -887,7 +953,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>Flow<wbr>Schema<wbr>Status</h4>
+<h4 id="flowschemastatus">Flow<wbr>Schema<wbr>Status</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#FlowSchemaStatus">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#FlowSchemaStatus">output</a> API doc for this type.
 {{% /choosable %}}
@@ -962,7 +1028,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>Group<wbr>Subject</h4>
+<h4 id="groupsubject">Group<wbr>Subject</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#GroupSubject">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#GroupSubject">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1037,7 +1103,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>List<wbr>Meta</h4>
+<h4 id="listmeta">List<wbr>Meta</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ListMeta">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1216,7 +1282,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 
 
-<h4>Managed<wbr>Fields<wbr>Entry</h4>
+<h4 id="managedfieldsentry">Managed<wbr>Fields<wbr>Entry</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ManagedFieldsEntry">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ManagedFieldsEntry">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1419,7 +1485,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 
 
-<h4>Non<wbr>Resource<wbr>Policy<wbr>Rule</h4>
+<h4 id="nonresourcepolicyrule">Non<wbr>Resource<wbr>Policy<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#NonResourcePolicyRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#NonResourcePolicyRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1550,7 +1616,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 
 
-<h4>Object<wbr>Meta</h4>
+<h4 id="objectmeta">Object<wbr>Meta</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2169,7 +2235,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Owner<wbr>Reference</h4>
+<h4 id="ownerreference">Owner<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#OwnerReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#OwnerReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2340,7 +2406,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Policy<wbr>Rules<wbr>With<wbr>Subjects</h4>
+<h4 id="policyruleswithsubjects">Policy<wbr>Rules<wbr>With<wbr>Subjects</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PolicyRulesWithSubjects">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PolicyRulesWithSubjects">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2479,7 +2545,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Priority<wbr>Level<wbr>Configuration<wbr>Reference</h4>
+<h4 id="prioritylevelconfigurationreference">Priority<wbr>Level<wbr>Configuration<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PriorityLevelConfigurationReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PriorityLevelConfigurationReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2554,7 +2620,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Resource<wbr>Policy<wbr>Rule</h4>
+<h4 id="resourcepolicyrule">Resource<wbr>Policy<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ResourcePolicyRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ResourcePolicyRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2757,7 +2823,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Service<wbr>Account<wbr>Subject</h4>
+<h4 id="serviceaccountsubject">Service<wbr>Account<wbr>Subject</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ServiceAccountSubject">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ServiceAccountSubject">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2864,7 +2930,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Subject</h4>
+<h4 id="subject">Subject</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Subject">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Subject">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3003,7 +3069,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>User<wbr>Subject</h4>
+<h4 id="usersubject">User<wbr>Subject</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#UserSubject">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#UserSubject">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3082,7 +3148,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-kubernetes">https://github.com/pulumi/pulumi-kubernetes</a></dd>

@@ -13,7 +13,7 @@ ConfigFile creates a set of Kubernetes resources from Kubernetes YAML file. If `
  is not specified, `ConfigFile` assumes the argument `name` is the filename.
 
 
-## Create a Chart Resource
+## Create a Chart Resource {#create}
 {{< chooser language "javascript,typescript,python,csharp" / >}}
 
 
@@ -103,7 +103,7 @@ ConfigFile creates a set of Kubernetes resources from Kubernetes YAML file. If `
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -180,7 +180,7 @@ ConfigFile creates a set of Kubernetes resources from Kubernetes YAML file. If `
 
 {{% /choosable %}}
 
-## Chart Resource Properties
+## Chart Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -537,15 +537,21 @@ Used only when specifying options for a remote chart.{{% /md %}}</dd>
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Chart resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Chart resource produces the following output properties:
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -572,6 +578,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Resources</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -592,6 +606,14 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -618,6 +640,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>resources</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -646,8 +676,7 @@ The following output properties are available:
 
 
 
-
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-kubernetes">https://github.com/pulumi/pulumi-kubernetes</a></dd>

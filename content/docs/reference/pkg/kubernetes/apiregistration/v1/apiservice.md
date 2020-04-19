@@ -12,7 +12,7 @@ block_external_search_index: true
 APIService represents a server for a particular GroupVersion. Name must be "version.group".
 
 
-## Create a APIService Resource
+## Create a APIService Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -102,7 +102,7 @@ APIService represents a server for a particular GroupVersion. Name must be "vers
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -179,7 +179,7 @@ APIService represents a server for a particular GroupVersion. Name must be "vers
 
 {{% /choosable %}}
 
-## APIService Resource Properties
+## APIService Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -288,15 +288,21 @@ The APIService resource accepts the following [input]({{< relref "/docs/intro/co
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the APIService resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the APIService resource produces the following output properties:
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -315,6 +321,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#apiservicestatus">APIService<wbr>Status</a></span>
@@ -330,6 +344,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#apiservicestatus">APIService<wbr>Status</a></span>
@@ -342,6 +364,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -364,10 +394,10 @@ The following output properties are available:
 
 
 
-
 ## Supporting Types
 
-<h4>APIService<wbr>Condition</h4>
+
+<h4 id="apiservicecondition">APIService<wbr>Condition</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#APIServiceCondition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -570,7 +600,7 @@ The following output properties are available:
 
 
 
-<h4>APIService<wbr>Spec</h4>
+<h4 id="apiservicespec">APIService<wbr>Spec</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#APIServiceSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#APIServiceSpec">output</a> API doc for this type.
 {{% /choosable %}}
@@ -837,7 +867,7 @@ The following output properties are available:
 
 
 
-<h4>APIService<wbr>Status</h4>
+<h4 id="apiservicestatus">APIService<wbr>Status</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#APIServiceStatus">output</a> API doc for this type.
 {{% /choosable %}}
@@ -912,7 +942,7 @@ The following output properties are available:
 
 
 
-<h4>Managed<wbr>Fields<wbr>Entry</h4>
+<h4 id="managedfieldsentry">Managed<wbr>Fields<wbr>Entry</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ManagedFieldsEntry">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ManagedFieldsEntry">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1115,7 +1145,7 @@ The following output properties are available:
 
 
 
-<h4>Object<wbr>Meta</h4>
+<h4 id="objectmeta">Object<wbr>Meta</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1734,7 +1764,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Owner<wbr>Reference</h4>
+<h4 id="ownerreference">Owner<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#OwnerReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#OwnerReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1905,7 +1935,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Service<wbr>Reference</h4>
+<h4 id="servicereference">Service<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ServiceReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ServiceReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2048,7 +2078,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-kubernetes">https://github.com/pulumi/pulumi-kubernetes</a></dd>

@@ -12,7 +12,7 @@ block_external_search_index: true
 HorizontalPodAutoscaler is the configuration for a horizontal pod autoscaler, which automatically manages the replica count of any resource implementing the scale subresource based on the metrics specified.
 
 
-## Create a HorizontalPodAutoscaler Resource
+## Create a HorizontalPodAutoscaler Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -102,7 +102,7 @@ HorizontalPodAutoscaler is the configuration for a horizontal pod autoscaler, wh
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -179,7 +179,7 @@ HorizontalPodAutoscaler is the configuration for a horizontal pod autoscaler, wh
 
 {{% /choosable %}}
 
-## HorizontalPodAutoscaler Resource Properties
+## HorizontalPodAutoscaler Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -288,15 +288,21 @@ The HorizontalPodAutoscaler resource accepts the following [input]({{< relref "/
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the HorizontalPodAutoscaler resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the HorizontalPodAutoscaler resource produces the following output properties:
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -315,6 +321,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#horizontalpodautoscalerstatus">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Status</a></span>
@@ -330,6 +344,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#horizontalpodautoscalerstatus">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Status</a></span>
@@ -342,6 +364,14 @@ The following output properties are available:
 
 {{% choosable language python %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -364,10 +394,10 @@ The following output properties are available:
 
 
 
-
 ## Supporting Types
 
-<h4>Cross<wbr>Version<wbr>Object<wbr>Reference</h4>
+
+<h4 id="crossversionobjectreference">Cross<wbr>Version<wbr>Object<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#CrossVersionObjectReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#CrossVersionObjectReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -442,7 +472,7 @@ The following output properties are available:
 
 
 
-<h4>External<wbr>Metric<wbr>Source</h4>
+<h4 id="externalmetricsource">External<wbr>Metric<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ExternalMetricSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ExternalMetricSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -613,7 +643,7 @@ The following output properties are available:
 
 
 
-<h4>External<wbr>Metric<wbr>Status</h4>
+<h4 id="externalmetricstatus">External<wbr>Metric<wbr>Status</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ExternalMetricStatus">output</a> API doc for this type.
 {{% /choosable %}}
@@ -784,7 +814,7 @@ The following output properties are available:
 
 
 
-<h4>Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Condition</h4>
+<h4 id="horizontalpodautoscalercondition">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Condition</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HorizontalPodAutoscalerCondition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -987,7 +1017,7 @@ The following output properties are available:
 
 
 
-<h4>Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Spec</h4>
+<h4 id="horizontalpodautoscalerspec">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Spec</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#HorizontalPodAutoscalerSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HorizontalPodAutoscalerSpec">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1158,7 +1188,7 @@ The following output properties are available:
 
 
 
-<h4>Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Status</h4>
+<h4 id="horizontalpodautoscalerstatus">Horizontal<wbr>Pod<wbr>Autoscaler<wbr>Status</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HorizontalPodAutoscalerStatus">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1393,7 +1423,7 @@ The following output properties are available:
 
 
 
-<h4>Label<wbr>Selector</h4>
+<h4 id="labelselector">Label<wbr>Selector</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#LabelSelector">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#LabelSelector">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1500,7 +1530,7 @@ The following output properties are available:
 
 
 
-<h4>Label<wbr>Selector<wbr>Requirement</h4>
+<h4 id="labelselectorrequirement">Label<wbr>Selector<wbr>Requirement</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#LabelSelectorRequirement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#LabelSelectorRequirement">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1639,7 +1669,7 @@ The following output properties are available:
 
 
 
-<h4>Managed<wbr>Fields<wbr>Entry</h4>
+<h4 id="managedfieldsentry">Managed<wbr>Fields<wbr>Entry</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ManagedFieldsEntry">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ManagedFieldsEntry">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1842,7 +1872,7 @@ The following output properties are available:
 
 
 
-<h4>Metric<wbr>Spec</h4>
+<h4 id="metricspec">Metric<wbr>Spec</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#MetricSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#MetricSpec">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2045,7 +2075,7 @@ The following output properties are available:
 
 
 
-<h4>Metric<wbr>Status</h4>
+<h4 id="metricstatus">Metric<wbr>Status</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#MetricStatus">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2248,7 +2278,7 @@ The following output properties are available:
 
 
 
-<h4>Object<wbr>Meta</h4>
+<h4 id="objectmeta">Object<wbr>Meta</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2867,7 +2897,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Object<wbr>Metric<wbr>Source</h4>
+<h4 id="objectmetricsource">Object<wbr>Metric<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMetricSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMetricSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3070,7 +3100,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Object<wbr>Metric<wbr>Status</h4>
+<h4 id="objectmetricstatus">Object<wbr>Metric<wbr>Status</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMetricStatus">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3273,7 +3303,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Owner<wbr>Reference</h4>
+<h4 id="ownerreference">Owner<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#OwnerReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#OwnerReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3444,7 +3474,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Pods<wbr>Metric<wbr>Source</h4>
+<h4 id="podsmetricsource">Pods<wbr>Metric<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodsMetricSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodsMetricSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3583,7 +3613,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Pods<wbr>Metric<wbr>Status</h4>
+<h4 id="podsmetricstatus">Pods<wbr>Metric<wbr>Status</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodsMetricStatus">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3722,7 +3752,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Resource<wbr>Metric<wbr>Source</h4>
+<h4 id="resourcemetricsource">Resource<wbr>Metric<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ResourceMetricSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ResourceMetricSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3861,7 +3891,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Resource<wbr>Metric<wbr>Status</h4>
+<h4 id="resourcemetricstatus">Resource<wbr>Metric<wbr>Status</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ResourceMetricStatus">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4004,7 +4034,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-kubernetes">https://github.com/pulumi/pulumi-kubernetes</a></dd>

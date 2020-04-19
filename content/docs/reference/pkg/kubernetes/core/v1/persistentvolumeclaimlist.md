@@ -12,7 +12,7 @@ block_external_search_index: true
 PersistentVolumeClaimList is a list of PersistentVolumeClaim items.
 
 
-## Create a PersistentVolumeClaimList Resource
+## Create a PersistentVolumeClaimList Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -102,7 +102,7 @@ PersistentVolumeClaimList is a list of PersistentVolumeClaim items.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -179,7 +179,7 @@ PersistentVolumeClaimList is a list of PersistentVolumeClaim items.
 
 {{% /choosable %}}
 
-## PersistentVolumeClaimList Resource Properties
+## PersistentVolumeClaimList Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -288,7 +288,72 @@ The PersistentVolumeClaimList resource accepts the following [input]({{< relref 
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The PersistentVolumeClaimList resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the PersistentVolumeClaimList resource produces the following output properties:
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 
@@ -299,7 +364,8 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 ## Supporting Types
 
-<h4>Label<wbr>Selector</h4>
+
+<h4 id="labelselector">Label<wbr>Selector</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#LabelSelector">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#LabelSelector">output</a> API doc for this type.
 {{% /choosable %}}
@@ -406,7 +472,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>Label<wbr>Selector<wbr>Requirement</h4>
+<h4 id="labelselectorrequirement">Label<wbr>Selector<wbr>Requirement</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#LabelSelectorRequirement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#LabelSelectorRequirement">output</a> API doc for this type.
 {{% /choosable %}}
@@ -545,7 +611,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>List<wbr>Meta</h4>
+<h4 id="listmeta">List<wbr>Meta</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ListMeta">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta">output</a> API doc for this type.
 {{% /choosable %}}
@@ -724,7 +790,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 
 
-<h4>Managed<wbr>Fields<wbr>Entry</h4>
+<h4 id="managedfieldsentry">Managed<wbr>Fields<wbr>Entry</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ManagedFieldsEntry">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ManagedFieldsEntry">output</a> API doc for this type.
 {{% /choosable %}}
@@ -927,7 +993,7 @@ DEPRECATED Kubernetes will stop propagating this field in 1.20 release and the f
 
 
 
-<h4>Object<wbr>Meta</h4>
+<h4 id="objectmeta">Object<wbr>Meta</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1546,7 +1612,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Owner<wbr>Reference</h4>
+<h4 id="ownerreference">Owner<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#OwnerReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#OwnerReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1717,7 +1783,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Persistent<wbr>Volume<wbr>Claim</h4>
+<h4 id="persistentvolumeclaim">Persistent<wbr>Volume<wbr>Claim</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PersistentVolumeClaim">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PersistentVolumeClaim">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1856,7 +1922,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Persistent<wbr>Volume<wbr>Claim<wbr>Condition</h4>
+<h4 id="persistentvolumeclaimcondition">Persistent<wbr>Volume<wbr>Claim<wbr>Condition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PersistentVolumeClaimCondition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PersistentVolumeClaimCondition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2091,7 +2157,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Persistent<wbr>Volume<wbr>Claim<wbr>Spec</h4>
+<h4 id="persistentvolumeclaimspec">Persistent<wbr>Volume<wbr>Claim<wbr>Spec</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PersistentVolumeClaimSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PersistentVolumeClaimSpec">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2358,7 +2424,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Persistent<wbr>Volume<wbr>Claim<wbr>Status</h4>
+<h4 id="persistentvolumeclaimstatus">Persistent<wbr>Volume<wbr>Claim<wbr>Status</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PersistentVolumeClaimStatus">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PersistentVolumeClaimStatus">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2529,7 +2595,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Resource<wbr>Requirements</h4>
+<h4 id="resourcerequirements">Resource<wbr>Requirements</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ResourceRequirements">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ResourceRequirements">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2636,7 +2702,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Typed<wbr>Local<wbr>Object<wbr>Reference</h4>
+<h4 id="typedlocalobjectreference">Typed<wbr>Local<wbr>Object<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#TypedLocalObjectReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#TypedLocalObjectReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2747,7 +2813,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-kubernetes">https://github.com/pulumi/pulumi-kubernetes</a></dd>

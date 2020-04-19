@@ -12,7 +12,7 @@ block_external_search_index: true
 PodSecurityPolicy governs the ability to make requests that affect the Security Context that will be applied to a pod and container.
 
 
-## Create a PodSecurityPolicy Resource
+## Create a PodSecurityPolicy Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -102,7 +102,7 @@ PodSecurityPolicy governs the ability to make requests that affect the Security 
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -179,7 +179,7 @@ PodSecurityPolicy governs the ability to make requests that affect the Security 
 
 {{% /choosable %}}
 
-## PodSecurityPolicy Resource Properties
+## PodSecurityPolicy Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -288,7 +288,72 @@ The PodSecurityPolicy resource accepts the following [input]({{< relref "/docs/i
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The PodSecurityPolicy resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the PodSecurityPolicy resource produces the following output properties:
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
 
 
 
@@ -299,7 +364,8 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 ## Supporting Types
 
-<h4>Allowed<wbr>CSIDriver</h4>
+
+<h4 id="allowedcsidriver">Allowed<wbr>CSIDriver</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#AllowedCSIDriver">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#AllowedCSIDriver">output</a> API doc for this type.
 {{% /choosable %}}
@@ -374,7 +440,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>Allowed<wbr>Flex<wbr>Volume</h4>
+<h4 id="allowedflexvolume">Allowed<wbr>Flex<wbr>Volume</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#AllowedFlexVolume">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#AllowedFlexVolume">output</a> API doc for this type.
 {{% /choosable %}}
@@ -449,7 +515,7 @@ All [input](#inputs) properties are implicitly available as output properties. T
 
 
 
-<h4>Allowed<wbr>Host<wbr>Path</h4>
+<h4 id="allowedhostpath">Allowed<wbr>Host<wbr>Path</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#AllowedHostPath">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#AllowedHostPath">output</a> API doc for this type.
 {{% /choosable %}}
@@ -564,7 +630,7 @@ Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not all
 
 
 
-<h4>FSGroup<wbr>Strategy<wbr>Options</h4>
+<h4 id="fsgroupstrategyoptions">FSGroup<wbr>Strategy<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#FSGroupStrategyOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#FSGroupStrategyOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -671,7 +737,7 @@ Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not all
 
 
 
-<h4>Host<wbr>Port<wbr>Range</h4>
+<h4 id="hostportrange">Host<wbr>Port<wbr>Range</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#HostPortRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#HostPortRange">output</a> API doc for this type.
 {{% /choosable %}}
@@ -778,7 +844,7 @@ Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not all
 
 
 
-<h4>IDRange</h4>
+<h4 id="idrange">IDRange</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#IDRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#IDRange">output</a> API doc for this type.
 {{% /choosable %}}
@@ -885,7 +951,7 @@ Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not all
 
 
 
-<h4>Managed<wbr>Fields<wbr>Entry</h4>
+<h4 id="managedfieldsentry">Managed<wbr>Fields<wbr>Entry</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ManagedFieldsEntry">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ManagedFieldsEntry">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1088,7 +1154,7 @@ Examples: `/foo` would allow `/foo`, `/foo/` and `/foo/bar` `/foo` would not all
 
 
 
-<h4>Object<wbr>Meta</h4>
+<h4 id="objectmeta">Object<wbr>Meta</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1707,7 +1773,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Owner<wbr>Reference</h4>
+<h4 id="ownerreference">Owner<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#OwnerReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#OwnerReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1878,7 +1944,7 @@ Populated by the system. Read-only. More info: http://kubernetes.io/docs/user-gu
 
 
 
-<h4>Pod<wbr>Security<wbr>Policy<wbr>Spec</h4>
+<h4 id="podsecuritypolicyspec">Pod<wbr>Security<wbr>Policy<wbr>Spec</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#PodSecurityPolicySpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#PodSecurityPolicySpec">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2512,19 +2578,19 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
     <dt class="property-optional"
             title="Optional">
-        <span>allowed_<wbr>csi_<wbr>drivers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#allowedcsidriver">List[Allowed<wbr>CSIDriver]</a></span>
-    </dt>
-    <dd>{{% md %}}AllowedCSIDrivers is a whitelist of inline CSI drivers that must be explicitly set to be embedded within a pod spec. An empty value indicates that any CSI driver can be used for inline ephemeral volumes. This is an alpha field, and is only honored if the API server enables the CSIInlineVolume feature gate.{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>allowed_<wbr>capabilities</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}allowedCapabilities is a list of capabilities that can be requested to add to the container. Capabilities in this field may be added at the pod author's discretion. You must not list a capability in both allowedCapabilities and requiredDropCapabilities.{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>allowed_<wbr>csi_<wbr>drivers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#allowedcsidriver">List[Allowed<wbr>CSIDriver]</a></span>
+    </dt>
+    <dd>{{% md %}}AllowedCSIDrivers is a whitelist of inline CSI drivers that must be explicitly set to be embedded within a pod spec. An empty value indicates that any CSI driver can be used for inline ephemeral volumes. This is an alpha field, and is only honored if the API server enables the CSIInlineVolume feature gate.{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -2705,7 +2771,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
 
 
-<h4>Run<wbr>As<wbr>Group<wbr>Strategy<wbr>Options</h4>
+<h4 id="runasgroupstrategyoptions">Run<wbr>As<wbr>Group<wbr>Strategy<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#RunAsGroupStrategyOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#RunAsGroupStrategyOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2812,7 +2878,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
 
 
-<h4>Run<wbr>As<wbr>User<wbr>Strategy<wbr>Options</h4>
+<h4 id="runasuserstrategyoptions">Run<wbr>As<wbr>User<wbr>Strategy<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#RunAsUserStrategyOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#RunAsUserStrategyOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2919,7 +2985,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
 
 
-<h4>Runtime<wbr>Class<wbr>Strategy<wbr>Options</h4>
+<h4 id="runtimeclassstrategyoptions">Runtime<wbr>Class<wbr>Strategy<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#RuntimeClassStrategyOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#RuntimeClassStrategyOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3026,7 +3092,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
 
 
-<h4>SELinux<wbr>Options</h4>
+<h4 id="selinuxoptions">SELinux<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#SELinuxOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#SELinuxOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3197,7 +3263,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
 
 
-<h4>SELinux<wbr>Strategy<wbr>Options</h4>
+<h4 id="selinuxstrategyoptions">SELinux<wbr>Strategy<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#SELinuxStrategyOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#SELinuxStrategyOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3304,7 +3370,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
 
 
-<h4>Supplemental<wbr>Groups<wbr>Strategy<wbr>Options</h4>
+<h4 id="supplementalgroupsstrategyoptions">Supplemental<wbr>Groups<wbr>Strategy<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#SupplementalGroupsStrategyOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#SupplementalGroupsStrategyOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3415,7 +3481,7 @@ Examples: e.g. "foo/*" forbids "foo/bar", "foo/baz", etc. e.g. "foo.*" forbids "
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-kubernetes">https://github.com/pulumi/pulumi-kubernetes</a></dd>
