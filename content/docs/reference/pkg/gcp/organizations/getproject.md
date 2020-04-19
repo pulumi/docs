@@ -17,7 +17,7 @@ For more information see
 
 
 
-## Using GetProject
+## Using GetProject {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -119,7 +119,7 @@ The following arguments are supported:
 
 
 
-## GetProject Result
+## GetProject Result {#result}
 
 The following output properties are available:
 

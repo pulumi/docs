@@ -40,7 +40,7 @@ const filename_trigger = new gcp.cloudbuild.Trigger("filename-trigger", {
 
 
 
-## Create a Trigger Resource
+## Create a Trigger Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -130,7 +130,7 @@ const filename_trigger = new gcp.cloudbuild.Trigger("filename-trigger", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -207,7 +207,7 @@ const filename_trigger = new gcp.cloudbuild.Trigger("filename-trigger", {
 
 {{% /choosable %}}
 
-## Trigger Resource Properties
+## Trigger Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -696,9 +696,7 @@ One of 'trigger_template' or 'github' must be provided.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Trigger resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Trigger resource produces the following output properties:
 
 
 
@@ -714,6 +712,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Time when the trigger was created.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -742,6 +748,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Trigger<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -764,6 +778,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Time when the trigger was created.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -792,6 +814,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>trigger_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -808,8 +838,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Trigger Resource
+## Look up an Existing Trigger Resource {#look-up}
 
 Get an existing Trigger resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1484,7 +1513,8 @@ One of 'trigger_template' or 'github' must be provided.
 
 ## Supporting Types
 
-<h4>Trigger<wbr>Build</h4>
+
+<h4 id="triggerbuild">Trigger<wbr>Build</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerBuild">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerBuild">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1655,7 +1685,7 @@ One of 'trigger_template' or 'github' must be provided.
 
 
 
-<h4>Trigger<wbr>Build<wbr>Step</h4>
+<h4 id="triggerbuildstep">Trigger<wbr>Build<wbr>Step</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerBuildStep">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerBuildStep">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2054,7 +2084,7 @@ One of 'trigger_template' or 'github' must be provided.
 
 
 
-<h4>Trigger<wbr>Build<wbr>Step<wbr>Volume</h4>
+<h4 id="triggerbuildstepvolume">Trigger<wbr>Build<wbr>Step<wbr>Volume</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerBuildStepVolume">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerBuildStepVolume">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2161,7 +2191,7 @@ One of 'trigger_template' or 'github' must be provided.
 
 
 
-<h4>Trigger<wbr>Github</h4>
+<h4 id="triggergithub">Trigger<wbr>Github</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerGithub">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerGithub">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2332,7 +2362,7 @@ One of 'trigger_template' or 'github' must be provided.
 
 
 
-<h4>Trigger<wbr>Github<wbr>Pull<wbr>Request</h4>
+<h4 id="triggergithubpullrequest">Trigger<wbr>Github<wbr>Pull<wbr>Request</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerGithubPullRequest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerGithubPullRequest">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2439,7 +2469,7 @@ One of 'trigger_template' or 'github' must be provided.
 
 
 
-<h4>Trigger<wbr>Github<wbr>Push</h4>
+<h4 id="triggergithubpush">Trigger<wbr>Github<wbr>Push</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerGithubPush">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerGithubPush">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2546,7 +2576,7 @@ One of 'trigger_template' or 'github' must be provided.
 
 
 
-<h4>Trigger<wbr>Trigger<wbr>Template</h4>
+<h4 id="triggertriggertemplate">Trigger<wbr>Trigger<wbr>Template</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TriggerTriggerTemplate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TriggerTriggerTemplate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2785,7 +2815,7 @@ One of 'trigger_template' or 'github' must be provided.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>

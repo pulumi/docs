@@ -102,7 +102,7 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
 
 
 
-## Create a Metric Resource
+## Create a Metric Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -192,7 +192,7 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -269,7 +269,7 @@ const loggingMetric = new gcp.logging.Metric("logging_metric", {
 
 {{% /choosable %}}
 
-## Metric Resource Properties
+## Metric Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -650,12 +650,77 @@ to specify a regex that does not include exactly one capture group.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The Metric resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Metric resource produces the following output properties:
 
 
 
 
-## Look up an Existing Metric Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing Metric Resource {#look-up}
 
 Get an existing Metric resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1150,7 +1215,8 @@ to specify a regex that does not include exactly one capture group.
 
 ## Supporting Types
 
-<h4>Metric<wbr>Bucket<wbr>Options</h4>
+
+<h4 id="metricbucketoptions">Metric<wbr>Bucket<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#MetricBucketOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#MetricBucketOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1289,7 +1355,7 @@ to specify a regex that does not include exactly one capture group.
 
 
 
-<h4>Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets</h4>
+<h4 id="metricbucketoptionsexplicitbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Explicit<wbr>Buckets</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#MetricBucketOptionsExplicitBuckets">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#MetricBucketOptionsExplicitBuckets">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1364,7 +1430,7 @@ to specify a regex that does not include exactly one capture group.
 
 
 
-<h4>Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets</h4>
+<h4 id="metricbucketoptionsexponentialbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Exponential<wbr>Buckets</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#MetricBucketOptionsExponentialBuckets">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#MetricBucketOptionsExponentialBuckets">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1503,7 +1569,7 @@ to specify a regex that does not include exactly one capture group.
 
 
 
-<h4>Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets</h4>
+<h4 id="metricbucketoptionslinearbuckets">Metric<wbr>Bucket<wbr>Options<wbr>Linear<wbr>Buckets</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#MetricBucketOptionsLinearBuckets">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#MetricBucketOptionsLinearBuckets">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1642,7 +1708,7 @@ to specify a regex that does not include exactly one capture group.
 
 
 
-<h4>Metric<wbr>Metric<wbr>Descriptor</h4>
+<h4 id="metricmetricdescriptor">Metric<wbr>Metric<wbr>Descriptor</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#MetricMetricDescriptor">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#MetricMetricDescriptor">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1845,7 +1911,7 @@ to specify a regex that does not include exactly one capture group.
 
 
 
-<h4>Metric<wbr>Metric<wbr>Descriptor<wbr>Label</h4>
+<h4 id="metricmetricdescriptorlabel">Metric<wbr>Metric<wbr>Descriptor<wbr>Label</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#MetricMetricDescriptorLabel">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#MetricMetricDescriptorLabel">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1988,7 +2054,7 @@ to specify a regex that does not include exactly one capture group.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>

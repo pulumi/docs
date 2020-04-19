@@ -20,7 +20,7 @@ To get more information about DomainMapping, see:
 
 
 
-## Create a DomainMapping Resource
+## Create a DomainMapping Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -110,7 +110,7 @@ To get more information about DomainMapping, see:
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -187,7 +187,7 @@ To get more information about DomainMapping, see:
 
 {{% /choosable %}}
 
-## DomainMapping Resource Properties
+## DomainMapping Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -416,15 +416,21 @@ If it is not provided, the provider project is used.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the DomainMapping resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the DomainMapping resource produces the following output properties:
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -444,6 +450,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingstatus">Domain<wbr>Mapping<wbr>Status</a></span>
@@ -457,6 +471,14 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -476,6 +498,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domainmappingstatus">Dict[Domain<wbr>Mapping<wbr>Status]</a></span>
@@ -492,8 +522,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing DomainMapping Resource
+## Look up an Existing DomainMapping Resource {#look-up}
 
 Get an existing DomainMapping resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -872,7 +901,8 @@ If it is not provided, the provider project is used.
 
 ## Supporting Types
 
-<h4>Domain<wbr>Mapping<wbr>Metadata</h4>
+
+<h4 id="domainmappingmetadata">Domain<wbr>Mapping<wbr>Metadata</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DomainMappingMetadata">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DomainMappingMetadata">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1139,7 +1169,7 @@ If it is not provided, the provider project is used.
 
 
 
-<h4>Domain<wbr>Mapping<wbr>Spec</h4>
+<h4 id="domainmappingspec">Domain<wbr>Mapping<wbr>Spec</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DomainMappingSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DomainMappingSpec">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1278,7 +1308,7 @@ If it is not provided, the provider project is used.
 
 
 
-<h4>Domain<wbr>Mapping<wbr>Status</h4>
+<h4 id="domainmappingstatus">Domain<wbr>Mapping<wbr>Status</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DomainMappingStatus">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1449,7 +1479,7 @@ If it is not provided, the provider project is used.
 
 
 
-<h4>Domain<wbr>Mapping<wbr>Status<wbr>Condition</h4>
+<h4 id="domainmappingstatuscondition">Domain<wbr>Mapping<wbr>Status<wbr>Condition</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DomainMappingStatusCondition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1620,7 +1650,7 @@ If it is not provided, the provider project is used.
 
 
 
-<h4>Domain<wbr>Mapping<wbr>Status<wbr>Resource<wbr>Record</h4>
+<h4 id="domainmappingstatusresourcerecord">Domain<wbr>Mapping<wbr>Status<wbr>Resource<wbr>Record</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DomainMappingStatusResourceRecord">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1763,7 +1793,7 @@ If it is not provided, the provider project is used.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>

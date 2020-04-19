@@ -16,7 +16,7 @@ Get information about a Google Compute Image. Check that your service account ha
 
 
 
-## Using GetImage
+## Using GetImage {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -198,7 +198,7 @@ provided, the provider project is used. If you are using a
 
 
 
-## GetImage Result
+## GetImage Result {#result}
 
 The following output properties are available:
 

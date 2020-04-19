@@ -29,7 +29,7 @@ const my_subnetwork = pulumi.output(gcp.compute.getSubnetwork({
 
 
 
-## Using GetSubnetwork
+## Using GetSubnetwork {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -255,7 +255,7 @@ specified, `name`, `project`, and `region` are ignored.
 
 
 
-## GetSubnetwork Result
+## GetSubnetwork Result {#result}
 
 The following output properties are available:
 
@@ -698,7 +698,8 @@ VM instances contained in this subnetwork. Structure is documented below.
 
 ## Supporting Types
 
-<h4>Get<wbr>Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range</h4>
+
+<h4 id="getsubnetworksecondaryiprange">Get<wbr>Subnetwork<wbr>Secondary<wbr>Ip<wbr>Range</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetSubnetworkSecondaryIpRange">output</a> API doc for this type.
 {{% /choosable %}}

@@ -15,7 +15,7 @@ and [the API reference](https://cloud.google.com/container-engine/reference/rest
 
 
 
-## Create a NodePool Resource
+## Create a NodePool Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -105,7 +105,7 @@ and [the API reference](https://cloud.google.com/container-engine/reference/rest
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -182,7 +182,7 @@ and [the API reference](https://cloud.google.com/container-engine/reference/rest
 
 {{% /choosable %}}
 
-## NodePool Resource Properties
+## NodePool Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -827,15 +827,21 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the NodePool resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the NodePool resource produces the following output properties:
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -855,6 +861,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Instance<wbr>Group<wbr>Urls</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
@@ -868,6 +882,14 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -887,6 +909,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>instance_<wbr>group_<wbr>urls</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -903,8 +933,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing NodePool Resource
+## Look up an Existing NodePool Resource {#look-up}
 
 Get an existing NodePool resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1699,7 +1728,8 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 ## Supporting Types
 
-<h4>Node<wbr>Pool<wbr>Autoscaling</h4>
+
+<h4 id="nodepoolautoscaling">Node<wbr>Pool<wbr>Autoscaling</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolAutoscaling">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodePoolAutoscaling">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1818,7 +1848,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 
 
-<h4>Node<wbr>Pool<wbr>Management</h4>
+<h4 id="nodepoolmanagement">Node<wbr>Pool<wbr>Management</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolManagement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodePoolManagement">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1933,7 +1963,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 
 
-<h4>Node<wbr>Pool<wbr>Node<wbr>Config</h4>
+<h4 id="nodepoolnodeconfig">Node<wbr>Pool<wbr>Node<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolNodeConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodePoolNodeConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2411,17 +2441,17 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk_<wbr>size_<wbr>gb</span>
+        <span>disk<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk<wbr>Type</span>
+        <span>disk_<wbr>size_<wbr>gb</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2552,7 +2582,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 
 
-<h4>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator</h4>
+<h4 id="nodepoolnodeconfigguestaccelerator">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolNodeConfigGuestAccelerator">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodePoolNodeConfigGuestAccelerator">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2659,7 +2689,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 
 
-<h4>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config</h4>
+<h4 id="nodepoolnodeconfigsandboxconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolNodeConfigSandboxConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodePoolNodeConfigSandboxConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2734,7 +2764,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 
 
-<h4>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</h4>
+<h4 id="nodepoolnodeconfigshieldedinstanceconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolNodeConfigShieldedInstanceConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodePoolNodeConfigShieldedInstanceConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2841,7 +2871,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 
 
-<h4>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint</h4>
+<h4 id="nodepoolnodeconfigtaint">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolNodeConfigTaint">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodePoolNodeConfigTaint">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2980,7 +3010,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 
 
-<h4>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</h4>
+<h4 id="nodepoolnodeconfigworkloadmetadataconfig">Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolNodeConfigWorkloadMetadataConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodePoolNodeConfigWorkloadMetadataConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3055,7 +3085,7 @@ when fuzzy versions are used. See the `gcp.container.getEngineVersions` data sou
 
 
 
-<h4>Node<wbr>Pool<wbr>Upgrade<wbr>Settings</h4>
+<h4 id="nodepoolupgradesettings">Node<wbr>Pool<wbr>Upgrade<wbr>Settings</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodePoolUpgradeSettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodePoolUpgradeSettings">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3190,7 +3220,7 @@ parallel. Can be set to 0 or greater.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>

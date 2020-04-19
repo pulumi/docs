@@ -18,7 +18,7 @@ and [API](https://cloud.google.com/compute/docs/reference/latest/regionInstanceG
 
 
 
-## Create a RegionInstanceGroupManager Resource
+## Create a RegionInstanceGroupManager Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -108,7 +108,7 @@ and [API](https://cloud.google.com/compute/docs/reference/latest/regionInstanceG
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -185,7 +185,7 @@ and [API](https://cloud.google.com/compute/docs/reference/latest/regionInstanceG
 
 {{% /choosable %}}
 
-## RegionInstanceGroupManager Resource Properties
+## RegionInstanceGroupManager Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -766,9 +766,7 @@ continue trying until it times out.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the RegionInstanceGroupManager resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the RegionInstanceGroupManager resource produces the following output properties:
 
 
 
@@ -784,6 +782,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The fingerprint of the instance group manager.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -821,6 +827,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Instance<wbr>Group</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -852,6 +866,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The fingerprint of the instance group manager.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -889,6 +911,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>instance_<wbr>group</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -914,8 +944,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing RegionInstanceGroupManager Resource
+## Look up an Existing RegionInstanceGroupManager Resource {#look-up}
 
 Get an existing RegionInstanceGroupManager resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1718,7 +1747,8 @@ continue trying until it times out.
 
 ## Supporting Types
 
-<h4>Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policies</h4>
+
+<h4 id="regioninstancegroupmanagerautohealingpolicies">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Auto<wbr>Healing<wbr>Policies</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionInstanceGroupManagerAutoHealingPolicies">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionInstanceGroupManagerAutoHealingPolicies">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1837,7 +1867,7 @@ it applies autohealing policies to new instances or recently recreated instances
 
 
 
-<h4>Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Named<wbr>Port</h4>
+<h4 id="regioninstancegroupmanagernamedport">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Named<wbr>Port</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionInstanceGroupManagerNamedPort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionInstanceGroupManagerNamedPort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1956,7 +1986,7 @@ it applies autohealing policies to new instances or recently recreated instances
 
 
 
-<h4>Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy</h4>
+<h4 id="regioninstancegroupmanagerupdatepolicy">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Update<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionInstanceGroupManagerUpdatePolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionInstanceGroupManagerUpdatePolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2291,7 +2321,7 @@ it applies autohealing policies to new instances or recently recreated instances
 
 
 
-<h4>Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Version</h4>
+<h4 id="regioninstancegroupmanagerversion">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Version</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionInstanceGroupManagerVersion">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionInstanceGroupManagerVersion">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2442,7 +2472,7 @@ it applies autohealing policies to new instances or recently recreated instances
 
 
 
-<h4>Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Target<wbr>Size</h4>
+<h4 id="regioninstancegroupmanagerversiontargetsize">Region<wbr>Instance<wbr>Group<wbr>Manager<wbr>Version<wbr>Target<wbr>Size</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#RegionInstanceGroupManagerVersionTargetSize">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#RegionInstanceGroupManagerVersionTargetSize">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2569,7 +2599,7 @@ one of which has a `target_size.percent` of `60` will create 2 instances of that
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>

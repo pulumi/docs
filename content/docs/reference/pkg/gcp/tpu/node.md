@@ -20,7 +20,7 @@ To get more information about Node, see:
 
 
 
-## Create a Node Resource
+## Create a Node Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -110,7 +110,7 @@ To get more information about Node, see:
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -187,7 +187,7 @@ To get more information about Node, see:
 
 {{% /choosable %}}
 
-## Node Resource Properties
+## Node Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -616,15 +616,21 @@ If it is not provided, the provider project is used.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Node resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Node resource produces the following output properties:
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -655,6 +661,14 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Network<wbr>Endpoints</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodenetworkendpoint">[]Node<wbr>Network<wbr>Endpoint</a></span>
@@ -679,6 +693,14 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -709,6 +731,14 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>network_<wbr>endpoints</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodenetworkendpoint">List[Node<wbr>Network<wbr>Endpoint]</a></span>
@@ -736,8 +766,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
 
 
-
-## Look up an Existing Node Resource
+## Look up an Existing Node Resource {#look-up}
 
 Get an existing Node resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1360,7 +1389,8 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
 ## Supporting Types
 
-<h4>Node<wbr>Network<wbr>Endpoint</h4>
+
+<h4 id="nodenetworkendpoint">Node<wbr>Network<wbr>Endpoint</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodeNetworkEndpoint">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1467,7 +1497,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
 
 
-<h4>Node<wbr>Scheduling<wbr>Config</h4>
+<h4 id="nodeschedulingconfig">Node<wbr>Scheduling<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#NodeSchedulingConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#NodeSchedulingConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1546,7 +1576,7 @@ Storage data, with the Tensorflow job running in the Node, this account must hav
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>

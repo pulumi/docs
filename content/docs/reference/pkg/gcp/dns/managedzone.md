@@ -22,7 +22,7 @@ To get more information about ManagedZone, see:
 
 
 
-## Create a ManagedZone Resource
+## Create a ManagedZone Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -112,7 +112,7 @@ To get more information about ManagedZone, see:
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -189,7 +189,7 @@ To get more information about ManagedZone, see:
 
 {{% /choosable %}}
 
-## ManagedZone Resource Properties
+## ManagedZone Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -654,15 +654,21 @@ Cloud resources. Must be one of: 'public', 'private'.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the ManagedZone resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the ManagedZone resource produces the following output properties:
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -682,6 +688,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Name<wbr>Servers</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
@@ -695,6 +709,14 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -714,6 +736,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>name_<wbr>servers</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -730,8 +760,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing ManagedZone Resource
+## Look up an Existing ManagedZone Resource {#look-up}
 
 Get an existing ManagedZone resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1346,7 +1375,8 @@ Cloud resources. Must be one of: 'public', 'private'.
 
 ## Supporting Types
 
-<h4>Managed<wbr>Zone<wbr>Dnssec<wbr>Config</h4>
+
+<h4 id="managedzonednssecconfig">Managed<wbr>Zone<wbr>Dnssec<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZoneDnssecConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZoneDnssecConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1517,7 +1547,7 @@ Cloud resources. Must be one of: 'public', 'private'.
 
 
 
-<h4>Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Default<wbr>Key<wbr>Spec</h4>
+<h4 id="managedzonednssecconfigdefaultkeyspec">Managed<wbr>Zone<wbr>Dnssec<wbr>Config<wbr>Default<wbr>Key<wbr>Spec</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZoneDnssecConfigDefaultKeySpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZoneDnssecConfigDefaultKeySpec">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1688,7 +1718,7 @@ Cloud resources. Must be one of: 'public', 'private'.
 
 
 
-<h4>Managed<wbr>Zone<wbr>Forwarding<wbr>Config</h4>
+<h4 id="managedzoneforwardingconfig">Managed<wbr>Zone<wbr>Forwarding<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZoneForwardingConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZoneForwardingConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1763,7 +1793,7 @@ Cloud resources. Must be one of: 'public', 'private'.
 
 
 
-<h4>Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Target<wbr>Name<wbr>Server</h4>
+<h4 id="managedzoneforwardingconfigtargetnameserver">Managed<wbr>Zone<wbr>Forwarding<wbr>Config<wbr>Target<wbr>Name<wbr>Server</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZoneForwardingConfigTargetNameServer">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZoneForwardingConfigTargetNameServer">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1870,7 +1900,7 @@ Cloud resources. Must be one of: 'public', 'private'.
 
 
 
-<h4>Managed<wbr>Zone<wbr>Peering<wbr>Config</h4>
+<h4 id="managedzonepeeringconfig">Managed<wbr>Zone<wbr>Peering<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZonePeeringConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZonePeeringConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1945,7 +1975,7 @@ Cloud resources. Must be one of: 'public', 'private'.
 
 
 
-<h4>Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network</h4>
+<h4 id="managedzonepeeringconfigtargetnetwork">Managed<wbr>Zone<wbr>Peering<wbr>Config<wbr>Target<wbr>Network</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZonePeeringConfigTargetNetwork">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZonePeeringConfigTargetNetwork">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2020,7 +2050,7 @@ Cloud resources. Must be one of: 'public', 'private'.
 
 
 
-<h4>Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config</h4>
+<h4 id="managedzoneprivatevisibilityconfig">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZonePrivateVisibilityConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZonePrivateVisibilityConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2095,7 +2125,7 @@ Cloud resources. Must be one of: 'public', 'private'.
 
 
 
-<h4>Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network</h4>
+<h4 id="managedzoneprivatevisibilityconfignetwork">Managed<wbr>Zone<wbr>Private<wbr>Visibility<wbr>Config<wbr>Network</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ManagedZonePrivateVisibilityConfigNetwork">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ManagedZonePrivateVisibilityConfigNetwork">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2174,7 +2204,7 @@ Cloud resources. Must be one of: 'public', 'private'.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>

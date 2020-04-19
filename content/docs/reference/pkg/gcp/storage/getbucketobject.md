@@ -35,7 +35,7 @@ const picture = pulumi.output(gcp.storage.getBucketObject({
 
 
 
-## Using GetBucketObject
+## Using GetBucketObject {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -173,7 +173,7 @@ The following arguments are supported:
 
 
 
-## GetBucketObject Result
+## GetBucketObject Result {#result}
 
 The following output properties are available:
 

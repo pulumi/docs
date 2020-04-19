@@ -16,7 +16,7 @@ for a given project. For more information, see [the official documentation](http
 
 
 
-## Using GetNodeTypes
+## Using GetNodeTypes {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -166,7 +166,7 @@ instead.
 
 
 
-## GetNodeTypes Result
+## GetNodeTypes Result {#result}
 
 The following output properties are available:
 

@@ -74,7 +74,7 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
 
 
 
-## Create a Bucket Resource
+## Create a Bucket Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -164,7 +164,7 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -241,7 +241,7 @@ const auto_expire = new gcp.storage.Bucket("auto-expire", {
 
 {{% /choosable %}}
 
-## Bucket Resource Properties
+## Bucket Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -870,15 +870,21 @@ is not provided, the provider project is used.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Bucket resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Bucket resource produces the following output properties:
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -907,6 +913,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -929,6 +943,14 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -957,6 +979,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -982,8 +1012,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Bucket Resource
+## Look up an Existing Bucket Resource {#look-up}
 
 Get an existing Bucket resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1798,7 +1827,8 @@ is not provided, the provider project is used.
 
 ## Supporting Types
 
-<h4>Bucket<wbr>Cor</h4>
+
+<h4 id="bucketcor">Bucket<wbr>Cor</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketCor">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketCor">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1985,7 +2015,7 @@ is not provided, the provider project is used.
 
 
 
-<h4>Bucket<wbr>Encryption</h4>
+<h4 id="bucketencryption">Bucket<wbr>Encryption</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketEncryption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketEncryption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2060,7 +2090,7 @@ is not provided, the provider project is used.
 
 
 
-<h4>Bucket<wbr>Lifecycle<wbr>Rule</h4>
+<h4 id="bucketlifecyclerule">Bucket<wbr>Lifecycle<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketLifecycleRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketLifecycleRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2175,7 +2205,7 @@ is not provided, the provider project is used.
 
 
 
-<h4>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Action</h4>
+<h4 id="bucketlifecycleruleaction">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Action</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketLifecycleRuleAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketLifecycleRuleAction">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2290,7 +2320,7 @@ is not provided, the provider project is used.
 
 
 
-<h4>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Condition</h4>
+<h4 id="bucketlifecyclerulecondition">Bucket<wbr>Lifecycle<wbr>Rule<wbr>Condition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketLifecycleRuleCondition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketLifecycleRuleCondition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2513,7 +2543,7 @@ is not provided, the provider project is used.
 
 
 
-<h4>Bucket<wbr>Logging</h4>
+<h4 id="bucketlogging">Bucket<wbr>Logging</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketLogging">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketLogging">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2632,7 +2662,7 @@ by default GCS sets this to this bucket's name.
 
 
 
-<h4>Bucket<wbr>Retention<wbr>Policy</h4>
+<h4 id="bucketretentionpolicy">Bucket<wbr>Retention<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketRetentionPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketRetentionPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2747,7 +2777,7 @@ by default GCS sets this to this bucket's name.
 
 
 
-<h4>Bucket<wbr>Versioning</h4>
+<h4 id="bucketversioning">Bucket<wbr>Versioning</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketVersioning">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketVersioning">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2826,7 +2856,7 @@ by default GCS sets this to this bucket's name.
 
 
 
-<h4>Bucket<wbr>Website</h4>
+<h4 id="bucketwebsite">Bucket<wbr>Website</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#BucketWebsite">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#BucketWebsite">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2953,7 +2983,7 @@ resource is not found.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>

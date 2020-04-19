@@ -24,7 +24,7 @@ data outside of resource definitions.
 
 
 
-## Using GetKMSSecret
+## Using GetKMSSecret {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -206,7 +206,7 @@ decrypt the provided ciphertext. This is represented by the format
 
 
 
-## GetKMSSecret Result
+## GetKMSSecret Result {#result}
 
 The following output properties are available:
 

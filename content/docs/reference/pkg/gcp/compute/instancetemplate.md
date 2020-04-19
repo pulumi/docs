@@ -20,7 +20,7 @@ and
 
 
 
-## Create a InstanceTemplate Resource
+## Create a InstanceTemplate Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -110,7 +110,7 @@ and
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -187,7 +187,7 @@ and
 
 {{% /choosable %}}
 
-## InstanceTemplate Resource Properties
+## InstanceTemplate Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -1044,15 +1044,21 @@ this configuration option are detailed below.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the InstanceTemplate resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the InstanceTemplate resource produces the following output properties:
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1090,6 +1096,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Metadata<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1121,6 +1135,14 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1158,6 +1180,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>metadata_<wbr>fingerprint</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1192,8 +1222,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing InstanceTemplate Resource
+## Look up an Existing InstanceTemplate Resource {#look-up}
 
 Get an existing InstanceTemplate resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -2272,7 +2301,8 @@ this configuration option are detailed below.
 
 ## Supporting Types
 
-<h4>Instance<wbr>Template<wbr>Disk</h4>
+
+<h4 id="instancetemplatedisk">Instance<wbr>Template<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateDisk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceTemplateDisk">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2742,21 +2772,31 @@ specified, the server chooses a default device name to apply to this disk.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk_<wbr>encryption_<wbr>key</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#instancetemplatediskdiskencryptionkey">Dict[Instance<wbr>Template<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key]</a></span>
-    </dt>
-    <dd>{{% md %}}Encrypts or decrypts a disk using a customer-supplied encryption key.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>disk<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Name of the disk. When not provided, this defaults
 to the name of the instance.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>disk<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The GCE disk type. Can be either `"pd-ssd"`,
+`"local-ssd"`, or `"pd-standard"`.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>disk_<wbr>encryption_<wbr>key</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#instancetemplatediskdiskencryptionkey">Dict[Instance<wbr>Template<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key]</a></span>
+    </dt>
+    <dd>{{% md %}}Encrypts or decrypts a disk using a customer-supplied encryption key.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2768,16 +2808,6 @@ to the name of the instance.
     <dd>{{% md %}}The size of the image in gigabytes. If not
 specified, it will inherit the size of its base image. For SCRATCH disks,
 the size must be exactly 375GB.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>disk<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The GCE disk type. Can be either `"pd-ssd"`,
-`"local-ssd"`, or `"pd-standard"`.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2851,7 +2881,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 
 
 
-<h4>Instance<wbr>Template<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key</h4>
+<h4 id="instancetemplatediskdiskencryptionkey">Instance<wbr>Template<wbr>Disk<wbr>Disk<wbr>Encryption<wbr>Key</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateDiskDiskEncryptionKey">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceTemplateDiskDiskEncryptionKey">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2930,7 +2960,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 
 
 
-<h4>Instance<wbr>Template<wbr>Guest<wbr>Accelerator</h4>
+<h4 id="instancetemplateguestaccelerator">Instance<wbr>Template<wbr>Guest<wbr>Accelerator</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateGuestAccelerator">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceTemplateGuestAccelerator">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3045,7 +3075,7 @@ initialize this disk. This can be one of: the image's `self_link`,
 
 
 
-<h4>Instance<wbr>Template<wbr>Network<wbr>Interface</h4>
+<h4 id="instancetemplatenetworkinterface">Instance<wbr>Template<wbr>Network<wbr>Interface</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateNetworkInterface">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceTemplateNetworkInterface">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3396,7 +3426,7 @@ If it is not provided, the provider project is used.
 
 
 
-<h4>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config</h4>
+<h4 id="instancetemplatenetworkinterfaceaccessconfig">Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateNetworkInterfaceAccessConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceTemplateNetworkInterfaceAccessConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3555,7 +3585,7 @@ STANDARD. If this field is not specified, it is assumed to be PREMIUM.
 
 
 
-<h4>Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range</h4>
+<h4 id="instancetemplatenetworkinterfacealiasiprange">Instance<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateNetworkInterfaceAliasIpRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceTemplateNetworkInterfaceAliasIpRange">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3694,7 +3724,7 @@ range. If left unspecified, the primary range of the subnetwork will be used.
 
 
 
-<h4>Instance<wbr>Template<wbr>Scheduling</h4>
+<h4 id="instancetemplatescheduling">Instance<wbr>Template<wbr>Scheduling</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateScheduling">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceTemplateScheduling">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3917,7 +3947,7 @@ false. Read more on this
 
 
 
-<h4>Instance<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity</h4>
+<h4 id="instancetemplateschedulingnodeaffinity">Instance<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateSchedulingNodeAffinity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceTemplateSchedulingNodeAffinity">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4068,7 +4098,7 @@ or `NOT_IN` for anti-affinities.
 
 
 
-<h4>Instance<wbr>Template<wbr>Service<wbr>Account</h4>
+<h4 id="instancetemplateserviceaccount">Instance<wbr>Template<wbr>Service<wbr>Account</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateServiceAccount">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceTemplateServiceAccount">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4195,7 +4225,7 @@ default Google Compute Engine service account is used.
 
 
 
-<h4>Instance<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config</h4>
+<h4 id="instancetemplateshieldedinstanceconfig">Instance<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceTemplateShieldedInstanceConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceTemplateShieldedInstanceConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4350,7 +4380,7 @@ default Google Compute Engine service account is used.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>

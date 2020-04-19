@@ -34,7 +34,7 @@ const neg2 = pulumi.output(gcp.compute.getNetworkEndpointGroup({
 
 
 
-## Using GetNetworkEndpointGroup
+## Using GetNetworkEndpointGroup {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -212,7 +212,7 @@ Provide either this or a `self_link`.
 
 
 
-## GetNetworkEndpointGroup Result
+## GetNetworkEndpointGroup Result {#result}
 
 The following output properties are available:
 

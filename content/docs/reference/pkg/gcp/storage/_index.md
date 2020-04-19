@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="bucket" title="Bucket"><span class="symbol resource"></span>Bucket</a></li>
     <li><a href="bucketacl" title="BucketACL"><span class="symbol resource"></span>BucketACL</a></li>
@@ -26,7 +26,7 @@ block_external_search_index: true
     <li><a href="transferjob" title="TransferJob"><span class="symbol resource"></span>TransferJob</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getbucketobject" title="GetBucketObject"><span class="symbol function"></span>GetBucketObject</a></li>
     <li><a href="getobjectsignedurl" title="GetObjectSignedUrl"><span class="symbol function"></span>GetObjectSignedUrl</a></li>
@@ -34,7 +34,7 @@ block_external_search_index: true
     <li><a href="gettransferprojectservieaccount" title="GetTransferProjectServieAccount"><span class="symbol function"></span>GetTransferProjectServieAccount</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>

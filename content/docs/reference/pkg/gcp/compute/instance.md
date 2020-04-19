@@ -62,7 +62,7 @@ const defaultInstance = new gcp.compute.Instance("default", {
 
 
 
-## Create a Instance Resource
+## Create a Instance Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -152,7 +152,7 @@ const defaultInstance = new gcp.compute.Instance("default", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -229,7 +229,7 @@ const defaultInstance = new gcp.compute.Instance("default", {
 
 {{% /choosable %}}
 
-## Instance Resource Properties
+## Instance Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -1266,9 +1266,7 @@ Structure is documented below.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Instance resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Instance resource produces the following output properties:
 
 
 
@@ -1292,6 +1290,14 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1364,6 +1370,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1430,6 +1444,14 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1502,6 +1524,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>instance_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1554,8 +1584,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Instance Resource
+## Look up an Existing Instance Resource {#look-up}
 
 Get an existing Instance resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -2954,7 +2983,8 @@ Structure is documented below.
 
 ## Supporting Types
 
-<h4>Instance<wbr>Attached<wbr>Disk</h4>
+
+<h4 id="instanceattacheddisk">Instance<wbr>Attached<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceAttachedDisk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceAttachedDisk">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3245,7 +3275,7 @@ attach it to one or more instances in read-only mode.
 
 
 
-<h4>Instance<wbr>Boot<wbr>Disk</h4>
+<h4 id="instancebootdisk">Instance<wbr>Boot<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceBootDisk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceBootDisk">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3620,7 +3650,7 @@ attach it to one or more instances in read-only mode.
 
 
 
-<h4>Instance<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Params</h4>
+<h4 id="instancebootdiskinitializeparams">Instance<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Params</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceBootDiskInitializeParams">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceBootDiskInitializeParams">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3843,7 +3873,7 @@ will inherit the size of its base image.
 
 
 
-<h4>Instance<wbr>Guest<wbr>Accelerator</h4>
+<h4 id="instanceguestaccelerator">Instance<wbr>Guest<wbr>Accelerator</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceGuestAccelerator">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceGuestAccelerator">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3958,7 +3988,7 @@ will inherit the size of its base image.
 
 
 
-<h4>Instance<wbr>Network<wbr>Interface</h4>
+<h4 id="instancenetworkinterface">Instance<wbr>Network<wbr>Interface</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceNetworkInterface">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceNetworkInterface">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4313,7 +4343,7 @@ field is not provided, the provider project is used.
 
 
 
-<h4>Instance<wbr>Network<wbr>Interface<wbr>Access<wbr>Config</h4>
+<h4 id="instancenetworkinterfaceaccessconfig">Instance<wbr>Network<wbr>Interface<wbr>Access<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceNetworkInterfaceAccessConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceNetworkInterfaceAccessConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4488,7 +4518,7 @@ to become verified as a domain owner.
 
 
 
-<h4>Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range</h4>
+<h4 id="instancenetworkinterfacealiasiprange">Instance<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceNetworkInterfaceAliasIpRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceNetworkInterfaceAliasIpRange">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4623,7 +4653,7 @@ range. If left unspecified, the primary range of the subnetwork will be used.
 
 
 
-<h4>Instance<wbr>Scheduling</h4>
+<h4 id="instancescheduling">Instance<wbr>Scheduling</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceScheduling">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceScheduling">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4850,7 +4880,7 @@ set to false.  Defaults to false.
 
 
 
-<h4>Instance<wbr>Scheduling<wbr>Node<wbr>Affinity</h4>
+<h4 id="instanceschedulingnodeaffinity">Instance<wbr>Scheduling<wbr>Node<wbr>Affinity</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceSchedulingNodeAffinity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceSchedulingNodeAffinity">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5001,7 +5031,7 @@ or `NOT_IN` for anti-affinities.
 
 
 
-<h4>Instance<wbr>Scratch<wbr>Disk</h4>
+<h4 id="instancescratchdisk">Instance<wbr>Scratch<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceScratchDisk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceScratchDisk">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5080,7 +5110,7 @@ or `NOT_IN` for anti-affinities.
 
 
 
-<h4>Instance<wbr>Service<wbr>Account</h4>
+<h4 id="instanceserviceaccount">Instance<wbr>Service<wbr>Account</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceServiceAccount">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceServiceAccount">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5215,7 +5245,7 @@ default Google Compute Engine service account is used.
 
 
 
-<h4>Instance<wbr>Shielded<wbr>Instance<wbr>Config</h4>
+<h4 id="instanceshieldedinstanceconfig">Instance<wbr>Shielded<wbr>Instance<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceShieldedInstanceConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceShieldedInstanceConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5370,7 +5400,7 @@ default Google Compute Engine service account is used.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>

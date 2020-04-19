@@ -26,7 +26,7 @@ const available = pulumi.output(gcp.tpu.getTensorflowVersions({ async: true }));
 
 
 
-## Using GetTensorflowVersions
+## Using GetTensorflowVersions {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -172,7 +172,7 @@ is not provided, the provider zone is used.
 
 
 
-## GetTensorflowVersions Result
+## GetTensorflowVersions Result {#result}
 
 The following output properties are available:
 

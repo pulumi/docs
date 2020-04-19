@@ -13,7 +13,7 @@ See more about [regions and zones](https://cloud.google.com/compute/docs/regions
 
 
 
-## Using GetZones
+## Using GetZones {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -191,7 +191,7 @@ Defaults to no filtering (all available zones - both `UP` and `DOWN`).
 
 
 
-## GetZones Result
+## GetZones Result {#result}
 
 The following output properties are available:
 

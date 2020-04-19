@@ -29,7 +29,7 @@ const department1 = pulumi.output(gcp.organizations.getActiveFolder({
 
 
 
-## Using GetActiveFolder
+## Using GetActiveFolder {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -167,7 +167,7 @@ The following arguments are supported:
 
 
 
-## GetActiveFolder Result
+## GetActiveFolder Result {#result}
 
 The following output properties are available:
 

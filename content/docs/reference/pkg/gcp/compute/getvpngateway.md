@@ -28,7 +28,7 @@ const my_vpn_gateway = pulumi.output(gcp.compute.getVPNGateway({
 
 
 
-## Using GetVPNGateway
+## Using GetVPNGateway {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -210,7 +210,7 @@ is not provided, the project region is used.
 
 
 
-## GetVPNGateway Result
+## GetVPNGateway Result {#result}
 
 The following output properties are available:
 

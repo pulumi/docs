@@ -16,7 +16,7 @@ the official [API](https://cloud.google.com/compute/docs/reference/latest/global
 
 
 
-## Using GetGlobalAddress
+## Using GetGlobalAddress {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -158,7 +158,7 @@ is not provided, the provider project is used.
 
 
 
-## GetGlobalAddress Result
+## GetGlobalAddress Result {#result}
 
 The following output properties are available:
 

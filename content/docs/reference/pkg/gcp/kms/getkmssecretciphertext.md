@@ -26,7 +26,7 @@ data outside of resource definitions.
 
 
 
-## Using GetKMSSecretCiphertext
+## Using GetKMSSecretCiphertext {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -172,7 +172,7 @@ encrypt the provided plaintext. This is represented by the format
 
 
 
-## GetKMSSecretCiphertext Result
+## GetKMSSecretCiphertext Result {#result}
 
 The following output properties are available:
 

@@ -24,7 +24,7 @@ To get more information about Autoscaler, see:
 
 
 
-## Create a Autoscaler Resource
+## Create a Autoscaler Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -114,7 +114,7 @@ To get more information about Autoscaler, see:
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -191,7 +191,7 @@ To get more information about Autoscaler, see:
 
 {{% /choosable %}}
 
-## Autoscaler Resource Properties
+## Autoscaler Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -472,9 +472,7 @@ If it is not provided, the provider project is used.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Autoscaler resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Autoscaler resource produces the following output properties:
 
 
 
@@ -490,6 +488,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -518,6 +524,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -540,6 +554,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -568,6 +590,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -584,8 +614,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Autoscaler Resource
+## Look up an Existing Autoscaler Resource {#look-up}
 
 Get an existing Autoscaler resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1052,7 +1081,8 @@ If it is not provided, the provider project is used.
 
 ## Supporting Types
 
-<h4>Autoscaler<wbr>Autoscaling<wbr>Policy</h4>
+
+<h4 id="autoscalerautoscalingpolicy">Autoscaler<wbr>Autoscaling<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalerAutoscalingPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AutoscalerAutoscalingPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1287,7 +1317,7 @@ If it is not provided, the provider project is used.
 
 
 
-<h4>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization</h4>
+<h4 id="autoscalerautoscalingpolicycpuutilization">Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Cpu<wbr>Utilization</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalerAutoscalingPolicyCpuUtilization">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AutoscalerAutoscalingPolicyCpuUtilization">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1362,7 +1392,7 @@ If it is not provided, the provider project is used.
 
 
 
-<h4>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization</h4>
+<h4 id="autoscalerautoscalingpolicyloadbalancingutilization">Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Load<wbr>Balancing<wbr>Utilization</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalerAutoscalingPolicyLoadBalancingUtilization">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AutoscalerAutoscalingPolicyLoadBalancingUtilization">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1437,7 +1467,7 @@ If it is not provided, the provider project is used.
 
 
 
-<h4>Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Metric</h4>
+<h4 id="autoscalerautoscalingpolicymetric">Autoscaler<wbr>Autoscaling<wbr>Policy<wbr>Metric</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#AutoscalerAutoscalingPolicyMetric">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#AutoscalerAutoscalingPolicyMetric">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1644,7 +1674,7 @@ If it is not provided, the provider project is used.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>

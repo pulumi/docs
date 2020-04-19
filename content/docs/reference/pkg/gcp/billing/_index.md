@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="accountiambinding" title="AccountIamBinding"><span class="symbol resource"></span>AccountIamBinding</a></li>
     <li><a href="accountiammember" title="AccountIamMember"><span class="symbol resource"></span>AccountIamMember</a></li>
@@ -16,7 +16,7 @@ block_external_search_index: true
     <li><a href="budget" title="Budget"><span class="symbol resource"></span>Budget</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>

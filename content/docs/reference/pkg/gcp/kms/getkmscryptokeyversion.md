@@ -20,7 +20,7 @@ A CryptoKeyVersion represents an individual cryptographic key, and the associate
 
 
 
-## Using GetKMSCryptoKeyVersion
+## Using GetKMSCryptoKeyVersion {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -158,7 +158,7 @@ The following arguments are supported:
 
 
 
-## GetKMSCryptoKeyVersion Result
+## GetKMSCryptoKeyVersion Result {#result}
 
 The following output properties are available:
 
@@ -445,7 +445,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Public<wbr>Key</h4>
+
+<h4 id="getkmscryptokeyversionpublickey">Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Public<wbr>Key</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetKMSCryptoKeyVersionPublicKey">output</a> API doc for this type.
 {{% /choosable %}}

@@ -16,7 +16,7 @@ Manages a job resource within a Dataproc cluster within GCE. For more informatio
 
 
 
-## Create a Job Resource
+## Create a Job Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -106,7 +106,7 @@ Manages a job resource within a Dataproc cluster within GCE. For more informatio
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -183,7 +183,7 @@ Manages a job resource within a Dataproc cluster within GCE. For more informatio
 
 {{% /choosable %}}
 
-## Job Resource Properties
+## Job Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -680,9 +680,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Job resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Job resource produces the following output properties:
 
 
 
@@ -707,6 +705,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A URI pointing to the location of the stdout of the job's driver program.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -743,6 +749,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstatus">Job<wbr>Status</a></span>
@@ -773,6 +787,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A URI pointing to the location of the stdout of the job's driver program.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -809,6 +831,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#jobstatus">Dict[Job<wbr>Status]</a></span>
@@ -824,8 +854,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Job Resource
+## Look up an Existing Job Resource {#look-up}
 
 Get an existing Job resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1540,7 +1569,8 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
 ## Supporting Types
 
-<h4>Job<wbr>Hadoop<wbr>Config</h4>
+
+<h4 id="jobhadoopconfig">Job<wbr>Hadoop<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobHadoopConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobHadoopConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1863,7 +1893,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
 
 
-<h4>Job<wbr>Hadoop<wbr>Config<wbr>Logging<wbr>Config</h4>
+<h4 id="jobhadoopconfigloggingconfig">Job<wbr>Hadoop<wbr>Config<wbr>Logging<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobHadoopConfigLoggingConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobHadoopConfigLoggingConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1938,7 +1968,7 @@ for this job to be submitted to. If not specified, defaults to `global`.
 
 
 
-<h4>Job<wbr>Hive<wbr>Config</h4>
+<h4 id="jobhiveconfig">Job<wbr>Hive<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobHiveConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobHiveConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2197,7 +2227,7 @@ Conflicts with `query_list`
 
 
 
-<h4>Job<wbr>Pig<wbr>Config</h4>
+<h4 id="jobpigconfig">Job<wbr>Pig<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobPigConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobPigConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2488,7 +2518,7 @@ Conflicts with `query_list`
 
 
 
-<h4>Job<wbr>Pig<wbr>Config<wbr>Logging<wbr>Config</h4>
+<h4 id="jobpigconfigloggingconfig">Job<wbr>Pig<wbr>Config<wbr>Logging<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobPigConfigLoggingConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobPigConfigLoggingConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2563,7 +2593,7 @@ Conflicts with `query_list`
 
 
 
-<h4>Job<wbr>Placement</h4>
+<h4 id="jobplacement">Job<wbr>Placement</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobPlacement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobPlacement">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2670,7 +2700,7 @@ Conflicts with `query_list`
 
 
 
-<h4>Job<wbr>Pyspark<wbr>Config</h4>
+<h4 id="jobpysparkconfig">Job<wbr>Pyspark<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobPysparkConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobPysparkConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2993,7 +3023,7 @@ Conflicts with `query_list`
 
 
 
-<h4>Job<wbr>Pyspark<wbr>Config<wbr>Logging<wbr>Config</h4>
+<h4 id="jobpysparkconfigloggingconfig">Job<wbr>Pyspark<wbr>Config<wbr>Logging<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobPysparkConfigLoggingConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobPysparkConfigLoggingConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3068,7 +3098,7 @@ Conflicts with `query_list`
 
 
 
-<h4>Job<wbr>Reference</h4>
+<h4 id="jobreference">Job<wbr>Reference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobReference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobReference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3143,7 +3173,7 @@ Conflicts with `query_list`
 
 
 
-<h4>Job<wbr>Scheduling</h4>
+<h4 id="jobscheduling">Job<wbr>Scheduling</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobScheduling">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobScheduling">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3218,7 +3248,7 @@ Conflicts with `query_list`
 
 
 
-<h4>Job<wbr>Spark<wbr>Config</h4>
+<h4 id="jobsparkconfig">Job<wbr>Spark<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobSparkConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobSparkConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3541,7 +3571,7 @@ Conflicts with `query_list`
 
 
 
-<h4>Job<wbr>Spark<wbr>Config<wbr>Logging<wbr>Config</h4>
+<h4 id="jobsparkconfigloggingconfig">Job<wbr>Spark<wbr>Config<wbr>Logging<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobSparkConfigLoggingConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobSparkConfigLoggingConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3616,7 +3646,7 @@ Conflicts with `query_list`
 
 
 
-<h4>Job<wbr>Sparksql<wbr>Config</h4>
+<h4 id="jobsparksqlconfig">Job<wbr>Sparksql<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobSparksqlConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobSparksqlConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3871,7 +3901,7 @@ Conflicts with `query_list`
 
 
 
-<h4>Job<wbr>Sparksql<wbr>Config<wbr>Logging<wbr>Config</h4>
+<h4 id="jobsparksqlconfigloggingconfig">Job<wbr>Sparksql<wbr>Config<wbr>Logging<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobSparksqlConfigLoggingConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobSparksqlConfigLoggingConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3946,7 +3976,7 @@ Conflicts with `query_list`
 
 
 
-<h4>Job<wbr>Status</h4>
+<h4 id="jobstatus">Job<wbr>Status</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobStatus">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4121,7 +4151,7 @@ Conflicts with `query_list`
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>

@@ -28,7 +28,7 @@ const my_network = pulumi.output(gcp.compute.getNetwork({
 
 
 
-## Using GetNetwork
+## Using GetNetwork {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -170,7 +170,7 @@ is not provided, the provider project is used.
 
 
 
-## GetNetwork Result
+## GetNetwork Result {#result}
 
 The following output properties are available:
 

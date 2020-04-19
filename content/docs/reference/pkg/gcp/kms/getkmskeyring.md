@@ -35,7 +35,7 @@ const myKeyRing = pulumi.output(gcp.kms.getKMSKeyRing({
 
 
 
-## Using GetKMSKeyRing
+## Using GetKMSKeyRing {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -221,7 +221,7 @@ is not provided, the provider project is used.
 
 
 
-## GetKMSKeyRing Result
+## GetKMSKeyRing Result {#result}
 
 The following output properties are available:
 

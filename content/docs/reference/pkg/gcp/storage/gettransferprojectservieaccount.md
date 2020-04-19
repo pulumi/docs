@@ -15,7 +15,7 @@ Use this data source to retrieve Storage Transfer service account for this proje
 
 
 
-## Using GetTransferProjectServieAccount
+## Using GetTransferProjectServieAccount {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -117,7 +117,7 @@ The following arguments are supported:
 
 
 
-## GetTransferProjectServieAccount Result
+## GetTransferProjectServieAccount Result {#result}
 
 The following output properties are available:
 

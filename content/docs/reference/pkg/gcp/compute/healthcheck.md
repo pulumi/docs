@@ -219,7 +219,7 @@ const http2_health_check = new gcp.compute.HealthCheck("http2-health-check", {
 
 
 
-## Create a HealthCheck Resource
+## Create a HealthCheck Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -309,7 +309,7 @@ const http2_health_check = new gcp.compute.HealthCheck("http2-health-check", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -386,7 +386,7 @@ const http2_health_check = new gcp.compute.HealthCheck("http2-health-check", {
 
 {{% /choosable %}}
 
-## HealthCheck Resource Properties
+## HealthCheck Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -883,9 +883,7 @@ have greater value than checkIntervalSec.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the HealthCheck resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the HealthCheck resource produces the following output properties:
 
 
 
@@ -901,6 +899,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -938,6 +944,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Self<wbr>Link</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -969,6 +983,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1006,6 +1028,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>self_<wbr>link</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1031,8 +1061,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing HealthCheck Resource
+## Look up an Existing HealthCheck Resource {#look-up}
 
 Get an existing HealthCheck resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1751,7 +1780,8 @@ have greater value than checkIntervalSec.
 
 ## Supporting Types
 
-<h4>Health<wbr>Check<wbr>Http2Health<wbr>Check</h4>
+
+<h4 id="healthcheckhttp2healthcheck">Health<wbr>Check<wbr>Http2Health<wbr>Check</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckHttp2HealthCheck">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#HealthCheckHttp2HealthCheck">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1973,7 +2003,7 @@ have greater value than checkIntervalSec.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port_<wbr>name</span>
+        <span>port<wbr>Specification</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1981,7 +2011,7 @@ have greater value than checkIntervalSec.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port<wbr>Specification</span>
+        <span>port_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2018,7 +2048,7 @@ have greater value than checkIntervalSec.
 
 
 
-<h4>Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check</h4>
+<h4 id="healthcheckhttphealthcheck">Health<wbr>Check<wbr>Http<wbr>Health<wbr>Check</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckHttpHealthCheck">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#HealthCheckHttpHealthCheck">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2240,7 +2270,7 @@ have greater value than checkIntervalSec.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port_<wbr>name</span>
+        <span>port<wbr>Specification</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2248,7 +2278,7 @@ have greater value than checkIntervalSec.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port<wbr>Specification</span>
+        <span>port_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2285,7 +2315,7 @@ have greater value than checkIntervalSec.
 
 
 
-<h4>Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check</h4>
+<h4 id="healthcheckhttpshealthcheck">Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckHttpsHealthCheck">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#HealthCheckHttpsHealthCheck">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2507,7 +2537,7 @@ have greater value than checkIntervalSec.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port_<wbr>name</span>
+        <span>port<wbr>Specification</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2515,7 +2545,7 @@ have greater value than checkIntervalSec.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port<wbr>Specification</span>
+        <span>port_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2552,7 +2582,7 @@ have greater value than checkIntervalSec.
 
 
 
-<h4>Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check</h4>
+<h4 id="healthchecksslhealthcheck">Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckSslHealthCheck">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#HealthCheckSslHealthCheck">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2742,7 +2772,7 @@ have greater value than checkIntervalSec.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port_<wbr>name</span>
+        <span>port<wbr>Specification</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2750,7 +2780,7 @@ have greater value than checkIntervalSec.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port<wbr>Specification</span>
+        <span>port_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2787,7 +2817,7 @@ have greater value than checkIntervalSec.
 
 
 
-<h4>Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check</h4>
+<h4 id="healthchecktcphealthcheck">Health<wbr>Check<wbr>Tcp<wbr>Health<wbr>Check</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckTcpHealthCheck">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#HealthCheckTcpHealthCheck">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2977,7 +3007,7 @@ have greater value than checkIntervalSec.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port_<wbr>name</span>
+        <span>port<wbr>Specification</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2985,7 +3015,7 @@ have greater value than checkIntervalSec.
 
     <dt class="property-optional"
             title="Optional">
-        <span>port<wbr>Specification</span>
+        <span>port_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -3026,7 +3056,7 @@ have greater value than checkIntervalSec.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>

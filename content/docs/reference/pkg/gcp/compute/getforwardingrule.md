@@ -28,7 +28,7 @@ const my_forwarding_rule = pulumi.output(gcp.compute.getForwardingRule({
 
 
 
-## Using GetForwardingRule
+## Using GetForwardingRule {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -210,7 +210,7 @@ is not provided, the project region is used.
 
 
 
-## GetForwardingRule Result
+## GetForwardingRule Result {#result}
 
 The following output properties are available:
 

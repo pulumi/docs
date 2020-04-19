@@ -19,7 +19,7 @@ and
 
 
 
-## Using GetCaCerts
+## Using GetCaCerts {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -157,7 +157,7 @@ The following arguments are supported:
 
 
 
-## GetCaCerts Result
+## GetCaCerts Result {#result}
 
 The following output properties are available:
 
@@ -372,7 +372,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Ca<wbr>Certs<wbr>Cert</h4>
+
+<h4 id="getcacertscert">Get<wbr>Ca<wbr>Certs<wbr>Cert</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetCaCertsCert">output</a> API doc for this type.
 {{% /choosable %}}

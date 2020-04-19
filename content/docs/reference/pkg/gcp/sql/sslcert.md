@@ -16,7 +16,7 @@ Creates a new Google SQL SSL Cert on a Google SQL Instance. For more information
 
 
 
-## Create a SslCert Resource
+## Create a SslCert Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -106,7 +106,7 @@ Creates a new Google SQL SSL Cert on a Google SQL Instance. For more information
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -183,7 +183,7 @@ Creates a new Google SQL SSL Cert on a Google SQL Instance. For more information
 
 {{% /choosable %}}
 
-## SslCert Resource Properties
+## SslCert Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -348,9 +348,7 @@ is not provided, the provider project is used.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the SslCert resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the SslCert resource produces the following output properties:
 
 
 
@@ -395,6 +393,14 @@ for example 2012-11-15T16:19:00.094Z.
     <dd>{{% md %}}The time when the certificate expires in RFC 3339 format,
 for example 2012-11-15T16:19:00.094Z.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -470,6 +476,14 @@ for example 2012-11-15T16:19:00.094Z.
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Private<wbr>Key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -539,6 +553,14 @@ for example 2012-11-15T16:19:00.094Z.
     <dd>{{% md %}}The time when the certificate expires in RFC 3339 format,
 for example 2012-11-15T16:19:00.094Z.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -614,6 +636,14 @@ for example 2012-11-15T16:19:00.094Z.
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>private_<wbr>key</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -648,8 +678,7 @@ for example 2012-11-15T16:19:00.094Z.
 
 
 
-
-## Look up an Existing SslCert Resource
+## Look up an Existing SslCert Resource {#look-up}
 
 Get an existing SslCert resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1187,7 +1216,7 @@ is not provided, the provider project is used.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>

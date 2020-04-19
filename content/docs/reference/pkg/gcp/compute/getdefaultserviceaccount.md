@@ -15,7 +15,7 @@ Use this data source to retrieve default service account for this project
 
 
 
-## Using GetDefaultServiceAccount
+## Using GetDefaultServiceAccount {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -117,7 +117,7 @@ The following arguments are supported:
 
 
 
-## GetDefaultServiceAccount Result
+## GetDefaultServiceAccount Result {#result}
 
 The following output properties are available:
 

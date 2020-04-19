@@ -57,7 +57,7 @@ const primary = new gcp.container.Cluster("primary", {
 
 
 
-## Create a Cluster Resource
+## Create a Cluster Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -147,7 +147,7 @@ const primary = new gcp.container.Cluster("primary", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -224,7 +224,7 @@ const primary = new gcp.container.Cluster("primary", {
 
 {{% /choosable %}}
 
-## Cluster Resource Properties
+## Cluster Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -2081,9 +2081,7 @@ Structure is documented below.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Cluster resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Cluster resource produces the following output properties:
 
 
 
@@ -2099,6 +2097,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The IP address of this cluster's Kubernetes master.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2179,6 +2185,14 @@ notation (e.g. `1.2.3.4/29`).
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Instance<wbr>Group<wbr>Urls</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
@@ -2253,6 +2267,14 @@ notation (e.g. `1.2.3.4/29`).
     </dt>
     <dd>{{% md %}}The IP address of this cluster's Kubernetes master.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2333,6 +2355,14 @@ notation (e.g. `1.2.3.4/29`).
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>instance_<wbr>group_<wbr>urls</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2401,8 +2431,7 @@ notation (e.g. `1.2.3.4/29`).
 
 
 
-
-## Look up an Existing Cluster Resource
+## Look up an Existing Cluster Resource {#look-up}
 
 Get an existing Cluster resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -4653,7 +4682,8 @@ Structure is documented below.
 
 ## Supporting Types
 
-<h4>Cluster<wbr>Addons<wbr>Config</h4>
+
+<h4 id="clusteraddonsconfig">Cluster<wbr>Addons<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterAddonsConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterAddonsConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4980,7 +5010,7 @@ Defaults to disabled; set `disabled = false` to enable.
 
 
 
-<h4>Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config</h4>
+<h4 id="clusteraddonsconfigcloudrunconfig">Cluster<wbr>Addons<wbr>Config<wbr>Cloudrun<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterAddonsConfigCloudrunConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterAddonsConfigCloudrunConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5063,7 +5093,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 
 
-<h4>Cluster<wbr>Addons<wbr>Config<wbr>Dns<wbr>Cache<wbr>Config</h4>
+<h4 id="clusteraddonsconfigdnscacheconfig">Cluster<wbr>Addons<wbr>Config<wbr>Dns<wbr>Cache<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterAddonsConfigDnsCacheConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterAddonsConfigDnsCacheConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5146,7 +5176,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 
 
-<h4>Cluster<wbr>Addons<wbr>Config<wbr>Horizontal<wbr>Pod<wbr>Autoscaling</h4>
+<h4 id="clusteraddonsconfighorizontalpodautoscaling">Cluster<wbr>Addons<wbr>Config<wbr>Horizontal<wbr>Pod<wbr>Autoscaling</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterAddonsConfigHorizontalPodAutoscaling">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterAddonsConfigHorizontalPodAutoscaling">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5229,7 +5259,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 
 
-<h4>Cluster<wbr>Addons<wbr>Config<wbr>Http<wbr>Load<wbr>Balancing</h4>
+<h4 id="clusteraddonsconfighttploadbalancing">Cluster<wbr>Addons<wbr>Config<wbr>Http<wbr>Load<wbr>Balancing</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterAddonsConfigHttpLoadBalancing">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterAddonsConfigHttpLoadBalancing">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5312,7 +5342,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 
 
-<h4>Cluster<wbr>Addons<wbr>Config<wbr>Istio<wbr>Config</h4>
+<h4 id="clusteraddonsconfigistioconfig">Cluster<wbr>Addons<wbr>Config<wbr>Istio<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterAddonsConfigIstioConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterAddonsConfigIstioConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5431,7 +5461,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 
 
-<h4>Cluster<wbr>Addons<wbr>Config<wbr>Network<wbr>Policy<wbr>Config</h4>
+<h4 id="clusteraddonsconfignetworkpolicyconfig">Cluster<wbr>Addons<wbr>Config<wbr>Network<wbr>Policy<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterAddonsConfigNetworkPolicyConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterAddonsConfigNetworkPolicyConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5514,7 +5544,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 
 
-<h4>Cluster<wbr>Authenticator<wbr>Groups<wbr>Config</h4>
+<h4 id="clusterauthenticatorgroupsconfig">Cluster<wbr>Authenticator<wbr>Groups<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterAuthenticatorGroupsConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterAuthenticatorGroupsConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5593,7 +5623,7 @@ cluster. It is disabled by default. Set `disabled = false` to enable.
 
 
 
-<h4>Cluster<wbr>Cluster<wbr>Autoscaling</h4>
+<h4 id="clusterclusterautoscaling">Cluster<wbr>Cluster<wbr>Autoscaling</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterAutoscaling">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterAutoscaling">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5812,7 +5842,7 @@ in addition to node auto-provisioning. Structure is documented below.
 
 
 
-<h4>Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Auto<wbr>Provisioning<wbr>Defaults</h4>
+<h4 id="clusterclusterautoscalingautoprovisioningdefaults">Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Auto<wbr>Provisioning<wbr>Defaults</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterAutoscalingAutoProvisioningDefaults">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterAutoscalingAutoProvisioningDefaults">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5955,7 +5985,7 @@ In order to use the configured `oauth_scopes` for logging and monitoring, the se
 
 
 
-<h4>Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Resource<wbr>Limit</h4>
+<h4 id="clusterclusterautoscalingresourcelimit">Cluster<wbr>Cluster<wbr>Autoscaling<wbr>Resource<wbr>Limit</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterAutoscalingResourceLimit">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterAutoscalingResourceLimit">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6114,7 +6144,7 @@ for a list of types.
 
 
 
-<h4>Cluster<wbr>Database<wbr>Encryption</h4>
+<h4 id="clusterdatabaseencryption">Cluster<wbr>Database<wbr>Encryption</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterDatabaseEncryption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterDatabaseEncryption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6229,7 +6259,7 @@ for a list of types.
 
 
 
-<h4>Cluster<wbr>Ip<wbr>Allocation<wbr>Policy</h4>
+<h4 id="clusteripallocationpolicy">Cluster<wbr>Ip<wbr>Allocation<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterIpAllocationPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterIpAllocationPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6468,7 +6498,7 @@ GKE-managed one.
 
 
 
-<h4>Cluster<wbr>Maintenance<wbr>Policy</h4>
+<h4 id="clustermaintenancepolicy">Cluster<wbr>Maintenance<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterMaintenancePolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterMaintenancePolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6595,7 +6625,7 @@ recurring maintenance operations.
 
 
 
-<h4>Cluster<wbr>Maintenance<wbr>Policy<wbr>Daily<wbr>Maintenance<wbr>Window</h4>
+<h4 id="clustermaintenancepolicydailymaintenancewindow">Cluster<wbr>Maintenance<wbr>Policy<wbr>Daily<wbr>Maintenance<wbr>Window</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterMaintenancePolicyDailyMaintenanceWindow">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterMaintenancePolicyDailyMaintenanceWindow">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6702,7 +6732,7 @@ recurring maintenance operations.
 
 
 
-<h4>Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window</h4>
+<h4 id="clustermaintenancepolicyrecurringwindow">Cluster<wbr>Maintenance<wbr>Policy<wbr>Recurring<wbr>Window</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterMaintenancePolicyRecurringWindow">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterMaintenancePolicyRecurringWindow">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6841,7 +6871,7 @@ recurring maintenance operations.
 
 
 
-<h4>Cluster<wbr>Master<wbr>Auth</h4>
+<h4 id="clustermasterauth">Cluster<wbr>Master<wbr>Auth</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterMasterAuth">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterMasterAuth">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7096,7 +7126,7 @@ the Kubernetes master endpoint. If not present basic auth will be disabled.
 
 
 
-<h4>Cluster<wbr>Master<wbr>Auth<wbr>Client<wbr>Certificate<wbr>Config</h4>
+<h4 id="clustermasterauthclientcertificateconfig">Cluster<wbr>Master<wbr>Auth<wbr>Client<wbr>Certificate<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterMasterAuthClientCertificateConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterMasterAuthClientCertificateConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7171,7 +7201,7 @@ the Kubernetes master endpoint. If not present basic auth will be disabled.
 
 
 
-<h4>Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config</h4>
+<h4 id="clustermasterauthorizednetworksconfig">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterMasterAuthorizedNetworksConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterMasterAuthorizedNetworksConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7254,7 +7284,7 @@ Kubernetes cluster master through HTTPS.
 
 
 
-<h4>Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block</h4>
+<h4 id="clustermasterauthorizednetworksconfigcidrblock">Cluster<wbr>Master<wbr>Authorized<wbr>Networks<wbr>Config<wbr>Cidr<wbr>Block</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterMasterAuthorizedNetworksConfigCidrBlock">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterMasterAuthorizedNetworksConfigCidrBlock">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7373,7 +7403,7 @@ Must be specified in CIDR notation.
 
 
 
-<h4>Cluster<wbr>Network<wbr>Policy</h4>
+<h4 id="clusternetworkpolicy">Cluster<wbr>Network<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNetworkPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNetworkPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7492,7 +7522,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 
 
-<h4>Cluster<wbr>Node<wbr>Config</h4>
+<h4 id="clusternodeconfig">Cluster<wbr>Node<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodeConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodeConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8127,22 +8157,22 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk_<wbr>size_<wbr>gb</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}Size of the disk attached to each node, specified
-in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>disk<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Type of the disk attached to each node
 (e.g. 'pd-standard' or 'pd-ssd'). If unspecified, the default disk type is 'pd-standard'
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>disk_<wbr>size_<wbr>gb</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Size of the disk attached to each node, specified
+in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -8319,7 +8349,7 @@ Structure is documented below.
 
 
 
-<h4>Cluster<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator</h4>
+<h4 id="clusternodeconfigguestaccelerator">Cluster<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodeConfigGuestAccelerator">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodeConfigGuestAccelerator">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8434,7 +8464,7 @@ Structure is documented below.
 
 
 
-<h4>Cluster<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config</h4>
+<h4 id="clusternodeconfigsandboxconfig">Cluster<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodeConfigSandboxConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodeConfigSandboxConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8517,7 +8547,7 @@ Accepted values are:
 
 
 
-<h4>Cluster<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</h4>
+<h4 id="clusternodeconfigshieldedinstanceconfig">Cluster<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodeConfigShieldedInstanceConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodeConfigShieldedInstanceConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8632,7 +8662,7 @@ Accepted values are:
 
 
 
-<h4>Cluster<wbr>Node<wbr>Config<wbr>Taint</h4>
+<h4 id="clusternodeconfigtaint">Cluster<wbr>Node<wbr>Config<wbr>Taint</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodeConfigTaint">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodeConfigTaint">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8783,7 +8813,7 @@ Accepted values are:
 
 
 
-<h4>Cluster<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</h4>
+<h4 id="clusternodeconfigworkloadmetadataconfig">Cluster<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodeConfigWorkloadMetadataConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodeConfigWorkloadMetadataConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8882,7 +8912,7 @@ Accepted values are:
 
 
 
-<h4>Cluster<wbr>Node<wbr>Pool</h4>
+<h4 id="clusternodepool">Cluster<wbr>Node<wbr>Pool</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodePool">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodePool">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9385,7 +9415,7 @@ a zonal cluster, omit the cluster's zone.
 
 
 
-<h4>Cluster<wbr>Node<wbr>Pool<wbr>Autoscaling</h4>
+<h4 id="clusternodepoolautoscaling">Cluster<wbr>Node<wbr>Pool<wbr>Autoscaling</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodePoolAutoscaling">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodePoolAutoscaling">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9492,7 +9522,7 @@ a zonal cluster, omit the cluster's zone.
 
 
 
-<h4>Cluster<wbr>Node<wbr>Pool<wbr>Management</h4>
+<h4 id="clusternodepoolmanagement">Cluster<wbr>Node<wbr>Pool<wbr>Management</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodePoolManagement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodePoolManagement">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9599,7 +9629,7 @@ a zonal cluster, omit the cluster's zone.
 
 
 
-<h4>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config</h4>
+<h4 id="clusternodepoolnodeconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodePoolNodeConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodePoolNodeConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10234,22 +10264,22 @@ Structure is documented below.
 
     <dt class="property-optional"
             title="Optional">
-        <span>disk_<wbr>size_<wbr>gb</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}Size of the disk attached to each node, specified
-in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>disk<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Type of the disk attached to each node
 (e.g. 'pd-standard' or 'pd-ssd'). If unspecified, the default disk type is 'pd-standard'
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>disk_<wbr>size_<wbr>gb</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Size of the disk attached to each node, specified
+in GB. The smallest allowed disk size is 10GB. Defaults to 100GB.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -10426,7 +10456,7 @@ Structure is documented below.
 
 
 
-<h4>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator</h4>
+<h4 id="clusternodepoolnodeconfigguestaccelerator">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Guest<wbr>Accelerator</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodePoolNodeConfigGuestAccelerator">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodePoolNodeConfigGuestAccelerator">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10541,7 +10571,7 @@ Structure is documented below.
 
 
 
-<h4>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config</h4>
+<h4 id="clusternodepoolnodeconfigsandboxconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Sandbox<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodePoolNodeConfigSandboxConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodePoolNodeConfigSandboxConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10624,7 +10654,7 @@ Accepted values are:
 
 
 
-<h4>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</h4>
+<h4 id="clusternodepoolnodeconfigshieldedinstanceconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Shielded<wbr>Instance<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodePoolNodeConfigShieldedInstanceConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodePoolNodeConfigShieldedInstanceConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10739,7 +10769,7 @@ Accepted values are:
 
 
 
-<h4>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint</h4>
+<h4 id="clusternodepoolnodeconfigtaint">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Taint</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodePoolNodeConfigTaint">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodePoolNodeConfigTaint">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10890,7 +10920,7 @@ Accepted values are:
 
 
 
-<h4>Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</h4>
+<h4 id="clusternodepoolnodeconfigworkloadmetadataconfig">Cluster<wbr>Node<wbr>Pool<wbr>Node<wbr>Config<wbr>Workload<wbr>Metadata<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodePoolNodeConfigWorkloadMetadataConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodePoolNodeConfigWorkloadMetadataConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10989,7 +11019,7 @@ Accepted values are:
 
 
 
-<h4>Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings</h4>
+<h4 id="clusternodepoolupgradesettings">Cluster<wbr>Node<wbr>Pool<wbr>Upgrade<wbr>Settings</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterNodePoolUpgradeSettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterNodePoolUpgradeSettings">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11096,7 +11126,7 @@ Accepted values are:
 
 
 
-<h4>Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config</h4>
+<h4 id="clusterpodsecuritypolicyconfig">Cluster<wbr>Pod<wbr>Security<wbr>Policy<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterPodSecurityPolicyConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterPodSecurityPolicyConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11179,7 +11209,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 
 
-<h4>Cluster<wbr>Private<wbr>Cluster<wbr>Config</h4>
+<h4 id="clusterprivateclusterconfig">Cluster<wbr>Private<wbr>Cluster<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterPrivateClusterConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterPrivateClusterConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11486,7 +11516,7 @@ for more details. This field only applies to private clusters, when
 
 
 
-<h4>Cluster<wbr>Release<wbr>Channel</h4>
+<h4 id="clusterreleasechannel">Cluster<wbr>Release<wbr>Channel</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterReleaseChannel">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterReleaseChannel">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11585,7 +11615,7 @@ Accepted values are:
 
 
 
-<h4>Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config</h4>
+<h4 id="clusterresourceusageexportconfig">Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterResourceUsageExportConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterResourceUsageExportConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11756,7 +11786,7 @@ billing export. Defaults to `true`.
 
 
 
-<h4>Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Bigquery<wbr>Destination</h4>
+<h4 id="clusterresourceusageexportconfigbigquerydestination">Cluster<wbr>Resource<wbr>Usage<wbr>Export<wbr>Config<wbr>Bigquery<wbr>Destination</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterResourceUsageExportConfigBigqueryDestination">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterResourceUsageExportConfigBigqueryDestination">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11831,7 +11861,7 @@ billing export. Defaults to `true`.
 
 
 
-<h4>Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling</h4>
+<h4 id="clusterverticalpodautoscaling">Cluster<wbr>Vertical<wbr>Pod<wbr>Autoscaling</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterVerticalPodAutoscaling">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterVerticalPodAutoscaling">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11914,7 +11944,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 
 
-<h4>Cluster<wbr>Workload<wbr>Identity<wbr>Config</h4>
+<h4 id="clusterworkloadidentityconfig">Cluster<wbr>Workload<wbr>Identity<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterWorkloadIdentityConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterWorkloadIdentityConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11997,7 +12027,7 @@ If enabled, pods must be valid under a PodSecurityPolicy to be created.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>

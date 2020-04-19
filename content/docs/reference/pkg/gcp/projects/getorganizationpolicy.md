@@ -17,7 +17,7 @@ documentation](https://cloud.google.com/resource-manager/docs/organization-polic
 
 
 
-## Using GetOrganizationPolicy
+## Using GetOrganizationPolicy {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -155,7 +155,7 @@ The following arguments are supported:
 
 
 
-## GetOrganizationPolicy Result
+## GetOrganizationPolicy Result {#result}
 
 The following output properties are available:
 
@@ -490,7 +490,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Organization<wbr>Policy<wbr>Boolean<wbr>Policy</h4>
+
+<h4 id="getorganizationpolicybooleanpolicy">Get<wbr>Organization<wbr>Policy<wbr>Boolean<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetOrganizationPolicyBooleanPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -565,7 +566,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy</h4>
+<h4 id="getorganizationpolicylistpolicy">Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetOrganizationPolicyListPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -736,7 +737,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow</h4>
+<h4 id="getorganizationpolicylistpolicyallow">Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Allow</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetOrganizationPolicyListPolicyAllow">output</a> API doc for this type.
 {{% /choosable %}}
@@ -843,7 +844,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Deny</h4>
+<h4 id="getorganizationpolicylistpolicydeny">Get<wbr>Organization<wbr>Policy<wbr>List<wbr>Policy<wbr>Deny</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetOrganizationPolicyListPolicyDeny">output</a> API doc for this type.
 {{% /choosable %}}
@@ -950,7 +951,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Organization<wbr>Policy<wbr>Restore<wbr>Policy</h4>
+<h4 id="getorganizationpolicyrestorepolicy">Get<wbr>Organization<wbr>Policy<wbr>Restore<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetOrganizationPolicyRestorePolicy">output</a> API doc for this type.
 {{% /choosable %}}

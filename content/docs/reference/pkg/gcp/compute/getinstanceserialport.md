@@ -16,7 +16,7 @@ the official [API](https://cloud.google.com/compute/docs/instances/viewing-seria
 
 
 
-## Using GetInstanceSerialPort
+## Using GetInstanceSerialPort {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -234,7 +234,7 @@ If it is not provided, the provider zone is used.
 
 
 
-## GetInstanceSerialPort Result
+## GetInstanceSerialPort Result {#result}
 
 The following output properties are available:
 

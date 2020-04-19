@@ -22,7 +22,7 @@ receive an error otherwise.
 
 
 
-## Using GetClientOpenIdUserInfo
+## Using GetClientOpenIdUserInfo {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -51,7 +51,7 @@ receive an error otherwise.
 
 
 
-## GetClientOpenIdUserInfo Result
+## GetClientOpenIdUserInfo Result {#result}
 
 The following output properties are available:
 

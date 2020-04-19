@@ -55,7 +55,7 @@ const internalWithGceEndpoint = new gcp.compute.Address("internal_with_gce_endpo
 
 
 
-## Create a Address Resource
+## Create a Address Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -145,7 +145,7 @@ const internalWithGceEndpoint = new gcp.compute.Address("internal_with_gce_endpo
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -222,7 +222,7 @@ const internalWithGceEndpoint = new gcp.compute.Address("internal_with_gce_endpo
 
 {{% /choosable %}}
 
-## Address Resource Properties
+## Address Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -235,16 +235,6 @@ The Address resource accepts the following [input]({{< relref "/docs/intro/conce
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>IPAddress</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The static external IP address represented by this resource. Only IPv4 is supported. An address may only be specified
-for INTERNAL address types. The IP address must be inside the specified subnetwork, if any.
-{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -262,6 +252,16 @@ for INTERNAL address types. The IP address must be inside the specified subnetwo
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>IPAddress</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The static external IP address represented by this resource. Only IPv4 is supported. An address may only be specified
+for INTERNAL address types. The IP address must be inside the specified subnetwork, if any.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -663,9 +663,7 @@ subnetwork's IP range. This field can only be used with INTERNAL type with GCE_E
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Address resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Address resource produces the following output properties:
 
 
 
@@ -681,6 +679,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -727,6 +733,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Label<wbr>Fingerprint</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -767,6 +781,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Creation timestamp in RFC3339 text format.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -813,6 +835,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>label_<wbr>fingerprint</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -847,8 +877,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Address Resource
+## Look up an Existing Address Resource {#look-up}
 
 Get an existing Address resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -974,16 +1003,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>IPAddress</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The static external IP address represented by this resource. Only IPv4 is supported. An address may only be specified
-for INTERNAL address types. The IP address must be inside the specified subnetwork, if any.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Address<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -1007,6 +1026,16 @@ for INTERNAL address types. The IP address must be inside the specified subnetwo
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}An optional description of this resource.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>IPAddress</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The static external IP address represented by this resource. Only IPv4 is supported. An address may only be specified
+for INTERNAL address types. The IP address must be inside the specified subnetwork, if any.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1546,7 +1575,7 @@ subnetwork's IP range. This field can only be used with INTERNAL type with GCE_E
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>

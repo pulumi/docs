@@ -65,7 +65,7 @@ const master = new gcp.sql.DatabaseInstance("master", {
 
 
 
-## Create a DatabaseInstance Resource
+## Create a DatabaseInstance Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -155,7 +155,7 @@ const master = new gcp.sql.DatabaseInstance("master", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -232,7 +232,7 @@ const master = new gcp.sql.DatabaseInstance("master", {
 
 {{% /choosable %}}
 
-## DatabaseInstance Resource Properties
+## DatabaseInstance Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -693,9 +693,7 @@ configuration is detailed below.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the DatabaseInstance resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the DatabaseInstance resource produces the following output properties:
 
 
 
@@ -721,6 +719,14 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
     </dt>
     <dd>{{% md %}}The first IPv4 address of any type assigned.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -803,6 +809,14 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Ip<wbr>Addresses</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceipaddress">[]Database<wbr>Instance<wbr>Ip<wbr>Address</a></span>
@@ -879,6 +893,14 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
     </dt>
     <dd>{{% md %}}The first IPv4 address of any type assigned.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -961,6 +983,14 @@ connection strings. For example, when connecting with [Cloud SQL Proxy](https://
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>ip_<wbr>addresses</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#databaseinstanceipaddress">List[Database<wbr>Instance<wbr>Ip<wbr>Address]</a></span>
@@ -1021,8 +1051,7 @@ instance.
 
 
 
-
-## Look up an Existing DatabaseInstance Resource
+## Look up an Existing DatabaseInstance Resource {#look-up}
 
 Get an existing DatabaseInstance resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1885,7 +1914,8 @@ configuration is detailed below.
 
 ## Supporting Types
 
-<h4>Database<wbr>Instance<wbr>Ip<wbr>Address</h4>
+
+<h4 id="databaseinstanceipaddress">Database<wbr>Instance<wbr>Ip<wbr>Address</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceIpAddress">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2024,7 +2054,7 @@ configuration is detailed below.
 
 
 
-<h4>Database<wbr>Instance<wbr>Replica<wbr>Configuration</h4>
+<h4 id="databaseinstancereplicaconfiguration">Database<wbr>Instance<wbr>Replica<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceReplicaConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceReplicaConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2499,7 +2529,7 @@ value is checked during the SSL handshake.
 
 
 
-<h4>Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert</h4>
+<h4 id="databaseinstanceservercacert">Database<wbr>Instance<wbr>Server<wbr>Ca<wbr>Cert</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceServerCaCert">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2710,7 +2740,7 @@ formatted date time string indicating when this whitelist expires.
 
 
 
-<h4>Database<wbr>Instance<wbr>Settings</h4>
+<h4 id="databaseinstancesettings">Database<wbr>Instance<wbr>Settings</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceSettings">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceSettings">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3397,7 +3427,7 @@ Replication type for this instance, can be one of `ASYNCHRONOUS` or `SYNCHRONOUS
 
 
 
-<h4>Database<wbr>Instance<wbr>Settings<wbr>Backup<wbr>Configuration</h4>
+<h4 id="databaseinstancesettingsbackupconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Backup<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceSettingsBackupConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceSettingsBackupConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3592,7 +3622,7 @@ configuration starts.
 
 
 
-<h4>Database<wbr>Instance<wbr>Settings<wbr>Database<wbr>Flag</h4>
+<h4 id="databaseinstancesettingsdatabaseflag">Database<wbr>Instance<wbr>Settings<wbr>Database<wbr>Flag</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceSettingsDatabaseFlag">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceSettingsDatabaseFlag">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3715,7 +3745,7 @@ the whitelist to become active.
 
 
 
-<h4>Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration</h4>
+<h4 id="databaseinstancesettingsipconfiguration">Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceSettingsIpConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceSettingsIpConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3926,7 +3956,7 @@ for users connecting over IP.
 
 
 
-<h4>Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network</h4>
+<h4 id="databaseinstancesettingsipconfigurationauthorizednetwork">Database<wbr>Instance<wbr>Settings<wbr>Ip<wbr>Configuration<wbr>Authorized<wbr>Network</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceSettingsIpConfigurationAuthorizedNetwork">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4089,7 +4119,7 @@ formatted date time string indicating when this whitelist expires.
 
 
 
-<h4>Database<wbr>Instance<wbr>Settings<wbr>Location<wbr>Preference</h4>
+<h4 id="databaseinstancesettingslocationpreference">Database<wbr>Instance<wbr>Settings<wbr>Location<wbr>Preference</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceSettingsLocationPreference">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceSettingsLocationPreference">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4212,7 +4242,7 @@ in. Must be in the same region as this instance.
 
 
 
-<h4>Database<wbr>Instance<wbr>Settings<wbr>Maintenance<wbr>Window</h4>
+<h4 id="databaseinstancesettingsmaintenancewindow">Database<wbr>Instance<wbr>Settings<wbr>Maintenance<wbr>Window</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceSettingsMaintenanceWindow">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceSettingsMaintenanceWindow">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4371,7 +4401,7 @@ in. Must be in the same region as this instance.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>

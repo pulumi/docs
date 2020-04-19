@@ -27,7 +27,7 @@ than actually deploying an in-preview deployment (i.e. `preview=true` to
 
 
 
-## Create a Deployment Resource
+## Create a Deployment Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -117,7 +117,7 @@ than actually deploying an in-preview deployment (i.e. `preview=true` to
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -194,7 +194,7 @@ than actually deploying an in-preview deployment (i.e. `preview=true` to
 
 {{% /choosable %}}
 
-## Deployment Resource Properties
+## Deployment Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -563,9 +563,7 @@ If it is not provided, the provider project is used.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Deployment resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Deployment resource produces the following output properties:
 
 
 
@@ -581,6 +579,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Unique identifier for deployment. Output only.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -618,6 +624,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Manifest</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -649,6 +663,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Unique identifier for deployment. Output only.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -686,6 +708,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>manifest</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -711,8 +741,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Deployment Resource
+## Look up an Existing Deployment Resource {#look-up}
 
 Get an existing Deployment resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1303,7 +1332,8 @@ If it is not provided, the provider project is used.
 
 ## Supporting Types
 
-<h4>Deployment<wbr>Label</h4>
+
+<h4 id="deploymentlabel">Deployment<wbr>Label</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DeploymentLabel">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DeploymentLabel">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1410,7 +1440,7 @@ If it is not provided, the provider project is used.
 
 
 
-<h4>Deployment<wbr>Target</h4>
+<h4 id="deploymenttarget">Deployment<wbr>Target</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DeploymentTarget">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DeploymentTarget">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1517,7 +1547,7 @@ If it is not provided, the provider project is used.
 
 
 
-<h4>Deployment<wbr>Target<wbr>Config</h4>
+<h4 id="deploymenttargetconfig">Deployment<wbr>Target<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DeploymentTargetConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DeploymentTargetConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1592,7 +1622,7 @@ If it is not provided, the provider project is used.
 
 
 
-<h4>Deployment<wbr>Target<wbr>Import</h4>
+<h4 id="deploymenttargetimport">Deployment<wbr>Target<wbr>Import</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DeploymentTargetImport">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DeploymentTargetImport">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1703,7 +1733,7 @@ If it is not provided, the provider project is used.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>

@@ -15,7 +15,7 @@ Get a Secret Manager secret's version. For more information see the [official do
 
 
 
-## Using GetSecretVersion
+## Using GetSecretVersion {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -197,7 +197,7 @@ is not provided, the latest version is retrieved.
 
 
 
-## GetSecretVersion Result
+## GetSecretVersion Result {#result}
 
 The following output properties are available:
 

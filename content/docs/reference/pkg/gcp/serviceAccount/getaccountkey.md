@@ -16,7 +16,7 @@ Get service account public key. For more information, see [the official document
 
 
 
-## Using GetAccountKey
+## Using GetAccountKey {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -202,7 +202,7 @@ Defaults to the provider project configuration.
 
 
 
-## GetAccountKey Result
+## GetAccountKey Result {#result}
 
 The following output properties are available:
 

@@ -19,7 +19,7 @@ Creates a table resource in a dataset for Google BigQuery. For more information 
 
 
 
-## Create a Table Resource
+## Create a Table Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -109,7 +109,7 @@ Creates a table resource in a dataset for Google BigQuery. For more information 
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -186,7 +186,7 @@ Creates a table resource in a dataset for Google BigQuery. For more information 
 
 {{% /choosable %}}
 
-## Table Resource Properties
+## Table Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -839,9 +839,7 @@ Structure is documented below.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Table resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Table resource produces the following output properties:
 
 
 
@@ -866,6 +864,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A hash of the resource.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -958,6 +964,14 @@ one partition per day based on data loading time.
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Last<wbr>Modified<wbr>Time</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
@@ -1044,6 +1058,14 @@ one partition per day based on data loading time.
     </dt>
     <dd>{{% md %}}A hash of the resource.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1136,6 +1158,14 @@ one partition per day based on data loading time.
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>last_<wbr>modified_<wbr>time</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1207,8 +1237,7 @@ one partition per day based on data loading time.
 
 
 
-
-## Look up an Existing Table Resource
+## Look up an Existing Table Resource {#look-up}
 
 Get an existing Table resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -2303,7 +2332,8 @@ Structure is documented below.
 
 ## Supporting Types
 
-<h4>Table<wbr>Encryption<wbr>Configuration</h4>
+
+<h4 id="tableencryptionconfiguration">Table<wbr>Encryption<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableEncryptionConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TableEncryptionConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2398,7 +2428,7 @@ encrypt/decrypt permissions on this key - you may want to see the
 
 
 
-<h4>Table<wbr>External<wbr>Data<wbr>Configuration</h4>
+<h4 id="tableexternaldataconfiguration">Table<wbr>External<wbr>Data<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableExternalDataConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TableExternalDataConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2793,7 +2823,7 @@ BigQuery can ignore when reading data.
 
 
 
-<h4>Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Csv<wbr>Options</h4>
+<h4 id="tableexternaldataconfigurationcsvoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Csv<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableExternalDataConfigurationCsvOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TableExternalDataConfigurationCsvOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3100,7 +3130,7 @@ that BigQuery will skip when reading the data. At least one of `range` or
 
 
 
-<h4>Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Google<wbr>Sheets<wbr>Options</h4>
+<h4 id="tableexternaldataconfigurationgooglesheetsoptions">Table<wbr>External<wbr>Data<wbr>Configuration<wbr>Google<wbr>Sheets<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableExternalDataConfigurationGoogleSheetsOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TableExternalDataConfigurationGoogleSheetsOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3227,7 +3257,7 @@ that BigQuery will skip when reading the data. At least one of `range` or
 
 
 
-<h4>Table<wbr>Range<wbr>Partitioning</h4>
+<h4 id="tablerangepartitioning">Table<wbr>Range<wbr>Partitioning</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableRangePartitioning">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TableRangePartitioning">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3350,7 +3380,7 @@ Structure is documented below.
 
 
 
-<h4>Table<wbr>Range<wbr>Partitioning<wbr>Range</h4>
+<h4 id="tablerangepartitioningrange">Table<wbr>Range<wbr>Partitioning<wbr>Range</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableRangePartitioningRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TableRangePartitioningRange">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3501,7 +3531,7 @@ Structure is documented below.
 
 
 
-<h4>Table<wbr>Time<wbr>Partitioning</h4>
+<h4 id="tabletimepartitioning">Table<wbr>Time<wbr>Partitioning</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableTimePartitioning">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TableTimePartitioning">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3708,7 +3738,7 @@ specified.
 
 
 
-<h4>Table<wbr>View</h4>
+<h4 id="tableview">Table<wbr>View</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#TableView">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#TableView">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3831,7 +3861,7 @@ The default value is true. If set to false, the view will use BigQuery's standar
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>

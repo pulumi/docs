@@ -24,7 +24,7 @@ This resource is specifically to create a compute instance from a given
 
 
 
-## Create a InstanceFromTemplate Resource
+## Create a InstanceFromTemplate Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -114,7 +114,7 @@ This resource is specifically to create a compute instance from a given
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -191,7 +191,7 @@ This resource is specifically to create a compute instance from a given
 
 {{% /choosable %}}
 
-## InstanceFromTemplate Resource Properties
+## InstanceFromTemplate Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -1060,9 +1060,7 @@ set, the provider zone is used.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the InstanceFromTemplate resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the InstanceFromTemplate resource produces the following output properties:
 
 
 
@@ -1085,6 +1083,14 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1151,6 +1157,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Instance<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1211,6 +1225,14 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1277,6 +1299,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>instance_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1324,8 +1354,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing InstanceFromTemplate Resource
+## Look up an Existing InstanceFromTemplate Resource {#look-up}
 
 Get an existing InstanceFromTemplate resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -2532,7 +2561,8 @@ set, the provider zone is used.
 
 ## Supporting Types
 
-<h4>Instance<wbr>From<wbr>Template<wbr>Attached<wbr>Disk</h4>
+
+<h4 id="instancefromtemplateattacheddisk">Instance<wbr>From<wbr>Template<wbr>Attached<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateAttachedDisk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateAttachedDisk">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2767,7 +2797,7 @@ set, the provider zone is used.
 
 
 
-<h4>Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk</h4>
+<h4 id="instancefromtemplatebootdisk">Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateBootDisk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateBootDisk">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3066,7 +3096,7 @@ set, the provider zone is used.
 
 
 
-<h4>Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Params</h4>
+<h4 id="instancefromtemplatebootdiskinitializeparams">Instance<wbr>From<wbr>Template<wbr>Boot<wbr>Disk<wbr>Initialize<wbr>Params</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateBootDiskInitializeParams">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateBootDiskInitializeParams">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3237,7 +3267,7 @@ set, the provider zone is used.
 
 
 
-<h4>Instance<wbr>From<wbr>Template<wbr>Guest<wbr>Accelerator</h4>
+<h4 id="instancefromtemplateguestaccelerator">Instance<wbr>From<wbr>Template<wbr>Guest<wbr>Accelerator</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateGuestAccelerator">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateGuestAccelerator">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3344,7 +3374,7 @@ set, the provider zone is used.
 
 
 
-<h4>Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface</h4>
+<h4 id="instancefromtemplatenetworkinterface">Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateNetworkInterface">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateNetworkInterface">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3619,7 +3649,7 @@ Changing this forces a new resource to be created.
 
 
 
-<h4>Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config</h4>
+<h4 id="instancefromtemplatenetworkinterfaceaccessconfig">Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Access<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateNetworkInterfaceAccessConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateNetworkInterfaceAccessConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3758,7 +3788,7 @@ Changing this forces a new resource to be created.
 
 
 
-<h4>Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range</h4>
+<h4 id="instancefromtemplatenetworkinterfacealiasiprange">Instance<wbr>From<wbr>Template<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateNetworkInterfaceAliasIpRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateNetworkInterfaceAliasIpRange">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3865,7 +3895,7 @@ Changing this forces a new resource to be created.
 
 
 
-<h4>Instance<wbr>From<wbr>Template<wbr>Scheduling</h4>
+<h4 id="instancefromtemplatescheduling">Instance<wbr>From<wbr>Template<wbr>Scheduling</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateScheduling">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateScheduling">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4036,7 +4066,7 @@ Changing this forces a new resource to be created.
 
 
 
-<h4>Instance<wbr>From<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity</h4>
+<h4 id="instancefromtemplateschedulingnodeaffinity">Instance<wbr>From<wbr>Template<wbr>Scheduling<wbr>Node<wbr>Affinity</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateSchedulingNodeAffinity">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateSchedulingNodeAffinity">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4175,7 +4205,7 @@ Changing this forces a new resource to be created.
 
 
 
-<h4>Instance<wbr>From<wbr>Template<wbr>Scratch<wbr>Disk</h4>
+<h4 id="instancefromtemplatescratchdisk">Instance<wbr>From<wbr>Template<wbr>Scratch<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateScratchDisk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateScratchDisk">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4250,7 +4280,7 @@ Changing this forces a new resource to be created.
 
 
 
-<h4>Instance<wbr>From<wbr>Template<wbr>Service<wbr>Account</h4>
+<h4 id="instancefromtemplateserviceaccount">Instance<wbr>From<wbr>Template<wbr>Service<wbr>Account</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateServiceAccount">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateServiceAccount">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4357,7 +4387,7 @@ Changing this forces a new resource to be created.
 
 
 
-<h4>Instance<wbr>From<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config</h4>
+<h4 id="instancefromtemplateshieldedinstanceconfig">Instance<wbr>From<wbr>Template<wbr>Shielded<wbr>Instance<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceFromTemplateShieldedInstanceConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceFromTemplateShieldedInstanceConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4500,7 +4530,7 @@ Changing this forces a new resource to be created.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>

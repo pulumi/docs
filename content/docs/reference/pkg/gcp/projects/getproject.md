@@ -14,7 +14,7 @@ for more details.
 
 
 
-## Using GetProject
+## Using GetProject {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -116,7 +116,7 @@ The following arguments are supported:
 
 
 
-## GetProject Result
+## GetProject Result {#result}
 
 The following output properties are available:
 
@@ -263,7 +263,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Project<wbr>Project</h4>
+
+<h4 id="getprojectproject">Get<wbr>Project<wbr>Project</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetProjectProject">output</a> API doc for this type.
 {{% /choosable %}}

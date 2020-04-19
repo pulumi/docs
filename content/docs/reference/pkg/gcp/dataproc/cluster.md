@@ -113,7 +113,7 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
 
 
 
-## Create a Cluster Resource
+## Create a Cluster Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -203,7 +203,7 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -280,7 +280,7 @@ const acceleratedCluster = new gcp.dataproc.Cluster("accelerated_cluster", {
 
 {{% /choosable %}}
 
-## Cluster Resource Properties
+## Cluster Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -529,12 +529,77 @@ Defaults to `global`.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The Cluster resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Cluster resource produces the following output properties:
 
 
 
 
-## Look up an Existing Cluster Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing Cluster Resource {#look-up}
 
 Get an existing Cluster resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -897,7 +962,8 @@ Defaults to `global`.
 
 ## Supporting Types
 
-<h4>Cluster<wbr>Cluster<wbr>Config</h4>
+
+<h4 id="clusterclusterconfig">Cluster<wbr>Cluster<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1420,7 +1486,7 @@ in a cluster.. Structure defined below.
 
 
 
-<h4>Cluster<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config</h4>
+<h4 id="clusterclusterconfigautoscalingconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Autoscaling<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigAutoscalingConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigAutoscalingConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1499,7 +1565,7 @@ in a cluster.. Structure defined below.
 
 
 
-<h4>Cluster<wbr>Cluster<wbr>Config<wbr>Encryption<wbr>Config</h4>
+<h4 id="clusterclusterconfigencryptionconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Encryption<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigEncryptionConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigEncryptionConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1582,7 +1648,7 @@ all instances in the cluster.
 
 
 
-<h4>Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config</h4>
+<h4 id="clusterclusterconfiggceclusterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Gce<wbr>Cluster<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigGceClusterConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigGceClusterConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1930,16 +1996,6 @@ If neither is specified, this defaults to the "default" network.
 
     <dt class="property-optional"
             title="Optional">
-        <span>service_<wbr>account</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The service account to be used by the Node VMs.
-If not specified, the "default" service account is used.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>service<wbr>Account<wbr>Scopes</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1949,6 +2005,16 @@ to be made available on all of the node VMs under the `service_account`
 specified. These can be	either FQDNs, or scope aliases. The following scopes
 must be set if any other scopes are set. They're necessary to ensure the
 correct functioning ofthe cluster, and are set automatically by the API:
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>service_<wbr>account</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The service account to be used by the Node VMs.
+If not specified, the "default" service account is used.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1993,7 +2059,7 @@ which computing resources are available for use with other configs such as
 
 
 
-<h4>Cluster<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action</h4>
+<h4 id="clusterclusterconfiginitializationaction">Cluster<wbr>Cluster<wbr>Config<wbr>Initialization<wbr>Action</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigInitializationAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigInitializationAction">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2112,7 +2178,7 @@ computed value if not set (currently 300).
 
 
 
-<h4>Cluster<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config</h4>
+<h4 id="clusterclusterconfiglifecycleconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Lifecycle<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigLifecycleConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigLifecycleConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2271,7 +2337,7 @@ Example: "2014-10-02T15:01:23.045123456Z".
 
 
 
-<h4>Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config</h4>
+<h4 id="clusterclusterconfigmasterconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigMasterConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigMasterConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2582,7 +2648,7 @@ for details about which CPU families are available (and defaulted) for each zone
 
 
 
-<h4>Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator</h4>
+<h4 id="clusterclusterconfigmasterconfigaccelerator">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Accelerator</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigMasterConfigAccelerator">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigMasterConfigAccelerator">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2697,7 +2763,7 @@ for details about which CPU families are available (and defaulted) for each zone
 
 
 
-<h4>Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Disk<wbr>Config</h4>
+<h4 id="clusterclusterconfigmasterconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Master<wbr>Config<wbr>Disk<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigMasterConfigDiskConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigMasterConfigDiskConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2868,7 +2934,7 @@ attached to each preemptible worker node. Defaults to 0.
 
 
 
-<h4>Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config</h4>
+<h4 id="clusterclusterconfigpreemptibleworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigPreemptibleWorkerConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigPreemptibleWorkerConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3011,7 +3077,7 @@ attached to each preemptible worker node. Defaults to 0.
 
 
 
-<h4>Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config</h4>
+<h4 id="clusterclusterconfigpreemptibleworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Preemptible<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigPreemptibleWorkerConfigDiskConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigPreemptibleWorkerConfigDiskConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3182,7 +3248,7 @@ attached to each preemptible worker node. Defaults to 0.
 
 
 
-<h4>Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config</h4>
+<h4 id="clusterclusterconfigsecurityconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigSecurityConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigSecurityConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3261,7 +3327,7 @@ attached to each preemptible worker node. Defaults to 0.
 
 
 
-<h4>Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config</h4>
+<h4 id="clusterclusterconfigsecurityconfigkerberosconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Security<wbr>Config<wbr>Kerberos<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigSecurityConfigKerberosConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigSecurityConfigKerberosConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3908,7 +3974,7 @@ SSL encryption. If not provided, Dataproc will provide a self-signed certificate
 
 
 
-<h4>Cluster<wbr>Cluster<wbr>Config<wbr>Software<wbr>Config</h4>
+<h4 id="clusterclusterconfigsoftwareconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Software<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigSoftwareConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigSoftwareConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4155,7 +4221,7 @@ a cluster. For a list of valid properties please see
 
 
 
-<h4>Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config</h4>
+<h4 id="clusterclusterconfigworkerconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigWorkerConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigWorkerConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4466,7 +4532,7 @@ for details about which CPU families are available (and defaulted) for each zone
 
 
 
-<h4>Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator</h4>
+<h4 id="clusterclusterconfigworkerconfigaccelerator">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Accelerator</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigWorkerConfigAccelerator">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigWorkerConfigAccelerator">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4581,7 +4647,7 @@ for details about which CPU families are available (and defaulted) for each zone
 
 
 
-<h4>Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config</h4>
+<h4 id="clusterclusterconfigworkerconfigdiskconfig">Cluster<wbr>Cluster<wbr>Config<wbr>Worker<wbr>Config<wbr>Disk<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#ClusterClusterConfigWorkerConfigDiskConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#ClusterClusterConfigWorkerConfigDiskConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4756,7 +4822,7 @@ attached to each preemptible worker node. Defaults to 0.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>

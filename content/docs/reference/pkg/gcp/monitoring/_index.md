@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="alertpolicy" title="AlertPolicy"><span class="symbol resource"></span>AlertPolicy</a></li>
     <li><a href="group" title="Group"><span class="symbol resource"></span>Group</a></li>
@@ -16,14 +16,14 @@ block_external_search_index: true
     <li><a href="uptimecheckconfig" title="UptimeCheckConfig"><span class="symbol resource"></span>UptimeCheckConfig</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getnotificationchannel" title="GetNotificationChannel"><span class="symbol function"></span>GetNotificationChannel</a></li>
     <li><a href="getsecretversion" title="GetSecretVersion"><span class="symbol function"></span>GetSecretVersion</a></li>
     <li><a href="getuptimecheckips" title="GetUptimeCheckIPs"><span class="symbol function"></span>GetUptimeCheckIPs</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>

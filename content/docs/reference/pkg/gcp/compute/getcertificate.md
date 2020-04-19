@@ -15,7 +15,7 @@ Get info about a Google Compute SSL Certificate from its name.
 
 
 
-## Using GetCertificate
+## Using GetCertificate {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -157,7 +157,7 @@ is not provided, the provider project is used.
 
 
 
-## GetCertificate Result
+## GetCertificate Result {#result}
 
 The following output properties are available:
 

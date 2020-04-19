@@ -29,7 +29,7 @@ const my_ssl_policy = pulumi.output(gcp.compute.getSSLPolicy({
 
 
 
-## Using GetSSLPolicy
+## Using GetSSLPolicy {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -171,7 +171,7 @@ is not provided, the provider project is used.
 
 
 
-## GetSSLPolicy Result
+## GetSSLPolicy Result {#result}
 
 The following output properties are available:
 

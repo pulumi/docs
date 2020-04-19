@@ -28,7 +28,7 @@ const my_backend_bucket = pulumi.output(gcp.compute.getBackendBucket({
 
 
 
-## Using GetBackendBucket
+## Using GetBackendBucket {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -170,7 +170,7 @@ is not provided, the provider project is used.
 
 
 
-## GetBackendBucket Result
+## GetBackendBucket Result {#result}
 
 The following output properties are available:
 
@@ -529,7 +529,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Backend<wbr>Bucket<wbr>Cdn<wbr>Policy</h4>
+
+<h4 id="getbackendbucketcdnpolicy">Get<wbr>Backend<wbr>Bucket<wbr>Cdn<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetBackendBucketCdnPolicy">output</a> API doc for this type.
 {{% /choosable %}}

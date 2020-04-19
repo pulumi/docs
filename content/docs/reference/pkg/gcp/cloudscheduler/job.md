@@ -67,7 +67,7 @@ const job = new gcp.cloudscheduler.Job("job", {
 
 
 
-## Create a Job Resource
+## Create a Job Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -157,7 +157,7 @@ const job = new gcp.cloudscheduler.Job("job", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v3/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -234,7 +234,7 @@ const job = new gcp.cloudscheduler.Job("job", {
 
 {{% /choosable %}}
 
-## Job Resource Properties
+## Job Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -707,12 +707,77 @@ tz database.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The Job resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Job resource produces the following output properties:
 
 
 
 
-## Look up an Existing Job Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing Job Resource {#look-up}
 
 Get an existing Job resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1299,7 +1364,8 @@ tz database.
 
 ## Supporting Types
 
-<h4>Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target</h4>
+
+<h4 id="jobappenginehttptarget">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobAppEngineHttpTarget">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobAppEngineHttpTarget">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1502,7 +1568,7 @@ tz database.
 
 
 
-<h4>Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>App<wbr>Engine<wbr>Routing</h4>
+<h4 id="jobappenginehttptargetappenginerouting">Job<wbr>App<wbr>Engine<wbr>Http<wbr>Target<wbr>App<wbr>Engine<wbr>Routing</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobAppEngineHttpTargetAppEngineRouting">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobAppEngineHttpTargetAppEngineRouting">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1641,7 +1707,7 @@ tz database.
 
 
 
-<h4>Job<wbr>Http<wbr>Target</h4>
+<h4 id="jobhttptarget">Job<wbr>Http<wbr>Target</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobHttpTarget">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobHttpTarget">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1876,7 +1942,7 @@ tz database.
 
 
 
-<h4>Job<wbr>Http<wbr>Target<wbr>Oauth<wbr>Token</h4>
+<h4 id="jobhttptargetoauthtoken">Job<wbr>Http<wbr>Target<wbr>Oauth<wbr>Token</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobHttpTargetOauthToken">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobHttpTargetOauthToken">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1983,7 +2049,7 @@ tz database.
 
 
 
-<h4>Job<wbr>Http<wbr>Target<wbr>Oidc<wbr>Token</h4>
+<h4 id="jobhttptargetoidctoken">Job<wbr>Http<wbr>Target<wbr>Oidc<wbr>Token</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobHttpTargetOidcToken">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobHttpTargetOidcToken">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2090,7 +2156,7 @@ tz database.
 
 
 
-<h4>Job<wbr>Pubsub<wbr>Target</h4>
+<h4 id="jobpubsubtarget">Job<wbr>Pubsub<wbr>Target</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobPubsubTarget">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobPubsubTarget">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2229,7 +2295,7 @@ tz database.
 
 
 
-<h4>Job<wbr>Retry<wbr>Config</h4>
+<h4 id="jobretryconfig">Job<wbr>Retry<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#JobRetryConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#JobRetryConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2436,7 +2502,7 @@ tz database.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
