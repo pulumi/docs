@@ -15,7 +15,7 @@ Provides a Packet organization datasource.
 
 
 
-## Using GetOrganization
+## Using GetOrganization {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetOrganization Result
+## GetOrganization Result {#result}
 
 The following output properties are available:
 

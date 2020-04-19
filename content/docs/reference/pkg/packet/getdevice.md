@@ -20,7 +20,7 @@ Provides a Packet device datasource.
 
 
 
-## Using GetDevice
+## Using GetDevice {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -194,7 +194,7 @@ The following arguments are supported:
 
 
 
-## GetDevice Result
+## GetDevice Result {#result}
 
 The following output properties are available:
 
@@ -1093,7 +1093,8 @@ The fields of the network attributes are:
 
 ## Supporting Types
 
-<h4>Get<wbr>Device<wbr>Network</h4>
+
+<h4 id="getdevicenetwork">Get<wbr>Device<wbr>Network</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/packet/types/output/#GetDeviceNetwork">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1316,7 +1317,7 @@ The fields of the network attributes are:
 
 
 
-<h4>Get<wbr>Device<wbr>Port</h4>
+<h4 id="getdeviceport">Get<wbr>Device<wbr>Port</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/packet/types/output/#GetDevicePort">output</a> API doc for this type.
 {{% /choosable %}}

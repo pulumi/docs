@@ -15,7 +15,7 @@ Provides a Packet Block Storage Volume datasource to allow you to read existing 
 
 
 
-## Using GetVolume
+## Using GetVolume {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -185,7 +185,7 @@ The following arguments are supported:
 
 
 
-## GetVolume Result
+## GetVolume Result {#result}
 
 The following output properties are available:
 
@@ -748,7 +748,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Volume<wbr>Snapshot<wbr>Policy</h4>
+
+<h4 id="getvolumesnapshotpolicy">Get<wbr>Volume<wbr>Snapshot<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/packet/types/output/#GetVolumeSnapshotPolicy">output</a> API doc for this type.
 {{% /choosable %}}
