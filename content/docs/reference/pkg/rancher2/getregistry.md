@@ -21,10 +21,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
 
 // Retrieve a rancher2 Project Registry
-const foo = rancher2.getRegistry({
+const foo = pulumi.output(rancher2.getRegistry({
     name: "<name>",
     projectId: "<project_id>",
-});
+}, { async: true }));
 ```
 
 ```typescript
@@ -32,11 +32,11 @@ import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
 
 // Retrieve a rancher2 Namespaced Registry
-const foo = rancher2.getRegistry({
+const foo = pulumi.output(rancher2.getRegistry({
     name: "<name>",
     namespaceId: "<namespace_id>",
     projectId: "<project_id>",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -46,7 +46,7 @@ const foo = rancher2.getRegistry({
 
 
 
-## Using GetRegistry
+## Using GetRegistry {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -220,7 +220,7 @@ The following arguments are supported:
 
 
 
-## GetRegistry Result
+## GetRegistry Result {#result}
 
 The following output properties are available:
 
@@ -539,7 +539,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Registry<wbr>Registry</h4>
+
+<h4 id="getregistryregistry">Get<wbr>Registry<wbr>Registry</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetRegistryRegistry">output</a> API doc for this type.
 {{% /choosable %}}

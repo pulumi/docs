@@ -16,9 +16,9 @@ Use this data source to retrieve information about a Rancher v2 catalog.
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
 
-const library = rancher2.getCatalog({
+const library = pulumi.output(rancher2.getCatalog({
     name: "catalog",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const library = rancher2.getCatalog({
 
 
 
-## Using GetCatalog
+## Using GetCatalog {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -166,7 +166,7 @@ The following arguments are supported:
 
 
 
-## GetCatalog Result
+## GetCatalog Result {#result}
 
 The following output properties are available:
 

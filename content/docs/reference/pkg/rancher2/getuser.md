@@ -16,9 +16,9 @@ Use this data source to retrieve information about a Rancher v2 user
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
 
-const foo = rancher2.getUser({
+const foo = pulumi.output(rancher2.getUser({
     username: "foo",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const foo = rancher2.getUser({
 
 
 
-## Using GetUser
+## Using GetUser {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -202,7 +202,7 @@ The following arguments are supported:
 
 
 
-## GetUser Result
+## GetUser Result {#result}
 
 The following output properties are available:
 

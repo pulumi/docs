@@ -16,10 +16,10 @@ Use this data source to retrieve information about a Rancher v2 cluster role tem
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
 
-const foo = rancher2.getClusterRoleTemplateBinding({
+const foo = pulumi.output(rancher2.getClusterRoleTemplateBinding({
     clusterId: "foo_id",
     name: "foo",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -29,7 +29,7 @@ const foo = rancher2.getClusterRoleTemplateBinding({
 
 
 
-## Using GetClusterRoleTemplateBinding
+## Using GetClusterRoleTemplateBinding {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -203,7 +203,7 @@ The following arguments are supported:
 
 
 
-## GetClusterRoleTemplateBinding Result
+## GetClusterRoleTemplateBinding Result {#result}
 
 The following output properties are available:
 

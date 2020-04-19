@@ -16,9 +16,9 @@ Use this data source to retrieve information about a Rancher v2 Node Template re
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
 
-const foo = rancher2.getNodeTemplate({
+const foo = pulumi.output(rancher2.getNodeTemplate({
     name: "foo",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const foo = rancher2.getNodeTemplate({
 
 
 
-## Using GetNodeTemplate
+## Using GetNodeTemplate {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -166,7 +166,7 @@ The following arguments are supported:
 
 
 
-## GetNodeTemplate Result
+## GetNodeTemplate Result {#result}
 
 The following output properties are available:
 

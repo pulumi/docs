@@ -21,10 +21,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
 
 // Retrieve a rancher2 Project Secret
-const foo = rancher2.getSecret({
+const foo = pulumi.output(rancher2.getSecret({
     name: "<name>",
     projectId: "<project_id>",
-});
+}, { async: true }));
 ```
 
 ```typescript
@@ -32,11 +32,11 @@ import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
 
 // Retrieve a rancher2 Namespaced Secret
-const foo = rancher2.getSecret({
+const foo = pulumi.output(rancher2.getSecret({
     name: "<name>",
     namespaceId: "<namespace_id>",
     projectId: "<project_id>",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -46,7 +46,7 @@ const foo = rancher2.getSecret({
 
 
 
-## Using GetSecret
+## Using GetSecret {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -220,7 +220,7 @@ The following arguments are supported:
 
 
 
-## GetSecret Result
+## GetSecret Result {#result}
 
 The following output properties are available:
 

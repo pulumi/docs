@@ -16,9 +16,9 @@ Use this data source to retrieve information about a Rancher v2 PodSecurityPolic
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
 
-const foo = rancher2.getPodSecurityPolicyTemplate({
+const foo = pulumi.output(rancher2.getPodSecurityPolicyTemplate({
     name: "foo",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const foo = rancher2.getPodSecurityPolicyTemplate({
 
 
 
-## Using GetPodSecurityPolicyTemplate
+## Using GetPodSecurityPolicyTemplate {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -1098,7 +1098,7 @@ The following arguments are supported:
 
 
 
-## GetPodSecurityPolicyTemplate Result
+## GetPodSecurityPolicyTemplate Result {#result}
 
 The following output properties are available:
 
@@ -2073,7 +2073,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver</h4>
+
+<h4 id="getpodsecuritypolicytemplateallowedcsidriver">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Csi<wbr>Driver</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateAllowedCsiDriver">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateAllowedCsiDriver">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2152,7 +2153,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume</h4>
+<h4 id="getpodsecuritypolicytemplateallowedflexvolume">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Flex<wbr>Volume</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateAllowedFlexVolume">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateAllowedFlexVolume">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2227,7 +2228,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path</h4>
+<h4 id="getpodsecuritypolicytemplateallowedhostpath">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Allowed<wbr>Host<wbr>Path</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateAllowedHostPath">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateAllowedHostPath">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2334,7 +2335,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group</h4>
+<h4 id="getpodsecuritypolicytemplatefsgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateFsGroup">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateFsGroup">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2441,7 +2442,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group<wbr>Range</h4>
+<h4 id="getpodsecuritypolicytemplatefsgrouprange">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Fs<wbr>Group<wbr>Range</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateFsGroupRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateFsGroupRange">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2548,7 +2549,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Host<wbr>Port</h4>
+<h4 id="getpodsecuritypolicytemplatehostport">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Host<wbr>Port</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateHostPort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateHostPort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2655,7 +2656,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group</h4>
+<h4 id="getpodsecuritypolicytemplaterunasgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateRunAsGroup">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateRunAsGroup">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2762,7 +2763,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Range</h4>
+<h4 id="getpodsecuritypolicytemplaterunasgrouprange">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>Group<wbr>Range</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateRunAsGroupRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateRunAsGroupRange">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2869,7 +2870,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User</h4>
+<h4 id="getpodsecuritypolicytemplaterunasuser">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateRunAsUser">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateRunAsUser">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2976,7 +2977,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Range</h4>
+<h4 id="getpodsecuritypolicytemplaterunasuserrange">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Run<wbr>As<wbr>User<wbr>Range</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateRunAsUserRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateRunAsUserRange">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3083,7 +3084,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class</h4>
+<h4 id="getpodsecuritypolicytemplateruntimeclass">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Runtime<wbr>Class</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateRuntimeClass">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateRuntimeClass">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3190,7 +3191,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux</h4>
+<h4 id="getpodsecuritypolicytemplateselinux">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateSeLinux">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateSeLinux">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3297,7 +3298,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Se<wbr>Linux<wbr>Option</h4>
+<h4 id="getpodsecuritypolicytemplateselinuxselinuxoption">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Se<wbr>Linux<wbr>Se<wbr>Linux<wbr>Option</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateSeLinuxSeLinuxOption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateSeLinuxSeLinuxOption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3468,7 +3469,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group</h4>
+<h4 id="getpodsecuritypolicytemplatesupplementalgroup">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateSupplementalGroup">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateSupplementalGroup">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3575,7 +3576,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group<wbr>Range</h4>
+<h4 id="getpodsecuritypolicytemplatesupplementalgrouprange">Get<wbr>Pod<wbr>Security<wbr>Policy<wbr>Template<wbr>Supplemental<wbr>Group<wbr>Range</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#GetPodSecurityPolicyTemplateSupplementalGroupRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetPodSecurityPolicyTemplateSupplementalGroupRange">output</a> API doc for this type.
 {{% /choosable %}}

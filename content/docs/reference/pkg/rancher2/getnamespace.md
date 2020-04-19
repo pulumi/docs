@@ -19,7 +19,7 @@ import * as rancher2 from "@pulumi/rancher2";
 const foo = rancher2_cluster_foo_custom.defaultProjectId.apply(defaultProjectId => rancher2.getNamespace({
     name: "foo",
     projectId: defaultProjectId,
-}));
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -29,7 +29,7 @@ const foo = rancher2_cluster_foo_custom.defaultProjectId.apply(defaultProjectId 
 
 
 
-## Using GetNamespace
+## Using GetNamespace {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -167,7 +167,7 @@ The following arguments are supported:
 
 
 
-## GetNamespace Result
+## GetNamespace Result {#result}
 
 The following output properties are available:
 
@@ -490,7 +490,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Namespace<wbr>Container<wbr>Resource<wbr>Limit</h4>
+
+<h4 id="getnamespacecontainerresourcelimit">Get<wbr>Namespace<wbr>Container<wbr>Resource<wbr>Limit</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetNamespaceContainerResourceLimit">output</a> API doc for this type.
 {{% /choosable %}}
@@ -661,7 +662,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Namespace<wbr>Resource<wbr>Quota</h4>
+<h4 id="getnamespaceresourcequota">Get<wbr>Namespace<wbr>Resource<wbr>Quota</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetNamespaceResourceQuota">output</a> API doc for this type.
 {{% /choosable %}}
@@ -736,7 +737,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Namespace<wbr>Resource<wbr>Quota<wbr>Limit</h4>
+<h4 id="getnamespaceresourcequotalimit">Get<wbr>Namespace<wbr>Resource<wbr>Quota<wbr>Limit</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetNamespaceResourceQuotaLimit">output</a> API doc for this type.
 {{% /choosable %}}

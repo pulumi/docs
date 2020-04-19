@@ -16,10 +16,10 @@ Use this data source to retrieve information about a Rancher v2 cluster alert ru
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
 
-const foo = rancher2.getClusterAlterRule({
+const foo = pulumi.output(rancher2.getClusterAlterRule({
     clusterId: "<cluster_id>",
     name: "<cluster_alert_rule_name>",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -29,7 +29,7 @@ const foo = rancher2.getClusterAlterRule({
 
 
 
-## Using GetClusterAlterRule
+## Using GetClusterAlterRule {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -203,7 +203,7 @@ The following arguments are supported:
 
 
 
-## GetClusterAlterRule Result
+## GetClusterAlterRule Result {#result}
 
 The following output properties are available:
 
@@ -778,7 +778,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>Event<wbr>Rule</h4>
+
+<h4 id="getclusteralterruleeventrule">Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>Event<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterAlterRuleEventRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -885,7 +886,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>Metric<wbr>Rule</h4>
+<h4 id="getclusteralterrulemetricrule">Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>Metric<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterAlterRuleMetricRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1088,7 +1089,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>Node<wbr>Rule</h4>
+<h4 id="getclusteralterrulenoderule">Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>Node<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterAlterRuleNodeRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1291,7 +1292,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>System<wbr>Service<wbr>Rule</h4>
+<h4 id="getclusteralterrulesystemservicerule">Get<wbr>Cluster<wbr>Alter<wbr>Rule<wbr>System<wbr>Service<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterAlterRuleSystemServiceRule">output</a> API doc for this type.
 {{% /choosable %}}

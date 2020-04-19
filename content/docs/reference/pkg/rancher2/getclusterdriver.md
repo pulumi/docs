@@ -16,9 +16,9 @@ Use this data source to retrieve information about a Rancher v2 Cluster Driver r
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
 
-const foo = rancher2.getClusterDriver({
+const foo = pulumi.output(rancher2.getClusterDriver({
     name: "foo",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const foo = rancher2.getClusterDriver({
 
 
 
-## Using GetClusterDriver
+## Using GetClusterDriver {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -166,7 +166,7 @@ The following arguments are supported:
 
 
 
-## GetClusterDriver Result
+## GetClusterDriver Result {#result}
 
 The following output properties are available:
 

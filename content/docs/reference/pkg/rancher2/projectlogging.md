@@ -37,7 +37,7 @@ const foo = new rancher2.ProjectLogging("foo", {
 
 
 
-## Create a ProjectLogging Resource
+## Create a ProjectLogging Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -127,7 +127,7 @@ const foo = new rancher2.ProjectLogging("foo", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -204,7 +204,7 @@ const foo = new rancher2.ProjectLogging("foo", {
 
 {{% /choosable %}}
 
-## ProjectLogging Resource Properties
+## ProjectLogging Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -789,12 +789,77 @@ The ProjectLogging resource accepts the following [input]({{< relref "/docs/intr
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The ProjectLogging resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the ProjectLogging resource produces the following output properties:
 
 
 
 
-## Look up an Existing ProjectLogging Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing ProjectLogging Resource {#look-up}
 
 Get an existing ProjectLogging resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1493,7 +1558,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config</h4>
+
+<h4 id="projectloggingcustomtargetconfig">Project<wbr>Logging<wbr>Custom<wbr>Target<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ProjectLoggingCustomTargetConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ProjectLoggingCustomTargetConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1680,7 +1746,7 @@ The following state arguments are supported:
 
 
 
-<h4>Project<wbr>Logging<wbr>Elasticsearch<wbr>Config</h4>
+<h4 id="projectloggingelasticsearchconfig">Project<wbr>Logging<wbr>Elasticsearch<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ProjectLoggingElasticsearchConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ProjectLoggingElasticsearchConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2119,7 +2185,7 @@ The following state arguments are supported:
 
 
 
-<h4>Project<wbr>Logging<wbr>Fluentd<wbr>Config</h4>
+<h4 id="projectloggingfluentdconfig">Project<wbr>Logging<wbr>Fluentd<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ProjectLoggingFluentdConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ProjectLoggingFluentdConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2306,7 +2372,7 @@ The following state arguments are supported:
 
 
 
-<h4>Project<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Fluent<wbr>Server</h4>
+<h4 id="projectloggingfluentdconfigfluentserver">Project<wbr>Logging<wbr>Fluentd<wbr>Config<wbr>Fluent<wbr>Server</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ProjectLoggingFluentdConfigFluentServer">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ProjectLoggingFluentdConfigFluentServer">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2601,7 +2667,7 @@ The following state arguments are supported:
 
 
 
-<h4>Project<wbr>Logging<wbr>Kafka<wbr>Config</h4>
+<h4 id="projectloggingkafkaconfig">Project<wbr>Logging<wbr>Kafka<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ProjectLoggingKafkaConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ProjectLoggingKafkaConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2860,7 +2926,7 @@ The following state arguments are supported:
 
 
 
-<h4>Project<wbr>Logging<wbr>Splunk<wbr>Config</h4>
+<h4 id="projectloggingsplunkconfig">Project<wbr>Logging<wbr>Splunk<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ProjectLoggingSplunkConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ProjectLoggingSplunkConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3227,7 +3293,7 @@ The following state arguments are supported:
 
 
 
-<h4>Project<wbr>Logging<wbr>Syslog<wbr>Config</h4>
+<h4 id="projectloggingsyslogconfig">Project<wbr>Logging<wbr>Syslog<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/input/#ProjectLoggingSyslogConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#ProjectLoggingSyslogConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3598,7 +3664,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-rancher2">https://github.com/pulumi/pulumi-rancher2</a></dd>

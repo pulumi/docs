@@ -16,9 +16,9 @@ Use this data source to retrieve information about a Rancher v2 setting.
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
 
-const server_image = rancher2.getSetting({
+const server_image = pulumi.output(rancher2.getSetting({
     name: "server-image",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const server_image = rancher2.getSetting({
 
 
 
-## Using GetSetting
+## Using GetSetting {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -130,7 +130,7 @@ The following arguments are supported:
 
 
 
-## GetSetting Result
+## GetSetting Result {#result}
 
 The following output properties are available:
 

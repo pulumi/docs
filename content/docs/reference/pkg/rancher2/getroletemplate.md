@@ -16,9 +16,9 @@ Use this data source to retrieve information about a Rancher v2 role template re
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
 
-const foo = rancher2.getRoleTemplate({
+const foo = pulumi.output(rancher2.getRoleTemplate({
     name: "foo",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const foo = rancher2.getRoleTemplate({
 
 
 
-## Using GetRoleTemplate
+## Using GetRoleTemplate {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -166,7 +166,7 @@ The following arguments are supported:
 
 
 
-## GetRoleTemplate Result
+## GetRoleTemplate Result {#result}
 
 The following output properties are available:
 
@@ -705,7 +705,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Role<wbr>Template<wbr>Rule</h4>
+
+<h4 id="getroletemplaterule">Get<wbr>Role<wbr>Template<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetRoleTemplateRule">output</a> API doc for this type.
 {{% /choosable %}}

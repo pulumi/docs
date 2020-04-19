@@ -16,9 +16,9 @@ Use this data source to retrieve information about a Rancher v2 multi cluster ap
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
 
-const foo = rancher2.getMultiClusterApp({
+const foo = pulumi.output(rancher2.getMultiClusterApp({
     name: "foo",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const foo = rancher2.getMultiClusterApp({
 
 
 
-## Using GetMultiClusterApp
+## Using GetMultiClusterApp {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -130,7 +130,7 @@ The following arguments are supported:
 
 
 
-## GetMultiClusterApp Result
+## GetMultiClusterApp Result {#result}
 
 The following output properties are available:
 
@@ -709,7 +709,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Multi<wbr>Cluster<wbr>App<wbr>Answer</h4>
+
+<h4 id="getmulticlusterappanswer">Get<wbr>Multi<wbr>Cluster<wbr>App<wbr>Answer</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetMultiClusterAppAnswer">output</a> API doc for this type.
 {{% /choosable %}}
@@ -848,7 +849,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Multi<wbr>Cluster<wbr>App<wbr>Member</h4>
+<h4 id="getmulticlusterappmember">Get<wbr>Multi<wbr>Cluster<wbr>App<wbr>Member</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetMultiClusterAppMember">output</a> API doc for this type.
 {{% /choosable %}}
@@ -987,7 +988,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Multi<wbr>Cluster<wbr>App<wbr>Target</h4>
+<h4 id="getmulticlusterapptarget">Get<wbr>Multi<wbr>Cluster<wbr>App<wbr>Target</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetMultiClusterAppTarget">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1158,7 +1159,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy</h4>
+<h4 id="getmulticlusterappupgradestrategy">Get<wbr>Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetMultiClusterAppUpgradeStrategy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1233,7 +1234,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Rolling<wbr>Update</h4>
+<h4 id="getmulticlusterappupgradestrategyrollingupdate">Get<wbr>Multi<wbr>Cluster<wbr>App<wbr>Upgrade<wbr>Strategy<wbr>Rolling<wbr>Update</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetMultiClusterAppUpgradeStrategyRollingUpdate">output</a> API doc for this type.
 {{% /choosable %}}

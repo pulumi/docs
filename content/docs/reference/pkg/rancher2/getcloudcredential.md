@@ -16,9 +16,9 @@ Use this data source to retrieve information about a Rancher v2 Cloud Credential
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
 
-const test = rancher2.getCloudCredential({
+const test = pulumi.output(rancher2.getCloudCredential({
     name: "test",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const test = rancher2.getCloudCredential({
 
 
 
-## Using GetCloudCredential
+## Using GetCloudCredential {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -130,7 +130,7 @@ The following arguments are supported:
 
 
 
-## GetCloudCredential Result
+## GetCloudCredential Result {#result}
 
 The following output properties are available:
 

@@ -16,11 +16,11 @@ Use this data source to retrieve information about a Rancher v2 app.
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
 
-const rancher2App = rancher2.getApp({
+const rancher2App = pulumi.output(rancher2.getApp({
     name: "foo",
     projectId: "<project_id>",
     targetNamespace: "<namespace_name>",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -30,7 +30,7 @@ const rancher2App = rancher2.getApp({
 
 
 
-## Using GetApp
+## Using GetApp {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -240,7 +240,7 @@ The following arguments are supported:
 
 
 
-## GetApp Result
+## GetApp Result {#result}
 
 The following output properties are available:
 

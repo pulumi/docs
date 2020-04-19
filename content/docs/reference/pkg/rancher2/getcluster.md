@@ -16,9 +16,9 @@ Use this data source to retrieve information about a Rancher v2 cluster.
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
 
-const foo_custom = rancher2.getCluster({
+const foo_custom = pulumi.output(rancher2.getCluster({
     name: "foo-custom",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const foo_custom = rancher2.getCluster({
 
 
 
-## Using GetCluster
+## Using GetCluster {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -130,7 +130,7 @@ The following arguments are supported:
 
 
 
-## GetCluster Result
+## GetCluster Result {#result}
 
 The following output properties are available:
 
@@ -1097,7 +1097,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Cluster<wbr>Aks<wbr>Config</h4>
+
+<h4 id="getclusteraksconfig">Get<wbr>Cluster<wbr>Aks<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterAksConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2324,7 +2325,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Cluster<wbr>Auth<wbr>Endpoint</h4>
+<h4 id="getclusterclusterauthendpoint">Get<wbr>Cluster<wbr>Cluster<wbr>Auth<wbr>Endpoint</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterClusterAuthEndpoint">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2463,7 +2464,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Cluster<wbr>Monitoring<wbr>Input</h4>
+<h4 id="getclusterclustermonitoringinput">Get<wbr>Cluster<wbr>Cluster<wbr>Monitoring<wbr>Input</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterClusterMonitoringInput">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2570,7 +2571,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Cluster<wbr>Registration<wbr>Token</h4>
+<h4 id="getclusterclusterregistrationtoken">Get<wbr>Cluster<wbr>Cluster<wbr>Registration<wbr>Token</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterClusterRegistrationToken">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2981,7 +2982,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Cluster<wbr>Template<wbr>Answers</h4>
+<h4 id="getclusterclustertemplateanswers">Get<wbr>Cluster<wbr>Cluster<wbr>Template<wbr>Answers</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterClusterTemplateAnswers">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3120,7 +3121,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Cluster<wbr>Template<wbr>Question</h4>
+<h4 id="getclusterclustertemplatequestion">Get<wbr>Cluster<wbr>Cluster<wbr>Template<wbr>Question</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterClusterTemplateQuestion">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3291,7 +3292,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Eks<wbr>Config</h4>
+<h4 id="getclustereksconfig">Get<wbr>Cluster<wbr>Eks<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterEksConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3910,7 +3911,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Gke<wbr>Config</h4>
+<h4 id="getclustergkeconfig">Get<wbr>Cluster<wbr>Gke<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterGkeConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5625,7 +5626,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>K3s<wbr>Config</h4>
+<h4 id="getclusterk3sconfig">Get<wbr>Cluster<wbr>K3s<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterK3sConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5732,7 +5733,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>K3s<wbr>Config<wbr>Upgrade<wbr>Strategy</h4>
+<h4 id="getclusterk3sconfigupgradestrategy">Get<wbr>Cluster<wbr>K3s<wbr>Config<wbr>Upgrade<wbr>Strategy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterK3sConfigUpgradeStrategy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5903,7 +5904,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config</h4>
+<h4 id="getclusterrkeconfig">Get<wbr>Cluster<wbr>Rke<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6618,7 +6619,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Authentication</h4>
+<h4 id="getclusterrkeconfigauthentication">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Authentication</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigAuthentication">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6725,7 +6726,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Authorization</h4>
+<h4 id="getclusterrkeconfigauthorization">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Authorization</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigAuthorization">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6832,7 +6833,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Bastion<wbr>Host</h4>
+<h4 id="getclusterrkeconfigbastionhost">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Bastion<wbr>Host</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigBastionHost">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7067,7 +7068,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider</h4>
+<h4 id="getclusterrkeconfigcloudprovider">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProvider">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7306,7 +7307,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider</h4>
+<h4 id="getclusterrkeconfigcloudproviderawscloudprovider">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderAwsCloudProvider">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7413,7 +7414,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Global</h4>
+<h4 id="getclusterrkeconfigcloudproviderawscloudproviderglobal">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Global</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderAwsCloudProviderGlobal">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7776,7 +7777,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Service<wbr>Override</h4>
+<h4 id="getclusterrkeconfigcloudproviderawscloudproviderserviceoverride">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Aws<wbr>Cloud<wbr>Provider<wbr>Service<wbr>Override</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderAwsCloudProviderServiceOverride">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8011,7 +8012,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Azure<wbr>Cloud<wbr>Provider</h4>
+<h4 id="getclusterrkeconfigcloudproviderazurecloudprovider">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Azure<wbr>Cloud<wbr>Provider</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderAzureCloudProvider">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8950,7 +8951,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider</h4>
+<h4 id="getclusterrkeconfigcloudprovideropenstackcloudprovider">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderOpenstackCloudProvider">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9153,7 +9154,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Block<wbr>Storage</h4>
+<h4 id="getclusterrkeconfigcloudprovideropenstackcloudproviderblockstorage">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Block<wbr>Storage</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderOpenstackCloudProviderBlockStorage">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9292,7 +9293,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Global</h4>
+<h4 id="getclusterrkeconfigcloudprovideropenstackcloudproviderglobal">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Global</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderOpenstackCloudProviderGlobal">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9618,7 +9619,7 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>tenant_<wbr>id</span>
+        <span>tenant<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -9626,7 +9627,7 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>tenant<wbr>Name</span>
+        <span>tenant_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -9655,7 +9656,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Load<wbr>Balancer</h4>
+<h4 id="getclusterrkeconfigcloudprovideropenstackcloudproviderloadbalancer">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Load<wbr>Balancer</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderOpenstackCloudProviderLoadBalancer">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10050,7 +10051,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Metadata</h4>
+<h4 id="getclusterrkeconfigcloudprovideropenstackcloudprovidermetadata">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Metadata</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderOpenstackCloudProviderMetadata">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10157,7 +10158,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Route</h4>
+<h4 id="getclusterrkeconfigcloudprovideropenstackcloudproviderroute">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Openstack<wbr>Cloud<wbr>Provider<wbr>Route</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderOpenstackCloudProviderRoute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10232,7 +10233,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider</h4>
+<h4 id="getclusterrkeconfigcloudprovidervspherecloudprovider">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderVsphereCloudProvider">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10435,7 +10436,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Disk</h4>
+<h4 id="getclusterrkeconfigcloudprovidervspherecloudproviderdisk">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderVsphereCloudProviderDisk">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10510,7 +10511,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Global</h4>
+<h4 id="getclusterrkeconfigcloudprovidervspherecloudproviderglobal">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Global</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderVsphereCloudProviderGlobal">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10745,7 +10746,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network</h4>
+<h4 id="getclusterrkeconfigcloudprovidervspherecloudprovidernetwork">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Network</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderVsphereCloudProviderNetwork">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10820,7 +10821,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Virtual<wbr>Center</h4>
+<h4 id="getclusterrkeconfigcloudprovidervspherecloudprovidervirtualcenter">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Virtual<wbr>Center</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderVsphereCloudProviderVirtualCenter">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11059,7 +11060,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Workspace</h4>
+<h4 id="getclusterrkeconfigcloudprovidervspherecloudproviderworkspace">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Cloud<wbr>Provider<wbr>Vsphere<wbr>Cloud<wbr>Provider<wbr>Workspace</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigCloudProviderVsphereCloudProviderWorkspace">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11262,7 +11263,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Dns</h4>
+<h4 id="getclusterrkeconfigdns">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Dns</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigDns">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11433,7 +11434,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Ingress</h4>
+<h4 id="getclusterrkeconfigingress">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Ingress</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigIngress">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11636,7 +11637,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Monitoring</h4>
+<h4 id="getclusterrkeconfigmonitoring">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Monitoring</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigMonitoring">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11743,7 +11744,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Network</h4>
+<h4 id="getclusterrkeconfignetwork">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Network</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigNetwork">output</a> API doc for this type.
 {{% /choosable %}}
@@ -12010,7 +12011,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Network<wbr>Calico<wbr>Network<wbr>Provider</h4>
+<h4 id="getclusterrkeconfignetworkcaliconetworkprovider">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Network<wbr>Calico<wbr>Network<wbr>Provider</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigNetworkCalicoNetworkProvider">output</a> API doc for this type.
 {{% /choosable %}}
@@ -12085,7 +12086,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Network<wbr>Canal<wbr>Network<wbr>Provider</h4>
+<h4 id="getclusterrkeconfignetworkcanalnetworkprovider">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Network<wbr>Canal<wbr>Network<wbr>Provider</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigNetworkCanalNetworkProvider">output</a> API doc for this type.
 {{% /choosable %}}
@@ -12160,7 +12161,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Network<wbr>Flannel<wbr>Network<wbr>Provider</h4>
+<h4 id="getclusterrkeconfignetworkflannelnetworkprovider">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Network<wbr>Flannel<wbr>Network<wbr>Provider</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigNetworkFlannelNetworkProvider">output</a> API doc for this type.
 {{% /choosable %}}
@@ -12235,7 +12236,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Network<wbr>Weave<wbr>Network<wbr>Provider</h4>
+<h4 id="getclusterrkeconfignetworkweavenetworkprovider">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Network<wbr>Weave<wbr>Network<wbr>Provider</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigNetworkWeaveNetworkProvider">output</a> API doc for this type.
 {{% /choosable %}}
@@ -12310,7 +12311,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Node</h4>
+<h4 id="getclusterrkeconfignode">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Node</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigNode">output</a> API doc for this type.
 {{% /choosable %}}
@@ -12741,7 +12742,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Private<wbr>Registry</h4>
+<h4 id="getclusterrkeconfigprivateregistry">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Private<wbr>Registry</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigPrivateRegistry">output</a> API doc for this type.
 {{% /choosable %}}
@@ -12912,7 +12913,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services</h4>
+<h4 id="getclusterrkeconfigservices">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigServices">output</a> API doc for this type.
 {{% /choosable %}}
@@ -13147,7 +13148,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd</h4>
+<h4 id="getclusterrkeconfigservicesetcd">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigServicesEtcd">output</a> API doc for this type.
 {{% /choosable %}}
@@ -13670,7 +13671,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config</h4>
+<h4 id="getclusterrkeconfigservicesetcdbackupconfig">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigServicesEtcdBackupConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -13873,7 +13874,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config</h4>
+<h4 id="getclusterrkeconfigservicesetcdbackupconfigs3backupconfig">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Etcd<wbr>Backup<wbr>Config<wbr>S3Backup<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigServicesEtcdBackupConfigS3BackupConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -14140,7 +14141,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api</h4>
+<h4 id="getclusterrkeconfigserviceskubeapi">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigServicesKubeApi">output</a> API doc for this type.
 {{% /choosable %}}
@@ -14567,7 +14568,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log</h4>
+<h4 id="getclusterrkeconfigserviceskubeapiauditlog">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigServicesKubeApiAuditLog">output</a> API doc for this type.
 {{% /choosable %}}
@@ -14674,7 +14675,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Configuration</h4>
+<h4 id="getclusterrkeconfigserviceskubeapiauditlogconfiguration">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Audit<wbr>Log<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigServicesKubeApiAuditLogConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -14909,7 +14910,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Event<wbr>Rate<wbr>Limit</h4>
+<h4 id="getclusterrkeconfigserviceskubeapieventratelimit">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Event<wbr>Rate<wbr>Limit</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigServicesKubeApiEventRateLimit">output</a> API doc for this type.
 {{% /choosable %}}
@@ -15016,7 +15017,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Secrets<wbr>Encryption<wbr>Config</h4>
+<h4 id="getclusterrkeconfigserviceskubeapisecretsencryptionconfig">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Api<wbr>Secrets<wbr>Encryption<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigServicesKubeApiSecretsEncryptionConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -15123,7 +15124,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Controller</h4>
+<h4 id="getclusterrkeconfigserviceskubecontroller">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kube<wbr>Controller</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigServicesKubeController">output</a> API doc for this type.
 {{% /choosable %}}
@@ -15358,7 +15359,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubelet</h4>
+<h4 id="getclusterrkeconfigserviceskubelet">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubelet</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigServicesKubelet">output</a> API doc for this type.
 {{% /choosable %}}
@@ -15689,7 +15690,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubeproxy</h4>
+<h4 id="getclusterrkeconfigserviceskubeproxy">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Kubeproxy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigServicesKubeproxy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -15860,7 +15861,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Scheduler</h4>
+<h4 id="getclusterrkeconfigservicesscheduler">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Services<wbr>Scheduler</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigServicesScheduler">output</a> API doc for this type.
 {{% /choosable %}}
@@ -16031,7 +16032,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy</h4>
+<h4 id="getclusterrkeconfigupgradestrategy">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigUpgradeStrategy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -16202,7 +16203,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Drain<wbr>Input</h4>
+<h4 id="getclusterrkeconfigupgradestrategydraininput">Get<wbr>Cluster<wbr>Rke<wbr>Config<wbr>Upgrade<wbr>Strategy<wbr>Drain<wbr>Input</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterRkeConfigUpgradeStrategyDrainInput">output</a> API doc for this type.
 {{% /choosable %}}
@@ -16405,7 +16406,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan</h4>
+<h4 id="getclusterscheduledclusterscan">Get<wbr>Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterScheduledClusterScan">output</a> API doc for this type.
 {{% /choosable %}}
@@ -16544,7 +16545,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config</h4>
+<h4 id="getclusterscheduledclusterscanscanconfig">Get<wbr>Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterScheduledClusterScanScanConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -16619,7 +16620,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Cis<wbr>Scan<wbr>Config</h4>
+<h4 id="getclusterscheduledclusterscanscanconfigcisscanconfig">Get<wbr>Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Scan<wbr>Config<wbr>Cis<wbr>Scan<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterScheduledClusterScanScanConfigCisScanConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -16822,7 +16823,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Schedule<wbr>Config</h4>
+<h4 id="getclusterscheduledclusterscanscheduleconfig">Get<wbr>Cluster<wbr>Scheduled<wbr>Cluster<wbr>Scan<wbr>Schedule<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetClusterScheduledClusterScanScheduleConfig">output</a> API doc for this type.
 {{% /choosable %}}

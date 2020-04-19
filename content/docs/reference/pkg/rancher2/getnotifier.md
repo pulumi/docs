@@ -16,10 +16,10 @@ Use this data source to retrieve information about a Rancher v2 notifier.
 import * as pulumi from "@pulumi/pulumi";
 import * as rancher2 from "@pulumi/rancher2";
 
-const foo = rancher2.getNotifier({
+const foo = pulumi.output(rancher2.getNotifier({
     clusterId: "<cluster_id>",
     name: "foo",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -29,7 +29,7 @@ const foo = rancher2.getNotifier({
 
 
 
-## Using GetNotifier
+## Using GetNotifier {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -167,7 +167,7 @@ The following arguments are supported:
 
 
 
-## GetNotifier Result
+## GetNotifier Result {#result}
 
 The following output properties are available:
 
@@ -598,7 +598,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Notifier<wbr>Pagerduty<wbr>Config</h4>
+
+<h4 id="getnotifierpagerdutyconfig">Get<wbr>Notifier<wbr>Pagerduty<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetNotifierPagerdutyConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -705,7 +706,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Notifier<wbr>Slack<wbr>Config</h4>
+<h4 id="getnotifierslackconfig">Get<wbr>Notifier<wbr>Slack<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetNotifierSlackConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -844,7 +845,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Notifier<wbr>Smtp<wbr>Config</h4>
+<h4 id="getnotifiersmtpconfig">Get<wbr>Notifier<wbr>Smtp<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetNotifierSmtpConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1111,7 +1112,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Notifier<wbr>Webhook<wbr>Config</h4>
+<h4 id="getnotifierwebhookconfig">Get<wbr>Notifier<wbr>Webhook<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetNotifierWebhookConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1218,7 +1219,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Notifier<wbr>Wechat<wbr>Config</h4>
+<h4 id="getnotifierwechatconfig">Get<wbr>Notifier<wbr>Wechat<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/rancher2/types/output/#GetNotifierWechatConfig">output</a> API doc for this type.
 {{% /choosable %}}
