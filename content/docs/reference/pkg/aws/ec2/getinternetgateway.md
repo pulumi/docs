@@ -34,7 +34,7 @@ const defaultInternetGateway = pulumi.output(aws.ec2.getInternetGateway({
 
 
 
-## Using GetInternetGateway
+## Using GetInternetGateway {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -212,7 +212,7 @@ a pair on the desired Internet Gateway.
 
 
 
-## GetInternetGateway Result
+## GetInternetGateway Result {#result}
 
 The following output properties are available:
 
@@ -455,7 +455,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Internet<wbr>Gateway<wbr>Attachment</h4>
+
+<h4 id="getinternetgatewayattachment">Get<wbr>Internet<wbr>Gateway<wbr>Attachment</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInternetGatewayAttachment">output</a> API doc for this type.
 {{% /choosable %}}
@@ -570,7 +571,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Internet<wbr>Gateway<wbr>Filter</h4>
+<h4 id="getinternetgatewayfilter">Get<wbr>Internet<wbr>Gateway<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetInternetGatewayFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInternetGatewayFilter">output</a> API doc for this type.
 {{% /choosable %}}

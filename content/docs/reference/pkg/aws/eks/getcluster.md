@@ -21,7 +21,7 @@ const example = pulumi.output(aws.eks.getCluster({
 }, { async: true }));
 
 export const endpoint = example.endpoint;
-export const kubeconfig_certificate_authority_data = example.certificateAuthority.data;
+export const kubeconfig_certificate_authority_data = example.certificateAuthorities.data;
 // Only available on Kubernetes version 1.13 and 1.14 clusters created or upgraded on or after September 3, 2019.
 export const identity_oidc_issuer = example.identities[0].oidcs[0].issuer;
 ```
@@ -33,7 +33,7 @@ export const identity_oidc_issuer = example.identities[0].oidcs[0].issuer;
 
 
 
-## Using GetCluster
+## Using GetCluster {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -171,7 +171,7 @@ The following arguments are supported:
 
 
 
-## GetCluster Result
+## GetCluster Result {#result}
 
 The following output properties are available:
 
@@ -714,7 +714,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Cluster<wbr>Certificate<wbr>Authority</h4>
+
+<h4 id="getclustercertificateauthority">Get<wbr>Cluster<wbr>Certificate<wbr>Authority</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterCertificateAuthority">output</a> API doc for this type.
 {{% /choosable %}}
@@ -793,7 +794,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Identity</h4>
+<h4 id="getclusteridentity">Get<wbr>Cluster<wbr>Identity</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterIdentity">output</a> API doc for this type.
 {{% /choosable %}}
@@ -872,7 +873,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Identity<wbr>Oidc</h4>
+<h4 id="getclusteridentityoidc">Get<wbr>Cluster<wbr>Identity<wbr>Oidc</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterIdentityOidc">output</a> API doc for this type.
 {{% /choosable %}}
@@ -951,7 +952,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Cluster<wbr>Vpc<wbr>Config</h4>
+<h4 id="getclustervpcconfig">Get<wbr>Cluster<wbr>Vpc<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterVpcConfig">output</a> API doc for this type.
 {{% /choosable %}}

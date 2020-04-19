@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="alias" title="Alias"><span class="symbol resource"></span>Alias</a></li>
     <li><a href="ciphertext" title="Ciphertext"><span class="symbol resource"></span>Ciphertext</a></li>
@@ -17,7 +17,7 @@ block_external_search_index: true
     <li><a href="key" title="Key"><span class="symbol resource"></span>Key</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getalias" title="GetAlias"><span class="symbol function"></span>GetAlias</a></li>
     <li><a href="getciphertext" title="GetCipherText"><span class="symbol function"></span>GetCipherText</a></li>
@@ -26,7 +26,7 @@ block_external_search_index: true
     <li><a href="getsecrets" title="GetSecrets"><span class="symbol function"></span>GetSecrets</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

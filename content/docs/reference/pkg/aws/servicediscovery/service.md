@@ -71,7 +71,7 @@ const exampleService = new aws.servicediscovery.Service("example", {
 
 
 
-## Create a Service Resource
+## Create a Service Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -161,7 +161,7 @@ const exampleService = new aws.servicediscovery.Service("example", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -238,7 +238,7 @@ const exampleService = new aws.servicediscovery.Service("example", {
 
 {{% /choosable %}}
 
-## Service Resource Properties
+## Service Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -499,9 +499,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Service resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Service resource produces the following output properties:
 
 
 
@@ -517,6 +515,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ARN of the service.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -534,6 +540,14 @@ The following output properties are available:
     <dd>{{% md %}}The ARN of the service.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -549,6 +563,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ARN of the service.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -566,6 +588,14 @@ The following output properties are available:
     <dd>{{% md %}}The ARN of the service.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -575,8 +605,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Service Resource
+## Look up an Existing Service Resource {#look-up}
 
 Get an existing Service resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -987,7 +1016,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Service<wbr>Dns<wbr>Config</h4>
+
+<h4 id="servicednsconfig">Service<wbr>Dns<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceDnsConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceDnsConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1138,7 +1168,7 @@ The following state arguments are supported:
 
 
 
-<h4>Service<wbr>Dns<wbr>Config<wbr>Dns<wbr>Record</h4>
+<h4 id="servicednsconfigdnsrecord">Service<wbr>Dns<wbr>Config<wbr>Dns<wbr>Record</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceDnsConfigDnsRecord">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceDnsConfigDnsRecord">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1253,7 +1283,7 @@ The following state arguments are supported:
 
 
 
-<h4>Service<wbr>Health<wbr>Check<wbr>Config</h4>
+<h4 id="servicehealthcheckconfig">Service<wbr>Health<wbr>Check<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceHealthCheckConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceHealthCheckConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1404,7 +1434,7 @@ The following state arguments are supported:
 
 
 
-<h4>Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config</h4>
+<h4 id="servicehealthcheckcustomconfig">Service<wbr>Health<wbr>Check<wbr>Custom<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceHealthCheckCustomConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceHealthCheckCustomConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1487,7 +1517,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

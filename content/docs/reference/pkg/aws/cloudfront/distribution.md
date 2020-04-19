@@ -214,7 +214,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3_distribution", {
 
 
 
-## Create a Distribution Resource
+## Create a Distribution Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -304,7 +304,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3_distribution", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -381,7 +381,7 @@ const s3Distribution = new aws.cloudfront.Distribution("s3_distribution", {
 
 {{% /choosable %}}
 
-## Distribution Resource Properties
+## Distribution Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -1210,9 +1210,7 @@ region and the credentials configuring this argument must have
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Distribution resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Distribution resource produces the following output properties:
 
 
 
@@ -1280,6 +1278,14 @@ web site of your custom origin.
 route an [Alias Resource Record Set][7] to. This attribute is simply an
 alias for the zone ID `Z2FDTNDATAQYW2`.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1381,6 +1387,14 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>In<wbr>Progress<wbr>Validation<wbr>Batches</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
@@ -1476,6 +1490,14 @@ web site of your custom origin.
 route an [Alias Resource Record Set][7] to. This attribute is simply an
 alias for the zone ID `Z2FDTNDATAQYW2`.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1577,6 +1599,14 @@ alias for the zone ID `Z2FDTNDATAQYW2`.
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>in_<wbr>progress_<wbr>validation_<wbr>batches</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1614,8 +1644,7 @@ CloudFront system.
 
 
 
-
-## Look up an Existing Distribution Resource
+## Look up an Existing Distribution Resource {#look-up}
 
 Get an existing Distribution resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -2922,7 +2951,8 @@ region and the credentials configuring this argument must have
 
 ## Supporting Types
 
-<h4>Distribution<wbr>Custom<wbr>Error<wbr>Response</h4>
+
+<h4 id="distributioncustomerrorresponse">Distribution<wbr>Custom<wbr>Error<wbr>Response</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionCustomErrorResponse">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionCustomErrorResponse">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3129,7 +3159,7 @@ example, `/custom_404.html`).
 
 
 
-<h4>Distribution<wbr>Default<wbr>Cache<wbr>Behavior</h4>
+<h4 id="distributiondefaultcachebehavior">Distribution<wbr>Default<wbr>Cache<wbr>Behavior</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionDefaultCacheBehavior">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionDefaultCacheBehavior">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3732,7 +3762,7 @@ allow to create signed URLs for private content.
 
 
 
-<h4>Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</h4>
+<h4 id="distributiondefaultcachebehaviorforwardedvalues">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionDefaultCacheBehaviorForwardedValues">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionDefaultCacheBehaviorForwardedValues">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3947,7 +3977,7 @@ value of `true` for `query_string`, all query string keys are cached.
 
 
 
-<h4>Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies</h4>
+<h4 id="distributiondefaultcachebehaviorforwardedvaluescookies">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionDefaultCacheBehaviorForwardedValuesCookies">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionDefaultCacheBehaviorForwardedValuesCookies">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4082,7 +4112,7 @@ your origin.
 
 
 
-<h4>Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association</h4>
+<h4 id="distributiondefaultcachebehaviorlambdafunctionassociation">Distribution<wbr>Default<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionDefaultCacheBehaviorLambdaFunctionAssociation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionDefaultCacheBehaviorLambdaFunctionAssociation">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4241,7 +4271,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
 
 
-<h4>Distribution<wbr>Logging<wbr>Config</h4>
+<h4 id="distributionloggingconfig">Distribution<wbr>Logging<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionLoggingConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionLoggingConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4404,7 +4434,7 @@ to the access log filenames for this distribution, for example, `myprefix/`.
 
 
 
-<h4>Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior</h4>
+<h4 id="distributionorderedcachebehavior">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOrderedCacheBehavior">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOrderedCacheBehavior">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5047,7 +5077,7 @@ allow to create signed URLs for private content.
 
 
 
-<h4>Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</h4>
+<h4 id="distributionorderedcachebehaviorforwardedvalues">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOrderedCacheBehaviorForwardedValues">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOrderedCacheBehaviorForwardedValues">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5262,7 +5292,7 @@ value of `true` for `query_string`, all query string keys are cached.
 
 
 
-<h4>Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies</h4>
+<h4 id="distributionorderedcachebehaviorforwardedvaluescookies">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Forwarded<wbr>Values<wbr>Cookies</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOrderedCacheBehaviorForwardedValuesCookies">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOrderedCacheBehaviorForwardedValuesCookies">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5397,7 +5427,7 @@ your origin.
 
 
 
-<h4>Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association</h4>
+<h4 id="distributionorderedcachebehaviorlambdafunctionassociation">Distribution<wbr>Ordered<wbr>Cache<wbr>Behavior<wbr>Lambda<wbr>Function<wbr>Association</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOrderedCacheBehaviorLambdaFunctionAssociation">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOrderedCacheBehaviorLambdaFunctionAssociation">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5556,7 +5586,7 @@ Valid values: `viewer-request`, `origin-request`, `viewer-response`,
 
 
 
-<h4>Distribution<wbr>Origin</h4>
+<h4 id="distributionorigin">Distribution<wbr>Origin</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOrigin">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOrigin">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5851,7 +5881,7 @@ configuration information. If a custom origin is required, use
 
 
 
-<h4>Distribution<wbr>Origin<wbr>Custom<wbr>Header</h4>
+<h4 id="distributionorigincustomheader">Distribution<wbr>Origin<wbr>Custom<wbr>Header</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOriginCustomHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOriginCustomHeader">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5958,7 +5988,7 @@ configuration information. If a custom origin is required, use
 
 
 
-<h4>Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config</h4>
+<h4 id="distributionorigincustomoriginconfig">Distribution<wbr>Origin<wbr>Custom<wbr>Origin<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOriginCustomOriginConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOriginCustomOriginConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6229,7 +6259,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
 
 
-<h4>Distribution<wbr>Origin<wbr>Group</h4>
+<h4 id="distributionorigingroup">Distribution<wbr>Origin<wbr>Group</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOriginGroup">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOriginGroup">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6380,7 +6410,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
 
 
-<h4>Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria</h4>
+<h4 id="distributionorigingroupfailovercriteria">Distribution<wbr>Origin<wbr>Group<wbr>Failover<wbr>Criteria</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOriginGroupFailoverCriteria">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOriginGroupFailoverCriteria">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6459,7 +6489,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
 
 
-<h4>Distribution<wbr>Origin<wbr>Group<wbr>Member</h4>
+<h4 id="distributionorigingroupmember">Distribution<wbr>Origin<wbr>Group<wbr>Member</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOriginGroupMember">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOriginGroupMember">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6538,7 +6568,7 @@ one or more of `SSLv3`, `TLSv1`, `TLSv1.1`, and `TLSv1.2`.
 
 
 
-<h4>Distribution<wbr>Origin<wbr>S3Origin<wbr>Config</h4>
+<h4 id="distributionorigins3originconfig">Distribution<wbr>Origin<wbr>S3Origin<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionOriginS3OriginConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionOriginS3OriginConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6621,7 +6651,7 @@ identity][5] to associate with the origin.
 
 
 
-<h4>Distribution<wbr>Restrictions</h4>
+<h4 id="distributionrestrictions">Distribution<wbr>Restrictions</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionRestrictions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionRestrictions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6696,7 +6726,7 @@ identity][5] to associate with the origin.
 
 
 
-<h4>Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction</h4>
+<h4 id="distributionrestrictionsgeorestriction">Distribution<wbr>Restrictions<wbr>Geo<wbr>Restriction</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionRestrictionsGeoRestriction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionRestrictionsGeoRestriction">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6827,7 +6857,7 @@ distribute your content (`blacklist`).
 
 
 
-<h4>Distribution<wbr>Viewer<wbr>Certificate</h4>
+<h4 id="distributionviewercertificate">Distribution<wbr>Viewer<wbr>Certificate</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DistributionViewerCertificate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DistributionViewerCertificate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7114,7 +7144,7 @@ must be specified.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

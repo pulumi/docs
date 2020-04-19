@@ -149,7 +149,7 @@ const exampleGraphQLApi = new aws.appsync.GraphQLApi("example", {
 
 
 
-## Create a GraphQLApi Resource
+## Create a GraphQLApi Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -239,7 +239,7 @@ const exampleGraphQLApi = new aws.appsync.GraphQLApi("example", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -316,7 +316,7 @@ const exampleGraphQLApi = new aws.appsync.GraphQLApi("example", {
 
 {{% /choosable %}}
 
-## GraphQLApi Resource Properties
+## GraphQLApi Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -685,9 +685,7 @@ The GraphQLApi resource accepts the following [input]({{< relref "/docs/intro/co
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the GraphQLApi resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the GraphQLApi resource produces the following output properties:
 
 
 
@@ -703,6 +701,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ARN
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -731,6 +737,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Uris</span>
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
@@ -753,6 +767,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ARN
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -781,6 +803,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>uris</span>
         <span class="property-indicator"></span>
         <span class="property-type">Dict[str, str]</span>
@@ -797,8 +827,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing GraphQLApi Resource
+## Look up an Existing GraphQLApi Resource {#look-up}
 
 Get an existing GraphQLApi resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1353,7 +1382,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider</h4>
+
+<h4 id="graphqlapiadditionalauthenticationprovider">Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiAdditionalAuthenticationProvider">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GraphQLApiAdditionalAuthenticationProvider">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1504,7 +1534,7 @@ The following state arguments are supported:
 
 
 
-<h4>Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Openid<wbr>Connect<wbr>Config</h4>
+<h4 id="graphqlapiadditionalauthenticationprovideropenidconnectconfig">Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>Openid<wbr>Connect<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GraphQLApiAdditionalAuthenticationProviderOpenidConnectConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1691,7 +1721,7 @@ The following state arguments are supported:
 
 
 
-<h4>Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>User<wbr>Pool<wbr>Config</h4>
+<h4 id="graphqlapiadditionalauthenticationprovideruserpoolconfig">Graph<wbr>QLApi<wbr>Additional<wbr>Authentication<wbr>Provider<wbr>User<wbr>Pool<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiAdditionalAuthenticationProviderUserPoolConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GraphQLApiAdditionalAuthenticationProviderUserPoolConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1842,7 +1872,7 @@ The following state arguments are supported:
 
 
 
-<h4>Graph<wbr>QLApi<wbr>Log<wbr>Config</h4>
+<h4 id="graphqlapilogconfig">Graph<wbr>QLApi<wbr>Log<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiLogConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GraphQLApiLogConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1957,7 +1987,7 @@ The following state arguments are supported:
 
 
 
-<h4>Graph<wbr>QLApi<wbr>Openid<wbr>Connect<wbr>Config</h4>
+<h4 id="graphqlapiopenidconnectconfig">Graph<wbr>QLApi<wbr>Openid<wbr>Connect<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiOpenidConnectConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GraphQLApiOpenidConnectConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2144,7 +2174,7 @@ The following state arguments are supported:
 
 
 
-<h4>Graph<wbr>QLApi<wbr>User<wbr>Pool<wbr>Config</h4>
+<h4 id="graphqlapiuserpoolconfig">Graph<wbr>QLApi<wbr>User<wbr>Pool<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GraphQLApiUserPoolConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GraphQLApiUserPoolConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2335,7 +2365,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

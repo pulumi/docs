@@ -30,7 +30,7 @@ const example = pulumi.output(aws.iam.getInstanceProfile({
 
 
 
-## Using GetInstanceProfile
+## Using GetInstanceProfile {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -132,7 +132,7 @@ The following arguments are supported:
 
 
 
-## GetInstanceProfile Result
+## GetInstanceProfile Result {#result}
 
 The following output properties are available:
 

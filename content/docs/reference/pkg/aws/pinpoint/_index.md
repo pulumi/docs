@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="admchannel" title="AdmChannel"><span class="symbol resource"></span>AdmChannel</a></li>
     <li><a href="apnschannel" title="ApnsChannel"><span class="symbol resource"></span>ApnsChannel</a></li>
@@ -23,7 +23,7 @@ block_external_search_index: true
     <li><a href="smschannel" title="SmsChannel"><span class="symbol resource"></span>SmsChannel</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

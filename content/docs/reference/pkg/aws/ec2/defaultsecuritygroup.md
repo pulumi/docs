@@ -105,7 +105,7 @@ they are at the time of removal. You can resume managing them via the AWS Consol
 
 
 
-## Create a DefaultSecurityGroup Resource
+## Create a DefaultSecurityGroup Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -195,7 +195,7 @@ they are at the time of removal. You can resume managing them via the AWS Consol
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -272,7 +272,7 @@ they are at the time of removal. You can resume managing them via the AWS Consol
 
 {{% /choosable %}}
 
-## DefaultSecurityGroup Resource Properties
+## DefaultSecurityGroup Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -509,9 +509,7 @@ modified, added, or removed.** It will be left in its current state
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the DefaultSecurityGroup resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the DefaultSecurityGroup resource produces the following output properties:
 
 
 
@@ -535,6 +533,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The description of the security group
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -580,6 +586,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -619,6 +633,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The description of the security group
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -664,6 +686,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -689,8 +719,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing DefaultSecurityGroup Resource
+## Look up an Existing DefaultSecurityGroup Resource {#look-up}
 
 Get an existing DefaultSecurityGroup resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1181,7 +1210,8 @@ modified, added, or removed.** It will be left in its current state
 
 ## Supporting Types
 
-<h4>Default<wbr>Security<wbr>Group<wbr>Egress</h4>
+
+<h4 id="defaultsecuritygroupegress">Default<wbr>Security<wbr>Group<wbr>Egress</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DefaultSecurityGroupEgress">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DefaultSecurityGroupEgress">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1516,7 +1546,7 @@ modified, added, or removed.** It will be left in its current state
 
 
 
-<h4>Default<wbr>Security<wbr>Group<wbr>Ingress</h4>
+<h4 id="defaultsecuritygroupingress">Default<wbr>Security<wbr>Group<wbr>Ingress</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DefaultSecurityGroupIngress">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DefaultSecurityGroupIngress">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1855,7 +1885,7 @@ modified, added, or removed.** It will be left in its current state
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

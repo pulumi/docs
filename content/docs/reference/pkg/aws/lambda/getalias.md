@@ -29,7 +29,7 @@ const production = pulumi.output(aws.lambda.getAlias({
 
 
 
-## Using GetAlias
+## Using GetAlias {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -167,7 +167,7 @@ The following arguments are supported:
 
 
 
-## GetAlias Result
+## GetAlias Result {#result}
 
 The following output properties are available:
 

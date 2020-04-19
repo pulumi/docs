@@ -16,7 +16,7 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
 
 
 
-## Create a NodeGroup Resource
+## Create a NodeGroup Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -106,7 +106,7 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -183,7 +183,7 @@ Manages an EKS Node Group, which can provision and optionally update an Auto Sca
 
 {{% /choosable %}}
 
-## NodeGroup Resource Properties
+## NodeGroup Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -696,9 +696,7 @@ The NodeGroup resource accepts the following [input]({{< relref "/docs/intro/con
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the NodeGroup resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the NodeGroup resource produces the following output properties:
 
 
 
@@ -714,6 +712,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the EKS Node Group.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -751,6 +757,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Resources</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodegroupresource">[]Node<wbr>Group<wbr>Resource</a></span>
@@ -782,6 +796,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Amazon Resource Name (ARN) of the EKS Node Group.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -819,6 +841,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>resources</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#nodegroupresource">List[Node<wbr>Group<wbr>Resource]</a></span>
@@ -844,8 +874,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing NodeGroup Resource
+## Look up an Existing NodeGroup Resource {#look-up}
 
 Get an existing NodeGroup resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1580,7 +1609,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Node<wbr>Group<wbr>Remote<wbr>Access</h4>
+
+<h4 id="nodegroupremoteaccess">Node<wbr>Group<wbr>Remote<wbr>Access</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NodeGroupRemoteAccess">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NodeGroupRemoteAccess">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1695,7 +1725,7 @@ The following state arguments are supported:
 
 
 
-<h4>Node<wbr>Group<wbr>Resource</h4>
+<h4 id="nodegroupresource">Node<wbr>Group<wbr>Resource</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NodeGroupResource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1810,7 +1840,7 @@ The following state arguments are supported:
 
 
 
-<h4>Node<wbr>Group<wbr>Resource<wbr>Autoscaling<wbr>Group</h4>
+<h4 id="nodegroupresourceautoscalinggroup">Node<wbr>Group<wbr>Resource<wbr>Autoscaling<wbr>Group</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NodeGroupResourceAutoscalingGroup">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1889,7 +1919,7 @@ The following state arguments are supported:
 
 
 
-<h4>Node<wbr>Group<wbr>Scaling<wbr>Config</h4>
+<h4 id="nodegroupscalingconfig">Node<wbr>Group<wbr>Scaling<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#NodeGroupScalingConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#NodeGroupScalingConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2044,7 +2074,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

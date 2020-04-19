@@ -201,7 +201,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
 
 
 
-## Create a Project Resource
+## Create a Project Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -291,7 +291,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -368,7 +368,7 @@ const project_with_cache = new aws.codebuild.Project("project-with-cache", {
 
 {{% /choosable %}}
 
-## Project Resource Properties
+## Project Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -1025,9 +1025,7 @@ The Project resource accepts the following [input]({{< relref "/docs/intro/conce
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Project resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Project resource produces the following output properties:
 
 
 
@@ -1052,6 +1050,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1078,6 +1084,14 @@ The following output properties are available:
     <dd>{{% md %}}The URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1102,6 +1116,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1128,6 +1150,14 @@ The following output properties are available:
     <dd>{{% md %}}The URL of the build badge when `badge_enabled` is enabled.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1137,8 +1167,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Project Resource
+## Look up an Existing Project Resource {#look-up}
 
 Get an existing Project resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1981,7 +2010,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Project<wbr>Artifacts</h4>
+
+<h4 id="projectartifacts">Project<wbr>Artifacts</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectArtifacts">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectArtifacts">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2348,7 +2378,7 @@ The following state arguments are supported:
 
 
 
-<h4>Project<wbr>Cache</h4>
+<h4 id="projectcache">Project<wbr>Cache</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectCache">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectCache">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2499,7 +2529,7 @@ The following state arguments are supported:
 
 
 
-<h4>Project<wbr>Environment</h4>
+<h4 id="projectenvironment">Project<wbr>Environment</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectEnvironment">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectEnvironment">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2830,7 +2860,7 @@ The following state arguments are supported:
 
 
 
-<h4>Project<wbr>Environment<wbr>Environment<wbr>Variable</h4>
+<h4 id="projectenvironmentenvironmentvariable">Project<wbr>Environment<wbr>Environment<wbr>Variable</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectEnvironmentEnvironmentVariable">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectEnvironmentEnvironmentVariable">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2981,7 +3011,7 @@ The following state arguments are supported:
 
 
 
-<h4>Project<wbr>Environment<wbr>Registry<wbr>Credential</h4>
+<h4 id="projectenvironmentregistrycredential">Project<wbr>Environment<wbr>Registry<wbr>Credential</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectEnvironmentRegistryCredential">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectEnvironmentRegistryCredential">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3096,7 +3126,7 @@ The following state arguments are supported:
 
 
 
-<h4>Project<wbr>Logs<wbr>Config</h4>
+<h4 id="projectlogsconfig">Project<wbr>Logs<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectLogsConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectLogsConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3211,7 +3241,7 @@ The following state arguments are supported:
 
 
 
-<h4>Project<wbr>Logs<wbr>Config<wbr>Cloudwatch<wbr>Logs</h4>
+<h4 id="projectlogsconfigcloudwatchlogs">Project<wbr>Logs<wbr>Config<wbr>Cloudwatch<wbr>Logs</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectLogsConfigCloudwatchLogs">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectLogsConfigCloudwatchLogs">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3362,7 +3392,7 @@ The following state arguments are supported:
 
 
 
-<h4>Project<wbr>Logs<wbr>Config<wbr>S3Logs</h4>
+<h4 id="projectlogsconfigs3logs">Project<wbr>Logs<wbr>Config<wbr>S3Logs</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectLogsConfigS3Logs">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectLogsConfigS3Logs">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3513,7 +3543,7 @@ The following state arguments are supported:
 
 
 
-<h4>Project<wbr>Secondary<wbr>Artifact</h4>
+<h4 id="projectsecondaryartifact">Project<wbr>Secondary<wbr>Artifact</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectSecondaryArtifact">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectSecondaryArtifact">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3880,7 +3910,7 @@ The following state arguments are supported:
 
 
 
-<h4>Project<wbr>Secondary<wbr>Source</h4>
+<h4 id="projectsecondarysource">Project<wbr>Secondary<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectSecondarySource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectSecondarySource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4247,7 +4277,7 @@ The following state arguments are supported:
 
 
 
-<h4>Project<wbr>Secondary<wbr>Source<wbr>Auth</h4>
+<h4 id="projectsecondarysourceauth">Project<wbr>Secondary<wbr>Source<wbr>Auth</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectSecondarySourceAuth">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectSecondarySourceAuth">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4362,7 +4392,7 @@ The following state arguments are supported:
 
 
 
-<h4>Project<wbr>Secondary<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</h4>
+<h4 id="projectsecondarysourcegitsubmodulesconfig">Project<wbr>Secondary<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectSecondarySourceGitSubmodulesConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectSecondarySourceGitSubmodulesConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4441,7 +4471,7 @@ The following state arguments are supported:
 
 
 
-<h4>Project<wbr>Source</h4>
+<h4 id="projectsource">Project<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectSource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectSource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4772,7 +4802,7 @@ The following state arguments are supported:
 
 
 
-<h4>Project<wbr>Source<wbr>Auth</h4>
+<h4 id="projectsourceauth">Project<wbr>Source<wbr>Auth</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectSourceAuth">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectSourceAuth">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4887,7 +4917,7 @@ The following state arguments are supported:
 
 
 
-<h4>Project<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</h4>
+<h4 id="projectsourcegitsubmodulesconfig">Project<wbr>Source<wbr>Git<wbr>Submodules<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectSourceGitSubmodulesConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectSourceGitSubmodulesConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4966,7 +4996,7 @@ The following state arguments are supported:
 
 
 
-<h4>Project<wbr>Vpc<wbr>Config</h4>
+<h4 id="projectvpcconfig">Project<wbr>Vpc<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProjectVpcConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ProjectVpcConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5121,7 +5151,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

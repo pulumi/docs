@@ -33,7 +33,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const test = pulumi.output(aws.ec2transitgateway.getVpnAttachment({
-    filter: [{
+    filters: [{
         name: "resource-id",
         values: ["some-resource"],
     }],
@@ -47,7 +47,7 @@ const test = pulumi.output(aws.ec2transitgateway.getVpnAttachment({
 
 
 
-## Using GetVpnAttachment
+## Using GetVpnAttachment {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -257,7 +257,7 @@ The following arguments are supported:
 
 
 
-## GetVpnAttachment Result
+## GetVpnAttachment Result {#result}
 
 The following output properties are available:
 
@@ -468,7 +468,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Vpn<wbr>Attachment<wbr>Filter</h4>
+
+<h4 id="getvpnattachmentfilter">Get<wbr>Vpn<wbr>Attachment<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetVpnAttachmentFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpnAttachmentFilter">output</a> API doc for this type.
 {{% /choosable %}}

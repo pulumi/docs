@@ -46,7 +46,7 @@ const by_version_stage = aws_secretsmanager_secret_example.id.apply(id => aws.se
 
 
 
-## Using GetSecretVersion
+## Using GetSecretVersion {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -220,7 +220,7 @@ The following arguments are supported:
 
 
 
-## GetSecretVersion Result
+## GetSecretVersion Result {#result}
 
 The following output properties are available:
 

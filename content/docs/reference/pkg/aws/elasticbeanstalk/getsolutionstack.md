@@ -29,7 +29,7 @@ const multiDocker = pulumi.output(aws.elasticbeanstalk.getSolutionStack({
 
 
 
-## Using GetSolutionStack
+## Using GetSolutionStack {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -179,7 +179,7 @@ recent solution stack.
 
 
 
-## GetSolutionStack Result
+## GetSolutionStack Result {#result}
 
 The following output properties are available:
 

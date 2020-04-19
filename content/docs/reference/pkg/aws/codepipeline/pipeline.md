@@ -73,7 +73,7 @@ const s3kmskey = pulumi.output(aws.kms.getAlias({
     name: "alias/myKmsKey",
 }, { async: true }));
 const codepipeline = new aws.codepipeline.Pipeline("codepipeline", {
-    artifactStore: {
+    artifactStores: {
         encryptionKey: {
             id: s3kmskey.arn,
             type: "KMS",
@@ -141,7 +141,7 @@ const codepipeline = new aws.codepipeline.Pipeline("codepipeline", {
 
 
 
-## Create a Pipeline Resource
+## Create a Pipeline Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -231,7 +231,7 @@ const codepipeline = new aws.codepipeline.Pipeline("codepipeline", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -308,7 +308,7 @@ const codepipeline = new aws.codepipeline.Pipeline("codepipeline", {
 
 {{% /choosable %}}
 
-## Pipeline Resource Properties
+## Pipeline Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -533,9 +533,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Pipeline resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Pipeline resource produces the following output properties:
 
 
 
@@ -551,6 +549,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The codepipeline ARN.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -568,6 +574,14 @@ The following output properties are available:
     <dd>{{% md %}}The codepipeline ARN.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -583,6 +597,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The codepipeline ARN.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -600,6 +622,14 @@ The following output properties are available:
     <dd>{{% md %}}The codepipeline ARN.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -609,8 +639,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Pipeline Resource
+## Look up an Existing Pipeline Resource {#look-up}
 
 Get an existing Pipeline resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -985,7 +1014,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Pipeline<wbr>Artifact<wbr>Store</h4>
+
+<h4 id="pipelineartifactstore">Pipeline<wbr>Artifact<wbr>Store</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineArtifactStore">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PipelineArtifactStore">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1172,7 +1202,7 @@ The following state arguments are supported:
 
 
 
-<h4>Pipeline<wbr>Artifact<wbr>Store<wbr>Encryption<wbr>Key</h4>
+<h4 id="pipelineartifactstoreencryptionkey">Pipeline<wbr>Artifact<wbr>Store<wbr>Encryption<wbr>Key</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineArtifactStoreEncryptionKey">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PipelineArtifactStoreEncryptionKey">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1287,7 +1317,7 @@ The following state arguments are supported:
 
 
 
-<h4>Pipeline<wbr>Stage</h4>
+<h4 id="pipelinestage">Pipeline<wbr>Stage</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineStage">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PipelineStage">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1402,7 +1432,7 @@ The following state arguments are supported:
 
 
 
-<h4>Pipeline<wbr>Stage<wbr>Action</h4>
+<h4 id="pipelinestageaction">Pipeline<wbr>Stage<wbr>Action</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineStageAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PipelineStageAction">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1845,7 +1875,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

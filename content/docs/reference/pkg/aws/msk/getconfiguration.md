@@ -28,7 +28,7 @@ const example = pulumi.output(aws.msk.getConfiguration({
 
 
 
-## Using GetConfiguration
+## Using GetConfiguration {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -130,7 +130,7 @@ The following arguments are supported:
 
 
 
-## GetConfiguration Result
+## GetConfiguration Result {#result}
 
 The following output properties are available:
 

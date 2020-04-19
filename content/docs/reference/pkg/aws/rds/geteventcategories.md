@@ -41,7 +41,7 @@ export const example = exampleEventCategories.eventCategories;
 
 
 
-## Using GetEventCategories
+## Using GetEventCategories {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -143,7 +143,7 @@ The following arguments are supported:
 
 
 
-## GetEventCategories Result
+## GetEventCategories Result {#result}
 
 The following output properties are available:
 

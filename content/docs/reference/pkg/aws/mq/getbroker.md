@@ -35,7 +35,7 @@ const byName = pulumi.output(aws.mq.getBroker({
 
 
 
-## Using GetBroker
+## Using GetBroker {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -237,7 +237,7 @@ The following arguments are supported:
 
 
 
-## GetBroker Result
+## GetBroker Result {#result}
 
 The following output properties are available:
 
@@ -892,7 +892,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Broker<wbr>Configuration</h4>
+
+<h4 id="getbrokerconfiguration">Get<wbr>Broker<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBrokerConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -999,7 +1000,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Broker<wbr>Encryption<wbr>Option</h4>
+<h4 id="getbrokerencryptionoption">Get<wbr>Broker<wbr>Encryption<wbr>Option</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBrokerEncryptionOption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1106,7 +1107,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Broker<wbr>Instance</h4>
+<h4 id="getbrokerinstance">Get<wbr>Broker<wbr>Instance</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBrokerInstance">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1245,7 +1246,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Broker<wbr>Logs</h4>
+<h4 id="getbrokerlogs">Get<wbr>Broker<wbr>Logs</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetBrokerLogs">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBrokerLogs">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1352,7 +1353,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</h4>
+<h4 id="getbrokermaintenancewindowstarttime">Get<wbr>Broker<wbr>Maintenance<wbr>Window<wbr>Start<wbr>Time</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBrokerMaintenanceWindowStartTime">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1491,7 +1492,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Broker<wbr>User</h4>
+<h4 id="getbrokeruser">Get<wbr>Broker<wbr>User</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBrokerUser">output</a> API doc for this type.
 {{% /choosable %}}

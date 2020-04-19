@@ -59,7 +59,7 @@ const testApplication = new aws.kinesis.AnalyticsApplication("test_application",
 
 
 
-## Create a AnalyticsApplication Resource
+## Create a AnalyticsApplication Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -149,7 +149,7 @@ const testApplication = new aws.kinesis.AnalyticsApplication("test_application",
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -226,7 +226,7 @@ const testApplication = new aws.kinesis.AnalyticsApplication("test_application",
 
 {{% /choosable %}}
 
-## AnalyticsApplication Resource Properties
+## AnalyticsApplication Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -567,9 +567,7 @@ See Reference Data Sources below for more details.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the AnalyticsApplication resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the AnalyticsApplication resource produces the following output properties:
 
 
 
@@ -594,6 +592,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Timestamp when the application version was created.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -649,6 +655,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Last<wbr>Update<wbr>Timestamp</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -698,6 +712,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The Timestamp when the application version was created.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -753,6 +775,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>last_<wbr>update_<wbr>timestamp</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -787,8 +817,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing AnalyticsApplication Resource
+## Look up an Existing AnalyticsApplication Resource {#look-up}
 
 Get an existing AnalyticsApplication resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1423,7 +1452,8 @@ See Reference Data Sources below for more details.
 
 ## Supporting Types
 
-<h4>Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</h4>
+
+<h4 id="analyticsapplicationcloudwatchloggingoptions">Analytics<wbr>Application<wbr>Cloudwatch<wbr>Logging<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationCloudwatchLoggingOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationCloudwatchLoggingOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1574,7 +1604,7 @@ See Reference Data Sources below for more details.
 
 
 
-<h4>Analytics<wbr>Application<wbr>Inputs</h4>
+<h4 id="analyticsapplicationinputs">Analytics<wbr>Application<wbr>Inputs</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputs">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputs">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1949,7 +1979,7 @@ See Processing Configuration below for more details.
 
 
 
-<h4>Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose</h4>
+<h4 id="analyticsapplicationinputskinesisfirehose">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Firehose</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputsKinesisFirehose">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsKinesisFirehose">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2064,7 +2094,7 @@ See Processing Configuration below for more details.
 
 
 
-<h4>Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream</h4>
+<h4 id="analyticsapplicationinputskinesisstream">Analytics<wbr>Application<wbr>Inputs<wbr>Kinesis<wbr>Stream</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputsKinesisStream">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsKinesisStream">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2179,7 +2209,7 @@ See Processing Configuration below for more details.
 
 
 
-<h4>Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism</h4>
+<h4 id="analyticsapplicationinputsparallelism">Analytics<wbr>Application<wbr>Inputs<wbr>Parallelism</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputsParallelism">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsParallelism">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2258,7 +2288,7 @@ See Processing Configuration below for more details.
 
 
 
-<h4>Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration</h4>
+<h4 id="analyticsapplicationinputsprocessingconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputsProcessingConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsProcessingConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2337,7 +2367,7 @@ See Processing Configuration below for more details.
 
 
 
-<h4>Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Lambda</h4>
+<h4 id="analyticsapplicationinputsprocessingconfigurationlambda">Analytics<wbr>Application<wbr>Inputs<wbr>Processing<wbr>Configuration<wbr>Lambda</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputsProcessingConfigurationLambda">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsProcessingConfigurationLambda">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2452,7 +2482,7 @@ See Processing Configuration below for more details.
 
 
 
-<h4>Analytics<wbr>Application<wbr>Inputs<wbr>Schema</h4>
+<h4 id="analyticsapplicationinputsschema">Analytics<wbr>Application<wbr>Inputs<wbr>Schema</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputsSchema">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsSchema">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2611,7 +2641,7 @@ See Record Format below for more details.
 
 
 
-<h4>Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Column</h4>
+<h4 id="analyticsapplicationinputsschemarecordcolumn">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Column</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputsSchemaRecordColumn">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsSchemaRecordColumn">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2762,7 +2792,7 @@ See Record Format below for more details.
 
 
 
-<h4>Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format</h4>
+<h4 id="analyticsapplicationinputsschemarecordformat">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputsSchemaRecordFormat">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsSchemaRecordFormat">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2881,7 +2911,7 @@ See Mapping Parameters below for more details.
 
 
 
-<h4>Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</h4>
+<h4 id="analyticsapplicationinputsschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputsSchemaRecordFormatMappingParameters">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsSchemaRecordFormatMappingParameters">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3004,7 +3034,7 @@ See JSON Mapping Parameters below for more details.
 
 
 
-<h4>Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv</h4>
+<h4 id="analyticsapplicationinputsschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsSchemaRecordFormatMappingParametersCsv">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3119,7 +3149,7 @@ See JSON Mapping Parameters below for more details.
 
 
 
-<h4>Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json</h4>
+<h4 id="analyticsapplicationinputsschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Inputs<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsSchemaRecordFormatMappingParametersJson">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3198,7 +3228,7 @@ See JSON Mapping Parameters below for more details.
 
 
 
-<h4>Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration</h4>
+<h4 id="analyticsapplicationinputsstartingpositionconfiguration">Analytics<wbr>Application<wbr>Inputs<wbr>Starting<wbr>Position<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationInputsStartingPositionConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationInputsStartingPositionConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3273,7 +3303,7 @@ See JSON Mapping Parameters below for more details.
 
 
 
-<h4>Analytics<wbr>Application<wbr>Output</h4>
+<h4 id="analyticsapplicationoutput">Analytics<wbr>Application<wbr>Output</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationOutput">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationOutput">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3540,7 +3570,7 @@ See Kinesis Stream below for more details.
 
 
 
-<h4>Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose</h4>
+<h4 id="analyticsapplicationoutputkinesisfirehose">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Firehose</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationOutputKinesisFirehose">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationOutputKinesisFirehose">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3655,7 +3685,7 @@ See Kinesis Stream below for more details.
 
 
 
-<h4>Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream</h4>
+<h4 id="analyticsapplicationoutputkinesisstream">Analytics<wbr>Application<wbr>Output<wbr>Kinesis<wbr>Stream</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationOutputKinesisStream">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationOutputKinesisStream">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3770,7 +3800,7 @@ See Kinesis Stream below for more details.
 
 
 
-<h4>Analytics<wbr>Application<wbr>Output<wbr>Lambda</h4>
+<h4 id="analyticsapplicationoutputlambda">Analytics<wbr>Application<wbr>Output<wbr>Lambda</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationOutputLambda">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationOutputLambda">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3885,7 +3915,7 @@ See Kinesis Stream below for more details.
 
 
 
-<h4>Analytics<wbr>Application<wbr>Output<wbr>Schema</h4>
+<h4 id="analyticsapplicationoutputschema">Analytics<wbr>Application<wbr>Output<wbr>Schema</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationOutputSchema">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationOutputSchema">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3964,7 +3994,7 @@ See Kinesis Stream below for more details.
 
 
 
-<h4>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources</h4>
+<h4 id="analyticsapplicationreferencedatasources">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationReferenceDataSources">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationReferenceDataSources">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4151,7 +4181,7 @@ See Kinesis Stream below for more details.
 
 
 
-<h4>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>S3</h4>
+<h4 id="analyticsapplicationreferencedatasourcess3">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>S3</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationReferenceDataSourcesS3">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationReferenceDataSourcesS3">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4302,7 +4332,7 @@ See Kinesis Stream below for more details.
 
 
 
-<h4>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema</h4>
+<h4 id="analyticsapplicationreferencedatasourcesschema">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationReferenceDataSourcesSchema">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationReferenceDataSourcesSchema">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4461,7 +4491,7 @@ See Record Format below for more details.
 
 
 
-<h4>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Column</h4>
+<h4 id="analyticsapplicationreferencedatasourcesschemarecordcolumn">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Column</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationReferenceDataSourcesSchemaRecordColumn">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4612,7 +4642,7 @@ See Record Format below for more details.
 
 
 
-<h4>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format</h4>
+<h4 id="analyticsapplicationreferencedatasourcesschemarecordformat">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormat">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormat">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4731,7 +4761,7 @@ See Mapping Parameters below for more details.
 
 
 
-<h4>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</h4>
+<h4 id="analyticsapplicationreferencedatasourcesschemarecordformatmappingparameters">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParameters">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParameters">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4854,7 +4884,7 @@ See JSON Mapping Parameters below for more details.
 
 
 
-<h4>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv</h4>
+<h4 id="analyticsapplicationreferencedatasourcesschemarecordformatmappingparameterscsv">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Csv</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersCsv">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4969,7 +4999,7 @@ See JSON Mapping Parameters below for more details.
 
 
 
-<h4>Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json</h4>
+<h4 id="analyticsapplicationreferencedatasourcesschemarecordformatmappingparametersjson">Analytics<wbr>Application<wbr>Reference<wbr>Data<wbr>Sources<wbr>Schema<wbr>Record<wbr>Format<wbr>Mapping<wbr>Parameters<wbr>Json</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AnalyticsApplicationReferenceDataSourcesSchemaRecordFormatMappingParametersJson">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5052,7 +5082,7 @@ See JSON Mapping Parameters below for more details.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

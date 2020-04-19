@@ -41,7 +41,7 @@ const route = new aws.ec2.Route("r", {
 
 
 
-## Using GetVpcPeeringConnection
+## Using GetVpcPeeringConnection {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -543,7 +543,7 @@ a pair on the desired VPC Peering Connection.
 
 
 
-## GetVpcPeeringConnection Result
+## GetVpcPeeringConnection Result {#result}
 
 The following output properties are available:
 
@@ -1050,7 +1050,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter</h4>
+
+<h4 id="getvpcpeeringconnectionfilter">Get<wbr>Vpc<wbr>Peering<wbr>Connection<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetVpcPeeringConnectionFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpcPeeringConnectionFilter">output</a> API doc for this type.
 {{% /choosable %}}

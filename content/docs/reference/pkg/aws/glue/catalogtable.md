@@ -88,7 +88,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
 
 
 
-## Create a CatalogTable Resource
+## Create a CatalogTable Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -178,7 +178,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -255,7 +255,7 @@ const awsGlueCatalogTable = new aws.glue.CatalogTable("aws.glue.CatalogTable", {
 
 {{% /choosable %}}
 
-## CatalogTable Resource Properties
+## CatalogTable Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -732,12 +732,77 @@ The CatalogTable resource accepts the following [input]({{< relref "/docs/intro/
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The CatalogTable resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the CatalogTable resource produces the following output properties:
 
 
 
 
-## Look up an Existing CatalogTable Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing CatalogTable Resource {#look-up}
 
 Get an existing CatalogTable resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1328,7 +1393,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Catalog<wbr>Table<wbr>Partition<wbr>Key</h4>
+
+<h4 id="catalogtablepartitionkey">Catalog<wbr>Table<wbr>Partition<wbr>Key</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CatalogTablePartitionKey">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CatalogTablePartitionKey">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1479,7 +1545,7 @@ The following state arguments are supported:
 
 
 
-<h4>Catalog<wbr>Table<wbr>Storage<wbr>Descriptor</h4>
+<h4 id="catalogtablestoragedescriptor">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CatalogTableStorageDescriptor">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CatalogTableStorageDescriptor">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1954,7 +2020,7 @@ The following state arguments are supported:
 
 
 
-<h4>Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Column</h4>
+<h4 id="catalogtablestoragedescriptorcolumn">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Column</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CatalogTableStorageDescriptorColumn">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CatalogTableStorageDescriptorColumn">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2105,7 +2171,7 @@ The following state arguments are supported:
 
 
 
-<h4>Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info</h4>
+<h4 id="catalogtablestoragedescriptorserdeinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Ser<wbr>De<wbr>Info</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CatalogTableStorageDescriptorSerDeInfo">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CatalogTableStorageDescriptorSerDeInfo">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2256,7 +2322,7 @@ The following state arguments are supported:
 
 
 
-<h4>Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info</h4>
+<h4 id="catalogtablestoragedescriptorskewedinfo">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Skewed<wbr>Info</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CatalogTableStorageDescriptorSkewedInfo">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CatalogTableStorageDescriptorSkewedInfo">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2407,7 +2473,7 @@ The following state arguments are supported:
 
 
 
-<h4>Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column</h4>
+<h4 id="catalogtablestoragedescriptorsortcolumn">Catalog<wbr>Table<wbr>Storage<wbr>Descriptor<wbr>Sort<wbr>Column</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#CatalogTableStorageDescriptorSortColumn">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#CatalogTableStorageDescriptorSortColumn">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2526,7 +2592,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

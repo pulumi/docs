@@ -48,7 +48,7 @@ const web = new aws.ec2.Instance("web", {
 
 
 
-## Create a Instance Resource
+## Create a Instance Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -138,7 +138,7 @@ const web = new aws.ec2.Instance("web", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -215,7 +215,7 @@ const web = new aws.ec2.Instance("web", {
 
 {{% /choosable %}}
 
-## Instance Resource Properties
+## Instance Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -1548,9 +1548,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Instance resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Instance resource produces the following output properties:
 
 
 
@@ -1569,12 +1567,11 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>State</span>
+        <span>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The state of the instance. One of: `pending`, `running`, `shutting-down`, `terminated`, `stopping`, `stopped`. See [Instance Lifecycle](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html) for more information.
-{{% /md %}}</dd>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1628,6 +1625,15 @@ is only available if you've enabled DNS hostnames for your VPC
     <dd>{{% md %}}The public IP address assigned to the instance, if applicable. **NOTE**: If you are using an [`aws.ec2.Eip`](https://www.terraform.io/docs/providers/aws/r/eip.html) with your instance, you should refer to the EIP's address directly and not use `public_ip`, as this field will change after the EIP is attached.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>State</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the instance. One of: `pending`, `running`, `shutting-down`, `terminated`, `stopping`, `stopped`. See [Instance Lifecycle](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html) for more information.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1643,6 +1649,14 @@ is only available if you've enabled DNS hostnames for your VPC
     </dt>
     <dd>{{% md %}}The ARN of the instance.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1723,6 +1737,14 @@ is only available if you've enabled DNS hostnames for your VPC
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>instance<wbr>State</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -1800,6 +1822,14 @@ is only available if you've enabled DNS hostnames for your VPC
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>instance_<wbr>state</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1868,8 +1898,7 @@ is only available if you've enabled DNS hostnames for your VPC
 
 
 
-
-## Look up an Existing Instance Resource
+## Look up an Existing Instance Resource {#look-up}
 
 Get an existing Instance resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -2153,15 +2182,6 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
 
     <dt class="property-optional"
             title="Optional">
-        <span>State</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}The state of the instance. One of: `pending`, `running`, `shutting-down`, `terminated`, `stopping`, `stopped`. See [Instance Lifecycle](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html) for more information.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>Instance<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2320,6 +2340,15 @@ device of the instance. See Block Devices below for details.
     </dt>
     <dd>{{% md %}}Controls if traffic is routed to the instance when
 the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>State</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The state of the instance. One of: `pending`, `running`, `shutting-down`, `terminated`, `stopping`, `stopped`. See [Instance Lifecycle](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html) for more information.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -3596,7 +3625,8 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 
 ## Supporting Types
 
-<h4>Instance<wbr>Credit<wbr>Specification</h4>
+
+<h4 id="instancecreditspecification">Instance<wbr>Credit<wbr>Specification</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceCreditSpecification">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceCreditSpecification">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3675,7 +3705,7 @@ the destination address does not match the instance. Used for NAT or VPNs. Defau
 
 
 
-<h4>Instance<wbr>Ebs<wbr>Block<wbr>Device</h4>
+<h4 id="instanceebsblockdevice">Instance<wbr>Ebs<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceEbsBlockDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceEbsBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4030,6 +4060,16 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>volume<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`,
+or `"io1"`. (Default: `"gp2"`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>volume_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4045,16 +4085,6 @@ This must be set with a `volume_type` of `"io1"`.
     <dd>{{% md %}}The size of the volume in gibibytes (GiB).
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>volume<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`,
-or `"io1"`. (Default: `"gp2"`).
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -4062,7 +4092,7 @@ or `"io1"`. (Default: `"gp2"`).
 
 
 
-<h4>Instance<wbr>Ephemeral<wbr>Block<wbr>Device</h4>
+<h4 id="instanceephemeralblockdevice">Instance<wbr>Ephemeral<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceEphemeralBlockDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceEphemeralBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4221,7 +4251,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 
 
 
-<h4>Instance<wbr>Metadata<wbr>Options</h4>
+<h4 id="instancemetadataoptions">Instance<wbr>Metadata<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceMetadataOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceMetadataOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4372,7 +4402,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 
 
 
-<h4>Instance<wbr>Network<wbr>Interface</h4>
+<h4 id="instancenetworkinterface">Instance<wbr>Network<wbr>Interface</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceNetworkInterface">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceNetworkInterface">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4523,7 +4553,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 
 
 
-<h4>Instance<wbr>Root<wbr>Block<wbr>Device</h4>
+<h4 id="instancerootblockdevice">Instance<wbr>Root<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceRootBlockDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceRootBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4799,6 +4829,15 @@ using that type
 
     <dt class="property-optional"
             title="Optional">
+        <span>volume<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"io1"`, `"sc1"`, or `"st1"`. (Default: `"standard"`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>volume_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4814,15 +4853,6 @@ using that type
     <dd>{{% md %}}The size of the volume in gibibytes (GiB).
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>volume<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"io1"`, `"sc1"`, or `"st1"`. (Default: `"standard"`).
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -4834,7 +4864,7 @@ using that type
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

@@ -29,7 +29,7 @@ const pool = new aws.cognito.UserPool("pool", {});
 
 
 
-## Create a UserPool Resource
+## Create a UserPool Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -119,7 +119,7 @@ const pool = new aws.cognito.UserPool("pool", {});
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -196,7 +196,7 @@ const pool = new aws.cognito.UserPool("pool", {});
 
 {{% /choosable %}}
 
-## UserPool Resource Properties
+## UserPool Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -997,9 +997,7 @@ The UserPool resource accepts the following [input]({{< relref "/docs/intro/conc
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the UserPool resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the UserPool resource produces the following output properties:
 
 
 
@@ -1033,6 +1031,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws.com/xxxx_yyyyy
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1079,6 +1085,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Last<wbr>Modified<wbr>Date</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1119,6 +1133,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The endpoint name of the user pool. Example format: cognito-idp.REGION.amazonaws.com/xxxx_yyyyy
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1165,6 +1187,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>last_<wbr>modified_<wbr>date</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1181,8 +1211,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing UserPool Resource
+## Look up an Existing UserPool Resource {#look-up}
 
 Get an existing UserPool resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -2241,7 +2270,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config</h4>
+
+<h4 id="userpooladmincreateuserconfig">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolAdminCreateUserConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolAdminCreateUserConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2392,7 +2422,7 @@ The following state arguments are supported:
 
 
 
-<h4>User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Invite<wbr>Message<wbr>Template</h4>
+<h4 id="userpooladmincreateuserconfiginvitemessagetemplate">User<wbr>Pool<wbr>Admin<wbr>Create<wbr>User<wbr>Config<wbr>Invite<wbr>Message<wbr>Template</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolAdminCreateUserConfigInviteMessageTemplate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolAdminCreateUserConfigInviteMessageTemplate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2543,7 +2573,7 @@ The following state arguments are supported:
 
 
 
-<h4>User<wbr>Pool<wbr>Device<wbr>Configuration</h4>
+<h4 id="userpooldeviceconfiguration">User<wbr>Pool<wbr>Device<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolDeviceConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolDeviceConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2658,7 +2688,7 @@ The following state arguments are supported:
 
 
 
-<h4>User<wbr>Pool<wbr>Email<wbr>Configuration</h4>
+<h4 id="userpoolemailconfiguration">User<wbr>Pool<wbr>Email<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolEmailConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolEmailConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2845,7 +2875,7 @@ The following state arguments are supported:
 
 
 
-<h4>User<wbr>Pool<wbr>Lambda<wbr>Config</h4>
+<h4 id="userpoollambdaconfig">User<wbr>Pool<wbr>Lambda<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolLambdaConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolLambdaConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3248,7 +3278,7 @@ The following state arguments are supported:
 
 
 
-<h4>User<wbr>Pool<wbr>Password<wbr>Policy</h4>
+<h4 id="userpoolpasswordpolicy">User<wbr>Pool<wbr>Password<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolPasswordPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolPasswordPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3466,6 +3496,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>require<wbr>Uppercase</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Whether you have required users to use at least one uppercase letter in their password.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>require_<wbr>numbers</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -3484,15 +3523,6 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>require<wbr>Uppercase</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
-    </dt>
-    <dd>{{% md %}}Whether you have required users to use at least one uppercase letter in their password.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>temporary<wbr>Password<wbr>Validity<wbr>Days</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -3507,7 +3537,7 @@ The following state arguments are supported:
 
 
 
-<h4>User<wbr>Pool<wbr>Schema</h4>
+<h4 id="userpoolschema">User<wbr>Pool<wbr>Schema</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolSchema">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolSchema">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3802,7 +3832,7 @@ The following state arguments are supported:
 
 
 
-<h4>User<wbr>Pool<wbr>Schema<wbr>Number<wbr>Attribute<wbr>Constraints</h4>
+<h4 id="userpoolschemanumberattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>Number<wbr>Attribute<wbr>Constraints</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolSchemaNumberAttributeConstraints">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolSchemaNumberAttributeConstraints">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3917,7 +3947,7 @@ The following state arguments are supported:
 
 
 
-<h4>User<wbr>Pool<wbr>Schema<wbr>String<wbr>Attribute<wbr>Constraints</h4>
+<h4 id="userpoolschemastringattributeconstraints">User<wbr>Pool<wbr>Schema<wbr>String<wbr>Attribute<wbr>Constraints</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolSchemaStringAttributeConstraints">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolSchemaStringAttributeConstraints">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4032,7 +4062,7 @@ The following state arguments are supported:
 
 
 
-<h4>User<wbr>Pool<wbr>Sms<wbr>Configuration</h4>
+<h4 id="userpoolsmsconfiguration">User<wbr>Pool<wbr>Sms<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolSmsConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolSmsConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4147,7 +4177,7 @@ The following state arguments are supported:
 
 
 
-<h4>User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration</h4>
+<h4 id="userpoolsoftwaretokenmfaconfiguration">User<wbr>Pool<wbr>Software<wbr>Token<wbr>Mfa<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolSoftwareTokenMfaConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolSoftwareTokenMfaConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4226,7 +4256,7 @@ The following state arguments are supported:
 
 
 
-<h4>User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons</h4>
+<h4 id="userpooluserpooladdons">User<wbr>Pool<wbr>User<wbr>Pool<wbr>Add<wbr>Ons</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolUserPoolAddOns">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolUserPoolAddOns">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4305,7 +4335,7 @@ The following state arguments are supported:
 
 
 
-<h4>User<wbr>Pool<wbr>Username<wbr>Configuration</h4>
+<h4 id="userpoolusernameconfiguration">User<wbr>Pool<wbr>Username<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolUsernameConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolUsernameConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4384,7 +4414,7 @@ The following state arguments are supported:
 
 
 
-<h4>User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template</h4>
+<h4 id="userpoolverificationmessagetemplate">User<wbr>Pool<wbr>Verification<wbr>Message<wbr>Template</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#UserPoolVerificationMessageTemplate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#UserPoolVerificationMessageTemplate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4647,7 +4677,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

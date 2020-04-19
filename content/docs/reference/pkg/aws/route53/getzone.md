@@ -41,7 +41,7 @@ const www = new aws.route53.Record("www", {
 
 
 
-## Using GetZone
+## Using GetZone {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -323,7 +323,7 @@ The following arguments are supported:
 
 
 
-## GetZone Result
+## GetZone Result {#result}
 
 The following output properties are available:
 

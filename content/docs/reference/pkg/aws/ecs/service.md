@@ -119,7 +119,7 @@ For more information, see [Task Networking](https://docs.aws.amazon.com/AmazonEC
 
 
 
-## Create a Service Resource
+## Create a Service Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -209,7 +209,7 @@ For more information, see [Task Networking](https://docs.aws.amazon.com/AmazonEC
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -286,7 +286,7 @@ For more information, see [Task Networking](https://docs.aws.amazon.com/AmazonEC
 
 {{% /choosable %}}
 
-## Service Resource Properties
+## Service Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -1127,12 +1127,77 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The Service resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Service resource produces the following output properties:
 
 
 
 
-## Look up an Existing Service Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing Service Resource {#look-up}
 
 Get an existing Service resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -2087,7 +2152,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Service<wbr>Capacity<wbr>Provider<wbr>Strategy</h4>
+
+<h4 id="servicecapacityproviderstrategy">Service<wbr>Capacity<wbr>Provider<wbr>Strategy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceCapacityProviderStrategy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceCapacityProviderStrategy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2226,7 +2292,7 @@ The following state arguments are supported:
 
 
 
-<h4>Service<wbr>Deployment<wbr>Controller</h4>
+<h4 id="servicedeploymentcontroller">Service<wbr>Deployment<wbr>Controller</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceDeploymentController">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceDeploymentController">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2301,7 +2367,7 @@ The following state arguments are supported:
 
 
 
-<h4>Service<wbr>Load<wbr>Balancer</h4>
+<h4 id="serviceloadbalancer">Service<wbr>Load<wbr>Balancer</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceLoadBalancer">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceLoadBalancer">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2435,17 +2501,17 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>container_<wbr>name</span>
+        <span>container<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>container<wbr>Port</span>
+        <span>container_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -2472,7 +2538,7 @@ The following state arguments are supported:
 
 
 
-<h4>Service<wbr>Network<wbr>Configuration</h4>
+<h4 id="servicenetworkconfiguration">Service<wbr>Network<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceNetworkConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceNetworkConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2611,7 +2677,7 @@ The following state arguments are supported:
 
 
 
-<h4>Service<wbr>Ordered<wbr>Placement<wbr>Strategy</h4>
+<h4 id="serviceorderedplacementstrategy">Service<wbr>Ordered<wbr>Placement<wbr>Strategy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceOrderedPlacementStrategy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceOrderedPlacementStrategy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2718,7 +2784,7 @@ The following state arguments are supported:
 
 
 
-<h4>Service<wbr>Placement<wbr>Constraint</h4>
+<h4 id="serviceplacementconstraint">Service<wbr>Placement<wbr>Constraint</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServicePlacementConstraint">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServicePlacementConstraint">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2825,7 +2891,7 @@ The following state arguments are supported:
 
 
 
-<h4>Service<wbr>Service<wbr>Registries</h4>
+<h4 id="serviceserviceregistries">Service<wbr>Service<wbr>Registries</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ServiceServiceRegistries">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ServiceServiceRegistries">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2967,17 +3033,17 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>container_<wbr>name</span>
+        <span>container<wbr>Port</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>container<wbr>Port</span>
+        <span>container_<wbr>name</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3000,7 +3066,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

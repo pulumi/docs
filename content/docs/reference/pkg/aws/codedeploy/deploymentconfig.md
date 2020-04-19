@@ -94,7 +94,7 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("foo", {
 
 
 
-## Create a DeploymentConfig Resource
+## Create a DeploymentConfig Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -184,7 +184,7 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("foo", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -261,7 +261,7 @@ const fooDeploymentGroup = new aws.codedeploy.DeploymentGroup("foo", {
 
 {{% /choosable %}}
 
-## DeploymentConfig Resource Properties
+## DeploymentConfig Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -450,9 +450,7 @@ The DeploymentConfig resource accepts the following [input]({{< relref "/docs/in
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the DeploymentConfig resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the DeploymentConfig resource produces the following output properties:
 
 
 
@@ -468,6 +466,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The AWS Assigned deployment config id
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -485,6 +491,14 @@ The following output properties are available:
     <dd>{{% md %}}The AWS Assigned deployment config id
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -500,6 +514,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The AWS Assigned deployment config id
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -517,6 +539,14 @@ The following output properties are available:
     <dd>{{% md %}}The AWS Assigned deployment config id
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -526,8 +556,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing DeploymentConfig Resource
+## Look up an Existing DeploymentConfig Resource {#look-up}
 
 Get an existing DeploymentConfig resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -866,7 +895,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</h4>
+
+<h4 id="deploymentconfigminimumhealthyhosts">Deployment<wbr>Config<wbr>Minimum<wbr>Healthy<wbr>Hosts</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentConfigMinimumHealthyHosts">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentConfigMinimumHealthyHosts">output</a> API doc for this type.
 {{% /choosable %}}
@@ -993,7 +1023,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 
 
 
-<h4>Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</h4>
+<h4 id="deploymentconfigtrafficroutingconfig">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentConfigTrafficRoutingConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentConfigTrafficRoutingConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1144,7 +1174,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 
 
 
-<h4>Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary</h4>
+<h4 id="deploymentconfigtrafficroutingconfigtimebasedcanary">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Canary</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentConfigTrafficRoutingConfigTimeBasedCanary">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentConfigTrafficRoutingConfigTimeBasedCanary">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1259,7 +1289,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 
 
 
-<h4>Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear</h4>
+<h4 id="deploymentconfigtrafficroutingconfigtimebasedlinear">Deployment<wbr>Config<wbr>Traffic<wbr>Routing<wbr>Config<wbr>Time<wbr>Based<wbr>Linear</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DeploymentConfigTrafficRoutingConfigTimeBasedLinear">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DeploymentConfigTrafficRoutingConfigTimeBasedLinear">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1378,7 +1408,7 @@ When the type is `HOST_COUNT`, the value represents the minimum number of health
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

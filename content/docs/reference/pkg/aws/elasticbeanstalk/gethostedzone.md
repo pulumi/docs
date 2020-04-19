@@ -26,7 +26,7 @@ const current = pulumi.output(aws.elasticbeanstalk.getHostedZone({ async: true }
 
 
 
-## Using GetHostedZone
+## Using GetHostedZone {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -128,7 +128,7 @@ The following arguments are supported:
 
 
 
-## GetHostedZone Result
+## GetHostedZone Result {#result}
 
 The following output properties are available:
 

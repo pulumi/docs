@@ -45,7 +45,7 @@ const example = new aws.ec2.Ami("example", {
 
 
 
-## Create a Ami Resource
+## Create a Ami Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -135,7 +135,7 @@ const example = new aws.ec2.Ami("example", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -212,7 +212,7 @@ const example = new aws.ec2.Ami("example", {
 
 {{% /choosable %}}
 
-## Ami Resource Properties
+## Ami Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -757,15 +757,21 @@ changes the set of further arguments that are required, as described below.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Ami resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Ami resource produces the following output properties:
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -793,6 +799,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Manage<wbr>Ebs<wbr>Snapshots</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
@@ -814,6 +828,14 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -841,6 +863,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>manage_<wbr>ebs_<wbr>snapshots</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -865,8 +895,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Ami Resource
+## Look up an Existing Ami Resource {#look-up}
 
 Get an existing Ami resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1593,7 +1622,8 @@ changes the set of further arguments that are required, as described below.
 
 ## Supporting Types
 
-<h4>Ami<wbr>Ebs<wbr>Block<wbr>Device</h4>
+
+<h4 id="amiebsblockdevice">Ami<wbr>Ebs<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AmiEbsBlockDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AmiEbsBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1890,6 +1920,16 @@ snapshot.
 
     <dt class="property-optional"
             title="Optional">
+        <span>volume<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of EBS volume to create. Can be one of "standard" (the
+default), "io1" or "gp2".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>volume_<wbr>size</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1899,16 +1939,6 @@ If `snapshot_id` is set and `volume_size` is omitted then the volume will have t
 as the selected snapshot.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>volume<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The type of EBS volume to create. Can be one of "standard" (the
-default), "io1" or "gp2".
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -1916,7 +1946,7 @@ default), "io1" or "gp2".
 
 
 
-<h4>Ami<wbr>Ephemeral<wbr>Block<wbr>Device</h4>
+<h4 id="amiephemeralblockdevice">Ami<wbr>Ephemeral<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AmiEphemeralBlockDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AmiEphemeralBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2039,7 +2069,7 @@ default), "io1" or "gp2".
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

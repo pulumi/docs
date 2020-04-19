@@ -28,7 +28,7 @@ const clusterName = pulumi.output(aws.rds.getCluster({
 
 
 
-## Using GetCluster
+## Using GetCluster {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -162,7 +162,7 @@ The following arguments are supported:
 
 
 
-## GetCluster Result
+## GetCluster Result {#result}
 
 The following output properties are available:
 

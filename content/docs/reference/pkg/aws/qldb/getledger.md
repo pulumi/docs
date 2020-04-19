@@ -28,7 +28,7 @@ const example = pulumi.output(aws.qldb.getLedger({
 
 
 
-## Using GetLedger
+## Using GetLedger {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -130,7 +130,7 @@ The following arguments are supported:
 
 
 
-## GetLedger Result
+## GetLedger Result {#result}
 
 The following output properties are available:
 

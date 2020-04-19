@@ -31,7 +31,7 @@ const existing = pulumi.output(aws.lambda.getFunction({
 
 
 
-## Using GetFunction
+## Using GetFunction {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -201,7 +201,7 @@ The following arguments are supported:
 
 
 
-## GetFunction Result
+## GetFunction Result {#result}
 
 The following output properties are available:
 
@@ -1096,7 +1096,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Function<wbr>Dead<wbr>Letter<wbr>Config</h4>
+
+<h4 id="getfunctiondeadletterconfig">Get<wbr>Function<wbr>Dead<wbr>Letter<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetFunctionDeadLetterConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1171,7 +1172,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Function<wbr>Environment</h4>
+<h4 id="getfunctionenvironment">Get<wbr>Function<wbr>Environment</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetFunctionEnvironment">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1246,7 +1247,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Function<wbr>Tracing<wbr>Config</h4>
+<h4 id="getfunctiontracingconfig">Get<wbr>Function<wbr>Tracing<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetFunctionTracingConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1321,7 +1322,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Function<wbr>Vpc<wbr>Config</h4>
+<h4 id="getfunctionvpcconfig">Get<wbr>Function<wbr>Vpc<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetFunctionVpcConfig">output</a> API doc for this type.
 {{% /choosable %}}

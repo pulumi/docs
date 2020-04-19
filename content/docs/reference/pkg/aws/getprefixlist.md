@@ -53,7 +53,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const test = pulumi.output(aws.getPrefixList({
-    filter: [{
+    filters: [{
         name: "prefix-list-id",
         values: ["pl-68a54001"],
     }],
@@ -67,7 +67,7 @@ const test = pulumi.output(aws.getPrefixList({
 
 
 
-## Using GetPrefixList
+## Using GetPrefixList {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -241,7 +241,7 @@ The following arguments are supported:
 
 
 
-## GetPrefixList Result
+## GetPrefixList Result {#result}
 
 The following output properties are available:
 
@@ -456,7 +456,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Prefix<wbr>List<wbr>Filter</h4>
+
+<h4 id="getprefixlistfilter">Get<wbr>Prefix<wbr>List<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetPrefixListFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetPrefixListFilter">output</a> API doc for this type.
 {{% /choosable %}}

@@ -32,7 +32,7 @@ const reportDefinition = pulumi.output(aws.cur.getReportDefinition({
 
 
 
-## Using GetReportDefinition
+## Using GetReportDefinition {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -134,7 +134,7 @@ The following arguments are supported:
 
 
 
-## GetReportDefinition Result
+## GetReportDefinition Result {#result}
 
 The following output properties are available:
 

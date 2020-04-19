@@ -39,7 +39,7 @@ const ebsVolumes = pulumi.output(aws.ebs.getSnapshotIds({
 
 
 
-## Using GetSnapshotIds
+## Using GetSnapshotIds {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -221,7 +221,7 @@ several valid keys, for a full reference, check out
 
 
 
-## GetSnapshotIds Result
+## GetSnapshotIds Result {#result}
 
 The following output properties are available:
 
@@ -428,7 +428,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Snapshot<wbr>Ids<wbr>Filter</h4>
+
+<h4 id="getsnapshotidsfilter">Get<wbr>Snapshot<wbr>Ids<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSnapshotIdsFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSnapshotIdsFilter">output</a> API doc for this type.
 {{% /choosable %}}

@@ -28,7 +28,7 @@ const service = pulumi.output(aws.ecr.getRepository({
 
 
 
-## Using GetRepository
+## Using GetRepository {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -166,7 +166,7 @@ The following arguments are supported:
 
 
 
-## GetRepository Result
+## GetRepository Result {#result}
 
 The following output properties are available:
 

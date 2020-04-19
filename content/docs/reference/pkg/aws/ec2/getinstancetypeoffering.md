@@ -40,7 +40,7 @@ const example = pulumi.output(aws.ec2.getInstanceTypeOffering({
 
 
 
-## Using GetInstanceTypeOffering
+## Using GetInstanceTypeOffering {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -214,7 +214,7 @@ The following arguments are supported:
 
 
 
-## GetInstanceTypeOffering Result
+## GetInstanceTypeOffering Result {#result}
 
 The following output properties are available:
 
@@ -425,7 +425,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Instance<wbr>Type<wbr>Offering<wbr>Filter</h4>
+
+<h4 id="getinstancetypeofferingfilter">Get<wbr>Instance<wbr>Type<wbr>Offering<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetInstanceTypeOfferingFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstanceTypeOfferingFilter">output</a> API doc for this type.
 {{% /choosable %}}

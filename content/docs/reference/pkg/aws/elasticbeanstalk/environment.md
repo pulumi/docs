@@ -76,7 +76,7 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
 
 
 
-## Create a Environment Resource
+## Create a Environment Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -166,7 +166,7 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -243,7 +243,7 @@ const tfenvtest = new aws.elasticbeanstalk.Environment("tfenvtest", {
 
 {{% /choosable %}}
 
-## Environment Resource Properties
+## Environment Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -820,9 +820,7 @@ out.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Environment resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Environment resource produces the following output properties:
 
 
 
@@ -875,6 +873,14 @@ the configuration.
     </dt>
     <dd>{{% md %}}The URL to the Load Balancer for this Environment
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -976,6 +982,14 @@ the configuration.
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Instances</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
@@ -1071,6 +1085,14 @@ the configuration.
     </dt>
     <dd>{{% md %}}The URL to the Load Balancer for this Environment
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1172,6 +1194,14 @@ the configuration.
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>instances</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -1224,8 +1254,7 @@ the configuration.
 
 
 
-
-## Look up an Existing Environment Resource
+## Look up an Existing Environment Resource {#look-up}
 
 Get an existing Environment resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -2280,7 +2309,8 @@ out.
 
 ## Supporting Types
 
-<h4>Environment<wbr>All<wbr>Setting</h4>
+
+<h4 id="environmentallsetting">Environment<wbr>All<wbr>Setting</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EnvironmentAllSetting">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2459,7 +2489,7 @@ in the application URL
 
 
 
-<h4>Environment<wbr>Setting</h4>
+<h4 id="environmentsetting">Environment<wbr>Setting</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EnvironmentSetting">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EnvironmentSetting">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2642,7 +2672,7 @@ in the application URL
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

@@ -67,7 +67,7 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
 
 
 
-## Create a TopicRule Resource
+## Create a TopicRule Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -157,7 +157,7 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -234,7 +234,7 @@ const iamPolicyForLambda = new aws.iam.RolePolicy("iam_policy_for_lambda", {
 
 {{% /choosable %}}
 
-## TopicRule Resource Properties
+## TopicRule Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -811,9 +811,7 @@ The TopicRule resource accepts the following [input]({{< relref "/docs/intro/con
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the TopicRule resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the TopicRule resource produces the following output properties:
 
 
 
@@ -829,6 +827,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ARN of the topic rule
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -846,6 +852,14 @@ The following output properties are available:
     <dd>{{% md %}}The ARN of the topic rule
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -861,6 +875,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ARN of the topic rule
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -878,6 +900,14 @@ The following output properties are available:
     <dd>{{% md %}}The ARN of the topic rule
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -887,8 +917,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing TopicRule Resource
+## Look up an Existing TopicRule Resource {#look-up}
 
 Get an existing TopicRule resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1615,7 +1644,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm</h4>
+
+<h4 id="topicrulecloudwatchalarm">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Alarm</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleCloudwatchAlarm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleCloudwatchAlarm">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1802,7 +1832,7 @@ The following state arguments are supported:
 
 
 
-<h4>Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric</h4>
+<h4 id="topicrulecloudwatchmetric">Topic<wbr>Rule<wbr>Cloudwatch<wbr>Metric</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleCloudwatchMetric">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleCloudwatchMetric">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2002,15 +2032,6 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
-        <span>metric_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The CloudWatch metric name.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>metric<wbr>Namespace</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2038,6 +2059,15 @@ The following state arguments are supported:
 
     <dt class="property-required"
             title="Required">
+        <span>metric_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The CloudWatch metric name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>role_<wbr>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2061,7 +2091,7 @@ The following state arguments are supported:
 
 
 
-<h4>Topic<wbr>Rule<wbr>Dynamodb</h4>
+<h4 id="topicruledynamodb">Topic<wbr>Rule<wbr>Dynamodb</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleDynamodb">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleDynamodb">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2428,7 +2458,7 @@ The following state arguments are supported:
 
 
 
-<h4>Topic<wbr>Rule<wbr>Elasticsearch</h4>
+<h4 id="topicruleelasticsearch">Topic<wbr>Rule<wbr>Elasticsearch</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleElasticsearch">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleElasticsearch">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2651,7 +2681,7 @@ The following state arguments are supported:
 
 
 
-<h4>Topic<wbr>Rule<wbr>Firehose</h4>
+<h4 id="topicrulefirehose">Topic<wbr>Rule<wbr>Firehose</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleFirehose">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleFirehose">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2802,7 +2832,7 @@ The following state arguments are supported:
 
 
 
-<h4>Topic<wbr>Rule<wbr>Kinesis</h4>
+<h4 id="topicrulekinesis">Topic<wbr>Rule<wbr>Kinesis</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleKinesis">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleKinesis">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2953,7 +2983,7 @@ The following state arguments are supported:
 
 
 
-<h4>Topic<wbr>Rule<wbr>Lambda</h4>
+<h4 id="topicrulelambda">Topic<wbr>Rule<wbr>Lambda</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleLambda">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleLambda">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3032,7 +3062,7 @@ The following state arguments are supported:
 
 
 
-<h4>Topic<wbr>Rule<wbr>Republish</h4>
+<h4 id="topicrulerepublish">Topic<wbr>Rule<wbr>Republish</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleRepublish">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleRepublish">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3147,7 +3177,7 @@ The following state arguments are supported:
 
 
 
-<h4>Topic<wbr>Rule<wbr>S3</h4>
+<h4 id="topicrules3">Topic<wbr>Rule<wbr>S3</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleS3">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleS3">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3298,7 +3328,7 @@ The following state arguments are supported:
 
 
 
-<h4>Topic<wbr>Rule<wbr>Sns</h4>
+<h4 id="topicrulesns">Topic<wbr>Rule<wbr>Sns</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleSns">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleSns">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3449,7 +3479,7 @@ The following state arguments are supported:
 
 
 
-<h4>Topic<wbr>Rule<wbr>Sqs</h4>
+<h4 id="topicrulesqs">Topic<wbr>Rule<wbr>Sqs</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TopicRuleSqs">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TopicRuleSqs">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3604,7 +3634,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

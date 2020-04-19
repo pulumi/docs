@@ -36,7 +36,7 @@ const exampleAmazonsesVerificationRecord = new aws.route53.Record("example_amazo
 
 
 
-## Create a DomainIdentity Resource
+## Create a DomainIdentity Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -126,7 +126,7 @@ const exampleAmazonsesVerificationRecord = new aws.route53.Record("example_amazo
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -203,7 +203,7 @@ const exampleAmazonsesVerificationRecord = new aws.route53.Record("example_amazo
 
 {{% /choosable %}}
 
-## DomainIdentity Resource Properties
+## DomainIdentity Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -284,9 +284,7 @@ The DomainIdentity resource accepts the following [input]({{< relref "/docs/intr
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the DomainIdentity resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the DomainIdentity resource produces the following output properties:
 
 
 
@@ -302,6 +300,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ARN of the domain identity.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -336,6 +342,14 @@ docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Verification<wbr>Token</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -364,6 +378,14 @@ docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
     </dt>
     <dd>{{% md %}}The ARN of the domain identity.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -398,6 +420,14 @@ docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>verification_<wbr>token</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -420,8 +450,7 @@ docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
 
 
 
-
-## Look up an Existing DomainIdentity Resource
+## Look up an Existing DomainIdentity Resource {#look-up}
 
 Get an existing DomainIdentity resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -711,7 +740,7 @@ docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/verify-domains.html).
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

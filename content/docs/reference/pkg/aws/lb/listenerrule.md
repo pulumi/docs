@@ -125,7 +125,7 @@ const admin = new aws.lb.ListenerRule("admin", {
 
 
 
-## Create a ListenerRule Resource
+## Create a ListenerRule Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -215,7 +215,7 @@ const admin = new aws.lb.ListenerRule("admin", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -292,7 +292,7 @@ const admin = new aws.lb.ListenerRule("admin", {
 
 {{% /choosable %}}
 
-## ListenerRule Resource Properties
+## ListenerRule Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -481,9 +481,7 @@ The ListenerRule resource accepts the following [input]({{< relref "/docs/intro/
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the ListenerRule resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the ListenerRule resource produces the following output properties:
 
 
 
@@ -499,6 +497,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ARN of the rule (matches `id`)
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -516,6 +522,14 @@ The following output properties are available:
     <dd>{{% md %}}The ARN of the rule (matches `id`)
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -531,6 +545,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ARN of the rule (matches `id`)
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -548,6 +570,14 @@ The following output properties are available:
     <dd>{{% md %}}The ARN of the rule (matches `id`)
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -557,8 +587,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing ListenerRule Resource
+## Look up an Existing ListenerRule Resource {#look-up}
 
 Get an existing ListenerRule resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -897,7 +926,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Listener<wbr>Rule<wbr>Action</h4>
+
+<h4 id="listenerruleaction">Listener<wbr>Rule<wbr>Action</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerRuleAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleAction">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1188,7 +1218,7 @@ The following state arguments are supported:
 
 
 
-<h4>Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Cognito</h4>
+<h4 id="listenerruleactionauthenticatecognito">Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Cognito</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerRuleActionAuthenticateCognito">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleActionAuthenticateCognito">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1519,7 +1549,7 @@ The following state arguments are supported:
 
 
 
-<h4>Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Oidc</h4>
+<h4 id="listenerruleactionauthenticateoidc">Listener<wbr>Rule<wbr>Action<wbr>Authenticate<wbr>Oidc</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerRuleActionAuthenticateOidc">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleActionAuthenticateOidc">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1958,7 +1988,7 @@ The following state arguments are supported:
 
 
 
-<h4>Listener<wbr>Rule<wbr>Action<wbr>Fixed<wbr>Response</h4>
+<h4 id="listenerruleactionfixedresponse">Listener<wbr>Rule<wbr>Action<wbr>Fixed<wbr>Response</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerRuleActionFixedResponse">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleActionFixedResponse">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2109,7 +2139,7 @@ The following state arguments are supported:
 
 
 
-<h4>Listener<wbr>Rule<wbr>Action<wbr>Redirect</h4>
+<h4 id="listenerruleactionredirect">Listener<wbr>Rule<wbr>Action<wbr>Redirect</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerRuleActionRedirect">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleActionRedirect">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2368,7 +2398,7 @@ The following state arguments are supported:
 
 
 
-<h4>Listener<wbr>Rule<wbr>Condition</h4>
+<h4 id="listenerrulecondition">Listener<wbr>Rule<wbr>Condition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerRuleCondition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleCondition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2699,7 +2729,7 @@ The following state arguments are supported:
 
 
 
-<h4>Listener<wbr>Rule<wbr>Condition<wbr>Host<wbr>Header</h4>
+<h4 id="listenerruleconditionhostheader">Listener<wbr>Rule<wbr>Condition<wbr>Host<wbr>Header</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerRuleConditionHostHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleConditionHostHeader">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2778,7 +2808,7 @@ The following state arguments are supported:
 
 
 
-<h4>Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Header</h4>
+<h4 id="listenerruleconditionhttpheader">Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Header</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerRuleConditionHttpHeader">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleConditionHttpHeader">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2893,7 +2923,7 @@ The following state arguments are supported:
 
 
 
-<h4>Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Request<wbr>Method</h4>
+<h4 id="listenerruleconditionhttprequestmethod">Listener<wbr>Rule<wbr>Condition<wbr>Http<wbr>Request<wbr>Method</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerRuleConditionHttpRequestMethod">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleConditionHttpRequestMethod">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2972,7 +3002,7 @@ The following state arguments are supported:
 
 
 
-<h4>Listener<wbr>Rule<wbr>Condition<wbr>Path<wbr>Pattern</h4>
+<h4 id="listenerruleconditionpathpattern">Listener<wbr>Rule<wbr>Condition<wbr>Path<wbr>Pattern</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerRuleConditionPathPattern">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleConditionPathPattern">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3051,7 +3081,7 @@ The following state arguments are supported:
 
 
 
-<h4>Listener<wbr>Rule<wbr>Condition<wbr>Query<wbr>String</h4>
+<h4 id="listenerruleconditionquerystring">Listener<wbr>Rule<wbr>Condition<wbr>Query<wbr>String</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerRuleConditionQueryString">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleConditionQueryString">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3166,7 +3196,7 @@ The following state arguments are supported:
 
 
 
-<h4>Listener<wbr>Rule<wbr>Condition<wbr>Source<wbr>Ip</h4>
+<h4 id="listenerruleconditionsourceip">Listener<wbr>Rule<wbr>Condition<wbr>Source<wbr>Ip</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerRuleConditionSourceIp">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerRuleConditionSourceIp">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3249,7 +3279,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

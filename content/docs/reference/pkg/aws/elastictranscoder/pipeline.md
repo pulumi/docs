@@ -38,7 +38,7 @@ const bar = new aws.elastictranscoder.Pipeline("bar", {
 
 
 
-## Create a Pipeline Resource
+## Create a Pipeline Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -128,7 +128,7 @@ const bar = new aws.elastictranscoder.Pipeline("bar", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -205,7 +205,7 @@ const bar = new aws.elastictranscoder.Pipeline("bar", {
 
 {{% /choosable %}}
 
-## Pipeline Resource Properties
+## Pipeline Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -610,9 +610,7 @@ The Pipeline resource accepts the following [input]({{< relref "/docs/intro/conc
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Pipeline resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Pipeline resource produces the following output properties:
 
 
 
@@ -627,6 +625,14 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -643,6 +649,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -657,6 +671,14 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -673,6 +695,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -682,8 +712,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Pipeline Resource
+## Look up an Existing Pipeline Resource {#look-up}
 
 Get an existing Pipeline resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1234,7 +1263,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Pipeline<wbr>Content<wbr>Config</h4>
+
+<h4 id="pipelinecontentconfig">Pipeline<wbr>Content<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineContentConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PipelineContentConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1349,7 +1379,7 @@ The following state arguments are supported:
 
 
 
-<h4>Pipeline<wbr>Content<wbr>Config<wbr>Permission</h4>
+<h4 id="pipelinecontentconfigpermission">Pipeline<wbr>Content<wbr>Config<wbr>Permission</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineContentConfigPermission">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PipelineContentConfigPermission">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1500,7 +1530,7 @@ The following state arguments are supported:
 
 
 
-<h4>Pipeline<wbr>Notifications</h4>
+<h4 id="pipelinenotifications">Pipeline<wbr>Notifications</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineNotifications">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PipelineNotifications">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1687,7 +1717,7 @@ The following state arguments are supported:
 
 
 
-<h4>Pipeline<wbr>Thumbnail<wbr>Config</h4>
+<h4 id="pipelinethumbnailconfig">Pipeline<wbr>Thumbnail<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineThumbnailConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PipelineThumbnailConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1802,7 +1832,7 @@ The following state arguments are supported:
 
 
 
-<h4>Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission</h4>
+<h4 id="pipelinethumbnailconfigpermission">Pipeline<wbr>Thumbnail<wbr>Config<wbr>Permission</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#PipelineThumbnailConfigPermission">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#PipelineThumbnailConfigPermission">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1957,7 +1987,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

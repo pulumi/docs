@@ -78,7 +78,7 @@ const example = pulumi.output(aws.pricing.getProduct({
 
 
 
-## Using GetProduct
+## Using GetProduct {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -216,7 +216,7 @@ The following arguments are supported:
 
 
 
-## GetProduct Result
+## GetProduct Result {#result}
 
 The following output properties are available:
 
@@ -395,7 +395,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Product<wbr>Filter</h4>
+
+<h4 id="getproductfilter">Get<wbr>Product<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetProductFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetProductFilter">output</a> API doc for this type.
 {{% /choosable %}}

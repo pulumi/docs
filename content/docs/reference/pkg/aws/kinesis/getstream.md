@@ -31,7 +31,7 @@ const stream = pulumi.output(aws.kinesis.getStream({
 
 
 
-## Using GetStream
+## Using GetStream {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -169,7 +169,7 @@ The following arguments are supported:
 
 
 
-## GetStream Result
+## GetStream Result {#result}
 
 The following output properties are available:
 

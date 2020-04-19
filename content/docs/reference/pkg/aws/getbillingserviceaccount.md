@@ -61,7 +61,7 @@ const billingLogs = new aws.s3.Bucket("billing_logs", {
 
 
 
-## Using GetBillingServiceAccount
+## Using GetBillingServiceAccount {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -90,7 +90,7 @@ const billingLogs = new aws.s3.Bucket("billing_logs", {
 
 
 
-## GetBillingServiceAccount Result
+## GetBillingServiceAccount Result {#result}
 
 The following output properties are available:
 

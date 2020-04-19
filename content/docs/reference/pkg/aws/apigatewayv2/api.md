@@ -23,8 +23,7 @@ Manages an Amazon API Gateway Version 2 API.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = new aws.Apigatewayv2Api("example", {
-    name: "example-websocket-api",
+const example = new aws.apigatewayv2.Api("example", {
     protocolType: "WEBSOCKET",
     routeSelectionExpression: "$request.body.action",
 });
@@ -38,8 +37,7 @@ const example = new aws.Apigatewayv2Api("example", {
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = new aws.Apigatewayv2Api("example", {
-    name: "example-http-api",
+const example = new aws.apigatewayv2.Api("example", {
     protocolType: "HTTP",
 });
 ```
@@ -49,7 +47,7 @@ const example = new aws.Apigatewayv2Api("example", {
 
 
 
-## Create a Api Resource
+## Create a Api Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -139,7 +137,7 @@ const example = new aws.Apigatewayv2Api("example", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -216,7 +214,7 @@ const example = new aws.Apigatewayv2Api("example", {
 
 {{% /choosable %}}
 
-## Api Resource Properties
+## Api Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -525,9 +523,7 @@ Defaults to `$request.method $request.path`.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Api resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Api resource produces the following output properties:
 
 
 
@@ -563,6 +559,14 @@ The following output properties are available:
 or in an [`aws.iam.Policy`](https://www.terraform.io/docs/providers/aws/r/iam_policy.html) to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -600,6 +604,14 @@ or in an [`aws.iam.Policy`](https://www.terraform.io/docs/providers/aws/r/iam_po
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -635,6 +647,14 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 or in an [`aws.iam.Policy`](https://www.terraform.io/docs/providers/aws/r/iam_policy.html) to authorize access to the [`@connections` API](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html).
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -672,6 +692,14 @@ or in an [`aws.iam.Policy`](https://www.terraform.io/docs/providers/aws/r/iam_po
 See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html) for details.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -681,8 +709,7 @@ See the [Amazon API Gateway Developer Guide](https://docs.aws.amazon.com/apigate
 
 
 
-
-## Look up an Existing Api Resource
+## Look up an Existing Api Resource {#look-up}
 
 Get an existing Api resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1220,7 +1247,7 @@ Defaults to `$request.method $request.path`.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

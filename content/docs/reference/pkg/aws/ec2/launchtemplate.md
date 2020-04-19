@@ -16,7 +16,7 @@ Provides an EC2 launch template resource. Can be used to create instances or aut
 
 
 
-## Create a LaunchTemplate Resource
+## Create a LaunchTemplate Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -106,7 +106,7 @@ Provides an EC2 launch template resource. Can be used to create instances or aut
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -183,7 +183,7 @@ Provides an EC2 launch template resource. Can be used to create instances or aut
 
 {{% /choosable %}}
 
-## LaunchTemplate Resource Properties
+## LaunchTemplate Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -1344,9 +1344,7 @@ Interfaces below for more details.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the LaunchTemplate resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the LaunchTemplate resource produces the following output properties:
 
 
 
@@ -1371,6 +1369,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The default version of the launch template.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1408,6 +1414,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Latest<wbr>Version</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
@@ -1439,6 +1453,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The default version of the launch template.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1476,6 +1498,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>latest_<wbr>version</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1492,8 +1522,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing LaunchTemplate Resource
+## Look up an Existing LaunchTemplate Resource {#look-up}
 
 Get an existing LaunchTemplate resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -2876,7 +2905,8 @@ Interfaces below for more details.
 
 ## Supporting Types
 
-<h4>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping</h4>
+
+<h4 id="launchtemplateblockdevicemapping">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateBlockDeviceMapping">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateBlockDeviceMapping">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3071,7 +3101,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 
 
 
-<h4>Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs</h4>
+<h4 id="launchtemplateblockdevicemappingebs">Launch<wbr>Template<wbr>Block<wbr>Device<wbr>Mapping<wbr>Ebs</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateBlockDeviceMappingEbs">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateBlockDeviceMappingEbs">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3359,20 +3389,20 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The size of the volume in gigabytes.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>volume<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, or `"io1"`. (Default: `"standard"`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>volume_<wbr>size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The size of the volume in gigabytes.
 {{% /md %}}</dd>
 
 </dl>
@@ -3382,7 +3412,7 @@ This must be set with a `volume_type` of `"io1"`.
 
 
 
-<h4>Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification</h4>
+<h4 id="launchtemplatecapacityreservationspecification">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateCapacityReservationSpecification">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateCapacityReservationSpecification">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3497,7 +3527,7 @@ This must be set with a `volume_type` of `"io1"`.
 
 
 
-<h4>Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target</h4>
+<h4 id="launchtemplatecapacityreservationspecificationcapacityreservationtarget">Launch<wbr>Template<wbr>Capacity<wbr>Reservation<wbr>Specification<wbr>Capacity<wbr>Reservation<wbr>Target</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateCapacityReservationSpecificationCapacityReservationTarget">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3576,7 +3606,7 @@ This must be set with a `volume_type` of `"io1"`.
 
 
 
-<h4>Launch<wbr>Template<wbr>Cpu<wbr>Options</h4>
+<h4 id="launchtemplatecpuoptions">Launch<wbr>Template<wbr>Cpu<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateCpuOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateCpuOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3695,7 +3725,7 @@ Otherwise, specify the default value of 2.
 
 
 
-<h4>Launch<wbr>Template<wbr>Credit<wbr>Specification</h4>
+<h4 id="launchtemplatecreditspecification">Launch<wbr>Template<wbr>Credit<wbr>Specification</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateCreditSpecification">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateCreditSpecification">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3774,7 +3804,7 @@ Otherwise, specify the default value of 2.
 
 
 
-<h4>Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification</h4>
+<h4 id="launchtemplateelasticgpuspecification">Launch<wbr>Template<wbr>Elastic<wbr>Gpu<wbr>Specification</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateElasticGpuSpecification">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateElasticGpuSpecification">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3853,7 +3883,7 @@ Otherwise, specify the default value of 2.
 
 
 
-<h4>Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator</h4>
+<h4 id="launchtemplateelasticinferenceaccelerator">Launch<wbr>Template<wbr>Elastic<wbr>Inference<wbr>Accelerator</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateElasticInferenceAccelerator">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateElasticInferenceAccelerator">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3932,7 +3962,7 @@ Otherwise, specify the default value of 2.
 
 
 
-<h4>Launch<wbr>Template<wbr>Hibernation<wbr>Options</h4>
+<h4 id="launchtemplatehibernationoptions">Launch<wbr>Template<wbr>Hibernation<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateHibernationOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateHibernationOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4011,7 +4041,7 @@ Otherwise, specify the default value of 2.
 
 
 
-<h4>Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile</h4>
+<h4 id="launchtemplateiaminstanceprofile">Launch<wbr>Template<wbr>Iam<wbr>Instance<wbr>Profile</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateIamInstanceProfile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateIamInstanceProfile">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4126,7 +4156,7 @@ Otherwise, specify the default value of 2.
 
 
 
-<h4>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options</h4>
+<h4 id="launchtemplateinstancemarketoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateInstanceMarketOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateInstanceMarketOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4241,7 +4271,7 @@ Otherwise, specify the default value of 2.
 
 
 
-<h4>Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Spot<wbr>Options</h4>
+<h4 id="launchtemplateinstancemarketoptionsspotoptions">Launch<wbr>Template<wbr>Instance<wbr>Market<wbr>Options<wbr>Spot<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateInstanceMarketOptionsSpotOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateInstanceMarketOptionsSpotOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4468,7 +4498,7 @@ Otherwise, specify the default value of 2.
 
 
 
-<h4>Launch<wbr>Template<wbr>License<wbr>Specification</h4>
+<h4 id="launchtemplatelicensespecification">Launch<wbr>Template<wbr>License<wbr>Specification</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateLicenseSpecification">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateLicenseSpecification">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4547,7 +4577,7 @@ Otherwise, specify the default value of 2.
 
 
 
-<h4>Launch<wbr>Template<wbr>Metadata<wbr>Options</h4>
+<h4 id="launchtemplatemetadataoptions">Launch<wbr>Template<wbr>Metadata<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateMetadataOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateMetadataOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4698,7 +4728,7 @@ Otherwise, specify the default value of 2.
 
 
 
-<h4>Launch<wbr>Template<wbr>Monitoring</h4>
+<h4 id="launchtemplatemonitoring">Launch<wbr>Template<wbr>Monitoring</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateMonitoring">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateMonitoring">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4777,7 +4807,7 @@ Otherwise, specify the default value of 2.
 
 
 
-<h4>Launch<wbr>Template<wbr>Network<wbr>Interface</h4>
+<h4 id="launchtemplatenetworkinterface">Launch<wbr>Template<wbr>Network<wbr>Interface</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateNetworkInterface">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateNetworkInterface">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5252,7 +5282,7 @@ Otherwise, specify the default value of 2.
 
 
 
-<h4>Launch<wbr>Template<wbr>Placement</h4>
+<h4 id="launchtemplateplacement">Launch<wbr>Template<wbr>Placement</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplatePlacement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplatePlacement">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5511,7 +5541,7 @@ Otherwise, specify the default value of 2.
 
 
 
-<h4>Launch<wbr>Template<wbr>Tag<wbr>Specification</h4>
+<h4 id="launchtemplatetagspecification">Launch<wbr>Template<wbr>Tag<wbr>Specification</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LaunchTemplateTagSpecification">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LaunchTemplateTagSpecification">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5630,7 +5660,7 @@ Otherwise, specify the default value of 2.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

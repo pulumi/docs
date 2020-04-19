@@ -80,7 +80,7 @@ const example = new aws.rds.Instance("example", {
 
 
 
-## Create a Instance Resource
+## Create a Instance Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -170,7 +170,7 @@ const example = new aws.rds.Instance("example", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -247,7 +247,7 @@ const example = new aws.rds.Instance("example", {
 
 {{% /choosable %}}
 
-## Instance Resource Properties
+## Instance Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -2440,9 +2440,7 @@ associate.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Instance resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Instance resource produces the following output properties:
 
 
 
@@ -2486,6 +2484,14 @@ The following output properties are available:
     <dd>{{% md %}}The canonical hosted zone ID of the DB instance (to be used
 in a Route 53 Alias record).
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2559,6 +2565,14 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Replicas</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
@@ -2626,6 +2640,14 @@ in a Route 53 Alias record).
     <dd>{{% md %}}The canonical hosted zone ID of the DB instance (to be used
 in a Route 53 Alias record).
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2699,6 +2721,14 @@ in a Route 53 Alias record).
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>replicas</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -2732,8 +2762,7 @@ in a Route 53 Alias record).
 
 
 
-
-## Look up an Existing Instance Resource
+## Look up an Existing Instance Resource {#look-up}
 
 Get an existing Instance resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -5292,7 +5321,8 @@ associate.
 
 ## Supporting Types
 
-<h4>Instance<wbr>S3Import</h4>
+
+<h4 id="instances3import">Instance<wbr>S3Import</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceS3Import">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceS3Import">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5519,7 +5549,7 @@ associate.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

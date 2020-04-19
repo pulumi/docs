@@ -31,7 +31,7 @@ const example = new aws.ebs.Volume("example", {
 
 
 
-## Using GetDefaultKmsKey
+## Using GetDefaultKmsKey {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -60,7 +60,7 @@ const example = new aws.ebs.Volume("example", {
 
 
 
-## GetDefaultKmsKey Result
+## GetDefaultKmsKey Result {#result}
 
 The following output properties are available:
 

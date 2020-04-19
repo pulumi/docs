@@ -39,7 +39,7 @@ const test = pulumi.output(aws.lb.getTargetGroup({
 
 
 
-## Using GetTargetGroup
+## Using GetTargetGroup {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -209,7 +209,7 @@ The following arguments are supported:
 
 
 
-## GetTargetGroup Result
+## GetTargetGroup Result {#result}
 
 The following output properties are available:
 
@@ -736,7 +736,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Target<wbr>Group<wbr>Health<wbr>Check</h4>
+
+<h4 id="gettargetgrouphealthcheck">Get<wbr>Target<wbr>Group<wbr>Health<wbr>Check</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTargetGroupHealthCheck">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1067,7 +1068,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Target<wbr>Group<wbr>Stickiness</h4>
+<h4 id="gettargetgroupstickiness">Get<wbr>Target<wbr>Group<wbr>Stickiness</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTargetGroupStickiness">output</a> API doc for this type.
 {{% /choosable %}}

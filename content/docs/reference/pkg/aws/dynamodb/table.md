@@ -69,7 +69,7 @@ const basic_dynamodb_table = new aws.dynamodb.Table("basic-dynamodb-table", {
 
 
 
-## Create a Table Resource
+## Create a Table Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -159,7 +159,7 @@ const basic_dynamodb_table = new aws.dynamodb.Table("basic-dynamodb-table", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -236,7 +236,7 @@ const basic_dynamodb_table = new aws.dynamodb.Table("basic-dynamodb-table", {
 
 {{% /choosable %}}
 
-## Table Resource Properties
+## Table Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -841,9 +841,7 @@ definition after you have created the resource.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Table resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Table resource produces the following output properties:
 
 
 
@@ -859,6 +857,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The arn of the table
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -899,6 +905,14 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Stream<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -933,6 +947,14 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
     </dt>
     <dd>{{% md %}}The arn of the table
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -973,6 +995,14 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>stream_<wbr>arn</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1001,8 +1031,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 
 
 
-
-## Look up an Existing Table Resource
+## Look up an Existing Table Resource {#look-up}
 
 Get an existing Table resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1841,7 +1870,8 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 
 ## Supporting Types
 
-<h4>Table<wbr>Attribute</h4>
+
+<h4 id="tableattribute">Table<wbr>Attribute</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TableAttribute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TableAttribute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1956,7 +1986,7 @@ It can be used for creating CloudWatch Alarms. Only available when `stream_enabl
 
 
 
-<h4>Table<wbr>Global<wbr>Secondary<wbr>Index</h4>
+<h4 id="tableglobalsecondaryindex">Table<wbr>Global<wbr>Secondary<wbr>Index</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TableGlobalSecondaryIndex">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TableGlobalSecondaryIndex">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2279,7 +2309,7 @@ do not need to be defined as attributes on the table.
 
 
 
-<h4>Table<wbr>Local<wbr>Secondary<wbr>Index</h4>
+<h4 id="tablelocalsecondaryindex">Table<wbr>Local<wbr>Secondary<wbr>Index</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TableLocalSecondaryIndex">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TableLocalSecondaryIndex">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2490,7 +2520,7 @@ do not need to be defined as attributes on the table.
 
 
 
-<h4>Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</h4>
+<h4 id="tablepointintimerecovery">Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TablePointInTimeRecovery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TablePointInTimeRecovery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2569,7 +2599,7 @@ do not need to be defined as attributes on the table.
 
 
 
-<h4>Table<wbr>Server<wbr>Side<wbr>Encryption</h4>
+<h4 id="tableserversideencryption">Table<wbr>Server<wbr>Side<wbr>Encryption</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TableServerSideEncryption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TableServerSideEncryption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2688,7 +2718,7 @@ This attribute should only be specified if the key is different from the default
 
 
 
-<h4>Table<wbr>Ttl</h4>
+<h4 id="tablettl">Table<wbr>Ttl</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#TableTtl">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#TableTtl">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2807,7 +2837,7 @@ This attribute should only be specified if the key is different from the default
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

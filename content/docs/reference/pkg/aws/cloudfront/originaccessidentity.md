@@ -89,7 +89,7 @@ const example = new aws.s3.BucketPolicy("example", {
 
 
 
-## Create a OriginAccessIdentity Resource
+## Create a OriginAccessIdentity Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -179,7 +179,7 @@ const example = new aws.s3.BucketPolicy("example", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -256,7 +256,7 @@ const example = new aws.s3.BucketPolicy("example", {
 
 {{% /choosable %}}
 
-## OriginAccessIdentity Resource Properties
+## OriginAccessIdentity Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -337,9 +337,7 @@ The OriginAccessIdentity resource accepts the following [input]({{< relref "/doc
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the OriginAccessIdentity resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the OriginAccessIdentity resource produces the following output properties:
 
 
 
@@ -387,6 +385,14 @@ For example: `E2QWRUHAPOMQZL`.
 Example: `arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity
 E2QWRUHAPOMQZL`.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -449,6 +455,14 @@ E2QWRUHAPOMQZL`.
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>S3Canonical<wbr>User<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -505,6 +519,14 @@ For example: `E2QWRUHAPOMQZL`.
 Example: `arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity
 E2QWRUHAPOMQZL`.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -567,6 +589,14 @@ E2QWRUHAPOMQZL`.
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>s3_<wbr>canonical_<wbr>user_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -585,8 +615,7 @@ permission to an object in Amazon S3.
 
 
 
-
-## Look up an Existing OriginAccessIdentity Resource
+## Look up an Existing OriginAccessIdentity Resource {#look-up}
 
 Get an existing OriginAccessIdentity resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -988,7 +1017,7 @@ permission to an object in Amazon S3.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

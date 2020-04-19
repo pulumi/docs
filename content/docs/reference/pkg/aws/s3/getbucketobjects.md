@@ -39,7 +39,7 @@ for (let i = 0; i < myObjects.apply(myObjects => myObjects.keys.length); i++) {
 
 
 
-## Using GetBucketObjects
+## Using GetBucketObjects {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -357,7 +357,7 @@ The following arguments are supported:
 
 
 
-## GetBucketObjects Result
+## GetBucketObjects Result {#result}
 
 The following output properties are available:
 

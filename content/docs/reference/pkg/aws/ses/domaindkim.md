@@ -44,7 +44,7 @@ for (let i = 0; i < 3; i++) {
 
 
 
-## Create a DomainDkim Resource
+## Create a DomainDkim Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -134,7 +134,7 @@ for (let i = 0; i < 3; i++) {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -211,7 +211,7 @@ for (let i = 0; i < 3; i++) {
 
 {{% /choosable %}}
 
-## DomainDkim Resource Properties
+## DomainDkim Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -292,9 +292,7 @@ The DomainDkim resource accepts the following [input]({{< relref "/docs/intro/co
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the DomainDkim resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the DomainDkim resource produces the following output properties:
 
 
 
@@ -315,6 +313,14 @@ when the domain is hosted in Route 53 and managed by this provider.
 Find out more about verifying domains in Amazon SES
 in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim-dns-records.html).
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -337,6 +343,14 @@ Find out more about verifying domains in Amazon SES
 in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim-dns-records.html).
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -357,6 +371,14 @@ when the domain is hosted in Route 53 and managed by this provider.
 Find out more about verifying domains in Amazon SES
 in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim-dns-records.html).
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -379,6 +401,14 @@ Find out more about verifying domains in Amazon SES
 in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-dkim-dns-records.html).
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -388,8 +418,7 @@ in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-
 
 
 
-
-## Look up an Existing DomainDkim Resource
+## Look up an Existing DomainDkim Resource {#look-up}
 
 Get an existing DomainDkim resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -639,7 +668,7 @@ in the [AWS SES docs](http://docs.aws.amazon.com/ses/latest/DeveloperGuide/easy-
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

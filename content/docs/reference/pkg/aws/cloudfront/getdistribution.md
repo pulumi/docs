@@ -16,7 +16,7 @@ Use this data source to retrieve information about a CloudFront distribution.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const test = pulumi.output(aws.CloudfrontDistribution({
+const test = pulumi.output(aws.cloudfront.getDistribution({
     id: "EDFDVBD632BHDS5",
 }, { async: true }));
 ```
@@ -28,7 +28,7 @@ const test = pulumi.output(aws.CloudfrontDistribution({
 
 
 
-## Using GetDistribution
+## Using GetDistribution {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -162,7 +162,7 @@ The following arguments are supported:
 
 
 
-## GetDistribution Result
+## GetDistribution Result {#result}
 
 The following output properties are available:
 

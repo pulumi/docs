@@ -37,7 +37,7 @@ const www = new aws.route53.Record("www", {
 
 
 
-## Using GetHostedZoneId
+## Using GetHostedZoneId {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -143,7 +143,7 @@ Defaults to the region from the AWS provider configuration.
 
 
 
-## GetHostedZoneId Result
+## GetHostedZoneId Result {#result}
 
 The following output properties are available:
 

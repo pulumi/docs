@@ -48,7 +48,7 @@ const subnet = new aws.ec2.SecurityGroup("subnet", {
 
 
 
-## Using GetSubnet
+## Using GetSubnet {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -486,7 +486,7 @@ a pair on the desired subnet.
 
 
 
-## GetSubnet Result
+## GetSubnet Result {#result}
 
 The following output properties are available:
 
@@ -1017,7 +1017,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Subnet<wbr>Filter</h4>
+
+<h4 id="getsubnetfilter">Get<wbr>Subnet<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSubnetFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSubnetFilter">output</a> API doc for this type.
 {{% /choosable %}}

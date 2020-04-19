@@ -35,7 +35,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
 
 
 
-## Create a Accelerator Resource
+## Create a Accelerator Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -125,7 +125,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -202,7 +202,7 @@ const example = new aws.globalaccelerator.Accelerator("example", {
 
 {{% /choosable %}}
 
-## Accelerator Resource Properties
+## Accelerator Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -427,9 +427,7 @@ The Accelerator resource accepts the following [input]({{< relref "/docs/intro/c
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Accelerator resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Accelerator resource produces the following output properties:
 
 
 
@@ -456,6 +454,14 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -495,6 +501,14 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Ip<wbr>Sets</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#acceleratoripset">[]Accelerator<wbr>Ip<wbr>Set</a></span>
@@ -528,6 +542,14 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -567,6 +589,14 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>ip_<wbr>sets</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#acceleratoripset">List[Accelerator<wbr>Ip<wbr>Set]</a></span>
@@ -583,8 +613,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
 
 
-
-## Look up an Existing Accelerator Resource
+## Look up an Existing Accelerator Resource {#look-up}
 
 Get an existing Accelerator resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1039,7 +1068,8 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
 ## Supporting Types
 
-<h4>Accelerator<wbr>Attributes</h4>
+
+<h4 id="acceleratorattributes">Accelerator<wbr>Attributes</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#AcceleratorAttributes">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AcceleratorAttributes">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1190,7 +1220,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
 
 
-<h4>Accelerator<wbr>Ip<wbr>Set</h4>
+<h4 id="acceleratoripset">Accelerator<wbr>Ip<wbr>Set</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#AcceleratorIpSet">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1282,20 +1312,20 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>ip_<wbr>addresses</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of IP addresses in the IP address set.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>ip<wbr>Family</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The types of IP addresses included in this IP set.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>ip_<wbr>addresses</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}A list of IP addresses in the IP address set.
 {{% /md %}}</dd>
 
 </dl>
@@ -1309,7 +1339,7 @@ is simply an alias for the zone ID `Z2BJ6XQ5FK7U4H`.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

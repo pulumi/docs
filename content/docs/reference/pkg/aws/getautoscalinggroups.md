@@ -48,7 +48,7 @@ const slackNotifications = new aws.autoscaling.Notification("slack_notifications
 
 
 
-## Using GetAutoscalingGroups
+## Using GetAutoscalingGroups {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -150,7 +150,7 @@ The following arguments are supported:
 
 
 
-## GetAutoscalingGroups Result
+## GetAutoscalingGroups Result {#result}
 
 The following output properties are available:
 
@@ -333,7 +333,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Autoscaling<wbr>Groups<wbr>Filter</h4>
+
+<h4 id="getautoscalinggroupsfilter">Get<wbr>Autoscaling<wbr>Groups<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetAutoscalingGroupsFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAutoscalingGroupsFilter">output</a> API doc for this type.
 {{% /choosable %}}

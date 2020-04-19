@@ -44,7 +44,7 @@ const auroraClusterInstance = new aws.rds.ClusterInstance("aurora", {
 
 
 
-## Using GetClusterSnapshot
+## Using GetClusterSnapshot {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -382,7 +382,7 @@ included in the returned results by default. Possible values are, `automated`, `
 
 
 
-## GetClusterSnapshot Result
+## GetClusterSnapshot Result {#result}
 
 The following output properties are available:
 

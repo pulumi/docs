@@ -31,7 +31,7 @@ const existing = pulumi.output(aws.lambda.getLayerVersion({
 
 
 
-## Using GetLayerVersion
+## Using GetLayerVersion {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -205,7 +205,7 @@ The following arguments are supported:
 
 
 
-## GetLayerVersion Result
+## GetLayerVersion Result {#result}
 
 The following output properties are available:
 

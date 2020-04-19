@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="application" title="Application"><span class="symbol resource"></span>Application</a></li>
     <li><a href="applicationversion" title="ApplicationVersion"><span class="symbol resource"></span>ApplicationVersion</a></li>
@@ -16,14 +16,14 @@ block_external_search_index: true
     <li><a href="environment" title="Environment"><span class="symbol resource"></span>Environment</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getapplication" title="GetApplication"><span class="symbol function"></span>GetApplication</a></li>
     <li><a href="gethostedzone" title="GetHostedZone"><span class="symbol function"></span>GetHostedZone</a></li>
     <li><a href="getsolutionstack" title="GetSolutionStack"><span class="symbol function"></span>GetSolutionStack</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

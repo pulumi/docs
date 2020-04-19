@@ -30,7 +30,7 @@ const example = pulumi.output(aws.sqs.getQueue({
 
 
 
-## Using GetQueue
+## Using GetQueue {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -168,7 +168,7 @@ The following arguments are supported:
 
 
 
-## GetQueue Result
+## GetQueue Result {#result}
 
 The following output properties are available:
 

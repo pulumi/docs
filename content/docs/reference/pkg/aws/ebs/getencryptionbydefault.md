@@ -26,7 +26,7 @@ const current = pulumi.output(aws.ebs.getEncryptionByDefault({ async: true }));
 
 
 
-## Using GetEncryptionByDefault
+## Using GetEncryptionByDefault {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -55,7 +55,7 @@ const current = pulumi.output(aws.ebs.getEncryptionByDefault({ async: true }));
 
 
 
-## GetEncryptionByDefault Result
+## GetEncryptionByDefault Result {#result}
 
 The following output properties are available:
 

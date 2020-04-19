@@ -164,7 +164,7 @@ const exampleRecord = new aws.route53.Record("example", {
 
 
 
-## Create a DomainName Resource
+## Create a DomainName Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -254,7 +254,7 @@ const exampleRecord = new aws.route53.Record("example", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -331,7 +331,7 @@ const exampleRecord = new aws.route53.Record("example", {
 
 {{% /choosable %}}
 
-## DomainName Resource Properties
+## DomainName Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -808,9 +808,7 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the DomainName resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the DomainName resource produces the following output properties:
 
 
 
@@ -855,6 +853,14 @@ the distribution that implements this domain name mapping.
     <dd>{{% md %}}For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`)
 that can be used to create a Route53 alias record for the distribution.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -921,6 +927,14 @@ that can be used to create a Route53 alias record for the distribution.
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Regional<wbr>Domain<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -981,6 +995,14 @@ the distribution that implements this domain name mapping.
     <dd>{{% md %}}For convenience, the hosted zone ID (`Z2FDTNDATAQYW2`)
 that can be used to create a Route53 alias record for the distribution.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1047,6 +1069,14 @@ that can be used to create a Route53 alias record for the distribution.
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>regional_<wbr>domain_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1072,8 +1102,7 @@ that can be used to create a Route53 alias record for the distribution.
 
 
 
-
-## Look up an Existing DomainName Resource
+## Look up an Existing DomainName Resource {#look-up}
 
 Get an existing DomainName resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1888,7 +1917,8 @@ that can be used to create a Route53 alias record for the distribution.
 
 ## Supporting Types
 
-<h4>Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</h4>
+
+<h4 id="domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainNameEndpointConfiguration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainNameEndpointConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1971,7 +2001,7 @@ that can be used to create a Route53 alias record for the distribution.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

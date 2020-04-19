@@ -90,7 +90,7 @@ const foo = new aws.ec2.SpotFleetRequest("foo", {
 
 
 
-## Create a SpotFleetRequest Resource
+## Create a SpotFleetRequest Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -180,7 +180,7 @@ const foo = new aws.ec2.SpotFleetRequest("foo", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -257,7 +257,7 @@ const foo = new aws.ec2.SpotFleetRequest("foo", {
 
 {{% /choosable %}}
 
-## SpotFleetRequest Resource Properties
+## SpotFleetRequest Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -998,9 +998,7 @@ timeout of 10m is reached.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the SpotFleetRequest resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the SpotFleetRequest resource produces the following output properties:
 
 
 
@@ -1015,6 +1013,14 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1042,6 +1048,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Spot<wbr>Request<wbr>State</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1063,6 +1077,14 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1090,6 +1112,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>spot_<wbr>request_<wbr>state</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1106,8 +1136,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing SpotFleetRequest Resource
+## Look up an Existing SpotFleetRequest Resource {#look-up}
 
 Get an existing SpotFleetRequest resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -2030,7 +2059,8 @@ timeout of 10m is reached.
 
 ## Supporting Types
 
-<h4>Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification</h4>
+
+<h4 id="spotfleetrequestlaunchspecification">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotFleetRequestLaunchSpecification">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotFleetRequestLaunchSpecification">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2610,7 +2640,7 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam_<wbr>instance_<wbr>profile</span>
+        <span>iam<wbr>Instance<wbr>Profile<wbr>Arn</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2618,7 +2648,7 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>iam<wbr>Instance<wbr>Profile<wbr>Arn</span>
+        <span>iam_<wbr>instance_<wbr>profile</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2721,7 +2751,7 @@ timeout of 10m is reached.
 
 
 
-<h4>Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ebs<wbr>Block<wbr>Device</h4>
+<h4 id="spotfleetrequestlaunchspecificationebsblockdevice">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ebs<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotFleetRequestLaunchSpecificationEbsBlockDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotFleetRequestLaunchSpecificationEbsBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2999,17 +3029,17 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume_<wbr>size</span>
+        <span>volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Type</span>
+        <span>volume_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3020,7 +3050,7 @@ timeout of 10m is reached.
 
 
 
-<h4>Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ephemeral<wbr>Block<wbr>Device</h4>
+<h4 id="spotfleetrequestlaunchspecificationephemeralblockdevice">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Ephemeral<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotFleetRequestLaunchSpecificationEphemeralBlockDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotFleetRequestLaunchSpecificationEphemeralBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3127,7 +3157,7 @@ timeout of 10m is reached.
 
 
 
-<h4>Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Root<wbr>Block<wbr>Device</h4>
+<h4 id="spotfleetrequestlaunchspecificationrootblockdevice">Spot<wbr>Fleet<wbr>Request<wbr>Launch<wbr>Specification<wbr>Root<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotFleetRequestLaunchSpecificationRootBlockDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotFleetRequestLaunchSpecificationRootBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3341,17 +3371,17 @@ timeout of 10m is reached.
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume_<wbr>size</span>
+        <span>volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Type</span>
+        <span>volume_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3366,7 +3396,7 @@ timeout of 10m is reached.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

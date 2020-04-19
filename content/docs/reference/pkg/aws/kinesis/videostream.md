@@ -21,14 +21,13 @@ For more details, see the [Amazon Kinesis Documentation][1].
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const defaultKinesisVideoStream = new aws.KinesisVideoStream("default", {
+const defaultVideoStream = new aws.kinesis.VideoStream("default", {
     dataRetentionInHours: 1,
     deviceName: "kinesis-video-device-name",
     mediaType: "video/h264",
-    name: "kinesis-video-stream",
-    tags: [{
+    tags: {
         Name: "kinesis-video-stream",
-    }],
+    },
 });
 ```
 
@@ -37,7 +36,7 @@ const defaultKinesisVideoStream = new aws.KinesisVideoStream("default", {
 
 
 
-## Create a VideoStream Resource
+## Create a VideoStream Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -127,7 +126,7 @@ const defaultKinesisVideoStream = new aws.KinesisVideoStream("default", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -204,7 +203,7 @@ const defaultKinesisVideoStream = new aws.KinesisVideoStream("default", {
 
 {{% /choosable %}}
 
-## VideoStream Resource Properties
+## VideoStream Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -469,9 +468,7 @@ AWS account and region the Stream is created in.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the VideoStream resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the VideoStream resource produces the following output properties:
 
 
 
@@ -496,6 +493,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A time stamp that indicates when the stream was created.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -533,6 +538,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Version</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -564,6 +577,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A time stamp that indicates when the stream was created.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -601,6 +622,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>version</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -617,8 +646,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing VideoStream Resource
+## Look up an Existing VideoStream Resource {#look-up}
 
 Get an existing VideoStream resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1104,7 +1132,7 @@ AWS account and region the Stream is created in.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

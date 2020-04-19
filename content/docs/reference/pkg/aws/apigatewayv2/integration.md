@@ -22,7 +22,7 @@ More information can be found in the [Amazon API Gateway Developer Guide](https:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = new aws.Apigatewayv2Integration("example", {
+const example = new aws.apigatewayv2.Integration("example", {
     apiId: aws_apigatewayv2_api_example.id,
     integrationType: "MOCK",
 });
@@ -42,7 +42,7 @@ const exampleFunction = new aws.lambda.Function("example", {
     role: aws_iam_role_example.arn,
     runtime: "nodejs10.x",
 });
-const exampleApigatewayv2Integration = new aws.Apigatewayv2Integration("example", {
+const exampleIntegration = new aws.apigatewayv2.Integration("example", {
     apiId: aws_apigatewayv2_api_example.id,
     connectionType: "INTERNET",
     contentHandlingStrategy: "CONVERT_TO_TEXT",
@@ -59,7 +59,7 @@ const exampleApigatewayv2Integration = new aws.Apigatewayv2Integration("example"
 
 
 
-## Create a Integration Resource
+## Create a Integration Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -149,7 +149,7 @@ const exampleApigatewayv2Integration = new aws.Apigatewayv2Integration("example"
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -226,7 +226,7 @@ const exampleApigatewayv2Integration = new aws.Apigatewayv2Integration("example"
 
 {{% /choosable %}}
 
-## Integration Resource Properties
+## Integration Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -787,15 +787,21 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Integration resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Integration resource produces the following output properties:
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -815,6 +821,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Integration<wbr>Response<wbr>Selection<wbr>Expression</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -828,6 +842,14 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -847,6 +869,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>integration_<wbr>response_<wbr>selection_<wbr>expression</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -863,8 +893,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Integration Resource
+## Look up an Existing Integration Resource {#look-up}
 
 Get an existing Integration resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1574,7 +1603,7 @@ Valid values: `WHEN_NO_MATCH`, `WHEN_NO_TEMPLATES`, `NEVER`. Default is `WHEN_NO
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

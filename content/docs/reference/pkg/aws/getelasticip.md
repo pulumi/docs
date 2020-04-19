@@ -74,7 +74,7 @@ const byTags = pulumi.output(aws.getElasticIp({
 
 
 
-## Using GetElasticIp
+## Using GetElasticIp {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -284,7 +284,7 @@ The following arguments are supported:
 
 
 
-## GetElasticIp Result
+## GetElasticIp Result {#result}
 
 The following output properties are available:
 
@@ -791,7 +791,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Elastic<wbr>Ip<wbr>Filter</h4>
+
+<h4 id="getelasticipfilter">Get<wbr>Elastic<wbr>Ip<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetElasticIpFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetElasticIpFilter">output</a> API doc for this type.
 {{% /choosable %}}

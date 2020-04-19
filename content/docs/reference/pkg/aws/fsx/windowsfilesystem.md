@@ -66,7 +66,7 @@ const example = new aws.fsx.WindowsFileSystem("example", {
 
 
 
-## Create a WindowsFileSystem Resource
+## Create a WindowsFileSystem Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -156,7 +156,7 @@ const example = new aws.fsx.WindowsFileSystem("example", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -233,7 +233,7 @@ const example = new aws.fsx.WindowsFileSystem("example", {
 
 {{% /choosable %}}
 
-## WindowsFileSystem Resource Properties
+## WindowsFileSystem Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -746,9 +746,7 @@ The WindowsFileSystem resource accepts the following [input]({{< relref "/docs/i
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the WindowsFileSystem resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the WindowsFileSystem resource produces the following output properties:
 
 
 
@@ -773,6 +771,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}DNS name for the file system, e.g. `fs-12345678.corp.example.com` (domain name matching the Active Directory domain name)
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -828,6 +834,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Network<wbr>Interface<wbr>Ids</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
@@ -877,6 +891,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}DNS name for the file system, e.g. `fs-12345678.corp.example.com` (domain name matching the Active Directory domain name)
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -932,6 +954,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>network_<wbr>interface_<wbr>ids</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -966,8 +996,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing WindowsFileSystem Resource
+## Look up an Existing WindowsFileSystem Resource {#look-up}
 
 Get an existing WindowsFileSystem resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1774,7 +1803,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory</h4>
+
+<h4 id="windowsfilesystemselfmanagedactivedirectory">Windows<wbr>File<wbr>System<wbr>Self<wbr>Managed<wbr>Active<wbr>Directory</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#WindowsFileSystemSelfManagedActiveDirectory">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#WindowsFileSystemSelfManagedActiveDirectory">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2037,7 +2067,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

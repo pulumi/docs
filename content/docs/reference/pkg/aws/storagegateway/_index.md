@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="cache" title="Cache"><span class="symbol resource"></span>Cache</a></li>
     <li><a href="cachesiscsivolume" title="CachesIscsiVolume"><span class="symbol resource"></span>CachesIscsiVolume</a></li>
@@ -19,12 +19,12 @@ block_external_search_index: true
     <li><a href="workingstorage" title="WorkingStorage"><span class="symbol resource"></span>WorkingStorage</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getlocaldisk" title="GetLocalDisk"><span class="symbol function"></span>GetLocalDisk</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

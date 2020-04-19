@@ -53,7 +53,7 @@ const fwd = new aws.route53.ResolverRule("fwd", {
 
 
 
-## Create a ResolverRule Resource
+## Create a ResolverRule Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -143,7 +143,7 @@ const fwd = new aws.route53.ResolverRule("fwd", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -220,7 +220,7 @@ const fwd = new aws.route53.ResolverRule("fwd", {
 
 {{% /choosable %}}
 
-## ResolverRule Resource Properties
+## ResolverRule Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -489,9 +489,7 @@ This argument should only be specified for `FORWARD` type rules.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the ResolverRule resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the ResolverRule resource produces the following output properties:
 
 
 
@@ -507,6 +505,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) for the resolver rule.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -545,6 +551,14 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Owner<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -577,6 +591,14 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
     </dt>
     <dd>{{% md %}}The ARN (Amazon Resource Name) for the resolver rule.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -615,6 +637,14 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>owner_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -641,8 +671,7 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 
 
 
-
-## Look up an Existing ResolverRule Resource
+## Look up an Existing ResolverRule Resource {#look-up}
 
 Get an existing ResolverRule resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1137,7 +1166,8 @@ This argument should only be specified for `FORWARD` type rules.
 
 ## Supporting Types
 
-<h4>Resolver<wbr>Rule<wbr>Target<wbr>Ip</h4>
+
+<h4 id="resolverruletargetip">Resolver<wbr>Rule<wbr>Target<wbr>Ip</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ResolverRuleTargetIp">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ResolverRuleTargetIp">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1256,7 +1286,7 @@ This argument should only be specified for `FORWARD` type rules.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

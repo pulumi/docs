@@ -86,7 +86,7 @@ using the [`up` command with the --replace argument](https://www.pulumi.com/docs
 
 
 
-## Create a Instance Resource
+## Create a Instance Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -176,7 +176,7 @@ using the [`up` command with the --replace argument](https://www.pulumi.com/docs
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -253,7 +253,7 @@ using the [`up` command with the --replace argument](https://www.pulumi.com/docs
 
 {{% /choosable %}}
 
-## Instance Resource Properties
+## Instance Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -1842,9 +1842,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Instance resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Instance resource produces the following output properties:
 
 
 
@@ -1860,6 +1858,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}EC2 instance ID
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1877,6 +1883,14 @@ The following output properties are available:
     <dd>{{% md %}}EC2 instance ID
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1892,6 +1906,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}EC2 instance ID
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1909,6 +1931,14 @@ The following output properties are available:
     <dd>{{% md %}}EC2 instance ID
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1918,8 +1948,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Instance Resource
+## Look up an Existing Instance Resource {#look-up}
 
 Get an existing Instance resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -3658,7 +3687,8 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 ## Supporting Types
 
-<h4>Instance<wbr>Ebs<wbr>Block<wbr>Device</h4>
+
+<h4 id="instanceebsblockdevice">Instance<wbr>Ebs<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceEbsBlockDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceEbsBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3872,17 +3902,17 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume_<wbr>size</span>
+        <span>volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Type</span>
+        <span>volume_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -3893,7 +3923,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 
 
-<h4>Instance<wbr>Ephemeral<wbr>Block<wbr>Device</h4>
+<h4 id="instanceephemeralblockdevice">Instance<wbr>Ephemeral<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceEphemeralBlockDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceEphemeralBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4000,7 +4030,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 
 
-<h4>Instance<wbr>Root<wbr>Block<wbr>Device</h4>
+<h4 id="instancerootblockdevice">Instance<wbr>Root<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InstanceRootBlockDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InstanceRootBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4150,17 +4180,17 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume_<wbr>size</span>
+        <span>volume<wbr>Type</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>volume<wbr>Type</span>
+        <span>volume_<wbr>size</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -4175,7 +4205,7 @@ will use. Can be either `"paravirtual"` or `"hvm"`.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

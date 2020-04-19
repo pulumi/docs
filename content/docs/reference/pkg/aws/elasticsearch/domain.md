@@ -186,7 +186,7 @@ const esDomain = new aws.elasticsearch.Domain("es", {
 
 
 
-## Create a Domain Resource
+## Create a Domain Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -276,7 +276,7 @@ const esDomain = new aws.elasticsearch.Domain("es", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -353,7 +353,7 @@ const esDomain = new aws.elasticsearch.Domain("es", {
 
 {{% /choosable %}}
 
-## Domain Resource Properties
+## Domain Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -910,9 +910,7 @@ domain on every apply.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Domain resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Domain resource produces the following output properties:
 
 
 
@@ -946,6 +944,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Domain-specific endpoint used to submit index, search, and data upload requests.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -994,6 +1000,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Kibana<wbr>Endpoint</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1036,6 +1050,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Domain-specific endpoint used to submit index, search, and data upload requests.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1084,6 +1106,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>kibana_<wbr>endpoint</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1102,8 +1132,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Domain Resource
+## Look up an Existing Domain Resource {#look-up}
 
 Get an existing Domain resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1926,7 +1955,8 @@ domain on every apply.
 
 ## Supporting Types
 
-<h4>Domain<wbr>Cluster<wbr>Config</h4>
+
+<h4 id="domainclusterconfig">Domain<wbr>Cluster<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainClusterConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainClusterConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2221,7 +2251,7 @@ domain on every apply.
 
 
 
-<h4>Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config</h4>
+<h4 id="domainclusterconfigzoneawarenessconfig">Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainClusterConfigZoneAwarenessConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainClusterConfigZoneAwarenessConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2300,7 +2330,7 @@ domain on every apply.
 
 
 
-<h4>Domain<wbr>Cognito<wbr>Options</h4>
+<h4 id="domaincognitooptions">Domain<wbr>Cognito<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainCognitoOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainCognitoOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2487,7 +2517,7 @@ domain on every apply.
 
 
 
-<h4>Domain<wbr>Domain<wbr>Endpoint<wbr>Options</h4>
+<h4 id="domaindomainendpointoptions">Domain<wbr>Domain<wbr>Endpoint<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainDomainEndpointOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainDomainEndpointOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2602,7 +2632,7 @@ domain on every apply.
 
 
 
-<h4>Domain<wbr>Ebs<wbr>Options</h4>
+<h4 id="domainebsoptions">Domain<wbr>Ebs<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainEbsOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainEbsOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2773,21 +2803,21 @@ attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type
 
     <dt class="property-optional"
             title="Optional">
+        <span>volume<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of EBS volumes attached to data nodes.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>volume_<wbr>size</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GB).
 **Required** if `ebs_enabled` is set to `true`.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
-        <span>volume<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The type of EBS volumes attached to data nodes.
 {{% /md %}}</dd>
 
 </dl>
@@ -2797,7 +2827,7 @@ attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type
 
 
 
-<h4>Domain<wbr>Encrypt<wbr>At<wbr>Rest</h4>
+<h4 id="domainencryptatrest">Domain<wbr>Encrypt<wbr>At<wbr>Rest</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainEncryptAtRest">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainEncryptAtRest">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2912,7 +2942,7 @@ attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type
 
 
 
-<h4>Domain<wbr>Log<wbr>Publishing<wbr>Option</h4>
+<h4 id="domainlogpublishingoption">Domain<wbr>Log<wbr>Publishing<wbr>Option</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainLogPublishingOption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainLogPublishingOption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3063,7 +3093,7 @@ attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type
 
 
 
-<h4>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption</h4>
+<h4 id="domainnodetonodeencryption">Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainNodeToNodeEncryption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainNodeToNodeEncryption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3142,7 +3172,7 @@ attached to data nodes. Applicable only for the Provisioned IOPS EBS volume type
 
 
 
-<h4>Domain<wbr>Snapshot<wbr>Options</h4>
+<h4 id="domainsnapshotoptions">Domain<wbr>Snapshot<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainSnapshotOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainSnapshotOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3225,7 +3255,7 @@ snapshot of the indices in the domain.
 
 
 
-<h4>Domain<wbr>Vpc<wbr>Options</h4>
+<h4 id="domainvpcoptions">Domain<wbr>Vpc<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainVpcOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainVpcOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3408,7 +3438,7 @@ snapshot of the indices in the domain.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

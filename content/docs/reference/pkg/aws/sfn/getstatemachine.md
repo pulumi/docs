@@ -30,7 +30,7 @@ const example = pulumi.output(aws.sfn.getStateMachine({
 
 
 
-## Using GetStateMachine
+## Using GetStateMachine {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -132,7 +132,7 @@ The following arguments are supported:
 
 
 
-## GetStateMachine Result
+## GetStateMachine Result {#result}
 
 The following output properties are available:
 

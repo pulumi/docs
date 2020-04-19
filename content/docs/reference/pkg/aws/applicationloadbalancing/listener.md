@@ -160,7 +160,7 @@ const frontEndListener = new aws.lb.Listener("front_end", {
 
 
 
-## Create a Listener Resource
+## Create a Listener Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -250,7 +250,7 @@ const frontEndListener = new aws.lb.Listener("front_end", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -327,7 +327,7 @@ const frontEndListener = new aws.lb.Listener("front_end", {
 
 {{% /choosable %}}
 
-## Listener Resource Properties
+## Listener Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -588,9 +588,7 @@ The Listener resource accepts the following [input]({{< relref "/docs/intro/conc
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Listener resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Listener resource produces the following output properties:
 
 
 
@@ -606,6 +604,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ARN of the listener (matches `id`)
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -623,6 +629,14 @@ The following output properties are available:
     <dd>{{% md %}}The ARN of the listener (matches `id`)
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -638,6 +652,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The ARN of the listener (matches `id`)
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -655,6 +677,14 @@ The following output properties are available:
     <dd>{{% md %}}The ARN of the listener (matches `id`)
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -664,8 +694,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Listener Resource
+## Look up an Existing Listener Resource {#look-up}
 
 Get an existing Listener resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1076,7 +1105,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Listener<wbr>Default<wbr>Action</h4>
+
+<h4 id="listenerdefaultaction">Listener<wbr>Default<wbr>Action</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerDefaultAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerDefaultAction">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1359,7 +1389,7 @@ The following state arguments are supported:
 
 
 
-<h4>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito</h4>
+<h4 id="listenerdefaultactionauthenticatecognito">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Cognito</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerDefaultActionAuthenticateCognito">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerDefaultActionAuthenticateCognito">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1690,7 +1720,7 @@ The following state arguments are supported:
 
 
 
-<h4>Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc</h4>
+<h4 id="listenerdefaultactionauthenticateoidc">Listener<wbr>Default<wbr>Action<wbr>Authenticate<wbr>Oidc</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerDefaultActionAuthenticateOidc">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerDefaultActionAuthenticateOidc">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2129,7 +2159,7 @@ The following state arguments are supported:
 
 
 
-<h4>Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response</h4>
+<h4 id="listenerdefaultactionfixedresponse">Listener<wbr>Default<wbr>Action<wbr>Fixed<wbr>Response</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerDefaultActionFixedResponse">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerDefaultActionFixedResponse">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2280,7 +2310,7 @@ The following state arguments are supported:
 
 
 
-<h4>Listener<wbr>Default<wbr>Action<wbr>Redirect</h4>
+<h4 id="listenerdefaultactionredirect">Listener<wbr>Default<wbr>Action<wbr>Redirect</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ListenerDefaultActionRedirect">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#ListenerDefaultActionRedirect">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2543,7 +2573,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

@@ -16,7 +16,7 @@ Manages an asynchronous invocation configuration for a Lambda Function or Alias.
 
 
 
-## Create a FunctionEventInvokeConfig Resource
+## Create a FunctionEventInvokeConfig Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -106,7 +106,7 @@ Manages an asynchronous invocation configuration for a Lambda Function or Alias.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -183,7 +183,7 @@ Manages an asynchronous invocation configuration for a Lambda Function or Alias.
 
 {{% /choosable %}}
 
-## FunctionEventInvokeConfig Resource Properties
+## FunctionEventInvokeConfig Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -408,12 +408,77 @@ The FunctionEventInvokeConfig resource accepts the following [input]({{< relref 
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The FunctionEventInvokeConfig resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the FunctionEventInvokeConfig resource produces the following output properties:
 
 
 
 
-## Look up an Existing FunctionEventInvokeConfig Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing FunctionEventInvokeConfig Resource {#look-up}
 
 Get an existing FunctionEventInvokeConfig resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -752,7 +817,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config</h4>
+
+<h4 id="functioneventinvokeconfigdestinationconfig">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FunctionEventInvokeConfigDestinationConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FunctionEventInvokeConfigDestinationConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -844,20 +910,20 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
-        <span>on_<wbr>failure</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonfailure">Dict[Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Failure]</a></span>
-    </dt>
-    <dd>{{% md %}}Configuration block with destination configuration for failed asynchronous invocations. See below for details.
-{{% /md %}}</dd>
-
-    <dt class="property-optional"
-            title="Optional">
         <span>on<wbr>Success</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonsuccess">Dict[Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Success]</a></span>
     </dt>
     <dd>{{% md %}}Configuration block with destination configuration for successful asynchronous invocations. See below for details.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>on_<wbr>failure</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#functioneventinvokeconfigdestinationconfigonfailure">Dict[Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Failure]</a></span>
+    </dt>
+    <dd>{{% md %}}Configuration block with destination configuration for failed asynchronous invocations. See below for details.
 {{% /md %}}</dd>
 
 </dl>
@@ -867,7 +933,7 @@ The following state arguments are supported:
 
 
 
-<h4>Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Failure</h4>
+<h4 id="functioneventinvokeconfigdestinationconfigonfailure">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Failure</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FunctionEventInvokeConfigDestinationConfigOnFailure">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FunctionEventInvokeConfigDestinationConfigOnFailure">output</a> API doc for this type.
 {{% /choosable %}}
@@ -946,7 +1012,7 @@ The following state arguments are supported:
 
 
 
-<h4>Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Success</h4>
+<h4 id="functioneventinvokeconfigdestinationconfigonsuccess">Function<wbr>Event<wbr>Invoke<wbr>Config<wbr>Destination<wbr>Config<wbr>On<wbr>Success</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FunctionEventInvokeConfigDestinationConfigOnSuccess">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FunctionEventInvokeConfigDestinationConfigOnSuccess">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1029,7 +1095,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

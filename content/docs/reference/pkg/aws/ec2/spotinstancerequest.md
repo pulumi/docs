@@ -57,7 +57,7 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
 
 
 
-## Create a SpotInstanceRequest Resource
+## Create a SpotInstanceRequest Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -147,7 +147,7 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -224,7 +224,7 @@ const cheapWorker = new aws.ec2.SpotInstanceRequest("cheap_worker", {
 
 {{% /choosable %}}
 
-## SpotInstanceRequest Resource Properties
+## SpotInstanceRequest Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -1869,9 +1869,7 @@ timeout of 10m is reached.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the SpotInstanceRequest resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the SpotInstanceRequest resource produces the following output properties:
 
 
 
@@ -1886,6 +1884,14 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1990,6 +1996,14 @@ the Spot Instance request.
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Instance<wbr>State</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -2088,6 +2102,14 @@ the Spot Instance request.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -2192,6 +2214,14 @@ the Spot Instance request.
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>instance_<wbr>state</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2285,8 +2315,7 @@ the Spot Instance request.
 
 
 
-
-## Look up an Existing SpotInstanceRequest Resource
+## Look up an Existing SpotInstanceRequest Resource {#look-up}
 
 Get an existing SpotInstanceRequest resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -4421,7 +4450,8 @@ timeout of 10m is reached.
 
 ## Supporting Types
 
-<h4>Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification</h4>
+
+<h4 id="spotinstancerequestcreditspecification">Spot<wbr>Instance<wbr>Request<wbr>Credit<wbr>Specification</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotInstanceRequestCreditSpecification">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotInstanceRequestCreditSpecification">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4500,7 +4530,7 @@ timeout of 10m is reached.
 
 
 
-<h4>Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device</h4>
+<h4 id="spotinstancerequestebsblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotInstanceRequestEbsBlockDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotInstanceRequestEbsBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4855,6 +4885,16 @@ This must be set with a `volume_type` of `"io1"`.
 
     <dt class="property-optional"
             title="Optional">
+        <span>volume<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`,
+or `"io1"`. (Default: `"gp2"`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>volume_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -4870,16 +4910,6 @@ This must be set with a `volume_type` of `"io1"`.
     <dd>{{% md %}}The size of the volume in gibibytes (GiB).
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>volume<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`,
-or `"io1"`. (Default: `"gp2"`).
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -4887,7 +4917,7 @@ or `"io1"`. (Default: `"gp2"`).
 
 
 
-<h4>Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device</h4>
+<h4 id="spotinstancerequestephemeralblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotInstanceRequestEphemeralBlockDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotInstanceRequestEphemeralBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5046,7 +5076,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 
 
 
-<h4>Spot<wbr>Instance<wbr>Request<wbr>Metadata<wbr>Options</h4>
+<h4 id="spotinstancerequestmetadataoptions">Spot<wbr>Instance<wbr>Request<wbr>Metadata<wbr>Options</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotInstanceRequestMetadataOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotInstanceRequestMetadataOptions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5197,7 +5227,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 
 
 
-<h4>Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface</h4>
+<h4 id="spotinstancerequestnetworkinterface">Spot<wbr>Instance<wbr>Request<wbr>Network<wbr>Interface</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotInstanceRequestNetworkInterface">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotInstanceRequestNetworkInterface">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5348,7 +5378,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
 
 
 
-<h4>Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</h4>
+<h4 id="spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#SpotInstanceRequestRootBlockDevice">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#SpotInstanceRequestRootBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5624,6 +5654,15 @@ using that type
 
     <dt class="property-optional"
             title="Optional">
+        <span>volume<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"io1"`, `"sc1"`, or `"st1"`. (Default: `"standard"`).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>volume_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -5639,15 +5678,6 @@ using that type
     <dd>{{% md %}}The size of the volume in gibibytes (GiB).
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>volume<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"io1"`, `"sc1"`, or `"st1"`. (Default: `"standard"`).
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -5659,7 +5689,7 @@ using that type
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

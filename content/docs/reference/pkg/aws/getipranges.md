@@ -15,7 +15,7 @@ Use this data source to get the IP ranges of various AWS products and services. 
 
 
 
-## Using GetIpRanges
+## Using GetIpRanges {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -213,7 +213,7 @@ omitted). Valid items are `global` (for `cloudfront`) as well as all AWS regions
 
 
 
-## GetIpRanges Result
+## GetIpRanges Result {#result}
 
 The following output properties are available:
 

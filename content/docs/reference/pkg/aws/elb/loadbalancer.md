@@ -85,7 +85,7 @@ browser.
 
 
 
-## Create a LoadBalancer Resource
+## Create a LoadBalancer Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -175,7 +175,7 @@ browser.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -252,7 +252,7 @@ browser.
 
 {{% /choosable %}}
 
-## LoadBalancer Resource Properties
+## LoadBalancer Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -889,9 +889,7 @@ instances. Use this for Classic or Default VPC only.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the LoadBalancer resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the LoadBalancer resource produces the following output properties:
 
 
 
@@ -916,6 +914,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The DNS name of the ELB
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -964,6 +970,14 @@ instances. Only available on ELBs launched in a VPC.
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Source<wbr>Security<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1006,6 +1020,14 @@ instances. Only available on ELBs launched in a VPC.
     </dt>
     <dd>{{% md %}}The DNS name of the ELB
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1054,6 +1076,14 @@ instances. Only available on ELBs launched in a VPC.
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>source_<wbr>security_<wbr>group_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1081,8 +1111,7 @@ instances. Only available on ELBs launched in a VPC.
 
 
 
-
-## Look up an Existing LoadBalancer Resource
+## Look up an Existing LoadBalancer Resource {#look-up}
 
 Get an existing LoadBalancer resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1985,7 +2014,8 @@ instances. Only available on ELBs launched in a VPC.
 
 ## Supporting Types
 
-<h4>Load<wbr>Balancer<wbr>Access<wbr>Logs</h4>
+
+<h4 id="loadbalanceraccesslogs">Load<wbr>Balancer<wbr>Access<wbr>Logs</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerAccessLogs">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LoadBalancerAccessLogs">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2172,7 +2202,7 @@ instances. Only available on ELBs launched in a VPC.
 
 
 
-<h4>Load<wbr>Balancer<wbr>Health<wbr>Check</h4>
+<h4 id="loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Health<wbr>Check</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerHealthCheck">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LoadBalancerHealthCheck">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2407,7 +2437,7 @@ values are:
 
 
 
-<h4>Load<wbr>Balancer<wbr>Listener</h4>
+<h4 id="loadbalancerlistener">Load<wbr>Balancer<wbr>Listener</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoadBalancerListener">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LoadBalancerListener">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2589,15 +2619,6 @@ uploaded to AWS IAM. **Note ECDSA-specific restrictions below.  Only valid when 
 
     <dt class="property-required"
             title="Required">
-        <span>instance_<wbr>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The port on the instance to route to
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>instance<wbr>Protocol</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2608,11 +2629,11 @@ values are `HTTP`, `HTTPS`, `TCP`, or `SSL`
 
     <dt class="property-required"
             title="Required">
-        <span>lb_<wbr>port</span>
+        <span>instance_<wbr>port</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
-    <dd>{{% md %}}The port to listen on for the load balancer
+    <dd>{{% md %}}The port on the instance to route to
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2623,6 +2644,15 @@ values are `HTTP`, `HTTPS`, `TCP`, or `SSL`
     </dt>
     <dd>{{% md %}}The protocol to listen on. Valid values are `HTTP`,
 `HTTPS`, `TCP`, or `SSL`
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>lb_<wbr>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The port to listen on for the load balancer
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2646,7 +2676,7 @@ uploaded to AWS IAM. **Note ECDSA-specific restrictions below.  Only valid when 
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

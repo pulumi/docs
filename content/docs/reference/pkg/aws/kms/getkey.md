@@ -31,7 +31,7 @@ const foo = pulumi.output(aws.kms.getKey({
 
 
 
-## Using GetKey
+## Using GetKey {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -185,7 +185,7 @@ The following arguments are supported:
 
 
 
-## GetKey Result
+## GetKey Result {#result}
 
 The following output properties are available:
 

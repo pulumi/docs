@@ -72,7 +72,7 @@ const test_prefix = new aws.s3.Inventory("test-prefix", {
 
 
 
-## Create a Inventory Resource
+## Create a Inventory Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -162,7 +162,7 @@ const test_prefix = new aws.s3.Inventory("test-prefix", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -239,7 +239,7 @@ const test_prefix = new aws.s3.Inventory("test-prefix", {
 
 {{% /choosable %}}
 
-## Inventory Resource Properties
+## Inventory Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -576,12 +576,77 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The Inventory resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Inventory resource produces the following output properties:
 
 
 
 
-## Look up an Existing Inventory Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing Inventory Resource {#look-up}
 
 Get an existing Inventory resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1032,7 +1097,8 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 
 ## Supporting Types
 
-<h4>Inventory<wbr>Destination</h4>
+
+<h4 id="inventorydestination">Inventory<wbr>Destination</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InventoryDestination">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InventoryDestination">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1111,7 +1177,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 
 
 
-<h4>Inventory<wbr>Destination<wbr>Bucket</h4>
+<h4 id="inventorydestinationbucket">Inventory<wbr>Destination<wbr>Bucket</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InventoryDestinationBucket">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InventoryDestinationBucket">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1334,7 +1400,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 
 
 
-<h4>Inventory<wbr>Destination<wbr>Bucket<wbr>Encryption</h4>
+<h4 id="inventorydestinationbucketencryption">Inventory<wbr>Destination<wbr>Bucket<wbr>Encryption</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InventoryDestinationBucketEncryption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InventoryDestinationBucketEncryption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1449,7 +1515,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 
 
 
-<h4>Inventory<wbr>Destination<wbr>Bucket<wbr>Encryption<wbr>Sse<wbr>Kms</h4>
+<h4 id="inventorydestinationbucketencryptionssekms">Inventory<wbr>Destination<wbr>Bucket<wbr>Encryption<wbr>Sse<wbr>Kms</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InventoryDestinationBucketEncryptionSseKms">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InventoryDestinationBucketEncryptionSseKms">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1528,7 +1594,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 
 
 
-<h4>Inventory<wbr>Filter</h4>
+<h4 id="inventoryfilter">Inventory<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InventoryFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InventoryFilter">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1607,7 +1673,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 
 
 
-<h4>Inventory<wbr>Schedule</h4>
+<h4 id="inventoryschedule">Inventory<wbr>Schedule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#InventorySchedule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#InventorySchedule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1690,7 +1756,7 @@ Valid values: `Size`, `LastModifiedDate`, `StorageClass`, `ETag`, `IsMultipartUp
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>

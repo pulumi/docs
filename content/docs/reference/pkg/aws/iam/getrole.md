@@ -30,7 +30,7 @@ const example = pulumi.output(aws.iam.getRole({
 
 
 
-## Using GetRole
+## Using GetRole {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -168,7 +168,7 @@ The following arguments are supported:
 
 
 
-## GetRole Result
+## GetRole Result {#result}
 
 The following output properties are available:
 

@@ -173,7 +173,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
 
 
 
-## Create a VirtualNode Resource
+## Create a VirtualNode Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -263,7 +263,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -340,7 +340,7 @@ const serviceb1 = new aws.appmesh.VirtualNode("serviceb1", {
 
 {{% /choosable %}}
 
-## VirtualNode Resource Properties
+## VirtualNode Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -529,9 +529,7 @@ The VirtualNode resource accepts the following [input]({{< relref "/docs/intro/c
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the VirtualNode resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the VirtualNode resource produces the following output properties:
 
 
 
@@ -556,6 +554,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The creation date of the virtual node.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -593,6 +599,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Last<wbr>Updated<wbr>Date</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -624,6 +638,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The creation date of the virtual node.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -661,6 +683,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>last_<wbr>updated_<wbr>date</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -677,8 +707,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing VirtualNode Resource
+## Look up an Existing VirtualNode Resource {#look-up}
 
 Get an existing VirtualNode resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1089,7 +1118,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Virtual<wbr>Node<wbr>Spec</h4>
+
+<h4 id="virtualnodespec">Virtual<wbr>Node<wbr>Spec</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpec">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpec">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1276,7 +1306,7 @@ The following state arguments are supported:
 
 
 
-<h4>Virtual<wbr>Node<wbr>Spec<wbr>Backend</h4>
+<h4 id="virtualnodespecbackend">Virtual<wbr>Node<wbr>Spec<wbr>Backend</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackend">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackend">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1355,7 +1385,7 @@ The following state arguments are supported:
 
 
 
-<h4>Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service</h4>
+<h4 id="virtualnodespecbackendvirtualservice">Virtual<wbr>Node<wbr>Spec<wbr>Backend<wbr>Virtual<wbr>Service</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecBackendVirtualService">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecBackendVirtualService">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1434,7 +1464,7 @@ The following state arguments are supported:
 
 
 
-<h4>Virtual<wbr>Node<wbr>Spec<wbr>Listener</h4>
+<h4 id="virtualnodespeclistener">Virtual<wbr>Node<wbr>Spec<wbr>Listener</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListener">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListener">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1549,7 +1579,7 @@ The following state arguments are supported:
 
 
 
-<h4>Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check</h4>
+<h4 id="virtualnodespeclistenerhealthcheck">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Health<wbr>Check</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerHealthCheck">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerHealthCheck">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1844,7 +1874,7 @@ The following state arguments are supported:
 
 
 
-<h4>Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping</h4>
+<h4 id="virtualnodespeclistenerportmapping">Virtual<wbr>Node<wbr>Spec<wbr>Listener<wbr>Port<wbr>Mapping</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecListenerPortMapping">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecListenerPortMapping">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1959,7 +1989,7 @@ The following state arguments are supported:
 
 
 
-<h4>Virtual<wbr>Node<wbr>Spec<wbr>Logging</h4>
+<h4 id="virtualnodespeclogging">Virtual<wbr>Node<wbr>Spec<wbr>Logging</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecLogging">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecLogging">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2038,7 +2068,7 @@ The following state arguments are supported:
 
 
 
-<h4>Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log</h4>
+<h4 id="virtualnodespecloggingaccesslog">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecLoggingAccessLog">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecLoggingAccessLog">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2117,7 +2147,7 @@ The following state arguments are supported:
 
 
 
-<h4>Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File</h4>
+<h4 id="virtualnodespecloggingaccesslogfile">Virtual<wbr>Node<wbr>Spec<wbr>Logging<wbr>Access<wbr>Log<wbr>File</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecLoggingAccessLogFile">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecLoggingAccessLogFile">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2196,7 +2226,7 @@ The following state arguments are supported:
 
 
 
-<h4>Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery</h4>
+<h4 id="virtualnodespecservicediscovery">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecServiceDiscovery">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecServiceDiscovery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2311,7 +2341,7 @@ The following state arguments are supported:
 
 
 
-<h4>Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Aws<wbr>Cloud<wbr>Map</h4>
+<h4 id="virtualnodespecservicediscoveryawscloudmap">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Aws<wbr>Cloud<wbr>Map</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecServiceDiscoveryAwsCloudMap">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecServiceDiscoveryAwsCloudMap">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2466,7 +2496,7 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
 
 
 
-<h4>Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Dns</h4>
+<h4 id="virtualnodespecservicediscoverydns">Virtual<wbr>Node<wbr>Spec<wbr>Service<wbr>Discovery<wbr>Dns</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#VirtualNodeSpecServiceDiscoveryDns">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#VirtualNodeSpecServiceDiscoveryDns">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2549,7 +2579,7 @@ Use the [`aws.servicediscovery.HttpNamespace`](https://www.terraform.io/docs/pro
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
