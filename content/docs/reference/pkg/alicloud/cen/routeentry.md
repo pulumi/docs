@@ -29,32 +29,32 @@ const name = config.get("name") || "tf-testAccCenRouteEntryConfig";
 const hz = new alicloud.Provider("hz", {
     region: "cn-hangzhou",
 });
-const defaultZones = alicloud.getZones({
+const defaultZones = pulumi.output(alicloud.getZones({
     availableDiskCategory: "cloud_efficiency",
     availableResourceCreation: "VSwitch",
-}, {provider: hz});
-const defaultInstanceTypes = alicloud.ecs.getInstanceTypes({
+}, { provider: hz, async: true }));
+const defaultInstanceTypes = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
     availabilityZone: defaultZones.zones[0].id,
     cpuCoreCount: 1,
     memorySize: 2,
-}, {provider: hz});
-const defaultImages = alicloud.ecs.getImages({
+}, { provider: hz, async: true }));
+const defaultImages = pulumi.output(alicloud.ecs.getImages({
     mostRecent: true,
     nameRegex: "^ubuntu_18.*64",
     owners: "system",
-}, {provider: hz});
+}, { provider: hz, async: true }));
 const vpc = new alicloud.vpc.Network("vpc", {
     cidrBlock: "172.16.0.0/12",
-}, {provider: hz});
+}, { provider: hz });
 const defaultSwitch = new alicloud.vpc.Switch("default", {
     availabilityZone: defaultZones.zones[0].id,
     cidrBlock: "172.16.0.0/21",
     vpcId: vpc.id,
-}, {provider: hz});
+}, { provider: hz });
 const defaultSecurityGroup = new alicloud.ecs.SecurityGroup("default", {
     description: "foo",
     vpcId: vpc.id,
-}, {provider: hz});
+}, { provider: hz });
 const defaultInstance = new alicloud.ecs.Instance("default", {
     imageId: defaultImages.images[0].id,
     instanceName: name,
@@ -64,31 +64,31 @@ const defaultInstance = new alicloud.ecs.Instance("default", {
     securityGroups: [defaultSecurityGroup.id],
     systemDiskCategory: "cloud_efficiency",
     vswitchId: defaultSwitch.id,
-}, {provider: hz});
+}, { provider: hz });
 const cen = new alicloud.cen.Instance("cen", {});
 const attach = new alicloud.cen.InstanceAttachment("attach", {
     childInstanceId: vpc.id,
     childInstanceRegionId: "cn-hangzhou",
     instanceId: cen.id,
-}, {dependsOn: [defaultSwitch]});
+}, { dependsOn: [defaultSwitch] });
 const route = new alicloud.vpc.RouteEntry("route", {
     destinationCidrblock: "11.0.0.0/16",
     nexthopId: defaultInstance.id,
     nexthopType: "Instance",
     routeTableId: vpc.routeTableId,
-}, {provider: hz});
+}, { provider: hz });
 const foo = new alicloud.cen.RouteEntry("foo", {
     cidrBlock: route.destinationCidrblock,
     instanceId: cen.id,
     routeTableId: vpc.routeTableId,
-}, {provider: hz,dependsOn: [attach]});
+}, { provider: hz, dependsOn: [attach] });
 ```
 {{% /example %}}
 {{% /examples %}}
 
 
 
-## Create a RouteEntry Resource
+## Create a RouteEntry Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -178,7 +178,7 @@ const foo = new alicloud.cen.RouteEntry("foo", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -255,7 +255,7 @@ const foo = new alicloud.cen.RouteEntry("foo", {
 
 {{% /choosable %}}
 
-## RouteEntry Resource Properties
+## RouteEntry Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -408,12 +408,77 @@ The RouteEntry resource accepts the following [input]({{< relref "/docs/intro/co
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The RouteEntry resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the RouteEntry resource produces the following output properties:
 
 
 
 
-## Look up an Existing RouteEntry Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing RouteEntry Resource {#look-up}
 
 Get an existing RouteEntry resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -679,7 +744,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>

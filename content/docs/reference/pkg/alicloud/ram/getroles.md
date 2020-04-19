@@ -16,12 +16,12 @@ This data source provides a list of RAM Roles in an Alibaba Cloud account accord
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const rolesDs = alicloud.ram.getRoles({
+const rolesDs = pulumi.output(alicloud.ram.getRoles({
     nameRegex: ".*test.*",
     outputFile: "roles.txt",
     policyName: "AliyunACSDefaultAccess",
     policyType: "Custom",
-});
+}, { async: true }));
 
 export const firstRoleId = rolesDs.roles[0].id;
 ```
@@ -33,7 +33,7 @@ export const firstRoleId = rolesDs.roles[0].id;
 
 
 
-## Using GetRoles
+## Using GetRoles {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -279,7 +279,7 @@ The following arguments are supported:
 
 
 
-## GetRoles Result
+## GetRoles Result {#result}
 
 The following output properties are available:
 
@@ -594,7 +594,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Roles<wbr>Role</h4>
+
+<h4 id="getrolesrole">Get<wbr>Roles<wbr>Role</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetRolesRole">output</a> API doc for this type.
 {{% /choosable %}}

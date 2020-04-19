@@ -19,7 +19,7 @@ import * as alicloud from "@pulumi/alicloud";
 const recordsDs = pulumi.all([alicloud_pvtz_zone_record_foo.value, alicloud_pvtz_zone_basic.id]).apply(([value, id]) => alicloud.pvtz.getZoneRecords({
     keyword: value,
     zoneId: id,
-}));
+}, { async: true }));
 
 export const firstRecordId = recordsDs.records[0].id;
 ```
@@ -31,7 +31,7 @@ export const firstRecordId = recordsDs.records[0].id;
 
 
 
-## Using GetZoneRecords
+## Using GetZoneRecords {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -237,7 +237,7 @@ The following arguments are supported:
 
 
 
-## GetZoneRecords Result
+## GetZoneRecords Result {#result}
 
 The following output properties are available:
 
@@ -484,7 +484,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Zone<wbr>Records<wbr>Record</h4>
+
+<h4 id="getzonerecordsrecord">Get<wbr>Zone<wbr>Records<wbr>Record</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetZoneRecordsRecord">output</a> API doc for this type.
 {{% /choosable %}}

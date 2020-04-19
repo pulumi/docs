@@ -18,12 +18,12 @@ This data source provides the RDS instance engines resource available info of Al
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const resources = alicloud.rds.getInstanceEngines({
+const resources = pulumi.output(alicloud.rds.getInstanceEngines({
     engine: "MySQL",
     engineVersion: "5.6",
     instanceChargeType: "PostPaid",
     outputFile: "./engines.txt",
-});
+}, { async: true }));
 
 export const firstDbCategory = resources.instanceEngines[0].category;
 ```
@@ -35,7 +35,7 @@ export const firstDbCategory = resources.instanceEngines[0].category;
 
 
 
-## Using GetInstanceEngines
+## Using GetInstanceEngines {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -313,7 +313,7 @@ The following arguments are supported:
 
 
 
-## GetInstanceEngines Result
+## GetInstanceEngines Result {#result}
 
 The following output properties are available:
 
@@ -628,7 +628,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Instance<wbr>Engines<wbr>Instance<wbr>Engine</h4>
+
+<h4 id="getinstanceenginesinstanceengine">Get<wbr>Instance<wbr>Engines<wbr>Instance<wbr>Engine</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstanceEnginesInstanceEngine">output</a> API doc for this type.
 {{% /choosable %}}
@@ -815,7 +816,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Instance<wbr>Engines<wbr>Instance<wbr>Engine<wbr>Zone<wbr>Id</h4>
+<h4 id="getinstanceenginesinstanceenginezoneid">Get<wbr>Instance<wbr>Engines<wbr>Instance<wbr>Engine<wbr>Zone<wbr>Id</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstanceEnginesInstanceEngineZoneId">output</a> API doc for this type.
 {{% /choosable %}}

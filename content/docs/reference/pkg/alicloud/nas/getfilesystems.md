@@ -21,7 +21,7 @@ import * as alicloud from "@pulumi/alicloud";
 const fs = alicloud_nas_file_system_foo.description.apply(description => alicloud.nas.getFileSystems({
     description: description,
     protocolType: "NFS",
-}));
+}, { async: true }));
 
 export const alicloudNasFileSystemsId = fs.systems[0].id;
 ```
@@ -32,7 +32,7 @@ export const alicloudNasFileSystemsId = fs.systems[0].id;
 
 
 
-## Using GetFileSystems
+## Using GetFileSystems {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -274,7 +274,7 @@ The following arguments are supported:
 
 
 
-## GetFileSystems Result
+## GetFileSystems Result {#result}
 
 The following output properties are available:
 
@@ -597,7 +597,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>File<wbr>Systems<wbr>System</h4>
+
+<h4 id="getfilesystemssystem">Get<wbr>File<wbr>Systems<wbr>System</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetFileSystemsSystem">output</a> API doc for this type.
 {{% /choosable %}}

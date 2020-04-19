@@ -16,9 +16,9 @@ This data source provides the api groups of the current Alibaba Cloud user.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const dataApigatway = alicloud.apigateway.getGroups({
+const dataApigatway = pulumi.output(alicloud.apigateway.getGroups({
     outputFile: "outgroups",
-});
+}, { async: true }));
 
 export const firstGroupId = dataApigatway.groups[0].id;
 ```
@@ -30,7 +30,7 @@ export const firstGroupId = dataApigatway.groups[0].id;
 
 
 
-## Using GetGroups
+## Using GetGroups {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -200,7 +200,7 @@ The following arguments are supported:
 
 
 
-## GetGroups Result
+## GetGroups Result {#result}
 
 The following output properties are available:
 
@@ -451,7 +451,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Groups<wbr>Group</h4>
+
+<h4 id="getgroupsgroup">Get<wbr>Groups<wbr>Group</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetGroupsGroup">output</a> API doc for this type.
 {{% /choosable %}}

@@ -18,11 +18,11 @@ This data source provides user-available access groups. Use when you can create 
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const ag = alicloud.nas.getAccessGroups({
+const ag = pulumi.output(alicloud.nas.getAccessGroups({
     description: "tf-testAccAccessGroupsdatasource",
     nameRegex: "^foo",
     type: "Classic",
-});
+}, { async: true }));
 
 export const alicloudNasAccessGroupsId = ag.groups[0].id;
 ```
@@ -34,7 +34,7 @@ export const alicloudNasAccessGroupsId = ag.groups[0].id;
 
 
 
-## Using GetAccessGroups
+## Using GetAccessGroups {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -240,7 +240,7 @@ The following arguments are supported:
 
 
 
-## GetAccessGroups Result
+## GetAccessGroups Result {#result}
 
 The following output properties are available:
 
@@ -563,7 +563,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Access<wbr>Groups<wbr>Group</h4>
+
+<h4 id="getaccessgroupsgroup">Get<wbr>Access<wbr>Groups<wbr>Group</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetAccessGroupsGroup">output</a> API doc for this type.
 {{% /choosable %}}

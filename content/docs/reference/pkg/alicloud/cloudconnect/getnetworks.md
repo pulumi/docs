@@ -23,7 +23,7 @@ import * as alicloud from "@pulumi/alicloud";
 const defaultNetworks = alicloud_cloud_connect_networks_default.id.apply(id => alicloud.cloudconnect.getNetworks({
     ids: [id],
     nameRegex: "^tf-testAcc.*",
-}));
+}, { async: true }));
 const defaultNetwork = new alicloud.cloudconnect.Network("default", {
     cidrBlock: "192.168.0.0/24",
     description: "tf-testAccCloudConnectNetworkDescription",
@@ -38,7 +38,7 @@ const defaultNetwork = new alicloud.cloudconnect.Network("default", {
 
 
 
-## Using GetNetworks
+## Using GetNetworks {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -208,7 +208,7 @@ The following arguments are supported:
 
 
 
-## GetNetworks Result
+## GetNetworks Result {#result}
 
 The following output properties are available:
 
@@ -459,7 +459,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Networks<wbr>Network</h4>
+
+<h4 id="getnetworksnetwork">Get<wbr>Networks<wbr>Network</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetNetworksNetwork">output</a> API doc for this type.
 {{% /choosable %}}

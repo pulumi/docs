@@ -18,7 +18,7 @@ import * as alicloud from "@pulumi/alicloud";
 
 const pvtzZonesDs = alicloud_pvtz_zone_basic.zoneName.apply(zoneName => alicloud.pvtz.getZones({
     keyword: zoneName,
-}));
+}, { async: true }));
 
 export const firstZoneId = pvtzZonesDs.zones[0].id;
 ```
@@ -30,7 +30,7 @@ export const firstZoneId = pvtzZonesDs.zones[0].id;
 
 
 
-## Using GetZones
+## Using GetZones {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -200,7 +200,7 @@ The following arguments are supported:
 
 
 
-## GetZones Result
+## GetZones Result {#result}
 
 The following output properties are available:
 
@@ -451,7 +451,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Zones<wbr>Zone</h4>
+
+<h4 id="getzoneszone">Get<wbr>Zones<wbr>Zone</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetZonesZone">output</a> API doc for this type.
 {{% /choosable %}}
@@ -782,7 +783,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Zones<wbr>Zone<wbr>Bind<wbr>Vpc</h4>
+<h4 id="getzoneszonebindvpc">Get<wbr>Zones<wbr>Zone<wbr>Bind<wbr>Vpc</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetZonesZoneBindVpc">output</a> API doc for this type.
 {{% /choosable %}}

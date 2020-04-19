@@ -18,12 +18,12 @@ This data source provides AccessRule available to the user.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const foo = alicloud.nas.getAccessRules({
+const foo = pulumi.output(alicloud.nas.getAccessRules({
     accessGroupName: "tf-testAccAccessGroupsdatasource",
     rwAccess: "RDWR",
     sourceCidrIp: "168.1.1.0/16",
     userAccess: "no_squash",
-});
+}, { async: true }));
 
 export const alicloudNasAccessRulesId = foo.rules[0].id;
 ```
@@ -35,7 +35,7 @@ export const alicloudNasAccessRulesId = foo.rules[0].id;
 
 
 
-## Using GetAccessRules
+## Using GetAccessRules {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -313,7 +313,7 @@ The following arguments are supported:
 
 
 
-## GetAccessRules Result
+## GetAccessRules Result {#result}
 
 The following output properties are available:
 
@@ -636,7 +636,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Access<wbr>Rules<wbr>Rule</h4>
+
+<h4 id="getaccessrulesrule">Get<wbr>Access<wbr>Rules<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetAccessRulesRule">output</a> API doc for this type.
 {{% /choosable %}}

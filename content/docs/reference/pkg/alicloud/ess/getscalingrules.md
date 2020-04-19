@@ -16,14 +16,14 @@ This data source provides available scaling rule resources.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const scalingrulesDs = alicloud.ess.getScalingRules({
+const scalingrulesDs = pulumi.output(alicloud.ess.getScalingRules({
     ids: [
         "scaling_rule_id1",
         "scaling_rule_id2",
     ],
     nameRegex: "scaling_rule_name",
     scalingGroupId: "scaling_group_id",
-});
+}, { async: true }));
 
 export const firstScalingRule = scalingrulesDs.rules[0].id;
 ```
@@ -35,7 +35,7 @@ export const firstScalingRule = scalingrulesDs.rules[0].id;
 
 
 
-## Using GetScalingRules
+## Using GetScalingRules {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -277,7 +277,7 @@ The following arguments are supported:
 
 
 
-## GetScalingRules Result
+## GetScalingRules Result {#result}
 
 The following output properties are available:
 
@@ -600,7 +600,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Scaling<wbr>Rules<wbr>Rule</h4>
+
+<h4 id="getscalingrulesrule">Get<wbr>Scaling<wbr>Rules<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetScalingRulesRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -935,20 +936,20 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>scaling_<wbr>group_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Scaling group id the scaling rules belong to.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>scaling<wbr>Rule<wbr>Ari</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Ari of scaling rule.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>scaling_<wbr>group_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Scaling group id the scaling rules belong to.
 {{% /md %}}</dd>
 
     <dt class="property-required"

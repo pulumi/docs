@@ -8,20 +8,20 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="zone" title="Zone"><span class="symbol resource"></span>Zone</a></li>
     <li><a href="zoneattachment" title="ZoneAttachment"><span class="symbol resource"></span>ZoneAttachment</a></li>
     <li><a href="zonerecord" title="ZoneRecord"><span class="symbol resource"></span>ZoneRecord</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getzonerecords" title="GetZoneRecords"><span class="symbol function"></span>GetZoneRecords</a></li>
     <li><a href="getzones" title="GetZones"><span class="symbol function"></span>GetZones</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>

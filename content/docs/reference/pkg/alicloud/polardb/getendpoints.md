@@ -18,7 +18,7 @@ Filters support regular expression for the cluster name, searches by clusterId, 
 
 
 
-## Using GetEndpoints
+## Using GetEndpoints {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -156,7 +156,7 @@ The following arguments are supported:
 
 
 
-## GetEndpoints Result
+## GetEndpoints Result {#result}
 
 The following output properties are available:
 
@@ -339,7 +339,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Endpoints<wbr>Endpoint</h4>
+
+<h4 id="getendpointsendpoint">Get<wbr>Endpoints<wbr>Endpoint</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetEndpointsEndpoint">output</a> API doc for this type.
 {{% /choosable %}}
@@ -634,7 +635,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Endpoints<wbr>Endpoint<wbr>Address<wbr>Item</h4>
+<h4 id="getendpointsendpointaddressitem">Get<wbr>Endpoints<wbr>Endpoint<wbr>Address<wbr>Item</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetEndpointsEndpointAddressItem">output</a> API doc for this type.
 {{% /choosable %}}

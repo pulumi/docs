@@ -16,9 +16,9 @@ This data source provides a list of BGP-Line Anti-DDoS Pro instances in an Aliba
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const instanceDdosCooInstances = alicloud.ddos.getDdosCooInstances({
+const instanceDdosCooInstances = pulumi.output(alicloud.ddos.getDdosCooInstances({
     nameRegex: "^ddoscoo",
-});
+}, { async: true }));
 
 export const instance = alicloud_ddoscoo_instances_instance.map(v => v.id);
 ```
@@ -30,7 +30,7 @@ export const instance = alicloud_ddoscoo_instances_instance.map(v => v.id);
 
 
 
-## Using GetDdosCooInstances
+## Using GetDdosCooInstances {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -200,7 +200,7 @@ The following arguments are supported:
 
 
 
-## GetDdosCooInstances Result
+## GetDdosCooInstances Result {#result}
 
 The following output properties are available:
 
@@ -451,7 +451,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Ddos<wbr>Coo<wbr>Instances<wbr>Instance</h4>
+
+<h4 id="getddoscooinstancesinstance">Get<wbr>Ddos<wbr>Coo<wbr>Instances<wbr>Instance</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetDdosCooInstancesInstance">output</a> API doc for this type.
 {{% /choosable %}}

@@ -18,11 +18,11 @@ This data source provides a list of ALIKAFKA Consumer Groups in an Alibaba Cloud
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const consumerGroupsDs = alicloud.actiontrail.getConsumerGroups({
+const consumerGroupsDs = pulumi.output(alicloud.actiontrail.getConsumerGroups({
     consumerIdRegex: "CID-alikafkaGroupDatasourceName",
     instanceId: "xxx",
     outputFile: "consumerGroups.txt",
-});
+}, { async: true }));
 
 export const firstGroupName = consumerGroupsDs.consumerIds[0];
 ```
@@ -34,7 +34,7 @@ export const firstGroupName = consumerGroupsDs.consumerIds[0];
 
 
 
-## Using GetConsumerGroups
+## Using GetConsumerGroups {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -204,7 +204,7 @@ The following arguments are supported:
 
 
 
-## GetConsumerGroups Result
+## GetConsumerGroups Result {#result}
 
 The following output properties are available:
 

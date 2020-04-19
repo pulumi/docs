@@ -18,10 +18,10 @@ This data source provides a list of DNS Resolution Lines in an Alibaba Cloud acc
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const resolutionLinesDs = alicloud.dns.getResolutionLines({
+const resolutionLinesDs = pulumi.output(alicloud.dns.getResolutionLines({
     lineCodes: ["cn_unicom_shanxi"],
     outputFile: "support_lines.txt",
-});
+}, { async: true }));
 
 export const firstLineCode = resolutionLinesDs.lines[0].lineCode;
 ```
@@ -33,7 +33,7 @@ export const firstLineCode = resolutionLinesDs.lines[0].lineCode;
 
 
 
-## Using GetResolutionLines
+## Using GetResolutionLines {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -343,7 +343,7 @@ The following arguments are supported:
 
 
 
-## GetResolutionLines Result
+## GetResolutionLines Result {#result}
 
 The following output properties are available:
 
@@ -690,7 +690,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Resolution<wbr>Lines<wbr>Line</h4>
+
+<h4 id="getresolutionlinesline">Get<wbr>Resolution<wbr>Lines<wbr>Line</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetResolutionLinesLine">output</a> API doc for this type.
 {{% /choosable %}}

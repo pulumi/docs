@@ -18,9 +18,9 @@ This data source provides available notification resources.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const ds = alicloud.ess.getNotifications({
+const ds = pulumi.output(alicloud.ess.getNotifications({
     scalingGroupId: "scaling_group_id",
-});
+}, { async: true }));
 
 export const firstNotification = ds.notifications[0].id;
 ```
@@ -32,7 +32,7 @@ export const firstNotification = ds.notifications[0].id;
 
 
 
-## Using GetNotifications
+## Using GetNotifications {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -202,7 +202,7 @@ The following arguments are supported:
 
 
 
-## GetNotifications Result
+## GetNotifications Result {#result}
 
 The following output properties are available:
 
@@ -421,7 +421,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Notifications<wbr>Notification</h4>
+
+<h4 id="getnotificationsnotification">Get<wbr>Notifications<wbr>Notification</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetNotificationsNotification">output</a> API doc for this type.
 {{% /choosable %}}

@@ -26,20 +26,19 @@ const securityGroupId = config.require("securityGroupId");
 
 // Or get it from the alicloud.ecs.getSecurityGroups data source.
 // Please note that the data source arguments must be enough to filter results to one security group.
-const groupsDs = alicloud.ecs.getSecurityGroups({
+const groupsDs = pulumi.output(alicloud.ecs.getSecurityGroups({
     nameRegex: "api",
-});
+}, { async: true }));
 // Filter the security group rule by group
-const ingressRulesDs = alicloud.ecs.getSecurityGroupRules({
+const ingressRulesDs = groupsDs.apply(groupsDs => alicloud.ecs.getSecurityGroupRules({
     direction: "ingress",
-    groupId: groupsDs.groups[0].id, // or ${var.security_group_id}
+    groupId: groupsDs.groups[0].id,
     ipProtocol: "TCP",
     nicType: "internet",
-});
+}, { async: true }));
 // Pass port_range to the backend service
 const backend = new alicloud.ecs.Instance("backend", {
-    // ...
-    userData: `config_service.sh --portrange=${ingressRulesDs.rules[0].portRange}`,
+    userData: pulumi.interpolate`config_service.sh --portrange=${ingressRulesDs.rules[0].portRange}`,
 });
 ```
 
@@ -50,7 +49,7 @@ const backend = new alicloud.ecs.Instance("backend", {
 
 
 
-## Using GetSecurityGroupRules
+## Using GetSecurityGroupRules {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -328,7 +327,7 @@ The following arguments are supported:
 
 
 
-## GetSecurityGroupRules Result
+## GetSecurityGroupRules Result {#result}
 
 The following output properties are available:
 
@@ -723,7 +722,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Security<wbr>Group<wbr>Rules<wbr>Rule</h4>
+
+<h4 id="getsecuritygrouprulesrule">Get<wbr>Security<wbr>Group<wbr>Rules<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetSecurityGroupRulesRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1195,20 +1195,20 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span>source<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>source_<wbr>cidr_<wbr>ip</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Source IP address segment for ingress authorization.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>source<wbr>Group<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">

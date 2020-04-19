@@ -19,13 +19,13 @@ system disk types available in Alibaba Cloud account when create a emr cluster.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultDiskTypes = alicloud.emr.getDiskTypes({
+const defaultDiskTypes = pulumi.output(alicloud.emr.getDiskTypes({
     clusterType: "HADOOP",
     destinationResource: "DataDisk",
     instanceChargeType: "PostPaid",
     instanceType: "ecs.g5.xlarge",
     zoneId: "cn-huhehaote-a",
-});
+}, { async: true }));
 
 export const dataDiskType = defaultDiskTypes.types[0].value;
 ```
@@ -37,7 +37,7 @@ export const dataDiskType = defaultDiskTypes.types[0].value;
 
 
 
-## Using GetDiskTypes
+## Using GetDiskTypes {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -315,7 +315,7 @@ The following arguments are supported:
 
 
 
-## GetDiskTypes Result
+## GetDiskTypes Result {#result}
 
 The following output properties are available:
 
@@ -658,7 +658,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Disk<wbr>Types<wbr>Type</h4>
+
+<h4 id="getdisktypestype">Get<wbr>Disk<wbr>Types<wbr>Type</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetDiskTypesType">output</a> API doc for this type.
 {{% /choosable %}}

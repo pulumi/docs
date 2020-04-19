@@ -16,10 +16,10 @@ This data source provides a list of MNS topic subscriptions in an Alibaba Cloud 
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const subscriptions = alicloud.mns.getTopicSubscriptions({
+const subscriptions = pulumi.output(alicloud.mns.getTopicSubscriptions({
     namePrefix: "tf-",
     topicName: "topic_name",
-});
+}, { async: true }));
 
 export const firstTopicSubscriptionId = subscriptions.subscriptions[0].id;
 ```
@@ -31,7 +31,7 @@ export const firstTopicSubscriptionId = subscriptions.subscriptions[0].id;
 
 
 
-## Using GetTopicSubscriptions
+## Using GetTopicSubscriptions {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -201,7 +201,7 @@ The following arguments are supported:
 
 
 
-## GetTopicSubscriptions Result
+## GetTopicSubscriptions Result {#result}
 
 The following output properties are available:
 
@@ -448,7 +448,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Topic<wbr>Subscriptions<wbr>Subscription</h4>
+
+<h4 id="gettopicsubscriptionssubscription">Get<wbr>Topic<wbr>Subscriptions<wbr>Subscription</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetTopicSubscriptionsSubscription">output</a> API doc for this type.
 {{% /choosable %}}

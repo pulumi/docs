@@ -18,9 +18,9 @@ This data source provides a list of Anti-DDoS Advanced instances in an Alibaba C
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const instanceDdosBgpInstances = alicloud.ddos.getDdosBgpInstances({
+const instanceDdosBgpInstances = pulumi.output(alicloud.ddos.getDdosBgpInstances({
     nameRegex: "^ddosbgp",
-});
+}, { async: true }));
 
 export const instance = alicloud_ddosbgp_instances_instance.map(v => v.id);
 ```
@@ -32,7 +32,7 @@ export const instance = alicloud_ddosbgp_instances_instance.map(v => v.id);
 
 
 
-## Using GetDdosBgpInstances
+## Using GetDdosBgpInstances {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -202,7 +202,7 @@ The following arguments are supported:
 
 
 
-## GetDdosBgpInstances Result
+## GetDdosBgpInstances Result {#result}
 
 The following output properties are available:
 
@@ -453,7 +453,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Ddos<wbr>Bgp<wbr>Instances<wbr>Instance</h4>
+
+<h4 id="getddosbgpinstancesinstance">Get<wbr>Ddos<wbr>Bgp<wbr>Instances<wbr>Instance</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetDdosBgpInstancesInstance">output</a> API doc for this type.
 {{% /choosable %}}

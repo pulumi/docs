@@ -17,15 +17,15 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 // Filter security groups and print the results into a file
-const secGroupsDs = alicloud.ecs.getSecurityGroups({
+const secGroupsDs = pulumi.output(alicloud.ecs.getSecurityGroups({
     nameRegex: "^web-",
     outputFile: "web_access.json",
-});
+}, { async: true }));
 // In conjunction with a VPC
 const primaryVpcDs = new alicloud.vpc.Network("primary_vpc_ds", {});
 const primarySecGroupsDs = primaryVpcDs.id.apply(id => alicloud.ecs.getSecurityGroups({
     vpcId: id,
-}));
+}, { async: true }));
 
 export const firstGroupId = primarySecGroupsDs.groups[0].id;
 ```
@@ -37,7 +37,7 @@ export const firstGroupId = primarySecGroupsDs.groups[0].id;
 
 
 
-## Using GetSecurityGroups
+## Using GetSecurityGroups {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -347,7 +347,7 @@ tagKey2 = "tagValue2"
 
 
 
-## GetSecurityGroups Result
+## GetSecurityGroups Result {#result}
 
 The following output properties are available:
 
@@ -706,7 +706,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Security<wbr>Groups<wbr>Group</h4>
+
+<h4 id="getsecuritygroupsgroup">Get<wbr>Security<wbr>Groups<wbr>Group</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetSecurityGroupsGroup">output</a> API doc for this type.
 {{% /choosable %}}

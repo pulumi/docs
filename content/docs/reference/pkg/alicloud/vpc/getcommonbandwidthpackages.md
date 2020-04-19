@@ -25,7 +25,7 @@ const fooCommonBandwithPackage = new alicloud.vpc.CommonBandwithPackage("foo", {
 const fooCommonBandwidthPackages = fooCommonBandwithPackage.id.apply(id => alicloud.vpc.getCommonBandwidthPackages({
     ids: [id],
     nameRegex: "^tf-testAcc.*",
-}));
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -41,7 +41,7 @@ const fooCommonBandwidthPackages = fooCommonBandwithPackage.id.apply(id => alicl
 
 
 
-## Using GetCommonBandwidthPackages
+## Using GetCommonBandwidthPackages {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -247,7 +247,7 @@ The following arguments are supported:
 
 
 
-## GetCommonBandwidthPackages Result
+## GetCommonBandwidthPackages Result {#result}
 
 The following output properties are available:
 
@@ -534,7 +534,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Common<wbr>Bandwidth<wbr>Packages<wbr>Package</h4>
+
+<h4 id="getcommonbandwidthpackagespackage">Get<wbr>Common<wbr>Bandwidth<wbr>Packages<wbr>Package</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetCommonBandwidthPackagesPackage">output</a> API doc for this type.
 {{% /choosable %}}
@@ -937,7 +938,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Common<wbr>Bandwidth<wbr>Packages<wbr>Package<wbr>Public<wbr>Ip<wbr>Address</h4>
+<h4 id="getcommonbandwidthpackagespackagepublicipaddress">Get<wbr>Common<wbr>Bandwidth<wbr>Packages<wbr>Package<wbr>Public<wbr>Ip<wbr>Address</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetCommonBandwidthPackagesPackagePublicIpAddress">output</a> API doc for this type.
 {{% /choosable %}}

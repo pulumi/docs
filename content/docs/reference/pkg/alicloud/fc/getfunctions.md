@@ -16,10 +16,10 @@ This data source provides the Function Compute functions of the current Alibaba 
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const functionsDs = alicloud.fc.getFunctions({
+const functionsDs = pulumi.output(alicloud.fc.getFunctions({
     nameRegex: "sample_fc_function",
     serviceName: "sample_service",
-});
+}, { async: true }));
 
 export const firstFcFunctionName = functionsDs.functions[0].name;
 ```
@@ -31,7 +31,7 @@ export const firstFcFunctionName = functionsDs.functions[0].name;
 
 
 
-## Using GetFunctions
+## Using GetFunctions {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -241,7 +241,7 @@ The following arguments are supported:
 
 
 
-## GetFunctions Result
+## GetFunctions Result {#result}
 
 The following output properties are available:
 
@@ -524,7 +524,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Functions<wbr>Function</h4>
+
+<h4 id="getfunctionsfunction">Get<wbr>Functions<wbr>Function</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetFunctionsFunction">output</a> API doc for this type.
 {{% /choosable %}}
@@ -886,20 +887,20 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>code_<wbr>checksum</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Checksum (crc64) of the function code.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>code<wbr>Size</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Function code size in bytes.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>code_<wbr>checksum</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Checksum (crc64) of the function code.
 {{% /md %}}</dd>
 
     <dt class="property-required"

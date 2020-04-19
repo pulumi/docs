@@ -17,10 +17,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 // Declare the data source
-const kmsKeysDs = alicloud.kms.getKeys({
+const kmsKeysDs = pulumi.output(alicloud.kms.getKeys({
     descriptionRegex: "Hello KMS",
     outputFile: "kms_keys.json",
-});
+}, { async: true }));
 
 export const firstKeyId = kmsKeysDs.keys[0].id;
 ```
@@ -32,7 +32,7 @@ export const firstKeyId = kmsKeysDs.keys[0].id;
 
 
 
-## Using GetKeys
+## Using GetKeys {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -238,7 +238,7 @@ The following arguments are supported:
 
 
 
-## GetKeys Result
+## GetKeys Result {#result}
 
 The following output properties are available:
 
@@ -489,7 +489,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Keys<wbr>Key</h4>
+
+<h4 id="getkeyskey">Get<wbr>Keys<wbr>Key</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetKeysKey">output</a> API doc for this type.
 {{% /choosable %}}

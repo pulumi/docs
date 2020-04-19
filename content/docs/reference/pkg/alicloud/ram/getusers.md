@@ -16,13 +16,13 @@ This data source provides a list of RAM users in an Alibaba Cloud account accord
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const usersDs = alicloud.ram.getUsers({
+const usersDs = pulumi.output(alicloud.ram.getUsers({
     groupName: "group1",
     nameRegex: "^user",
     outputFile: "users.txt",
     policyName: "AliyunACSDefaultAccess",
     policyType: "Custom",
-});
+}, { async: true }));
 
 export const firstUserId = usersDs.users[0].id;
 ```
@@ -34,7 +34,7 @@ export const firstUserId = usersDs.users[0].id;
 
 
 
-## Using GetUsers
+## Using GetUsers {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -316,7 +316,7 @@ The following arguments are supported:
 
 
 
-## GetUsers Result
+## GetUsers Result {#result}
 
 The following output properties are available:
 
@@ -663,7 +663,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Users<wbr>User</h4>
+
+<h4 id="getusersuser">Get<wbr>Users<wbr>User</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetUsersUser">output</a> API doc for this type.
 {{% /choosable %}}

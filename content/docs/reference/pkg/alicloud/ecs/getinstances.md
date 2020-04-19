@@ -16,10 +16,10 @@ The Instances data source list ECS instance resources according to their ID, nam
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const instancesDs = alicloud.ecs.getInstances({
+const instancesDs = pulumi.output(alicloud.ecs.getInstances({
     nameRegex: "web_server",
     status: "Running",
-});
+}, { async: true }));
 
 export const firstInstanceId = instancesDs.instances[0].id;
 export const instanceIds = instancesDs.ids!;
@@ -32,7 +32,7 @@ export const instanceIds = instancesDs.ids!;
 
 
 
-## Using GetInstances
+## Using GetInstances {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -522,7 +522,7 @@ tagKey2 = "tagValue2"
 
 
 
-## GetInstances Result
+## GetInstances Result {#result}
 
 The following output properties are available:
 
@@ -1061,7 +1061,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Instances<wbr>Instance</h4>
+
+<h4 id="getinstancesinstance">Get<wbr>Instances<wbr>Instance</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstancesInstance">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2000,7 +2001,7 @@ tagKey2 = "tagValue2"
 
 
 
-<h4>Get<wbr>Instances<wbr>Instance<wbr>Disk<wbr>Device<wbr>Mapping</h4>
+<h4 id="getinstancesinstancediskdevicemapping">Get<wbr>Instances<wbr>Instance<wbr>Disk<wbr>Device<wbr>Mapping</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstancesInstanceDiskDeviceMapping">output</a> API doc for this type.
 {{% /choosable %}}

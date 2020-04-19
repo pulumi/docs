@@ -16,9 +16,9 @@ This data source provides Alibaba Cloud regions.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const currentRegionDs = alicloud.getRegions({
+const currentRegionDs = pulumi.output(alicloud.getRegions({
     current: true,
-});
+}, { async: true }));
 
 export const currentRegionId = currentRegionDs.regions[0].id;
 ```
@@ -30,7 +30,7 @@ export const currentRegionId = currentRegionDs.regions[0].id;
 
 
 
-## Using GetRegions
+## Using GetRegions {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -200,7 +200,7 @@ The following arguments are supported:
 
 
 
-## GetRegions Result
+## GetRegions Result {#result}
 
 The following output properties are available:
 
@@ -447,7 +447,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Regions<wbr>Region</h4>
+
+<h4 id="getregionsregion">Get<wbr>Regions<wbr>Region</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetRegionsRegion">output</a> API doc for this type.
 {{% /choosable %}}

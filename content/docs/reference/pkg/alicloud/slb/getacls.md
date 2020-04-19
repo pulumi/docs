@@ -16,7 +16,7 @@ This data source provides the acls in the region.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const sampleDs = alicloud.slb.getAcls();
+const sampleDs = pulumi.output(alicloud.slb.getAcls({ async: true }));
 
 export const firstSlbAclId = sampleDs.acls[0].id;
 ```
@@ -43,7 +43,7 @@ The Listener mapping supports the following:
 
 
 
-## Using GetAcls
+## Using GetAcls {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -285,7 +285,7 @@ The following arguments are supported:
 
 
 
-## GetAcls Result
+## GetAcls Result {#result}
 
 The following output properties are available:
 
@@ -608,7 +608,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Acls<wbr>Acl</h4>
+
+<h4 id="getaclsacl">Get<wbr>Acls<wbr>Acl</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetAclsAcl">output</a> API doc for this type.
 {{% /choosable %}}
@@ -899,7 +900,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Acls<wbr>Acl<wbr>Entry<wbr>List</h4>
+<h4 id="getaclsaclentrylist">Get<wbr>Acls<wbr>Acl<wbr>Entry<wbr>List</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetAclsAclEntryList">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1006,7 +1007,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Acls<wbr>Acl<wbr>Related<wbr>Listener</h4>
+<h4 id="getaclsaclrelatedlistener">Get<wbr>Acls<wbr>Acl<wbr>Related<wbr>Listener</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetAclsAclRelatedListener">output</a> API doc for this type.
 {{% /choosable %}}

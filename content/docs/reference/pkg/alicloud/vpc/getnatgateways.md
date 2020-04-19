@@ -21,9 +21,9 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const name = config.get("name") || "natGatewaysDatasource";
 
-const defaultZones = alicloud.getZones({
+const defaultZones = pulumi.output(alicloud.getZones({
     availableResourceCreation: "VSwitch",
-});
+}, { async: true }));
 const fooNetwork = new alicloud.vpc.Network("foo", {
     cidrBlock: "172.16.0.0/12",
 });
@@ -35,7 +35,7 @@ const fooNatGateways = pulumi.all([fooNatGateway.id, fooNatGateway.name, fooNetw
     ids: [fooNatGatewayId],
     nameRegex: name,
     vpcId: fooNetworkId,
-}));
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -45,7 +45,7 @@ const fooNatGateways = pulumi.all([fooNatGateway.id, fooNatGateway.name, fooNetw
 
 
 
-## Using GetNatGateways
+## Using GetNatGateways {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -251,7 +251,7 @@ The following arguments are supported:
 
 
 
-## GetNatGateways Result
+## GetNatGateways Result {#result}
 
 The following output properties are available:
 
@@ -538,7 +538,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Nat<wbr>Gateways<wbr>Gateway</h4>
+
+<h4 id="getnatgatewaysgateway">Get<wbr>Nat<wbr>Gateways<wbr>Gateway</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetNatGatewaysGateway">output</a> API doc for this type.
 {{% /choosable %}}

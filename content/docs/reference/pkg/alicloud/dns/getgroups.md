@@ -16,10 +16,10 @@ This data source provides a list of DNS Domain Groups in an Alibaba Cloud accoun
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const groupsDs = alicloud.dns.getGroups({
+const groupsDs = pulumi.output(alicloud.dns.getGroups({
     nameRegex: "^y[A-Za-z]+",
     outputFile: "groups.txt",
-});
+}, { async: true }));
 
 export const firstGroupName = groupsDs.groups[0].groupName;
 ```
@@ -31,7 +31,7 @@ export const firstGroupName = groupsDs.groups[0].groupName;
 
 
 
-## Using GetGroups
+## Using GetGroups {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -201,7 +201,7 @@ The following arguments are supported:
 
 
 
-## GetGroups Result
+## GetGroups Result {#result}
 
 The following output properties are available:
 
@@ -452,7 +452,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Groups<wbr>Group</h4>
+
+<h4 id="getgroupsgroup">Get<wbr>Groups<wbr>Group</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetGroupsGroup">output</a> API doc for this type.
 {{% /choosable %}}

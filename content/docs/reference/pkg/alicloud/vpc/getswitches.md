@@ -19,7 +19,7 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const name = config.get("name") || "vswitchDatasourceName";
 
-const defaultZones = alicloud.getZones();
+const defaultZones = pulumi.output(alicloud.getZones({ async: true }));
 const vpc = new alicloud.vpc.Network("vpc", {
     cidrBlock: "172.16.0.0/16",
 });
@@ -30,7 +30,7 @@ const vswitch = new alicloud.vpc.Switch("vswitch", {
 });
 const defaultSwitches = vswitch.name.apply(name => alicloud.vpc.getSwitches({
     nameRegex: name,
-}));
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -40,7 +40,7 @@ const defaultSwitches = vswitch.name.apply(name => alicloud.vpc.getSwitches({
 
 
 
-## Using GetSwitches
+## Using GetSwitches {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -426,7 +426,7 @@ The following arguments are supported:
 
 
 
-## GetSwitches Result
+## GetSwitches Result {#result}
 
 The following output properties are available:
 
@@ -885,7 +885,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Switches<wbr>Vswitch</h4>
+
+<h4 id="getswitchesvswitch">Get<wbr>Switches<wbr>Vswitch</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetSwitchesVswitch">output</a> API doc for this type.
 {{% /choosable %}}

@@ -16,11 +16,11 @@ This data source provides VPCs available to the user.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const vpcsDs = alicloud.vpc.getNetworks({
+const vpcsDs = pulumi.output(alicloud.vpc.getNetworks({
     cidrBlock: "172.16.0.0/12",
     nameRegex: "^foo",
     status: "Available",
-});
+}, { async: true }));
 
 export const firstVpcId = vpcsDs.vpcs[0].id;
 ```
@@ -32,7 +32,7 @@ export const firstVpcId = vpcsDs.vpcs[0].id;
 
 
 
-## Using GetNetworks
+## Using GetNetworks {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -418,7 +418,7 @@ The following arguments are supported:
 
 
 
-## GetNetworks Result
+## GetNetworks Result {#result}
 
 The following output properties are available:
 
@@ -877,7 +877,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Networks<wbr>Vpc</h4>
+
+<h4 id="getnetworksvpc">Get<wbr>Networks<wbr>Vpc</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetNetworksVpc">output</a> API doc for this type.
 {{% /choosable %}}

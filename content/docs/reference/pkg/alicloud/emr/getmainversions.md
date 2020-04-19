@@ -19,13 +19,13 @@ main versions available in Alibaba Cloud account when create a emr cluster.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultMainVersions = alicloud.emr.getMainVersions({
+const defaultMainVersions = pulumi.output(alicloud.emr.getMainVersions({
     clusterTypes: [
         "HADOOP",
         "ZOOKEEPER",
     ],
     emrVersion: "EMR-3.22.0",
-});
+}, { async: true }));
 
 export const firstMainVersion = defaultMainVersions.mainVersions[0].emrVersion;
 export const thisClusterTypes = defaultMainVersions.mainVersions[0].clusterTypes;
@@ -38,7 +38,7 @@ export const thisClusterTypes = defaultMainVersions.mainVersions[0].clusterTypes
 
 
 
-## Using GetMainVersions
+## Using GetMainVersions {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -212,7 +212,7 @@ Possible values may be any one or combination of these: ["HADOOP", "DRUID", "KAF
 
 
 
-## GetMainVersions Result
+## GetMainVersions Result {#result}
 
 The following output properties are available:
 
@@ -463,7 +463,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Main<wbr>Versions<wbr>Main<wbr>Version</h4>
+
+<h4 id="getmainversionsmainversion">Get<wbr>Main<wbr>Versions<wbr>Main<wbr>Version</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetMainVersionsMainVersion">output</a> API doc for this type.
 {{% /choosable %}}

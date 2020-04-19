@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="ddosbgpinstance" title="DdosBgpInstance"><span class="symbol resource"></span>DdosBgpInstance</a></li>
     <li><a href="ddoscooinstance" title="DdosCooInstance"><span class="symbol resource"></span>DdosCooInstance</a></li>
@@ -17,7 +17,7 @@ block_external_search_index: true
     <li><a href="record" title="Record"><span class="symbol resource"></span>Record</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getdomaingroups" title="GetDomainGroups"><span class="symbol function"></span>GetDomainGroups</a></li>
     <li><a href="getdomainrecords" title="GetDomainRecords"><span class="symbol function"></span>GetDomainRecords</a></li>
@@ -27,7 +27,7 @@ block_external_search_index: true
     <li><a href="getresolutionlines" title="GetResolutionLines"><span class="symbol function"></span>GetResolutionLines</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>

@@ -18,16 +18,16 @@ This data source provides the KVStore instance classes resource available info o
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const resourcesZones = alicloud.getZones({
+const resourcesZones = pulumi.output(alicloud.getZones({
     availableResourceCreation: "KVStore",
-});
-const resourcesInstanceClasses = alicloud.kvstore.getInstanceClasses({
+}, { async: true }));
+const resourcesInstanceClasses = resourcesZones.apply(resourcesZones => alicloud.kvstore.getInstanceClasses({
     engine: "Redis",
     engineVersion: "5.0",
     instanceChargeType: "PrePaid",
     outputFile: "./classes.txt",
     zoneId: resourcesZones.zones[0].id,
-});
+}, { async: true }));
 
 export const firstKvstoreInstanceClass = resourcesInstanceClasses.instanceClasses;
 ```
@@ -39,7 +39,7 @@ export const firstKvstoreInstanceClass = resourcesInstanceClasses.instanceClasse
 
 
 
-## Using GetInstanceClasses
+## Using GetInstanceClasses {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -601,7 +601,7 @@ The following arguments are supported:
 
 
 
-## GetInstanceClasses Result
+## GetInstanceClasses Result {#result}
 
 The following output properties are available:
 
@@ -1200,7 +1200,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Instance<wbr>Classes<wbr>Class</h4>
+
+<h4 id="getinstanceclassesclass">Get<wbr>Instance<wbr>Classes<wbr>Class</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstanceClassesClass">output</a> API doc for this type.
 {{% /choosable %}}

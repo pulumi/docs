@@ -16,9 +16,9 @@ This data source provides the disks of the current Alibaba Cloud user.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const disksDs = alicloud.ecs.getDisks({
+const disksDs = pulumi.output(alicloud.ecs.getDisks({
     nameRegex: "sample_disk",
-});
+}, { async: true }));
 
 export const firstDiskId = disksDs.disks[0].id;
 ```
@@ -30,7 +30,7 @@ export const firstDiskId = disksDs.disks[0].id;
 
 
 
-## Using GetDisks
+## Using GetDisks {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -448,7 +448,7 @@ tagKey2 = "tagValue2"
 
 
 
-## GetDisks Result
+## GetDisks Result {#result}
 
 The following output properties are available:
 
@@ -875,7 +875,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Disks<wbr>Disk</h4>
+
+<h4 id="getdisksdisk">Get<wbr>Disks<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetDisksDisk">output</a> API doc for this type.
 {{% /choosable %}}

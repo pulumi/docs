@@ -18,9 +18,9 @@ This data source compute file crc64 checksum.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultFileCrc64Checksum = alicloud.getFileCrc64Checksum({
+const defaultFileCrc64Checksum = pulumi.output(alicloud.getFileCrc64Checksum({
     filename: "exampleFileName",
-});
+}, { async: true }));
 
 export const fileCrc64Checksum = alicloud_file_crc64_checksum_defualt.checksum;
 ```
@@ -31,7 +31,7 @@ export const fileCrc64Checksum = alicloud_file_crc64_checksum_defualt.checksum;
 
 
 
-## Using GetFileCrc64Checksum
+## Using GetFileCrc64Checksum {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -165,7 +165,7 @@ The following arguments are supported:
 
 
 
-## GetFileCrc64Checksum Result
+## GetFileCrc64Checksum Result {#result}
 
 The following output properties are available:
 

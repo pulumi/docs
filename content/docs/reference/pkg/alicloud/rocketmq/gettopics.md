@@ -35,7 +35,7 @@ const topicsDs = defaultTopic.instanceId.apply(instanceId => alicloud.rocketmq.g
     instanceId: instanceId,
     nameRegex: topic,
     outputFile: "topics.txt",
-}));
+}, { async: true }));
 
 export const firstTopicName = topicsDs.topics[0].topic;
 ```
@@ -47,7 +47,7 @@ export const firstTopicName = topicsDs.topics[0].topic;
 
 
 
-## Using GetTopics
+## Using GetTopics {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -217,7 +217,7 @@ The following arguments are supported:
 
 
 
-## GetTopics Result
+## GetTopics Result {#result}
 
 The following output properties are available:
 
@@ -464,7 +464,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Topics<wbr>Topic</h4>
+
+<h4 id="gettopicstopic">Get<wbr>Topics<wbr>Topic</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetTopicsTopic">output</a> API doc for this type.
 {{% /choosable %}}

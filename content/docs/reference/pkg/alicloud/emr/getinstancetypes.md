@@ -19,7 +19,7 @@ instance types available in Alibaba Cloud account when create a emr cluster.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultInstanceTypes = alicloud.emr.getInstanceTypes({
+const defaultInstanceTypes = pulumi.output(alicloud.emr.getInstanceTypes({
     clusterType: "HADOOP",
     destinationResource: "InstanceType",
     instanceChargeType: "PostPaid",
@@ -29,7 +29,7 @@ const defaultInstanceTypes = alicloud.emr.getInstanceTypes({
         "MASTER",
         "CORE",
     ],
-});
+}, { async: true }));
 
 export const firstInstanceType = defaultInstanceTypes.types[0].id;
 ```
@@ -41,7 +41,7 @@ export const firstInstanceType = defaultInstanceTypes.types[0].id;
 
 
 
-## Using GetInstanceTypes
+## Using GetInstanceTypes {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -395,7 +395,7 @@ Possible values may be any one or combination of these: ["MASTER", "CORE", "TASK
 
 
 
-## GetInstanceTypes Result
+## GetInstanceTypes Result {#result}
 
 The following output properties are available:
 
@@ -806,7 +806,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Instance<wbr>Types<wbr>Type</h4>
+
+<h4 id="getinstancetypestype">Get<wbr>Instance<wbr>Types<wbr>Type</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstanceTypesType">output</a> API doc for this type.
 {{% /choosable %}}

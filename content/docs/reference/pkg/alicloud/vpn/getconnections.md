@@ -16,12 +16,12 @@ The VPN connections data source lists lots of VPN connections resource informati
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const foo = alicloud.vpn.getConnections({
+const foo = pulumi.output(alicloud.vpn.getConnections({
     customerGatewayId: "fake-cgw-id",
     ids: ["fake-conn-id"],
     outputFile: "/tmp/vpnconn",
     vpnGatewayId: "fake-vpn-id",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -31,7 +31,7 @@ const foo = alicloud.vpn.getConnections({
 
 
 
-## Using GetConnections
+## Using GetConnections {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -277,7 +277,7 @@ The following arguments are supported:
 
 
 
-## GetConnections Result
+## GetConnections Result {#result}
 
 The following output properties are available:
 
@@ -600,7 +600,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Connections<wbr>Connection</h4>
+
+<h4 id="getconnectionsconnection">Get<wbr>Connections<wbr>Connection</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetConnectionsConnection">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1031,7 +1032,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Connections<wbr>Connection<wbr>Ike<wbr>Config</h4>
+<h4 id="getconnectionsconnectionikeconfig">Get<wbr>Connections<wbr>Connection<wbr>Ike<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetConnectionsConnectionIkeConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1398,7 +1399,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Connections<wbr>Connection<wbr>Ipsec<wbr>Config</h4>
+<h4 id="getconnectionsconnectionipsecconfig">Get<wbr>Connections<wbr>Connection<wbr>Ipsec<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetConnectionsConnectionIpsecConfig">output</a> API doc for this type.
 {{% /choosable %}}

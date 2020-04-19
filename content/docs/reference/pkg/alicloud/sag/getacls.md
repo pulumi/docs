@@ -25,7 +25,7 @@ import * as alicloud from "@pulumi/alicloud";
 const defaultAcls = alicloud_sag_acls_default.id.apply(id => alicloud.sag.getAcls({
     ids: [id],
     nameRegex: "^tf-testAcc.*",
-}));
+}, { async: true }));
 const defaultAcl = new alicloud.rocketmq.Acl("default", {});
 ```
 {{% /example %}}
@@ -35,7 +35,7 @@ const defaultAcl = new alicloud.rocketmq.Acl("default", {});
 
 
 
-## Using GetAcls
+## Using GetAcls {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -205,7 +205,7 @@ The following arguments are supported:
 
 
 
-## GetAcls Result
+## GetAcls Result {#result}
 
 The following output properties are available:
 
@@ -456,7 +456,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Acls<wbr>Acl</h4>
+
+<h4 id="getaclsacl">Get<wbr>Acls<wbr>Acl</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetAclsAcl">output</a> API doc for this type.
 {{% /choosable %}}

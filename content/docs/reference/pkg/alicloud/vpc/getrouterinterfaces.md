@@ -17,10 +17,10 @@ that connect VPCs together.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const routerInterfacesDs = alicloud.vpc.getRouterInterfaces({
+const routerInterfacesDs = pulumi.output(alicloud.vpc.getRouterInterfaces({
     nameRegex: "^testenv",
     status: "Active",
-});
+}, { async: true }));
 
 export const firstRouterInterfaceId = routerInterfacesDs.interfaces[0].id;
 ```
@@ -32,7 +32,7 @@ export const firstRouterInterfaceId = routerInterfacesDs.interfaces[0].id;
 
 
 
-## Using GetRouterInterfaces
+## Using GetRouterInterfaces {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -458,7 +458,7 @@ The following arguments are supported:
 
 
 
-## GetRouterInterfaces Result
+## GetRouterInterfaces Result {#result}
 
 The following output properties are available:
 
@@ -961,7 +961,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Router<wbr>Interfaces<wbr>Interface</h4>
+
+<h4 id="getrouterinterfacesinterface">Get<wbr>Router<wbr>Interfaces<wbr>Interface</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetRouterInterfacesInterface">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1551,6 +1552,15 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span>opposite<wbr>Region<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Peer router region ID.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>opposite_<wbr>interface_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1565,15 +1575,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Account ID of the owner of the peer router interface.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>opposite<wbr>Region<wbr>Id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Peer router region ID.
 {{% /md %}}</dd>
 
     <dt class="property-required"

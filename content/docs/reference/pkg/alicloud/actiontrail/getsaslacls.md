@@ -18,13 +18,13 @@ This data source provides a list of ALIKAFKA Sasl acls in an Alibaba Cloud accou
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const saslAclsDs = alicloud.actiontrail.getSaslAcls({
+const saslAclsDs = pulumi.output(alicloud.actiontrail.getSaslAcls({
     aclResourceName: "testTopic",
     aclResourceType: "Topic",
     instanceId: "xxx",
     outputFile: "saslAcls.txt",
     username: "username",
-});
+}, { async: true }));
 
 export const firstSaslAclUsername = saslAclsDs.acls[0].username;
 ```
@@ -36,7 +36,7 @@ export const firstSaslAclUsername = saslAclsDs.acls[0].username;
 
 
 
-## Using GetSaslAcls
+## Using GetSaslAcls {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -278,7 +278,7 @@ The following arguments are supported:
 
 
 
-## GetSaslAcls Result
+## GetSaslAcls Result {#result}
 
 The following output properties are available:
 
@@ -565,7 +565,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Sasl<wbr>Acls<wbr>Acl</h4>
+
+<h4 id="getsaslaclsacl">Get<wbr>Sasl<wbr>Acls<wbr>Acl</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetSaslAclsAcl">output</a> API doc for this type.
 {{% /choosable %}}

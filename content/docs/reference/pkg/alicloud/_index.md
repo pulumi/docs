@@ -11,7 +11,7 @@ menu:
 
 A Pulumi package for creating and managing AliCloud resources.
 
-<h3>Modules</h3>
+<h2 id="modules">Modules</h2>
 <ul class="api">
     <li><a href="actiontrail/" title="actiontrail"><span class="symbol module"></span>actiontrail</a></li>
     <li><a href="adb/" title="adb"><span class="symbol module"></span>adb</a></li>
@@ -57,12 +57,12 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="yundun/" title="yundun"><span class="symbol module"></span>yundun</a></li>
 </ul>
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
     <li><a href="getcalleridentity" title="GetCallerIdentity"><span class="symbol function"></span>GetCallerIdentity</a></li>
@@ -71,7 +71,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="getzones" title="GetZones"><span class="symbol function"></span>GetZones</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>

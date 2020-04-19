@@ -19,10 +19,10 @@ Filters support regular expression for the cluster description, searches by tags
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const polardbClustersDs = alicloud.polardb.getClusters({
+const polardbClustersDs = pulumi.output(alicloud.polardb.getClusters({
     descriptionRegex: "pc-\\w+",
     status: "Running",
-});
+}, { async: true }));
 
 export const firstPolardbClusterId = polardbClustersDs.clusters[0].id;
 ```
@@ -34,7 +34,7 @@ export const firstPolardbClusterId = polardbClustersDs.clusters[0].id;
 
 
 
-## Using GetClusters
+## Using GetClusters {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -320,7 +320,7 @@ The following arguments are supported:
 
 
 
-## GetClusters Result
+## GetClusters Result {#result}
 
 The following output properties are available:
 
@@ -675,7 +675,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Clusters<wbr>Cluster</h4>
+
+<h4 id="getclusterscluster">Get<wbr>Clusters<wbr>Cluster</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetClustersCluster">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1271,15 +1272,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>db_<wbr>node_<wbr>class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The db_node_class of the db_nodes.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>db<wbr>Node<wbr>Number</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1294,6 +1286,15 @@ The following output properties are available:
         <span class="property-type"><a href="#getclustersclusterdbnode">List[Get<wbr>Clusters<wbr>Cluster<wbr>Db<wbr>Node]</a></span>
     </dt>
     <dd>{{% md %}}The DBNodes of the PolarDB cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>db_<wbr>node_<wbr>class</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The db_node_class of the db_nodes.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1438,7 +1439,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Clusters<wbr>Cluster<wbr>Db<wbr>Node</h4>
+<h4 id="getclustersclusterdbnode">Get<wbr>Clusters<wbr>Cluster<wbr>Db<wbr>Node</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetClustersClusterDbNode">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1728,15 +1729,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>db_<wbr>node_<wbr>class</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The db_node_class of the db_nodes.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>db<wbr>Node<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1764,11 +1756,11 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>max_<wbr>connections</span>
+        <span>db_<wbr>node_<wbr>class</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The max_connections of the db_nodes.
+    <dd>{{% md %}}The db_node_class of the db_nodes.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1778,6 +1770,15 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The max_iops of the db_nodes.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>max_<wbr>connections</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The max_connections of the db_nodes.
 {{% /md %}}</dd>
 
     <dt class="property-required"

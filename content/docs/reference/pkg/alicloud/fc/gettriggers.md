@@ -16,11 +16,11 @@ This data source provides the Function Compute triggers of the current Alibaba C
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const fcTriggersDs = alicloud.fc.getTriggers({
+const fcTriggersDs = pulumi.output(alicloud.fc.getTriggers({
     functionName: "sample_function",
     nameRegex: "sample_fc_trigger",
     serviceName: "sample_service",
-});
+}, { async: true }));
 
 export const firstFcTriggerName = fcTriggersDs.triggers[0].name;
 ```
@@ -32,7 +32,7 @@ export const firstFcTriggerName = fcTriggersDs.triggers[0].name;
 
 
 
-## Using GetTriggers
+## Using GetTriggers {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -278,7 +278,7 @@ The following arguments are supported:
 
 
 
-## GetTriggers Result
+## GetTriggers Result {#result}
 
 The following output properties are available:
 
@@ -593,7 +593,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Triggers<wbr>Trigger</h4>
+
+<h4 id="gettriggerstrigger">Get<wbr>Triggers<wbr>Trigger</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetTriggersTrigger">output</a> API doc for this type.
 {{% /choosable %}}

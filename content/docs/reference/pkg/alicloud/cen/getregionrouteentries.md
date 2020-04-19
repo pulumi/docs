@@ -16,10 +16,10 @@ This data source provides CEN Regional Route Entries available to the user.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const entry = alicloud.cen.getRegionRouteEntries({
+const entry = pulumi.output(alicloud.cen.getRegionRouteEntries({
     instanceId: "cen-id1",
     regionId: "cn-beijing",
-});
+}, { async: true }));
 
 export const firstRegionRouteEntriesRouteEntryCidrBlock = entry.entries[0].cidrBlock;
 ```
@@ -31,7 +31,7 @@ export const firstRegionRouteEntriesRouteEntryCidrBlock = entry.entries[0].cidrB
 
 
 
-## Using GetRegionRouteEntries
+## Using GetRegionRouteEntries {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -201,7 +201,7 @@ The following arguments are supported:
 
 
 
-## GetRegionRouteEntries Result
+## GetRegionRouteEntries Result {#result}
 
 The following output properties are available:
 
@@ -412,7 +412,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Region<wbr>Route<wbr>Entries<wbr>Entry</h4>
+
+<h4 id="getregionrouteentriesentry">Get<wbr>Region<wbr>Route<wbr>Entries<wbr>Entry</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetRegionRouteEntriesEntry">output</a> API doc for this type.
 {{% /choosable %}}

@@ -18,7 +18,7 @@ import * as alicloud from "@pulumi/alicloud";
 
 const sampleDs = alicloud_slb_sample_slb.id.apply(id => alicloud.slb.getAttachments({
     loadBalancerId: id,
-}));
+}, { async: true }));
 
 export const firstSlbAttachmentInstanceId = sampleDs.slbAttachments[0].instanceId;
 ```
@@ -30,7 +30,7 @@ export const firstSlbAttachmentInstanceId = sampleDs.slbAttachments[0].instanceI
 
 
 
-## Using GetAttachments
+## Using GetAttachments {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -200,7 +200,7 @@ The following arguments are supported:
 
 
 
-## GetAttachments Result
+## GetAttachments Result {#result}
 
 The following output properties are available:
 
@@ -411,7 +411,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Attachments<wbr>Slb<wbr>Attachment</h4>
+
+<h4 id="getattachmentsslbattachment">Get<wbr>Attachments<wbr>Slb<wbr>Attachment</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetAttachmentsSlbAttachment">output</a> API doc for this type.
 {{% /choosable %}}

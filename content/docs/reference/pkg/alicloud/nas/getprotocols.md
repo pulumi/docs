@@ -18,11 +18,11 @@ Provide  a data source to retrieve the type of protocol used to create NAS file 
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultProtocols = alicloud.nas.getProtocols({
+const defaultProtocols = pulumi.output(alicloud.nas.getProtocols({
     outputFile: "protocols.txt",
     type: "Performance",
     zoneId: "cn-beijing-e",
-});
+}, { async: true }));
 
 export const nasProtocolsProtocol = defaultProtocols.protocols[0];
 ```
@@ -34,7 +34,7 @@ export const nasProtocolsProtocol = defaultProtocols.protocols[0];
 
 
 
-## Using GetProtocols
+## Using GetProtocols {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -204,7 +204,7 @@ The following arguments are supported:
 
 
 
-## GetProtocols Result
+## GetProtocols Result {#result}
 
 The following output properties are available:
 

@@ -16,10 +16,10 @@ This data source provides CEN Route Entries available to the user.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const entry = alicloud.cen.getRouteEntries({
+const entry = pulumi.output(alicloud.cen.getRouteEntries({
     instanceId: "cen-id1",
     routeTableId: "vtb-id1",
-});
+}, { async: true }));
 
 export const firstRouteEntriesRouteEntryCidrBlock = entry.entries[0].cidrBlock;
 ```
@@ -31,7 +31,7 @@ export const firstRouteEntriesRouteEntryCidrBlock = entry.entries[0].cidrBlock;
 
 
 
-## Using GetRouteEntries
+## Using GetRouteEntries {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -237,7 +237,7 @@ The following arguments are supported:
 
 
 
-## GetRouteEntries Result
+## GetRouteEntries Result {#result}
 
 The following output properties are available:
 
@@ -492,7 +492,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Route<wbr>Entries<wbr>Entry</h4>
+
+<h4 id="getrouteentriesentry">Get<wbr>Route<wbr>Entries<wbr>Entry</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetRouteEntriesEntry">output</a> API doc for this type.
 {{% /choosable %}}
@@ -800,20 +801,20 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>route_<wbr>table_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}ID of the route table of the VPC or VBR.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>route<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Type of the route entry, including "System", "Custom" and "BGP".
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>route_<wbr>table_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}ID of the route table of the VPC or VBR.
 {{% /md %}}</dd>
 
 </dl>
@@ -823,7 +824,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Route<wbr>Entries<wbr>Entry<wbr>Conflict</h4>
+<h4 id="getrouteentriesentryconflict">Get<wbr>Route<wbr>Entries<wbr>Entry<wbr>Conflict</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetRouteEntriesEntryConflict">output</a> API doc for this type.
 {{% /choosable %}}

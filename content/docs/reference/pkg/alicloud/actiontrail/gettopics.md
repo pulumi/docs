@@ -18,11 +18,11 @@ This data source provides a list of ALIKAFKA Topics in an Alibaba Cloud account 
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const topicsDs = alicloud.actiontrail.getTopics({
+const topicsDs = pulumi.output(alicloud.actiontrail.getTopics({
     instanceId: "xxx",
     nameRegex: "alikafkaTopicName",
     outputFile: "topics.txt",
-});
+}, { async: true }));
 
 export const firstTopicName = topicsDs.topics[0].topic;
 ```
@@ -34,7 +34,7 @@ export const firstTopicName = topicsDs.topics[0].topic;
 
 
 
-## Using GetTopics
+## Using GetTopics {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -200,7 +200,7 @@ The following arguments are supported:
 
 
 
-## GetTopics Result
+## GetTopics Result {#result}
 
 The following output properties are available:
 
@@ -447,7 +447,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Topics<wbr>Topic</h4>
+
+<h4 id="gettopicstopic">Get<wbr>Topics<wbr>Topic</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetTopicsTopic">output</a> API doc for this type.
 {{% /choosable %}}

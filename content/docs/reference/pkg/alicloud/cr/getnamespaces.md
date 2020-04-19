@@ -19,10 +19,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 // Declare the data source
-const myNamespaces = alicloud.cr.getNamespaces({
+const myNamespaces = pulumi.output(alicloud.cr.getNamespaces({
     nameRegex: "my-namespace",
     outputFile: "my-namespace-json",
-});
+}, { async: true }));
 
 export const output = myNamespaces.namespaces;
 ```
@@ -34,7 +34,7 @@ export const output = myNamespaces.namespaces;
 
 
 
-## Using GetNamespaces
+## Using GetNamespaces {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -168,7 +168,7 @@ The following arguments are supported:
 
 
 
-## GetNamespaces Result
+## GetNamespaces Result {#result}
 
 The following output properties are available:
 
@@ -419,7 +419,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Namespaces<wbr>Namespace</h4>
+
+<h4 id="getnamespacesnamespace">Get<wbr>Namespaces<wbr>Namespace</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetNamespacesNamespace">output</a> API doc for this type.
 {{% /choosable %}}

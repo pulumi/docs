@@ -18,10 +18,10 @@ This data source provides MountTargets available to the user.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const mt = alicloud.nas.getMountTargets({
+const mt = pulumi.output(alicloud.nas.getMountTargets({
     accessGroupName: "tf-testAccNasConfig",
     fileSystemId: "1a2sc4d",
-});
+}, { async: true }));
 
 export const alicloudNasMountTargetsId = mt.targets[0].id;
 ```
@@ -33,7 +33,7 @@ export const alicloudNasMountTargetsId = mt.targets[0].id;
 
 
 
-## Using GetMountTargets
+## Using GetMountTargets {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -383,7 +383,7 @@ The following arguments are supported:
 
 
 
-## GetMountTargets Result
+## GetMountTargets Result {#result}
 
 The following output properties are available:
 
@@ -778,7 +778,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Mount<wbr>Targets<wbr>Target</h4>
+
+<h4 id="getmounttargetstarget">Get<wbr>Mount<wbr>Targets<wbr>Target</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetMountTargetsTarget">output</a> API doc for this type.
 {{% /choosable %}}

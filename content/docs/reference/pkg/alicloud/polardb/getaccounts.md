@@ -18,7 +18,7 @@ Filters support regular expression for the account name, searches by clusterId.
 
 
 
-## Using GetAccounts
+## Using GetAccounts {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -156,7 +156,7 @@ The following arguments are supported:
 
 
 
-## GetAccounts Result
+## GetAccounts Result {#result}
 
 The following output properties are available:
 
@@ -371,7 +371,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Accounts<wbr>Account</h4>
+
+<h4 id="getaccountsaccount">Get<wbr>Accounts<wbr>Account</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetAccountsAccount">output</a> API doc for this type.
 {{% /choosable %}}
@@ -571,15 +572,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>account_<wbr>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Account description.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>account<wbr>Lock<wbr>State</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -589,20 +581,29 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>account_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Account name.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>account<wbr>Status</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Cluster address type.`Cluster`: the default address of the Cluster.`Primary`: Primary address.`Custom`: Custom cluster addresses.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>account_<wbr>description</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Account description.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>account_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Account name.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -630,7 +631,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Accounts<wbr>Account<wbr>Database<wbr>Privilege</h4>
+<h4 id="getaccountsaccountdatabaseprivilege">Get<wbr>Accounts<wbr>Account<wbr>Database<wbr>Privilege</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetAccountsAccountDatabasePrivilege">output</a> API doc for this type.
 {{% /choosable %}}

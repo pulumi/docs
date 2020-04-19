@@ -20,10 +20,10 @@ Basic Usage
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const defaultFlowlogs = alicloud.cen.getFlowlogs({
+const defaultFlowlogs = pulumi.output(alicloud.cen.getFlowlogs({
     ids: ["flowlog-tig1xxxxx"],
     nameRegex: "^foo",
-});
+}, { async: true }));
 
 export const firstCenFlowlogId = alicloud_cen_instances_default.flowlogs.0.id;
 ```
@@ -35,7 +35,7 @@ export const firstCenFlowlogId = alicloud_cen_instances_default.flowlogs.0.id;
 
 
 
-## Using GetFlowlogs
+## Using GetFlowlogs {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -353,7 +353,7 @@ The following arguments are supported:
 
 
 
-## GetFlowlogs Result
+## GetFlowlogs Result {#result}
 
 The following output properties are available:
 
@@ -748,7 +748,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Flowlogs<wbr>Flowlog</h4>
+
+<h4 id="getflowlogsflowlog">Get<wbr>Flowlogs<wbr>Flowlog</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetFlowlogsFlowlog">output</a> API doc for this type.
 {{% /choosable %}}

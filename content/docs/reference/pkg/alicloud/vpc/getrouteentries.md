@@ -21,19 +21,19 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const name = config.get("name") || "tf-testAccRouteEntryConfig";
 
-const defaultZones = alicloud.getZones({
+const defaultZones = pulumi.output(alicloud.getZones({
     availableResourceCreation: "VSwitch",
-});
-const defaultInstanceTypes = alicloud.ecs.getInstanceTypes({
+}, { async: true }));
+const defaultInstanceTypes = defaultZones.apply(defaultZones => alicloud.ecs.getInstanceTypes({
     availabilityZone: defaultZones.zones[0].id,
     cpuCoreCount: 1,
     memorySize: 2,
-});
-const defaultImages = alicloud.ecs.getImages({
+}, { async: true }));
+const defaultImages = pulumi.output(alicloud.ecs.getImages({
     mostRecent: true,
     nameRegex: "^ubuntu_18.*64",
     owners: "system",
-});
+}, { async: true }));
 const fooNetwork = new alicloud.vpc.Network("foo", {
     cidrBlock: "10.1.0.0/21",
 });
@@ -78,7 +78,7 @@ const ingress = new alicloud.ecs.SecurityGroupRule("ingress", {
 });
 const fooRouteEntries = fooRouteEntry.routeTableId.apply(routeTableId => alicloud.vpc.getRouteEntries({
     routeTableId: routeTableId,
-}));
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -88,7 +88,7 @@ const fooRouteEntries = fooRouteEntry.routeTableId.apply(routeTableId => aliclou
 
 
 
-## Using GetRouteEntries
+## Using GetRouteEntries {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -330,7 +330,7 @@ The following arguments are supported:
 
 
 
-## GetRouteEntries Result
+## GetRouteEntries Result {#result}
 
 The following output properties are available:
 
@@ -621,7 +621,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Route<wbr>Entries<wbr>Entry</h4>
+
+<h4 id="getrouteentriesentry">Get<wbr>Route<wbr>Entries<wbr>Entry</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetRouteEntriesEntry">output</a> API doc for this type.
 {{% /choosable %}}

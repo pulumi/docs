@@ -11,7 +11,7 @@ block_external_search_index: true
 
 
 
-## Using GetAccountAlias
+## Using GetAccountAlias {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -109,7 +109,7 @@ The following arguments are supported:
 
 
 
-## GetAccountAlias Result
+## GetAccountAlias Result {#result}
 
 The following output properties are available:
 

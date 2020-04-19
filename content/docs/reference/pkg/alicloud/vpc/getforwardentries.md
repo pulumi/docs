@@ -21,9 +21,9 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const name = config.get("name") || "forward-entry-config-example-name";
 
-const defaultZones = alicloud.getZones({
+const defaultZones = pulumi.output(alicloud.getZones({
     availableResourceCreation: "VSwitch",
-});
+}, { async: true }));
 const defaultNetwork = new alicloud.vpc.Network("default", {
     cidrBlock: "172.16.0.0/12",
 });
@@ -51,7 +51,7 @@ const defaultForwardEntry = new alicloud.vpc.ForwardEntry("default", {
 });
 const defaultForwardEntries = defaultForwardEntry.forwardTableId.apply(forwardTableId => alicloud.vpc.getForwardEntries({
     forwardTableId: forwardTableId,
-}));
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -61,7 +61,7 @@ const defaultForwardEntries = defaultForwardEntry.forwardTableId.apply(forwardTa
 
 
 
-## Using GetForwardEntries
+## Using GetForwardEntries {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -375,7 +375,7 @@ The following arguments are supported:
 
 
 
-## GetForwardEntries Result
+## GetForwardEntries Result {#result}
 
 The following output properties are available:
 
@@ -730,7 +730,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Forward<wbr>Entries<wbr>Entry</h4>
+
+<h4 id="getforwardentriesentry">Get<wbr>Forward<wbr>Entries<wbr>Entry</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetForwardEntriesEntry">output</a> API doc for this type.
 {{% /choosable %}}

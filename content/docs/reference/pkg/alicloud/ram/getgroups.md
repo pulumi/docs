@@ -16,11 +16,11 @@ This data source provides a list of RAM Groups in an Alibaba Cloud account accor
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const groupsDs = alicloud.ram.getGroups({
+const groupsDs = pulumi.output(alicloud.ram.getGroups({
     nameRegex: "^group[0-9]*",
     outputFile: "groups.txt",
     userName: "user1",
-});
+}, { async: true }));
 
 export const firstGroupName = groupsDs.groups[0].name;
 ```
@@ -32,7 +32,7 @@ export const firstGroupName = groupsDs.groups[0].name;
 
 
 
-## Using GetGroups
+## Using GetGroups {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -274,7 +274,7 @@ The following arguments are supported:
 
 
 
-## GetGroups Result
+## GetGroups Result {#result}
 
 The following output properties are available:
 
@@ -585,7 +585,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Groups<wbr>Group</h4>
+
+<h4 id="getgroupsgroup">Get<wbr>Groups<wbr>Group</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetGroupsGroup">output</a> API doc for this type.
 {{% /choosable %}}

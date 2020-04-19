@@ -21,9 +21,9 @@ import * as alicloud from "@pulumi/alicloud";
 const config = new pulumi.Config();
 const name = config.get("name") || "snat-entry-example-name";
 
-const defaultZones = alicloud.getZones({
+const defaultZones = pulumi.output(alicloud.getZones({
     availableResourceCreation: "VSwitch",
-});
+}, { async: true }));
 const fooNetwork = new alicloud.vpc.Network("foo", {
     cidrBlock: "172.16.0.0/12",
 });
@@ -48,7 +48,7 @@ const fooSnatEntry = new alicloud.vpc.SnatEntry("foo", {
 });
 const fooSnatEntries = fooSnatEntry.snatTableId.apply(snatTableId => alicloud.vpc.getSnatEntries({
     snatTableId: snatTableId,
-}));
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -58,7 +58,7 @@ const fooSnatEntries = fooSnatEntry.snatTableId.apply(snatTableId => alicloud.vp
 
 
 
-## Using GetSnatEntries
+## Using GetSnatEntries {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -300,7 +300,7 @@ The following arguments are supported:
 
 
 
-## GetSnatEntries Result
+## GetSnatEntries Result {#result}
 
 The following output properties are available:
 
@@ -587,7 +587,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Snat<wbr>Entries<wbr>Entry</h4>
+
+<h4 id="getsnatentriesentry">Get<wbr>Snat<wbr>Entries<wbr>Entry</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetSnatEntriesEntry">output</a> API doc for this type.
 {{% /choosable %}}

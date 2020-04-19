@@ -18,11 +18,11 @@ This data source provides the ots tables of the current Alibaba Cloud user.
 import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const tablesDs = alicloud.oss.getTables({
+const tablesDs = pulumi.output(alicloud.oss.getTables({
     instanceName: "sample-instance",
     nameRegex: "sample-table",
     outputFile: "tables.txt",
-});
+}, { async: true }));
 
 export const firstTableId = tablesDs.tables[0].id;
 ```
@@ -34,7 +34,7 @@ export const firstTableId = tablesDs.tables[0].id;
 
 
 
-## Using GetTables
+## Using GetTables {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -240,7 +240,7 @@ The following arguments are supported:
 
 
 
-## GetTables Result
+## GetTables Result {#result}
 
 The following output properties are available:
 
@@ -527,7 +527,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Tables<wbr>Table</h4>
+
+<h4 id="gettablestable">Get<wbr>Tables<wbr>Table</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetTablesTable">output</a> API doc for this type.
 {{% /choosable %}}
@@ -786,7 +787,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Tables<wbr>Table<wbr>Primary<wbr>Key</h4>
+<h4 id="gettablestableprimarykey">Get<wbr>Tables<wbr>Table<wbr>Primary<wbr>Key</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetTablesTablePrimaryKey">output</a> API doc for this type.
 {{% /choosable %}}

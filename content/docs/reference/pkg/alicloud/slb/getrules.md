@@ -19,7 +19,7 @@ import * as alicloud from "@pulumi/alicloud";
 const sampleDs = alicloud_slb_sample_slb.id.apply(id => alicloud.slb.getRules({
     frontendPort: 80,
     loadBalancerId: id,
-}));
+}, { async: true }));
 
 export const firstSlbRuleId = sampleDs.slbRules[0].id;
 ```
@@ -31,7 +31,7 @@ export const firstSlbRuleId = sampleDs.slbRules[0].id;
 
 
 
-## Using GetRules
+## Using GetRules {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -273,7 +273,7 @@ The following arguments are supported:
 
 
 
-## GetRules Result
+## GetRules Result {#result}
 
 The following output properties are available:
 
@@ -588,7 +588,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Rules<wbr>Slb<wbr>Rule</h4>
+
+<h4 id="getrulesslbrule">Get<wbr>Rules<wbr>Slb<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetRulesSlbRule">output</a> API doc for this type.
 {{% /choosable %}}

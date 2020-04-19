@@ -21,10 +21,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 // Declare the data source
-const typesDs = alicloud.ecs.getInstanceTypes({
+const typesDs = pulumi.output(alicloud.ecs.getInstanceTypes({
     cpuCoreCount: 1,
     memorySize: 2,
-});
+}, { async: true }));
 const instance = new alicloud.ecs.Instance("instance", {
     instanceType: typesDs.instanceTypes[0].id,
 });
@@ -37,7 +37,7 @@ const instance = new alicloud.ecs.Instance("instance", {
 
 
 
-## Using GetInstanceTypes
+## Using GetInstanceTypes {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -595,7 +595,7 @@ The following arguments are supported:
 
 
 
-## GetInstanceTypes Result
+## GetInstanceTypes Result {#result}
 
 The following output properties are available:
 
@@ -1206,7 +1206,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type</h4>
+
+<h4 id="getinstancetypesinstancetype">Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstanceTypesInstanceType">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1605,7 +1606,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Burstable<wbr>Instance</h4>
+<h4 id="getinstancetypesinstancetypeburstableinstance">Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Burstable<wbr>Instance</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstanceTypesInstanceTypeBurstableInstance">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1720,7 +1721,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Gpu</h4>
+<h4 id="getinstancetypesinstancetypegpu">Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Gpu</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstanceTypesInstanceTypeGpu">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1835,7 +1836,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Local<wbr>Storage</h4>
+<h4 id="getinstancetypesinstancetypelocalstorage">Get<wbr>Instance<wbr>Types<wbr>Instance<wbr>Type<wbr>Local<wbr>Storage</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstanceTypesInstanceTypeLocalStorage">output</a> API doc for this type.
 {{% /choosable %}}

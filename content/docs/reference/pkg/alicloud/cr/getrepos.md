@@ -19,10 +19,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
 // Declare the data source
-const myRepos = alicloud.cr.getRepos({
+const myRepos = pulumi.output(alicloud.cr.getRepos({
     nameRegex: "my-repos",
     outputFile: "my-repo-json",
-});
+}, { async: true }));
 
 export const output = myRepos.repos;
 ```
@@ -34,7 +34,7 @@ export const output = myRepos.repos;
 
 
 
-## Using GetRepos
+## Using GetRepos {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -240,7 +240,7 @@ The following arguments are supported:
 
 
 
-## GetRepos Result
+## GetRepos Result {#result}
 
 The following output properties are available:
 
@@ -559,7 +559,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Repos<wbr>Repo</h4>
+
+<h4 id="getreposrepo">Get<wbr>Repos<wbr>Repo</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetReposRepo">output</a> API doc for this type.
 {{% /choosable %}}
@@ -818,7 +819,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Repos<wbr>Repo<wbr>Domain<wbr>List</h4>
+<h4 id="getreposrepodomainlist">Get<wbr>Repos<wbr>Repo<wbr>Domain<wbr>List</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetReposRepoDomainList">output</a> API doc for this type.
 {{% /choosable %}}
@@ -969,7 +970,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Repos<wbr>Repo<wbr>Tag</h4>
+<h4 id="getreposrepotag">Get<wbr>Repos<wbr>Repo<wbr>Tag</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetReposRepoTag">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1214,15 +1215,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>image_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Id of this image.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>image<wbr>Size</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1237,6 +1229,15 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Last update time of this image, unix time in nanoseconds.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>image_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Id of this image.
 {{% /md %}}</dd>
 
     <dt class="property-required"
