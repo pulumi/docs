@@ -28,7 +28,7 @@ export const firstEipId = eipsDs.eips[0].id;
 
 
 
-## Using GetEips
+## Using GetEips {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -306,7 +306,7 @@ The following arguments are supported:
 
 
 
-## GetEips Result
+## GetEips Result {#result}
 
 The following output properties are available:
 
@@ -657,7 +657,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Eips<wbr>Eip</h4>
+
+<h4 id="geteipseip">Get<wbr>Eips<wbr>Eip</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetEipsEip">output</a> API doc for this type.
 {{% /choosable %}}

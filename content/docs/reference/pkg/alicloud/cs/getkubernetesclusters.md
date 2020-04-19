@@ -34,7 +34,7 @@ export const output = k8sClusters.clusters;
 
 
 
-## Using GetKubernetesClusters
+## Using GetKubernetesClusters {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -236,7 +236,7 @@ The following arguments are supported:
 
 
 
-## GetKubernetesClusters Result
+## GetKubernetesClusters Result {#result}
 
 The following output properties are available:
 
@@ -519,7 +519,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Kubernetes<wbr>Clusters<wbr>Cluster</h4>
+
+<h4 id="getkubernetesclusterscluster">Get<wbr>Kubernetes<wbr>Clusters<wbr>Cluster</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetKubernetesClustersCluster">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1734,6 +1735,15 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span>worker<wbr>Numbers</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+    </dt>
+    <dd>{{% md %}}The ECS instance node number in the current container cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>worker_<wbr>auto_<wbr>renew</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1812,15 +1822,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>worker<wbr>Numbers</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
-    </dt>
-    <dd>{{% md %}}The ECS instance node number in the current container cluster.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>worker_<wbr>period</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
@@ -1842,7 +1843,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Connections</h4>
+<h4 id="getkubernetesclustersclusterconnections">Get<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Connections</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetKubernetesClustersClusterConnections">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2029,7 +2030,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Log<wbr>Config</h4>
+<h4 id="getkubernetesclustersclusterlogconfig">Get<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Log<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetKubernetesClustersClusterLogConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2144,7 +2145,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Master<wbr>Node</h4>
+<h4 id="getkubernetesclustersclustermasternode">Get<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Master<wbr>Node</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetKubernetesClustersClusterMasterNode">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2295,7 +2296,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Worker<wbr>Node</h4>
+<h4 id="getkubernetesclustersclusterworkernode">Get<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Worker<wbr>Node</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetKubernetesClustersClusterWorkerNode">output</a> API doc for this type.
 {{% /choosable %}}

@@ -29,7 +29,7 @@ const zonesIds = pulumi.output(alicloud.slb.getZones({ async: true }));
 
 
 
-## Using GetZones
+## Using GetZones {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -235,7 +235,7 @@ The following arguments are supported:
 
 
 
-## GetZones Result
+## GetZones Result {#result}
 
 The following output properties are available:
 
@@ -514,7 +514,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Zones<wbr>Zone</h4>
+
+<h4 id="getzoneszone">Get<wbr>Zones<wbr>Zone</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetZonesZone">output</a> API doc for this type.
 {{% /choosable %}}

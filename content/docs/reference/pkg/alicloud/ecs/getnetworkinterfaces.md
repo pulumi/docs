@@ -98,7 +98,7 @@ The following arguments are supported:
 
 
 
-## Using GetNetworkInterfaces
+## Using GetNetworkInterfaces {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -540,7 +540,7 @@ The following arguments are supported:
 
 
 
-## GetNetworkInterfaces Result
+## GetNetworkInterfaces Result {#result}
 
 The following output properties are available:
 
@@ -1063,7 +1063,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Network<wbr>Interfaces<wbr>Interface</h4>
+
+<h4 id="getnetworkinterfacesinterface">Get<wbr>Network<wbr>Interfaces<wbr>Interface</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetNetworkInterfacesInterface">output</a> API doc for this type.
 {{% /choosable %}}

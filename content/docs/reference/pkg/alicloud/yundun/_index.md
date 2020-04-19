@@ -8,19 +8,19 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="bastionhostinstance" title="BastionHostInstance"><span class="symbol resource"></span>BastionHostInstance</a></li>
     <li><a href="dbauditinstance" title="DBAuditInstance"><span class="symbol resource"></span>DBAuditInstance</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getbastionhostinstances" title="GetBastionHostInstances"><span class="symbol function"></span>GetBastionHostInstances</a></li>
     <li><a href="getdbauditinstance" title="GetDBAuditInstance"><span class="symbol function"></span>GetDBAuditInstance</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>

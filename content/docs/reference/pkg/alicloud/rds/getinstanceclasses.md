@@ -35,7 +35,7 @@ export const firstDbInstanceClass = resources.instanceClasses[0].instanceClass;
 
 
 
-## Using GetInstanceClasses
+## Using GetInstanceClasses {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -453,7 +453,7 @@ The following arguments are supported:
 
 
 
-## GetInstanceClasses Result
+## GetInstanceClasses Result {#result}
 
 The following output properties are available:
 
@@ -924,7 +924,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Instance<wbr>Classes<wbr>Instance<wbr>Class</h4>
+
+<h4 id="getinstanceclassesinstanceclass">Get<wbr>Instance<wbr>Classes<wbr>Instance<wbr>Class</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstanceClassesInstanceClass">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1107,7 +1108,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Instance<wbr>Classes<wbr>Instance<wbr>Class<wbr>Storage<wbr>Range</h4>
+<h4 id="getinstanceclassesinstanceclassstoragerange">Get<wbr>Instance<wbr>Classes<wbr>Instance<wbr>Class<wbr>Storage<wbr>Range</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstanceClassesInstanceClassStorageRange">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1258,7 +1259,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Instance<wbr>Classes<wbr>Instance<wbr>Class<wbr>Zone<wbr>Id</h4>
+<h4 id="getinstanceclassesinstanceclasszoneid">Get<wbr>Instance<wbr>Classes<wbr>Instance<wbr>Class<wbr>Zone<wbr>Id</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstanceClassesInstanceClassZoneId">output</a> API doc for this type.
 {{% /choosable %}}

@@ -34,7 +34,7 @@ export const firstProductPackageVersion = defaultProduct.products[0].skuses[0].p
 
 
 
-## Using GetProduct
+## Using GetProduct {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -172,7 +172,7 @@ The following arguments are supported:
 
 
 
-## GetProduct Result
+## GetProduct Result {#result}
 
 The following output properties are available:
 
@@ -351,7 +351,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Product<wbr>Product</h4>
+
+<h4 id="getproductproduct">Get<wbr>Product<wbr>Product</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetProductProduct">output</a> API doc for this type.
 {{% /choosable %}}
@@ -538,7 +539,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Product<wbr>Product<wbr>Skus</h4>
+<h4 id="getproductproductskus">Get<wbr>Product<wbr>Product<wbr>Skus</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetProductProductSkus">output</a> API doc for this type.
 {{% /choosable %}}
@@ -725,7 +726,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Image</h4>
+<h4 id="getproductproductskusimage">Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Image</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetProductProductSkusImage">output</a> API doc for this type.
 {{% /choosable %}}
@@ -876,7 +877,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Package<wbr>Version</h4>
+<h4 id="getproductproductskuspackageversion">Get<wbr>Product<wbr>Product<wbr>Skus<wbr>Package<wbr>Version</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetProductProductSkusPackageVersion">output</a> API doc for this type.
 {{% /choosable %}}

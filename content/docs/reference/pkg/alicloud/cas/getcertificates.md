@@ -31,7 +31,7 @@ export const cert = certs.certificates[0].id;
 
 
 
-## Using GetCertificates
+## Using GetCertificates {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -201,7 +201,7 @@ The following arguments are supported:
 
 
 
-## GetCertificates Result
+## GetCertificates Result {#result}
 
 The following output properties are available:
 
@@ -452,7 +452,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Certificates<wbr>Certificate</h4>
+
+<h4 id="getcertificatescertificate">Get<wbr>Certificates<wbr>Certificate</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetCertificatesCertificate">output</a> API doc for this type.
 {{% /choosable %}}

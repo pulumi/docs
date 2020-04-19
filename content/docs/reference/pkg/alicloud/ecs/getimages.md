@@ -32,7 +32,7 @@ export const firstImageId = imagesDs.images[0].id;
 
 
 
-## Using GetImages
+## Using GetImages {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -238,7 +238,7 @@ The following arguments are supported:
 
 
 
-## GetImages Result
+## GetImages Result {#result}
 
 The following output properties are available:
 
@@ -517,7 +517,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Images<wbr>Image</h4>
+
+<h4 id="getimagesimage">Get<wbr>Images<wbr>Image</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetImagesImage">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1218,6 +1219,15 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span>image<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Version of the image.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>image_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1231,15 +1241,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Alias of the image owner.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>image<wbr>Version</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Version of the image.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -1384,7 +1385,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Images<wbr>Image<wbr>Disk<wbr>Device<wbr>Mapping</h4>
+<h4 id="getimagesimagediskdevicemapping">Get<wbr>Images<wbr>Image<wbr>Disk<wbr>Device<wbr>Mapping</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetImagesImageDiskDeviceMapping">output</a> API doc for this type.
 {{% /choosable %}}

@@ -30,7 +30,7 @@ export const firstFcServiceName = fcServicesDs.services[0].name;
 
 
 
-## Using GetServices
+## Using GetServices {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -204,7 +204,7 @@ The following arguments are supported:
 
 
 
-## GetServices Result
+## GetServices Result {#result}
 
 The following output properties are available:
 
@@ -455,7 +455,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Services<wbr>Service</h4>
+
+<h4 id="getservicesservice">Get<wbr>Services<wbr>Service</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetServicesService">output</a> API doc for this type.
 {{% /choosable %}}
@@ -822,7 +823,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Services<wbr>Service<wbr>Log<wbr>Config</h4>
+<h4 id="getservicesservicelogconfig">Get<wbr>Services<wbr>Service<wbr>Log<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetServicesServiceLogConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -937,7 +938,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Services<wbr>Service<wbr>Vpc<wbr>Config</h4>
+<h4 id="getservicesservicevpcconfig">Get<wbr>Services<wbr>Service<wbr>Vpc<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetServicesServiceVpcConfig">output</a> API doc for this type.
 {{% /choosable %}}

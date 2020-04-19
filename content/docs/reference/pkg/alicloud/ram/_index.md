@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="accesskey" title="AccessKey"><span class="symbol resource"></span>AccessKey</a></li>
     <li><a href="accountalias" title="AccountAlias"><span class="symbol resource"></span>AccountAlias</a></li>
@@ -26,7 +26,7 @@ block_external_search_index: true
     <li><a href="userpolicyattachment" title="UserPolicyAttachment"><span class="symbol resource"></span>UserPolicyAttachment</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getaccountalias" title="GetAccountAlias"><span class="symbol function"></span>GetAccountAlias</a></li>
     <li><a href="getaccountaliases" title="GetAccountAliases"><span class="symbol function"></span>GetAccountAliases</a></li>
@@ -36,7 +36,7 @@ block_external_search_index: true
     <li><a href="getusers" title="GetUsers"><span class="symbol function"></span>GetUsers</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>

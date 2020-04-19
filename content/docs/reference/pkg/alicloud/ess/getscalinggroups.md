@@ -34,7 +34,7 @@ export const firstScalingGroup = scalinggroupsDs.groups[0].id;
 
 
 
-## Using GetScalingGroups
+## Using GetScalingGroups {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -204,7 +204,7 @@ The following arguments are supported:
 
 
 
-## GetScalingGroups Result
+## GetScalingGroups Result {#result}
 
 The following output properties are available:
 
@@ -455,7 +455,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Scaling<wbr>Groups<wbr>Group</h4>
+
+<h4 id="getscalinggroupsgroup">Get<wbr>Scaling<wbr>Groups<wbr>Group</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetScalingGroupsGroup">output</a> API doc for this type.
 {{% /choosable %}}

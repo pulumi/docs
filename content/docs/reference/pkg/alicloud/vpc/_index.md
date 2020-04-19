@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="commonbandwithpackage" title="CommonBandwithPackage"><span class="symbol resource"></span>CommonBandwithPackage</a></li>
     <li><a href="commonbandwithpackageattachment" title="CommonBandwithPackageAttachment"><span class="symbol resource"></span>CommonBandwithPackageAttachment</a></li>
@@ -32,7 +32,7 @@ block_external_search_index: true
     <li><a href="switch" title="Switch"><span class="symbol resource"></span>Switch</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getcommonbandwidthpackages" title="GetCommonBandwidthPackages"><span class="symbol function"></span>GetCommonBandwidthPackages</a></li>
     <li><a href="getforwardentries" title="GetForwardEntries"><span class="symbol function"></span>GetForwardEntries</a></li>
@@ -47,7 +47,7 @@ block_external_search_index: true
     <li><a href="getswitches" title="GetSwitches"><span class="symbol function"></span>GetSwitches</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>

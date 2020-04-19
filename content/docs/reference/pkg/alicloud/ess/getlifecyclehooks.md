@@ -33,7 +33,7 @@ export const firstLifecycleHook = ds.hooks[0].id;
 
 
 
-## Using GetLifecycleHooks
+## Using GetLifecycleHooks {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -239,7 +239,7 @@ The following arguments are supported:
 
 
 
-## GetLifecycleHooks Result
+## GetLifecycleHooks Result {#result}
 
 The following output properties are available:
 
@@ -526,7 +526,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Lifecycle<wbr>Hooks<wbr>Hook</h4>
+
+<h4 id="getlifecyclehookshook">Get<wbr>Lifecycle<wbr>Hooks<wbr>Hook</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetLifecycleHooksHook">output</a> API doc for this type.
 {{% /choosable %}}

@@ -34,7 +34,7 @@ export const firstRecordId = recordsDs.records[0].recordId;
 
 
 
-## Using GetRecords
+## Using GetRecords {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -420,7 +420,7 @@ The following arguments are supported:
 
 
 
-## GetRecords Result
+## GetRecords Result {#result}
 
 The following output properties are available:
 
@@ -879,7 +879,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Records<wbr>Record</h4>
+
+<h4 id="getrecordsrecord">Get<wbr>Records<wbr>Record</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetRecordsRecord">output</a> API doc for this type.
 {{% /choosable %}}

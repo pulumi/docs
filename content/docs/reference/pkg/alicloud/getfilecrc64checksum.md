@@ -31,7 +31,7 @@ export const fileCrc64Checksum = alicloud_file_crc64_checksum_defualt.checksum;
 
 
 
-## Using GetFileCrc64Checksum
+## Using GetFileCrc64Checksum {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -165,7 +165,7 @@ The following arguments are supported:
 
 
 
-## GetFileCrc64Checksum Result
+## GetFileCrc64Checksum Result {#result}
 
 The following output properties are available:
 

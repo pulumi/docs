@@ -33,7 +33,7 @@ export const firstScheduledTask = ds.tasks[0].id;
 
 
 
-## Using GetScheduledTasks
+## Using GetScheduledTasks {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -275,7 +275,7 @@ The following arguments are supported:
 
 
 
-## GetScheduledTasks Result
+## GetScheduledTasks Result {#result}
 
 The following output properties are available:
 
@@ -594,7 +594,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Scheduled<wbr>Tasks<wbr>Task</h4>
+
+<h4 id="getscheduledtaskstask">Get<wbr>Scheduled<wbr>Tasks<wbr>Task</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetScheduledTasksTask">output</a> API doc for this type.
 {{% /choosable %}}

@@ -11,7 +11,7 @@ block_external_search_index: true
 
 
 
-## Using GetDomainRecords
+## Using GetDomainRecords {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -365,7 +365,7 @@ The following arguments are supported:
 
 
 
-## GetDomainRecords Result
+## GetDomainRecords Result {#result}
 
 The following output properties are available:
 
@@ -796,7 +796,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Domain<wbr>Records<wbr>Record</h4>
+
+<h4 id="getdomainrecordsrecord">Get<wbr>Domain<wbr>Records<wbr>Record</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetDomainRecordsRecord">output</a> API doc for this type.
 {{% /choosable %}}

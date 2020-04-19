@@ -30,7 +30,7 @@ export const firstSlbId = slbsDs.slbs[0].id;
 
 
 
-## Using GetLoadBalancers
+## Using GetLoadBalancers {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -520,7 +520,7 @@ tagKey2 = "tagValue2"
 
 
 
-## GetLoadBalancers Result
+## GetLoadBalancers Result {#result}
 
 The following output properties are available:
 
@@ -1055,7 +1055,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Load<wbr>Balancers<wbr>Slb</h4>
+
+<h4 id="getloadbalancersslb">Get<wbr>Load<wbr>Balancers<wbr>Slb</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetLoadBalancersSlb">output</a> API doc for this type.
 {{% /choosable %}}

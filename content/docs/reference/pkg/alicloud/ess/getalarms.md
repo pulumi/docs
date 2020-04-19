@@ -37,7 +37,7 @@ export const firstScalingRule = alicloud_alarms_alarm_ds.configurations.0.id;
 
 
 
-## Using GetAlarms
+## Using GetAlarms {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -279,7 +279,7 @@ The following arguments are supported:
 
 
 
-## GetAlarms Result
+## GetAlarms Result {#result}
 
 The following output properties are available:
 
@@ -602,7 +602,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Alarms<wbr>Alarm</h4>
+
+<h4 id="getalarmsalarm">Get<wbr>Alarms<wbr>Alarm</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetAlarmsAlarm">output</a> API doc for this type.
 {{% /choosable %}}

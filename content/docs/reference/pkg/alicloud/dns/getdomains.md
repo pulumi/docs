@@ -31,7 +31,7 @@ export const firstDomainId = domainsDs.domains[0].domainId;
 
 
 
-## Using GetDomains
+## Using GetDomains {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -385,7 +385,7 @@ The following arguments are supported:
 
 
 
-## GetDomains Result
+## GetDomains Result {#result}
 
 The following output properties are available:
 
@@ -812,7 +812,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Domains<wbr>Domain</h4>
+
+<h4 id="getdomainsdomain">Get<wbr>Domains<wbr>Domain</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetDomainsDomain">output</a> API doc for this type.
 {{% /choosable %}}

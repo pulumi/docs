@@ -88,7 +88,7 @@ const fooRouteEntries = fooRouteEntry.routeTableId.apply(routeTableId => aliclou
 
 
 
-## Using GetRouteEntries
+## Using GetRouteEntries {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -330,7 +330,7 @@ The following arguments are supported:
 
 
 
-## GetRouteEntries Result
+## GetRouteEntries Result {#result}
 
 The following output properties are available:
 
@@ -621,7 +621,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Route<wbr>Entries<wbr>Entry</h4>
+
+<h4 id="getrouteentriesentry">Get<wbr>Route<wbr>Entries<wbr>Entry</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetRouteEntriesEntry">output</a> API doc for this type.
 {{% /choosable %}}

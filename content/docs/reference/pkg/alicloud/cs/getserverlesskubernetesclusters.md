@@ -34,7 +34,7 @@ export const output = k8sClusters.clusters;
 
 
 
-## Using GetServerlessKubernetesClusters
+## Using GetServerlessKubernetesClusters {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -236,7 +236,7 @@ The following arguments are supported:
 
 
 
-## GetServerlessKubernetesClusters Result
+## GetServerlessKubernetesClusters Result {#result}
 
 The following output properties are available:
 
@@ -519,7 +519,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Serverless<wbr>Kubernetes<wbr>Clusters<wbr>Cluster</h4>
+
+<h4 id="getserverlesskubernetesclusterscluster">Get<wbr>Serverless<wbr>Kubernetes<wbr>Clusters<wbr>Cluster</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetServerlessKubernetesClustersCluster">output</a> API doc for this type.
 {{% /choosable %}}
@@ -914,7 +915,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Serverless<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Connections</h4>
+<h4 id="getserverlesskubernetesclustersclusterconnections">Get<wbr>Serverless<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Connections</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetServerlessKubernetesClustersClusterConnections">output</a> API doc for this type.
 {{% /choosable %}}

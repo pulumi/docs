@@ -32,7 +32,7 @@ export const firstSlbServerGroupId = sampleDs.groups[0].id;
 
 
 
-## Using GetMasterSlaveServerGroups
+## Using GetMasterSlaveServerGroups {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -238,7 +238,7 @@ The following arguments are supported:
 
 
 
-## GetMasterSlaveServerGroups Result
+## GetMasterSlaveServerGroups Result {#result}
 
 The following output properties are available:
 
@@ -521,7 +521,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Master<wbr>Slave<wbr>Server<wbr>Groups<wbr>Group</h4>
+
+<h4 id="getmasterslaveservergroupsgroup">Get<wbr>Master<wbr>Slave<wbr>Server<wbr>Groups<wbr>Group</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetMasterSlaveServerGroupsGroup">output</a> API doc for this type.
 {{% /choosable %}}
@@ -672,7 +673,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Master<wbr>Slave<wbr>Server<wbr>Groups<wbr>Group<wbr>Server</h4>
+<h4 id="getmasterslaveservergroupsgroupserver">Get<wbr>Master<wbr>Slave<wbr>Server<wbr>Groups<wbr>Group<wbr>Server</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetMasterSlaveServerGroupsGroupServer">output</a> API doc for this type.
 {{% /choosable %}}

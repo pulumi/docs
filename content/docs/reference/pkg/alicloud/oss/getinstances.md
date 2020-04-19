@@ -31,7 +31,7 @@ export const firstInstanceId = instancesDs.instances[0].id;
 
 
 
-## Using GetInstances
+## Using GetInstances {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -269,7 +269,7 @@ tagKey2 = "tagValue2"
 
 
 
-## GetInstances Result
+## GetInstances Result {#result}
 
 The following output properties are available:
 
@@ -556,7 +556,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Instances<wbr>Instance</h4>
+
+<h4 id="getinstancesinstance">Get<wbr>Instances<wbr>Instance</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstancesInstance">output</a> API doc for this type.
 {{% /choosable %}}

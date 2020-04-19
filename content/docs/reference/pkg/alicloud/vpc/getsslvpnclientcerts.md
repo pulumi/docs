@@ -31,7 +31,7 @@ const foo = pulumi.output(alicloud.vpc.getSslVpnClientCerts({
 
 
 
-## Using GetSslVpnClientCerts
+## Using GetSslVpnClientCerts {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -241,7 +241,7 @@ The following arguments are supported:
 
 
 
-## GetSslVpnClientCerts Result
+## GetSslVpnClientCerts Result {#result}
 
 The following output properties are available:
 
@@ -524,7 +524,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Ssl<wbr>Vpn<wbr>Client<wbr>Certs<wbr>Cert</h4>
+
+<h4 id="getsslvpnclientcertscert">Get<wbr>Ssl<wbr>Vpn<wbr>Client<wbr>Certs<wbr>Cert</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetSslVpnClientCertsCert">output</a> API doc for this type.
 {{% /choosable %}}

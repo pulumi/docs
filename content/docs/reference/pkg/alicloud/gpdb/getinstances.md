@@ -35,7 +35,7 @@ export const instanceId = gpdb.instances[0].id;
 
 
 
-## Using GetInstances
+## Using GetInstances {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -313,7 +313,7 @@ The following arguments are supported:
 
 
 
-## GetInstances Result
+## GetInstances Result {#result}
 
 The following output properties are available:
 
@@ -664,7 +664,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Instances<wbr>Instance</h4>
+
+<h4 id="getinstancesinstance">Get<wbr>Instances<wbr>Instance</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstancesInstance">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1086,6 +1087,14 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
+        <span>instance<wbr>Network<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>instance_<wbr>class</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1101,14 +1110,6 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The number of groups.
 {{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>instance<wbr>Network<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">

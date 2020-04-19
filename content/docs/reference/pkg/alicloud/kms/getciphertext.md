@@ -11,7 +11,7 @@ block_external_search_index: true
 
 
 
-## Using GetCiphertext
+## Using GetCiphertext {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetCiphertext Result
+## GetCiphertext Result {#result}
 
 The following output properties are available:
 

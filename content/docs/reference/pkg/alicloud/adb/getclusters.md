@@ -34,7 +34,7 @@ export const firstAdbClusterId = adbClustersDs.clusters[0].id;
 
 
 
-## Using GetClusters
+## Using GetClusters {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -248,7 +248,7 @@ The following arguments are supported:
 
 
 
-## GetClusters Result
+## GetClusters Result {#result}
 
 The following output properties are available:
 
@@ -531,7 +531,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Clusters<wbr>Cluster</h4>
+
+<h4 id="getclusterscluster">Get<wbr>Clusters<wbr>Cluster</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetClustersCluster">output</a> API doc for this type.
 {{% /choosable %}}

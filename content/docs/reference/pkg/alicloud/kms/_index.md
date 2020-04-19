@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="alias" title="Alias"><span class="symbol resource"></span>Alias</a></li>
     <li><a href="ciphertext" title="Ciphertext"><span class="symbol resource"></span>Ciphertext</a></li>
@@ -16,14 +16,14 @@ block_external_search_index: true
     <li><a href="secret" title="Secret"><span class="symbol resource"></span>Secret</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getciphertext" title="GetCiphertext"><span class="symbol function"></span>GetCiphertext</a></li>
     <li><a href="getkeys" title="GetKeys"><span class="symbol function"></span>GetKeys</a></li>
     <li><a href="getplaintext" title="GetPlaintext"><span class="symbol function"></span>GetPlaintext</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
