@@ -11,7 +11,7 @@ block_external_search_index: true
 
 
 
-## Using GetInstance
+## Using GetInstance {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -141,7 +141,7 @@ The following arguments are supported:
 
 
 
-## GetInstance Result
+## GetInstance Result {#result}
 
 The following output properties are available:
 

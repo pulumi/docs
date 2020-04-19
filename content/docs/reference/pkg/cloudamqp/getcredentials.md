@@ -11,7 +11,7 @@ block_external_search_index: true
 
 
 
-## Using GetCredentials
+## Using GetCredentials {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -173,7 +173,7 @@ The following arguments are supported:
 
 
 
-## GetCredentials Result
+## GetCredentials Result {#result}
 
 The following output properties are available:
 

@@ -11,7 +11,7 @@ block_external_search_index: true
 
 
 
-## Using GetPlugins
+## Using GetPlugins {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -141,7 +141,7 @@ The following arguments are supported:
 
 
 
-## GetPlugins Result
+## GetPlugins Result {#result}
 
 The following output properties are available:
 
@@ -284,7 +284,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Plugins<wbr>Plugin</h4>
+
+<h4 id="getpluginsplugin">Get<wbr>Plugins<wbr>Plugin</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudamqp/types/input/#GetPluginsPlugin">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudamqp/types/output/#GetPluginsPlugin">output</a> API doc for this type.
 {{% /choosable %}}
