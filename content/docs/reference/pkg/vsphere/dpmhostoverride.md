@@ -254,7 +254,7 @@ To learn more about resource properties and how to use them, see [Inputs and Out
 
 ### Inputs
 
-The DpmHostOverride resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The DpmHostOverride resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#inputs" >}}) properties:
 
 
 
