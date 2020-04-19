@@ -33,7 +33,7 @@ const groups = pulumi.output(azuread.getGroups({
 
 
 
-## Using GetGroups
+## Using GetGroups {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -171,7 +171,7 @@ The following arguments are supported:
 
 
 
-## GetGroups Result
+## GetGroups Result {#result}
 
 The following output properties are available:
 

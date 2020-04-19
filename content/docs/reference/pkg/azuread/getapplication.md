@@ -32,7 +32,7 @@ export const azureAdObjectId = example.id;
 
 
 
-## Using GetApplication
+## Using GetApplication {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -206,7 +206,7 @@ The following arguments are supported:
 
 
 
-## GetApplication Result
+## GetApplication Result {#result}
 
 The following output properties are available:
 
@@ -817,7 +817,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Application<wbr>App<wbr>Role</h4>
+
+<h4 id="getapplicationapprole">Get<wbr>Application<wbr>App<wbr>Role</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetApplicationAppRole">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1076,7 +1077,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Application<wbr>Oauth2Permission</h4>
+<h4 id="getapplicationoauth2permission">Get<wbr>Application<wbr>Oauth2Permission</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#GetApplicationOauth2Permission">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetApplicationOauth2Permission">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1407,7 +1408,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Application<wbr>Required<wbr>Resource<wbr>Access</h4>
+<h4 id="getapplicationrequiredresourceaccess">Get<wbr>Application<wbr>Required<wbr>Resource<wbr>Access</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetApplicationRequiredResourceAccess">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1522,7 +1523,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access</h4>
+<h4 id="getapplicationrequiredresourceaccessresourceaccess">Get<wbr>Application<wbr>Required<wbr>Resource<wbr>Access<wbr>Resource<wbr>Access</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetApplicationRequiredResourceAccessResourceAccess">output</a> API doc for this type.
 {{% /choosable %}}

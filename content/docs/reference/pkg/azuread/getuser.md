@@ -30,7 +30,7 @@ const example = pulumi.output(azuread.getUser({
 
 
 
-## Using GetUser
+## Using GetUser {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -204,7 +204,7 @@ The following arguments are supported:
 
 
 
-## GetUser Result
+## GetUser Result {#result}
 
 The following output properties are available:
 
