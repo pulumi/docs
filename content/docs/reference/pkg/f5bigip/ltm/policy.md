@@ -19,7 +19,7 @@ For resources should be named with their "full path". The full path is the combi
 
 
 
-## Create a Policy Resource
+## Create a Policy Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -109,7 +109,7 @@ For resources should be named with their "full path". The full path is the combi
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -186,7 +186,7 @@ For resources should be named with their "full path". The full path is the combi
 
 {{% /choosable %}}
 
-## Policy Resource Properties
+## Policy Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -447,12 +447,77 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The Policy resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Policy resource produces the following output properties:
 
 
 
 
-## Look up an Existing Policy Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing Policy Resource {#look-up}
 
 Get an existing Policy resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -827,7 +892,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Policy<wbr>Rule</h4>
+
+<h4 id="policyrule">Policy<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#PolicyRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/types/output/#PolicyRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -966,7 +1032,7 @@ The following state arguments are supported:
 
 
 
-<h4>Policy<wbr>Rule<wbr>Action</h4>
+<h4 id="policyruleaction">Policy<wbr>Rule<wbr>Action</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#PolicyRuleAction">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/types/output/#PolicyRuleAction">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4285,7 +4351,7 @@ The following state arguments are supported:
 
 
 
-<h4>Policy<wbr>Rule<wbr>Condition</h4>
+<h4 id="policyrulecondition">Policy<wbr>Rule<wbr>Condition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/types/input/#PolicyRuleCondition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/f5bigip/types/output/#PolicyRuleCondition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7216,7 +7282,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-f5bigip">https://github.com/pulumi/pulumi-f5bigip</a></dd>

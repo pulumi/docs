@@ -8,14 +8,14 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="route" title="Route"><span class="symbol resource"></span>Route</a></li>
     <li><a href="selfip" title="SelfIp"><span class="symbol resource"></span>SelfIp</a></li>
     <li><a href="vlan" title="Vlan"><span class="symbol resource"></span>Vlan</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-f5bigip">https://github.com/pulumi/pulumi-f5bigip</a></dd>
