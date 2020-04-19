@@ -41,7 +41,7 @@ const foo = pulumi.output(gitlab.getGroup({
 
 
 
-## Using GetGroup
+## Using GetGroup {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -179,7 +179,7 @@ The following arguments are supported:
 
 
 
-## GetGroup Result
+## GetGroup Result {#result}
 
 The following output properties are available:
 

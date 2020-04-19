@@ -28,7 +28,7 @@ const example = pulumi.output(gitlab.getProject({
 
 
 
-## Using GetProject
+## Using GetProject {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -786,7 +786,7 @@ repository via SSH.
 
 
 
-## GetProject Result
+## GetProject Result {#result}
 
 The following output properties are available:
 
