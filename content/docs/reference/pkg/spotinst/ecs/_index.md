@@ -8,13 +8,13 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="ocean" title="Ocean"><span class="symbol resource"></span>Ocean</a></li>
     <li><a href="oceanlaunchspec" title="OceanLaunchSpec"><span class="symbol resource"></span>OceanLaunchSpec</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-spotinst">https://github.com/pulumi/pulumi-spotinst</a></dd>

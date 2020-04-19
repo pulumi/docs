@@ -240,7 +240,7 @@ import * as pulumi from "@pulumi/pulumi";
 
 
 
-## Create a Elastigroup Resource
+## Create a Elastigroup Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -330,7 +330,7 @@ import * as pulumi from "@pulumi/pulumi";
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -407,7 +407,7 @@ import * as pulumi from "@pulumi/pulumi";
 
 {{% /choosable %}}
 
-## Elastigroup Resource Properties
+## Elastigroup Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -1616,12 +1616,77 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The Elastigroup resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Elastigroup resource produces the following output properties:
 
 
 
 
-## Look up an Existing Elastigroup Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing Elastigroup Resource {#look-up}
 
 Get an existing Elastigroup resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -2944,7 +3009,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Elastigroup<wbr>Backend<wbr>Service</h4>
+
+<h4 id="elastigroupbackendservice">Elastigroup<wbr>Backend<wbr>Service</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupBackendService">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupBackendService">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3115,7 +3181,7 @@ The following state arguments are supported:
 
 
 
-<h4>Elastigroup<wbr>Backend<wbr>Service<wbr>Named<wbr>Port</h4>
+<h4 id="elastigroupbackendservicenamedport">Elastigroup<wbr>Backend<wbr>Service<wbr>Named<wbr>Port</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupBackendServiceNamedPort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupBackendServiceNamedPort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3226,7 +3292,7 @@ The following state arguments are supported:
 
 
 
-<h4>Elastigroup<wbr>Disk</h4>
+<h4 id="elastigroupdisk">Elastigroup<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupDisk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupDisk">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3525,7 +3591,7 @@ The following state arguments are supported:
 
 
 
-<h4>Elastigroup<wbr>Disk<wbr>Initialize<wbr>Param</h4>
+<h4 id="elastigroupdiskinitializeparam">Elastigroup<wbr>Disk<wbr>Initialize<wbr>Param</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupDiskInitializeParam">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupDiskInitializeParam">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3664,7 +3730,7 @@ The following state arguments are supported:
 
 
 
-<h4>Elastigroup<wbr>Gpu</h4>
+<h4 id="elastigroupgpu">Elastigroup<wbr>Gpu</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupGpu">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupGpu">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3771,7 +3837,7 @@ The following state arguments are supported:
 
 
 
-<h4>Elastigroup<wbr>Instance<wbr>Types<wbr>Custom</h4>
+<h4 id="elastigroupinstancetypescustom">Elastigroup<wbr>Instance<wbr>Types<wbr>Custom</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupInstanceTypesCustom">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupInstanceTypesCustom">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3882,7 +3948,7 @@ The following state arguments are supported:
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm</h4>
+<h4 id="elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationDockerSwarm">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationDockerSwarm">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3989,7 +4055,7 @@ The following state arguments are supported:
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Gke</h4>
+<h4 id="elastigroupintegrationgke">Elastigroup<wbr>Integration<wbr>Gke</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationGke">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationGke">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4320,7 +4386,7 @@ The following state arguments are supported:
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Down</h4>
+<h4 id="elastigroupintegrationgkeautoscaledown">Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Down</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationGkeAutoscaleDown">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationGkeAutoscaleDown">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4395,7 +4461,7 @@ The following state arguments are supported:
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Headroom</h4>
+<h4 id="elastigroupintegrationgkeautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Headroom</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationGkeAutoscaleHeadroom">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationGkeAutoscaleHeadroom">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4534,7 +4600,7 @@ The following state arguments are supported:
 
 
 
-<h4>Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Label</h4>
+<h4 id="elastigroupintegrationgkeautoscalelabel">Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Label</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationGkeAutoscaleLabel">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationGkeAutoscaleLabel">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4649,7 +4715,7 @@ The following state arguments are supported:
 
 
 
-<h4>Elastigroup<wbr>Label</h4>
+<h4 id="elastigrouplabel">Elastigroup<wbr>Label</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupLabel">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupLabel">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4764,7 +4830,7 @@ The following state arguments are supported:
 
 
 
-<h4>Elastigroup<wbr>Metadata</h4>
+<h4 id="elastigroupmetadata">Elastigroup<wbr>Metadata</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupMetadata">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupMetadata">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4879,7 +4945,7 @@ The following state arguments are supported:
 
 
 
-<h4>Elastigroup<wbr>Network<wbr>Interface</h4>
+<h4 id="elastigroupnetworkinterface">Elastigroup<wbr>Network<wbr>Interface</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupNetworkInterface">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupNetworkInterface">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5018,7 +5084,7 @@ The following state arguments are supported:
 
 
 
-<h4>Elastigroup<wbr>Network<wbr>Interface<wbr>Access<wbr>Config</h4>
+<h4 id="elastigroupnetworkinterfaceaccessconfig">Elastigroup<wbr>Network<wbr>Interface<wbr>Access<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupNetworkInterfaceAccessConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupNetworkInterfaceAccessConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5129,7 +5195,7 @@ The following state arguments are supported:
 
 
 
-<h4>Elastigroup<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range</h4>
+<h4 id="elastigroupnetworkinterfacealiasiprange">Elastigroup<wbr>Network<wbr>Interface<wbr>Alias<wbr>Ip<wbr>Range</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupNetworkInterfaceAliasIpRange">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupNetworkInterfaceAliasIpRange">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5236,7 +5302,7 @@ The following state arguments are supported:
 
 
 
-<h4>Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy</h4>
+<h4 id="elastigroupscalingdownpolicy">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingDownPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingDownPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5727,7 +5793,7 @@ The following state arguments are supported:
 
 
 
-<h4>Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension</h4>
+<h4 id="elastigroupscalingdownpolicydimension">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingDownPolicyDimension">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingDownPolicyDimension">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5842,7 +5908,7 @@ The following state arguments are supported:
 
 
 
-<h4>Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy</h4>
+<h4 id="elastigroupscalinguppolicy">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingUpPolicy">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingUpPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6333,7 +6399,7 @@ The following state arguments are supported:
 
 
 
-<h4>Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension</h4>
+<h4 id="elastigroupscalinguppolicydimension">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingUpPolicyDimension">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingUpPolicyDimension">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6448,7 +6514,7 @@ The following state arguments are supported:
 
 
 
-<h4>Elastigroup<wbr>Scheduled<wbr>Task</h4>
+<h4 id="elastigroupscheduledtask">Elastigroup<wbr>Scheduled<wbr>Task</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScheduledTask">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScheduledTask">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6683,7 +6749,7 @@ The following state arguments are supported:
 
 
 
-<h4>Elastigroup<wbr>Subnet</h4>
+<h4 id="elastigroupsubnet">Elastigroup<wbr>Subnet</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupSubnet">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupSubnet">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6802,7 +6868,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-spotinst">https://github.com/pulumi/pulumi-spotinst</a></dd>
