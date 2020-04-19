@@ -16,9 +16,9 @@ Provides details about a specific user in the gitlab provider. Especially the ab
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
 
-const example = gitlab.getUser({
+const example = pulumi.output(gitlab.getUser({
     username: "myuser",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const example = gitlab.getUser({
 
 
 
-## Using GetUser
+## Using GetUser {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -202,7 +202,7 @@ The following arguments are supported:
 
 
 
-## GetUser Result
+## GetUser Result {#result}
 
 The following output properties are available:
 

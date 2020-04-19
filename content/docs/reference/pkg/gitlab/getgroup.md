@@ -18,9 +18,9 @@ Provides details about a specific group in the gitlab provider.
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
 
-const foo = gitlab.getGroup({
+const foo = pulumi.output(gitlab.getGroup({
     groupId: 123,
-});
+}, { async: true }));
 ```
 
 **By group's full path**
@@ -29,9 +29,9 @@ const foo = gitlab.getGroup({
 import * as pulumi from "@pulumi/pulumi";
 import * as gitlab from "@pulumi/gitlab";
 
-const foo = gitlab.getGroup({
+const foo = pulumi.output(gitlab.getGroup({
     fullPath: "foo/bar",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -41,7 +41,7 @@ const foo = gitlab.getGroup({
 
 
 
-## Using GetGroup
+## Using GetGroup {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -179,7 +179,7 @@ The following arguments are supported:
 
 
 
-## GetGroup Result
+## GetGroup Result {#result}
 
 The following output properties are available:
 

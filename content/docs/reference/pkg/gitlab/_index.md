@@ -11,7 +11,7 @@ menu:
 
 A Pulumi package for creating and managing GitLab resources.
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="branchprotection" title="BranchProtection"><span class="symbol resource"></span>BranchProtection</a></li>
     <li><a href="deploykey" title="DeployKey"><span class="symbol resource"></span>DeployKey</a></li>
@@ -39,7 +39,7 @@ A Pulumi package for creating and managing GitLab resources.
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
     <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
@@ -47,7 +47,7 @@ A Pulumi package for creating and managing GitLab resources.
     <li><a href="getusers" title="GetUsers"><span class="symbol function"></span>GetUsers</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gitlab">https://github.com/pulumi/pulumi-gitlab</a></dd>
