@@ -15,7 +15,7 @@ Use this data source to look up [WAF Rule Groups][1].
 
 
 
-## Using GetWafGroups
+## Using GetWafGroups {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -177,7 +177,7 @@ The following arguments are supported:
 
 
 
-## GetWafGroups Result
+## GetWafGroups Result {#result}
 
 The following output properties are available:
 
@@ -384,7 +384,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Waf<wbr>Groups<wbr>Filter</h4>
+
+<h4 id="getwafgroupsfilter">Get<wbr>Waf<wbr>Groups<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#GetWafGroupsFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#GetWafGroupsFilter">output</a> API doc for this type.
 {{% /choosable %}}
@@ -491,7 +492,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Waf<wbr>Groups<wbr>Group</h4>
+<h4 id="getwafgroupsgroup">Get<wbr>Waf<wbr>Groups<wbr>Group</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#GetWafGroupsGroup">output</a> API doc for this type.
 {{% /choosable %}}

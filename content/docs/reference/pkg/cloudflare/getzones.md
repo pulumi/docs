@@ -19,13 +19,13 @@ locked down using the `cloudflare..ZoneLockdown` resource.
 import * as pulumi from "@pulumi/pulumi";
 import * as cloudflare from "@pulumi/cloudflare";
 
-const test = cloudflare.getZones({
+const test = pulumi.output(cloudflare.getZones({
     filter: {
         name: "example.*",
         paused: false,
         status: "active",
     },
-});
+}, { async: true }));
 const endpointLockdown = new cloudflare.ZoneLockdown("endpoint_lockdown", {
     configurations: [{
         target: "ip",
@@ -34,7 +34,7 @@ const endpointLockdown = new cloudflare.ZoneLockdown("endpoint_lockdown", {
     description: "Restrict access to these endpoints to requests from a known IP address",
     paused: false,
     urls: ["api.mysite.com/some/endpoint*"],
-    zone: (<any>test.zones[0])["name"],
+    zone: test.apply(test => (<any>test.zones[0])["name"]),
 });
 ```
 
@@ -45,7 +45,7 @@ const endpointLockdown = new cloudflare.ZoneLockdown("endpoint_lockdown", {
 
 
 
-## Using GetZones
+## Using GetZones {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -143,7 +143,7 @@ The following arguments are supported:
 
 
 
-## GetZones Result
+## GetZones Result {#result}
 
 The following output properties are available:
 
@@ -286,7 +286,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Zones<wbr>Filter</h4>
+
+<h4 id="getzonesfilter">Get<wbr>Zones<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/input/#GetZonesFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#GetZonesFilter">output</a> API doc for this type.
 {{% /choosable %}}
@@ -425,7 +426,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Zones<wbr>Zone</h4>
+<h4 id="getzoneszone">Get<wbr>Zones<wbr>Zone</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/cloudflare/types/output/#GetZonesZone">output</a> API doc for this type.
 {{% /choosable %}}
