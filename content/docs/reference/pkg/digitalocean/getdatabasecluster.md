@@ -15,7 +15,7 @@ Provides information on a DigitalOcean database cluster resource.
 
 
 
-## Using GetDatabaseCluster
+## Using GetDatabaseCluster {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -149,7 +149,7 @@ The following arguments are supported:
 
 
 
-## GetDatabaseCluster Result
+## GetDatabaseCluster Result {#result}
 
 The following output properties are available:
 
@@ -832,7 +832,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Database<wbr>Cluster<wbr>Maintenance<wbr>Window</h4>
+
+<h4 id="getdatabaseclustermaintenancewindow">Get<wbr>Database<wbr>Cluster<wbr>Maintenance<wbr>Window</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetDatabaseClusterMaintenanceWindow">output</a> API doc for this type.
 {{% /choosable %}}

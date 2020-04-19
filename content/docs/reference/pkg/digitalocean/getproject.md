@@ -17,10 +17,10 @@ then this data source returns the default project.
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
-const defaultProject = digitalocean.getProject();
-const staging = digitalocean.getProject({
+const defaultProject = pulumi.output(digitalocean.getProject({ async: true }));
+const staging = pulumi.output(digitalocean.getProject({
     name: "My Staging Project",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -30,7 +30,7 @@ const staging = digitalocean.getProject({
 
 
 
-## Using GetProject
+## Using GetProject {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -172,7 +172,7 @@ one project has the provided name or if no project has that name.
 
 
 
-## GetProject Result
+## GetProject Result {#result}
 
 The following output properties are available:
 

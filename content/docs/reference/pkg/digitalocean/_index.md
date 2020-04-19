@@ -11,7 +11,7 @@ menu:
 
 A Pulumi package for creating and managing Digital Ocean cloud resources.
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="cdn" title="Cdn"><span class="symbol resource"></span>Cdn</a></li>
     <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
@@ -41,7 +41,7 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
     <li><a href="volumesnapshot" title="VolumeSnapshot"><span class="symbol resource"></span>VolumeSnapshot</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
     <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
@@ -67,7 +67,7 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
     <li><a href="getvolumesnapshot" title="GetVolumeSnapshot"><span class="symbol function"></span>GetVolumeSnapshot</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-digitalocean">https://github.com/pulumi/pulumi-digitalocean</a></dd>

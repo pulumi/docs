@@ -18,7 +18,7 @@ Get the account:
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
-const example = digitalocean.getAccount();
+const example = pulumi.output(digitalocean.getAccount({ async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const example = digitalocean.getAccount();
 
 
 
-## Using GetAccount
+## Using GetAccount {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -57,7 +57,7 @@ const example = digitalocean.getAccount();
 
 
 
-## GetAccount Result
+## GetAccount Result {#result}
 
 The following output properties are available:
 

@@ -26,12 +26,12 @@ For example to find all staging environment projects:
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
-const staging = digitalocean.getProjects({
+const staging = pulumi.output(digitalocean.getProjects({
     filters: [{
         key: "environment",
         values: ["Staging"],
     }],
-});
+}, { async: true }));
 ```
 
 You can filter on multiple fields and sort the results as well:
@@ -40,7 +40,7 @@ You can filter on multiple fields and sort the results as well:
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
-const non_default_production = digitalocean.getProjects({
+const non_default_production = pulumi.output(digitalocean.getProjects({
     filters: [
         {
             key: "environment",
@@ -55,7 +55,7 @@ const non_default_production = digitalocean.getProjects({
         direction: "asc",
         key: "name",
     }],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -65,7 +65,7 @@ const non_default_production = digitalocean.getProjects({
 
 
 
-## Using GetProjects
+## Using GetProjects {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -211,7 +211,7 @@ The `sort` block is documented below.
 
 
 
-## GetProjects Result
+## GetProjects Result {#result}
 
 The following output properties are available:
 
@@ -434,7 +434,8 @@ the following attributes:
 
 ## Supporting Types
 
-<h4>Get<wbr>Projects<wbr>Filter</h4>
+
+<h4 id="getprojectsfilter">Get<wbr>Projects<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#GetProjectsFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetProjectsFilter">output</a> API doc for this type.
 {{% /choosable %}}
@@ -557,7 +558,7 @@ where the `key` field takes on one or more of the values provided here.
 
 
 
-<h4>Get<wbr>Projects<wbr>Project</h4>
+<h4 id="getprojectsproject">Get<wbr>Projects<wbr>Project</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetProjectsProject">output</a> API doc for this type.
 {{% /choosable %}}
@@ -952,7 +953,7 @@ where the `key` field takes on one or more of the values provided here.
 
 
 
-<h4>Get<wbr>Projects<wbr>Sort</h4>
+<h4 id="getprojectssort">Get<wbr>Projects<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#GetProjectsSort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetProjectsSort">output</a> API doc for this type.
 {{% /choosable %}}

@@ -24,12 +24,12 @@ For example to find all available regions:
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
-const available = digitalocean.getRegions({
+const available = pulumi.output(digitalocean.getRegions({
     filters: [{
         key: "available",
         values: ["true"],
     }],
-});
+}, { async: true }));
 ```
 
 You can filter on multiple fields and sort the results as well:
@@ -38,7 +38,7 @@ You can filter on multiple fields and sort the results as well:
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
-const available = digitalocean.getRegions({
+const available = pulumi.output(digitalocean.getRegions({
     filters: [
         {
             key: "available",
@@ -53,7 +53,7 @@ const available = digitalocean.getRegions({
         direction: "desc",
         key: "name",
     }],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -63,7 +63,7 @@ const available = digitalocean.getRegions({
 
 
 
-## Using GetRegions
+## Using GetRegions {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -209,7 +209,7 @@ The `sort` block is documented below.
 
 
 
-## GetRegions Result
+## GetRegions Result {#result}
 
 The following output properties are available:
 
@@ -408,7 +408,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Regions<wbr>Filter</h4>
+
+<h4 id="getregionsfilter">Get<wbr>Regions<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#GetRegionsFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetRegionsFilter">output</a> API doc for this type.
 {{% /choosable %}}
@@ -531,7 +532,7 @@ where the `key` field takes on one or more of the values provided here.
 
 
 
-<h4>Get<wbr>Regions<wbr>Region</h4>
+<h4 id="getregionsregion">Get<wbr>Regions<wbr>Region</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetRegionsRegion">output</a> API doc for this type.
 {{% /choosable %}}
@@ -734,7 +735,7 @@ where the `key` field takes on one or more of the values provided here.
 
 
 
-<h4>Get<wbr>Regions<wbr>Sort</h4>
+<h4 id="getregionssort">Get<wbr>Regions<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#GetRegionsSort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetRegionsSort">output</a> API doc for this type.
 {{% /choosable %}}

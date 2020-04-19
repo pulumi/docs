@@ -20,11 +20,11 @@ Get the Droplet snapshot:
 import * as pulumi from "@pulumi/pulumi";
 import * as digitalocean from "@pulumi/digitalocean";
 
-const web_snapshot = digitalocean.getDropletSnapshot({
+const web_snapshot = pulumi.output(digitalocean.getDropletSnapshot({
     mostRecent: true,
     nameRegex: "^web",
     region: "nyc3",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -34,7 +34,7 @@ const web_snapshot = digitalocean.getDropletSnapshot({
 
 
 
-## Using GetDropletSnapshot
+## Using GetDropletSnapshot {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -244,7 +244,7 @@ The following arguments are supported:
 
 
 
-## GetDropletSnapshot Result
+## GetDropletSnapshot Result {#result}
 
 The following output properties are available:
 
