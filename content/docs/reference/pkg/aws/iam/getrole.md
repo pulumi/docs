@@ -18,9 +18,9 @@ properties without having to hard code ARNs as input.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.iam.getRole({
+const example = pulumi.output(aws.iam.getRole({
     name: "an_example_role_name",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -30,7 +30,7 @@ const example = aws.iam.getRole({
 
 
 
-## Using GetRole
+## Using GetRole {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -168,7 +168,7 @@ The following arguments are supported:
 
 
 
-## GetRole Result
+## GetRole Result {#result}
 
 The following output properties are available:
 

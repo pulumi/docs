@@ -19,7 +19,7 @@ VPC.
 
 
 
-## Using GetVpc
+## Using GetVpc {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -349,7 +349,7 @@ a pair on the desired VPC.
 
 
 
-## GetVpc Result
+## GetVpc Result {#result}
 
 The following output properties are available:
 
@@ -948,7 +948,8 @@ selected VPC. May be any of `"default"`, `"dedicated"`, or `"host"`.
 
 ## Supporting Types
 
-<h4>Get<wbr>Vpc<wbr>Cidr<wbr>Block<wbr>Association</h4>
+
+<h4 id="getvpccidrblockassociation">Get<wbr>Vpc<wbr>Cidr<wbr>Block<wbr>Association</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpcCidrBlockAssociation">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1103,7 +1104,7 @@ Can be either `"pending"` or `"available"`.
 
 
 
-<h4>Get<wbr>Vpc<wbr>Filter</h4>
+<h4 id="getvpcfilter">Get<wbr>Vpc<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetVpcFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetVpcFilter">output</a> API doc for this type.
 {{% /choosable %}}

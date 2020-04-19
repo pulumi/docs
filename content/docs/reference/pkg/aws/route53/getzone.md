@@ -21,12 +21,12 @@ The following example shows how to get a Hosted Zone from its name and from this
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const selected = aws.route53.getZone({
+const selected = pulumi.output(aws.route53.getZone({
     name: "test.com.",
     privateZone: true,
-});
+}, { async: true }));
 const www = new aws.route53.Record("www", {
-    name: `www.${selected.name!}`,
+    name: pulumi.interpolate`www.${selected.name!}`,
     records: ["10.0.0.1"],
     ttl: 300,
     type: "A",
@@ -41,7 +41,7 @@ const www = new aws.route53.Record("www", {
 
 
 
-## Using GetZone
+## Using GetZone {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -323,7 +323,7 @@ The following arguments are supported:
 
 
 
-## GetZone Result
+## GetZone Result {#result}
 
 The following output properties are available:
 

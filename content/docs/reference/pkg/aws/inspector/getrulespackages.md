@@ -19,7 +19,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 // Declare the data source
-const rules = aws.inspector.getRulesPackages();
+const rules = pulumi.output(aws.inspector.getRulesPackages({ async: true }));
 // e.g. Use in aws.inspector.AssessmentTemplate
 const group = new aws.inspector.ResourceGroup("group", {
     tags: {
@@ -43,7 +43,7 @@ const assessmentAssessmentTemplate = new aws.inspector.AssessmentTemplate("asses
 
 
 
-## Using GetRulesPackages
+## Using GetRulesPackages {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -72,7 +72,7 @@ const assessmentAssessmentTemplate = new aws.inspector.AssessmentTemplate("asses
 
 
 
-## GetRulesPackages Result
+## GetRulesPackages Result {#result}
 
 The following output properties are available:
 

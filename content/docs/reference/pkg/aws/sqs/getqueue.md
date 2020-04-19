@@ -18,9 +18,9 @@ the ARNs as input.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.sqs.getQueue({
+const example = pulumi.output(aws.sqs.getQueue({
     name: "queue",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -30,7 +30,7 @@ const example = aws.sqs.getQueue({
 
 
 
-## Using GetQueue
+## Using GetQueue {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -168,7 +168,7 @@ The following arguments are supported:
 
 
 
-## GetQueue Result
+## GetQueue Result {#result}
 
 The following output properties are available:
 

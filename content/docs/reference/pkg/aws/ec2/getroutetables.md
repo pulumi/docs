@@ -20,18 +20,18 @@ connection.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const rts = aws.ec2.getRouteTables({
+const rts = pulumi.output(aws.ec2.getRouteTables({
     filters: [{
         name: "tag:kubernetes.io/kops/role",
         values: ["private*"],
     }],
     vpcId: var_vpc_id,
-});
+}, { async: true }));
 const route: aws.ec2.Route[] = [];
-for (let i = 0; i < rts.ids.length; i++) {
+for (let i = 0; i < rts.apply(rts => rts.ids.length); i++) {
     route.push(new aws.ec2.Route(`r-${i}`, {
         destinationCidrBlock: "10.0.1.0/22",
-        routeTableId: rts.ids[i],
+        routeTableId: rts.apply(rts => rts.ids[i]),
         vpcPeeringConnectionId: "pcx-0e9a7a9ecd137dc54",
     }));
 }
@@ -44,7 +44,7 @@ for (let i = 0; i < rts.ids.length; i++) {
 
 
 
-## Using GetRouteTables
+## Using GetRouteTables {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -222,7 +222,7 @@ a pair on the desired route tables.
 
 
 
-## GetRouteTables Result
+## GetRouteTables Result {#result}
 
 The following output properties are available:
 
@@ -433,7 +433,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Route<wbr>Tables<wbr>Filter</h4>
+
+<h4 id="getroutetablesfilter">Get<wbr>Route<wbr>Tables<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetRouteTablesFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetRouteTablesFilter">output</a> API doc for this type.
 {{% /choosable %}}

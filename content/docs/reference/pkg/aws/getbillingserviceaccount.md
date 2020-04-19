@@ -16,10 +16,10 @@ Use this data source to get the Account ID of the [AWS Billing and Cost Manageme
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const main = aws.getBillingServiceAccount();
+const main = pulumi.output(aws.getBillingServiceAccount({ async: true }));
 const billingLogs = new aws.s3.Bucket("billing_logs", {
     acl: "private",
-    policy: `{
+    policy: pulumi.interpolate`{
   "Id": "Policy",
   "Version": "2012-10-17",
   "Statement": [
@@ -61,7 +61,7 @@ const billingLogs = new aws.s3.Bucket("billing_logs", {
 
 
 
-## Using GetBillingServiceAccount
+## Using GetBillingServiceAccount {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -90,7 +90,7 @@ const billingLogs = new aws.s3.Bucket("billing_logs", {
 
 
 
-## GetBillingServiceAccount Result
+## GetBillingServiceAccount Result {#result}
 
 The following output properties are available:
 

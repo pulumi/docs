@@ -18,7 +18,7 @@ Get information on an EC2 Transit Gateway Route Table.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.ec2transitgateway.getRouteTable({
+const example = pulumi.output(aws.ec2transitgateway.getRouteTable({
     filters: [
         {
             name: "default-association-route-table",
@@ -29,7 +29,7 @@ const example = aws.ec2transitgateway.getRouteTable({
             values: ["tgw-12345678"],
         },
     ],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -40,9 +40,9 @@ const example = aws.ec2transitgateway.getRouteTable({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.ec2transitgateway.getRouteTable({
+const example = pulumi.output(aws.ec2transitgateway.getRouteTable({
     id: "tgw-rtb-12345678",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -52,7 +52,7 @@ const example = aws.ec2transitgateway.getRouteTable({
 
 
 
-## Using GetRouteTable
+## Using GetRouteTable {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -226,7 +226,7 @@ The following arguments are supported:
 
 
 
-## GetRouteTable Result
+## GetRouteTable Result {#result}
 
 The following output properties are available:
 
@@ -481,7 +481,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Route<wbr>Table<wbr>Filter</h4>
+
+<h4 id="getroutetablefilter">Get<wbr>Route<wbr>Table<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetRouteTableFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetRouteTableFilter">output</a> API doc for this type.
 {{% /choosable %}}

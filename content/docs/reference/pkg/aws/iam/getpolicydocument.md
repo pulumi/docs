@@ -16,7 +16,7 @@ such as the `aws.iam.Policy` resource.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const examplePolicyDocument = aws.iam.getPolicyDocument({
+const examplePolicyDocument = pulumi.output(aws.iam.getPolicyDocument({
     statements: [
         {
             actions: [
@@ -47,7 +47,7 @@ const examplePolicyDocument = aws.iam.getPolicyDocument({
             ],
         },
     ],
-});
+}, { async: true }));
 const examplePolicy = new aws.iam.Policy("example", {
     path: "/",
     policy: examplePolicyDocument.json,
@@ -84,7 +84,7 @@ Showing how you can use this as an assume role policy as well as showing how you
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const eventStreamBucketRoleAssumeRolePolicy = aws.iam.getPolicyDocument({
+const eventStreamBucketRoleAssumeRolePolicy = pulumi.output(aws.iam.getPolicyDocument({
     statements: [{
         actions: ["sts:AssumeRole"],
         principals: [
@@ -98,7 +98,7 @@ const eventStreamBucketRoleAssumeRolePolicy = aws.iam.getPolicyDocument({
             },
         ],
     }],
-});
+}, { async: true }));
 ```
 
 ## Example with Source and Override
@@ -109,7 +109,7 @@ Showing how you can use `source_json` and `override_json`
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const source = aws.iam.getPolicyDocument({
+const source = pulumi.output(aws.iam.getPolicyDocument({
     statements: [
         {
             actions: ["ec2:*"],
@@ -121,8 +121,8 @@ const source = aws.iam.getPolicyDocument({
             sid: "SidToOverwrite",
         },
     ],
-});
-const sourceJsonExample = aws.iam.getPolicyDocument({
+}, { async: true }));
+const sourceJsonExample = source.apply(source => aws.iam.getPolicyDocument({
     sourceJson: source.json,
     statements: [{
         actions: ["s3:*"],
@@ -132,15 +132,15 @@ const sourceJsonExample = aws.iam.getPolicyDocument({
         ],
         sid: "SidToOverwrite",
     }],
-});
-const override = aws.iam.getPolicyDocument({
+}, { async: true }));
+const override = pulumi.output(aws.iam.getPolicyDocument({
     statements: [{
         actions: ["s3:*"],
         resources: ["*"],
         sid: "SidToOverwrite",
     }],
-});
-const overrideJsonExample = aws.iam.getPolicyDocument({
+}, { async: true }));
+const overrideJsonExample = override.apply(override => aws.iam.getPolicyDocument({
     overrideJson: override.json,
     statements: [
         {
@@ -156,7 +156,7 @@ const overrideJsonExample = aws.iam.getPolicyDocument({
             sid: "SidToOverwrite",
         },
     ],
-});
+}, { async: true }));
 ```
 
 `data.aws_iam_policy_document.source_json_example.json` will evaluate to:
@@ -181,24 +181,24 @@ Use without a `statement`:
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const source = aws.iam.getPolicyDocument({
+const source = pulumi.output(aws.iam.getPolicyDocument({
     statements: [{
         actions: ["ec2:DescribeAccountAttributes"],
         resources: ["*"],
         sid: "OverridePlaceholder",
     }],
-});
-const override = aws.iam.getPolicyDocument({
+}, { async: true }));
+const override = pulumi.output(aws.iam.getPolicyDocument({
     statements: [{
         actions: ["s3:GetObject"],
         resources: ["*"],
         sid: "OverridePlaceholder",
     }],
-});
-const politik = aws.iam.getPolicyDocument({
+}, { async: true }));
+const politik = pulumi.all([override, source]).apply(([override, source]) => aws.iam.getPolicyDocument({
     overrideJson: override.json,
     sourceJson: source.json,
-});
+}, { async: true }));
 ```
 
 `data.aws_iam_policy_document.politik.json` will evaluate to:
@@ -211,7 +211,7 @@ import * as pulumi from "@pulumi/pulumi";
 
 
 
-## Using GetPolicyDocument
+## Using GetPolicyDocument {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -485,7 +485,7 @@ configuring one *statement* to be included in the policy document.
 
 
 
-## GetPolicyDocument Result
+## GetPolicyDocument Result {#result}
 
 The following output properties are available:
 
@@ -760,7 +760,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Policy<wbr>Document<wbr>Statement</h4>
+
+<h4 id="getpolicydocumentstatement">Get<wbr>Policy<wbr>Document<wbr>Statement</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetPolicyDocumentStatement">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetPolicyDocumentStatement">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1171,7 +1172,7 @@ to. This is required by AWS if used for an IAM policy.
 
 
 
-<h4>Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition</h4>
+<h4 id="getpolicydocumentstatementcondition">Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Condition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetPolicyDocumentStatementCondition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetPolicyDocumentStatementCondition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1354,7 +1355,7 @@ the service name.
 
 
 
-<h4>Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal</h4>
+<h4 id="getpolicydocumentstatementnotprincipal">Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Not<wbr>Principal</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetPolicyDocumentStatementNotPrincipal">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetPolicyDocumentStatementNotPrincipal">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1473,7 +1474,7 @@ is "AWS", these are IAM user or role ARNs.  When `type` is "Service", these are 
 
 
 
-<h4>Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal</h4>
+<h4 id="getpolicydocumentstatementprincipal">Get<wbr>Policy<wbr>Document<wbr>Statement<wbr>Principal</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetPolicyDocumentStatementPrincipal">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetPolicyDocumentStatementPrincipal">output</a> API doc for this type.
 {{% /choosable %}}

@@ -19,9 +19,9 @@ exports specified in the [Output](http://docs.aws.amazon.com/AWSCloudFormation/l
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const subnetId = aws.cloudformation.getExport({
+const subnetId = pulumi.output(aws.cloudformation.getExport({
     name: "mySubnetIdExportName",
-});
+}, { async: true }));
 const web = new aws.ec2.Instance("web", {
     ami: "ami-abb07bcb",
     instanceType: "t1.micro",
@@ -36,7 +36,7 @@ const web = new aws.ec2.Instance("web", {
 
 
 
-## Using GetExport
+## Using GetExport {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -138,7 +138,7 @@ The following arguments are supported:
 
 
 
-## GetExport Result
+## GetExport Result {#result}
 
 The following output properties are available:
 

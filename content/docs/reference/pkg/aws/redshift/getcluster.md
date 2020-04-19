@@ -16,13 +16,13 @@ Provides details about a specific redshift cluster.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const testCluster = aws.redshift.getCluster({
+const testCluster = pulumi.output(aws.redshift.getCluster({
     clusterIdentifier: "test-cluster",
-});
+}, { async: true }));
 const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
     destination: "redshift",
     redshiftConfiguration: {
-        clusterJdbcurl: `jdbc:redshift://${testCluster.endpoint}/${testCluster.databaseName}`,
+        clusterJdbcurl: pulumi.interpolate`jdbc:redshift://${testCluster.endpoint}/${testCluster.databaseName}`,
         copyOptions: "delimiter '|'", // the default delimiter
         dataTableColumns: "test-col",
         dataTableName: "test-table",
@@ -47,7 +47,7 @@ const testStream = new aws.kinesis.FirehoseDeliveryStream("test_stream", {
 
 
 
-## Using GetCluster
+## Using GetCluster {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -185,7 +185,7 @@ The following arguments are supported:
 
 
 
-## GetCluster Result
+## GetCluster Result {#result}
 
 The following output properties are available:
 

@@ -18,7 +18,7 @@ import * as aws from "@pulumi/aws";
 
 const example = aws_directory_service_directory_main.id.apply(id => aws.directoryservice.getDirectory({
     directoryId: id,
-}));
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const example = aws_directory_service_directory_main.id.apply(id => aws.director
 
 
 
-## Using GetDirectory
+## Using GetDirectory {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -166,7 +166,7 @@ The following arguments are supported:
 
 
 
-## GetDirectory Result
+## GetDirectory Result {#result}
 
 The following output properties are available:
 
@@ -773,7 +773,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Directory<wbr>Connect<wbr>Setting</h4>
+
+<h4 id="getdirectoryconnectsetting">Get<wbr>Directory<wbr>Connect<wbr>Setting</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDirectoryConnectSetting">output</a> API doc for this type.
 {{% /choosable %}}
@@ -960,7 +961,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Directory<wbr>Vpc<wbr>Setting</h4>
+<h4 id="getdirectoryvpcsetting">Get<wbr>Directory<wbr>Vpc<wbr>Setting</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDirectoryVpcSetting">output</a> API doc for this type.
 {{% /choosable %}}

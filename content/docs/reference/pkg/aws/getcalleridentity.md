@@ -17,7 +17,7 @@ which this provider is authorized.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const current = aws.getCallerIdentity();
+const current = pulumi.output(aws.getCallerIdentity({ async: true }));
 
 export const accountId = current.accountId;
 export const callerArn = current.arn;
@@ -31,7 +31,7 @@ export const callerUser = current.userId;
 
 
 
-## Using GetCallerIdentity
+## Using GetCallerIdentity {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -60,7 +60,7 @@ export const callerUser = current.userId;
 
 
 
-## GetCallerIdentity Result
+## GetCallerIdentity Result {#result}
 
 The following output properties are available:
 

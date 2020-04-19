@@ -20,7 +20,7 @@ import * as aws from "@pulumi/aws";
 const example = aws_ecs_cluster_example.arn.apply(arn => aws.ecs.getService({
     clusterArn: arn,
     serviceName: "example",
-}));
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -30,7 +30,7 @@ const example = aws_ecs_cluster_example.arn.apply(arn => aws.ecs.getService({
 
 
 
-## Using GetService
+## Using GetService {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -168,7 +168,7 @@ The following arguments are supported:
 
 
 
-## GetService Result
+## GetService Result {#result}
 
 The following output properties are available:
 

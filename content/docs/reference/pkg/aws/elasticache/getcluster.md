@@ -16,9 +16,9 @@ Use this data source to get information about an Elasticache Cluster
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const myCluster = aws.elasticache.getCluster({
+const myCluster = pulumi.output(aws.elasticache.getCluster({
     clusterId: "my-cluster-id",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const myCluster = aws.elasticache.getCluster({
 
 
 
-## Using GetCluster
+## Using GetCluster {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -166,7 +166,7 @@ The following arguments are supported:
 
 
 
-## GetCluster Result
+## GetCluster Result {#result}
 
 The following output properties are available:
 
@@ -1017,7 +1017,8 @@ begin taking a daily snapshot of the cache cluster.
 
 ## Supporting Types
 
-<h4>Get<wbr>Cluster<wbr>Cache<wbr>Node</h4>
+
+<h4 id="getclustercachenode">Get<wbr>Cluster<wbr>Cache<wbr>Node</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetClusterCacheNode">output</a> API doc for this type.
 {{% /choosable %}}

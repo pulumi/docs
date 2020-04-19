@@ -16,10 +16,10 @@ The ECR Image data source allows the details of an image with a particular tag o
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const serviceImage = aws.ecr.getImage({
+const serviceImage = pulumi.output(aws.ecr.getImage({
     imageTag: "latest",
     repositoryName: "my/service",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -29,7 +29,7 @@ const serviceImage = aws.ecr.getImage({
 
 
 
-## Using GetImage
+## Using GetImage {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -239,7 +239,7 @@ The following arguments are supported:
 
 
 
-## GetImage Result
+## GetImage Result {#result}
 
 The following output properties are available:
 

@@ -19,9 +19,9 @@ without having to hard code the ARN as input.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const foo = aws.kms.getKey({
+const foo = pulumi.output(aws.kms.getKey({
     keyId: "arn:aws:kms:us-east-1:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -31,7 +31,7 @@ const foo = aws.kms.getKey({
 
 
 
-## Using GetKey
+## Using GetKey {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -185,7 +185,7 @@ The following arguments are supported:
 
 
 
-## GetKey Result
+## GetKey Result {#result}
 
 The following output properties are available:
 

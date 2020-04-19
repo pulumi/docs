@@ -16,7 +16,7 @@ Retrieve information about a GuardDuty detector.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.guardduty.getDetector();
+const example = pulumi.output(aws.guardduty.getDetector({ async: true }));
 ```
 
 {{% /example %}}
@@ -26,7 +26,7 @@ const example = aws.guardduty.getDetector();
 
 
 
-## Using GetDetector
+## Using GetDetector {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -128,7 +128,7 @@ The following arguments are supported:
 
 
 
-## GetDetector Result
+## GetDetector Result {#result}
 
 The following output properties are available:
 

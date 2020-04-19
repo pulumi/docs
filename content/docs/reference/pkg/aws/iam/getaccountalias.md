@@ -17,7 +17,7 @@ for the effective account in which this provider is working.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const current = aws.iam.getAccountAlias();
+const current = pulumi.output(aws.iam.getAccountAlias({ async: true }));
 
 export const accountId = current.accountAlias;
 ```
@@ -29,7 +29,7 @@ export const accountId = current.accountAlias;
 
 
 
-## Using GetAccountAlias
+## Using GetAccountAlias {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -58,7 +58,7 @@ export const accountId = current.accountAlias;
 
 
 
-## GetAccountAlias Result
+## GetAccountAlias Result {#result}
 
 The following output properties are available:
 

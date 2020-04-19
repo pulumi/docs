@@ -20,7 +20,7 @@ import * as aws from "@pulumi/aws";
 const ecs_mongo = aws_ecs_task_definition_mongo.id.apply(id => aws.ecs.getContainerDefinition({
     containerName: "mongodb",
     taskDefinition: id,
-}));
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -30,7 +30,7 @@ const ecs_mongo = aws_ecs_task_definition_mongo.id.apply(id => aws.ecs.getContai
 
 
 
-## Using GetContainerDefinition
+## Using GetContainerDefinition {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -168,7 +168,7 @@ The following arguments are supported:
 
 
 
-## GetContainerDefinition Result
+## GetContainerDefinition Result {#result}
 
 The following output properties are available:
 

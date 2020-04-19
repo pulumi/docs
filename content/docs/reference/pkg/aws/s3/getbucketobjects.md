@@ -20,15 +20,15 @@ The following example retrieves a list of all object keys in an S3 bucket and cr
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const myObjects = aws.s3.getBucketObjects({
+const myObjects = pulumi.output(aws.s3.getBucketObjects({
     bucket: "ourcorp",
-});
-const objectInfo: aws.s3.GetBucketObjectResult[] = [];
-for (let i = 0; i < myObjects.keys.length; i++) {
-    objectInfo.push(aws.s3.getBucketObject({
+}, { async: true }));
+const objectInfo: pulumi.Output<aws.s3.GetBucketObjectResult>[] = [];
+for (let i = 0; i < myObjects.apply(myObjects => myObjects.keys.length); i++) {
+    objectInfo.push(pulumi.all([myObjects, myObjects]).apply(([myObjects, myObjects1]) => aws.s3.getBucketObject({
         bucket: myObjects.bucket,
-        key: myObjects.keys[i],
-    }));
+        key: myObjects1.keys[i],
+    }, { async: true })));
 }
 ```
 
@@ -39,7 +39,7 @@ for (let i = 0; i < myObjects.keys.length; i++) {
 
 
 
-## Using GetBucketObjects
+## Using GetBucketObjects {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -357,7 +357,7 @@ The following arguments are supported:
 
 
 
-## GetBucketObjects Result
+## GetBucketObjects Result {#result}
 
 The following output properties are available:
 

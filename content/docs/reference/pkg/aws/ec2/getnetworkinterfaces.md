@@ -16,7 +16,7 @@ The following shows outputing all network interface ids in a region.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const exampleNetworkInterfaces = aws.ec2.getNetworkInterfaces();
+const exampleNetworkInterfaces = pulumi.output(aws.ec2.getNetworkInterfaces({ async: true }));
 
 export const example = exampleNetworkInterfaces.ids;
 ```
@@ -27,11 +27,11 @@ The following example retrieves a list of all network interface ids with a custo
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.ec2.getNetworkInterfaces({
+const example = pulumi.output(aws.ec2.getNetworkInterfaces({
     tags: {
         Name: "test",
     },
-});
+}, { async: true }));
 
 export const example1 = example.ids;
 ```
@@ -48,7 +48,7 @@ const exampleNetworkInterfaces = aws_subnet_test.id.apply(id => aws.ec2.getNetwo
         name: "subnet-id",
         values: [id],
     }],
-}));
+}, { async: true }));
 
 export const example = exampleNetworkInterfaces.ids;
 ```
@@ -60,7 +60,7 @@ export const example = exampleNetworkInterfaces.ids;
 
 
 
-## Using GetNetworkInterfaces
+## Using GetNetworkInterfaces {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -202,7 +202,7 @@ a pair on the desired network interfaces.
 
 
 
-## GetNetworkInterfaces Result
+## GetNetworkInterfaces Result {#result}
 
 The following output properties are available:
 
@@ -381,7 +381,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Network<wbr>Interfaces<wbr>Filter</h4>
+
+<h4 id="getnetworkinterfacesfilter">Get<wbr>Network<wbr>Interfaces<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetNetworkInterfacesFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetNetworkInterfacesFilter">output</a> API doc for this type.
 {{% /choosable %}}

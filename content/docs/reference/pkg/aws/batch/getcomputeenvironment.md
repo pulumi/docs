@@ -17,9 +17,9 @@ compute environment within AWS Batch.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const batch_mongo = aws.batch.getComputeEnvironment({
+const batch_mongo = pulumi.output(aws.batch.getComputeEnvironment({
     computeEnvironmentName: "batch-mongo-production",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -29,7 +29,7 @@ const batch_mongo = aws.batch.getComputeEnvironment({
 
 
 
-## Using GetComputeEnvironment
+## Using GetComputeEnvironment {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -131,7 +131,7 @@ The following arguments are supported:
 
 
 
-## GetComputeEnvironment Result
+## GetComputeEnvironment Result {#result}
 
 The following output properties are available:
 

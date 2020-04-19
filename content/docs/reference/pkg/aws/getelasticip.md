@@ -18,9 +18,9 @@ block_external_search_index: true
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const byAllocationId = aws.getElasticIp({
+const byAllocationId = pulumi.output(aws.getElasticIp({
     id: "eipalloc-12345678",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -31,12 +31,12 @@ const byAllocationId = aws.getElasticIp({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const byFilter = aws.getElasticIp({
+const byFilter = pulumi.output(aws.getElasticIp({
     filters: [{
         name: "tag:Name",
         values: ["exampleNameTagValue"],
     }],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -47,9 +47,9 @@ const byFilter = aws.getElasticIp({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const byPublicIp = aws.getElasticIp({
+const byPublicIp = pulumi.output(aws.getElasticIp({
     publicIp: "1.2.3.4",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -60,11 +60,11 @@ const byPublicIp = aws.getElasticIp({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const byTags = aws.getElasticIp({
+const byTags = pulumi.output(aws.getElasticIp({
     tags: {
         Name: "exampleNameTagValue",
     },
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -74,7 +74,7 @@ const byTags = aws.getElasticIp({
 
 
 
-## Using GetElasticIp
+## Using GetElasticIp {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -284,7 +284,7 @@ The following arguments are supported:
 
 
 
-## GetElasticIp Result
+## GetElasticIp Result {#result}
 
 The following output properties are available:
 
@@ -791,7 +791,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Elastic<wbr>Ip<wbr>Filter</h4>
+
+<h4 id="getelasticipfilter">Get<wbr>Elastic<wbr>Ip<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetElasticIpFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetElasticIpFilter">output</a> API doc for this type.
 {{% /choosable %}}

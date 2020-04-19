@@ -16,9 +16,9 @@ Provides information about a DynamoDB table.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const tableName = aws.dynamodb.getTable({
+const tableName = pulumi.output(aws.dynamodb.getTable({
     name: "tableName",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const tableName = aws.dynamodb.getTable({
 
 
 
-## Using GetTable
+## Using GetTable {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -194,7 +194,7 @@ The following arguments are supported:
 
 
 
-## GetTable Result
+## GetTable Result {#result}
 
 The following output properties are available:
 
@@ -849,7 +849,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Table<wbr>Attribute</h4>
+
+<h4 id="gettableattribute">Get<wbr>Table<wbr>Attribute</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableAttribute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -960,7 +961,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Table<wbr>Global<wbr>Secondary<wbr>Index</h4>
+<h4 id="gettableglobalsecondaryindex">Get<wbr>Table<wbr>Global<wbr>Secondary<wbr>Index</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableGlobalSecondaryIndex">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1231,7 +1232,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Table<wbr>Local<wbr>Secondary<wbr>Index</h4>
+<h4 id="gettablelocalsecondaryindex">Get<wbr>Table<wbr>Local<wbr>Secondary<wbr>Index</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableLocalSecondaryIndex">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1406,7 +1407,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</h4>
+<h4 id="gettablepointintimerecovery">Get<wbr>Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTablePointInTimeRecovery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1481,7 +1482,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption</h4>
+<h4 id="gettableserversideencryption">Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetTableServerSideEncryption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableServerSideEncryption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1588,7 +1589,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Table<wbr>Ttl</h4>
+<h4 id="gettablettl">Get<wbr>Table<wbr>Ttl</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableTtl">output</a> API doc for this type.
 {{% /choosable %}}

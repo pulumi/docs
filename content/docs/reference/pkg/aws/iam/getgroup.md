@@ -18,9 +18,9 @@ properties without having to hard code ARNs as input.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.iam.getGroup({
+const example = pulumi.output(aws.iam.getGroup({
     groupName: "an_example_group_name",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -30,7 +30,7 @@ const example = aws.iam.getGroup({
 
 
 
-## Using GetGroup
+## Using GetGroup {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -132,7 +132,7 @@ The following arguments are supported:
 
 
 
-## GetGroup Result
+## GetGroup Result {#result}
 
 The following output properties are available:
 
@@ -387,7 +387,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Group<wbr>User</h4>
+
+<h4 id="getgroupuser">Get<wbr>Group<wbr>User</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetGroupUser">output</a> API doc for this type.
 {{% /choosable %}}

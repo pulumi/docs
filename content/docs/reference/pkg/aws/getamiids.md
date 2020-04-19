@@ -16,13 +16,13 @@ Use this data source to get a list of AMI IDs matching the specified criteria.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const ubuntu = aws.getAmiIds({
+const ubuntu = pulumi.output(aws.getAmiIds({
     filters: [{
         name: "name",
         values: ["ubuntu/images/ubuntu-*-*-amd64-server-*"],
     }],
     owners: ["099720109477"],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -32,7 +32,7 @@ const ubuntu = aws.getAmiIds({
 
 
 
-## Using GetAmiIds
+## Using GetAmiIds {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -306,7 +306,7 @@ options to narrow down the list AWS returns.
 
 
 
-## GetAmiIds Result
+## GetAmiIds Result {#result}
 
 The following output properties are available:
 
@@ -577,7 +577,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Ami<wbr>Ids<wbr>Filter</h4>
+
+<h4 id="getamiidsfilter">Get<wbr>Ami<wbr>Ids<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetAmiIdsFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAmiIdsFilter">output</a> API doc for this type.
 {{% /choosable %}}

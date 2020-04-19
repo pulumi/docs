@@ -19,9 +19,9 @@ For more details, see the [Amazon Kinesis Documentation][1].
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const stream = aws.kinesis.getStream({
+const stream = pulumi.output(aws.kinesis.getStream({
     name: "stream-name",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -31,7 +31,7 @@ const stream = aws.kinesis.getStream({
 
 
 
-## Using GetStream
+## Using GetStream {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -169,7 +169,7 @@ The following arguments are supported:
 
 
 
-## GetStream Result
+## GetStream Result {#result}
 
 The following output properties are available:
 

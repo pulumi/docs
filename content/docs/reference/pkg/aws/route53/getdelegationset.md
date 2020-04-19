@@ -20,9 +20,9 @@ The following example shows how to get a delegation set from its id.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const dset = aws.route53.getDelegationSet({
+const dset = pulumi.output(aws.route53.getDelegationSet({
     id: "MQWGHCBFAKEID",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -32,7 +32,7 @@ const dset = aws.route53.getDelegationSet({
 
 
 
-## Using GetDelegationSet
+## Using GetDelegationSet {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -134,7 +134,7 @@ The following arguments are supported:
 
 
 
-## GetDelegationSet Result
+## GetDelegationSet Result {#result}
 
 The following output properties are available:
 

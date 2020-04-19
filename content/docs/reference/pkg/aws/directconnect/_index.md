@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="bgppeer" title="BgpPeer"><span class="symbol resource"></span>BgpPeer</a></li>
     <li><a href="connection" title="Connection"><span class="symbol resource"></span>Connection</a></li>
@@ -28,12 +28,12 @@ block_external_search_index: true
     <li><a href="transitvirtualinterface" title="TransitVirtualInterface"><span class="symbol resource"></span>TransitVirtualInterface</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getgateway" title="GetGateway"><span class="symbol function"></span>GetGateway</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-aws">https://github.com/pulumi/pulumi-aws</a></dd>
@@ -41,5 +41,7 @@ block_external_search_index: true
 	<dd>Apache-2.0</dd>
     <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
+	<dt>Version</dt>
+	<dd>2.0.0</dd>
 </dl>
 

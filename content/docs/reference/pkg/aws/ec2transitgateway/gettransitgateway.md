@@ -18,12 +18,12 @@ Get information on an EC2 Transit Gateway.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.ec2transitgateway.getTransitGateway({
+const example = pulumi.output(aws.ec2transitgateway.getTransitGateway({
     filters: [{
         name: "options.amazon-side-asn",
         values: ["64512"],
     }],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -34,9 +34,9 @@ const example = aws.ec2transitgateway.getTransitGateway({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.ec2transitgateway.getTransitGateway({
+const example = pulumi.output(aws.ec2transitgateway.getTransitGateway({
     id: "tgw-12345678",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -46,7 +46,7 @@ const example = aws.ec2transitgateway.getTransitGateway({
 
 
 
-## Using GetTransitGateway
+## Using GetTransitGateway {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -220,7 +220,7 @@ The following arguments are supported:
 
 
 
-## GetTransitGateway Result
+## GetTransitGateway Result {#result}
 
 The following output properties are available:
 
@@ -763,7 +763,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Transit<wbr>Gateway<wbr>Filter</h4>
+
+<h4 id="gettransitgatewayfilter">Get<wbr>Transit<wbr>Gateway<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetTransitGatewayFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTransitGatewayFilter">output</a> API doc for this type.
 {{% /choosable %}}

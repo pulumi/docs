@@ -16,9 +16,9 @@ Use this data source to get information about an AWS Cloudwatch Log Group
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.cloudwatch.getLogGroup({
+const example = pulumi.output(aws.cloudwatch.getLogGroup({
     name: "MyImportantLogs",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const example = aws.cloudwatch.getLogGroup({
 
 
 
-## Using GetLogGroup
+## Using GetLogGroup {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -166,7 +166,7 @@ The following arguments are supported:
 
 
 
-## GetLogGroup Result
+## GetLogGroup Result {#result}
 
 The following output properties are available:
 

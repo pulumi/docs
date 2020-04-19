@@ -15,7 +15,7 @@ Returns a unique endpoint specific to the AWS account making the call.
 
 
 
-## Using GetEndpoint
+## Using GetEndpoint {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -117,7 +117,7 @@ The following arguments are supported:
 
 
 
-## GetEndpoint Result
+## GetEndpoint Result {#result}
 
 The following output properties are available:
 

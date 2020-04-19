@@ -18,9 +18,9 @@ Retrieve metadata information about a Secrets Manager secret. To retrieve a secr
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const by_arn = aws.secretsmanager.getSecret({
+const by_arn = pulumi.output(aws.secretsmanager.getSecret({
     arn: "arn:aws:secretsmanager:us-east-1:123456789012:secret:example-123456",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -31,9 +31,9 @@ const by_arn = aws.secretsmanager.getSecret({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const by_name = aws.secretsmanager.getSecret({
+const by_name = pulumi.output(aws.secretsmanager.getSecret({
     name: "example",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -43,7 +43,7 @@ const by_name = aws.secretsmanager.getSecret({
 
 
 
-## Using GetSecret
+## Using GetSecret {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -181,7 +181,7 @@ The following arguments are supported:
 
 
 
-## GetSecret Result
+## GetSecret Result {#result}
 
 The following output properties are available:
 
@@ -580,7 +580,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Secret<wbr>Rotation<wbr>Rule</h4>
+
+<h4 id="getsecretrotationrule">Get<wbr>Secret<wbr>Rotation<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSecretRotationRule">output</a> API doc for this type.
 {{% /choosable %}}

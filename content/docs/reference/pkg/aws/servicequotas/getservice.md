@@ -16,9 +16,9 @@ Retrieve information about a Service Quotas Service.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.servicequotas.getService({
+const example = pulumi.output(aws.servicequotas.getService({
     serviceName: "Amazon Virtual Private Cloud (Amazon VPC)",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const example = aws.servicequotas.getService({
 
 
 
-## Using GetService
+## Using GetService {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -130,7 +130,7 @@ The following arguments are supported:
 
 
 
-## GetService Result
+## GetService Result {#result}
 
 The following output properties are available:
 

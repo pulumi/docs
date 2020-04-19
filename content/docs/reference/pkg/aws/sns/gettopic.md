@@ -18,9 +18,9 @@ without having to hard code the ARNs as input.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.sns.getTopic({
+const example = pulumi.output(aws.sns.getTopic({
     name: "an_example_topic",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -30,7 +30,7 @@ const example = aws.sns.getTopic({
 
 
 
-## Using GetTopic
+## Using GetTopic {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -132,7 +132,7 @@ The following arguments are supported:
 
 
 
-## GetTopic Result
+## GetTopic Result {#result}
 
 The following output properties are available:
 

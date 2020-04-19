@@ -21,7 +21,7 @@ const subnetId = config.require("subnetId");
 
 const defaultNatGateway = aws_subnet_public.id.apply(id => aws.ec2.getNatGateway({
     subnetId: id,
-}));
+}, { async: true }));
 ```
 
 Usage with tags:
@@ -35,7 +35,7 @@ const defaultNatGateway = aws_subnet_public.id.apply(id => aws.ec2.getNatGateway
     tags: {
         Name: "gw NAT",
     },
-}));
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -45,7 +45,7 @@ const defaultNatGateway = aws_subnet_public.id.apply(id => aws.ec2.getNatGateway
 
 
 
-## Using GetNatGateway
+## Using GetNatGateway {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -331,7 +331,7 @@ a pair on the desired Nat Gateway.
 
 
 
-## GetNatGateway Result
+## GetNatGateway Result {#result}
 
 The following output properties are available:
 
@@ -710,7 +710,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Nat<wbr>Gateway<wbr>Filter</h4>
+
+<h4 id="getnatgatewayfilter">Get<wbr>Nat<wbr>Gateway<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetNatGatewayFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetNatGatewayFilter">output</a> API doc for this type.
 {{% /choosable %}}

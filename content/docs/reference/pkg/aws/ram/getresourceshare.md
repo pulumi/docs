@@ -16,10 +16,10 @@ block_external_search_index: true
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.ram.getResourceShare({
+const example = pulumi.output(aws.ram.getResourceShare({
     name: "example",
     resourceOwner: "SELF",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -30,21 +30,21 @@ const example = aws.ram.getResourceShare({
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const tagFilter = aws.ram.getResourceShare({
+const tagFilter = pulumi.output(aws.ram.getResourceShare({
     filters: [{
         name: "NameOfTag",
         values: ["exampleNameTagValue"],
     }],
     name: "MyResourceName",
     resourceOwner: "SELF",
-});
+}, { async: true }));
 ```
 
 
 
 
 
-## Using GetResourceShare
+## Using GetResourceShare {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -254,7 +254,7 @@ The following arguments are supported:
 
 
 
-## GetResourceShare Result
+## GetResourceShare Result {#result}
 
 The following output properties are available:
 
@@ -537,7 +537,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Resource<wbr>Share<wbr>Filter</h4>
+
+<h4 id="getresourcesharefilter">Get<wbr>Resource<wbr>Share<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetResourceShareFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetResourceShareFilter">output</a> API doc for this type.
 {{% /choosable %}}

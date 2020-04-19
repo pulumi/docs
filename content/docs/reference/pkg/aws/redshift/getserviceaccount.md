@@ -17,10 +17,10 @@ in a given region for the purpose of allowing Redshift to store audit data in S3
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const main = aws.redshift.getServiceAccount();
+const main = pulumi.output(aws.redshift.getServiceAccount({ async: true }));
 const bucket = new aws.s3.Bucket("bucket", {
     forceDestroy: true,
-    policy: `{
+    policy: pulumi.interpolate`{
 	"Version": "2008-10-17",
 	"Statement": [
 		{
@@ -54,7 +54,7 @@ const bucket = new aws.s3.Bucket("bucket", {
 
 
 
-## Using GetServiceAccount
+## Using GetServiceAccount {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -160,7 +160,7 @@ Defaults to the region from the AWS provider configuration.
 
 
 
-## GetServiceAccount Result
+## GetServiceAccount Result {#result}
 
 The following output properties are available:
 

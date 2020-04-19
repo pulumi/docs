@@ -18,9 +18,9 @@ state machine without having to hard code the ARNs as input.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.sfn.getStateMachine({
+const example = pulumi.output(aws.sfn.getStateMachine({
     name: "an_example_sfn_name",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -30,7 +30,7 @@ const example = aws.sfn.getStateMachine({
 
 
 
-## Using GetStateMachine
+## Using GetStateMachine {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -132,7 +132,7 @@ The following arguments are supported:
 
 
 
-## GetStateMachine Result
+## GetStateMachine Result {#result}
 
 The following output properties are available:
 

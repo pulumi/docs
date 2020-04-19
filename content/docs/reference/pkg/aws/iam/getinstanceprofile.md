@@ -18,9 +18,9 @@ instance profile properties without having to hard code ARNs as input.
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-const example = aws.iam.getInstanceProfile({
+const example = pulumi.output(aws.iam.getInstanceProfile({
     name: "an_example_instance_profile_name",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -30,7 +30,7 @@ const example = aws.iam.getInstanceProfile({
 
 
 
-## Using GetInstanceProfile
+## Using GetInstanceProfile {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -132,7 +132,7 @@ The following arguments are supported:
 
 
 
-## GetInstanceProfile Result
+## GetInstanceProfile Result {#result}
 
 The following output properties are available:
 
