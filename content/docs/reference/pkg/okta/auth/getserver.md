@@ -28,7 +28,7 @@ const example = pulumi.output(okta.auth.getServer({
 
 
 
-## Using GetServer
+## Using GetServer {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -130,7 +130,7 @@ The following arguments are supported:
 
 
 
-## GetServer Result
+## GetServer Result {#result}
 
 The following output properties are available:
 

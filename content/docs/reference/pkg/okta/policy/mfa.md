@@ -36,7 +36,7 @@ const example = new okta.policy.Mfa("example", {
 
 
 
-## Create a Mfa Resource
+## Create a Mfa Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -126,7 +126,7 @@ const example = new okta.policy.Mfa("example", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -203,7 +203,7 @@ const example = new okta.policy.Mfa("example", {
 
 {{% /choosable %}}
 
-## Mfa Resource Properties
+## Mfa Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -896,12 +896,77 @@ The Mfa resource accepts the following [input]({{< relref "/docs/intro/concepts/
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The Mfa resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Mfa resource produces the following output properties:
 
 
 
 
-## Look up an Existing Mfa Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing Mfa Resource {#look-up}
 
 Get an existing Mfa resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1708,7 +1773,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Mfa<wbr>Duo</h4>
+
+<h4 id="mfaduo">Mfa<wbr>Duo</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaDuo">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaDuo">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1823,7 +1889,7 @@ The following state arguments are supported:
 
 
 
-<h4>Mfa<wbr>Fido<wbr>U2f</h4>
+<h4 id="mfafidou2f">Mfa<wbr>Fido<wbr>U2f</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaFidoU2f">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaFidoU2f">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1938,7 +2004,7 @@ The following state arguments are supported:
 
 
 
-<h4>Mfa<wbr>Fido<wbr>Webauthn</h4>
+<h4 id="mfafidowebauthn">Mfa<wbr>Fido<wbr>Webauthn</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaFidoWebauthn">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaFidoWebauthn">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2053,7 +2119,7 @@ The following state arguments are supported:
 
 
 
-<h4>Mfa<wbr>Google<wbr>Otp</h4>
+<h4 id="mfagoogleotp">Mfa<wbr>Google<wbr>Otp</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaGoogleOtp">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaGoogleOtp">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2168,7 +2234,7 @@ The following state arguments are supported:
 
 
 
-<h4>Mfa<wbr>Okta<wbr>Call</h4>
+<h4 id="mfaoktacall">Mfa<wbr>Okta<wbr>Call</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaOktaCall">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaOktaCall">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2283,7 +2349,7 @@ The following state arguments are supported:
 
 
 
-<h4>Mfa<wbr>Okta<wbr>Otp</h4>
+<h4 id="mfaoktaotp">Mfa<wbr>Okta<wbr>Otp</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaOktaOtp">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaOktaOtp">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2398,7 +2464,7 @@ The following state arguments are supported:
 
 
 
-<h4>Mfa<wbr>Okta<wbr>Password</h4>
+<h4 id="mfaoktapassword">Mfa<wbr>Okta<wbr>Password</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaOktaPassword">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaOktaPassword">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2513,7 +2579,7 @@ The following state arguments are supported:
 
 
 
-<h4>Mfa<wbr>Okta<wbr>Push</h4>
+<h4 id="mfaoktapush">Mfa<wbr>Okta<wbr>Push</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaOktaPush">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaOktaPush">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2628,7 +2694,7 @@ The following state arguments are supported:
 
 
 
-<h4>Mfa<wbr>Okta<wbr>Question</h4>
+<h4 id="mfaoktaquestion">Mfa<wbr>Okta<wbr>Question</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaOktaQuestion">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaOktaQuestion">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2743,7 +2809,7 @@ The following state arguments are supported:
 
 
 
-<h4>Mfa<wbr>Okta<wbr>Sms</h4>
+<h4 id="mfaoktasms">Mfa<wbr>Okta<wbr>Sms</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaOktaSms">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaOktaSms">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2858,7 +2924,7 @@ The following state arguments are supported:
 
 
 
-<h4>Mfa<wbr>Rsa<wbr>Token</h4>
+<h4 id="mfarsatoken">Mfa<wbr>Rsa<wbr>Token</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaRsaToken">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaRsaToken">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2973,7 +3039,7 @@ The following state arguments are supported:
 
 
 
-<h4>Mfa<wbr>Symantec<wbr>Vip</h4>
+<h4 id="mfasymantecvip">Mfa<wbr>Symantec<wbr>Vip</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaSymantecVip">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaSymantecVip">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3088,7 +3154,7 @@ The following state arguments are supported:
 
 
 
-<h4>Mfa<wbr>Yubikey<wbr>Token</h4>
+<h4 id="mfayubikeytoken">Mfa<wbr>Yubikey<wbr>Token</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#MfaYubikeyToken">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#MfaYubikeyToken">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3207,7 +3273,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-okta">https://github.com/pulumi/pulumi-okta</a></dd>

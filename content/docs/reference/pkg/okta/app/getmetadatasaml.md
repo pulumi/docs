@@ -29,7 +29,7 @@ const example = pulumi.output(okta.app.getMetadataSaml({
 
 
 
-## Using GetMetadataSaml
+## Using GetMetadataSaml {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -167,7 +167,7 @@ The following arguments are supported:
 
 
 
-## GetMetadataSaml Result
+## GetMetadataSaml Result {#result}
 
 The following output properties are available:
 

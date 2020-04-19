@@ -8,21 +8,21 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="baseschema" title="BaseSchema"><span class="symbol resource"></span>BaseSchema</a></li>
     <li><a href="schema" title="Schema"><span class="symbol resource"></span>Schema</a></li>
     <li><a href="user" title="User"><span class="symbol resource"></span>User</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
     <li><a href="getuserprofilemappingsource" title="GetUserProfileMappingSource"><span class="symbol function"></span>GetUserProfileMappingSource</a></li>
     <li><a href="getusers" title="GetUsers"><span class="symbol function"></span>GetUsers</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-okta">https://github.com/pulumi/pulumi-okta</a></dd>

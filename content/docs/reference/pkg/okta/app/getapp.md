@@ -28,7 +28,7 @@ const example = pulumi.output(okta.app.getApp({
 
 
 
-## Using GetApp
+## Using GetApp {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -238,7 +238,7 @@ The following arguments are supported:
 
 
 
-## GetApp Result
+## GetApp Result {#result}
 
 The following output properties are available:
 

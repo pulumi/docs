@@ -28,7 +28,7 @@ const example = pulumi.output(okta.idp.getSaml({
 
 
 
-## Using GetSaml
+## Using GetSaml {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -166,7 +166,7 @@ The following arguments are supported:
 
 
 
-## GetSaml Result
+## GetSaml Result {#result}
 
 The following output properties are available:
 

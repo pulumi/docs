@@ -26,7 +26,7 @@ const example = pulumi.output(okta.user.getUserProfileMappingSource({ async: tru
 
 
 
-## Using GetUserProfileMappingSource
+## Using GetUserProfileMappingSource {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -55,7 +55,7 @@ const example = pulumi.output(okta.user.getUserProfileMappingSource({ async: tru
 
 
 
-## GetUserProfileMappingSource Result
+## GetUserProfileMappingSource Result {#result}
 
 The following output properties are available:
 
