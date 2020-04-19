@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="localsubjectaccessreview" title="LocalSubjectAccessReview"><span class="symbol resource"></span>LocalSubjectAccessReview</a></li>
     <li><a href="selfsubjectaccessreview" title="SelfSubjectAccessReview"><span class="symbol resource"></span>SelfSubjectAccessReview</a></li>
@@ -16,12 +16,14 @@ block_external_search_index: true
     <li><a href="subjectaccessreview" title="SubjectAccessReview"><span class="symbol resource"></span>SubjectAccessReview</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-kubernetes">https://github.com/pulumi/pulumi-kubernetes</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
     
+	<dt>Version</dt>
+	<dd>2.0.0</dd>
 </dl>
 
