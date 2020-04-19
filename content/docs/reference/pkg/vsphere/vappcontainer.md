@@ -273,7 +273,7 @@ To learn more about resource properties and how to use them, see [Inputs and Out
 
 ### Inputs
 
-The VappContainer resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#inputs" >}}) properties:
+The VappContainer resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
