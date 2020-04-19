@@ -21,13 +21,13 @@ want to use to create virtual machines in using the
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = vsphere.getDatacenter({
+const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
-});
-const datastore = vsphere.getDatastore({
+}, { async: true }));
+const datastore = datacenter.apply(datacenter => vsphere.getDatastore({
     datacenterId: datacenter.id,
     name: "datastore1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -37,7 +37,7 @@ const datastore = vsphere.getDatastore({
 
 
 
-## Using GetDatastore
+## Using GetDatastore {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -191,7 +191,7 @@ data source.
 
 
 
-## GetDatastore Result
+## GetDatastore Result {#result}
 
 The following output properties are available:
 

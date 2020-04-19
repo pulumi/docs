@@ -22,13 +22,13 @@ reads the guest ID so that can be supplied as well.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = vsphere.getDatacenter({
+const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
-});
-const template = vsphere.getVirtualMachine({
+}, { async: true }));
+const template = datacenter.apply(datacenter => vsphere.getVirtualMachine({
     datacenterId: datacenter.id,
     name: "test-vm-template",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -38,7 +38,7 @@ const template = vsphere.getVirtualMachine({
 
 
 
-## Using GetVirtualMachine
+## Using GetVirtualMachine {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -236,7 +236,7 @@ scan for disk attributes and controller types on. Default: `1`.
 
 
 
-## GetVirtualMachine Result
+## GetVirtualMachine Result {#result}
 
 The following output properties are available:
 
@@ -763,7 +763,8 @@ defined by `scsi_controller_scan_count` are scanned.
 
 ## Supporting Types
 
-<h4>Get<wbr>Virtual<wbr>Machine<wbr>Disk</h4>
+
+<h4 id="getvirtualmachinedisk">Get<wbr>Virtual<wbr>Machine<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/vsphere/types/output/#GetVirtualMachineDisk">output</a> API doc for this type.
 {{% /choosable %}}

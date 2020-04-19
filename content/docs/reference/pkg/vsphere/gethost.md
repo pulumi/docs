@@ -18,13 +18,13 @@ managed object reference ID.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = vsphere.getDatacenter({
+const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
-});
-const host = vsphere.getHost({
+}, { async: true }));
+const host = datacenter.apply(datacenter => vsphere.getHost({
     datacenterId: datacenter.id,
     name: "esxi1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -34,7 +34,7 @@ const host = vsphere.getHost({
 
 
 
-## Using GetHost
+## Using GetHost {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -180,7 +180,7 @@ omitted if there is only one host in your inventory.
 
 
 
-## GetHost Result
+## GetHost Result {#result}
 
 The following output properties are available:
 

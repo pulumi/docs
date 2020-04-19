@@ -19,9 +19,9 @@ connections.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const library = vsphere.getContentLibrary({
+const library = pulumi.output(vsphere.getContentLibrary({
     name: "Content Library Test",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -31,7 +31,7 @@ const library = vsphere.getContentLibrary({
 
 
 
-## Using GetContentLibrary
+## Using GetContentLibrary {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -133,7 +133,7 @@ The following arguments are supported:
 
 
 
-## GetContentLibrary Result
+## GetContentLibrary Result {#result}
 
 The following output properties are available:
 

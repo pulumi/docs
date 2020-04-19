@@ -21,9 +21,9 @@ requires vCenter 6.0 or higher.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const policy = vsphere.getPolicy({
+const policy = pulumi.output(vsphere.getPolicy({
     name: "policy1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -33,7 +33,7 @@ const policy = vsphere.getPolicy({
 
 
 
-## Using GetPolicy
+## Using GetPolicy {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -135,7 +135,7 @@ The following arguments are supported:
 
 
 
-## GetPolicy Result
+## GetPolicy Result {#result}
 
 The following output properties are available:
 

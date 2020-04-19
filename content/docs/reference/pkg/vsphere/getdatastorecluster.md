@@ -26,13 +26,13 @@ virtual machines in using the
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = vsphere.getDatacenter({
+const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
-});
+}, { async: true }));
 const datastoreCluster = vsphere_datacenter_dc.id.apply(id => vsphere.getDatastoreCluster({
     datacenterId: id,
     name: "datastore-cluster1",
-}));
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -42,7 +42,7 @@ const datastoreCluster = vsphere_datacenter_dc.id.apply(id => vsphere.getDatasto
 
 
 
-## Using GetDatastoreCluster
+## Using GetDatastoreCluster {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -196,7 +196,7 @@ For default datacenters, use the id attribute from an empty
 
 
 
-## GetDatastoreCluster Result
+## GetDatastoreCluster Result {#result}
 
 The following output properties are available:
 

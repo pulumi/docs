@@ -18,9 +18,9 @@ datacenter.
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const folder = vsphere.getFolder({
+const folder = pulumi.output(vsphere.getFolder({
     path: "/dc1/datastore/folder1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -30,7 +30,7 @@ const folder = vsphere.getFolder({
 
 
 
-## Using GetFolder
+## Using GetFolder {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -128,7 +128,7 @@ The following arguments are supported:
 
 
 
-## GetFolder Result
+## GetFolder Result {#result}
 
 The following output properties are available:
 

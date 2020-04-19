@@ -21,13 +21,13 @@ that you want to use to create virtual machines in using the
 import * as pulumi from "@pulumi/pulumi";
 import * as vsphere from "@pulumi/vsphere";
 
-const datacenter = vsphere.getDatacenter({
+const datacenter = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
-});
-const pool = vsphere.getResourcePool({
+}, { async: true }));
+const pool = datacenter.apply(datacenter => vsphere.getResourcePool({
     datacenterId: datacenter.id,
     name: "resource-pool-1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -52,7 +52,7 @@ import * as vsphere from "@pulumi/vsphere";
 const pool = vsphere_datacenter_dc.id.apply(id => vsphere.getResourcePool({
     datacenterId: id,
     name: "esxi1/Resources",
-}));
+}, { async: true }));
 ```
 
 For more information on the root resource pool, see [Managing Resource
@@ -67,7 +67,7 @@ Pools][vmware-docs-resource-pools] in the vSphere documentation.
 
 
 
-## Using GetResourcePool
+## Using GetResourcePool {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -225,7 +225,7 @@ path. This is required when using vCenter.
 
 
 
-## GetResourcePool Result
+## GetResourcePool Result {#result}
 
 The following output properties are available:
 
