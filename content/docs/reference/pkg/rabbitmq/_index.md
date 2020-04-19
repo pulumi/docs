@@ -11,7 +11,7 @@ menu:
 
 A Pulumi package for creating and managing RabbitMQ resources.
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="binding" title="Binding"><span class="symbol resource"></span>Binding</a></li>
     <li><a href="exchange" title="Exchange"><span class="symbol resource"></span>Exchange</a></li>
@@ -24,7 +24,7 @@ A Pulumi package for creating and managing RabbitMQ resources.
     <li><a href="vhost" title="VHost"><span class="symbol resource"></span>VHost</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-rabbitmq">https://github.com/pulumi/pulumi-rabbitmq</a></dd>
