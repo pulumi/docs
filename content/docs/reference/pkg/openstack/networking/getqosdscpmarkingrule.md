@@ -28,7 +28,7 @@ const qosDscpMarkingRule1 = pulumi.output(openstack.networking.getQosDscpMarking
 
 
 
-## Using GetQosDscpMarkingRule
+## Using GetQosDscpMarkingRule {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -210,7 +210,7 @@ A Networking client is needed to create a Neutron QoS DSCP marking rule. If omit
 
 
 
-## GetQosDscpMarkingRule Result
+## GetQosDscpMarkingRule Result {#result}
 
 The following output properties are available:
 

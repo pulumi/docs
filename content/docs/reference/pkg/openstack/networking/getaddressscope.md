@@ -30,7 +30,7 @@ const publicAddressscope = pulumi.output(openstack.networking.getAddressScope({
 
 
 
-## Using GetAddressScope
+## Using GetAddressScope {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -288,7 +288,7 @@ all projects.
 
 
 
-## GetAddressScope Result
+## GetAddressScope Result {#result}
 
 The following output properties are available:
 

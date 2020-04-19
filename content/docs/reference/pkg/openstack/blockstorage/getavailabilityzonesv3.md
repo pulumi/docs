@@ -26,7 +26,7 @@ const zones = pulumi.output(openstack.blockstorage.getAvailabilityZonesV3({ asyn
 
 
 
-## Using GetAvailabilityZonesV3
+## Using GetAvailabilityZonesV3 {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -172,7 +172,7 @@ either be `available` or `unavailable`. Default is `available`.
 
 
 
-## GetAvailabilityZonesV3 Result
+## GetAvailabilityZonesV3 Result {#result}
 
 The following output properties are available:
 

@@ -32,7 +32,7 @@ const ubuntu = pulumi.output(openstack.images.getImage({
 
 
 
-## Using GetImage
+## Using GetImage {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -558,7 +558,7 @@ is used.
 
 
 
-## GetImage Result
+## GetImage Result {#result}
 
 The following output properties are available:
 

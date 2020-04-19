@@ -33,7 +33,7 @@ const subnet1 = new openstack.networking.Subnet("subnet_1", {
 
 
 
-## Create a Subnet Resource
+## Create a Subnet Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -123,7 +123,7 @@ const subnet1 = new openstack.networking.Subnet("subnet_1", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -200,7 +200,7 @@ const subnet1 = new openstack.networking.Subnet("subnet_1", {
 
 {{% /choosable %}}
 
-## Subnet Resource Properties
+## Subnet Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -1105,9 +1105,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Subnet resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Subnet resource produces the following output properties:
 
 
 
@@ -1124,6 +1122,14 @@ The following output properties are available:
     <dd>{{% md %}}The collection of ags assigned on the subnet, which have been
 explicitly and implicitly added.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1142,6 +1148,14 @@ explicitly and implicitly added.
 explicitly and implicitly added.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1158,6 +1172,14 @@ explicitly and implicitly added.
     <dd>{{% md %}}The collection of ags assigned on the subnet, which have been
 explicitly and implicitly added.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1176,6 +1198,14 @@ explicitly and implicitly added.
 explicitly and implicitly added.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1185,8 +1215,7 @@ explicitly and implicitly added.
 
 
 
-
-## Look up an Existing Subnet Resource
+## Look up an Existing Subnet Resource {#look-up}
 
 Get an existing Subnet resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -2245,7 +2274,8 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
 ## Supporting Types
 
-<h4>Subnet<wbr>Allocation<wbr>Pool</h4>
+
+<h4 id="subnetallocationpool">Subnet<wbr>Allocation<wbr>Pool</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#SubnetAllocationPool">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#SubnetAllocationPool">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2360,7 +2390,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
 
 
-<h4>Subnet<wbr>Allocation<wbr>Pools<wbr>Collection</h4>
+<h4 id="subnetallocationpoolscollection">Subnet<wbr>Allocation<wbr>Pools<wbr>Collection</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#SubnetAllocationPoolsCollection">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#SubnetAllocationPoolsCollection">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2475,7 +2505,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
 
 
-<h4>Subnet<wbr>Host<wbr>Route</h4>
+<h4 id="subnethostroute">Subnet<wbr>Host<wbr>Route</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#SubnetHostRoute">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#SubnetHostRoute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2594,7 +2624,7 @@ create a subnet for another tenant. Changing this creates a new subnet.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-openstack">https://github.com/pulumi/pulumi-openstack</a></dd>

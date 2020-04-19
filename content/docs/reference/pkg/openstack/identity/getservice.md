@@ -30,7 +30,7 @@ const service1 = pulumi.output(openstack.identity.getService({
 
 
 
-## Using GetService
+## Using GetService {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -244,7 +244,7 @@ If omitted, the `region` argument of the provider is used.
 
 
 
-## GetService Result
+## GetService Result {#result}
 
 The following output properties are available:
 

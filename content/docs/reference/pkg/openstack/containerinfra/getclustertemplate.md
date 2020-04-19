@@ -29,7 +29,7 @@ const clustertemplate1 = pulumi.output(openstack.containerinfra.getClusterTempla
 
 
 
-## Using GetClusterTemplate
+## Using GetClusterTemplate {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -175,7 +175,7 @@ If omitted, the `region` argument of the provider is used.
 
 
 
-## GetClusterTemplate Result
+## GetClusterTemplate Result {#result}
 
 The following output properties are available:
 

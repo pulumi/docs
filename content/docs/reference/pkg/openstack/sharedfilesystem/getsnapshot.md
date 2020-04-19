@@ -28,7 +28,7 @@ const snapshot1 = pulumi.output(openstack.sharedfilesystem.getSnapshot({
 
 
 
-## Using GetSnapshot
+## Using GetSnapshot {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -282,7 +282,7 @@ The following arguments are supported:
 
 
 
-## GetSnapshot Result
+## GetSnapshot Result {#result}
 
 The following output properties are available:
 

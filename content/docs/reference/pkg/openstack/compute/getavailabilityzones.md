@@ -26,7 +26,7 @@ const zones = pulumi.output(openstack.compute.getAvailabilityZones({ async: true
 
 
 
-## Using GetAvailabilityZones
+## Using GetAvailabilityZones {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -164,7 +164,7 @@ The following arguments are supported:
 
 
 
-## GetAvailabilityZones Result
+## GetAvailabilityZones Result {#result}
 
 The following output properties are available:
 

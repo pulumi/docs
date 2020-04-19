@@ -28,7 +28,7 @@ const subnet1 = pulumi.output(openstack.networking.getSubnet({
 
 
 
-## Using GetSubnet
+## Using GetSubnet {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -650,7 +650,7 @@ A Neutron client is needed to retrieve subnet ids. If omitted, the
 
 
 
-## GetSubnet Result
+## GetSubnet Result {#result}
 
 The following output properties are available:
 
@@ -1393,7 +1393,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Subnet<wbr>Allocation<wbr>Pool</h4>
+
+<h4 id="getsubnetallocationpool">Get<wbr>Subnet<wbr>Allocation<wbr>Pool</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetSubnetAllocationPool">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1500,7 +1501,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Subnet<wbr>Host<wbr>Route</h4>
+<h4 id="getsubnethostroute">Get<wbr>Subnet<wbr>Host<wbr>Route</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetSubnetHostRoute">output</a> API doc for this type.
 {{% /choosable %}}

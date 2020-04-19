@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="quotesetv2" title="QuoteSetV2"><span class="symbol resource"></span>QuoteSetV2</a></li>
     <li><a href="quotesetv3" title="QuoteSetV3"><span class="symbol resource"></span>QuoteSetV3</a></li>
@@ -19,7 +19,7 @@ block_external_search_index: true
     <li><a href="volumev2" title="VolumeV2"><span class="symbol resource"></span>VolumeV2</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getavailabilityzonesv3" title="GetAvailabilityZonesV3"><span class="symbol function"></span>GetAvailabilityZonesV3</a></li>
     <li><a href="getsnapshotv2" title="GetSnapshotV2"><span class="symbol function"></span>GetSnapshotV2</a></li>
@@ -28,7 +28,7 @@ block_external_search_index: true
     <li><a href="getvolumev3" title="GetVolumeV3"><span class="symbol function"></span>GetVolumeV3</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-openstack">https://github.com/pulumi/pulumi-openstack</a></dd>

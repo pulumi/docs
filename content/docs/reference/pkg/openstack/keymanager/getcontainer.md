@@ -28,7 +28,7 @@ const example = pulumi.output(openstack.keymanager.getContainer({
 
 
 
-## Using GetContainer
+## Using GetContainer {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -174,7 +174,7 @@ argument of the provider is used.
 
 
 
-## GetContainer Result
+## GetContainer Result {#result}
 
 The following output properties are available:
 
@@ -661,7 +661,8 @@ structure is described below.
 
 ## Supporting Types
 
-<h4>Get<wbr>Container<wbr>Acl</h4>
+
+<h4 id="getcontaineracl">Get<wbr>Container<wbr>Acl</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetContainerAcl">output</a> API doc for this type.
 {{% /choosable %}}
@@ -736,7 +737,7 @@ structure is described below.
 
 
 
-<h4>Get<wbr>Container<wbr>Acl<wbr>Read</h4>
+<h4 id="getcontaineraclread">Get<wbr>Container<wbr>Acl<wbr>Read</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetContainerAclRead">output</a> API doc for this type.
 {{% /choosable %}}
@@ -927,7 +928,7 @@ when `project_access` is set to `false`.
 
 
 
-<h4>Get<wbr>Container<wbr>Consumer</h4>
+<h4 id="getcontainerconsumer">Get<wbr>Container<wbr>Consumer</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetContainerConsumer">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1042,7 +1043,7 @@ when `project_access` is set to `false`.
 
 
 
-<h4>Get<wbr>Container<wbr>Secret<wbr>Ref</h4>
+<h4 id="getcontainersecretref">Get<wbr>Container<wbr>Secret<wbr>Ref</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetContainerSecretRef">output</a> API doc for this type.
 {{% /choosable %}}

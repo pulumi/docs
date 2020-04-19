@@ -28,7 +28,7 @@ const sharenetwork1 = pulumi.output(openstack.sharedfilesystem.getShareNetwork({
 
 
 
-## Using GetShareNetwork
+## Using GetShareNetwork {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -434,7 +434,7 @@ the share network.
 
 
 
-## GetShareNetwork Result
+## GetShareNetwork Result {#result}
 
 The following output properties are available:
 

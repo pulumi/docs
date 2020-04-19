@@ -30,7 +30,7 @@ const endpoint1 = pulumi.output(openstack.identity.getEndpoint({
 
 
 
-## Using GetEndpoint
+## Using GetEndpoint {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -360,7 +360,7 @@ If omitted, the `region` argument of the provider is used.
 
 
 
-## GetEndpoint Result
+## GetEndpoint Result {#result}
 
 The following output properties are available:
 

@@ -28,7 +28,7 @@ const user1 = pulumi.output(openstack.identity.getUser({
 
 
 
-## Using GetUser
+## Using GetUser {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -386,7 +386,7 @@ values are `true` and `false`.
 
 
 
-## GetUser Result
+## GetUser Result {#result}
 
 The following output properties are available:
 

@@ -28,7 +28,7 @@ const secgroup = pulumi.output(openstack.networking.getSecGroup({
 
 
 
-## Using GetSecGroup
+## Using GetSecGroup {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -318,7 +318,7 @@ A Neutron client is needed to retrieve security groups ids. If omitted, the
 
 
 
-## GetSecGroup Result
+## GetSecGroup Result {#result}
 
 The following output properties are available:
 

@@ -28,7 +28,7 @@ const project1 = pulumi.output(openstack.identity.getProject({
 
 
 
-## Using GetProject
+## Using GetProject {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -318,7 +318,7 @@ are `true` and `false`.
 
 
 
-## GetProject Result
+## GetProject Result {#result}
 
 The following output properties are available:
 

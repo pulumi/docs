@@ -28,7 +28,7 @@ const trunk1 = pulumi.output(openstack.networking.getTrunk({
 
 
 
-## Using GetTrunk
+## Using GetTrunk {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -426,7 +426,7 @@ A Neutron client is needed to retrieve trunk ids. If omitted, the
 
 
 
-## GetTrunk Result
+## GetTrunk Result {#result}
 
 The following output properties are available:
 
@@ -873,7 +873,8 @@ described below.
 
 ## Supporting Types
 
-<h4>Get<wbr>Trunk<wbr>Sub<wbr>Port</h4>
+
+<h4 id="gettrunksubport">Get<wbr>Trunk<wbr>Sub<wbr>Port</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetTrunkSubPort">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1001,20 +1002,20 @@ described below.
 
     <dt class="property-required"
             title="Required">
-        <span>segmentation_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The numeric id of the subport segment.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>segmentation<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The segmenation tecnology used, e.g., "vlan".
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>segmentation_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The numeric id of the subport segment.
 {{% /md %}}</dd>
 
 </dl>

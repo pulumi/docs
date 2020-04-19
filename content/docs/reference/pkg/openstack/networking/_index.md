@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="addressscope" title="AddressScope"><span class="symbol resource"></span>AddressScope</a></li>
     <li><a href="floatingip" title="FloatingIp"><span class="symbol resource"></span>FloatingIp</a></li>
@@ -33,7 +33,7 @@ block_external_search_index: true
     <li><a href="trunk" title="Trunk"><span class="symbol resource"></span>Trunk</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getaddressscope" title="GetAddressScope"><span class="symbol function"></span>GetAddressScope</a></li>
     <li><a href="getfloatingip" title="GetFloatingIp"><span class="symbol function"></span>GetFloatingIp</a></li>
@@ -51,7 +51,7 @@ block_external_search_index: true
     <li><a href="gettrunk" title="GetTrunk"><span class="symbol function"></span>GetTrunk</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-openstack">https://github.com/pulumi/pulumi-openstack</a></dd>

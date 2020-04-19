@@ -28,7 +28,7 @@ const qosBandwidthLimitRule1 = pulumi.output(openstack.networking.getQosBandwidt
 
 
 
-## Using GetQosBandwidthLimitRule
+## Using GetQosBandwidthLimitRule {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -246,7 +246,7 @@ A Networking client is needed to create a Neutron QoS bandwidth limit rule. If o
 
 
 
-## GetQosBandwidthLimitRule Result
+## GetQosBandwidthLimitRule Result {#result}
 
 The following output properties are available:
 

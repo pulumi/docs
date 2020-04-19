@@ -28,7 +28,7 @@ const cluster1 = pulumi.output(openstack.containerinfra.getCluster({
 
 
 
-## Using GetCluster
+## Using GetCluster {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -174,7 +174,7 @@ If omitted, the `region` argument of the provider is used.
 
 
 
-## GetCluster Result
+## GetCluster Result {#result}
 
 The following output properties are available:
 

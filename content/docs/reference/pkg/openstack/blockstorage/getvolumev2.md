@@ -28,7 +28,7 @@ const volume1 = pulumi.output(openstack.blockstorage.getVolumeV2({
 
 
 
-## Using GetVolumeV2
+## Using GetVolumeV2 {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -314,7 +314,7 @@ client. If omitted, the `region` argument of the provider is used.
 
 
 
-## GetVolumeV2 Result
+## GetVolumeV2 Result {#result}
 
 The following output properties are available:
 

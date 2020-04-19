@@ -27,7 +27,7 @@ const zones = pulumi.output(openstack.sharedfilesystem.getAvailbilityZones({ asy
 
 
 
-## Using GetAvailbilityZones
+## Using GetAvailbilityZones {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -133,7 +133,7 @@ client. If omitted, the `region` argument of the provider is used.
 
 
 
-## GetAvailbilityZones Result
+## GetAvailbilityZones Result {#result}
 
 The following output properties are available:
 

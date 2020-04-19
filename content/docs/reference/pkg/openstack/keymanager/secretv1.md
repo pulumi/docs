@@ -12,7 +12,7 @@ block_external_search_index: true
 
 
 
-## Create a SecretV1 Resource
+## Create a SecretV1 Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -102,7 +102,7 @@ block_external_search_index: true
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -179,7 +179,7 @@ block_external_search_index: true
 
 {{% /choosable %}}
 
-## SecretV1 Resource Properties
+## SecretV1 Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -680,9 +680,7 @@ V1 secret.
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the SecretV1 resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the SecretV1 resource produces the following output properties:
 
 
 
@@ -726,6 +724,14 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The creator of the secret.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -800,6 +806,14 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Secret<wbr>Ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -868,6 +882,14 @@ explicitly and implicitly added.
     </dt>
     <dd>{{% md %}}The creator of the secret.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -942,6 +964,14 @@ explicitly and implicitly added.
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>secret_<wbr>ref</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -976,8 +1006,7 @@ explicitly and implicitly added.
 
 
 
-
-## Look up an Existing SecretV1 Resource
+## Look up an Existing SecretV1 Resource {#look-up}
 
 Get an existing SecretV1 resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1848,7 +1877,8 @@ V1 secret.
 
 ## Supporting Types
 
-<h4>Secret<wbr>V1Acl</h4>
+
+<h4 id="secretv1acl">Secret<wbr>V1Acl</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#SecretV1Acl">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#SecretV1Acl">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1923,7 +1953,7 @@ V1 secret.
 
 
 
-<h4>Secret<wbr>V1Acl<wbr>Read</h4>
+<h4 id="secretv1aclread">Secret<wbr>V1Acl<wbr>Read</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#SecretV1AclRead">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#SecretV1AclRead">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2122,7 +2152,7 @@ secret, when `project_access` is set to `false`.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-openstack">https://github.com/pulumi/pulumi-openstack</a></dd>

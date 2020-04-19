@@ -29,7 +29,7 @@ const snapshot1 = pulumi.output(openstack.blockstorage.getSnapshotV2({
 
 
 
-## Using GetSnapshotV2
+## Using GetSnapshotV2 {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -283,7 +283,7 @@ client. If omitted, the `region` argument of the provider is used.
 
 
 
-## GetSnapshotV2 Result
+## GetSnapshotV2 Result {#result}
 
 The following output properties are available:
 

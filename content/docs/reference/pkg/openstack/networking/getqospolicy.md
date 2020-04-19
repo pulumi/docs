@@ -28,7 +28,7 @@ const qosPolicy1 = pulumi.output(openstack.networking.getQosPolicy({
 
 
 
-## Using GetQosPolicy
+## Using GetQosPolicy {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -354,7 +354,7 @@ A Networking client is needed to retrieve a QoS policy ID. If omitted, the
 
 
 
-## GetQosPolicy Result
+## GetQosPolicy Result {#result}
 
 The following output properties are available:
 

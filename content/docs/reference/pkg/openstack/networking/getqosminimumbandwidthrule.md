@@ -28,7 +28,7 @@ const qosMinBwRule1 = pulumi.output(openstack.networking.getQosMinimumBandwidthR
 
 
 
-## Using GetQosMinimumBandwidthRule
+## Using GetQosMinimumBandwidthRule {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -242,7 +242,7 @@ A Networking client is needed to create a Neutron QoS minimum bandwidth rule. If
 
 
 
-## GetQosMinimumBandwidthRule Result
+## GetQosMinimumBandwidthRule Result {#result}
 
 The following output properties are available:
 

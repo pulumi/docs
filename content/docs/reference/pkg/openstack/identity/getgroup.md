@@ -30,7 +30,7 @@ const admins = pulumi.output(openstack.identity.getGroup({
 
 
 
-## Using GetGroup
+## Using GetGroup {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -208,7 +208,7 @@ If omitted, the `region` argument of the provider is used.
 
 
 
-## GetGroup Result
+## GetGroup Result {#result}
 
 The following output properties are available:
 

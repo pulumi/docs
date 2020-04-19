@@ -28,7 +28,7 @@ const port1 = pulumi.output(openstack.networking.getPort({
 
 
 
-## Using GetPort
+## Using GetPort {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -678,7 +678,7 @@ A Neutron client is needed to retrieve port ids. If omitted, the
 
 
 
-## GetPort Result
+## GetPort Result {#result}
 
 The following output properties are available:
 
@@ -1581,7 +1581,8 @@ The structure is described below.
 
 ## Supporting Types
 
-<h4>Get<wbr>Port<wbr>Allowed<wbr>Address<wbr>Pair</h4>
+
+<h4 id="getportallowedaddresspair">Get<wbr>Port<wbr>Allowed<wbr>Address<wbr>Pair</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetPortAllowedAddressPair">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1696,7 +1697,7 @@ The structure is described below.
 
 
 
-<h4>Get<wbr>Port<wbr>Binding</h4>
+<h4 id="getportbinding">Get<wbr>Port<wbr>Binding</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetPortBinding">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1923,7 +1924,7 @@ specific binding.
 
 
 
-<h4>Get<wbr>Port<wbr>Extra<wbr>Dhcp<wbr>Option</h4>
+<h4 id="getportextradhcpoption">Get<wbr>Port<wbr>Extra<wbr>Dhcp<wbr>Option</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetPortExtraDhcpOption">output</a> API doc for this type.
 {{% /choosable %}}
