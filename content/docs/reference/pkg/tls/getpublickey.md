@@ -30,7 +30,7 @@ const example = pulumi.output(tls.getPublicKey({
 
 
 
-## Using GetPublicKey
+## Using GetPublicKey {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -132,7 +132,7 @@ The following arguments are supported:
 
 
 
-## GetPublicKey Result
+## GetPublicKey Result {#result}
 
 The following output properties are available:
 
