@@ -265,7 +265,7 @@ To learn more about resource properties and how to use them, see [Inputs and Out
 
 ### Inputs
 
-The Selection resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The Selection resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#inputs" >}}) properties:
 
 
 

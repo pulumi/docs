@@ -189,7 +189,7 @@ To learn more about resource properties and how to use them, see [Inputs and Out
 
 ### Inputs
 
-The AccessKey resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The AccessKey resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#inputs" >}}) properties:
 
 
 

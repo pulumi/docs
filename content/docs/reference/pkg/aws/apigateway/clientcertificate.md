@@ -202,7 +202,7 @@ To learn more about resource properties and how to use them, see [Inputs and Out
 
 ### Inputs
 
-The ClientCertificate resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The ClientCertificate resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#inputs" >}}) properties:
 
 
 

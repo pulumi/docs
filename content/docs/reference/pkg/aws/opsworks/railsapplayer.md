@@ -202,7 +202,7 @@ To learn more about resource properties and how to use them, see [Inputs and Out
 
 ### Inputs
 
-The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
+The RailsAppLayer resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#inputs" >}}) properties:
 
 
 
