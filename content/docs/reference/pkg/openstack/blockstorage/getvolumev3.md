@@ -16,9 +16,9 @@ Use this data source to get information about an existing volume.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const volume1 = openstack.blockstorage.getVolumeV3({
+const volume1 = pulumi.output(openstack.blockstorage.getVolumeV3({
     name: "volume_1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const volume1 = openstack.blockstorage.getVolumeV3({
 
 
 
-## Using GetVolumeV3
+## Using GetVolumeV3 {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -314,7 +314,7 @@ client. If omitted, the `region` argument of the provider is used.
 
 
 
-## GetVolumeV3 Result
+## GetVolumeV3 Result {#result}
 
 The following output properties are available:
 

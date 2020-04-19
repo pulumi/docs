@@ -16,9 +16,9 @@ Use this data source to get the ID of an available OpenStack router.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const router = openstack.networking.getRouter({
+const router = pulumi.output(openstack.networking.getRouter({
     name: "router_1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const router = openstack.networking.getRouter({
 
 
 
-## Using GetRouter
+## Using GetRouter {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -462,7 +462,7 @@ A Neutron client is needed to retrieve router ids. If omitted, the
 
 
 
-## GetRouter Result
+## GetRouter Result {#result}
 
 The following output properties are available:
 
@@ -1009,7 +1009,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Router<wbr>External<wbr>Fixed<wbr>Ip</h4>
+
+<h4 id="getrouterexternalfixedip">Get<wbr>Router<wbr>External<wbr>Fixed<wbr>Ip</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetRouterExternalFixedIp">output</a> API doc for this type.
 {{% /choosable %}}

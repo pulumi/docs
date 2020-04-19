@@ -16,9 +16,9 @@ Use this data source to get the ID of an available OpenStack QoS bandwidth limit
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const qosBandwidthLimitRule1 = openstack.networking.getQosBandwidthLimitRule({
+const qosBandwidthLimitRule1 = pulumi.output(openstack.networking.getQosBandwidthLimitRule({
     maxKbps: 300,
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const qosBandwidthLimitRule1 = openstack.networking.getQosBandwidthLimitRule({
 
 
 
-## Using GetQosBandwidthLimitRule
+## Using GetQosBandwidthLimitRule {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -246,7 +246,7 @@ A Networking client is needed to create a Neutron QoS bandwidth limit rule. If o
 
 
 
-## GetQosBandwidthLimitRule Result
+## GetQosBandwidthLimitRule Result {#result}
 
 The following output properties are available:
 

@@ -17,9 +17,9 @@ template.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const clustertemplate1 = openstack.containerinfra.getClusterTemplate({
+const clustertemplate1 = pulumi.output(openstack.containerinfra.getClusterTemplate({
     name: "clustertemplate_1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -29,7 +29,7 @@ const clustertemplate1 = openstack.containerinfra.getClusterTemplate({
 
 
 
-## Using GetClusterTemplate
+## Using GetClusterTemplate {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -175,7 +175,7 @@ If omitted, the `region` argument of the provider is used.
 
 
 
-## GetClusterTemplate Result
+## GetClusterTemplate Result {#result}
 
 The following output properties are available:
 

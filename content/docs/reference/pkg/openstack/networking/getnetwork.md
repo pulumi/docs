@@ -16,9 +16,9 @@ Use this data source to get the ID of an available OpenStack network.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const network = openstack.networking.getNetwork({
+const network = pulumi.output(openstack.networking.getNetwork({
     name: "tf_test_network",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const network = openstack.networking.getNetwork({
 
 
 
-## Using GetNetwork
+## Using GetNetwork {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -506,7 +506,7 @@ network.
 
 
 
-## GetNetwork Result
+## GetNetwork Result {#result}
 
 The following output properties are available:
 

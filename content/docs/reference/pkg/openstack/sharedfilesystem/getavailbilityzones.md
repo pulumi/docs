@@ -17,7 +17,7 @@ from OpenStack
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const zones = openstack.sharedfilesystem.getAvailbilityZones();
+const zones = pulumi.output(openstack.sharedfilesystem.getAvailbilityZones({ async: true }));
 ```
 
 {{% /example %}}
@@ -27,7 +27,7 @@ const zones = openstack.sharedfilesystem.getAvailbilityZones();
 
 
 
-## Using GetAvailbilityZones
+## Using GetAvailbilityZones {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -133,7 +133,7 @@ client. If omitted, the `region` argument of the provider is used.
 
 
 
-## GetAvailbilityZones Result
+## GetAvailbilityZones Result {#result}
 
 The following output properties are available:
 

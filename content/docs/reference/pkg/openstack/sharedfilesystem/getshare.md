@@ -16,9 +16,9 @@ Use this data source to get the ID of an available Shared File System share.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const share1 = openstack.sharedfilesystem.getShare({
+const share1 = pulumi.output(openstack.sharedfilesystem.getShare({
     name: "share_1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const share1 = openstack.sharedfilesystem.getShare({
 
 
 
-## Using GetShare
+## Using GetShare {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -446,7 +446,7 @@ strings.
 
 
 
-## GetShare Result
+## GetShare Result {#result}
 
 The following output properties are available:
 
@@ -1037,7 +1037,8 @@ locations.
 
 ## Supporting Types
 
-<h4>Get<wbr>Share<wbr>Export<wbr>Location</h4>
+
+<h4 id="getshareexportlocation">Get<wbr>Share<wbr>Export<wbr>Location</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetShareExportLocation">output</a> API doc for this type.
 {{% /choosable %}}

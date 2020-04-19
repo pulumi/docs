@@ -16,9 +16,9 @@ Use this data source to get the ID of an available Shared File System snapshot.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const snapshot1 = openstack.sharedfilesystem.getSnapshot({
+const snapshot1 = pulumi.output(openstack.sharedfilesystem.getSnapshot({
     name: "snapshot_1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const snapshot1 = openstack.sharedfilesystem.getSnapshot({
 
 
 
-## Using GetSnapshot
+## Using GetSnapshot {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -282,7 +282,7 @@ The following arguments are supported:
 
 
 
-## GetSnapshot Result
+## GetSnapshot Result {#result}
 
 The following output properties are available:
 

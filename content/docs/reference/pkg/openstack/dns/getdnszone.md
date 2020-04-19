@@ -16,9 +16,9 @@ Use this data source to get the ID of an available OpenStack DNS zone.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const zone1 = openstack.dns.getDnsZone({
+const zone1 = pulumi.output(openstack.dns.getDnsZone({
     name: "example.com",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const zone1 = openstack.dns.getDnsZone({
 
 
 
-## Using GetDnsZone
+## Using GetDnsZone {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -678,7 +678,7 @@ A DNS client is needed to retrieve zone ids. If omitted, the
 
 
 
-## GetDnsZone Result
+## GetDnsZone Result {#result}
 
 The following output properties are available:
 

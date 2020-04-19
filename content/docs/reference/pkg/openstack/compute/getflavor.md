@@ -16,10 +16,10 @@ Use this data source to get the ID of an available OpenStack flavor.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const small = openstack.compute.getFlavor({
+const small = pulumi.output(openstack.compute.getFlavor({
     ram: 512,
     vcpus: 1,
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -29,7 +29,7 @@ const small = openstack.compute.getFlavor({
 
 
 
-## Using GetFlavor
+## Using GetFlavor {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -471,7 +471,7 @@ If omitted, the `region` argument of the provider is used.
 
 
 
-## GetFlavor Result
+## GetFlavor Result {#result}
 
 The following output properties are available:
 

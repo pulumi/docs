@@ -11,7 +11,7 @@ block_external_search_index: true
 
 
 
-## Using GetSecret
+## Using GetSecret {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -477,7 +477,7 @@ detail.
 
 
 
-## GetSecret Result
+## GetSecret Result {#result}
 
 The following output properties are available:
 
@@ -1352,7 +1352,8 @@ explicitly and implicitly added.
 
 ## Supporting Types
 
-<h4>Get<wbr>Secret<wbr>Acl</h4>
+
+<h4 id="getsecretacl">Get<wbr>Secret<wbr>Acl</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetSecretAcl">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1427,7 +1428,7 @@ explicitly and implicitly added.
 
 
 
-<h4>Get<wbr>Secret<wbr>Acl<wbr>Read</h4>
+<h4 id="getsecretaclread">Get<wbr>Secret<wbr>Acl<wbr>Read</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#GetSecretAclRead">output</a> API doc for this type.
 {{% /choosable %}}

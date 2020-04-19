@@ -16,9 +16,9 @@ Use this data source to get the ID of an available OpenStack QoS DSCP marking ru
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const qosDscpMarkingRule1 = openstack.networking.getQosDscpMarkingRule({
+const qosDscpMarkingRule1 = pulumi.output(openstack.networking.getQosDscpMarkingRule({
     dscpMark: 26,
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const qosDscpMarkingRule1 = openstack.networking.getQosDscpMarkingRule({
 
 
 
-## Using GetQosDscpMarkingRule
+## Using GetQosDscpMarkingRule {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -210,7 +210,7 @@ A Networking client is needed to create a Neutron QoS DSCP marking rule. If omit
 
 
 
-## GetQosDscpMarkingRule Result
+## GetQosDscpMarkingRule Result {#result}
 
 The following output properties are available:
 

@@ -16,9 +16,9 @@ Use this data source to get the ID of an OpenStack user.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const user1 = openstack.identity.getUser({
+const user1 = pulumi.output(openstack.identity.getUser({
     name: "user_1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const user1 = openstack.identity.getUser({
 
 
 
-## Using GetUser
+## Using GetUser {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -386,7 +386,7 @@ values are `true` and `false`.
 
 
 
-## GetUser Result
+## GetUser Result {#result}
 
 The following output properties are available:
 

@@ -16,9 +16,9 @@ Use this data source to get the ID of an available Shared File System share netw
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const sharenetwork1 = openstack.sharedfilesystem.getShareNetwork({
+const sharenetwork1 = pulumi.output(openstack.sharedfilesystem.getShareNetwork({
     name: "sharenetwork_1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const sharenetwork1 = openstack.sharedfilesystem.getShareNetwork({
 
 
 
-## Using GetShareNetwork
+## Using GetShareNetwork {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -434,7 +434,7 @@ the share network.
 
 
 
-## GetShareNetwork Result
+## GetShareNetwork Result {#result}
 
 The following output properties are available:
 

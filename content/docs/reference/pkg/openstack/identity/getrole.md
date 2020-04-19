@@ -16,9 +16,9 @@ Use this data source to get the ID of an OpenStack role.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const admin = openstack.identity.getRole({
+const admin = pulumi.output(openstack.identity.getRole({
     name: "admin",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const admin = openstack.identity.getRole({
 
 
 
-## Using GetRole
+## Using GetRole {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -206,7 +206,7 @@ If omitted, the `region` argument of the provider is used.
 
 
 
-## GetRole Result
+## GetRole Result {#result}
 
 The following output properties are available:
 

@@ -17,9 +17,9 @@ specified criteria.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const ports = openstack.networking.getPortIds({
+const ports = pulumi.output(openstack.networking.getPortIds({
     name: "port",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -29,7 +29,7 @@ const ports = openstack.networking.getPortIds({
 
 
 
-## Using GetPortIds
+## Using GetPortIds {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -711,7 +711,7 @@ Defaults to none.
 
 
 
-## GetPortIds Result
+## GetPortIds Result {#result}
 
 The following output properties are available:
 

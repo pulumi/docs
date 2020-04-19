@@ -16,13 +16,13 @@ Use this data source to get the ID of an available OpenStack image.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const ubuntu = openstack.images.getImage({
+const ubuntu = pulumi.output(openstack.images.getImage({
     mostRecent: true,
     name: "Ubuntu 16.04",
     properties: {
         key: "value",
     },
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -32,7 +32,7 @@ const ubuntu = openstack.images.getImage({
 
 
 
-## Using GetImage
+## Using GetImage {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -558,7 +558,7 @@ is used.
 
 
 
-## GetImage Result
+## GetImage Result {#result}
 
 The following output properties are available:
 

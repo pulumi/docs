@@ -16,9 +16,9 @@ Use this data source to get firewall policy information of an available OpenStac
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const policy = openstack.firewall.getPolicy({
+const policy = pulumi.output(openstack.firewall.getPolicy({
     name: "tf_test_policy",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const policy = openstack.firewall.getPolicy({
 
 
 
-## Using GetPolicy
+## Using GetPolicy {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -246,7 +246,7 @@ A Neutron client is needed to retrieve firewall policy ids. If omitted, the
 
 
 
-## GetPolicy Result
+## GetPolicy Result {#result}
 
 The following output properties are available:
 

@@ -16,10 +16,10 @@ Use this data source to get information about an existing snapshot.
 import * as pulumi from "@pulumi/pulumi";
 import * as openstack from "@pulumi/openstack";
 
-const snapshot1 = openstack.blockstorage.getSnapshotV2({
+const snapshot1 = pulumi.output(openstack.blockstorage.getSnapshotV2({
     mostRecent: true,
     name: "snapshot_1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -29,7 +29,7 @@ const snapshot1 = openstack.blockstorage.getSnapshotV2({
 
 
 
-## Using GetSnapshotV2
+## Using GetSnapshotV2 {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -283,7 +283,7 @@ client. If omitted, the `region` argument of the provider is used.
 
 
 
-## GetSnapshotV2 Result
+## GetSnapshotV2 Result {#result}
 
 The following output properties are available:
 
