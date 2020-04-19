@@ -35,7 +35,7 @@ const fromFastly = new aws.ec2.SecurityGroup("from_fastly", {
 
 
 
-## Using GetFastlyIpRanges
+## Using GetFastlyIpRanges {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -64,7 +64,7 @@ const fromFastly = new aws.ec2.SecurityGroup("from_fastly", {
 
 
 
-## GetFastlyIpRanges Result
+## GetFastlyIpRanges Result {#result}
 
 The following output properties are available:
 

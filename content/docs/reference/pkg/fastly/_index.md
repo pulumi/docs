@@ -11,7 +11,7 @@ menu:
 
 A Pulumi package for creating and managing fastly cloud resources.
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="serviceaclentriesv1" title="ServiceACLEntriesv1"><span class="symbol resource"></span>ServiceACLEntriesv1</a></li>
@@ -20,12 +20,12 @@ A Pulumi package for creating and managing fastly cloud resources.
     <li><a href="servicev1" title="Servicev1"><span class="symbol resource"></span>Servicev1</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getfastlyipranges" title="GetFastlyIpRanges"><span class="symbol function"></span>GetFastlyIpRanges</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/GrubhubProd/pulumi-fastly">https://github.com/GrubhubProd/pulumi-fastly</a></dd>

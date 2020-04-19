@@ -167,7 +167,7 @@ Fastly documentation on [Amazon S3][fastly-s3].
 
 
 
-## Create a Servicev1 Resource
+## Create a Servicev1 Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -257,7 +257,7 @@ Fastly documentation on [Amazon S3][fastly-s3].
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -334,7 +334,7 @@ Fastly documentation on [Amazon S3][fastly-s3].
 
 {{% /choosable %}}
 
-## Servicev1 Resource Properties
+## Servicev1 Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -1575,9 +1575,7 @@ accounts (see the [Fastly documentation](https://docs.fastly.com/guides/vcl/uplo
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the Servicev1 resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Servicev1 resource produces the following output properties:
 
 
 
@@ -1601,6 +1599,14 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1626,6 +1632,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1649,6 +1663,14 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -1674,6 +1696,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1683,8 +1713,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Servicev1 Resource
+## Look up an Existing Servicev1 Resource {#look-up}
 
 Get an existing Servicev1 resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -3107,7 +3136,8 @@ accounts (see the [Fastly documentation](https://docs.fastly.com/guides/vcl/uplo
 
 ## Supporting Types
 
-<h4>Servicev1Acl</h4>
+
+<h4 id="servicev1acl">Servicev1Acl</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Acl">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Acl">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3222,7 +3252,7 @@ accounts (see the [Fastly documentation](https://docs.fastly.com/guides/vcl/uplo
 
 
 
-<h4>Servicev1Backend</h4>
+<h4 id="servicev1backend">Servicev1Backend</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Backend">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Backend">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4181,7 +4211,7 @@ Default `200`.
 
 
 
-<h4>Servicev1Bigquerylogging</h4>
+<h4 id="servicev1bigquerylogging">Servicev1Bigquerylogging</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Bigquerylogging">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Bigquerylogging">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4584,7 +4614,7 @@ Default `200`.
 
 
 
-<h4>Servicev1Blobstoragelogging</h4>
+<h4 id="servicev1blobstoragelogging">Servicev1Blobstoragelogging</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Blobstoragelogging">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Blobstoragelogging">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5131,7 +5161,7 @@ Default `200`.
 
 
 
-<h4>Servicev1Cache<wbr>Setting</h4>
+<h4 id="servicev1cachesetting">Servicev1Cache<wbr>Setting</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1CacheSetting">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1CacheSetting">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5362,7 +5392,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 
 
-<h4>Servicev1Condition</h4>
+<h4 id="servicev1condition">Servicev1Condition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Condition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Condition">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5549,7 +5579,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 
 
-<h4>Servicev1Dictionary</h4>
+<h4 id="servicev1dictionary">Servicev1Dictionary</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Dictionary">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Dictionary">output</a> API doc for this type.
 {{% /choosable %}}
@@ -5696,7 +5726,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 
 
-<h4>Servicev1Director</h4>
+<h4 id="servicev1director">Servicev1Director</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Director">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Director">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6027,7 +6057,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 
 
-<h4>Servicev1Domain</h4>
+<h4 id="servicev1domain">Servicev1Domain</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Domain">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Domain">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6142,7 +6172,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 
 
-<h4>Servicev1Dynamicsnippet</h4>
+<h4 id="servicev1dynamicsnippet">Servicev1Dynamicsnippet</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Dynamicsnippet">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Dynamicsnippet">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6329,7 +6359,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 
 
-<h4>Servicev1Gcslogging</h4>
+<h4 id="servicev1gcslogging">Servicev1Gcslogging</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Gcslogging">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Gcslogging">output</a> API doc for this type.
 {{% /choosable %}}
@@ -6804,7 +6834,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 
 
-<h4>Servicev1Gzip</h4>
+<h4 id="servicev1gzip">Servicev1Gzip</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Gzip">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Gzip">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7003,7 +7033,7 @@ gzip. Example: `["css", "js"]`.
 
 
 
-<h4>Servicev1Header</h4>
+<h4 id="servicev1header">Servicev1Header</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Header">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Header">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7490,7 +7520,7 @@ content. (Does not apply to the `delete` action.)
 
 
 
-<h4>Servicev1Healthcheck</h4>
+<h4 id="servicev1healthcheck">Servicev1Healthcheck</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Healthcheck">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Healthcheck">output</a> API doc for this type.
 {{% /choosable %}}
@@ -7929,7 +7959,7 @@ content. (Does not apply to the `delete` action.)
 
 
 
-<h4>Servicev1Logentry</h4>
+<h4 id="servicev1logentry">Servicev1Logentry</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Logentry">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Logentry">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8260,7 +8290,7 @@ content. (Does not apply to the `delete` action.)
 
 
 
-<h4>Servicev1Papertrail</h4>
+<h4 id="servicev1papertrail">Servicev1Papertrail</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Papertrail">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Papertrail">output</a> API doc for this type.
 {{% /choosable %}}
@@ -8519,7 +8549,7 @@ content. (Does not apply to the `delete` action.)
 
 
 
-<h4>Servicev1Request<wbr>Setting</h4>
+<h4 id="servicev1requestsetting">Servicev1Request<wbr>Setting</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1RequestSetting">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1RequestSetting">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9026,7 +9056,7 @@ viewing origin fetch durations.
 
 
 
-<h4>Servicev1Response<wbr>Object</h4>
+<h4 id="servicev1responseobject">Servicev1Response<wbr>Object</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1ResponseObject">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1ResponseObject">output</a> API doc for this type.
 {{% /choosable %}}
@@ -9325,7 +9355,7 @@ see [Fastly's Documentation on Conditionals][fastly-conditionals].
 
 
 
-<h4>Servicev1S3logging</h4>
+<h4 id="servicev1s3logging">Servicev1S3logging</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1S3logging">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1S3logging">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10000,7 +10030,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 
 
-<h4>Servicev1Snippet</h4>
+<h4 id="servicev1snippet">Servicev1Snippet</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Snippet">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Snippet">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10187,7 +10217,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 
 
-<h4>Servicev1Splunk</h4>
+<h4 id="servicev1splunk">Servicev1Splunk</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Splunk">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Splunk">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10482,7 +10512,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 
 
-<h4>Servicev1Sumologic</h4>
+<h4 id="servicev1sumologic">Servicev1Sumologic</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Sumologic">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Sumologic">output</a> API doc for this type.
 {{% /choosable %}}
@@ -10777,7 +10807,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 
 
-<h4>Servicev1Syslog</h4>
+<h4 id="servicev1syslog">Servicev1Syslog</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Syslog">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Syslog">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11324,7 +11354,7 @@ not be encrypted. You can provide this secret via an environment variable, `FAST
 
 
 
-<h4>Servicev1Vcl</h4>
+<h4 id="servicev1vcl">Servicev1Vcl</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/input/#Servicev1Vcl">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/fastly/types/output/#Servicev1Vcl">output</a> API doc for this type.
 {{% /choosable %}}
@@ -11487,7 +11517,7 @@ marked as the main block. Default is `false`.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/GrubhubProd/pulumi-fastly">https://github.com/GrubhubProd/pulumi-fastly</a></dd>
