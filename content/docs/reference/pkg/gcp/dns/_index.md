@@ -8,20 +8,20 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="managedzone" title="ManagedZone"><span class="symbol resource"></span>ManagedZone</a></li>
     <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
     <li><a href="recordset" title="RecordSet"><span class="symbol resource"></span>RecordSet</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getkeys" title="GetKeys"><span class="symbol function"></span>GetKeys</a></li>
     <li><a href="getmanagedzone" title="GetManagedZone"><span class="symbol function"></span>GetManagedZone</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
@@ -29,5 +29,7 @@ block_external_search_index: true
 	<dd>Apache-2.0</dd>
     <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dt>Version</dt>
+	<dd>3.0.1</dd>
 </dl>
 

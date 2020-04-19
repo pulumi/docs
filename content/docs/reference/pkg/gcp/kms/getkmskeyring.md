@@ -22,10 +22,10 @@ and resides in a specific location.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const myKeyRing = gcp.kms.getKMSKeyRing({
+const myKeyRing = pulumi.output(gcp.kms.getKMSKeyRing({
     location: "us-central1",
     name: "my-key-ring",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -35,7 +35,7 @@ const myKeyRing = gcp.kms.getKMSKeyRing({
 
 
 
-## Using GetKMSKeyRing
+## Using GetKMSKeyRing {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -221,7 +221,7 @@ is not provided, the provider project is used.
 
 
 
-## GetKMSKeyRing Result
+## GetKMSKeyRing Result {#result}
 
 The following output properties are available:
 

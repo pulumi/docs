@@ -16,7 +16,7 @@ the official [API](https://cloud.google.com/compute/docs/reference/latest/addres
 
 
 
-## Using GetAddress
+## Using GetAddress {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -198,7 +198,7 @@ If it is not provided, the provider region is used.
 
 
 
-## GetAddress Result
+## GetAddress Result {#result}
 
 The following output properties are available:
 

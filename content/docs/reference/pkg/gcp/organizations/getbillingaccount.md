@@ -12,7 +12,7 @@ Use this data source to get information about a Google Billing Account.
 
 
 
-## Using GetBillingAccount
+## Using GetBillingAccount {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -186,7 +186,7 @@ The following arguments are supported:
 
 
 
-## GetBillingAccount Result
+## GetBillingAccount Result {#result}
 
 The following output properties are available:
 

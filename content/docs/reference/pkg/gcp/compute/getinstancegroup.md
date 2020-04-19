@@ -14,17 +14,17 @@ and [API](https://cloud.google.com/compute/docs/reference/latest/instanceGroups)
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const all = gcp.compute.getInstanceGroup({
+const all = pulumi.output(gcp.compute.getInstanceGroup({
     name: "instance-group-name",
     zone: "us-central1-a",
-});
+}, { async: true }));
 ```
 
 
 
 
 
-## Using GetInstanceGroup
+## Using GetInstanceGroup {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -242,7 +242,7 @@ and `zone` is not provided, the provider zone is used.
 
 
 
-## GetInstanceGroup Result
+## GetInstanceGroup Result {#result}
 
 The following output properties are available:
 
@@ -633,7 +633,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Instance<wbr>Group<wbr>Named<wbr>Port</h4>
+
+<h4 id="getinstancegroupnamedport">Get<wbr>Instance<wbr>Group<wbr>Named<wbr>Port</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetInstanceGroupNamedPort">output</a> API doc for this type.
 {{% /choosable %}}

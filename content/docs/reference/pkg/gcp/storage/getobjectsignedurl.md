@@ -18,10 +18,10 @@ For more info about signed URL's is available [here](https://cloud.google.com/st
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const artifact = gcp.storage.getObjectSignedUrl({
+const artifact = pulumi.output(gcp.storage.getObjectSignedUrl({
     bucket: "install_binaries",
     path: "path/to/install_file.bin",
-});
+}, { async: true }));
 const vm = new gcp.compute.Instance("vm", {});
 ```
 
@@ -32,7 +32,7 @@ const vm = new gcp.compute.Instance("vm", {});
 
 
 
-## Using GetObjectSignedUrl
+## Using GetObjectSignedUrl {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -406,7 +406,7 @@ Any header starting with `x-goog-` is accepted but see the [Google Docs](https:/
 
 
 
-## GetObjectSignedUrl Result
+## GetObjectSignedUrl Result {#result}
 
 The following output properties are available:
 

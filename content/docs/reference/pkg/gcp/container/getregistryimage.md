@@ -17,7 +17,7 @@ The URLs are computed entirely offline - as long as the project exists, they wil
 
 
 
-## Using GetRegistryImage
+## Using GetRegistryImage {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -243,7 +243,7 @@ The following arguments are supported:
 
 
 
-## GetRegistryImage Result
+## GetRegistryImage Result {#result}
 
 The following output properties are available:
 

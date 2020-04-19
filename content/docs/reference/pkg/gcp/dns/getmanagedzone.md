@@ -16,7 +16,7 @@ and
 
 
 
-## Using GetManagedZone
+## Using GetManagedZone {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -154,7 +154,7 @@ The following arguments are supported:
 
 
 
-## GetManagedZone Result
+## GetManagedZone Result {#result}
 
 The following output properties are available:
 

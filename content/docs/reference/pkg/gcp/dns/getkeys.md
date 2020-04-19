@@ -18,7 +18,7 @@ and [API](https://cloud.google.com/dns/docs/reference/v1/dnsKeys).
 
 
 
-## Using GetKeys
+## Using GetKeys {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -156,7 +156,7 @@ The following arguments are supported:
 
 
 
-## GetKeys Result
+## GetKeys Result {#result}
 
 The following output properties are available:
 
@@ -371,7 +371,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key</h4>
+
+<h4 id="getkeyskeysigningkey">Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetKeysKeySigningKey">output</a> API doc for this type.
 {{% /choosable %}}
@@ -782,7 +783,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key<wbr>Digest</h4>
+<h4 id="getkeyskeysigningkeydigest">Get<wbr>Keys<wbr>Key<wbr>Signing<wbr>Key<wbr>Digest</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetKeysKeySigningKeyDigest">output</a> API doc for this type.
 {{% /choosable %}}
@@ -889,7 +890,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key</h4>
+<h4 id="getkeyszonesigningkey">Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetKeysZoneSigningKey">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1264,7 +1265,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key<wbr>Digest</h4>
+<h4 id="getkeyszonesigningkeydigest">Get<wbr>Keys<wbr>Zone<wbr>Signing<wbr>Key<wbr>Digest</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetKeysZoneSigningKeyDigest">output</a> API doc for this type.
 {{% /choosable %}}

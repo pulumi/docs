@@ -17,7 +17,7 @@ for a list of these restrictions.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const admin = gcp.organizations.getIAMPolicy({
+const admin = pulumi.output(gcp.organizations.getIAMPolicy({
     auditConfigs: [{
         auditLogConfigs: [
             {
@@ -43,7 +43,7 @@ const admin = gcp.organizations.getIAMPolicy({
             role: "roles/storage.objectViewer",
         },
     ],
-});
+}, { async: true }));
 ```
 
 This data source is used to define IAM policies to apply to other resources.
@@ -54,7 +54,7 @@ from another resource is the only way to apply an IAM policy to a resource.
 
 
 
-## Using GetIAMPolicy
+## Using GetIAMPolicy {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -200,7 +200,7 @@ defining a binding to be included in the policy document. Multiple
 
 
 
-## GetIAMPolicy Result
+## GetIAMPolicy Result {#result}
 
 The following output properties are available:
 
@@ -383,7 +383,8 @@ referencing from a resource that supports IAM.
 
 ## Supporting Types
 
-<h4>Get<wbr>IAMPolicy<wbr>Audit<wbr>Config</h4>
+
+<h4 id="getiampolicyauditconfig">Get<wbr>IAMPolicy<wbr>Audit<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GetIAMPolicyAuditConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetIAMPolicyAuditConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -498,7 +499,7 @@ referencing from a resource that supports IAM.
 
 
 
-<h4>Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config</h4>
+<h4 id="getiampolicyauditconfigauditlogconfig">Get<wbr>IAMPolicy<wbr>Audit<wbr>Config<wbr>Audit<wbr>Log<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GetIAMPolicyAuditConfigAuditLogConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetIAMPolicyAuditConfigAuditLogConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -613,7 +614,7 @@ referencing from a resource that supports IAM.
 
 
 
-<h4>Get<wbr>IAMPolicy<wbr>Binding</h4>
+<h4 id="getiampolicybinding">Get<wbr>IAMPolicy<wbr>Binding</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GetIAMPolicyBinding">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetIAMPolicyBinding">output</a> API doc for this type.
 {{% /choosable %}}
@@ -796,7 +797,7 @@ Note that custom roles must be of the format `[projects|organizations]/{parent-n
 
 
 
-<h4>Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition</h4>
+<h4 id="getiampolicybindingcondition">Get<wbr>IAMPolicy<wbr>Binding<wbr>Condition</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#GetIAMPolicyBindingCondition">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetIAMPolicyBindingCondition">output</a> API doc for this type.
 {{% /choosable %}}

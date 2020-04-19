@@ -12,7 +12,7 @@ Use this data source to get the IP addresses from different special IP ranges on
 
 
 
-## Using GetNetblockIPRanges
+## Using GetNetblockIPRanges {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -114,7 +114,7 @@ The following arguments are supported:
 
 
 
-## GetNetblockIPRanges Result
+## GetNetblockIPRanges Result {#result}
 
 The following output properties are available:
 

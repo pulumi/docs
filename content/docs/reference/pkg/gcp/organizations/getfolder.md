@@ -12,7 +12,7 @@ Use this data source to get information about a Google Cloud Folder.
 
 
 
-## Using GetFolder
+## Using GetFolder {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -150,7 +150,7 @@ The following arguments are supported:
 
 
 
-## GetFolder Result
+## GetFolder Result {#result}
 
 The following output properties are available:
 

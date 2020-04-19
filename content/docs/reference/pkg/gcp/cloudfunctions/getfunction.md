@@ -18,9 +18,9 @@ and [API](https://cloud.google.com/functions/docs/apis).
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const my_function = gcp.cloudfunctions.getFunction({
+const my_function = pulumi.output(gcp.cloudfunctions.getFunction({
     name: "function",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -30,7 +30,7 @@ const my_function = gcp.cloudfunctions.getFunction({
 
 
 
-## Using GetFunction
+## Using GetFunction {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -212,7 +212,7 @@ is not provided, the provider region is used.
 
 
 
-## GetFunction Result
+## GetFunction Result {#result}
 
 The following output properties are available:
 
@@ -1027,7 +1027,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Function<wbr>Event<wbr>Trigger</h4>
+
+<h4 id="getfunctioneventtrigger">Get<wbr>Function<wbr>Event<wbr>Trigger</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetFunctionEventTrigger">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1186,7 +1187,7 @@ for a full reference of accepted triggers.
 
 
 
-<h4>Get<wbr>Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy</h4>
+<h4 id="getfunctioneventtriggerfailurepolicy">Get<wbr>Function<wbr>Event<wbr>Trigger<wbr>Failure<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetFunctionEventTriggerFailurePolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1265,7 +1266,7 @@ for a full reference of accepted triggers.
 
 
 
-<h4>Get<wbr>Function<wbr>Source<wbr>Repository</h4>
+<h4 id="getfunctionsourcerepository">Get<wbr>Function<wbr>Source<wbr>Repository</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetFunctionSourceRepository">output</a> API doc for this type.
 {{% /choosable %}}

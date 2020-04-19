@@ -18,13 +18,13 @@ The NEG may be found by providing either a `self_link`, or a `name` and a `zone`
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const neg1 = gcp.compute.getNetworkEndpointGroup({
+const neg1 = pulumi.output(gcp.compute.getNetworkEndpointGroup({
     name: "k8s1-abcdef01-myns-mysvc-8080-4b6bac43",
     zone: "us-central1-a",
-});
-const neg2 = gcp.compute.getNetworkEndpointGroup({
+}, { async: true }));
+const neg2 = pulumi.output(gcp.compute.getNetworkEndpointGroup({
     selfLink: "https://www.googleapis.com/compute/v1/projects/myproject/zones/us-central1-a/networkEndpointGroups/k8s1-abcdef01-myns-mysvc-8080-4b6bac43",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -34,7 +34,7 @@ const neg2 = gcp.compute.getNetworkEndpointGroup({
 
 
 
-## Using GetNetworkEndpointGroup
+## Using GetNetworkEndpointGroup {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -212,7 +212,7 @@ Provide either this or a `self_link`.
 
 
 
-## GetNetworkEndpointGroup Result
+## GetNetworkEndpointGroup Result {#result}
 
 The following output properties are available:
 

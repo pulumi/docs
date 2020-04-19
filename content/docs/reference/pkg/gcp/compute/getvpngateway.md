@@ -16,9 +16,9 @@ Get a VPN gateway within GCE from its name.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const my_vpn_gateway = gcp.compute.getVPNGateway({
+const my_vpn_gateway = pulumi.output(gcp.compute.getVPNGateway({
     name: "vpn-gateway-us-east1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const my_vpn_gateway = gcp.compute.getVPNGateway({
 
 
 
-## Using GetVPNGateway
+## Using GetVPNGateway {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -210,7 +210,7 @@ is not provided, the project region is used.
 
 
 
-## GetVPNGateway Result
+## GetVPNGateway Result {#result}
 
 The following output properties are available:
 

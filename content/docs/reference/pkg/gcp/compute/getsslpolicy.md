@@ -17,9 +17,9 @@ Gets an SSL Policy within GCE from its name, for use with Target HTTPS and Targe
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const my_ssl_policy = gcp.compute.getSSLPolicy({
+const my_ssl_policy = pulumi.output(gcp.compute.getSSLPolicy({
     name: "production-ssl-policy",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -29,7 +29,7 @@ const my_ssl_policy = gcp.compute.getSSLPolicy({
 
 
 
-## Using GetSSLPolicy
+## Using GetSSLPolicy {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -171,7 +171,7 @@ is not provided, the provider project is used.
 
 
 
-## GetSSLPolicy Result
+## GetSSLPolicy Result {#result}
 
 The following output properties are available:
 

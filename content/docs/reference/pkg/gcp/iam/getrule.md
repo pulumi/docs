@@ -12,7 +12,7 @@ Use this data source to get information about a Google IAM Role.
 
 
 
-## Using GetRule
+## Using GetRule {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -114,7 +114,7 @@ The following arguments are supported:
 
 
 
-## GetRule Result
+## GetRule Result {#result}
 
 The following output properties are available:
 

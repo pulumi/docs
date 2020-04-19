@@ -23,7 +23,7 @@ To get more information about NotificationChannel, see:
 
 
 
-## Using GetNotificationChannel
+## Using GetNotificationChannel {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -273,7 +273,7 @@ If it is not provided, the provider project is used.
 
 
 
-## GetNotificationChannel Result
+## GetNotificationChannel Result {#result}
 
 The following output properties are available:
 
@@ -672,7 +672,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Notification<wbr>Channel<wbr>Sensitive<wbr>Label</h4>
+
+<h4 id="getnotificationchannelsensitivelabel">Get<wbr>Notification<wbr>Channel<wbr>Sensitive<wbr>Label</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetNotificationChannelSensitiveLabel">output</a> API doc for this type.
 {{% /choosable %}}

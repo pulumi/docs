@@ -21,7 +21,7 @@ For more information see
 
 
 
-## Using GetProjectServiceAccount
+## Using GetProjectServiceAccount {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -163,7 +163,7 @@ from a different account than the one you are finding the service account for.
 
 
 
-## GetProjectServiceAccount Result
+## GetProjectServiceAccount Result {#result}
 
 The following output properties are available:
 

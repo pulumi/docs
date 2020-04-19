@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="iamauditconfig" title="IAMAuditConfig"><span class="symbol resource"></span>IAMAuditConfig</a></li>
     <li><a href="iambinding" title="IAMBinding"><span class="symbol resource"></span>IAMBinding</a></li>
@@ -20,13 +20,13 @@ block_external_search_index: true
     <li><a href="usageexportbucket" title="UsageExportBucket"><span class="symbol resource"></span>UsageExportBucket</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getorganizationpolicy" title="GetOrganizationPolicy"><span class="symbol function"></span>GetOrganizationPolicy</a></li>
     <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
@@ -34,5 +34,7 @@ block_external_search_index: true
 	<dd>Apache-2.0</dd>
     <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	<dt>Version</dt>
+	<dd>3.0.1</dd>
 </dl>
 

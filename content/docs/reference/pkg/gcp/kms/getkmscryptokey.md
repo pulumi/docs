@@ -21,7 +21,7 @@ Google Cloud KMS KeyRing.
 
 
 
-## Using GetKMSCryptoKey
+## Using GetKMSCryptoKey {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -163,7 +163,7 @@ A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing an
 
 
 
-## GetKMSCryptoKey Result
+## GetKMSCryptoKey Result {#result}
 
 The following output properties are available:
 
@@ -486,7 +486,8 @@ of a decimal number with up to 9 fractional digits, followed by the letter s (se
 
 ## Supporting Types
 
-<h4>Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Template</h4>
+
+<h4 id="getkmscryptokeyversiontemplate">Get<wbr>KMSCrypto<wbr>Key<wbr>Version<wbr>Template</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetKMSCryptoKeyVersionTemplate">output</a> API doc for this type.
 {{% /choosable %}}

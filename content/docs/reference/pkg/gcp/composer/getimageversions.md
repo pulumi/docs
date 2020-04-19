@@ -15,7 +15,7 @@ Provides access to available Cloud Composer versions in a region for a given pro
 
 
 
-## Using GetImageVersions
+## Using GetImageVersions {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -161,7 +161,7 @@ If it is not provider, the provider region is used.
 
 
 
-## GetImageVersions Result
+## GetImageVersions Result {#result}
 
 The following output properties are available:
 
@@ -340,7 +340,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Image<wbr>Versions<wbr>Image<wbr>Version</h4>
+
+<h4 id="getimageversionsimageversion">Get<wbr>Image<wbr>Versions<wbr>Image<wbr>Version</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetImageVersionsImageVersion">output</a> API doc for this type.
 {{% /choosable %}}

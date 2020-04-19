@@ -12,7 +12,7 @@ Provide access to a Resource Policy's attributes. For more information see [the 
 
 
 
-## Using GetResourcePolicy
+## Using GetResourcePolicy {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -186,7 +186,7 @@ The following arguments are supported:
 
 
 
-## GetResourcePolicy Result
+## GetResourcePolicy Result {#result}
 
 The following output properties are available:
 

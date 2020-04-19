@@ -17,7 +17,7 @@ The URLs are computed entirely offline - as long as the project exists, they wil
 
 
 
-## Using GetRegistryRepository
+## Using GetRegistryRepository {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -147,7 +147,7 @@ The following arguments are supported:
 
 
 
-## GetRegistryRepository Result
+## GetRegistryRepository Result {#result}
 
 The following output properties are available:
 

@@ -13,7 +13,7 @@ See more about [regions and regions](https://cloud.google.com/compute/docs/regio
 
 
 
-## Using GetRegions
+## Using GetRegions {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -155,7 +155,7 @@ Defaults to no filtering (all available regions - both `UP` and `DOWN`).
 
 
 
-## GetRegions Result
+## GetRegions Result {#result}
 
 The following output properties are available:
 

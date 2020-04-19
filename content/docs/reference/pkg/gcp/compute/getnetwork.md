@@ -16,9 +16,9 @@ Get a network within GCE from its name.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const my_network = gcp.compute.getNetwork({
+const my_network = pulumi.output(gcp.compute.getNetwork({
     name: "default-us-east1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const my_network = gcp.compute.getNetwork({
 
 
 
-## Using GetNetwork
+## Using GetNetwork {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -170,7 +170,7 @@ is not provided, the provider project is used.
 
 
 
-## GetNetwork Result
+## GetNetwork Result {#result}
 
 The following output properties are available:
 

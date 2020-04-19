@@ -16,10 +16,10 @@ Get a router within GCE from its name and VPC.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const my_router = gcp.compute.getRouter({
+const my_router = pulumi.output(gcp.compute.getRouter({
     name: "myrouter-us-east1",
     network: "my-network",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -29,7 +29,7 @@ const my_router = gcp.compute.getRouter({
 
 
 
-## Using GetRouter
+## Using GetRouter {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -247,7 +247,7 @@ unspecified, this defaults to the region configured in the provider.
 
 
 
-## GetRouter Result
+## GetRouter Result {#result}
 
 The following output properties are available:
 
@@ -582,7 +582,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Router<wbr>Bgp</h4>
+
+<h4 id="getrouterbgp">Get<wbr>Router<wbr>Bgp</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetRouterBgp">output</a> API doc for this type.
 {{% /choosable %}}
@@ -753,7 +754,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Router<wbr>Bgp<wbr>Advertised<wbr>Ip<wbr>Range</h4>
+<h4 id="getrouterbgpadvertisediprange">Get<wbr>Router<wbr>Bgp<wbr>Advertised<wbr>Ip<wbr>Range</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetRouterBgpAdvertisedIpRange">output</a> API doc for this type.
 {{% /choosable %}}

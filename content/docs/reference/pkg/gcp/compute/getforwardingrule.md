@@ -16,9 +16,9 @@ Get a forwarding rule within GCE from its name.
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const my_forwarding_rule = gcp.compute.getForwardingRule({
+const my_forwarding_rule = pulumi.output(gcp.compute.getForwardingRule({
     name: "forwarding-rule-us-east1",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -28,7 +28,7 @@ const my_forwarding_rule = gcp.compute.getForwardingRule({
 
 
 
-## Using GetForwardingRule
+## Using GetForwardingRule {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -210,7 +210,7 @@ is not provided, the project region is used.
 
 
 
-## GetForwardingRule Result
+## GetForwardingRule Result {#result}
 
 The following output properties are available:
 
