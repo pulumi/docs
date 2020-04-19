@@ -205,7 +205,7 @@ To learn more about resource properties and how to use them, see [Inputs and Out
 
 ### Inputs
 
-The ClusterRoleTemplateBinding resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#inputs" >}}) properties:
+The ClusterRoleTemplateBinding resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
