@@ -11,12 +11,7 @@ menu:
 
 A Pulumi package for creating and managing fastly cloud resources.
 
-> This provider is a derived work of the [Terraform Provider](https://github.com/terraform-providers/terraform-provider-fastly)
-> distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,
-> first check the [`pulumi/pulumi-fastly` repo](https://github.com/pulumi/pulumi-fastly/issues); however, if that doesn't turn up anything,
-> please consult the source [`terraform-providers/terraform-provider-fastly` repo](https://github.com/terraform-providers/terraform-provider-fastly/issues).
-
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="serviceaclentriesv1" title="ServiceACLEntriesv1"><span class="symbol resource"></span>ServiceACLEntriesv1</a></li>
@@ -25,17 +20,20 @@ A Pulumi package for creating and managing fastly cloud resources.
     <li><a href="servicev1" title="Servicev1"><span class="symbol resource"></span>Servicev1</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getfastlyipranges" title="GetFastlyIpRanges"><span class="symbol function"></span>GetFastlyIpRanges</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/GrubhubProd/pulumi-fastly">https://github.com/GrubhubProd/pulumi-fastly</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    
+    <dt>Notes</dt>
+	<dd>This Pulumi package is based on the [`fastly` Terraform Provider](https://github.com/terraform-providers/terraform-provider-fastly).</dd>
+	<dt>Version</dt>
+	<dd>2.0.0</dd>
 </dl>
 
