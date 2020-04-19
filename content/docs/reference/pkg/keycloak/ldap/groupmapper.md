@@ -252,7 +252,7 @@ To learn more about resource properties and how to use them, see [Inputs and Out
 
 ### Inputs
 
-The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#inputs" >}}) properties:
+The GroupMapper resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 

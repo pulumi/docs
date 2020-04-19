@@ -235,7 +235,7 @@ To learn more about resource properties and how to use them, see [Inputs and Out
 
 ### Inputs
 
-The GenericClientProtocolMapper resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#inputs" >}}) properties:
+The GenericClientProtocolMapper resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
