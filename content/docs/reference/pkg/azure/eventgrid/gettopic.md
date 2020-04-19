@@ -16,10 +16,10 @@ Use this data source to access information about an existing EventGrid Topic
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = azure.eventgrid.getTopic({
+const example = pulumi.output(azure.eventgrid.getTopic({
     name: "my-eventgrid-topic",
     resourceGroupName: "example-resources",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -29,7 +29,7 @@ const example = azure.eventgrid.getTopic({
 
 
 
-## Using GetTopic
+## Using GetTopic {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -199,7 +199,7 @@ The following arguments are supported:
 
 
 
-## GetTopic Result
+## GetTopic Result {#result}
 
 The following output properties are available:
 

@@ -15,7 +15,7 @@ Use this data source to access information about an existing Load Balancer
 
 
 
-## Using GetLB
+## Using GetLB {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetLB Result
+## GetLB Result {#result}
 
 The following output properties are available:
 
@@ -516,7 +516,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>LBFrontend<wbr>Ip<wbr>Configuration</h4>
+
+<h4 id="getlbfrontendipconfiguration">Get<wbr>LBFrontend<wbr>Ip<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetLBFrontendIpConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -788,15 +789,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>private_<wbr>ip_<wbr>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Private IP Address to assign to the Load Balancer.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>private<wbr>Ip<wbr>Address<wbr>Allocation</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -811,6 +803,15 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The Private IP Address Version, either `IPv4` or `IPv6`.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>private_<wbr>ip_<wbr>address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Private IP Address to assign to the Load Balancer.
 {{% /md %}}</dd>
 
     <dt class="property-required"

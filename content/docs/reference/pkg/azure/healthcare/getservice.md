@@ -15,7 +15,7 @@ Use this data source to access information about an existing Healthcare Service
 
 
 
-## Using GetService
+## Using GetService {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetService Result
+## GetService Result {#result}
 
 The following output properties are available:
 
@@ -576,7 +576,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Service<wbr>Authentication<wbr>Configuration</h4>
+
+<h4 id="getserviceauthenticationconfiguration">Get<wbr>Service<wbr>Authentication<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceAuthenticationConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -727,7 +728,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Service<wbr>Cors<wbr>Configuration</h4>
+<h4 id="getservicecorsconfiguration">Get<wbr>Service<wbr>Cors<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceCorsConfiguration">output</a> API doc for this type.
 {{% /choosable %}}

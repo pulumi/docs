@@ -15,7 +15,7 @@ Use this data source to access information about an existing Management Group.
 
 
 
-## Using GetManagementGroup
+## Using GetManagementGroup {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetManagementGroup Result
+## GetManagementGroup Result {#result}
 
 The following output properties are available:
 

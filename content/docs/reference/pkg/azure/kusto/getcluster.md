@@ -16,10 +16,10 @@ Use this data source to access information about an existing Kusto (also known a
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = azure.kusto.getCluster({
+const example = pulumi.output(azure.kusto.getCluster({
     name: "kustocluster",
     resourceGroupName: "test_resource_group",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -29,7 +29,7 @@ const example = azure.kusto.getCluster({
 
 
 
-## Using GetCluster
+## Using GetCluster {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -167,7 +167,7 @@ The following arguments are supported:
 
 
 
-## GetCluster Result
+## GetCluster Result {#result}
 
 The following output properties are available:
 

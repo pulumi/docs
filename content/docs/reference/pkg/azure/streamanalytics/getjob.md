@@ -15,7 +15,7 @@ Use this data source to access information about an existing Stream Analytics Jo
 
 
 
-## Using GetJob
+## Using GetJob {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetJob Result
+## GetJob Result {#result}
 
 The following output properties are available:
 

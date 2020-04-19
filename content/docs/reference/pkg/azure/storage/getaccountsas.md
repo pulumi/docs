@@ -20,7 +20,7 @@ and *not* a [Service SAS](https://docs.microsoft.com/en-us/rest/api/storageservi
 
 
 
-## Using GetAccountSAS
+## Using GetAccountSAS {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -338,7 +338,7 @@ The following arguments are supported:
 
 
 
-## GetAccountSAS Result
+## GetAccountSAS Result {#result}
 
 The following output properties are available:
 
@@ -677,7 +677,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Account<wbr>SASPermissions</h4>
+
+<h4 id="getaccountsaspermissions">Get<wbr>Account<wbr>SASPermissions</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetAccountSASPermissions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountSASPermissions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1008,7 +1009,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Account<wbr>SASResource<wbr>Types</h4>
+<h4 id="getaccountsasresourcetypes">Get<wbr>Account<wbr>SASResource<wbr>Types</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetAccountSASResourceTypes">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountSASResourceTypes">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1159,7 +1160,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Account<wbr>SASServices</h4>
+<h4 id="getaccountsasservices">Get<wbr>Account<wbr>SASServices</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#GetAccountSASServices">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountSASServices">output</a> API doc for this type.
 {{% /choosable %}}

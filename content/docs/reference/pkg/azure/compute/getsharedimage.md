@@ -16,11 +16,11 @@ Use this data source to access information about an existing Shared Image within
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = azure.compute.getSharedImage({
+const example = pulumi.output(azure.compute.getSharedImage({
     galleryName: "my-image-gallery",
     name: "my-image",
     resourceGroupName: "example-resources",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -30,7 +30,7 @@ const example = azure.compute.getSharedImage({
 
 
 
-## Using GetSharedImage
+## Using GetSharedImage {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -204,7 +204,7 @@ The following arguments are supported:
 
 
 
-## GetSharedImage Result
+## GetSharedImage Result {#result}
 
 The following output properties are available:
 
@@ -667,7 +667,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Shared<wbr>Image<wbr>Identifier</h4>
+
+<h4 id="getsharedimageidentifier">Get<wbr>Shared<wbr>Image<wbr>Identifier</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetSharedImageIdentifier">output</a> API doc for this type.
 {{% /choosable %}}

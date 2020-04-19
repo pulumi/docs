@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="advancedthreatprotection" title="AdvancedThreatProtection"><span class="symbol resource"></span>AdvancedThreatProtection</a></li>
     <li><a href="contact" title="Contact"><span class="symbol resource"></span>Contact</a></li>
@@ -16,7 +16,7 @@ block_external_search_index: true
     <li><a href="workspace" title="Workspace"><span class="symbol resource"></span>Workspace</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
@@ -24,5 +24,7 @@ block_external_search_index: true
 	<dd>Apache-2.0</dd>
     <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dt>Version</dt>
+	<dd>3.0.0</dd>
 </dl>
 

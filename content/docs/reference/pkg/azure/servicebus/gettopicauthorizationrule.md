@@ -16,12 +16,12 @@ Use this data source to access information about a ServiceBus Topic Authorizatio
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = azure.servicebus.getTopicAuthorizationRule({
+const example = pulumi.output(azure.servicebus.getTopicAuthorizationRule({
     name: "example-tfex_name",
     namespaceName: "example-namespace",
     resourceGroupName: "example-resources",
     topicName: "example-servicebus_topic",
-});
+}, { async: true }));
 
 export const servicebusAuthorizationRuleId = azurem_servicebus_topic_authorization_rule_example.id;
 ```
@@ -33,7 +33,7 @@ export const servicebusAuthorizationRuleId = azurem_servicebus_topic_authorizati
 
 
 
-## Using GetTopicAuthorizationRule
+## Using GetTopicAuthorizationRule {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -243,7 +243,7 @@ The following arguments are supported:
 
 
 
-## GetTopicAuthorizationRule Result
+## GetTopicAuthorizationRule Result {#result}
 
 The following output properties are available:
 

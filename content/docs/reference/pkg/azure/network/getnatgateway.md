@@ -14,7 +14,7 @@ Use this data source to access information about an existing NAT Gateway.
 
 
 
-## Using GetNatGateway
+## Using GetNatGateway {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -224,7 +224,7 @@ The following arguments are supported:
 
 
 
-## GetNatGateway Result
+## GetNatGateway Result {#result}
 
 The following output properties are available:
 

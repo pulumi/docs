@@ -16,11 +16,11 @@ Use this data source to access information about an existing Database Migration 
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = azure.databasemigration.getProject({
+const example = pulumi.output(azure.databasemigration.getProject({
     name: "example-dbms-project",
     resourceGroupName: "example-rg",
     serviceName: "example-dbms",
-});
+}, { async: true }));
 
 export const name = example.name;
 ```
@@ -32,7 +32,7 @@ export const name = example.name;
 
 
 
-## Using GetProject
+## Using GetProject {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -206,7 +206,7 @@ The following arguments are supported:
 
 
 
-## GetProject Result
+## GetProject Result {#result}
 
 The following output properties are available:
 

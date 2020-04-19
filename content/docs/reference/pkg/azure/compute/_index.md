@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="availabilityset" title="AvailabilitySet"><span class="symbol resource"></span>AvailabilitySet</a></li>
     <li><a href="bastionhost" title="BastionHost"><span class="symbol resource"></span>BastionHost</a></li>
@@ -32,7 +32,7 @@ block_external_search_index: true
     <li><a href="windowsvirtualmachinescaleset" title="WindowsVirtualMachineScaleSet"><span class="symbol resource"></span>WindowsVirtualMachineScaleSet</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getavailabilityset" title="GetAvailabilitySet"><span class="symbol function"></span>GetAvailabilitySet</a></li>
     <li><a href="getdedicatedhost" title="GetDedicatedHost"><span class="symbol function"></span>GetDedicatedHost</a></li>
@@ -48,7 +48,7 @@ block_external_search_index: true
     <li><a href="getvirtualmachine" title="GetVirtualMachine"><span class="symbol function"></span>GetVirtualMachine</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
@@ -56,5 +56,7 @@ block_external_search_index: true
 	<dd>Apache-2.0</dd>
     <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dt>Version</dt>
+	<dd>3.0.0</dd>
 </dl>
 

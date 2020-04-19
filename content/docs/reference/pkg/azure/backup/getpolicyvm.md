@@ -16,11 +16,11 @@ Use this data source to access information about an existing VM Backup Policy.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const policy = azure.backup.getPolicyVM({
+const policy = pulumi.output(azure.backup.getPolicyVM({
     name: "policy",
     recoveryVaultName: "recovery_vault",
     resourceGroupName: "resource_group",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -30,7 +30,7 @@ const policy = azure.backup.getPolicyVM({
 
 
 
-## Using GetPolicyVM
+## Using GetPolicyVM {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -204,7 +204,7 @@ The following arguments are supported:
 
 
 
-## GetPolicyVM Result
+## GetPolicyVM Result {#result}
 
 The following output properties are available:
 

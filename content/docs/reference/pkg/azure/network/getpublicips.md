@@ -16,10 +16,10 @@ Use this data source to access information about a set of existing Public IP Add
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = azure.network.getPublicIPs({
+const example = pulumi.output(azure.network.getPublicIPs({
     attached: false,
     resourceGroupName: "pip-test",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -29,7 +29,7 @@ const example = azure.network.getPublicIPs({
 
 
 
-## Using GetPublicIPs
+## Using GetPublicIPs {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -239,7 +239,7 @@ The following arguments are supported:
 
 
 
-## GetPublicIPs Result
+## GetPublicIPs Result {#result}
 
 The following output properties are available:
 
@@ -482,7 +482,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Public<wbr>IPs<wbr>Public<wbr>Ip</h4>
+
+<h4 id="getpublicipspublicip">Get<wbr>Public<wbr>IPs<wbr>Public<wbr>Ip</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPublicIPsPublicIp">output</a> API doc for this type.
 {{% /choosable %}}

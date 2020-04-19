@@ -15,7 +15,7 @@ Use this data source to access information about an existing Logic App Workflow.
 
 
 
-## Using GetWorkflow
+## Using GetWorkflow {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetWorkflow Result
+## GetWorkflow Result {#result}
 
 The following output properties are available:
 

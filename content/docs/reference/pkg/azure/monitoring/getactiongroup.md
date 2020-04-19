@@ -15,7 +15,7 @@ Use this data source to access the properties of an Action Group.
 
 
 
-## Using GetActionGroup
+## Using GetActionGroup {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetActionGroup Result
+## GetActionGroup Result {#result}
 
 The following output properties are available:
 
@@ -732,7 +732,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver</h4>
+
+<h4 id="getactiongrouparmrolereceiver">Get<wbr>Action<wbr>Group<wbr>Arm<wbr>Role<wbr>Receiver</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupArmRoleReceiver">output</a> API doc for this type.
 {{% /choosable %}}
@@ -883,7 +884,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver</h4>
+<h4 id="getactiongroupautomationrunbookreceiver">Get<wbr>Action<wbr>Group<wbr>Automation<wbr>Runbook<wbr>Receiver</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupAutomationRunbookReceiver">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1178,7 +1179,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver</h4>
+<h4 id="getactiongroupazureapppushreceiver">Get<wbr>Action<wbr>Group<wbr>Azure<wbr>App<wbr>Push<wbr>Receiver</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupAzureAppPushReceiver">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1293,7 +1294,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver</h4>
+<h4 id="getactiongroupazurefunctionreceiver">Get<wbr>Action<wbr>Group<wbr>Azure<wbr>Function<wbr>Receiver</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupAzureFunctionReceiver">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1512,7 +1513,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Action<wbr>Group<wbr>Email<wbr>Receiver</h4>
+<h4 id="getactiongroupemailreceiver">Get<wbr>Action<wbr>Group<wbr>Email<wbr>Receiver</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupEmailReceiver">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1663,7 +1664,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Action<wbr>Group<wbr>Itsm<wbr>Receiver</h4>
+<h4 id="getactiongroupitsmreceiver">Get<wbr>Action<wbr>Group<wbr>Itsm<wbr>Receiver</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupItsmReceiver">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1886,7 +1887,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver</h4>
+<h4 id="getactiongrouplogicappreceiver">Get<wbr>Action<wbr>Group<wbr>Logic<wbr>App<wbr>Receiver</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupLogicAppReceiver">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2073,7 +2074,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Action<wbr>Group<wbr>Sms<wbr>Receiver</h4>
+<h4 id="getactiongroupsmsreceiver">Get<wbr>Action<wbr>Group<wbr>Sms<wbr>Receiver</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupSmsReceiver">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2224,7 +2225,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Action<wbr>Group<wbr>Voice<wbr>Receiver</h4>
+<h4 id="getactiongroupvoicereceiver">Get<wbr>Action<wbr>Group<wbr>Voice<wbr>Receiver</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupVoiceReceiver">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2375,7 +2376,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Action<wbr>Group<wbr>Webhook<wbr>Receiver</h4>
+<h4 id="getactiongroupwebhookreceiver">Get<wbr>Action<wbr>Group<wbr>Webhook<wbr>Receiver</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetActionGroupWebhookReceiver">output</a> API doc for this type.
 {{% /choosable %}}

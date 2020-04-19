@@ -16,10 +16,10 @@ Use this data source to access the properties of a LogToMetricAction scheduled q
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = azure.monitoring.getScheduledQueryRulesLog({
+const example = pulumi.output(azure.monitoring.getScheduledQueryRulesLog({
     name: "tfex-queryrule",
     resourceGroupName: "example-rg",
-});
+}, { async: true }));
 
 export const queryRuleId = example.id;
 ```
@@ -31,7 +31,7 @@ export const queryRuleId = example.id;
 
 
 
-## Using GetScheduledQueryRulesLog
+## Using GetScheduledQueryRulesLog {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -169,7 +169,7 @@ The following arguments are supported:
 
 
 
-## GetScheduledQueryRulesLog Result
+## GetScheduledQueryRulesLog Result {#result}
 
 The following output properties are available:
 
@@ -556,7 +556,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Log<wbr>Criteria</h4>
+
+<h4 id="getscheduledqueryruleslogcriteria">Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Log<wbr>Criteria</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetScheduledQueryRulesLogCriteria">output</a> API doc for this type.
 {{% /choosable %}}
@@ -671,7 +672,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Log<wbr>Criteria<wbr>Dimension</h4>
+<h4 id="getscheduledqueryruleslogcriteriadimension">Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Log<wbr>Criteria<wbr>Dimension</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetScheduledQueryRulesLogCriteriaDimension">output</a> API doc for this type.
 {{% /choosable %}}

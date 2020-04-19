@@ -15,7 +15,7 @@ Use this data source to access the properties of a Log Profile.
 
 
 
-## Using GetLogProfile
+## Using GetLogProfile {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -117,7 +117,7 @@ The following arguments are supported:
 
 
 
-## GetLogProfile Result
+## GetLogProfile Result {#result}
 
 The following output properties are available:
 
@@ -404,7 +404,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Log<wbr>Profile<wbr>Retention<wbr>Policy</h4>
+
+<h4 id="getlogprofileretentionpolicy">Get<wbr>Log<wbr>Profile<wbr>Retention<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetLogProfileRetentionPolicy">output</a> API doc for this type.
 {{% /choosable %}}

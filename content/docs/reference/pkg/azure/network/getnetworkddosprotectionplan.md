@@ -15,7 +15,7 @@ Use this data source to access information about an existing Azure Network DDoS 
 
 
 
-## Using GetNetworkDdosProtectionPlan
+## Using GetNetworkDdosProtectionPlan {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetNetworkDdosProtectionPlan Result
+## GetNetworkDdosProtectionPlan Result {#result}
 
 The following output properties are available:
 

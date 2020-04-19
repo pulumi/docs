@@ -16,10 +16,10 @@ Use this data source to access information about an existing Storage Container.
 import * as pulumi from "@pulumi/pulumi";
 import * as azure from "@pulumi/azure";
 
-const example = azure.storage.getStorageContainer({
+const example = pulumi.output(azure.storage.getStorageContainer({
     name: "example-container-name",
     storageAccountName: "example-storage-account-name",
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -29,7 +29,7 @@ const example = azure.storage.getStorageContainer({
 
 
 
-## Using GetStorageContainer
+## Using GetStorageContainer {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -203,7 +203,7 @@ The following arguments are supported:
 
 
 
-## GetStorageContainer Result
+## GetStorageContainer Result {#result}
 
 The following output properties are available:
 

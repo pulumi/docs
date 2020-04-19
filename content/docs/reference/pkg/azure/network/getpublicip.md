@@ -12,7 +12,7 @@ Use this data source to access information about an existing Public IP Address.
 
 
 
-## Using GetPublicIP
+## Using GetPublicIP {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -218,7 +218,7 @@ The following arguments are supported:
 
 
 
-## GetPublicIP Result
+## GetPublicIP Result {#result}
 
 The following output properties are available:
 
