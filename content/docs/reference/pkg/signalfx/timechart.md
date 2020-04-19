@@ -53,7 +53,7 @@ const mychart0 = new signalfx.TimeChart("mychart0", {
 
 
 
-## Create a TimeChart Resource
+## Create a TimeChart Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -143,7 +143,7 @@ const mychart0 = new signalfx.TimeChart("mychart0", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -220,7 +220,7 @@ const mychart0 = new signalfx.TimeChart("mychart0", {
 
 {{% /choosable %}}
 
-## TimeChart Resource Properties
+## TimeChart Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -1245,15 +1245,21 @@ The TimeChart resource accepts the following [input]({{< relref "/docs/intro/con
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. Additionally, the TimeChart resource produces the following computed outputs.
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the TimeChart resource produces the following output properties:
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1273,6 +1279,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Url</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -1286,6 +1300,14 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1305,6 +1327,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>url</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1321,8 +1351,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing TimeChart Resource
+## Look up an Existing TimeChart Resource {#look-up}
 
 Get an existing TimeChart resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -2497,7 +2526,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Time<wbr>Chart<wbr>Axis<wbr>Left</h4>
+
+<h4 id="timechartaxisleft">Time<wbr>Chart<wbr>Axis<wbr>Left</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartAxisLeft">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#TimeChartAxisLeft">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2824,7 +2854,7 @@ The following state arguments are supported:
 
 
 
-<h4>Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Watermark</h4>
+<h4 id="timechartaxisleftwatermark">Time<wbr>Chart<wbr>Axis<wbr>Left<wbr>Watermark</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartAxisLeftWatermark">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#TimeChartAxisLeftWatermark">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2935,7 +2965,7 @@ The following state arguments are supported:
 
 
 
-<h4>Time<wbr>Chart<wbr>Axis<wbr>Right</h4>
+<h4 id="timechartaxisright">Time<wbr>Chart<wbr>Axis<wbr>Right</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartAxisRight">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#TimeChartAxisRight">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3262,7 +3292,7 @@ The following state arguments are supported:
 
 
 
-<h4>Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Watermark</h4>
+<h4 id="timechartaxisrightwatermark">Time<wbr>Chart<wbr>Axis<wbr>Right<wbr>Watermark</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartAxisRightWatermark">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#TimeChartAxisRightWatermark">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3373,7 +3403,7 @@ The following state arguments are supported:
 
 
 
-<h4>Time<wbr>Chart<wbr>Event<wbr>Option</h4>
+<h4 id="timecharteventoption">Time<wbr>Chart<wbr>Event<wbr>Option</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartEventOption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#TimeChartEventOption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3524,7 +3554,7 @@ The following state arguments are supported:
 
 
 
-<h4>Time<wbr>Chart<wbr>Histogram<wbr>Option</h4>
+<h4 id="timecharthistogramoption">Time<wbr>Chart<wbr>Histogram<wbr>Option</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartHistogramOption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#TimeChartHistogramOption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3603,7 +3633,7 @@ The following state arguments are supported:
 
 
 
-<h4>Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field</h4>
+<h4 id="timechartlegendoptionsfield">Time<wbr>Chart<wbr>Legend<wbr>Options<wbr>Field</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartLegendOptionsField">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#TimeChartLegendOptionsField">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3710,7 +3740,7 @@ The following state arguments are supported:
 
 
 
-<h4>Time<wbr>Chart<wbr>Viz<wbr>Option</h4>
+<h4 id="timechartvizoption">Time<wbr>Chart<wbr>Viz<wbr>Option</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#TimeChartVizOption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#TimeChartVizOption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -4041,7 +4071,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-signalfx">https://github.com/pulumi/pulumi-signalfx</a></dd>
