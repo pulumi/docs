@@ -11,7 +11,7 @@ menu:
 
 A Pulumi package for creating and managing mysql cloud resources.
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="database" title="Database"><span class="symbol resource"></span>Database</a></li>
     <li><a href="grant" title="Grant"><span class="symbol resource"></span>Grant</a></li>
@@ -21,7 +21,7 @@ A Pulumi package for creating and managing mysql cloud resources.
     <li><a href="userpassword" title="UserPassword"><span class="symbol resource"></span>UserPassword</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-mysql">https://github.com/pulumi/pulumi-mysql</a></dd>
