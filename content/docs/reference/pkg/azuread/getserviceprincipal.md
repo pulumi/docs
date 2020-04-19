@@ -16,9 +16,9 @@ Gets information about an existing Service Principal associated with an Applicat
 import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
 
-const example = azuread.getServicePrincipal({
+const example = pulumi.output(azuread.getServicePrincipal({
     displayName: "my-awesome-application",
-});
+}, { async: true }));
 ```
 
 ## Example Usage (by Application ID)
@@ -27,9 +27,9 @@ const example = azuread.getServicePrincipal({
 import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
 
-const example = azuread.getServicePrincipal({
+const example = pulumi.output(azuread.getServicePrincipal({
     applicationId: "00000000-0000-0000-0000-000000000000",
-});
+}, { async: true }));
 ```
 
 ## Example Usage (by Object ID)
@@ -38,16 +38,16 @@ const example = azuread.getServicePrincipal({
 import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
 
-const example = azuread.getServicePrincipal({
+const example = pulumi.output(azuread.getServicePrincipal({
     objectId: "00000000-0000-0000-0000-000000000000",
-});
+}, { async: true }));
 ```
 
 
 
 
 
-## Using GetServicePrincipal
+## Using GetServicePrincipal {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -257,7 +257,7 @@ The following arguments are supported:
 
 
 
-## GetServicePrincipal Result
+## GetServicePrincipal Result {#result}
 
 The following output properties are available:
 
@@ -500,7 +500,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Service<wbr>Principal<wbr>App<wbr>Role</h4>
+
+<h4 id="getserviceprincipalapprole">Get<wbr>Service<wbr>Principal<wbr>App<wbr>Role</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetServicePrincipalAppRole">output</a> API doc for this type.
 {{% /choosable %}}
@@ -759,7 +760,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Service<wbr>Principal<wbr>Oauth2Permission</h4>
+<h4 id="getserviceprincipaloauth2permission">Get<wbr>Service<wbr>Principal<wbr>Oauth2Permission</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/input/#GetServicePrincipalOauth2Permission">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azuread/types/output/#GetServicePrincipalOauth2Permission">output</a> API doc for this type.
 {{% /choosable %}}

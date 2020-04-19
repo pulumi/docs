@@ -18,12 +18,12 @@ Gets Object IDs or Display Names for multiple Azure Active Directory groups.
 import * as pulumi from "@pulumi/pulumi";
 import * as azuread from "@pulumi/azuread";
 
-const groups = azuread.getGroups({
+const groups = pulumi.output(azuread.getGroups({
     names: [
         "group-a",
         "group-b",
     ],
-});
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -33,7 +33,7 @@ const groups = azuread.getGroups({
 
 
 
-## Using GetGroups
+## Using GetGroups {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -171,7 +171,7 @@ The following arguments are supported:
 
 
 
-## GetGroups Result
+## GetGroups Result {#result}
 
 The following output properties are available:
 
