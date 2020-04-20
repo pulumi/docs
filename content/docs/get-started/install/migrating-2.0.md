@@ -115,7 +115,7 @@ var clientConfig = await Pulumi.Azure.Core.GetClientConfig.InvokeAsync();
 We recommend switching to Pulumi 2.0 if possible. We will only push critical security and bug fixes into the `1.x` branch. Other fixes, feature enhancements, and
 new functionality will not be supported in the `1.x` branch. In addition, provider updates will only be built against Pulumi 2.0.
 
-If you wish to remain on the `1.x` CLI, you can continue to download the CLI by referring to [the manual installation instructions]({{< relref "/docs/get-started/install/#manual-installation" >}}) and [choosing a specific version]({{< relref "/docs/get-started/install/versions" >}}).
+If you wish to remain on the `1.x` CLI, you can continue to download the CLI by referring to [the manual installation instructions]({{< relref "/docs/get-started/install#manual-installation" >}}) and [choosing a specific version]({{< relref "/docs/get-started/install/versions" >}}).
 
 `pulumi new` will attempt to use the latest versions of the templates, which pull in the `2.0` SDK. You can continue to use the `1.x` templates by running `pulumi new https://github.com/pulumi/templates/tree/1.x`.
 
