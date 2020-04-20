@@ -17,7 +17,7 @@ modify, and delete Load Balancers.
 
 
 
-## Create a LoadBalancer Resource
+## Create a LoadBalancer Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -26,7 +26,7 @@ modify, and delete Load Balancers.
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LoadBalancer</span><span class="p">(resource_name, opts=None, </span>algorithm=None<span class="p">, </span>droplet_ids=None<span class="p">, </span>droplet_tag=None<span class="p">, </span>enable_proxy_protocol=None<span class="p">, </span>forwarding_rules=None<span class="p">, </span>healthcheck=None<span class="p">, </span>name=None<span class="p">, </span>redirect_http_to_https=None<span class="p">, </span>region=None<span class="p">, </span>sticky_sessions=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">LoadBalancer</span><span class="p">(resource_name, opts=None, </span>algorithm=None<span class="p">, </span>droplet_ids=None<span class="p">, </span>droplet_tag=None<span class="p">, </span>enable_proxy_protocol=None<span class="p">, </span>forwarding_rules=None<span class="p">, </span>healthcheck=None<span class="p">, </span>name=None<span class="p">, </span>redirect_http_to_https=None<span class="p">, </span>region=None<span class="p">, </span>sticky_sessions=None<span class="p">, </span>vpc_uuid=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -107,7 +107,7 @@ modify, and delete Load Balancers.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -184,7 +184,13 @@ modify, and delete Load Balancers.
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## LoadBalancer Resource Properties {#properties}
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The LoadBalancer resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -289,6 +295,15 @@ Default value is `false`.
     </dt>
     <dd>{{% md %}}A `sticky_sessions` block to be assigned to the
 Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_sessions block is allowed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpc<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the load balancer will be located.
 {{% /md %}}</dd>
 
 </dl>
@@ -397,6 +412,15 @@ Default value is `false`.
 Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_sessions block is allowed.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpc<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the load balancer will be located.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -501,6 +525,15 @@ Default value is `false`.
     </dt>
     <dd>{{% md %}}A `sticky_sessions` block to be assigned to the
 Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_sessions block is allowed.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the load balancer will be located.
 {{% /md %}}</dd>
 
 </dl>
@@ -609,6 +642,15 @@ Default value is `false`.
 Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_sessions block is allowed.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc_<wbr>uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the load balancer will be located.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -617,16 +659,23 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 
 
 
+### Outputs
 
-## LoadBalancer Output Properties
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the LoadBalancer resource produces the following output properties:
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -662,6 +711,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Ip</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -694,6 +751,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>ip</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -726,6 +791,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>ip</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -758,8 +831,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing LoadBalancer Resource
+## Look up an Existing LoadBalancer Resource {#look-up}
 
 Get an existing LoadBalancer resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -769,7 +841,7 @@ Get an existing LoadBalancer resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>algorithm=None<span class="p">, </span>droplet_ids=None<span class="p">, </span>droplet_tag=None<span class="p">, </span>enable_proxy_protocol=None<span class="p">, </span>forwarding_rules=None<span class="p">, </span>healthcheck=None<span class="p">, </span>ip=None<span class="p">, </span>name=None<span class="p">, </span>redirect_http_to_https=None<span class="p">, </span>region=None<span class="p">, </span>status=None<span class="p">, </span>sticky_sessions=None<span class="p">, </span>urn=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>algorithm=None<span class="p">, </span>droplet_ids=None<span class="p">, </span>droplet_tag=None<span class="p">, </span>enable_proxy_protocol=None<span class="p">, </span>forwarding_rules=None<span class="p">, </span>healthcheck=None<span class="p">, </span>ip=None<span class="p">, </span>name=None<span class="p">, </span>redirect_http_to_https=None<span class="p">, </span>region=None<span class="p">, </span>status=None<span class="p">, </span>sticky_sessions=None<span class="p">, </span>urn=None<span class="p">, </span>vpc_uuid=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1007,6 +1079,15 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
     <dd>{{% md %}}The uniform resource name for the Load Balancer
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpc<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the load balancer will be located.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1136,6 +1217,15 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the Load Balancer
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpc<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the load balancer will be located.
 {{% /md %}}</dd>
 
 </dl>
@@ -1269,6 +1359,15 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
     <dd>{{% md %}}The uniform resource name for the Load Balancer
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the load balancer will be located.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1400,6 +1499,15 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
     <dd>{{% md %}}The uniform resource name for the Load Balancer
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc_<wbr>uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the load balancer will be located.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1414,7 +1522,8 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 
 ## Supporting Types
 
-<h4>Load<wbr>Balancer<wbr>Forwarding<wbr>Rule</h4>
+
+<h4 id="loadbalancerforwardingrule">Load<wbr>Balancer<wbr>Forwarding<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#LoadBalancerForwardingRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#LoadBalancerForwardingRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1673,7 +1782,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 
 
 
-<h4>Load<wbr>Balancer<wbr>Healthcheck</h4>
+<h4 id="loadbalancerhealthcheck">Load<wbr>Balancer<wbr>Healthcheck</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#LoadBalancerHealthcheck">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#LoadBalancerHealthcheck">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1968,7 +2077,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 
 
 
-<h4>Load<wbr>Balancer<wbr>Sticky<wbr>Sessions</h4>
+<h4 id="loadbalancerstickysessions">Load<wbr>Balancer<wbr>Sticky<wbr>Sessions</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#LoadBalancerStickySessions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#LoadBalancerStickySessions">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2123,7 +2232,7 @@ Load Balancer. The `sticky_sessions` block is documented below. Only 1 sticky_se
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-digitalocean">https://github.com/pulumi/pulumi-digitalocean</a></dd>

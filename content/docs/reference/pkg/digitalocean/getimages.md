@@ -11,7 +11,7 @@ block_external_search_index: true
 
 
 
-## Using GetImages
+## Using GetImages {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -157,7 +157,7 @@ The `sort` block is documented below.
 
 
 
-## GetImages Result
+## GetImages Result {#result}
 
 The following output properties are available:
 
@@ -400,7 +400,8 @@ snapshots and backups and are only available within your account.
 
 ## Supporting Types
 
-<h4>Get<wbr>Images<wbr>Filter</h4>
+
+<h4 id="getimagesfilter">Get<wbr>Images<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#GetImagesFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetImagesFilter">output</a> API doc for this type.
 {{% /choosable %}}
@@ -527,7 +528,7 @@ where the `key` field takes on one or more of the values provided here.
 
 
 
-<h4>Get<wbr>Images<wbr>Image</h4>
+<h4 id="getimagesimage">Get<wbr>Images<wbr>Image</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetImagesImage">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1018,7 +1019,7 @@ where the `key` field takes on one or more of the values provided here.
 
 
 
-<h4>Get<wbr>Images<wbr>Sort</h4>
+<h4 id="getimagessort">Get<wbr>Images<wbr>Sort</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#GetImagesSort">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetImagesSort">output</a> API doc for this type.
 {{% /choosable %}}

@@ -11,7 +11,7 @@ menu:
 
 A Pulumi package for creating and managing Digital Ocean cloud resources.
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="cdn" title="Cdn"><span class="symbol resource"></span>Cdn</a></li>
     <li><a href="certificate" title="Certificate"><span class="symbol resource"></span>Certificate</a></li>
@@ -34,14 +34,16 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
     <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="spacesbucket" title="SpacesBucket"><span class="symbol resource"></span>SpacesBucket</a></li>
+    <li><a href="spacesbucketobject" title="SpacesBucketObject"><span class="symbol resource"></span>SpacesBucketObject</a></li>
     <li><a href="sshkey" title="SshKey"><span class="symbol resource"></span>SshKey</a></li>
     <li><a href="tag" title="Tag"><span class="symbol resource"></span>Tag</a></li>
     <li><a href="volume" title="Volume"><span class="symbol resource"></span>Volume</a></li>
     <li><a href="volumeattachment" title="VolumeAttachment"><span class="symbol resource"></span>VolumeAttachment</a></li>
     <li><a href="volumesnapshot" title="VolumeSnapshot"><span class="symbol resource"></span>VolumeSnapshot</a></li>
+    <li><a href="vpc" title="Vpc"><span class="symbol resource"></span>Vpc</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getaccount" title="GetAccount"><span class="symbol function"></span>GetAccount</a></li>
     <li><a href="getcertificate" title="GetCertificate"><span class="symbol function"></span>GetCertificate</a></li>
@@ -65,9 +67,10 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
     <li><a href="gettag" title="GetTag"><span class="symbol function"></span>GetTag</a></li>
     <li><a href="getvolume" title="GetVolume"><span class="symbol function"></span>GetVolume</a></li>
     <li><a href="getvolumesnapshot" title="GetVolumeSnapshot"><span class="symbol function"></span>GetVolumeSnapshot</a></li>
+    <li><a href="getvpc" title="GetVpc"><span class="symbol function"></span>GetVpc</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-digitalocean">https://github.com/pulumi/pulumi-digitalocean</a></dd>
@@ -76,6 +79,6 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
     <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/terraform-providers/terraform-provider-digitalocean).</dd>
 	<dt>Version</dt>
-	<dd>2.0.0</dd>
+	<dd>2.1.0</dd>
 </dl>
 

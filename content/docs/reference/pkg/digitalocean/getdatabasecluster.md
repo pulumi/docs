@@ -15,7 +15,7 @@ Provides information on a DigitalOcean database cluster resource.
 
 
 
-## Using GetDatabaseCluster
+## Using GetDatabaseCluster {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -149,7 +149,7 @@ The following arguments are supported:
 
 
 
-## GetDatabaseCluster Result
+## GetDatabaseCluster Result {#result}
 
 The following output properties are available:
 
@@ -246,6 +246,15 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Same as `host`, but only accessible from resources within the account and in the same region.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Private<wbr>Network<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the database cluster is located.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -417,6 +426,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Private<wbr>Network<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the database cluster is located.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Private<wbr>Uri</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -580,6 +598,15 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Same as `host`, but only accessible from resources within the account and in the same region.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>private<wbr>Network<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the database cluster is located.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -751,6 +778,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>private_<wbr>network_<wbr>uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the database cluster is located.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>private_<wbr>uri</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -832,7 +868,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Database<wbr>Cluster<wbr>Maintenance<wbr>Window</h4>
+
+<h4 id="getdatabaseclustermaintenancewindow">Get<wbr>Database<wbr>Cluster<wbr>Maintenance<wbr>Window</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetDatabaseClusterMaintenanceWindow">output</a> API doc for this type.
 {{% /choosable %}}

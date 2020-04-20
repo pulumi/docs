@@ -11,7 +11,7 @@ block_external_search_index: true
 
 
 
-## Using GetImage
+## Using GetImage {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -237,7 +237,7 @@ The following arguments are supported:
 
 
 
-## GetImage Result
+## GetImage Result {#result}
 
 The following output properties are available:
 

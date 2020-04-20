@@ -34,7 +34,7 @@ const web = new digitalocean.Droplet("web", {
 
 
 
-## Create a Droplet Resource
+## Create a Droplet Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -43,7 +43,7 @@ const web = new digitalocean.Droplet("web", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Droplet</span><span class="p">(resource_name, opts=None, </span>backups=None<span class="p">, </span>image=None<span class="p">, </span>ipv6=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>private_networking=None<span class="p">, </span>region=None<span class="p">, </span>resize_disk=None<span class="p">, </span>size=None<span class="p">, </span>ssh_keys=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>volume_ids=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Droplet</span><span class="p">(resource_name, opts=None, </span>backups=None<span class="p">, </span>image=None<span class="p">, </span>ipv6=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>private_networking=None<span class="p">, </span>region=None<span class="p">, </span>resize_disk=None<span class="p">, </span>size=None<span class="p">, </span>ssh_keys=None<span class="p">, </span>tags=None<span class="p">, </span>user_data=None<span class="p">, </span>volume_ids=None<span class="p">, </span>vpc_uuid=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -124,7 +124,7 @@ const web = new digitalocean.Droplet("web", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -201,7 +201,13 @@ const web = new digitalocean.Droplet("web", {
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## Droplet Resource Properties {#properties}
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The Droplet resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -280,8 +286,10 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean controlling if private networks are
-enabled. Defaults to false.
+    <dd>{{% md %}}Boolean controlling if private networking
+is enabled. When VPC is enabled on an account, this will provision the
+Droplet inside of your account's default VPC for the region. Use the
+`vpc_uuid` attribute to specify a different VPC.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -333,6 +341,15 @@ to retrieve them.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each [block storage volume](https://www.terraform.io/docs/providers/do/r/volume.html) to be attached to the Droplet.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpc<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the Droplet will be located.
 {{% /md %}}</dd>
 
 </dl>
@@ -413,8 +430,10 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean controlling if private networks are
-enabled. Defaults to false.
+    <dd>{{% md %}}Boolean controlling if private networking
+is enabled. When VPC is enabled on an account, this will provision the
+Droplet inside of your account's default VPC for the region. Use the
+`vpc_uuid` attribute to specify a different VPC.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -466,6 +485,15 @@ to retrieve them.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each [block storage volume](https://www.terraform.io/docs/providers/do/r/volume.html) to be attached to the Droplet.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpc<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the Droplet will be located.
 {{% /md %}}</dd>
 
 </dl>
@@ -546,8 +574,10 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean controlling if private networks are
-enabled. Defaults to false.
+    <dd>{{% md %}}Boolean controlling if private networking
+is enabled. When VPC is enabled on an account, this will provision the
+Droplet inside of your account's default VPC for the region. Use the
+`vpc_uuid` attribute to specify a different VPC.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -599,6 +629,15 @@ to retrieve them.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each [block storage volume](https://www.terraform.io/docs/providers/do/r/volume.html) to be attached to the Droplet.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the Droplet will be located.
 {{% /md %}}</dd>
 
 </dl>
@@ -679,8 +718,10 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean controlling if private networks are
-enabled. Defaults to false.
+    <dd>{{% md %}}Boolean controlling if private networking
+is enabled. When VPC is enabled on an account, this will provision the
+Droplet inside of your account's default VPC for the region. Use the
+`vpc_uuid` attribute to specify a different VPC.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -734,6 +775,15 @@ to retrieve them.
     <dd>{{% md %}}A list of the IDs of each [block storage volume](https://www.terraform.io/docs/providers/do/r/volume.html) to be attached to the Droplet.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc_<wbr>uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the Droplet will be located.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -742,10 +792,9 @@ to retrieve them.
 
 
 
+### Outputs
 
-## Droplet Output Properties
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Droplet resource produces the following output properties:
 
 
 
@@ -769,6 +818,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The size of the instance's disk in GB
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -883,6 +940,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The size of the instance's disk in GB
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -1000,6 +1065,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>ipv4Address</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -1114,6 +1187,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>ipv4_<wbr>address</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1211,8 +1292,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Droplet Resource
+## Look up an Existing Droplet Resource {#look-up}
 
 Get an existing Droplet resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1222,7 +1302,7 @@ Get an existing Droplet resource's state with the given name, ID, and optional e
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>backups=None<span class="p">, </span>created_at=None<span class="p">, </span>disk=None<span class="p">, </span>image=None<span class="p">, </span>ipv4_address=None<span class="p">, </span>ipv4_address_private=None<span class="p">, </span>ipv6=None<span class="p">, </span>ipv6_address=None<span class="p">, </span>locked=None<span class="p">, </span>memory=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>price_hourly=None<span class="p">, </span>price_monthly=None<span class="p">, </span>private_networking=None<span class="p">, </span>region=None<span class="p">, </span>resize_disk=None<span class="p">, </span>size=None<span class="p">, </span>ssh_keys=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>urn=None<span class="p">, </span>user_data=None<span class="p">, </span>vcpus=None<span class="p">, </span>volume_ids=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>backups=None<span class="p">, </span>created_at=None<span class="p">, </span>disk=None<span class="p">, </span>image=None<span class="p">, </span>ipv4_address=None<span class="p">, </span>ipv4_address_private=None<span class="p">, </span>ipv6=None<span class="p">, </span>ipv6_address=None<span class="p">, </span>locked=None<span class="p">, </span>memory=None<span class="p">, </span>monitoring=None<span class="p">, </span>name=None<span class="p">, </span>price_hourly=None<span class="p">, </span>price_monthly=None<span class="p">, </span>private_networking=None<span class="p">, </span>region=None<span class="p">, </span>resize_disk=None<span class="p">, </span>size=None<span class="p">, </span>ssh_keys=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>urn=None<span class="p">, </span>user_data=None<span class="p">, </span>vcpus=None<span class="p">, </span>volume_ids=None<span class="p">, </span>vpc_uuid=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1468,8 +1548,10 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean controlling if private networks are
-enabled. Defaults to false.
+    <dd>{{% md %}}Boolean controlling if private networking
+is enabled. When VPC is enabled on an account, this will provision the
+Droplet inside of your account's default VPC for the region. Use the
+`vpc_uuid` attribute to specify a different VPC.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1567,6 +1649,15 @@ to retrieve them.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each [block storage volume](https://www.terraform.io/docs/providers/do/r/volume.html) to be attached to the Droplet.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpc<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the Droplet will be located.
 {{% /md %}}</dd>
 
 </dl>
@@ -1708,8 +1799,10 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean controlling if private networks are
-enabled. Defaults to false.
+    <dd>{{% md %}}Boolean controlling if private networking
+is enabled. When VPC is enabled on an account, this will provision the
+Droplet inside of your account's default VPC for the region. Use the
+`vpc_uuid` attribute to specify a different VPC.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1807,6 +1900,15 @@ to retrieve them.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each [block storage volume](https://www.terraform.io/docs/providers/do/r/volume.html) to be attached to the Droplet.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpc<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the Droplet will be located.
 {{% /md %}}</dd>
 
 </dl>
@@ -1948,8 +2050,10 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Boolean controlling if private networks are
-enabled. Defaults to false.
+    <dd>{{% md %}}Boolean controlling if private networking
+is enabled. When VPC is enabled on an account, this will provision the
+Droplet inside of your account's default VPC for the region. Use the
+`vpc_uuid` attribute to specify a different VPC.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2047,6 +2151,15 @@ to retrieve them.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of the IDs of each [block storage volume](https://www.terraform.io/docs/providers/do/r/volume.html) to be attached to the Droplet.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the Droplet will be located.
 {{% /md %}}</dd>
 
 </dl>
@@ -2188,8 +2301,10 @@ Defaults to false.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Boolean controlling if private networks are
-enabled. Defaults to false.
+    <dd>{{% md %}}Boolean controlling if private networking
+is enabled. When VPC is enabled on an account, this will provision the
+Droplet inside of your account's default VPC for the region. Use the
+`vpc_uuid` attribute to specify a different VPC.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2289,6 +2404,15 @@ to retrieve them.
     <dd>{{% md %}}A list of the IDs of each [block storage volume](https://www.terraform.io/docs/providers/do/r/volume.html) to be attached to the Droplet.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc_<wbr>uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the Droplet will be located.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -2302,7 +2426,7 @@ to retrieve them.
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-digitalocean">https://github.com/pulumi/pulumi-digitalocean</a></dd>

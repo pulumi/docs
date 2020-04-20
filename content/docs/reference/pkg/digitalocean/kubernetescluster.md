@@ -64,7 +64,7 @@ Note that, while individual node pools may scale to 0, a cluster must always inc
 
 
 
-## Create a KubernetesCluster Resource
+## Create a KubernetesCluster Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -73,7 +73,7 @@ Note that, while individual node pools may scale to 0, a cluster must always inc
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">KubernetesCluster</span><span class="p">(resource_name, opts=None, </span>name=None<span class="p">, </span>node_pool=None<span class="p">, </span>region=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">KubernetesCluster</span><span class="p">(resource_name, opts=None, </span>name=None<span class="p">, </span>node_pool=None<span class="p">, </span>region=None<span class="p">, </span>tags=None<span class="p">, </span>version=None<span class="p">, </span>vpc_uuid=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -154,7 +154,7 @@ Note that, while individual node pools may scale to 0, a cluster must always inc
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -231,7 +231,13 @@ Note that, while individual node pools may scale to 0, a cluster must always inc
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## KubernetesCluster Resource Properties {#properties}
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The KubernetesCluster resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -290,6 +296,15 @@ Note that, while individual node pools may scale to 0, a cluster must always inc
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpc<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the Kubernetes cluster will be located.
 {{% /md %}}</dd>
 
 </dl>
@@ -352,6 +367,15 @@ Note that, while individual node pools may scale to 0, a cluster must always inc
     <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpc<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the Kubernetes cluster will be located.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -410,6 +434,15 @@ Note that, while individual node pools may scale to 0, a cluster must always inc
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
     </dt>
     <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the Kubernetes cluster will be located.
 {{% /md %}}</dd>
 
 </dl>
@@ -472,6 +505,15 @@ Note that, while individual node pools may scale to 0, a cluster must always inc
     <dd>{{% md %}}A list of tag names to be applied to the Kubernetes cluster.
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc_<wbr>uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the Kubernetes cluster will be located.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -480,10 +522,9 @@ Note that, while individual node pools may scale to 0, a cluster must always inc
 
 
 
+### Outputs
 
-## KubernetesCluster Output Properties
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the KubernetesCluster resource produces the following output properties:
 
 
 
@@ -517,6 +558,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The base URL of the API server on the Kubernetes master node.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -606,6 +655,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Ipv4Address</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -689,6 +746,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The base URL of the API server on the Kubernetes master node.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -778,6 +843,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>ipv4_<wbr>address</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -837,8 +910,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing KubernetesCluster Resource
+## Look up an Existing KubernetesCluster Resource {#look-up}
 
 Get an existing KubernetesCluster resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -848,7 +920,7 @@ Get an existing KubernetesCluster resource's state with the given name, ID, and 
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_subnet=None<span class="p">, </span>created_at=None<span class="p">, </span>endpoint=None<span class="p">, </span>ipv4_address=None<span class="p">, </span>kube_configs=None<span class="p">, </span>name=None<span class="p">, </span>node_pool=None<span class="p">, </span>region=None<span class="p">, </span>service_subnet=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>updated_at=None<span class="p">, </span>version=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>cluster_subnet=None<span class="p">, </span>created_at=None<span class="p">, </span>endpoint=None<span class="p">, </span>ipv4_address=None<span class="p">, </span>kube_configs=None<span class="p">, </span>name=None<span class="p">, </span>node_pool=None<span class="p">, </span>region=None<span class="p">, </span>service_subnet=None<span class="p">, </span>status=None<span class="p">, </span>tags=None<span class="p">, </span>updated_at=None<span class="p">, </span>version=None<span class="p">, </span>vpc_uuid=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1094,6 +1166,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The slug identifier for the version of Kubernetes used for the cluster. Use [doctl](https://github.com/digitalocean/doctl) to find the available versions `doctl kubernetes options versions`. (**Note:** A cluster may only be upgraded to newer versions in-place. If the version is decreased, a new resource will be created.)
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpc<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the Kubernetes cluster will be located.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1231,6 +1312,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The slug identifier for the version of Kubernetes used for the cluster. Use [doctl](https://github.com/digitalocean/doctl) to find the available versions `doctl kubernetes options versions`. (**Note:** A cluster may only be upgraded to newer versions in-place. If the version is decreased, a new resource will be created.)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Vpc<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the Kubernetes cluster will be located.
 {{% /md %}}</dd>
 
 </dl>
@@ -1372,6 +1462,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The slug identifier for the version of Kubernetes used for the cluster. Use [doctl](https://github.com/digitalocean/doctl) to find the available versions `doctl kubernetes options versions`. (**Note:** A cluster may only be upgraded to newer versions in-place. If the version is decreased, a new resource will be created.)
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the Kubernetes cluster will be located.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1511,6 +1610,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The slug identifier for the version of Kubernetes used for the cluster. Use [doctl](https://github.com/digitalocean/doctl) to find the available versions `doctl kubernetes options versions`. (**Note:** A cluster may only be upgraded to newer versions in-place. If the version is decreased, a new resource will be created.)
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>vpc_<wbr>uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the Kubernetes cluster will be located.
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -1525,7 +1633,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config</h4>
+
+<h4 id="kubernetesclusterkubeconfig">Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#KubernetesClusterKubeConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1792,7 +1901,7 @@ The following state arguments are supported:
 
 
 
-<h4>Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool</h4>
+<h4 id="kubernetesclusternodepool">Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#KubernetesClusterNodePool">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#KubernetesClusterNodePool">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2199,7 +2308,7 @@ The following state arguments are supported:
 
 
 
-<h4>Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node</h4>
+<h4 id="kubernetesclusternodepoolnode">Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#KubernetesClusterNodePoolNode">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#KubernetesClusterNodePoolNode">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2490,7 +2599,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-digitalocean">https://github.com/pulumi/pulumi-digitalocean</a></dd>

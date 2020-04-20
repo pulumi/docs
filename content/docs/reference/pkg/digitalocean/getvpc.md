@@ -1,6 +1,6 @@
 
 ---
-title: "GetVolume"
+title: "GetVpc"
 block_external_search_index: true
 ---
 
@@ -11,29 +11,29 @@ block_external_search_index: true
 
 
 
-## Using GetVolume {#using}
+## Using GetVpc {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
 {{% choosable language typescript %}}
-<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVolume<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#GetVolumeArgs">GetVolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#GetVolumeResult">GetVolumeResult</a></span>></span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-typescript" data-lang="typescript"><span class="k">function </span>getVpc<span class="p">(</span><span class="nx">args</span>: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#GetVpcArgs">GetVpcArgs</a></span><span class="p">, </span><span class="nx">opts</span>?: <span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions">InvokeOptions</a></span><span class="p">): Promise&lt;<span class="nx"><a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/#GetVpcResult">GetVpcResult</a></span>></span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_volume(</span>description=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_vpc(</span>id=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language go %}}
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVolume<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetVolumeArgs">GetVolumeArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#LookupVolumeResult">LookupVolumeResult</a></span>, error)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="k">func </span>LookupVpc<span class="p">(</span><span class="nx">ctx</span> *<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">pulumi.Context</a></span><span class="p">, </span><span class="nx">args</span> <span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#GetVpcArgs">GetVpcArgs</a></span><span class="p">, </span><span class="nx">opts</span> ...<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#InvokeOption">pulumi.InvokeOption</a></span><span class="p">) (*<span class="nx"><a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#LookupVpcResult">LookupVpcResult</a></span>, error)</span></code></pre></div>
 {{% /choosable %}}
 
 
 {{% choosable language csharp %}}
-<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVolume </span><span class="p">{</span><span class="k">
-    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.GetVolumeResult.html">GetVolumeResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.GetVolumeArgs.html">GetVolumeArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
+<div class="highlight"><pre class="chroma"><code class="language-csharp" data-lang="csharp"><span class="k">public static class </span><span class="nx">GetVpc </span><span class="p">{</span><span class="k">
+    public static </span>Task&lt;<span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.Digitalocean.GetVpcResult.html">GetVpcResult</a></span>> <span class="p">InvokeAsync(</span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi.Digitalocean/Pulumi.DigitalOcean.GetVpcArgs.html">GetVpcArgs</a></span> <span class="nx">args<span class="p">, </span><span class="nx"><a href="/docs/reference/pkg/dotnet/Pulumi/Pulumi.InvokeOptions.html">InvokeOptions</a></span>? <span class="nx">opts = null<span class="p">)</span><span class="p">
 }</span></code></pre></div>
 {{% /choosable %}}
 
@@ -46,22 +46,22 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span>Name</span>
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of block storage volume.
+    <dd>{{% md %}}The unique identifier of an existing VPC.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Text describing a block storage volume.
+    <dd>{{% md %}}The name of an existing VPC.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -70,7 +70,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The region the block storage volume is provisioned in.
+    <dd>{{% md %}}The DigitalOcean region slug for the VPC's location.
 {{% /md %}}</dd>
 
 </dl>
@@ -80,22 +80,22 @@ The following arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span>Name</span>
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of block storage volume.
+    <dd>{{% md %}}The unique identifier of an existing VPC.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>Description</span>
+        <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Text describing a block storage volume.
+    <dd>{{% md %}}The name of an existing VPC.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -104,7 +104,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The region the block storage volume is provisioned in.
+    <dd>{{% md %}}The DigitalOcean region slug for the VPC's location.
 {{% /md %}}</dd>
 
 </dl>
@@ -114,22 +114,22 @@ The following arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span>name</span>
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The name of block storage volume.
+    <dd>{{% md %}}The unique identifier of an existing VPC.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Text describing a block storage volume.
+    <dd>{{% md %}}The name of an existing VPC.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -138,7 +138,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The region the block storage volume is provisioned in.
+    <dd>{{% md %}}The DigitalOcean region slug for the VPC's location.
 {{% /md %}}</dd>
 
 </dl>
@@ -148,22 +148,22 @@ The following arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span>name</span>
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The name of block storage volume.
+    <dd>{{% md %}}The unique identifier of an existing VPC.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
-        <span>description</span>
+        <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Text describing a block storage volume.
+    <dd>{{% md %}}The name of an existing VPC.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -172,7 +172,7 @@ The following arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The region the block storage volume is provisioned in.
+    <dd>{{% md %}}The DigitalOcean region slug for the VPC's location.
 {{% /md %}}</dd>
 
 </dl>
@@ -185,7 +185,7 @@ The following arguments are supported:
 
 
 
-## GetVolume Result {#result}
+## GetVpc Result {#result}
 
 The following output properties are available:
 
@@ -197,29 +197,29 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Droplet<wbr>Ids</span>
+        <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;int&gt;</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}A list of associated Droplet ids.
+    <dd>{{% md %}}The date and time of when the VPC was created.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Filesystem<wbr>Label</span>
+        <span>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
-    <dd>{{% md %}}Filesystem label currently in-use on the block storage volume.
+    <dd>{{% md %}}A boolean indicating whether or not the VPC is the default one for the region.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Filesystem<wbr>Type</span>
+        <span>Description</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Filesystem type currently in-use on the block storage volume.
+    <dd>{{% md %}}A free-form text field describing the VPC.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -228,7 +228,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+    <dd>{{% md %}}The unique identifier for the VPC.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Ip<wbr>Range</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The range of IP addresses for the VPC in CIDR notation.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -237,41 +246,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
-    </dt>
-    <dd>{{% md %}}The size of the block storage volume in GiB.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}A list of the tags associated to the Volume.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Urn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Text describing a block storage volume.
+    <dd>{{% md %}}The name of the VPC.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -280,7 +255,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The DigitalOcean region slug for the VPC's location.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Urn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name (URN) for the VPC.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -291,29 +276,29 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>Droplet<wbr>Ids</span>
+        <span>Created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">[]int</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}A list of associated Droplet ids.
+    <dd>{{% md %}}The date and time of when the VPC was created.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Filesystem<wbr>Label</span>
+        <span>Default</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
-    <dd>{{% md %}}Filesystem label currently in-use on the block storage volume.
+    <dd>{{% md %}}A boolean indicating whether or not the VPC is the default one for the region.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>Filesystem<wbr>Type</span>
+        <span>Description</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Filesystem type currently in-use on the block storage volume.
+    <dd>{{% md %}}A free-form text field describing the VPC.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -322,7 +307,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+    <dd>{{% md %}}The unique identifier for the VPC.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Ip<wbr>Range</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The range of IP addresses for the VPC in CIDR notation.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -331,41 +325,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
-    </dt>
-    <dd>{{% md %}}The size of the block storage volume in GiB.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}A list of the tags associated to the Volume.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Urn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>Description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Text describing a block storage volume.
+    <dd>{{% md %}}The name of the VPC.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -374,7 +334,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The DigitalOcean region slug for the VPC's location.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Urn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name (URN) for the VPC.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -385,29 +355,29 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>droplet<wbr>Ids</span>
+        <span>created<wbr>At</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number[]</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}A list of associated Droplet ids.
+    <dd>{{% md %}}The date and time of when the VPC was created.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>filesystem<wbr>Label</span>
+        <span>default</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
-    <dd>{{% md %}}Filesystem label currently in-use on the block storage volume.
+    <dd>{{% md %}}A boolean indicating whether or not the VPC is the default one for the region.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>filesystem<wbr>Type</span>
+        <span>description</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Filesystem type currently in-use on the block storage volume.
+    <dd>{{% md %}}A free-form text field describing the VPC.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -416,7 +386,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+    <dd>{{% md %}}The unique identifier for the VPC.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>ip<wbr>Range</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The range of IP addresses for the VPC in CIDR notation.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -425,41 +404,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
-    </dt>
-    <dd>{{% md %}}The size of the block storage volume in GiB.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of the tags associated to the Volume.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>urn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Text describing a block storage volume.
+    <dd>{{% md %}}The name of the VPC.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -468,7 +413,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The DigitalOcean region slug for the VPC's location.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>urn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name (URN) for the VPC.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -479,29 +434,29 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
-        <span>droplet_<wbr>ids</span>
+        <span>created_<wbr>at</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[Integer]</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}A list of associated Droplet ids.
+    <dd>{{% md %}}The date and time of when the VPC was created.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>filesystem_<wbr>label</span>
+        <span>default</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
-    <dd>{{% md %}}Filesystem label currently in-use on the block storage volume.
+    <dd>{{% md %}}A boolean indicating whether or not the VPC is the default one for the region.
 {{% /md %}}</dd>
 
     <dt class="property-"
             title="">
-        <span>filesystem_<wbr>type</span>
+        <span>description</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Filesystem type currently in-use on the block storage volume.
+    <dd>{{% md %}}A free-form text field describing the VPC.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -510,7 +465,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}id is the provider-assigned unique ID for this managed resource.
+    <dd>{{% md %}}The unique identifier for the VPC.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>ip_<wbr>range</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The range of IP addresses for the VPC in CIDR notation.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -519,41 +483,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The size of the block storage volume in GiB.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>tags</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
-    </dt>
-    <dd>{{% md %}}A list of the tags associated to the Volume.
-{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>urn</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-"
-            title="">
-        <span>description</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Text describing a block storage volume.
+    <dd>{{% md %}}The name of the VPC.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -562,7 +492,17 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The DigitalOcean region slug for the VPC's location.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>urn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The uniform resource name (URN) for the VPC.
+{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}

@@ -11,7 +11,7 @@ block_external_search_index: true
 
 
 
-## Using GetRecord
+## Using GetRecord {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -149,7 +149,7 @@ The following arguments are supported:
 
 
 
-## GetRecord Result
+## GetRecord Result {#result}
 
 The following output properties are available:
 
