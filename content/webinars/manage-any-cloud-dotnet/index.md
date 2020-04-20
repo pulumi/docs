@@ -6,12 +6,13 @@ meta_image: "/images/webinar/manage-any-cloud-dotnet-2020-04-02.png"
 
 aliases:
     - /webinars/manage-any-cloud-dotnet-2020-04-02
+    - /webianrs/manage-any-cloud-dotnet-2020-04-13
 
 # A featured webinar will display first in the list.
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: false
+pre_recorded: true
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -20,11 +21,11 @@ pulumi_tv: false
 preview_image: "/images/webinar/pulumi_tech_talk.jpg"
 
 # Webinars with unlisted as true will not be shown on the webinar list
-unlisted: true
+unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -35,7 +36,7 @@ external: false
 
 # The url slug for the webinar landing page. If this is an external
 # webinar, use the external URL as the value here.
-url_slug: "manage-any-cloud-dotnet-2020-04-13"
+url_slug: "manage-any-cloud-dotnet"
 
 # The content of the hero section.
 hero:
@@ -48,6 +49,8 @@ hero:
 main:
     # Webinar title.
     title: "Managing Any Cloud with .NET"
+    # URL for embedding a URL for ungated webinars.
+    youtube_url: "https://www.youtube.com/embed/hXhZiHtT8f0"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2020-04-13T11:30:00.000+02:00
     # Duration of the webinar.
