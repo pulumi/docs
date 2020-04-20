@@ -37,7 +37,7 @@ const pool = vsphere.getVappContainer({
 
 
 
-## Using GetVappContainer
+## Using GetVappContainer {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -183,7 +183,7 @@ path.
 
 
 
-## GetVappContainer Result
+## GetVappContainer Result {#result}
 
 The following output properties are available:
 

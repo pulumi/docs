@@ -34,7 +34,7 @@ const host = vsphere.getHost({
 
 
 
-## Using GetHost
+## Using GetHost {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -180,7 +180,7 @@ omitted if there is only one host in your inventory.
 
 
 
-## GetHost Result
+## GetHost Result {#result}
 
 The following output properties are available:
 
