@@ -11,7 +11,7 @@ block_external_search_index: true
 
 
 
-## Using GetClientAuthorizationPolicy
+## Using GetClientAuthorizationPolicy {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -205,7 +205,7 @@ The following arguments are supported:
 
 
 
-## GetClientAuthorizationPolicy Result
+## GetClientAuthorizationPolicy Result {#result}
 
 The following output properties are available:
 

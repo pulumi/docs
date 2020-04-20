@@ -25,7 +25,7 @@ See the docs for the `keycloak.openid.Client` resource for details on the export
 
 
 
-## Using GetClient
+## Using GetClient {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -155,7 +155,7 @@ The following arguments are supported:
 
 
 
-## GetClient Result
+## GetClient Result {#result}
 
 The following output properties are available:
 
@@ -170,6 +170,14 @@ The following output properties are available:
         <span>Access<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclientauthenticationflowbindingoverrides">Get<wbr>Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -194,6 +202,14 @@ The following output properties are available:
         <span>Client<wbr>Secret</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Consent<wbr>Required</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -265,6 +281,14 @@ The following output properties are available:
     <dt class="property-"
             title="">
         <span>Resource<wbr>Server<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Root<wbr>Url</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -327,6 +351,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclientauthenticationflowbindingoverrides">Get<wbr>Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Authorization</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclientauthorization">Get<wbr>Client<wbr>Authorization</a></span>
@@ -346,6 +378,14 @@ The following output properties are available:
         <span>Client<wbr>Secret</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Consent<wbr>Required</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -424,6 +464,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Root<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Service<wbr>Account<wbr>User<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -479,6 +527,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>authentication<wbr>Flow<wbr>Binding<wbr>Overrides</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclientauthenticationflowbindingoverrides">Get<wbr>Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>authorization</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclientauthorization">Get<wbr>Client<wbr>Authorization</a></span>
@@ -498,6 +554,14 @@ The following output properties are available:
         <span>client<wbr>Secret</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>consent<wbr>Required</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -576,6 +640,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>root<wbr>Url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>service<wbr>Account<wbr>User<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -631,6 +703,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>authentication_<wbr>flow_<wbr>binding_<wbr>overrides</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getclientauthenticationflowbindingoverrides">Dict[Get<wbr>Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>authorization</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getclientauthorization">Dict[Get<wbr>Client<wbr>Authorization]</a></span>
@@ -650,6 +730,14 @@ The following output properties are available:
         <span>client_<wbr>secret</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>consent_<wbr>required</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -728,6 +816,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>root_<wbr>url</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>service_<wbr>account_<wbr>user_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -778,7 +874,115 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Client<wbr>Authorization</h4>
+
+<h4 id="getclientauthenticationflowbindingoverrides">Get<wbr>Client<wbr>Authentication<wbr>Flow<wbr>Binding<wbr>Overrides</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#GetClientAuthenticationFlowBindingOverrides">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-keycloak/sdk/v2/go/keycloak/openid?tab=doc#GetClientAuthenticationFlowBindingOverrides">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Browser<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Direct<wbr>Grant<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Browser<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Direct<wbr>Grant<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>browser<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>direct<wbr>Grant<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>browser<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>direct<wbr>Grant<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="getclientauthorization">Get<wbr>Client<wbr>Authorization</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#GetClientAuthorization">output</a> API doc for this type.
 {{% /choosable %}}

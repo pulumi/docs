@@ -1404,7 +1404,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>kube_config</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of kube config, like <code class="docutils literal notranslate"><span class="pre">~/.kube/config</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The kubernetes cluster’s name. It is the only in one Alicloud account.</p></li>
 <li><p><strong>new_nat_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to create a new nat gateway while creating kubernetes cluster. Default to true.</p></li>
-<li><p><strong>private_zone</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to create internet  eip for API Server. Default to false.</p></li>
+<li><p><strong>private_zone</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable Privatezone if you need to use the service discovery feature within the serverless cluster. Default to false.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Default nil, A map of tags assigned to the kubernetes cluster .</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The vpc where new kubernetes cluster will be located. Specify one vpc’s id, if it is not specified, a new VPC  will be built.</p></li>
 <li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The vswitch where new kubernetes cluster will be located. Specify one vswitch’s id, if it is not specified, a new VPC and VSwicth will be built. It must be in the zone which <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> specified.</p></li>
@@ -1472,7 +1472,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_alicloud.cs.ServerlessKubernetes.private_zone">
 <code class="sig-name descname">private_zone</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cs.ServerlessKubernetes.private_zone" title="Permalink to this definition">¶</a></dt>
-<dd><p>Whether to create internet  eip for API Server. Default to false.</p>
+<dd><p>Enable Privatezone if you need to use the service discovery feature within the serverless cluster. Default to false.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1523,7 +1523,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>kube_config</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path of kube config, like <code class="docutils literal notranslate"><span class="pre">~/.kube/config</span></code>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The kubernetes cluster’s name. It is the only in one Alicloud account.</p></li>
 <li><p><strong>new_nat_gateway</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to create a new nat gateway while creating kubernetes cluster. Default to true.</p></li>
-<li><p><strong>private_zone</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether to create internet  eip for API Server. Default to false.</p></li>
+<li><p><strong>private_zone</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enable Privatezone if you need to use the service discovery feature within the serverless cluster. Default to false.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Default nil, A map of tags assigned to the kubernetes cluster .</p></li>
 <li><p><strong>vpc_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The vpc where new kubernetes cluster will be located. Specify one vpc’s id, if it is not specified, a new VPC  will be built.</p></li>
 <li><p><strong>vswitch_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The vswitch where new kubernetes cluster will be located. Specify one vswitch’s id, if it is not specified, a new VPC and VSwicth will be built. It must be in the zone which <code class="docutils literal notranslate"><span class="pre">availability_zone</span></code> specified.</p></li>

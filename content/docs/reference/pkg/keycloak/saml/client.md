@@ -71,7 +71,7 @@ The following arguments are supported:
 
 
 
-## Create a Client Resource
+## Create a Client Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -80,7 +80,7 @@ The following arguments are supported:
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Client</span><span class="p">(resource_name, opts=None, </span>assertion_consumer_post_url=None<span class="p">, </span>assertion_consumer_redirect_url=None<span class="p">, </span>base_url=None<span class="p">, </span>client_id=None<span class="p">, </span>client_signature_required=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>force_post_binding=None<span class="p">, </span>front_channel_logout=None<span class="p">, </span>full_scope_allowed=None<span class="p">, </span>idp_initiated_sso_relay_state=None<span class="p">, </span>idp_initiated_sso_url_name=None<span class="p">, </span>include_authn_statement=None<span class="p">, </span>logout_service_post_binding_url=None<span class="p">, </span>logout_service_redirect_binding_url=None<span class="p">, </span>master_saml_processing_url=None<span class="p">, </span>name=None<span class="p">, </span>name_id_format=None<span class="p">, </span>realm_id=None<span class="p">, </span>root_url=None<span class="p">, </span>sign_assertions=None<span class="p">, </span>sign_documents=None<span class="p">, </span>signing_certificate=None<span class="p">, </span>signing_private_key=None<span class="p">, </span>valid_redirect_uris=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">Client</span><span class="p">(resource_name, opts=None, </span>assertion_consumer_post_url=None<span class="p">, </span>assertion_consumer_redirect_url=None<span class="p">, </span>base_url=None<span class="p">, </span>client_id=None<span class="p">, </span>client_signature_required=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>force_name_id_format=None<span class="p">, </span>force_post_binding=None<span class="p">, </span>front_channel_logout=None<span class="p">, </span>full_scope_allowed=None<span class="p">, </span>idp_initiated_sso_relay_state=None<span class="p">, </span>idp_initiated_sso_url_name=None<span class="p">, </span>include_authn_statement=None<span class="p">, </span>logout_service_post_binding_url=None<span class="p">, </span>logout_service_redirect_binding_url=None<span class="p">, </span>master_saml_processing_url=None<span class="p">, </span>name=None<span class="p">, </span>name_id_format=None<span class="p">, </span>realm_id=None<span class="p">, </span>root_url=None<span class="p">, </span>sign_assertions=None<span class="p">, </span>sign_documents=None<span class="p">, </span>signing_certificate=None<span class="p">, </span>signing_private_key=None<span class="p">, </span>valid_redirect_uris=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -161,7 +161,7 @@ The following arguments are supported:
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -238,7 +238,7 @@ The following arguments are supported:
 
 {{% /choosable %}}
 
-## Client Resource Properties
+## Client Resource Properties {#properties}
 
 To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
 
@@ -311,6 +311,14 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
     <dt class="property-optional"
             title="Optional">
         <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Force<wbr>Name<wbr>Id<wbr>Format</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
@@ -525,6 +533,14 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
+        <span>Force<wbr>Name<wbr>Id<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Force<wbr>Post<wbr>Binding</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
@@ -725,6 +741,14 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
     <dt class="property-optional"
             title="Optional">
         <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>force<wbr>Name<wbr>Id<wbr>Format</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
@@ -939,6 +963,14 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 
     <dt class="property-optional"
             title="Optional">
+        <span>force_<wbr>name_<wbr>id_<wbr>format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>force_<wbr>post_<wbr>binding</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -1083,12 +1115,77 @@ The Client resource accepts the following [input]({{< relref "/docs/intro/concep
 
 ### Outputs
 
-All [input](#inputs) properties are implicitly available as output properties. The Client resource does not produce any additional output properties.
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Client resource produces the following output properties:
 
 
 
 
-## Look up an Existing Client Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing Client Resource {#look-up}
 
 Get an existing Client resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1098,7 +1195,7 @@ Get an existing Client resource's state with the given name, ID, and optional ex
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>assertion_consumer_post_url=None<span class="p">, </span>assertion_consumer_redirect_url=None<span class="p">, </span>base_url=None<span class="p">, </span>client_id=None<span class="p">, </span>client_signature_required=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>force_post_binding=None<span class="p">, </span>front_channel_logout=None<span class="p">, </span>full_scope_allowed=None<span class="p">, </span>idp_initiated_sso_relay_state=None<span class="p">, </span>idp_initiated_sso_url_name=None<span class="p">, </span>include_authn_statement=None<span class="p">, </span>logout_service_post_binding_url=None<span class="p">, </span>logout_service_redirect_binding_url=None<span class="p">, </span>master_saml_processing_url=None<span class="p">, </span>name=None<span class="p">, </span>name_id_format=None<span class="p">, </span>realm_id=None<span class="p">, </span>root_url=None<span class="p">, </span>sign_assertions=None<span class="p">, </span>sign_documents=None<span class="p">, </span>signing_certificate=None<span class="p">, </span>signing_private_key=None<span class="p">, </span>valid_redirect_uris=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>assertion_consumer_post_url=None<span class="p">, </span>assertion_consumer_redirect_url=None<span class="p">, </span>base_url=None<span class="p">, </span>client_id=None<span class="p">, </span>client_signature_required=None<span class="p">, </span>description=None<span class="p">, </span>enabled=None<span class="p">, </span>force_name_id_format=None<span class="p">, </span>force_post_binding=None<span class="p">, </span>front_channel_logout=None<span class="p">, </span>full_scope_allowed=None<span class="p">, </span>idp_initiated_sso_relay_state=None<span class="p">, </span>idp_initiated_sso_url_name=None<span class="p">, </span>include_authn_statement=None<span class="p">, </span>logout_service_post_binding_url=None<span class="p">, </span>logout_service_redirect_binding_url=None<span class="p">, </span>master_saml_processing_url=None<span class="p">, </span>name=None<span class="p">, </span>name_id_format=None<span class="p">, </span>realm_id=None<span class="p">, </span>root_url=None<span class="p">, </span>sign_assertions=None<span class="p">, </span>sign_documents=None<span class="p">, </span>signing_certificate=None<span class="p">, </span>signing_private_key=None<span class="p">, </span>valid_redirect_uris=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1270,6 +1367,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Force<wbr>Name<wbr>Id<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Force<wbr>Post<wbr>Binding</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
@@ -1470,6 +1575,14 @@ The following state arguments are supported:
     <dt class="property-optional"
             title="Optional">
         <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Force<wbr>Name<wbr>Id<wbr>Format</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
@@ -1684,6 +1797,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>force<wbr>Name<wbr>Id<wbr>Format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>force<wbr>Post<wbr>Binding</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
@@ -1891,6 +2012,14 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>force_<wbr>name_<wbr>id_<wbr>format</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>force_<wbr>post_<wbr>binding</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2046,7 +2175,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-keycloak">https://github.com/pulumi/pulumi-keycloak</a></dd>

@@ -11,7 +11,7 @@ menu:
 
 A Pulumi package for creating and managing keycloak cloud resources.
 
-<h3>Modules</h3>
+<h2 id="modules">Modules</h2>
 <ul class="api">
     <li><a href="authentication/" title="authentication"><span class="symbol module"></span>authentication</a></li>
     <li><a href="ldap/" title="ldap"><span class="symbol module"></span>ldap</a></li>
@@ -20,7 +20,7 @@ A Pulumi package for creating and managing keycloak cloud resources.
     <li><a href="saml/" title="saml"><span class="symbol module"></span>saml</a></li>
 </ul>
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="attributeimporteridentityprovidermapper" title="AttributeImporterIdentityProviderMapper"><span class="symbol resource"></span>AttributeImporterIdentityProviderMapper</a></li>
     <li><a href="attributetoroleidentitymapper" title="AttributeToRoleIdentityMapper"><span class="symbol resource"></span>AttributeToRoleIdentityMapper</a></li>
@@ -42,7 +42,7 @@ A Pulumi package for creating and managing keycloak cloud resources.
     <li><a href="usertemplateimporteridentityprovidermapper" title="UserTemplateImporterIdentityProviderMapper"><span class="symbol resource"></span>UserTemplateImporterIdentityProviderMapper</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getgroup" title="GetGroup"><span class="symbol function"></span>GetGroup</a></li>
     <li><a href="getrealm" title="GetRealm"><span class="symbol function"></span>GetRealm</a></li>
@@ -50,7 +50,7 @@ A Pulumi package for creating and managing keycloak cloud resources.
     <li><a href="getrole" title="GetRole"><span class="symbol function"></span>GetRole</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-keycloak">https://github.com/pulumi/pulumi-keycloak</a></dd>
@@ -59,6 +59,6 @@ A Pulumi package for creating and managing keycloak cloud resources.
     <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).</dd>
 	<dt>Version</dt>
-	<dd>2.0.0</dd>
+	<dd>2.1.0</dd>
 </dl>
 
