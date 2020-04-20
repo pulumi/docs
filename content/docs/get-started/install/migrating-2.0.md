@@ -119,4 +119,4 @@ If you wish to remain on the `1.x` CLI, you can continue to download the CLI by 
 
 `pulumi new` will attempt to use the latest versions of the templates, which pull in the `2.0` SDK. You can continue to use the `1.x` templates by running `pulumi new https://github.com/pulumi/templates/tree/1.x`.
 
-Note that previous `1.x` templates for Python had `>=1.0.0` in `requirements.txt`. As a result, you may accidentally end up on the `2.x` SDK when updating dependencies from the `1.x` template.
+Note that previous `1.x` templates for Python had `>=1.0.0` in `requirements.txt`. As a result, you may accidentally end up on the `2.x` SDK when updating dependencies from the `1.x` template.  We encourage updating to `>=1.0.0,<2.0.0` if you intend to remain on the `1.x` releases.
