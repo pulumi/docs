@@ -49,7 +49,7 @@ Fields that expect an Azure service will work with one of: "microsoft.sql/server
 
 
 
-## Create a Integration Resource
+## Create a Integration Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -139,7 +139,7 @@ Fields that expect an Azure service will work with one of: "microsoft.sql/server
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -216,7 +216,13 @@ Fields that expect an Azure service will work with one of: "microsoft.sql/server
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## Integration Resource Properties {#properties}
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The Integration resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -249,6 +255,15 @@ Fields that expect an Azure service will work with one of: "microsoft.sql/server
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Azure secret key that associates the SignalFx app in Azure with the Azure tenant ID. To learn how to get this ID, see the topic [Connect to Microsoft Azure](https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure) in the product documentation.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Services</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of Microsoft Azure service names for the Azure services you want SignalFx to monitor.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -296,15 +311,6 @@ Fields that expect an Azure service will work with one of: "microsoft.sql/server
     <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Services</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
-    </dt>
-    <dd>{{% md %}}List of Microsoft Azure service names for the Azure services you want SignalFx to monitor.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -337,6 +343,15 @@ Fields that expect an Azure service will work with one of: "microsoft.sql/server
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Azure secret key that associates the SignalFx app in Azure with the Azure tenant ID. To learn how to get this ID, see the topic [Connect to Microsoft Azure](https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure) in the product documentation.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Services</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}List of Microsoft Azure service names for the Azure services you want SignalFx to monitor.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -384,15 +399,6 @@ Fields that expect an Azure service will work with one of: "microsoft.sql/server
     <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>Services</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
-    </dt>
-    <dd>{{% md %}}List of Microsoft Azure service names for the Azure services you want SignalFx to monitor.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -425,6 +431,15 @@ Fields that expect an Azure service will work with one of: "microsoft.sql/server
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Azure secret key that associates the SignalFx app in Azure with the Azure tenant ID. To learn how to get this ID, see the topic [Connect to Microsoft Azure](https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure) in the product documentation.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>services</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Microsoft Azure service names for the Azure services you want SignalFx to monitor.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -472,15 +487,6 @@ Fields that expect an Azure service will work with one of: "microsoft.sql/server
     <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>services</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string[]</a></span>
-    </dt>
-    <dd>{{% md %}}List of Microsoft Azure service names for the Azure services you want SignalFx to monitor.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -513,6 +519,15 @@ Fields that expect an Azure service will work with one of: "microsoft.sql/server
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Azure secret key that associates the SignalFx app in Azure with the Azure tenant ID. To learn how to get this ID, see the topic [Connect to Microsoft Azure](https://docs.signalfx.com/en/latest/integrations/azure-info.html#connect-to-azure) in the product documentation.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>services</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+    </dt>
+    <dd>{{% md %}}List of Microsoft Azure service names for the Azure services you want SignalFx to monitor.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -560,14 +575,76 @@ Fields that expect an Azure service will work with one of: "microsoft.sql/server
     <dd>{{% md %}}AWS poll rate (in seconds). One of `60` or `300`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
-        <span>services</span>
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Integration resource produces the following output properties:
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}List of Microsoft Azure service names for the Azure services you want SignalFx to monitor.
-{{% /md %}}</dd>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -578,10 +655,7 @@ Fields that expect an Azure service will work with one of: "microsoft.sql/server
 
 
 
-
-
-
-## Look up an Existing Integration Resource
+## Look up an Existing Integration Resource {#look-up}
 
 Get an existing Integration resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1063,7 +1137,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-signalfx">https://github.com/pulumi/pulumi-signalfx</a></dd>

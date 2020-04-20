@@ -12,7 +12,7 @@ block_external_search_index: true
 
 
 
-## Create a Dashboard Resource
+## Create a Dashboard Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -102,7 +102,7 @@ block_external_search_index: true
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -179,7 +179,13 @@ block_external_search_index: true
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## Dashboard Resource Properties {#properties}
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The Dashboard resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -856,16 +862,23 @@ block_external_search_index: true
 
 
 
+### Outputs
 
-## Dashboard Output Properties
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Dashboard resource produces the following output properties:
 
 
 
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -885,6 +898,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Url</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -898,6 +919,14 @@ The following output properties are available:
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -917,6 +946,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>url</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -933,8 +970,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing Dashboard Resource
+## Look up an Existing Dashboard Resource {#look-up}
 
 Get an existing Dashboard resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1769,7 +1805,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Dashboard<wbr>Chart</h4>
+
+<h4 id="dashboardchart">Dashboard<wbr>Chart</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardChart">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardChart">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1992,7 +2029,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Column</h4>
+<h4 id="dashboardcolumn">Dashboard<wbr>Column</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardColumn">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardColumn">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2179,7 +2216,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Event<wbr>Overlay</h4>
+<h4 id="dashboardeventoverlay">Dashboard<wbr>Event<wbr>Overlay</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardEventOverlay">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardEventOverlay">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2438,7 +2475,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Event<wbr>Overlay<wbr>Source</h4>
+<h4 id="dashboardeventoverlaysource">Dashboard<wbr>Event<wbr>Overlay<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardEventOverlaySource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardEventOverlaySource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2589,7 +2626,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Filter</h4>
+<h4 id="dashboardfilter">Dashboard<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardFilter">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2776,7 +2813,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Grid</h4>
+<h4 id="dashboardgrid">Dashboard<wbr>Grid</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardGrid">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardGrid">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2927,7 +2964,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Selected<wbr>Event<wbr>Overlay</h4>
+<h4 id="dashboardselectedeventoverlay">Dashboard<wbr>Selected<wbr>Event<wbr>Overlay</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardSelectedEventOverlay">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardSelectedEventOverlay">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3078,7 +3115,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Source</h4>
+<h4 id="dashboardselectedeventoverlaysource">Dashboard<wbr>Selected<wbr>Event<wbr>Overlay<wbr>Source</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardSelectedEventOverlaySource">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardSelectedEventOverlaySource">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3229,7 +3266,7 @@ The following state arguments are supported:
 
 
 
-<h4>Dashboard<wbr>Variable</h4>
+<h4 id="dashboardvariable">Dashboard<wbr>Variable</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/input/#DashboardVariable">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/signalfx/types/output/#DashboardVariable">output</a> API doc for this type.
 {{% /choosable %}}
@@ -3600,7 +3637,7 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-signalfx">https://github.com/pulumi/pulumi-signalfx</a></dd>
