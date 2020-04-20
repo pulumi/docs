@@ -20,7 +20,6 @@ anything, please consult the source <a class="reference external" href="https://
 <p>In NAS, the permission group acts as a whitelist that allows you to restrict file system access. You can allow specified IP addresses or CIDR blocks to access the file system, and assign different levels of access permission to different IP addresses or CIDR blocks by adding rules to the permission group.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.33.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_access_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_access_group.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -115,7 +114,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>When NAS is activated, the Default VPC Permission Group is automatically generated. It allows all IP addresses in a VPC to access the mount point with full permissions. Full permissions include Read/Write permission with no restriction on root users.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.34.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_access_rule.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_access_rule.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -259,7 +257,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>For information about NAS file system and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/27530.htm">Manage file systems</a></p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.33.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_file_system.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_file_system.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -552,7 +549,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>NOTE: You must grant NAS with specific RAM permissions when creating a classic mount targets,
 and it only can be achieved by creating a classic mount target mannually.
 See <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/60431.htm">Add a mount point</a> and <a class="reference external" href="https://www.alibabacloud.com/help/faq-detail/42176.htm">Why do I need RAM permissions to create a mount point in a classic network</a>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_mount_target.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/nas_mount_target.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -654,7 +650,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides user-available access groups. Use when you can create mount points</p>
 <blockquote>
 <div><p>NOTE: Available in 1.35.0+</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_access_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_access_groups.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -673,7 +668,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides AccessRule available to the user.</p>
 <blockquote>
 <div><p>NOTE: Available in 1.35.0+</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_access_rules.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_access_rules.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -694,7 +688,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides FileSystems available to the user.</p>
 <blockquote>
 <div><p>NOTE: Available in 1.35.0+</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_file_systems.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_file_systems.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -714,7 +707,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides MountTargets available to the user.</p>
 <blockquote>
 <div><p>NOTE: Available in 1.35.0+</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_mount_targets.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_mount_targets.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -737,7 +729,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provide  a data source to retrieve the type of protocol used to create NAS file system.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.42.0</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_protocols.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/nas_protocols.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
