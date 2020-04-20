@@ -15,7 +15,7 @@ Use this data source to access information about an existing Storage Account.
 
 
 
-## Using GetAccount
+## Using GetAccount {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetAccount Result
+## GetAccount Result {#result}
 
 The following output properties are available:
 
@@ -1780,7 +1780,8 @@ for more information.
 
 ## Supporting Types
 
-<h4>Get<wbr>Account<wbr>Custom<wbr>Domain</h4>
+
+<h4 id="getaccountcustomdomain">Get<wbr>Account<wbr>Custom<wbr>Domain</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountCustomDomain">output</a> API doc for this type.
 {{% /choosable %}}

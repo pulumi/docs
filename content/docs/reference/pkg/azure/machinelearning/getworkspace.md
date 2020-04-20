@@ -12,7 +12,7 @@ Use this data source to access information about an existing Machine Learning Wo
 
 
 
-## Using GetWorkspace
+## Using GetWorkspace {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -150,7 +150,7 @@ The following arguments are supported:
 
 
 
-## GetWorkspace Result
+## GetWorkspace Result {#result}
 
 The following output properties are available:
 

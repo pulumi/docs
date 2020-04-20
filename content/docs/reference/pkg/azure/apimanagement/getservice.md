@@ -15,7 +15,7 @@ Use this data source to access information about an existing API Management Serv
 
 
 
-## Using GetService
+## Using GetService {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetService Result
+## GetService Result {#result}
 
 The following output properties are available:
 
@@ -800,7 +800,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Service<wbr>Additional<wbr>Location</h4>
+
+<h4 id="getserviceadditionallocation">Get<wbr>Service<wbr>Additional<wbr>Location</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceAdditionalLocation">output</a> API doc for this type.
 {{% /choosable %}}
@@ -951,7 +952,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Service<wbr>Hostname<wbr>Configuration</h4>
+<h4 id="getservicehostnameconfiguration">Get<wbr>Service<wbr>Hostname<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceHostnameConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1138,7 +1139,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Management</h4>
+<h4 id="getservicehostnameconfigurationmanagement">Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Management</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceHostnameConfigurationManagement">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1289,7 +1290,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Portal</h4>
+<h4 id="getservicehostnameconfigurationportal">Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Portal</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceHostnameConfigurationPortal">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1440,7 +1441,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Proxy</h4>
+<h4 id="getservicehostnameconfigurationproxy">Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Proxy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceHostnameConfigurationProxy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1627,7 +1628,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Scm</h4>
+<h4 id="getservicehostnameconfigurationscm">Get<wbr>Service<wbr>Hostname<wbr>Configuration<wbr>Scm</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceHostnameConfigurationScm">output</a> API doc for this type.
 {{% /choosable %}}

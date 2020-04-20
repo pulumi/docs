@@ -15,7 +15,7 @@ Use this data source to access information about an existing HDInsight Cluster.
 
 
 
-## Using GetCluster
+## Using GetCluster {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetCluster Result
+## GetCluster Result {#result}
 
 The following output properties are available:
 
@@ -278,6 +278,14 @@ The following output properties are available:
     <dd>{{% md %}}The SKU / Tier of this HDInsight Cluster.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Tls<wbr>Min<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -399,6 +407,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The SKU / Tier of this HDInsight Cluster.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Tls<wbr>Min<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
 </dl>
 {{% /choosable %}}
@@ -522,6 +538,14 @@ The following output properties are available:
     <dd>{{% md %}}The SKU / Tier of this HDInsight Cluster.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>tls<wbr>Min<wbr>Version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -644,6 +668,14 @@ The following output properties are available:
     <dd>{{% md %}}The SKU / Tier of this HDInsight Cluster.
 {{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>tls_<wbr>min_<wbr>version</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -656,7 +688,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Cluster<wbr>Gateway</h4>
+
+<h4 id="getclustergateway">Get<wbr>Cluster<wbr>Gateway</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetClusterGateway">output</a> API doc for this type.
 {{% /choosable %}}

@@ -15,7 +15,7 @@ Use this data source to access information about an existing Subscription.
 
 
 
-## Using GetSubscription
+## Using GetSubscription {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -117,7 +117,7 @@ The following arguments are supported:
 
 
 
-## GetSubscription Result
+## GetSubscription Result {#result}
 
 The following output properties are available:
 

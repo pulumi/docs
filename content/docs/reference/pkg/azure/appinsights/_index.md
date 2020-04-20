@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="analyticsitem" title="AnalyticsItem"><span class="symbol resource"></span>AnalyticsItem</a></li>
     <li><a href="apikey" title="ApiKey"><span class="symbol resource"></span>ApiKey</a></li>
@@ -16,12 +16,12 @@ block_external_search_index: true
     <li><a href="webtest" title="WebTest"><span class="symbol resource"></span>WebTest</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getinsights" title="GetInsights"><span class="symbol function"></span>GetInsights</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-azure">https://github.com/pulumi/pulumi-azure</a></dd>
@@ -29,5 +29,7 @@ block_external_search_index: true
 	<dd>Apache-2.0</dd>
     <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
+	<dt>Version</dt>
+	<dd>3.1.0</dd>
 </dl>
 

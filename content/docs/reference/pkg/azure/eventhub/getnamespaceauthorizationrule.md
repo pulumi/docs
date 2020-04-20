@@ -15,7 +15,7 @@ Use this data source to access information about an Authorization Rule for an Ev
 
 
 
-## Using GetNamespaceAuthorizationRule
+## Using GetNamespaceAuthorizationRule {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetNamespaceAuthorizationRule Result
+## GetNamespaceAuthorizationRule Result {#result}
 
 The following output properties are available:
 

@@ -15,7 +15,7 @@ Use this data source to access information about an existing Azure Data Factory 
 
 
 
-## Using GetFactory
+## Using GetFactory {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetFactory Result
+## GetFactory Result {#result}
 
 The following output properties are available:
 
@@ -480,7 +480,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Factory<wbr>Github<wbr>Configuration</h4>
+
+<h4 id="getfactorygithubconfiguration">Get<wbr>Factory<wbr>Github<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFactoryGithubConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -703,7 +704,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Factory<wbr>Identity</h4>
+<h4 id="getfactoryidentity">Get<wbr>Factory<wbr>Identity</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFactoryIdentity">output</a> API doc for this type.
 {{% /choosable %}}
@@ -854,7 +855,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Factory<wbr>Vsts<wbr>Configuration</h4>
+<h4 id="getfactoryvstsconfiguration">Get<wbr>Factory<wbr>Vsts<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFactoryVstsConfiguration">output</a> API doc for this type.
 {{% /choosable %}}

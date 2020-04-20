@@ -12,7 +12,7 @@ Use this data source to access the ID of a specified Traffic Manager Geographica
 
 
 
-## Using GetGeographicalLocation
+## Using GetGeographicalLocation {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -114,7 +114,7 @@ The following arguments are supported:
 
 
 
-## GetGeographicalLocation Result
+## GetGeographicalLocation Result {#result}
 
 The following output properties are available:
 

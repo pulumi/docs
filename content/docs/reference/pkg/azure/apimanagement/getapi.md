@@ -15,7 +15,7 @@ Use this data source to access information about an existing API Management API.
 
 
 
-## Using GetApi
+## Using GetApi {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -225,7 +225,7 @@ The following arguments are supported:
 
 
 
-## GetApi Result
+## GetApi Result {#result}
 
 The following output properties are available:
 
@@ -828,7 +828,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Name</h4>
+
+<h4 id="getapisubscriptionkeyparametername">Get<wbr>Api<wbr>Subscription<wbr>Key<wbr>Parameter<wbr>Name</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetApiSubscriptionKeyParameterName">output</a> API doc for this type.
 {{% /choosable %}}

@@ -15,7 +15,7 @@ Use this data source to access information about an existing App Service Environ
 
 
 
-## Using GetAppServiceEnvironment
+## Using GetAppServiceEnvironment {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetAppServiceEnvironment Result
+## GetAppServiceEnvironment Result {#result}
 
 The following output properties are available:
 

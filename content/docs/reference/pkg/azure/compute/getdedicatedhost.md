@@ -15,7 +15,7 @@ Use this data source to access information about an existing Dedicated Host.
 
 
 
-## Using GetDedicatedHost
+## Using GetDedicatedHost {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetDedicatedHost Result
+## GetDedicatedHost Result {#result}
 
 The following output properties are available:
 

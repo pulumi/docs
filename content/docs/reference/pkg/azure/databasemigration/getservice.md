@@ -33,7 +33,7 @@ export const azurermDmsId = example.id;
 
 
 
-## Using GetService
+## Using GetService {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -171,7 +171,7 @@ The following arguments are supported:
 
 
 
-## GetService Result
+## GetService Result {#result}
 
 The following output properties are available:
 

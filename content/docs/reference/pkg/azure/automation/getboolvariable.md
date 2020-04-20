@@ -16,7 +16,7 @@ Use this data source to access information about an existing Automation Bool Var
 
 
 
-## Using GetBoolVariable
+## Using GetBoolVariable {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -190,7 +190,7 @@ The following arguments are supported:
 
 
 
-## GetBoolVariable Result
+## GetBoolVariable Result {#result}
 
 The following output properties are available:
 

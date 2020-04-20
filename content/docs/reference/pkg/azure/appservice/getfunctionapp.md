@@ -15,7 +15,7 @@ Use this data source to access information about a Function App.
 
 
 
-## Using GetFunctionApp
+## Using GetFunctionApp {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -185,7 +185,7 @@ The following arguments are supported:
 
 
 
-## GetFunctionApp Result
+## GetFunctionApp Result {#result}
 
 The following output properties are available:
 
@@ -720,7 +720,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Function<wbr>App<wbr>Connection<wbr>String</h4>
+
+<h4 id="getfunctionappconnectionstring">Get<wbr>Function<wbr>App<wbr>Connection<wbr>String</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFunctionAppConnectionString">output</a> API doc for this type.
 {{% /choosable %}}
@@ -871,7 +872,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Function<wbr>App<wbr>Site<wbr>Credential</h4>
+<h4 id="getfunctionappsitecredential">Get<wbr>Function<wbr>App<wbr>Site<wbr>Credential</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFunctionAppSiteCredential">output</a> API doc for this type.
 {{% /choosable %}}

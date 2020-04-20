@@ -15,7 +15,7 @@ Use this data source to access information about an existing CosmosDB (formally 
 
 
 
-## Using GetAccount
+## Using GetAccount {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetAccount Result
+## GetAccount Result {#result}
 
 The following output properties are available:
 
@@ -972,7 +972,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Account<wbr>Capability</h4>
+
+<h4 id="getaccountcapability">Get<wbr>Account<wbr>Capability</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountCapability">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1051,7 +1052,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Account<wbr>Consistency<wbr>Policy</h4>
+<h4 id="getaccountconsistencypolicy">Get<wbr>Account<wbr>Consistency<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountConsistencyPolicy">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1202,7 +1203,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Account<wbr>Geo<wbr>Location</h4>
+<h4 id="getaccountgeolocation">Get<wbr>Account<wbr>Geo<wbr>Location</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountGeoLocation">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1349,7 +1350,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Account<wbr>Virtual<wbr>Network<wbr>Rule</h4>
+<h4 id="getaccountvirtualnetworkrule">Get<wbr>Account<wbr>Virtual<wbr>Network<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAccountVirtualNetworkRule">output</a> API doc for this type.
 {{% /choosable %}}

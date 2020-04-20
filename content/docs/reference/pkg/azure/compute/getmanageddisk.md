@@ -15,7 +15,7 @@ Use this data source to access information about an existing Managed Disk.
 
 
 
-## Using GetManagedDisk
+## Using GetManagedDisk {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -225,7 +225,7 @@ The following arguments are supported:
 
 
 
-## GetManagedDisk Result
+## GetManagedDisk Result {#result}
 
 The following output properties are available:
 

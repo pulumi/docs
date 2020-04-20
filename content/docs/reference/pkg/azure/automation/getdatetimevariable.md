@@ -16,7 +16,7 @@ Use this data source to access information about an existing Automation Datetime
 
 
 
-## Using GetDateTimeVariable
+## Using GetDateTimeVariable {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -190,7 +190,7 @@ The following arguments are supported:
 
 
 
-## GetDateTimeVariable Result
+## GetDateTimeVariable Result {#result}
 
 The following output properties are available:
 

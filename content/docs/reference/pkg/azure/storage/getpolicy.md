@@ -15,7 +15,7 @@ Use this data source to access information about an existing Storage Management 
 
 
 
-## Using GetPolicy
+## Using GetPolicy {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -117,7 +117,7 @@ The following arguments are supported:
 
 
 
-## GetPolicy Result
+## GetPolicy Result {#result}
 
 The following output properties are available:
 
@@ -264,7 +264,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Policy<wbr>Rule</h4>
+
+<h4 id="getpolicyrule">Get<wbr>Policy<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPolicyRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -451,7 +452,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Policy<wbr>Rule<wbr>Action</h4>
+<h4 id="getpolicyruleaction">Get<wbr>Policy<wbr>Rule<wbr>Action</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPolicyRuleAction">output</a> API doc for this type.
 {{% /choosable %}}
@@ -566,7 +567,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Base<wbr>Blob</h4>
+<h4 id="getpolicyruleactionbaseblob">Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Base<wbr>Blob</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPolicyRuleActionBaseBlob">output</a> API doc for this type.
 {{% /choosable %}}
@@ -717,7 +718,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Snapshot</h4>
+<h4 id="getpolicyruleactionsnapshot">Get<wbr>Policy<wbr>Rule<wbr>Action<wbr>Snapshot</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPolicyRuleActionSnapshot">output</a> API doc for this type.
 {{% /choosable %}}
@@ -796,7 +797,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Policy<wbr>Rule<wbr>Filter</h4>
+<h4 id="getpolicyrulefilter">Get<wbr>Policy<wbr>Rule<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetPolicyRuleFilter">output</a> API doc for this type.
 {{% /choosable %}}

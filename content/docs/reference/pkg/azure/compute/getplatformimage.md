@@ -15,7 +15,7 @@ Use this data source to access information about a Platform Image.
 
 
 
-## Using GetPlatformImage
+## Using GetPlatformImage {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -225,7 +225,7 @@ The following arguments are supported:
 
 
 
-## GetPlatformImage Result
+## GetPlatformImage Result {#result}
 
 The following output properties are available:
 

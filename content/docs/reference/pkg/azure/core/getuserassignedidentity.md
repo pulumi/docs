@@ -12,7 +12,7 @@ Use this data source to access information about an existing User Assigned Ident
 
 
 
-## Using GetUserAssignedIdentity
+## Using GetUserAssignedIdentity {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -150,7 +150,7 @@ The following arguments are supported:
 
 
 
-## GetUserAssignedIdentity Result
+## GetUserAssignedIdentity Result {#result}
 
 The following output properties are available:
 

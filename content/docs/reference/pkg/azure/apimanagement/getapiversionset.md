@@ -15,7 +15,7 @@ Uses this data source to access information about an API Version Set within an A
 
 
 
-## Using GetApiVersionSet
+## Using GetApiVersionSet {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetApiVersionSet Result
+## GetApiVersionSet Result {#result}
 
 The following output properties are available:
 
