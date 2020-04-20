@@ -17,7 +17,7 @@ invocation type.
 
 
 
-## Using GetInvocation
+## Using GetInvocation {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -195,7 +195,7 @@ to `$LATEST`.
 
 
 
-## GetInvocation Result
+## GetInvocation Result {#result}
 
 The following output properties are available:
 

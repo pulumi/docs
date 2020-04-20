@@ -46,7 +46,7 @@ const defaultCustom = aws.ssm.getPatchBaseline({
 
 
 
-## Using GetPatchBaseline
+## Using GetPatchBaseline {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -256,7 +256,7 @@ The following arguments are supported:
 
 
 
-## GetPatchBaseline Result
+## GetPatchBaseline Result {#result}
 
 The following output properties are available:
 

@@ -31,7 +31,7 @@ export const callerUser = current.userId;
 
 
 
-## Using GetCallerIdentity
+## Using GetCallerIdentity {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -60,7 +60,7 @@ export const callerUser = current.userId;
 
 
 
-## GetCallerIdentity Result
+## GetCallerIdentity Result {#result}
 
 The following output properties are available:
 

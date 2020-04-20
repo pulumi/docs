@@ -36,7 +36,7 @@ const web = new aws.ec2.Instance("web", {
 
 
 
-## Using GetExport
+## Using GetExport {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -138,7 +138,7 @@ The following arguments are supported:
 
 
 
-## GetExport Result
+## GetExport Result {#result}
 
 The following output properties are available:
 

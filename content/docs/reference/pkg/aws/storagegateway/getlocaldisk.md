@@ -29,7 +29,7 @@ const test = pulumi.all([aws_volume_attachment_test.deviceName, aws_storagegatew
 
 
 
-## Using GetLocalDisk
+## Using GetLocalDisk {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -203,7 +203,7 @@ The following arguments are supported:
 
 
 
-## GetLocalDisk Result
+## GetLocalDisk Result {#result}
 
 The following output properties are available:
 

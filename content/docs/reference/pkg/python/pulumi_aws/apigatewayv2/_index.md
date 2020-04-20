@@ -337,6 +337,235 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.apigatewayv2.Deployment">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigatewayv2.</code><code class="sig-name descname">Deployment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.Deployment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an Amazon API Gateway Version 2 deployment.
+More information can be found in the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
+<blockquote>
+<div><p><strong>Note:</strong> Creating a deployment for an API requires at least one <code class="docutils literal notranslate"><span class="pre">apigatewayv2.Route</span></code> resource associated with that API.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API identifier.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description for the deployment resource.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Deployment.api_id">
+<code class="sig-name descname">api_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Deployment.api_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The API identifier.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Deployment.auto_deployed">
+<code class="sig-name descname">auto_deployed</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Deployment.auto_deployed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the deployment was automatically released.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Deployment.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Deployment.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description for the deployment resource.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.apigatewayv2.Deployment.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_id=None</em>, <em class="sig-param">auto_deployed=None</em>, <em class="sig-param">description=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.Deployment.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Deployment resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API identifier.</p></li>
+<li><p><strong>auto_deployed</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether the deployment was automatically released.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description for the deployment resource.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.apigatewayv2.Deployment.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.Deployment.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.apigatewayv2.Deployment.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.Deployment.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.apigatewayv2.DomainName">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigatewayv2.</code><code class="sig-name descname">DomainName</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">domain_name_configuration=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.DomainName" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an Amazon API Gateway Version 2 domain name.
+More information can be found in the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-custom-domains.html">Amazon API Gateway Developer Guide</a>.</p>
+<blockquote>
+<div><p><strong>Note:</strong> This resource establishes ownership of and the TLS settings for
+a particular domain name. An API stage can be associated with the domain name using the <code class="docutils literal notranslate"><span class="pre">aws_apigatewayv2_api_mapping</span></code> resource.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain name.</p></li>
+<li><p><strong>domain_name_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The domain name configuration.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the domain name.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>domain_name_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source.
+Use the <cite>``acm.Certificate`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/acm_certificate.html">https://www.terraform.io/docs/providers/aws/r/acm_certificate.html</a>&gt;`_ resource to configure an ACM certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">endpoint_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The endpoint type. Valid values: <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hosted_zone_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon Route 53 Hosted Zone ID of the endpoint.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Transport Layer Security (TLS) version of the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html">security policy</a> for the domain name. Valid values: <code class="docutils literal notranslate"><span class="pre">TLS_1_2</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetDomainName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The target domain name.</p></li>
+</ul>
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.DomainName.api_mapping_selection_expression">
+<code class="sig-name descname">api_mapping_selection_expression</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.DomainName.api_mapping_selection_expression" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions">API mapping selection expression</a> for the domain name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.DomainName.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.DomainName.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the domain name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.DomainName.domain_name">
+<code class="sig-name descname">domain_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.DomainName.domain_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The domain name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.DomainName.domain_name_configuration">
+<code class="sig-name descname">domain_name_configuration</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.DomainName.domain_name_configuration" title="Permalink to this definition">¶</a></dt>
+<dd><p>The domain name configuration.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source.
+Use the <cite>``acm.Certificate`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/acm_certificate.html">https://www.terraform.io/docs/providers/aws/r/acm_certificate.html</a>&gt;`_ resource to configure an ACM certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">endpoint_type</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The endpoint type. Valid values: <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hosted_zone_id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Amazon Route 53 Hosted Zone ID of the endpoint.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The Transport Layer Security (TLS) version of the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html">security policy</a> for the domain name. Valid values: <code class="docutils literal notranslate"><span class="pre">TLS_1_2</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetDomainName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The target domain name.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.DomainName.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.DomainName.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the domain name.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.apigatewayv2.DomainName.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_mapping_selection_expression=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">domain_name=None</em>, <em class="sig-param">domain_name_configuration=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.DomainName.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DomainName resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>api_mapping_selection_expression</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-mapping-selection-expressions">API mapping selection expression</a> for the domain name.</p>
+</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the domain name.</p></li>
+<li><p><strong>domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The domain name.</p></li>
+<li><p><strong>domain_name_configuration</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The domain name configuration.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the domain name.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>domain_name_configuration</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">certificate_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of an AWS-managed certificate that will be used by the endpoint for the domain name. AWS Certificate Manager is the only supported source.
+Use the <cite>``acm.Certificate`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/acm_certificate.html">https://www.terraform.io/docs/providers/aws/r/acm_certificate.html</a>&gt;`_ resource to configure an ACM certificate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">endpoint_type</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The endpoint type. Valid values: <code class="docutils literal notranslate"><span class="pre">REGIONAL</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hosted_zone_id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Amazon Route 53 Hosted Zone ID of the endpoint.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">security_policy</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The Transport Layer Security (TLS) version of the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-custom-domain-tls-version.html">security policy</a> for the domain name. Valid values: <code class="docutils literal notranslate"><span class="pre">TLS_1_2</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">targetDomainName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The target domain name.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.apigatewayv2.DomainName.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.DomainName.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.apigatewayv2.DomainName.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.DomainName.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.apigatewayv2.Integration">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigatewayv2.</code><code class="sig-name descname">Integration</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_id=None</em>, <em class="sig-param">connection_id=None</em>, <em class="sig-param">connection_type=None</em>, <em class="sig-param">content_handling_strategy=None</em>, <em class="sig-param">credentials_arn=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">integration_method=None</em>, <em class="sig-param">integration_type=None</em>, <em class="sig-param">integration_uri=None</em>, <em class="sig-param">passthrough_behavior=None</em>, <em class="sig-param">payload_format_version=None</em>, <em class="sig-param">request_templates=None</em>, <em class="sig-param">template_selection_expression=None</em>, <em class="sig-param">timeout_milliseconds=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.Integration" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Amazon API Gateway Version 2 integration.
@@ -535,6 +764,123 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_aws.apigatewayv2.IntegrationResponse">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigatewayv2.</code><code class="sig-name descname">IntegrationResponse</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_id=None</em>, <em class="sig-param">content_handling_strategy=None</em>, <em class="sig-param">integration_id=None</em>, <em class="sig-param">integration_response_key=None</em>, <em class="sig-param">response_templates=None</em>, <em class="sig-param">template_selection_expression=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.IntegrationResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an Amazon API Gateway Version 2 integration response.
+More information can be found in the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API identifier.</p></li>
+<li><p><strong>content_handling_strategy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – How to handle response payload content type conversions. Valid values: <code class="docutils literal notranslate"><span class="pre">CONVERT_TO_BINARY</span></code>, <code class="docutils literal notranslate"><span class="pre">CONVERT_TO_TEXT</span></code>.</p></li>
+<li><p><strong>integration_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <cite>``apigatewayv2.Integration`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/apigatewayv2_integration.html">https://www.terraform.io/docs/providers/aws/r/apigatewayv2_integration.html</a>&gt;`_.</p></li>
+<li><p><strong>integration_response_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The integration response key.</p></li>
+<li><p><strong>response_templates</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client.</p></li>
+<li><p><strong>template_selection_expression</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions">template selection expression</a> for the integration response.</p>
+</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.IntegrationResponse.api_id">
+<code class="sig-name descname">api_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.IntegrationResponse.api_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The API identifier.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.IntegrationResponse.content_handling_strategy">
+<code class="sig-name descname">content_handling_strategy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.IntegrationResponse.content_handling_strategy" title="Permalink to this definition">¶</a></dt>
+<dd><p>How to handle response payload content type conversions. Valid values: <code class="docutils literal notranslate"><span class="pre">CONVERT_TO_BINARY</span></code>, <code class="docutils literal notranslate"><span class="pre">CONVERT_TO_TEXT</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.IntegrationResponse.integration_id">
+<code class="sig-name descname">integration_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.IntegrationResponse.integration_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The identifier of the <cite>``apigatewayv2.Integration`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/apigatewayv2_integration.html">https://www.terraform.io/docs/providers/aws/r/apigatewayv2_integration.html</a>&gt;`_.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.IntegrationResponse.integration_response_key">
+<code class="sig-name descname">integration_response_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.IntegrationResponse.integration_response_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The integration response key.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.IntegrationResponse.response_templates">
+<code class="sig-name descname">response_templates</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.IntegrationResponse.response_templates" title="Permalink to this definition">¶</a></dt>
+<dd><p>A map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.IntegrationResponse.template_selection_expression">
+<code class="sig-name descname">template_selection_expression</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.IntegrationResponse.template_selection_expression" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions">template selection expression</a> for the integration response.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.apigatewayv2.IntegrationResponse.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_id=None</em>, <em class="sig-param">content_handling_strategy=None</em>, <em class="sig-param">integration_id=None</em>, <em class="sig-param">integration_response_key=None</em>, <em class="sig-param">response_templates=None</em>, <em class="sig-param">template_selection_expression=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.IntegrationResponse.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing IntegrationResponse resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API identifier.</p></li>
+<li><p><strong>content_handling_strategy</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – How to handle response payload content type conversions. Valid values: <code class="docutils literal notranslate"><span class="pre">CONVERT_TO_BINARY</span></code>, <code class="docutils literal notranslate"><span class="pre">CONVERT_TO_TEXT</span></code>.</p></li>
+<li><p><strong>integration_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <cite>``apigatewayv2.Integration`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/apigatewayv2_integration.html">https://www.terraform.io/docs/providers/aws/r/apigatewayv2_integration.html</a>&gt;`_.</p></li>
+<li><p><strong>integration_response_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The integration response key.</p></li>
+<li><p><strong>response_templates</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map of Velocity templates that are applied on the request payload based on the value of the Content-Type header sent by the client.</p></li>
+<li><p><strong>template_selection_expression</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-template-selection-expressions">template selection expression</a> for the integration response.</p>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.apigatewayv2.IntegrationResponse.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.IntegrationResponse.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.apigatewayv2.IntegrationResponse.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.IntegrationResponse.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_aws.apigatewayv2.Model">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigatewayv2.</code><code class="sig-name descname">Model</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_id=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">schema=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.Model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Amazon API Gateway Version 2 <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/models-mappings.html#models-mappings-models">model</a>.</p>
@@ -624,6 +970,546 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_aws.apigatewayv2.Model.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.Model.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.apigatewayv2.Route">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigatewayv2.</code><code class="sig-name descname">Route</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_id=None</em>, <em class="sig-param">api_key_required=None</em>, <em class="sig-param">authorization_scopes=None</em>, <em class="sig-param">authorization_type=None</em>, <em class="sig-param">authorizer_id=None</em>, <em class="sig-param">model_selection_expression=None</em>, <em class="sig-param">operation_name=None</em>, <em class="sig-param">request_models=None</em>, <em class="sig-param">route_key=None</em>, <em class="sig-param">route_response_selection_expression=None</em>, <em class="sig-param">target=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.Route" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an Amazon API Gateway Version 2 route.
+More information can be found in the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API identifier.</p></li>
+<li><p><strong>api_key_required</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean whether an API key is required for the route. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>authorization_scopes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The authorization scopes supported by this route. The scopes are used with a JWT authorizer to authorize the method invocation.</p></li>
+<li><p><strong>authorization_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The authorization type for the route.
+For WebSocket APIs, valid values are <code class="docutils literal notranslate"><span class="pre">NONE</span></code> for open access, <code class="docutils literal notranslate"><span class="pre">AWS_IAM</span></code> for using AWS IAM permissions, and <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code> for using a Lambda authorizer.
+For HTTP APIs, valid values are <code class="docutils literal notranslate"><span class="pre">NONE</span></code> for open access, or <code class="docutils literal notranslate"><span class="pre">JWT</span></code> for using JSON Web Tokens.
+Defaults to <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.</p></li>
+<li><p><strong>authorizer_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <cite>``apigatewayv2.Authorizer`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/apigatewayv2_authorizer.html">https://www.terraform.io/docs/providers/aws/r/apigatewayv2_authorizer.html</a>&gt;`_ resource to be associated with this route, if the authorizationType is <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>.</p></li>
+<li><p><strong>model_selection_expression</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions">model selection expression</a> for the route.</p></li>
+<li><p><strong>operation_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The operation name for the route.</p></li>
+<li><p><strong>request_models</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The request models for the route.</p></li>
+<li><p><strong>route_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The route key for the route.</p></li>
+<li><p><strong>route_response_selection_expression</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions">route response selection expression</a> for the route.</p></li>
+<li><p><strong>target</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The target for the route.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Route.api_id">
+<code class="sig-name descname">api_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Route.api_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The API identifier.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Route.api_key_required">
+<code class="sig-name descname">api_key_required</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Route.api_key_required" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean whether an API key is required for the route. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Route.authorization_scopes">
+<code class="sig-name descname">authorization_scopes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Route.authorization_scopes" title="Permalink to this definition">¶</a></dt>
+<dd><p>The authorization scopes supported by this route. The scopes are used with a JWT authorizer to authorize the method invocation.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Route.authorization_type">
+<code class="sig-name descname">authorization_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Route.authorization_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>The authorization type for the route.
+For WebSocket APIs, valid values are <code class="docutils literal notranslate"><span class="pre">NONE</span></code> for open access, <code class="docutils literal notranslate"><span class="pre">AWS_IAM</span></code> for using AWS IAM permissions, and <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code> for using a Lambda authorizer.
+For HTTP APIs, valid values are <code class="docutils literal notranslate"><span class="pre">NONE</span></code> for open access, or <code class="docutils literal notranslate"><span class="pre">JWT</span></code> for using JSON Web Tokens.
+Defaults to <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Route.authorizer_id">
+<code class="sig-name descname">authorizer_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Route.authorizer_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The identifier of the <cite>``apigatewayv2.Authorizer`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/apigatewayv2_authorizer.html">https://www.terraform.io/docs/providers/aws/r/apigatewayv2_authorizer.html</a>&gt;`_ resource to be associated with this route, if the authorizationType is <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Route.model_selection_expression">
+<code class="sig-name descname">model_selection_expression</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Route.model_selection_expression" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions">model selection expression</a> for the route.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Route.operation_name">
+<code class="sig-name descname">operation_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Route.operation_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The operation name for the route.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Route.request_models">
+<code class="sig-name descname">request_models</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Route.request_models" title="Permalink to this definition">¶</a></dt>
+<dd><p>The request models for the route.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Route.route_key">
+<code class="sig-name descname">route_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Route.route_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The route key for the route.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Route.route_response_selection_expression">
+<code class="sig-name descname">route_response_selection_expression</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Route.route_response_selection_expression" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions">route response selection expression</a> for the route.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Route.target">
+<code class="sig-name descname">target</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Route.target" title="Permalink to this definition">¶</a></dt>
+<dd><p>The target for the route.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.apigatewayv2.Route.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_id=None</em>, <em class="sig-param">api_key_required=None</em>, <em class="sig-param">authorization_scopes=None</em>, <em class="sig-param">authorization_type=None</em>, <em class="sig-param">authorizer_id=None</em>, <em class="sig-param">model_selection_expression=None</em>, <em class="sig-param">operation_name=None</em>, <em class="sig-param">request_models=None</em>, <em class="sig-param">route_key=None</em>, <em class="sig-param">route_response_selection_expression=None</em>, <em class="sig-param">target=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.Route.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Route resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API identifier.</p></li>
+<li><p><strong>api_key_required</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean whether an API key is required for the route. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>authorization_scopes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The authorization scopes supported by this route. The scopes are used with a JWT authorizer to authorize the method invocation.</p></li>
+<li><p><strong>authorization_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The authorization type for the route.
+For WebSocket APIs, valid values are <code class="docutils literal notranslate"><span class="pre">NONE</span></code> for open access, <code class="docutils literal notranslate"><span class="pre">AWS_IAM</span></code> for using AWS IAM permissions, and <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code> for using a Lambda authorizer.
+For HTTP APIs, valid values are <code class="docutils literal notranslate"><span class="pre">NONE</span></code> for open access, or <code class="docutils literal notranslate"><span class="pre">JWT</span></code> for using JSON Web Tokens.
+Defaults to <code class="docutils literal notranslate"><span class="pre">NONE</span></code>.</p></li>
+<li><p><strong>authorizer_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <cite>``apigatewayv2.Authorizer`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/apigatewayv2_authorizer.html">https://www.terraform.io/docs/providers/aws/r/apigatewayv2_authorizer.html</a>&gt;`_ resource to be associated with this route, if the authorizationType is <code class="docutils literal notranslate"><span class="pre">CUSTOM</span></code>.</p></li>
+<li><p><strong>model_selection_expression</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions">model selection expression</a> for the route.</p>
+</p></li>
+<li><p><strong>operation_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The operation name for the route.</p></li>
+<li><p><strong>request_models</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The request models for the route.</p></li>
+<li><p><strong>route_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The route key for the route.</p></li>
+<li><p><strong>route_response_selection_expression</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-route-response-selection-expressions">route response selection expression</a> for the route.</p>
+</p></li>
+<li><p><strong>target</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The target for the route.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.apigatewayv2.Route.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.Route.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.apigatewayv2.Route.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.Route.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.apigatewayv2.RouteResponse">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigatewayv2.</code><code class="sig-name descname">RouteResponse</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_id=None</em>, <em class="sig-param">model_selection_expression=None</em>, <em class="sig-param">response_models=None</em>, <em class="sig-param">route_id=None</em>, <em class="sig-param">route_response_key=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.RouteResponse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an Amazon API Gateway Version 2 route response.
+More information can be found in the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API identifier.</p></li>
+<li><p><strong>model_selection_expression</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions">model selection expression</a> for the route response.</p>
+</p></li>
+<li><p><strong>response_models</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The response models for the route response.</p></li>
+<li><p><strong>route_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <cite>``apigatewayv2.Route`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/apigatewayv2_route.html">https://www.terraform.io/docs/providers/aws/r/apigatewayv2_route.html</a>&gt;`_.</p></li>
+<li><p><strong>route_response_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The route response key.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.RouteResponse.api_id">
+<code class="sig-name descname">api_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.RouteResponse.api_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The API identifier.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.RouteResponse.model_selection_expression">
+<code class="sig-name descname">model_selection_expression</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.RouteResponse.model_selection_expression" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions">model selection expression</a> for the route response.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.RouteResponse.response_models">
+<code class="sig-name descname">response_models</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.RouteResponse.response_models" title="Permalink to this definition">¶</a></dt>
+<dd><p>The response models for the route response.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.RouteResponse.route_id">
+<code class="sig-name descname">route_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.RouteResponse.route_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The identifier of the <cite>``apigatewayv2.Route`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/apigatewayv2_route.html">https://www.terraform.io/docs/providers/aws/r/apigatewayv2_route.html</a>&gt;`_.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.RouteResponse.route_response_key">
+<code class="sig-name descname">route_response_key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.RouteResponse.route_response_key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The route response key.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.apigatewayv2.RouteResponse.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_id=None</em>, <em class="sig-param">model_selection_expression=None</em>, <em class="sig-param">response_models=None</em>, <em class="sig-param">route_id=None</em>, <em class="sig-param">route_response_key=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.RouteResponse.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing RouteResponse resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API identifier.</p></li>
+<li><p><strong>model_selection_expression</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-selection-expressions.html#apigateway-websocket-api-model-selection-expressions">model selection expression</a> for the route response.</p>
+</p></li>
+<li><p><strong>response_models</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The response models for the route response.</p></li>
+<li><p><strong>route_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of the <cite>``apigatewayv2.Route`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/apigatewayv2_route.html">https://www.terraform.io/docs/providers/aws/r/apigatewayv2_route.html</a>&gt;`_.</p></li>
+<li><p><strong>route_response_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The route response key.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.apigatewayv2.RouteResponse.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.RouteResponse.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.apigatewayv2.RouteResponse.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.RouteResponse.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_aws.apigatewayv2.Stage">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.apigatewayv2.</code><code class="sig-name descname">Stage</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_log_settings=None</em>, <em class="sig-param">api_id=None</em>, <em class="sig-param">auto_deploy=None</em>, <em class="sig-param">client_certificate_id=None</em>, <em class="sig-param">default_route_settings=None</em>, <em class="sig-param">deployment_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">route_settings=None</em>, <em class="sig-param">stage_variables=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.Stage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Manages an Amazon API Gateway Version 2 stage.
+More information can be found in the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api.html">Amazon API Gateway Developer Guide</a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_log_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Settings for logging access in this stage.
+Use the <cite>``apigateway.Account`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/api_gateway_account.html">https://www.terraform.io/docs/providers/aws/r/api_gateway_account.html</a>&gt;`_ resource to configure <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions">permissions for CloudWatch Logging</a>.</p></li>
+<li><p><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API identifier.</p></li>
+<li><p><strong>auto_deploy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether updates to an API automatically trigger a new deployment. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>client_certificate_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of a client certificate for the stage. Use the <cite>``apigateway.ClientCertificate`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/api_gateway_client_certificate.html">https://www.terraform.io/docs/providers/aws/r/api_gateway_client_certificate.html</a>&gt;`_ resource to configure a client certificate.
+Supported only for WebSocket APIs.</p></li>
+<li><p><strong>default_route_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The default route settings for the stage.</p></li>
+<li><p><strong>deployment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The deployment identifier of the stage. Use the <code class="docutils literal notranslate"><span class="pre">apigatewayv2.Deployment</span></code> resource to configure a deployment.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description for the stage.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the stage.</p></li>
+<li><p><strong>route_settings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Route settings for the stage.</p></li>
+<li><p><strong>stage_variables</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map that defines the stage variables for the stage.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the stage.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>access_log_settings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">destination_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the CloudWatch Logs log group to receive access logs. Any trailing <code class="docutils literal notranslate"><span class="pre">:*</span></code> is trimmed from the ARN.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">format</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A single line <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#apigateway-cloudwatch-log-formats">format</a> of the access logs of data, as specified by <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-logging.html">selected $context variables</a>.</p></li>
+</ul>
+<p>The <strong>default_route_settings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataTraceEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether data trace logging is enabled for the default route. Affects the log entries pushed to Amazon CloudWatch Logs.
+Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Supported only for WebSocket APIs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">detailedMetricsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether detailed metrics are enabled for the default route. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loggingLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The logging level for the default route. Affects the log entries pushed to Amazon CloudWatch Logs.
+Valid values: <code class="docutils literal notranslate"><span class="pre">ERROR</span></code>, <code class="docutils literal notranslate"><span class="pre">INFO</span></code>, <code class="docutils literal notranslate"><span class="pre">OFF</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">OFF</span></code>. Supported only for WebSocket APIs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">throttlingBurstLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The throttling burst limit for the default route.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">throttlingRateLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The throttling rate limit for the default route.</p></li>
+</ul>
+<p>The <strong>route_settings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataTraceEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether data trace logging is enabled for the route. Affects the log entries pushed to Amazon CloudWatch Logs.
+Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Supported only for WebSocket APIs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">detailedMetricsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether detailed metrics are enabled for the route. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loggingLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The logging level for the route. Affects the log entries pushed to Amazon CloudWatch Logs.
+Valid values: <code class="docutils literal notranslate"><span class="pre">ERROR</span></code>, <code class="docutils literal notranslate"><span class="pre">INFO</span></code>, <code class="docutils literal notranslate"><span class="pre">OFF</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">OFF</span></code>. Supported only for WebSocket APIs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Route key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">throttlingBurstLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The throttling burst limit for the route.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">throttlingRateLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The throttling rate limit for the route.</p></li>
+</ul>
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Stage.access_log_settings">
+<code class="sig-name descname">access_log_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Stage.access_log_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Settings for logging access in this stage.
+Use the <cite>``apigateway.Account`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/api_gateway_account.html">https://www.terraform.io/docs/providers/aws/r/api_gateway_account.html</a>&gt;`_ resource to configure <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions">permissions for CloudWatch Logging</a>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">destination_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the CloudWatch Logs log group to receive access logs. Any trailing <code class="docutils literal notranslate"><span class="pre">:*</span></code> is trimmed from the ARN.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">format</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - A single line <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#apigateway-cloudwatch-log-formats">format</a> of the access logs of data, as specified by <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-logging.html">selected $context variables</a>.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Stage.api_id">
+<code class="sig-name descname">api_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Stage.api_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The API identifier.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Stage.arn">
+<code class="sig-name descname">arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Stage.arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN of the stage.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Stage.auto_deploy">
+<code class="sig-name descname">auto_deploy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Stage.auto_deploy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether updates to an API automatically trigger a new deployment. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Stage.client_certificate_id">
+<code class="sig-name descname">client_certificate_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Stage.client_certificate_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The identifier of a client certificate for the stage. Use the <cite>``apigateway.ClientCertificate`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/api_gateway_client_certificate.html">https://www.terraform.io/docs/providers/aws/r/api_gateway_client_certificate.html</a>&gt;`_ resource to configure a client certificate.
+Supported only for WebSocket APIs.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Stage.default_route_settings">
+<code class="sig-name descname">default_route_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Stage.default_route_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>The default route settings for the stage.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataTraceEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether data trace logging is enabled for the default route. Affects the log entries pushed to Amazon CloudWatch Logs.
+Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Supported only for WebSocket APIs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">detailedMetricsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether detailed metrics are enabled for the default route. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loggingLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The logging level for the default route. Affects the log entries pushed to Amazon CloudWatch Logs.
+Valid values: <code class="docutils literal notranslate"><span class="pre">ERROR</span></code>, <code class="docutils literal notranslate"><span class="pre">INFO</span></code>, <code class="docutils literal notranslate"><span class="pre">OFF</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">OFF</span></code>. Supported only for WebSocket APIs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">throttlingBurstLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The throttling burst limit for the default route.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">throttlingRateLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The throttling rate limit for the default route.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Stage.deployment_id">
+<code class="sig-name descname">deployment_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Stage.deployment_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The deployment identifier of the stage. Use the <code class="docutils literal notranslate"><span class="pre">apigatewayv2.Deployment</span></code> resource to configure a deployment.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Stage.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Stage.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>The description for the stage.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Stage.execution_arn">
+<code class="sig-name descname">execution_arn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Stage.execution_arn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ARN prefix to be used in an <cite>``lambda.Permission`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html">https://www.terraform.io/docs/providers/aws/r/lambda_permission.html</a>&gt;`_’s <code class="docutils literal notranslate"><span class="pre">source_arn</span></code> attribute
+or in an <cite>``iam.Policy`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/iam_policy.html">https://www.terraform.io/docs/providers/aws/r/iam_policy.html</a>&gt;`_ to authorize access to the <cite>``&#64;connections`</cite> API &lt;<a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html</a>&gt;`_.
+See the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html">Amazon API Gateway Developer Guide</a> for details.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Stage.invoke_url">
+<code class="sig-name descname">invoke_url</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Stage.invoke_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>The URL to invoke the API pointing to the stage,
+e.g. <code class="docutils literal notranslate"><span class="pre">wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage</span></code></p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Stage.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Stage.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the stage.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Stage.route_settings">
+<code class="sig-name descname">route_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Stage.route_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Route settings for the stage.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataTraceEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether data trace logging is enabled for the route. Affects the log entries pushed to Amazon CloudWatch Logs.
+Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Supported only for WebSocket APIs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">detailedMetricsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether detailed metrics are enabled for the route. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loggingLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The logging level for the route. Affects the log entries pushed to Amazon CloudWatch Logs.
+Valid values: <code class="docutils literal notranslate"><span class="pre">ERROR</span></code>, <code class="docutils literal notranslate"><span class="pre">INFO</span></code>, <code class="docutils literal notranslate"><span class="pre">OFF</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">OFF</span></code>. Supported only for WebSocket APIs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route_key</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Route key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">throttlingBurstLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The throttling burst limit for the route.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">throttlingRateLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The throttling rate limit for the route.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Stage.stage_variables">
+<code class="sig-name descname">stage_variables</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Stage.stage_variables" title="Permalink to this definition">¶</a></dt>
+<dd><p>A map that defines the stage variables for the stage.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_aws.apigatewayv2.Stage.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.apigatewayv2.Stage.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the stage.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.apigatewayv2.Stage.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">access_log_settings=None</em>, <em class="sig-param">api_id=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">auto_deploy=None</em>, <em class="sig-param">client_certificate_id=None</em>, <em class="sig-param">default_route_settings=None</em>, <em class="sig-param">deployment_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">execution_arn=None</em>, <em class="sig-param">invoke_url=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">route_settings=None</em>, <em class="sig-param">stage_variables=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.Stage.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Stage resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>access_log_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – <p>Settings for logging access in this stage.
+Use the <cite>``apigateway.Account`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/api_gateway_account.html">https://www.terraform.io/docs/providers/aws/r/api_gateway_account.html</a>&gt;`_ resource to configure <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#set-up-access-logging-permissions">permissions for CloudWatch Logging</a>.</p>
+</p></li>
+<li><p><strong>api_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API identifier.</p></li>
+<li><p><strong>arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the stage.</p></li>
+<li><p><strong>auto_deploy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Whether updates to an API automatically trigger a new deployment. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>client_certificate_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The identifier of a client certificate for the stage. Use the <cite>``apigateway.ClientCertificate`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/api_gateway_client_certificate.html">https://www.terraform.io/docs/providers/aws/r/api_gateway_client_certificate.html</a>&gt;`_ resource to configure a client certificate.
+Supported only for WebSocket APIs.</p></li>
+<li><p><strong>default_route_settings</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – The default route settings for the stage.</p></li>
+<li><p><strong>deployment_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The deployment identifier of the stage. Use the <code class="docutils literal notranslate"><span class="pre">apigatewayv2.Deployment</span></code> resource to configure a deployment.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description for the stage.</p></li>
+<li><p><strong>execution_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The ARN prefix to be used in an <cite>``lambda.Permission`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/lambda_permission.html">https://www.terraform.io/docs/providers/aws/r/lambda_permission.html</a>&gt;`_’s <code class="docutils literal notranslate"><span class="pre">source_arn</span></code> attribute
+or in an <cite>``iam.Policy`</cite> &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/iam_policy.html">https://www.terraform.io/docs/providers/aws/r/iam_policy.html</a>&gt;`_ to authorize access to the <cite>``&#64;connections`</cite> API &lt;<a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html">https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-how-to-call-websocket-api-connections.html</a>&gt;`_.
+See the <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-control-access-iam.html">Amazon API Gateway Developer Guide</a> for details.</p>
+</p></li>
+<li><p><strong>invoke_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL to invoke the API pointing to the stage,
+e.g. <code class="docutils literal notranslate"><span class="pre">wss://z4675bid1j.execute-api.eu-west-2.amazonaws.com/example-stage</span></code></p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the stage.</p></li>
+<li><p><strong>route_settings</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Route settings for the stage.</p></li>
+<li><p><strong>stage_variables</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A map that defines the stage variables for the stage.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the stage.</p></li>
+</ul>
+</dd>
+</dl>
+<p>The <strong>access_log_settings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">destination_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the CloudWatch Logs log group to receive access logs. Any trailing <code class="docutils literal notranslate"><span class="pre">:*</span></code> is trimmed from the ARN.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">format</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - A single line <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/set-up-logging.html#apigateway-cloudwatch-log-formats">format</a> of the access logs of data, as specified by <a class="reference external" href="https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-websocket-api-logging.html">selected $context variables</a>.</p></li>
+</ul>
+<p>The <strong>default_route_settings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataTraceEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether data trace logging is enabled for the default route. Affects the log entries pushed to Amazon CloudWatch Logs.
+Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Supported only for WebSocket APIs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">detailedMetricsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether detailed metrics are enabled for the default route. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loggingLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The logging level for the default route. Affects the log entries pushed to Amazon CloudWatch Logs.
+Valid values: <code class="docutils literal notranslate"><span class="pre">ERROR</span></code>, <code class="docutils literal notranslate"><span class="pre">INFO</span></code>, <code class="docutils literal notranslate"><span class="pre">OFF</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">OFF</span></code>. Supported only for WebSocket APIs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">throttlingBurstLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The throttling burst limit for the default route.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">throttlingRateLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The throttling rate limit for the default route.</p></li>
+</ul>
+<p>The <strong>route_settings</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dataTraceEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether data trace logging is enabled for the route. Affects the log entries pushed to Amazon CloudWatch Logs.
+Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>. Supported only for WebSocket APIs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">detailedMetricsEnabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether detailed metrics are enabled for the route. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">loggingLevel</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The logging level for the route. Affects the log entries pushed to Amazon CloudWatch Logs.
+Valid values: <code class="docutils literal notranslate"><span class="pre">ERROR</span></code>, <code class="docutils literal notranslate"><span class="pre">INFO</span></code>, <code class="docutils literal notranslate"><span class="pre">OFF</span></code>. Defaults to <code class="docutils literal notranslate"><span class="pre">OFF</span></code>. Supported only for WebSocket APIs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">route_key</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Route key.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">throttlingBurstLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The throttling burst limit for the route.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">throttlingRateLimit</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The throttling rate limit for the route.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.apigatewayv2.Stage.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.Stage.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_aws.apigatewayv2.Stage.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.apigatewayv2.Stage.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

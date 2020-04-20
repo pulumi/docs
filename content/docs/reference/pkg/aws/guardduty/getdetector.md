@@ -26,7 +26,7 @@ const example = aws.guardduty.getDetector();
 
 
 
-## Using GetDetector
+## Using GetDetector {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -128,7 +128,7 @@ The following arguments are supported:
 
 
 
-## GetDetector Result
+## GetDetector Result {#result}
 
 The following output properties are available:
 

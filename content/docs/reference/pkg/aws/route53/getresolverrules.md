@@ -32,7 +32,7 @@ const example = aws.route53.getResolverRules({
 
 
 
-## Using GetResolverRules
+## Using GetResolverRules {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -246,7 +246,7 @@ Values are `NOT_SHARED`, `SHARED_BY_ME` or `SHARED_WITH_ME`
 
 
 
-## GetResolverRules Result
+## GetResolverRules Result {#result}
 
 The following output properties are available:
 

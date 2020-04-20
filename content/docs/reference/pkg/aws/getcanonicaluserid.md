@@ -29,7 +29,7 @@ export const canonicalUserId = current.id;
 
 
 
-## Using GetCanonicalUserId
+## Using GetCanonicalUserId {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -58,7 +58,7 @@ export const canonicalUserId = current.id;
 
 
 
-## GetCanonicalUserId Result
+## GetCanonicalUserId Result {#result}
 
 The following output properties are available:
 

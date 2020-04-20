@@ -15,12 +15,12 @@ anything, please consult the source <a class="reference external" href="https://
 </div></blockquote>
 <span class="target" id="module-pulumi_aws.dynamodb"></span><dl class="class">
 <dt id="pulumi_aws.dynamodb.AwaitableGetTableResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.dynamodb.</code><code class="sig-name descname">AwaitableGetTableResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">billing_mode=None</em>, <em class="sig-param">global_secondary_indexes=None</em>, <em class="sig-param">hash_key=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">local_secondary_indexes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">point_in_time_recovery=None</em>, <em class="sig-param">range_key=None</em>, <em class="sig-param">read_capacity=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">stream_arn=None</em>, <em class="sig-param">stream_enabled=None</em>, <em class="sig-param">stream_label=None</em>, <em class="sig-param">stream_view_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">write_capacity=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.AwaitableGetTableResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.dynamodb.</code><code class="sig-name descname">AwaitableGetTableResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">billing_mode=None</em>, <em class="sig-param">global_secondary_indexes=None</em>, <em class="sig-param">hash_key=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">local_secondary_indexes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">point_in_time_recovery=None</em>, <em class="sig-param">range_key=None</em>, <em class="sig-param">read_capacity=None</em>, <em class="sig-param">replicas=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">stream_arn=None</em>, <em class="sig-param">stream_enabled=None</em>, <em class="sig-param">stream_label=None</em>, <em class="sig-param">stream_view_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">write_capacity=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.AwaitableGetTableResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
 <dt id="pulumi_aws.dynamodb.GetTableResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.dynamodb.</code><code class="sig-name descname">GetTableResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">billing_mode=None</em>, <em class="sig-param">global_secondary_indexes=None</em>, <em class="sig-param">hash_key=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">local_secondary_indexes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">point_in_time_recovery=None</em>, <em class="sig-param">range_key=None</em>, <em class="sig-param">read_capacity=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">stream_arn=None</em>, <em class="sig-param">stream_enabled=None</em>, <em class="sig-param">stream_label=None</em>, <em class="sig-param">stream_view_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">write_capacity=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.GetTableResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.dynamodb.</code><code class="sig-name descname">GetTableResult</code><span class="sig-paren">(</span><em class="sig-param">arn=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">billing_mode=None</em>, <em class="sig-param">global_secondary_indexes=None</em>, <em class="sig-param">hash_key=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">local_secondary_indexes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">point_in_time_recovery=None</em>, <em class="sig-param">range_key=None</em>, <em class="sig-param">read_capacity=None</em>, <em class="sig-param">replicas=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">stream_arn=None</em>, <em class="sig-param">stream_enabled=None</em>, <em class="sig-param">stream_label=None</em>, <em class="sig-param">stream_view_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">write_capacity=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.GetTableResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getTable.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.dynamodb.GetTableResult.id">
@@ -33,9 +33,10 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="class">
 <dt id="pulumi_aws.dynamodb.GlobalTable">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.dynamodb.</code><code class="sig-name descname">GlobalTable</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">replicas=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.GlobalTable" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a resource to manage a DynamoDB Global Table. These are layered on top of existing DynamoDB Tables.</p>
+<dd><p>Manages <a class="reference external" href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V1.html">DynamoDB Global Tables V1 (version 2017.11.29)</a>. These are layered on top of existing DynamoDB Tables.</p>
 <blockquote>
-<div><p>Note: There are many restrictions before you can properly create DynamoDB Global Tables in multiple regions. See the <a class="reference external" href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables_reqs_bestpractices.html">AWS DynamoDB Global Table Requirements</a> for more information.</p>
+<div><p><strong>NOTE:</strong> To instead manage <a class="reference external" href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">DynamoDB Global Tables V2 (version 2019.11.21)</a>, use the <cite>``dynamodb.Table`</cite> resource &lt;<a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html">https://www.terraform.io/docs/providers/aws/r/dynamodb_table.html</a>&gt;`_ <code class="docutils literal notranslate"><span class="pre">replica</span></code> configuration block.</p>
+<p>Note: There are many restrictions before you can properly create DynamoDB Global Tables in multiple regions. See the <a class="reference external" href="http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables_reqs_bestpractices.html">AWS DynamoDB Global Table Requirements</a> for more information.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -135,7 +136,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_aws.dynamodb.Table">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.dynamodb.</code><code class="sig-name descname">Table</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">billing_mode=None</em>, <em class="sig-param">global_secondary_indexes=None</em>, <em class="sig-param">hash_key=None</em>, <em class="sig-param">local_secondary_indexes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">point_in_time_recovery=None</em>, <em class="sig-param">range_key=None</em>, <em class="sig-param">read_capacity=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">stream_enabled=None</em>, <em class="sig-param">stream_view_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">write_capacity=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.Table" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.dynamodb.</code><code class="sig-name descname">Table</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">billing_mode=None</em>, <em class="sig-param">global_secondary_indexes=None</em>, <em class="sig-param">hash_key=None</em>, <em class="sig-param">local_secondary_indexes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">point_in_time_recovery=None</em>, <em class="sig-param">range_key=None</em>, <em class="sig-param">read_capacity=None</em>, <em class="sig-param">replicas=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">stream_enabled=None</em>, <em class="sig-param">stream_view_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">write_capacity=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.Table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DynamoDB table resource</p>
 <blockquote>
 <div><p><strong>Note:</strong> It is recommended to use <cite>``ignoreChanges`</cite> &lt;<a class="reference external" href="https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges">https://www.pulumi.com/docs/intro/concepts/programming-model/#ignorechanges</a>&gt;`_ for <code class="docutils literal notranslate"><span class="pre">read_capacity</span></code> and/or <code class="docutils literal notranslate"><span class="pre">write_capacity</span></code> if there’s <a class="reference external" href="https://www.terraform.io/docs/providers/aws/r/appautoscaling_policy.html">autoscaling policy</a> attached to the table.</p>
@@ -159,6 +160,8 @@ definition after you have created the resource.</p></li>
 <li><p><strong>point_in_time_recovery</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Point-in-time recovery options.</p></li>
 <li><p><strong>range_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the range key; must be defined</p></li>
 <li><p><strong>read_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.</p></li>
+<li><p><strong>replicas</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>Configuration block(s) with <a class="reference external" href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">DynamoDB Global Tables V2 (version 2019.11.21)</a> replication configurations. Detailed below.</p>
+</p></li>
 <li><p><strong>server_side_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn’t specified.</p></li>
 <li><p><strong>stream_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether Streams are to be enabled (true) or disabled (false).</p></li>
 <li><p><strong>stream_view_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – When an item in the table is modified, StreamViewType determines what information is written to the table’s stream. Valid values are <code class="docutils literal notranslate"><span class="pre">KEYS_ONLY</span></code>, <code class="docutils literal notranslate"><span class="pre">NEW_IMAGE</span></code>, <code class="docutils literal notranslate"><span class="pre">OLD_IMAGE</span></code>, <code class="docutils literal notranslate"><span class="pre">NEW_AND_OLD_IMAGES</span></code>.</p></li>
@@ -205,18 +208,22 @@ parameter.</p></li>
 </ul>
 <p>The <strong>point_in_time_recovery</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to enable point-in-time recovery - note that it can take up to 10 minutes to enable for new tables. If the <code class="docutils literal notranslate"><span class="pre">point_in_time_recovery</span></code> block is not provided then this defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether ttl is enabled (true) or disabled (false).</p></li>
+</ul>
+<p>The <strong>replicas</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">regionName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Region name of the replica.</p></li>
 </ul>
 <p>The <strong>server_side_encryption</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to enable point-in-time recovery - note that it can take up to 10 minutes to enable for new tables. If the <code class="docutils literal notranslate"><span class="pre">point_in_time_recovery</span></code> block is not provided then this defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether ttl is enabled (true) or disabled (false).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the CMK that should be used for the AWS KMS encryption.
 This attribute should only be specified if the key is different from the default DynamoDB CMK, <code class="docutils literal notranslate"><span class="pre">alias/aws/dynamodb</span></code>.</p></li>
 </ul>
 <p>The <strong>ttl</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">attributeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the table attribute to store the TTL timestamp in.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to enable point-in-time recovery - note that it can take up to 10 minutes to enable for new tables. If the <code class="docutils literal notranslate"><span class="pre">point_in_time_recovery</span></code> block is not provided then this defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether ttl is enabled (true) or disabled (false).</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_aws.dynamodb.Table.arn">
@@ -302,7 +309,7 @@ parameter.</p></li>
 <code class="sig-name descname">point_in_time_recovery</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dynamodb.Table.point_in_time_recovery" title="Permalink to this definition">¶</a></dt>
 <dd><p>Point-in-time recovery options.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to enable point-in-time recovery - note that it can take up to 10 minutes to enable for new tables. If the <code class="docutils literal notranslate"><span class="pre">point_in_time_recovery</span></code> block is not provided then this defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether ttl is enabled (true) or disabled (false).</p></li>
 </ul>
 </dd></dl>
 
@@ -319,11 +326,20 @@ parameter.</p></li>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_aws.dynamodb.Table.replicas">
+<code class="sig-name descname">replicas</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dynamodb.Table.replicas" title="Permalink to this definition">¶</a></dt>
+<dd><p>Configuration block(s) with <a class="reference external" href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">DynamoDB Global Tables V2 (version 2019.11.21)</a> replication configurations. Detailed below.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">regionName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Region name of the replica.</p></li>
+</ul>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_aws.dynamodb.Table.server_side_encryption">
 <code class="sig-name descname">server_side_encryption</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.dynamodb.Table.server_side_encryption" title="Permalink to this definition">¶</a></dt>
 <dd><p>Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn’t specified.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to enable point-in-time recovery - note that it can take up to 10 minutes to enable for new tables. If the <code class="docutils literal notranslate"><span class="pre">point_in_time_recovery</span></code> block is not provided then this defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether ttl is enabled (true) or disabled (false).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The ARN of the CMK that should be used for the AWS KMS encryption.
 This attribute should only be specified if the key is different from the default DynamoDB CMK, <code class="docutils literal notranslate"><span class="pre">alias/aws/dynamodb</span></code>.</p></li>
 </ul>
@@ -368,7 +384,7 @@ It can be used for creating CloudWatch Alarms. Only available when <code class="
 <dd><p>Defines ttl, has two properties, and can only be specified once:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">attributeName</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the table attribute to store the TTL timestamp in.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether to enable point-in-time recovery - note that it can take up to 10 minutes to enable for new tables. If the <code class="docutils literal notranslate"><span class="pre">point_in_time_recovery</span></code> block is not provided then this defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Indicates whether ttl is enabled (true) or disabled (false).</p></li>
 </ul>
 </dd></dl>
 
@@ -380,7 +396,7 @@ It can be used for creating CloudWatch Alarms. Only available when <code class="
 
 <dl class="method">
 <dt id="pulumi_aws.dynamodb.Table.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">billing_mode=None</em>, <em class="sig-param">global_secondary_indexes=None</em>, <em class="sig-param">hash_key=None</em>, <em class="sig-param">local_secondary_indexes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">point_in_time_recovery=None</em>, <em class="sig-param">range_key=None</em>, <em class="sig-param">read_capacity=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">stream_arn=None</em>, <em class="sig-param">stream_enabled=None</em>, <em class="sig-param">stream_label=None</em>, <em class="sig-param">stream_view_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">write_capacity=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.Table.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">arn=None</em>, <em class="sig-param">attributes=None</em>, <em class="sig-param">billing_mode=None</em>, <em class="sig-param">global_secondary_indexes=None</em>, <em class="sig-param">hash_key=None</em>, <em class="sig-param">local_secondary_indexes=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">point_in_time_recovery=None</em>, <em class="sig-param">range_key=None</em>, <em class="sig-param">read_capacity=None</em>, <em class="sig-param">replicas=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">stream_arn=None</em>, <em class="sig-param">stream_enabled=None</em>, <em class="sig-param">stream_label=None</em>, <em class="sig-param">stream_view_type=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">write_capacity=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.dynamodb.Table.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Table resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -404,6 +420,8 @@ definition after you have created the resource.</p></li>
 <li><p><strong>point_in_time_recovery</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Point-in-time recovery options.</p></li>
 <li><p><strong>range_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the range key; must be defined</p></li>
 <li><p><strong>read_capacity</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of read units for this index. Must be set if billing_mode is set to PROVISIONED.</p></li>
+<li><p><strong>replicas</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>Configuration block(s) with <a class="reference external" href="https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/globaltables.V2.html">DynamoDB Global Tables V2 (version 2019.11.21)</a> replication configurations. Detailed below.</p>
+</p></li>
 <li><p><strong>server_side_encryption</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Encryption at rest options. AWS DynamoDB tables are automatically encrypted at rest with an AWS owned Customer Master Key if this argument isn’t specified.</p></li>
 <li><p><strong>stream_arn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ARN of the Table Stream. Only available when <code class="docutils literal notranslate"><span class="pre">stream_enabled</span> <span class="pre">=</span> <span class="pre">true</span></code></p></li>
 <li><p><strong>stream_enabled</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Indicates whether Streams are to be enabled (true) or disabled (false).</p></li>
@@ -455,18 +473,22 @@ parameter.</p></li>
 </ul>
 <p>The <strong>point_in_time_recovery</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to enable point-in-time recovery - note that it can take up to 10 minutes to enable for new tables. If the <code class="docutils literal notranslate"><span class="pre">point_in_time_recovery</span></code> block is not provided then this defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether ttl is enabled (true) or disabled (false).</p></li>
+</ul>
+<p>The <strong>replicas</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">regionName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Region name of the replica.</p></li>
 </ul>
 <p>The <strong>server_side_encryption</strong> object supports the following:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to enable point-in-time recovery - note that it can take up to 10 minutes to enable for new tables. If the <code class="docutils literal notranslate"><span class="pre">point_in_time_recovery</span></code> block is not provided then this defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether ttl is enabled (true) or disabled (false).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">kms_key_arn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The ARN of the CMK that should be used for the AWS KMS encryption.
 This attribute should only be specified if the key is different from the default DynamoDB CMK, <code class="docutils literal notranslate"><span class="pre">alias/aws/dynamodb</span></code>.</p></li>
 </ul>
 <p>The <strong>ttl</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">attributeName</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the table attribute to store the TTL timestamp in.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether to enable point-in-time recovery - note that it can take up to 10 minutes to enable for new tables. If the <code class="docutils literal notranslate"><span class="pre">point_in_time_recovery</span></code> block is not provided then this defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Indicates whether ttl is enabled (true) or disabled (false).</p></li>
 </ul>
 </dd></dl>
 

@@ -28,7 +28,7 @@ const example = aws.waf.getRateBasedRule({
 
 
 
-## Using GetRateBasedRule
+## Using GetRateBasedRule {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -130,7 +130,7 @@ The following arguments are supported:
 
 
 
-## GetRateBasedRule Result
+## GetRateBasedRule Result {#result}
 
 The following output properties are available:
 

@@ -17,7 +17,7 @@ a specific AWS ECS task definition.
 
 
 
-## Using GetTaskDefinition
+## Using GetTaskDefinition {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -119,7 +119,7 @@ The following arguments are supported:
 
 
 
-## GetTaskDefinition Result
+## GetTaskDefinition Result {#result}
 
 The following output properties are available:
 

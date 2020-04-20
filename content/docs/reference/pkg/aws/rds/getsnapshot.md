@@ -49,7 +49,7 @@ const dev = new aws.rds.Instance("dev", {
 
 
 
-## Using GetSnapshot
+## Using GetSnapshot {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -355,7 +355,7 @@ included in the returned results by default. Possible values are, `automated`, `
 
 
 
-## GetSnapshot Result
+## GetSnapshot Result {#result}
 
 The following output properties are available:
 

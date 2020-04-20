@@ -50,7 +50,7 @@ for (let i = 0; i < testInstances.ids.length; i++) {
 
 
 
-## Using GetInstances
+## Using GetInstances {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -236,7 +236,7 @@ exactly match a pair on desired instances.
 
 
 
-## GetInstances Result
+## GetInstances Result {#result}
 
 The following output properties are available:
 
@@ -519,7 +519,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Instances<wbr>Filter</h4>
+
+<h4 id="getinstancesfilter">Get<wbr>Instances<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetInstancesFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstancesFilter">output</a> API doc for this type.
 {{% /choosable %}}

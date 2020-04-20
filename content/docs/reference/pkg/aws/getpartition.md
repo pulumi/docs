@@ -33,7 +33,7 @@ const s3Policy = aws.iam.getPolicyDocument({
 
 
 
-## Using GetPartition
+## Using GetPartition {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -62,7 +62,7 @@ const s3Policy = aws.iam.getPolicyDocument({
 
 
 
-## GetPartition Result
+## GetPartition Result {#result}
 
 The following output properties are available:
 

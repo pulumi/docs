@@ -1003,7 +1003,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="class">
 <dt id="pulumi_aws.pinpoint.EmailChannel">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.pinpoint.</code><code class="sig-name descname">EmailChannel</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">application_id=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">from_address=None</em>, <em class="sig-param">identity=None</em>, <em class="sig-param">role_arn=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.pinpoint.EmailChannel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Pinpoint SMS Channel resource.</p>
+<dd><p>Provides a Pinpoint Email Channel resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

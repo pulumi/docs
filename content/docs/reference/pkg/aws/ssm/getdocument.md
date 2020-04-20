@@ -46,7 +46,7 @@ const test = aws_ssm_document_test.name.apply(name => aws.ssm.getDocument({
 
 
 
-## Using GetDocument
+## Using GetDocument {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -220,7 +220,7 @@ The following arguments are supported:
 
 
 
-## GetDocument Result
+## GetDocument Result {#result}
 
 The following output properties are available:
 

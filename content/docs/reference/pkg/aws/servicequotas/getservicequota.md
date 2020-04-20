@@ -33,7 +33,7 @@ const byQuotaName = aws.servicequotas.getServiceQuota({
 
 
 
-## Using GetServiceQuota
+## Using GetServiceQuota {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -207,7 +207,7 @@ The following arguments are supported:
 
 
 
-## GetServiceQuota Result
+## GetServiceQuota Result {#result}
 
 The following output properties are available:
 

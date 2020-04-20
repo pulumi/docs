@@ -25,7 +25,7 @@ which provides a list of the available zones.
 
 
 
-## Using GetAvailabilityZone
+## Using GetAvailabilityZone {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -271,7 +271,7 @@ The following arguments are supported:
 
 
 
-## GetAvailabilityZone Result
+## GetAvailabilityZone Result {#result}
 
 The following output properties are available:
 
@@ -690,7 +690,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Availability<wbr>Zone<wbr>Filter</h4>
+
+<h4 id="getavailabilityzonefilter">Get<wbr>Availability<wbr>Zone<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetAvailabilityZoneFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAvailabilityZoneFilter">output</a> API doc for this type.
 {{% /choosable %}}

@@ -46,7 +46,7 @@ const example = aws.getAmi({
 
 
 
-## Using GetAmi
+## Using GetAmi {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -368,7 +368,7 @@ options to narrow down the list AWS returns.
 
 
 
-## GetAmi Result
+## GetAmi Result {#result}
 
 The following output properties are available:
 
@@ -1579,7 +1579,8 @@ is successfully registered and can be used to launch an instance.
 
 ## Supporting Types
 
-<h4>Get<wbr>Ami<wbr>Block<wbr>Device<wbr>Mapping</h4>
+
+<h4 id="getamiblockdevicemapping">Get<wbr>Ami<wbr>Block<wbr>Device<wbr>Mapping</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAmiBlockDeviceMapping">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1750,7 +1751,7 @@ is successfully registered and can be used to launch an instance.
 
 
 
-<h4>Get<wbr>Ami<wbr>Filter</h4>
+<h4 id="getamifilter">Get<wbr>Ami<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetAmiFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAmiFilter">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1861,7 +1862,7 @@ is successfully registered and can be used to launch an instance.
 
 
 
-<h4>Get<wbr>Ami<wbr>Product<wbr>Code</h4>
+<h4 id="getamiproductcode">Get<wbr>Ami<wbr>Product<wbr>Code</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAmiProductCode">output</a> API doc for this type.
 {{% /choosable %}}

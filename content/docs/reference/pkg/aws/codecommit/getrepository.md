@@ -28,7 +28,7 @@ const test = aws.codecommit.getRepository({
 
 
 
-## Using GetRepository
+## Using GetRepository {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -130,7 +130,7 @@ The following arguments are supported:
 
 
 
-## GetRepository Result
+## GetRepository Result {#result}
 
 The following output properties are available:
 

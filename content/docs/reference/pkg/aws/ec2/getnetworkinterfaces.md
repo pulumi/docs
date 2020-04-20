@@ -60,7 +60,7 @@ export const example = exampleNetworkInterfaces.ids;
 
 
 
-## Using GetNetworkInterfaces
+## Using GetNetworkInterfaces {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -202,7 +202,7 @@ a pair on the desired network interfaces.
 
 
 
-## GetNetworkInterfaces Result
+## GetNetworkInterfaces Result {#result}
 
 The following output properties are available:
 
@@ -381,7 +381,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Network<wbr>Interfaces<wbr>Filter</h4>
+
+<h4 id="getnetworkinterfacesfilter">Get<wbr>Network<wbr>Interfaces<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetNetworkInterfacesFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetNetworkInterfacesFilter">output</a> API doc for this type.
 {{% /choosable %}}

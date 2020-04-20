@@ -43,7 +43,7 @@ const by_name = aws.secretsmanager.getSecret({
 
 
 
-## Using GetSecret
+## Using GetSecret {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -181,7 +181,7 @@ The following arguments are supported:
 
 
 
-## GetSecret Result
+## GetSecret Result {#result}
 
 The following output properties are available:
 
@@ -580,7 +580,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Secret<wbr>Rotation<wbr>Rule</h4>
+
+<h4 id="getsecretrotationrule">Get<wbr>Secret<wbr>Rotation<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSecretRotationRule">output</a> API doc for this type.
 {{% /choosable %}}

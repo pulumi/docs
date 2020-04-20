@@ -32,7 +32,7 @@ const example = aws.acm.getCertificate({
 
 
 
-## Using GetCertificate
+## Using GetCertificate {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -286,7 +286,7 @@ are returned.
 
 
 
-## GetCertificate Result
+## GetCertificate Result {#result}
 
 The following output properties are available:
 

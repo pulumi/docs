@@ -64,7 +64,7 @@ const test = new aws.cloudfront.Distribution("test", {
 
 
 
-## Using GetBucket
+## Using GetBucket {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -166,7 +166,7 @@ The following arguments are supported:
 
 
 
-## GetBucket Result
+## GetBucket Result {#result}
 
 The following output properties are available:
 

@@ -52,7 +52,7 @@ const snsTopicPolicyTopicPolicy = new aws.sns.TopicPolicy("sns_topic_policy", {
 
 
 
-## Using GetOrganization
+## Using GetOrganization {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -81,7 +81,7 @@ const snsTopicPolicyTopicPolicy = new aws.sns.TopicPolicy("sns_topic_policy", {
 
 
 
-## GetOrganization Result
+## GetOrganization Result {#result}
 
 The following output properties are available:
 
@@ -520,7 +520,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Organization<wbr>Account</h4>
+
+<h4 id="getorganizationaccount">Get<wbr>Organization<wbr>Account</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetOrganizationAccount">output</a> API doc for this type.
 {{% /choosable %}}
@@ -743,7 +744,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Organization<wbr>Non<wbr>Master<wbr>Account</h4>
+<h4 id="getorganizationnonmasteraccount">Get<wbr>Organization<wbr>Non<wbr>Master<wbr>Account</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetOrganizationNonMasterAccount">output</a> API doc for this type.
 {{% /choosable %}}
@@ -966,7 +967,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Organization<wbr>Root</h4>
+<h4 id="getorganizationroot">Get<wbr>Organization<wbr>Root</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetOrganizationRoot">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1153,7 +1154,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Organization<wbr>Root<wbr>Policy<wbr>Type</h4>
+<h4 id="getorganizationrootpolicytype">Get<wbr>Organization<wbr>Root<wbr>Policy<wbr>Type</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetOrganizationRootPolicyType">output</a> API doc for this type.
 {{% /choosable %}}

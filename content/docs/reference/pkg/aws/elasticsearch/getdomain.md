@@ -28,7 +28,7 @@ const myDomain = aws.elasticsearch.getDomain({
 
 
 
-## Using GetDomain
+## Using GetDomain {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -166,7 +166,7 @@ The following arguments are supported:
 
 
 
-## GetDomain Result
+## GetDomain Result {#result}
 
 The following output properties are available:
 
@@ -961,7 +961,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Domain<wbr>Cluster<wbr>Config</h4>
+
+<h4 id="getdomainclusterconfig">Get<wbr>Domain<wbr>Cluster<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDomainClusterConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1256,7 +1257,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config</h4>
+<h4 id="getdomainclusterconfigzoneawarenessconfig">Get<wbr>Domain<wbr>Cluster<wbr>Config<wbr>Zone<wbr>Awareness<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDomainClusterConfigZoneAwarenessConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1335,7 +1336,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Domain<wbr>Cognito<wbr>Option</h4>
+<h4 id="getdomaincognitooption">Get<wbr>Domain<wbr>Cognito<wbr>Option</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDomainCognitoOption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1522,7 +1523,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Domain<wbr>Ebs<wbr>Option</h4>
+<h4 id="getdomainebsoption">Get<wbr>Domain<wbr>Ebs<wbr>Option</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDomainEbsOption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1690,20 +1691,20 @@ attached to data nodes.
 
     <dt class="property-required"
             title="Required">
-        <span>volume_<wbr>size</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GB).
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>volume<wbr>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The type of EBS volumes attached to data nodes.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>volume_<wbr>size</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}The size of EBS volumes attached to data nodes (in GB).
 {{% /md %}}</dd>
 
 </dl>
@@ -1713,7 +1714,7 @@ attached to data nodes.
 
 
 
-<h4>Get<wbr>Domain<wbr>Encryption<wbr>At<wbr>Rest</h4>
+<h4 id="getdomainencryptionatrest">Get<wbr>Domain<wbr>Encryption<wbr>At<wbr>Rest</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDomainEncryptionAtRest">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1828,7 +1829,7 @@ attached to data nodes.
 
 
 
-<h4>Get<wbr>Domain<wbr>Log<wbr>Publishing<wbr>Option</h4>
+<h4 id="getdomainlogpublishingoption">Get<wbr>Domain<wbr>Log<wbr>Publishing<wbr>Option</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDomainLogPublishingOption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1979,7 +1980,7 @@ attached to data nodes.
 
 
 
-<h4>Get<wbr>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption</h4>
+<h4 id="getdomainnodetonodeencryption">Get<wbr>Domain<wbr>Node<wbr>To<wbr>Node<wbr>Encryption</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDomainNodeToNodeEncryption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2058,7 +2059,7 @@ attached to data nodes.
 
 
 
-<h4>Get<wbr>Domain<wbr>Snapshot<wbr>Option</h4>
+<h4 id="getdomainsnapshotoption">Get<wbr>Domain<wbr>Snapshot<wbr>Option</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDomainSnapshotOption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2141,7 +2142,7 @@ snapshot of the indices in the domain.
 
 
 
-<h4>Get<wbr>Domain<wbr>Vpc<wbr>Option</h4>
+<h4 id="getdomainvpcoption">Get<wbr>Domain<wbr>Vpc<wbr>Option</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDomainVpcOption">output</a> API doc for this type.
 {{% /choosable %}}

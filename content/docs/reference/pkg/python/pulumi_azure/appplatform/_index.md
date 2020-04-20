@@ -14,6 +14,47 @@ notitle: true
 anything, please consult the source <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-azurerm/issues">terraform-providers/terraform-provider-azurerm repo</a>.</p>
 </div></blockquote>
 <span class="target" id="module-pulumi_azure.appplatform"></span><dl class="class">
+<dt id="pulumi_azure.appplatform.AwaitableGetSpringCloudServiceResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appplatform.</code><code class="sig-name descname">AwaitableGetSpringCloudServiceResult</code><span class="sig-paren">(</span><em class="sig-param">config_server_git_settings=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appplatform.AwaitableGetSpringCloudServiceResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_azure.appplatform.GetSpringCloudServiceResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appplatform.</code><code class="sig-name descname">GetSpringCloudServiceResult</code><span class="sig-paren">(</span><em class="sig-param">config_server_git_settings=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appplatform.GetSpringCloudServiceResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getSpringCloudService.</p>
+<dl class="attribute">
+<dt id="pulumi_azure.appplatform.GetSpringCloudServiceResult.config_server_git_settings">
+<code class="sig-name descname">config_server_git_settings</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appplatform.GetSpringCloudServiceResult.config_server_git_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>A <code class="docutils literal notranslate"><span class="pre">config_server_git_setting</span></code> block as defined below.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appplatform.GetSpringCloudServiceResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appplatform.GetSpringCloudServiceResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appplatform.GetSpringCloudServiceResult.location">
+<code class="sig-name descname">location</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appplatform.GetSpringCloudServiceResult.location" title="Permalink to this definition">¶</a></dt>
+<dd><p>The location of Spring Cloud Service.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appplatform.GetSpringCloudServiceResult.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appplatform.GetSpringCloudServiceResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name to identify on the Git repository.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_azure.appplatform.GetSpringCloudServiceResult.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_azure.appplatform.GetSpringCloudServiceResult.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags assigned to Spring Cloud Service.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_azure.appplatform.SpringCloudService">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_azure.appplatform.</code><code class="sig-name descname">SpringCloudService</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">config_server_git_setting=None</em>, <em class="sig-param">location=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appplatform.SpringCloudService" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manages an Azure Spring Cloud Service.</p>
@@ -245,6 +286,20 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_azure.appplatform.get_spring_cloud_service">
+<code class="sig-prename descclassname">pulumi_azure.appplatform.</code><code class="sig-name descname">get_spring_cloud_service</code><span class="sig-paren">(</span><em class="sig-param">name=None</em>, <em class="sig-param">resource_group_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_azure.appplatform.get_spring_cloud_service" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing Spring Cloud Service.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Specifies The name of the Spring Cloud Service resource.</p></li>
+<li><p><strong>resource_group_name</strong> (<em>str</em>) – Specifies the name of the Resource Group where the Spring Cloud Service exists.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </div>

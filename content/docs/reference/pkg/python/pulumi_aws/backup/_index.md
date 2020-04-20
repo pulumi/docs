@@ -31,7 +31,18 @@ anything, please consult the source <a class="reference external" href="https://
 <p>The <strong>rules</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">completionWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of time AWS Backup attempts a backup before canceling the job and returning an error.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.  Fields documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">copyActions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Configuration block(s) with copy operation settings. Detailed below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationVaultArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An Amazon Resource Name (ARN) that uniquely identifies the destination backup vault for the copied backup.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">coldStorageAfter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days after creation that a recovery point is moved to cold storage.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteAfter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than <code class="docutils literal notranslate"><span class="pre">cold_storage_after</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">coldStorageAfter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days after creation that a recovery point is moved to cold storage.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">deleteAfter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than <code class="docutils literal notranslate"><span class="pre">cold_storage_after</span></code>.</p></li>
@@ -61,7 +72,18 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>A rule object that specifies a scheduled task that is used to back up a selection of resources.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">completionWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The amount of time AWS Backup attempts a backup before canceling the job and returning an error.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.  Fields documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">copyActions</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - Configuration block(s) with copy operation settings. Detailed below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationVaultArn</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - An Amazon Resource Name (ARN) that uniquely identifies the destination backup vault for the copied backup.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">coldStorageAfter</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the number of days after creation that a recovery point is moved to cold storage.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteAfter</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than <code class="docutils literal notranslate"><span class="pre">cold_storage_after</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">coldStorageAfter</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the number of days after creation that a recovery point is moved to cold storage.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">deleteAfter</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than <code class="docutils literal notranslate"><span class="pre">cold_storage_after</span></code>.</p></li>
@@ -109,7 +131,18 @@ properties used to qualify the lookup.</p>
 <p>The <strong>rules</strong> object supports the following:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">completionWindow</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of time AWS Backup attempts a backup before canceling the job and returning an error.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.  Fields documented below.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">copyActions</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - Configuration block(s) with copy operation settings. Detailed below.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">destinationVaultArn</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - An Amazon Resource Name (ARN) that uniquely identifies the destination backup vault for the copied backup.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">coldStorageAfter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days after creation that a recovery point is moved to cold storage.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">deleteAfter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than <code class="docutils literal notranslate"><span class="pre">cold_storage_after</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lifecycle</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - The lifecycle defines when a protected resource is copied over to a backup vault and when it expires.  Fields documented above.</p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">coldStorageAfter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days after creation that a recovery point is moved to cold storage.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">deleteAfter</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days after creation that a recovery point is deleted. Must be 90 days greater than <code class="docutils literal notranslate"><span class="pre">cold_storage_after</span></code>.</p></li>

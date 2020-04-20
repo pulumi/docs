@@ -29,7 +29,7 @@ const example = aws.iam.getPolicy({
 
 
 
-## Using GetPolicy
+## Using GetPolicy {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -131,7 +131,7 @@ The following arguments are supported:
 
 
 
-## GetPolicy Result
+## GetPolicy Result {#result}
 
 The following output properties are available:
 

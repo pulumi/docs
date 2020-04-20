@@ -62,7 +62,7 @@ const bar = new aws.elb.LoadBalancer("bar", {
 
 
 
-## Using GetServiceAccount
+## Using GetServiceAccount {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -168,7 +168,7 @@ Defaults to the region from the AWS provider configuration.
 
 
 
-## GetServiceAccount Result
+## GetServiceAccount Result {#result}
 
 The following output properties are available:
 

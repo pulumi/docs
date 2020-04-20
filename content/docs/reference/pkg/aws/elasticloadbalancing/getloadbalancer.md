@@ -37,7 +37,7 @@ const test = aws.elb.getLoadBalancer({
 
 
 
-## Using GetLoadBalancer
+## Using GetLoadBalancer {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -171,7 +171,7 @@ The following arguments are supported:
 
 
 
-## GetLoadBalancer Result
+## GetLoadBalancer Result {#result}
 
 The following output properties are available:
 
@@ -858,7 +858,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</h4>
+
+<h4 id="getloadbalanceraccesslogs">Get<wbr>Load<wbr>Balancer<wbr>Access<wbr>Logs</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLoadBalancerAccessLogs">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1029,7 +1030,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Load<wbr>Balancer<wbr>Health<wbr>Check</h4>
+<h4 id="getloadbalancerhealthcheck">Get<wbr>Load<wbr>Balancer<wbr>Health<wbr>Check</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLoadBalancerHealthCheck">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1232,7 +1233,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Load<wbr>Balancer<wbr>Listener</h4>
+<h4 id="getloadbalancerlistener">Get<wbr>Load<wbr>Balancer<wbr>Listener</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetLoadBalancerListener">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1390,14 +1391,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>instance_<wbr>port</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
-    </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>instance<wbr>Protocol</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -1406,7 +1399,7 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>lb_<wbr>port</span>
+        <span>instance_<wbr>port</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
@@ -1417,6 +1410,14 @@ The following output properties are available:
         <span>lb<wbr>Protocol</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>lb_<wbr>port</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

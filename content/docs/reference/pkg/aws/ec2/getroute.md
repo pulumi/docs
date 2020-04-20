@@ -45,7 +45,7 @@ const interfaceNetworkInterface = route.apply(route => aws.ec2.getNetworkInterfa
 
 
 
-## Using GetRoute
+## Using GetRoute {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -471,7 +471,7 @@ The following arguments are supported:
 
 
 
-## GetRoute Result
+## GetRoute Result {#result}
 
 The following output properties are available:
 

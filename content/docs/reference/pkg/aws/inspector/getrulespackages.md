@@ -43,7 +43,7 @@ const assessmentAssessmentTemplate = new aws.inspector.AssessmentTemplate("asses
 
 
 
-## Using GetRulesPackages
+## Using GetRulesPackages {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -72,7 +72,7 @@ const assessmentAssessmentTemplate = new aws.inspector.AssessmentTemplate("asses
 
 
 
-## GetRulesPackages Result
+## GetRulesPackages Result {#result}
 
 The following output properties are available:
 

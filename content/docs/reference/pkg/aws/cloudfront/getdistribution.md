@@ -28,7 +28,7 @@ const test = aws.cloudfront.getDistribution({
 
 
 
-## Using GetDistribution
+## Using GetDistribution {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -162,7 +162,7 @@ The following arguments are supported:
 
 
 
-## GetDistribution Result
+## GetDistribution Result {#result}
 
 The following output properties are available:
 

@@ -33,7 +33,7 @@ const myResource = aws.apigateway.getResource({
 
 
 
-## Using GetResource
+## Using GetResource {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -171,7 +171,7 @@ The following arguments are supported:
 
 
 
-## GetResource Result
+## GetResource Result {#result}
 
 The following output properties are available:
 
