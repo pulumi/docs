@@ -56,3 +56,7 @@ Policy Packs that are published to the service require a version. The Policy Pac
 ```
 
 A version can only be used one time and once published the version can never be used by that Policy Pack again.
+
+## How are secrets handled in policies?
+
+Encrypted [secrets]({{< relref "/docs/intro/concepts/programming-model#secrets" >}}) are decrypted during previews and updates. Any policy that is run against a stack can access the values in plaintext. It is up to you to treat these values sensitively and only run policies that you trust.
