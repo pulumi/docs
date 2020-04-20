@@ -25,7 +25,7 @@ Let’s take a look at examples where we can apply Architecture as Code to serve
 
 ## Reusing resources
 
-While serverless simplifies and reduces management overhead for deploying functions and containers, ancillary services also need to be configured. For example, a production deployment requires creating clusters, security groups, load balancers, and IAM policies. The following Python script creates resources that can be imported into `__main__.py` which deploys the function or container. It ensures that each serverless application uses a vetted set of resources that can be replicated for every deployment.
+While serverless simplifies and reduces management overhead for deploying functions and containers, ancillary services also need to be configured. For example, a production deployment requires creating clusters, security groups, load balancers, and IAM policies. The following Python script creates resources that can be imported into `__main__.py`, which deploys the function or container. It ensures that each serverless application uses a vetted set of resources that can be replicated for every deployment.
 
 ```python
 from pulumi import export, ResourceOptions
@@ -100,7 +100,7 @@ rpa = aws.iam.RolePolicyAttachment('task-exec-policy',
 )
 ```
 
-To learn more about creating [reusable components]({{< relref "/docs/intro/concepts/programming-model/#components" >}}), read about Pulumi's programming model which shows how to author components.
+To learn more about creating [reusable components]({{< relref "/docs/intro/concepts/programming-model#components" >}}), read about Pulumi's programming model, which shows how to author components.
 
 
 ## Polyglot applications
@@ -156,7 +156,7 @@ The [full example](https://github.com/pulumi/examples/tree/master/gcp-ts-serverl
 
 ## Cold Starts
 
-Despite the many advantages of serverless, one of the challenges of serverless is latency, more commonly known as “cold starts.” There are several ways to lessen the impact of cold starts including:
+Despite the many advantages of serverless, one of the challenges of serverless is latency, more commonly known as “cold starts.” There are several ways to lessen the impact of cold starts, including:
 
 - warming is the practice of invoking additional workers to provide a pool of workers
 - provisioned concurrency has a set of workers are always warm and dedicated to a specific function
@@ -164,7 +164,7 @@ Despite the many advantages of serverless, one of the challenges of serverless i
 - scheduled profile is warming scheduled during peak use
 - autoscaling based utilization adds workers by measuring utilization
 
-Deploying infrastructure with code let’s implement these [strategies]({{< relref "/blog/aws-lambda-provisioned-concurrency-no-cold-starts" >}}) attuned to your application requirements. A [worked example](https://github.com/pulumi/examples/tree/master/aws-ts-serverless-raw) is available on Github.
+Deploying infrastructure with code lets you implement these [strategies]({{< relref "/blog/aws-lambda-provisioned-concurrency-no-cold-starts" >}}) based on your application requirements. A [worked example](https://github.com/pulumi/examples/tree/master/aws-ts-serverless-raw) is available on Github.
 
 ## Conclusion
 
