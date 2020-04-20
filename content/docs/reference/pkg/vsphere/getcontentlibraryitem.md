@@ -18,7 +18,7 @@ connections.
 
 
 
-## Using GetContentLibraryItem
+## Using GetContentLibraryItem {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -156,7 +156,7 @@ The following arguments are supported:
 
 
 
-## GetContentLibraryItem Result
+## GetContentLibraryItem Result {#result}
 
 The following output properties are available:
 

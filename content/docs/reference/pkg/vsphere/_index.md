@@ -11,7 +11,7 @@ menu:
 
 A Pulumi package for creating vsphere resources
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="computecluster" title="ComputeCluster"><span class="symbol resource"></span>ComputeCluster</a></li>
     <li><a href="computeclusterhostgroup" title="ComputeClusterHostGroup"><span class="symbol resource"></span>ComputeClusterHostGroup</a></li>
@@ -52,7 +52,7 @@ A Pulumi package for creating vsphere resources
     <li><a href="vnic" title="Vnic"><span class="symbol resource"></span>Vnic</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getcomputecluster" title="GetComputeCluster"><span class="symbol function"></span>GetComputeCluster</a></li>
     <li><a href="getcontentlibrary" title="GetContentLibrary"><span class="symbol function"></span>GetContentLibrary</a></li>
@@ -74,7 +74,7 @@ A Pulumi package for creating vsphere resources
     <li><a href="getvmfsdisks" title="GetVmfsDisks"><span class="symbol function"></span>GetVmfsDisks</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-vsphere">https://github.com/pulumi/pulumi-vsphere</a></dd>
@@ -82,5 +82,7 @@ A Pulumi package for creating vsphere resources
 	<dd>Apache-2.0</dd>
     <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
+	<dt>Version</dt>
+	<dd>2.1.0</dd>
 </dl>
 

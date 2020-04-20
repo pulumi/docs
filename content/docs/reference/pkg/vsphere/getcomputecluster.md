@@ -11,7 +11,7 @@ block_external_search_index: true
 
 
 
-## Using GetComputeCluster
+## Using GetComputeCluster {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -165,7 +165,7 @@ data source.
 
 
 
-## GetComputeCluster Result
+## GetComputeCluster Result {#result}
 
 The following output properties are available:
 
