@@ -19,7 +19,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Create an alias for the master key (CMK).</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.77.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kms_alias.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kms_alias.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -293,9 +292,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.kms.Key">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">Key</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">deletion_window_in_days=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">is_enabled=None</em>, <em class="sig-param">key_usage=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.Key" title="Permalink to this definition">¶</a></dt>
 <dd><p>A kms key can help user to protect data security in the transmission process.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kms_key.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kms_key.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -406,7 +402,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This resouce used to create a secret and store its initial version.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.76.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kms_secret.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/kms_secret.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -588,9 +583,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.kms.get_keys">
 <code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">get_keys</code><span class="sig-paren">(</span><em class="sig-param">description_regex=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.get_keys" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of KMS keys in an Alibaba Cloud account according to the specified filters.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kms_keys.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/kms_keys.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

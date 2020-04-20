@@ -19,7 +19,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>The project is the basic unit of resource management in Datahub Service and is used to isolate and control resources. It contains a set of Topics. You can manage the datahub sources of an application by using projects. <a class="reference external" href="https://help.aliyun.com/document_detail/47440.html">Refer to details</a>.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Currently Datahub service only can be supported in the regions: cn-beijing, cn-hangzhou, cn-shanghai, cn-shenzhen,  ap-southeast-1.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/datahub_project.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/datahub_project.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -118,9 +117,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.datahub.Subscription">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.datahub.</code><code class="sig-name descname">Subscription</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">comment=None</em>, <em class="sig-param">project_name=None</em>, <em class="sig-param">topic_name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.datahub.Subscription" title="Permalink to this definition">¶</a></dt>
 <dd><p>The subscription is the basic unit of resource usage in Datahub Service under Publish/Subscribe model. You can manage the relationships between user and topics by using subscriptions. <a class="reference external" href="https://help.aliyun.com/document_detail/47440.html">Refer to details</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/datahub_subscription.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/datahub_subscription.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

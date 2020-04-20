@@ -441,9 +441,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.pvtz.get_zone_records">
 <code class="sig-prename descclassname">pulumi_alicloud.pvtz.</code><code class="sig-name descname">get_zone_records</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">keyword=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.get_zone_records" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides Private Zone Records resource information owned by an Alibaba Cloud account.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/pvtz_zone_records.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/pvtz_zone_records.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -459,9 +456,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.pvtz.get_zones">
 <code class="sig-prename descclassname">pulumi_alicloud.pvtz.</code><code class="sig-name descname">get_zones</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">keyword=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.pvtz.get_zones" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source lists a number of Private Zones resource information owned by an Alibaba Cloud account.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/pvtz_zones.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/pvtz_zones.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

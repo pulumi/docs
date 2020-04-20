@@ -328,7 +328,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>For information about domain config and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/zh/doc-detail/90915.htm">Batch set config</a></p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.34.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cdn_domain_config.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cdn_domain_config.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -437,7 +436,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>For information about Cdn Domain New and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/91176.html">Add a domain</a>.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.34.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cdn_domain_new.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/cdn_domain_new.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

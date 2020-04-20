@@ -58,7 +58,6 @@ transparent read/write splitting, and distributed transactions, providing O&amp;
 <blockquote>
 <div><p><strong>NOTE:</strong> At present, DRDS instance only can be supported in the regions: cn-shenzhen, cn-beijing, cn-hangzhou, cn-hongkong, cn-qingdao.</p>
 <p><strong>NOTE:</strong> Currently, this resource only support <code class="docutils literal notranslate"><span class="pre">Domestic</span> <span class="pre">Site</span> <span class="pre">Account</span></code>.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/drds_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/drds_instance.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -247,7 +246,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>Filters support regular expression for the instance name, searches by tags, and other filters which are listed below.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.35.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/drds_instances.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/drds_instances.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

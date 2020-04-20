@@ -205,7 +205,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Provides a new resource to manage <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/28804.htm">Action Trail</a>.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.35.0+</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/actiontrail.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/actiontrail.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -331,7 +330,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides a list of ALIKAFKA Consumer Groups in an Alibaba Cloud account according to the specified filters.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.56.0+</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/alikafka_consumer_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/alikafka_consumer_groups.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -349,7 +347,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides a list of ALIKAFKA Instances in an Alibaba Cloud account according to the specified filters.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.59.0+</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/alikafka_instances.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/alikafka_instances.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -367,7 +364,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides a list of ALIKAFKA Sasl acls in an Alibaba Cloud account according to the specified filters.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.66.0+</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/alikafka_sasl_acls.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/alikafka_sasl_acls.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -387,7 +383,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides a list of ALIKAFKA Sasl users in an Alibaba Cloud account according to the specified filters.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.66.0+</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/alikafka_sasl_users.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/alikafka_sasl_users.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -405,7 +400,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides a list of ALIKAFKA Topics in an Alibaba Cloud account according to the specified filters.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.56.0+</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/alikafka_topics.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/alikafka_topics.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -418,9 +412,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.actiontrail.get_trails">
 <code class="sig-prename descclassname">pulumi_alicloud.actiontrail.</code><code class="sig-name descname">get_trails</code><span class="sig-paren">(</span><em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.actiontrail.get_trails" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of action trail of the current Alibaba Cloud user.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/actiontrails.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/actiontrails.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results action trail name.</p>

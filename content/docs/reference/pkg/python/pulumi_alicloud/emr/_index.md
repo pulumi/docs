@@ -34,7 +34,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Provides a EMR Cluster resource. With this you can create, read, and release  EMR Cluster.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.57.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/emr_cluster.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/emr_cluster.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -349,7 +348,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 system disk types available in Alibaba Cloud account when create a emr cluster.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.60.0+</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/emr_disk_types.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/emr_disk_types.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -371,7 +369,6 @@ system disk types available in Alibaba Cloud account when create a emr cluster.<
 instance types available in Alibaba Cloud account when create a emr cluster.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.59.0+</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/emr_instance_types.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/emr_instance_types.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -396,7 +393,6 @@ Possible values may be any one or combination of these: [“MASTER”, “CORE�
 main versions available in Alibaba Cloud account when create a emr cluster.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.59.0+</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/emr_main_versions.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/emr_main_versions.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

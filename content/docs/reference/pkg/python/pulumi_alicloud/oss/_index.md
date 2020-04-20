@@ -44,7 +44,6 @@ anything, please consult the source <a class="reference external" href="https://
 <dd><p>Provides a resource to create a oss bucket and set its attribution.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> The bucket namespace is shared by all users of the OSS system. Please set bucket name as unique as possible.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/oss_bucket.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/oss_bucket.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -400,9 +399,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.oss.BucketObject">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">BucketObject</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acl=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">cache_control=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_md5=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">expires=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">kms_key_id=None</em>, <em class="sig-param">server_side_encryption=None</em>, <em class="sig-param">source=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.BucketObject" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a resource to put a object(content or file) to a oss bucket.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/oss_bucket_object.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/oss_bucket_object.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -751,9 +747,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.oss.get_bucket_objects">
 <code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">get_bucket_objects</code><span class="sig-paren">(</span><em class="sig-param">bucket_name=None</em>, <em class="sig-param">key_prefix=None</em>, <em class="sig-param">key_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.get_bucket_objects" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the objects of an OSS bucket.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/oss_bucket_objects.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/oss_bucket_objects.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -769,9 +762,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.oss.get_buckets">
 <code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">get_buckets</code><span class="sig-paren">(</span><em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.get_buckets" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the OSS buckets of the current Alibaba Cloud user.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/oss_buckets.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/oss_buckets.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter results by bucket name.</p>
@@ -783,9 +773,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.oss.get_instance_attachments">
 <code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">get_instance_attachments</code><span class="sig-paren">(</span><em class="sig-param">instance_name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.get_instance_attachments" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the ots instance attachments of the current Alibaba Cloud user.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ots_instance_attachments.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ots_instance_attachments.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -800,9 +787,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.oss.get_instances">
 <code class="sig-prename descclassname">pulumi_alicloud.oss.</code><code class="sig-name descname">get_instances</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.oss.get_instances" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the ots instances of the current Alibaba Cloud user.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ots_instances.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ots_instances.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -830,7 +814,6 @@ tagKey2 = &quot;tagValue2&quot;
 <dd><p>This data source provides the ots tables of the current Alibaba Cloud user.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.40.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ots_tables.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/ots_tables.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

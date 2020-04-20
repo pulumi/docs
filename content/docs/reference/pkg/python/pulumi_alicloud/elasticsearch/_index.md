@@ -66,7 +66,6 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE:</strong> Only one operation is supported in a request. So if <code class="docutils literal notranslate"><span class="pre">data_node_spec</span></code> and <code class="docutils literal notranslate"><span class="pre">data_node_disk_size</span></code> are both changed, system will respond error.</p>
 <p><strong>NOTE:</strong> At present, <code class="docutils literal notranslate"><span class="pre">version</span></code> can not be modified once instance has been created.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/elasticsearch.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/elasticsearch.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -364,7 +363,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides availability zones for Elasticsearch that can be accessed by an Alibaba Cloud account within the region configured in the provider.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.73.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/elasticsearch_zones.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/elasticsearch_zones.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

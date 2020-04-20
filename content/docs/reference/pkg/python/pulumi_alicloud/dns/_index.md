@@ -50,7 +50,6 @@ anything, please consult the source <a class="reference external" href="https://
 <blockquote>
 <div><p><strong>NOTE:</strong> The endpoint of bssopenapi used only support “business.aliyuncs.com” at present.</p>
 <p><strong>NOTE:</strong> Available in 1.57.0+ .</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ddosbgp_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ddosbgp_instance.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -178,7 +177,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> The product region only support cn-hangzhou.</p>
 <p><strong>NOTE:</strong> The endpoint of bssopenapi used only support “business.aliyuncs.com” at present.</p>
 <p><strong>NOTE:</strong> Available in 1.37.0+ .</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ddoscoo_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/ddoscoo_instance.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -304,7 +302,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a DNS resource.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> The domain name which you want to add must be already registered and had not added by another account. Every domain name can only exist in a unique group.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/dns.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/dns.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -602,9 +599,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.dns.Group">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">Group</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.Group" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DNS Group resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/dns_group.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/dns_group.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -681,7 +675,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a DNS Record resource.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> When the site is an international site, the <code class="docutils literal notranslate"><span class="pre">type</span></code> neither supports <code class="docutils literal notranslate"><span class="pre">REDIRECT_URL</span></code> nor <code class="docutils literal notranslate"><span class="pre">REDIRECT_URL</span></code></p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/dns_record.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/dns_record.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -825,9 +818,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.dns.get_domains">
 <code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">get_domains</code><span class="sig-paren">(</span><em class="sig-param">ali_domain=None</em>, <em class="sig-param">domain_name_regex=None</em>, <em class="sig-param">group_name_regex=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">version_code=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.get_domains" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of DNS Domains in an Alibaba Cloud account according to the specified filters.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_domains.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_domains.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -850,9 +840,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.dns.get_groups">
 <code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">get_groups</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.get_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of DNS Domain Groups in an Alibaba Cloud account according to the specified filters.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_groups.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -867,9 +854,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.dns.get_records">
 <code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">get_records</code><span class="sig-paren">(</span><em class="sig-param">domain_name=None</em>, <em class="sig-param">host_record_regex=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">is_locked=None</em>, <em class="sig-param">line=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">value_regex=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.get_records" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of DNS Domain Records in an Alibaba Cloud account according to the specified filters.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_records.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_records.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -893,7 +877,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides a list of DNS Resolution Lines in an Alibaba Cloud account according to the specified filters.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.60.0.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_resolution_lines.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/dns_resolution_lines.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

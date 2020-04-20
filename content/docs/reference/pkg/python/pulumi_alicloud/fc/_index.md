@@ -643,9 +643,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.fc.get_functions">
 <code class="sig-prename descclassname">pulumi_alicloud.fc.</code><code class="sig-name descname">get_functions</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.fc.get_functions" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the Function Compute functions of the current Alibaba Cloud user.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/fc_functions.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/fc_functions.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -668,9 +665,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.fc.get_services">
 <code class="sig-prename descclassname">pulumi_alicloud.fc.</code><code class="sig-name descname">get_services</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.fc.get_services" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the Function Compute services of the current Alibaba Cloud user.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/fc_services.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/fc_services.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -688,9 +682,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.fc.get_triggers">
 <code class="sig-prename descclassname">pulumi_alicloud.fc.</code><code class="sig-name descname">get_triggers</code><span class="sig-paren">(</span><em class="sig-param">function_name=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">service_name=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.fc.get_triggers" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the Function Compute triggers of the current Alibaba Cloud user.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/fc_triggers.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/fc_triggers.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -716,7 +707,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides availability zones for FunctionCompute that can be accessed by an Alibaba Cloud account within the region configured in the provider.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in v1.74.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/fc_zones.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/fc_zones.html.markdown</a>.</p>
 </div></blockquote>
 </dd></dl>
 

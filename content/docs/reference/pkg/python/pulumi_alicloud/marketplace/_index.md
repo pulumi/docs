@@ -213,7 +213,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides the Market product item details of Alibaba Cloud.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.69.0+</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/market_product.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/market_product.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -231,7 +230,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>This data source provides the Market product items of Alibaba Cloud.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.64.0+</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/market_products.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/market_products.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>

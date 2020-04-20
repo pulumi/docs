@@ -134,7 +134,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a ECS disk resource.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> One of <code class="docutils literal notranslate"><span class="pre">size</span></code> or <code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> is required when specifying an ECS disk. If all of them be specified, <code class="docutils literal notranslate"><span class="pre">size</span></code> must more than the size of snapshot which <code class="docutils literal notranslate"><span class="pre">snapshot_id</span></code> represents. Currently, <code class="docutils literal notranslate"><span class="pre">ecs.Disk</span></code> doesn’t resize disk.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/disk.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/disk.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -326,9 +325,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ecs.DiskAttachment">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">DiskAttachment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">device_name=None</em>, <em class="sig-param">disk_id=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.DiskAttachment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an Alicloud ECS Disk Attachment as a resource, to attach and detach disks from ECS Instances.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/disk_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/disk_attachment.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1205,7 +1201,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>NOTE:</strong>  If you want to create a custom image based on the system disk of your ECS instance, you can specify one of the system disk snapshots (SnapshotId) to create a custom image. However, the specified snapshot cannot be created on or before July 15, 2013.</p>
 <p><strong>NOTE:</strong>  If you want to combine snapshots of multiple disks into an image template, you can specify DiskDeviceMapping to create a custom image.</p>
 <p><strong>NOTE:</strong>  Available in 1.64.0+</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1404,7 +1399,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>NOTE:</strong> You can only copy the image belonging to your Alibaba Cloud account. Images cannot be copied from one account to another.</p>
 <p><strong>NOTE:</strong> If the copying is not completed, you cannot call DeleteImage to delete the image but you can call CancelCopyImage to cancel the copying.</p>
 <p><strong>NOTE:</strong> Available in 1.66.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_copy.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_copy.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1568,7 +1562,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>NOTE:</strong> Support for exporting custom images that include data disk snapshot information in the image. The number of data disks cannot exceed 4 and the maximum capacity of a single data disk cannot exceed 500 GiB.</p>
 <p><strong>NOTE:</strong> Before exporting the image, you must authorize the cloud server ECS official service account to write OSS permissions through RAM.</p>
 <p><strong>NOTE:</strong> Available in 1.68.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_export.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_export.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1664,7 +1657,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <div><p><strong>NOTE:</strong> You must upload the image file to the object storage OSS in advance.</p>
 <p><strong>NOTE:</strong> The region where the image is imported must be the same region as the OSS bucket where the image file is uploaded.</p>
 <p><strong>NOTE:</strong> Available in 1.69.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_import.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_import.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1810,7 +1802,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p><strong>NOTE:</strong> Each custom image can be shared with up to 50 Alibaba Cloud accounts. You can submit a ticket to share with more users.</p>
 <p><strong>NOTE:</strong> After creating an ECS instance using a shared image, once the custom image owner releases the image sharing relationship or deletes the custom image, the instance cannot initialize the system disk.</p>
 <p><strong>NOTE:</strong> Available in 1.68.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_share_permission.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/image_share_permission.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2622,9 +2613,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ecs.KeyPair">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">KeyPair</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">key_file=None</em>, <em class="sig-param">key_name=None</em>, <em class="sig-param">key_name_prefix=None</em>, <em class="sig-param">public_key=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.KeyPair" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a key pair resource.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/key_pair.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/key_pair.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -2725,7 +2713,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides a key pair attachment resource to bind key pair for several ECS instances.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> After the key pair is attached with sone instances, there instances must be rebooted to make the key pair affect.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/key_pair_attachment.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/key_pair_attachment.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2818,9 +2805,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">LaunchTemplate</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_release_time=None</em>, <em class="sig-param">data_disks=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">host_name=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">image_owner_alias=None</em>, <em class="sig-param">instance_charge_type=None</em>, <em class="sig-param">instance_name=None</em>, <em class="sig-param">instance_type=None</em>, <em class="sig-param">internet_charge_type=None</em>, <em class="sig-param">internet_max_bandwidth_in=None</em>, <em class="sig-param">internet_max_bandwidth_out=None</em>, <em class="sig-param">io_optimized=None</em>, <em class="sig-param">key_pair_name=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">network_interfaces=None</em>, <em class="sig-param">network_type=None</em>, <em class="sig-param">ram_role_name=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">security_enhancement_strategy=None</em>, <em class="sig-param">security_group_id=None</em>, <em class="sig-param">spot_price_limit=None</em>, <em class="sig-param">spot_strategy=None</em>, <em class="sig-param">system_disk_category=None</em>, <em class="sig-param">system_disk_description=None</em>, <em class="sig-param">system_disk_name=None</em>, <em class="sig-param">system_disk_size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">userdata=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">zone_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.LaunchTemplate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an ECS Launch Template resource.</p>
 <p>For information about Launch Template and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/73916.html">Launch Template</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/launch_template.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/launch_template.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3365,7 +3349,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd><p>Provides an Reserved Instance resource.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.65.0+</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/reserved_instance.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/reserved_instance.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3814,9 +3797,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">Snapshot</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">disk_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.Snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides an ECS snapshot resource.</p>
 <p>For information about snapshot and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/25460.html">Snapshot</a>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/snapshot.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/snapshot.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -3920,7 +3900,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <p>For information about snapshot policy and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/25460.html">Snapshot</a>.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.42.0+.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/snapshot_policy.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/r/snapshot_policy.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -4072,9 +4051,6 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.ecs.get_disks">
 <code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">get_disks</code><span class="sig-paren">(</span><em class="sig-param">category=None</em>, <em class="sig-param">encrypted=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.get_disks" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides the disks of the current Alibaba Cloud user.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/disks.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/disks.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4109,9 +4085,6 @@ tagKey2 = &quot;tagValue2&quot;
 <dt id="pulumi_alicloud.ecs.get_eips">
 <code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">get_eips</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">in_use=None</em>, <em class="sig-param">ip_addresses=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.get_eips" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of EIPs (Elastic IP address) owned by an Alibaba Cloud account.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/eips.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/eips.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4130,9 +4103,6 @@ tagKey2 = &quot;tagValue2&quot;
 <code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">get_images</code><span class="sig-paren">(</span><em class="sig-param">most_recent=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">owners=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.get_images" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides available image resources. It contains user’s private images, system images provided by Alibaba Cloud, 
 other public images and the ones available on the image market.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/images.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/images.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4150,7 +4120,6 @@ other public images and the ones available on the image market.</p>
 <dd><p>This data source provides the ECS instance type families of Alibaba Cloud.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.54.0+</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/instance_type_families.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/instance_type_families.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -4172,7 +4141,6 @@ other public images and the ones available on the image market.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> By default, only the upgraded instance types are returned. If you want to get outdated instance types, you must set <code class="docutils literal notranslate"><span class="pre">is_outdated</span></code> to true.</p>
 <p><strong>NOTE:</strong> If one instance type is sold out, it will not be exported.</p>
-<p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/instance_types.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/instance_types.html.markdown</a>.</p>
 </div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -4197,9 +4165,6 @@ other public images and the ones available on the image market.</p>
 <dt id="pulumi_alicloud.ecs.get_instances">
 <code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">get_instances</code><span class="sig-paren">(</span><em class="sig-param">availability_zone=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">image_id=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">ram_role_name=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">vswitch_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.get_instances" title="Permalink to this definition">¶</a></dt>
 <dd><p>The Instances data source list ECS instance resources according to their ID, name regex, image id, status and other fields.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/instances.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/instances.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4238,9 +4203,6 @@ tagKey2 = &quot;tagValue2&quot;
 <dt id="pulumi_alicloud.ecs.get_key_pairs">
 <code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">get_key_pairs</code><span class="sig-paren">(</span><em class="sig-param">finger_print=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.get_key_pairs" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of key pairs in an Alibaba Cloud account according to the specified filters.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/key_pairs.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/key_pairs.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4274,9 +4236,6 @@ tagKey2 = &quot;tagValue2&quot;
 <li><p><code class="docutils literal notranslate"><span class="pre">output_file</span></code> - (Optional) The name of output file that saves the filter results.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">resource_group_id</span></code> - (Optional, ForceNew, Available in 1.57.0+) The Id of resource group which the network interface belongs.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/network_interfaces.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/network_interfaces.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4297,9 +4256,6 @@ tagKey2 = &quot;tagValue2&quot;
 <dd><p>The <code class="docutils literal notranslate"><span class="pre">ecs.getSecurityGroupRules</span></code> data source provides a collection of security permissions of a specific security group.
 Each collection item represents a single <code class="docutils literal notranslate"><span class="pre">ingress</span></code> or <code class="docutils literal notranslate"><span class="pre">egress</span></code> permission rule.
 The ID of the security group can be provided via a variable or the result from the other data source <code class="docutils literal notranslate"><span class="pre">ecs.getSecurityGroups</span></code>.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/security_group_rules.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/security_group_rules.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4317,9 +4273,6 @@ The ID of the security group can be provided via a variable or the result from t
 <dt id="pulumi_alicloud.ecs.get_security_groups">
 <code class="sig-prename descclassname">pulumi_alicloud.ecs.</code><code class="sig-name descname">get_security_groups</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">vpc_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.ecs.get_security_groups" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides a list of Security Groups in an Alibaba Cloud account according to the specified filters.</p>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/security_groups.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/security_groups.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -4403,9 +4356,6 @@ tagKey2 = &quot;tagValue2&quot;
 <li><p><code class="docutils literal notranslate"><span class="pre">tags</span></code> - (Optional) A map of tags assigned to snapshots.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">output_file</span></code> - (Optional) The name of output file that saves the filter results.</p></li>
 </ul>
-<blockquote>
-<div><p>This content is derived from <a class="reference external" href="https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/snapshots.html.markdown">https://github.com/terraform-providers/terraform-provider-alicloud/blob/master/website/docs/d/snapshots.html.markdown</a>.</p>
-</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
