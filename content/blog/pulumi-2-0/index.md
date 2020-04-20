@@ -9,6 +9,8 @@ meta_image: "pulumi-2-0.png"
 
 Today we are excited to announce Pulumi 2.0, the next major stage in our journey as an open source project, company, and community. This release expands on our original vision of using your favorite languages and tools to do all things infrastructure as code, now with new cloud engineering superpowers that will help you and your team adopt modern cloud architectures.
 
+<!--more-->
+
 <div class="header-hero-actions mt-8 mb-4 text-center">
     <a class="btn btn-lg mr-2" href="{{< relref "/docs/get-started" >}}">
         Get Started
@@ -64,7 +66,7 @@ Expect The Pulumipus to pop up from time to time to help you out with your infra
 
 Today is an exciting day for us, our customers, and our community &mdash; your passionate support and feedback shaped this release and we thank you.
 
-To learn more, [join us for our launch event next Wednesday]({{< relref "/webinars/pulumi-update-2020-04-29" >}}), [check out the new superpowers page]({{< relref "/" >}}) with more details and videos, or just [download Pulumi and give it a try]({{< relref "/docs/get-started" >}}).
+To learn more, [join us for our launch event next Wednesday]({{< relref "/webinars/pulumi-update-2020-04-29" >}}), [check out the new superpowers page]({{< relref "/" >}}) with more details and videos, or just [download Pulumi and give it a try]({{< relref "/docs/get-started" >}}). If you're upgrading from Pulumi 1.0, [please see our migration guide]({{< relref "/docs/get-started/install/migrating-2.0" >}}).
 
 <div class="header-hero-actions mt-8 mb-8 text-center">
     <a class="btn btn-lg mr-2" href="{{< relref "/docs/get-started" >}}">
