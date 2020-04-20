@@ -24,6 +24,11 @@ anything, please consult the source <a class="reference external" href="https://
 <dd></dd></dl>
 
 <dl class="class">
+<dt id="pulumi_alicloud.dns.AwaitableGetDomainTxtGuidResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">AwaitableGetDomainTxtGuidResult</code><span class="sig-paren">(</span><em class="sig-param">domain_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">lang=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">rr=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.AwaitableGetDomainTxtGuidResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_alicloud.dns.AwaitableGetDomainsResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">AwaitableGetDomainsResult</code><span class="sig-paren">(</span><em class="sig-param">ali_domain=None</em>, <em class="sig-param">domain_name_regex=None</em>, <em class="sig-param">domains=None</em>, <em class="sig-param">group_name_regex=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">resource_group_id=None</em>, <em class="sig-param">version_code=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.AwaitableGetDomainsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -404,6 +409,91 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_alicloud.dns.DomainAttachment">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">DomainAttachment</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">domain_names=None</em>, <em class="sig-param">instance_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.DomainAttachment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides bind the domain name to the DNS instance resource.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in v1.80.0+.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>domain_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The domain names bound to the DNS instance.</p></li>
+<li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the DNS instance.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="pulumi_alicloud.dns.DomainAttachment.domain_names">
+<code class="sig-name descname">domain_names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.DomainAttachment.domain_names" title="Permalink to this definition">¶</a></dt>
+<dd><p>The domain names bound to the DNS instance.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.dns.DomainAttachment.instance_id">
+<code class="sig-name descname">instance_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.DomainAttachment.instance_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The id of the DNS instance.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_alicloud.dns.DomainAttachment.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">domain_names=None</em>, <em class="sig-param">instance_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.DomainAttachment.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing DomainAttachment resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>domain_names</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The domain names bound to the DNS instance.</p></li>
+<li><p><strong>instance_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The id of the DNS instance.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_alicloud.dns.DomainAttachment.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.DomainAttachment.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_alicloud.dns.DomainAttachment.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.DomainAttachment.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_alicloud.dns.GetDomainGroupsResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">GetDomainGroupsResult</code><span class="sig-paren">(</span><em class="sig-param">groups=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.GetDomainGroupsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDomainGroups.</p>
@@ -423,6 +513,30 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.dns.GetDomainRecordsResult.id">
 <code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetDomainRecordsResult.id" title="Permalink to this definition">¶</a></dt>
 <dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_alicloud.dns.GetDomainTxtGuidResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">GetDomainTxtGuidResult</code><span class="sig-paren">(</span><em class="sig-param">domain_name=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">lang=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">rr=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.GetDomainTxtGuidResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getDomainTxtGuid.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.dns.GetDomainTxtGuidResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetDomainTxtGuidResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.dns.GetDomainTxtGuidResult.rr">
+<code class="sig-name descname">rr</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetDomainTxtGuidResult.rr" title="Permalink to this definition">¶</a></dt>
+<dd><p>Host record.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.dns.GetDomainTxtGuidResult.value">
+<code class="sig-name descname">value</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.GetDomainTxtGuidResult.value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Record the value.</p>
 </dd></dl>
 
 </dd></dl>
@@ -670,6 +784,130 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_alicloud.dns.Instance">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dns_security=None</em>, <em class="sig-param">domain_numbers=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">renew_period=None</em>, <em class="sig-param">renewal_status=None</em>, <em class="sig-param">version_code=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.Instance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an DNS Instance resource.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in v1.80.0+.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>dns_security</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – DNS security level. Valid values: <code class="docutils literal notranslate"><span class="pre">no</span></code>, <code class="docutils literal notranslate"><span class="pre">basic</span></code>, <code class="docutils literal notranslate"><span class="pre">advanced</span></code>.</p></li>
+<li><p><strong>domain_numbers</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Number of domain names bound.</p></li>
+<li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Creating a pre-paid instance, it must be set, the unit is month, please enter an integer multiple of 12 for annually paid products.</p></li>
+<li><p><strong>renew_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Automatic renewal period, the unit is month. When setting RenewalStatus to AutoRenewal, it must be set.</p></li>
+<li><p><strong>renewal_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Automatic renewal status. Valid values: <code class="docutils literal notranslate"><span class="pre">AutoRenewal</span></code>, <code class="docutils literal notranslate"><span class="pre">ManualRenewal</span></code>, default to <code class="docutils literal notranslate"><span class="pre">ManualRenewal</span></code>.</p></li>
+<li><p><strong>version_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Paid package version. Valid values: <code class="docutils literal notranslate"><span class="pre">version_personal</span></code>, <code class="docutils literal notranslate"><span class="pre">version_enterprise_basic</span></code>, <code class="docutils literal notranslate"><span class="pre">version_enterprise_advanced</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="pulumi_alicloud.dns.Instance.dns_security">
+<code class="sig-name descname">dns_security</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.Instance.dns_security" title="Permalink to this definition">¶</a></dt>
+<dd><p>DNS security level. Valid values: <code class="docutils literal notranslate"><span class="pre">no</span></code>, <code class="docutils literal notranslate"><span class="pre">basic</span></code>, <code class="docutils literal notranslate"><span class="pre">advanced</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.dns.Instance.domain_numbers">
+<code class="sig-name descname">domain_numbers</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.Instance.domain_numbers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Number of domain names bound.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.dns.Instance.period">
+<code class="sig-name descname">period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.Instance.period" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creating a pre-paid instance, it must be set, the unit is month, please enter an integer multiple of 12 for annually paid products.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.dns.Instance.renew_period">
+<code class="sig-name descname">renew_period</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.Instance.renew_period" title="Permalink to this definition">¶</a></dt>
+<dd><p>Automatic renewal period, the unit is month. When setting RenewalStatus to AutoRenewal, it must be set.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.dns.Instance.renewal_status">
+<code class="sig-name descname">renewal_status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.Instance.renewal_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Automatic renewal status. Valid values: <code class="docutils literal notranslate"><span class="pre">AutoRenewal</span></code>, <code class="docutils literal notranslate"><span class="pre">ManualRenewal</span></code>, default to <code class="docutils literal notranslate"><span class="pre">ManualRenewal</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.dns.Instance.version_code">
+<code class="sig-name descname">version_code</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.Instance.version_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Paid package version. Valid values: <code class="docutils literal notranslate"><span class="pre">version_personal</span></code>, <code class="docutils literal notranslate"><span class="pre">version_enterprise_basic</span></code>, <code class="docutils literal notranslate"><span class="pre">version_enterprise_advanced</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.dns.Instance.version_name">
+<code class="sig-name descname">version_name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.dns.Instance.version_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Paid package version name.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_alicloud.dns.Instance.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">dns_security=None</em>, <em class="sig-param">domain_numbers=None</em>, <em class="sig-param">period=None</em>, <em class="sig-param">renew_period=None</em>, <em class="sig-param">renewal_status=None</em>, <em class="sig-param">version_code=None</em>, <em class="sig-param">version_name=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.Instance.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Instance resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>dns_security</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – DNS security level. Valid values: <code class="docutils literal notranslate"><span class="pre">no</span></code>, <code class="docutils literal notranslate"><span class="pre">basic</span></code>, <code class="docutils literal notranslate"><span class="pre">advanced</span></code>.</p></li>
+<li><p><strong>domain_numbers</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Number of domain names bound.</p></li>
+<li><p><strong>period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Creating a pre-paid instance, it must be set, the unit is month, please enter an integer multiple of 12 for annually paid products.</p></li>
+<li><p><strong>renew_period</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Automatic renewal period, the unit is month. When setting RenewalStatus to AutoRenewal, it must be set.</p></li>
+<li><p><strong>renewal_status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Automatic renewal status. Valid values: <code class="docutils literal notranslate"><span class="pre">AutoRenewal</span></code>, <code class="docutils literal notranslate"><span class="pre">ManualRenewal</span></code>, default to <code class="docutils literal notranslate"><span class="pre">ManualRenewal</span></code>.</p></li>
+<li><p><strong>version_code</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Paid package version. Valid values: <code class="docutils literal notranslate"><span class="pre">version_personal</span></code>, <code class="docutils literal notranslate"><span class="pre">version_enterprise_basic</span></code>, <code class="docutils literal notranslate"><span class="pre">version_enterprise_advanced</span></code>.</p></li>
+<li><p><strong>version_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Paid package version name.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_alicloud.dns.Instance.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.Instance.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_alicloud.dns.Instance.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.Instance.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_alicloud.dns.Record">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">Record</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">host_record=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">priority=None</em>, <em class="sig-param">routing=None</em>, <em class="sig-param">ttl=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">value=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.Record" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DNS Record resource.</p>
@@ -812,6 +1050,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_alicloud.dns.get_domain_records">
 <code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">get_domain_records</code><span class="sig-paren">(</span><em class="sig-param">domain_name=None</em>, <em class="sig-param">host_record_regex=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">is_locked=None</em>, <em class="sig-param">line=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">value_regex=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.get_domain_records" title="Permalink to this definition">¶</a></dt>
 <dd><p>Use this data source to access information about an existing resource.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_alicloud.dns.get_domain_txt_guid">
+<code class="sig-prename descclassname">pulumi_alicloud.dns.</code><code class="sig-name descname">get_domain_txt_guid</code><span class="sig-paren">(</span><em class="sig-param">domain_name=None</em>, <em class="sig-param">lang=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">type=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.dns.get_domain_txt_guid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides the generation of txt records to realize the retrieval and verification of domain names.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in v1.80.0+.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>domain_name</strong> (<em>str</em>) – Verified domain name.</p></li>
+<li><p><strong>lang</strong> (<em>str</em>) – User language.</p></li>
+<li><p><strong>type</strong> (<em>str</em>) – Txt verification function. Value:<cite>ADD_SUB_DOMAIN</cite>, <code class="docutils literal notranslate"><span class="pre">RETRIEVAL</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">
