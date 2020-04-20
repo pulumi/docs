@@ -11,7 +11,7 @@ block_external_search_index: true
 
 
 
-## Using GetLoadBalancer
+## Using GetLoadBalancer {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -113,7 +113,7 @@ The following arguments are supported:
 
 
 
-## GetLoadBalancer Result
+## GetLoadBalancer Result {#result}
 
 The following output properties are available:
 
@@ -231,6 +231,14 @@ The following output properties are available:
     <dt class="property-"
             title="">
         <span>Urn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Vpc<wbr>Uuid</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -356,6 +364,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>Vpc<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -471,6 +487,14 @@ The following output properties are available:
     <dt class="property-"
             title="">
         <span>urn</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>vpc<wbr>Uuid</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -596,6 +620,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
+    <dt class="property-"
+            title="">
+        <span>vpc_<wbr>uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -608,7 +640,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Load<wbr>Balancer<wbr>Forwarding<wbr>Rule</h4>
+
+<h4 id="getloadbalancerforwardingrule">Get<wbr>Load<wbr>Balancer<wbr>Forwarding<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetLoadBalancerForwardingRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -843,7 +876,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Load<wbr>Balancer<wbr>Healthcheck</h4>
+<h4 id="getloadbalancerhealthcheck">Get<wbr>Load<wbr>Balancer<wbr>Healthcheck</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetLoadBalancerHealthcheck">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1110,7 +1143,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Load<wbr>Balancer<wbr>Sticky<wbr>Sessions</h4>
+<h4 id="getloadbalancerstickysessions">Get<wbr>Load<wbr>Balancer<wbr>Sticky<wbr>Sessions</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetLoadBalancerStickySessions">output</a> API doc for this type.
 {{% /choosable %}}

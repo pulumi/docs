@@ -11,7 +11,7 @@ block_external_search_index: true
 
 
 
-## Using GetKubernetesCluster
+## Using GetKubernetesCluster {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -149,7 +149,7 @@ The following arguments are supported:
 
 
 
-## GetKubernetesCluster Result
+## GetKubernetesCluster Result {#result}
 
 The following output properties are available:
 
@@ -296,6 +296,15 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The slug identifier for the version of Kubernetes used for the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Vpc<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the Kubernetes cluster is located.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -455,6 +464,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Vpc<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the Kubernetes cluster is located.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Tags</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">[]string</a></span>
@@ -606,6 +624,15 @@ The following output properties are available:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The slug identifier for the version of Kubernetes used for the cluster.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>vpc<wbr>Uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the Kubernetes cluster is located.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -765,6 +792,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>vpc_<wbr>uuid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The ID of the VPC where the Kubernetes cluster is located.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>tags</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
@@ -784,7 +820,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config</h4>
+
+<h4 id="getkubernetesclusterkubeconfig">Get<wbr>Kubernetes<wbr>Cluster<wbr>Kube<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetKubernetesClusterKubeConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1051,7 +1088,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool</h4>
+<h4 id="getkubernetesclusternodepool">Get<wbr>Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetKubernetesClusterNodePool">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1458,7 +1495,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node</h4>
+<h4 id="getkubernetesclusternodepoolnode">Get<wbr>Kubernetes<wbr>Cluster<wbr>Node<wbr>Pool<wbr>Node</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetKubernetesClusterNodePoolNode">output</a> API doc for this type.
 {{% /choosable %}}

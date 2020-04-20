@@ -693,6 +693,126 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_alicloud.polardb.Endpoint">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.polardb.</code><code class="sig-name descname">Endpoint</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_add_new_nodes=None</em>, <em class="sig-param">db_cluster_id=None</em>, <em class="sig-param">endpoint_config=None</em>, <em class="sig-param">endpoint_type=None</em>, <em class="sig-param">nodes=None</em>, <em class="sig-param">read_write_mode=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.polardb.Endpoint" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a PolarDB endpoint resource to allocate an Internet endpoint string for PolarDB instance.</p>
+<blockquote>
+<div><dl class="simple">
+<dt><strong>NOTE:</strong> Available in v1.80.0+. Each PolarDB instance will allocate a intranet connection string automatically and its prefix is Cluster ID.</dt><dd><p>To avoid unnecessary conflict, please specified a internet connection prefix before applying the resource.</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auto_add_new_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether the new node automatically joins the default cluster address. Valid values are <code class="docutils literal notranslate"><span class="pre">Enable</span></code>, <code class="docutils literal notranslate"><span class="pre">Disable</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">Disable</span></code>.</p></li>
+<li><p><strong>db_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Id of cluster that can run database.</p></li>
+<li><p><strong>endpoint_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Advanced configuration of the cluster address.</p></li>
+<li><p><strong>endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of endpoint. Valid value: <code class="docutils literal notranslate"><span class="pre">Custom</span></code>. Currently supported only <code class="docutils literal notranslate"><span class="pre">Custom</span></code>.</p></li>
+<li><p><strong>nodes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Node id list for endpoint configuration. At least 2 nodes if specified, or if the cluster has more than 3 nodes, read-only endpoint is allowed to mount only one node. Default is all nodes.</p></li>
+<li><p><strong>read_write_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Read or write mode. Valid values are <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="pulumi_alicloud.polardb.Endpoint.auto_add_new_nodes">
+<code class="sig-name descname">auto_add_new_nodes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.Endpoint.auto_add_new_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Whether the new node automatically joins the default cluster address. Valid values are <code class="docutils literal notranslate"><span class="pre">Enable</span></code>, <code class="docutils literal notranslate"><span class="pre">Disable</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">Disable</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.polardb.Endpoint.db_cluster_id">
+<code class="sig-name descname">db_cluster_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.Endpoint.db_cluster_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Id of cluster that can run database.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.polardb.Endpoint.endpoint_config">
+<code class="sig-name descname">endpoint_config</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.Endpoint.endpoint_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Advanced configuration of the cluster address.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.polardb.Endpoint.endpoint_type">
+<code class="sig-name descname">endpoint_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.Endpoint.endpoint_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Type of endpoint. Valid value: <code class="docutils literal notranslate"><span class="pre">Custom</span></code>. Currently supported only <code class="docutils literal notranslate"><span class="pre">Custom</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.polardb.Endpoint.nodes">
+<code class="sig-name descname">nodes</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.Endpoint.nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Node id list for endpoint configuration. At least 2 nodes if specified, or if the cluster has more than 3 nodes, read-only endpoint is allowed to mount only one node. Default is all nodes.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.polardb.Endpoint.read_write_mode">
+<code class="sig-name descname">read_write_mode</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.polardb.Endpoint.read_write_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read or write mode. Valid values are <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_alicloud.polardb.Endpoint.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">auto_add_new_nodes=None</em>, <em class="sig-param">db_cluster_id=None</em>, <em class="sig-param">endpoint_config=None</em>, <em class="sig-param">endpoint_type=None</em>, <em class="sig-param">nodes=None</em>, <em class="sig-param">read_write_mode=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.polardb.Endpoint.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Endpoint resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>auto_add_new_nodes</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Whether the new node automatically joins the default cluster address. Valid values are <code class="docutils literal notranslate"><span class="pre">Enable</span></code>, <code class="docutils literal notranslate"><span class="pre">Disable</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">Disable</span></code>.</p></li>
+<li><p><strong>db_cluster_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Id of cluster that can run database.</p></li>
+<li><p><strong>endpoint_config</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – Advanced configuration of the cluster address.</p></li>
+<li><p><strong>endpoint_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Type of endpoint. Valid value: <code class="docutils literal notranslate"><span class="pre">Custom</span></code>. Currently supported only <code class="docutils literal notranslate"><span class="pre">Custom</span></code>.</p></li>
+<li><p><strong>nodes</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Node id list for endpoint configuration. At least 2 nodes if specified, or if the cluster has more than 3 nodes, read-only endpoint is allowed to mount only one node. Default is all nodes.</p></li>
+<li><p><strong>read_write_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Read or write mode. Valid values are <code class="docutils literal notranslate"><span class="pre">ReadWrite</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code>. Default to <code class="docutils literal notranslate"><span class="pre">ReadOnly</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_alicloud.polardb.Endpoint.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.polardb.Endpoint.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_alicloud.polardb.Endpoint.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.polardb.Endpoint.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_alicloud.polardb.EndpointAddress">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.polardb.</code><code class="sig-name descname">EndpointAddress</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">connection_prefix=None</em>, <em class="sig-param">db_cluster_id=None</em>, <em class="sig-param">db_endpoint_id=None</em>, <em class="sig-param">net_type=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.polardb.EndpointAddress" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a PolarDB endpoint address resource to allocate an Internet endpoint address string for PolarDB instance.</p>

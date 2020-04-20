@@ -77,7 +77,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
 
 
 
-## Create a SpacesBucket Resource
+## Create a SpacesBucket Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -86,7 +86,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SpacesBucket</span><span class="p">(resource_name, opts=None, </span>acl=None<span class="p">, </span>cors_rules=None<span class="p">, </span>force_destroy=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">SpacesBucket</span><span class="p">(resource_name, opts=None, </span>acl=None<span class="p">, </span>cors_rules=None<span class="p">, </span>force_destroy=None<span class="p">, </span>lifecycle_rules=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>versioning=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -167,7 +167,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -244,7 +244,13 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## SpacesBucket Resource Properties {#properties}
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The SpacesBucket resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -267,7 +273,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketcorsrule">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Spaces<wbr>Bucket<wbr>Cors<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A container holding a list of elements describing allowed methods for a specific origin.
+    <dd>{{% md %}}A rule of Cross-Origin Resource Sharing (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -277,6 +283,15 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Lifecycle<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spacesbucketlifecyclerule">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of object lifecycle management (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -295,6 +310,15 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Versioning</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spacesbucketversioning">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Spaces<wbr>Bucket<wbr>Versioning<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A state of versioning (documented below)
 {{% /md %}}</dd>
 
 </dl>
@@ -319,7 +343,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketcorsrule">[]Spaces<wbr>Bucket<wbr>Cors<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}A container holding a list of elements describing allowed methods for a specific origin.
+    <dd>{{% md %}}A rule of Cross-Origin Resource Sharing (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -329,6 +353,15 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Lifecycle<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spacesbucketlifecyclerule">[]Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of object lifecycle management (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -347,6 +380,15 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Versioning</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spacesbucketversioning">Spaces<wbr>Bucket<wbr>Versioning</a></span>
+    </dt>
+    <dd>{{% md %}}A state of versioning (documented below)
 {{% /md %}}</dd>
 
 </dl>
@@ -371,7 +413,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketcorsrule">Spaces<wbr>Bucket<wbr>Cors<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}A container holding a list of elements describing allowed methods for a specific origin.
+    <dd>{{% md %}}A rule of Cross-Origin Resource Sharing (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -381,6 +423,15 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>lifecycle<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spacesbucketlifecyclerule">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule[]</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of object lifecycle management (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -399,6 +450,15 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
         <span class="property-type">Region</span>
     </dt>
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>versioning</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spacesbucketversioning">Spaces<wbr>Bucket<wbr>Versioning</a></span>
+    </dt>
+    <dd>{{% md %}}A state of versioning (documented below)
 {{% /md %}}</dd>
 
 </dl>
@@ -423,7 +483,7 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketcorsrule">List[Spaces<wbr>Bucket<wbr>Cors<wbr>Rule]</a></span>
     </dt>
-    <dd>{{% md %}}A container holding a list of elements describing allowed methods for a specific origin.
+    <dd>{{% md %}}A rule of Cross-Origin Resource Sharing (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -433,6 +493,15 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>lifecycle_<wbr>rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spacesbucketlifecyclerule">List[Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule]</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of object lifecycle management (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -453,6 +522,15 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
     <dd>{{% md %}}The region where the bucket resides (Defaults to `nyc3`)
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>versioning</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spacesbucketversioning">Dict[Spaces<wbr>Bucket<wbr>Versioning]</a></span>
+    </dt>
+    <dd>{{% md %}}A state of versioning (documented below)
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -461,10 +539,9 @@ const foobar = new digitalocean.SpacesBucket("foobar", {
 
 
 
+### Outputs
 
-## SpacesBucket Output Properties
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the SpacesBucket resource produces the following output properties:
 
 
 
@@ -480,6 +557,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -505,6 +590,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -533,6 +626,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>urn</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -558,6 +659,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>urn</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -574,8 +683,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing SpacesBucket Resource
+## Look up an Existing SpacesBucket Resource {#look-up}
 
 Get an existing SpacesBucket resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -585,7 +693,7 @@ Get an existing SpacesBucket resource's state with the given name, ID, and optio
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acl=None<span class="p">, </span>bucket_domain_name=None<span class="p">, </span>cors_rules=None<span class="p">, </span>force_destroy=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>urn=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>acl=None<span class="p">, </span>bucket_domain_name=None<span class="p">, </span>cors_rules=None<span class="p">, </span>force_destroy=None<span class="p">, </span>lifecycle_rules=None<span class="p">, </span>name=None<span class="p">, </span>region=None<span class="p">, </span>urn=None<span class="p">, </span>versioning=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -723,7 +831,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketcorsrule">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Spaces<wbr>Bucket<wbr>Cors<wbr>Rule<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}A container holding a list of elements describing allowed methods for a specific origin.
+    <dd>{{% md %}}A rule of Cross-Origin Resource Sharing (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -733,6 +841,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Lifecycle<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spacesbucketlifecyclerule">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of object lifecycle management (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -760,6 +877,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the bucket
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Versioning</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spacesbucketversioning">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Spaces<wbr>Bucket<wbr>Versioning<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A state of versioning (documented below)
 {{% /md %}}</dd>
 
 </dl>
@@ -793,7 +919,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketcorsrule">[]Spaces<wbr>Bucket<wbr>Cors<wbr>Rule</a></span>
     </dt>
-    <dd>{{% md %}}A container holding a list of elements describing allowed methods for a specific origin.
+    <dd>{{% md %}}A rule of Cross-Origin Resource Sharing (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -803,6 +929,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Lifecycle<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spacesbucketlifecyclerule">[]Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of object lifecycle management (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -830,6 +965,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the bucket
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Versioning</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spacesbucketversioning">Spaces<wbr>Bucket<wbr>Versioning</a></span>
+    </dt>
+    <dd>{{% md %}}A state of versioning (documented below)
 {{% /md %}}</dd>
 
 </dl>
@@ -863,7 +1007,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketcorsrule">Spaces<wbr>Bucket<wbr>Cors<wbr>Rule[]</a></span>
     </dt>
-    <dd>{{% md %}}A container holding a list of elements describing allowed methods for a specific origin.
+    <dd>{{% md %}}A rule of Cross-Origin Resource Sharing (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -873,6 +1017,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>lifecycle<wbr>Rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spacesbucketlifecyclerule">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule[]</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of object lifecycle management (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -900,6 +1053,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}The uniform resource name for the bucket
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>versioning</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spacesbucketversioning">Spaces<wbr>Bucket<wbr>Versioning</a></span>
+    </dt>
+    <dd>{{% md %}}A state of versioning (documented below)
 {{% /md %}}</dd>
 
 </dl>
@@ -933,7 +1095,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spacesbucketcorsrule">List[Spaces<wbr>Bucket<wbr>Cors<wbr>Rule]</a></span>
     </dt>
-    <dd>{{% md %}}A container holding a list of elements describing allowed methods for a specific origin.
+    <dd>{{% md %}}A rule of Cross-Origin Resource Sharing (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -943,6 +1105,15 @@ The following state arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
     </dt>
     <dd>{{% md %}}Unless `true`, the bucket will only be destroyed if empty (Defaults to `false`)
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>lifecycle_<wbr>rules</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spacesbucketlifecyclerule">List[Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule]</a></span>
+    </dt>
+    <dd>{{% md %}}A configuration of object lifecycle management (documented below).
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -972,6 +1143,15 @@ The following state arguments are supported:
     <dd>{{% md %}}The uniform resource name for the bucket
 {{% /md %}}</dd>
 
+    <dt class="property-optional"
+            title="Optional">
+        <span>versioning</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spacesbucketversioning">Dict[Spaces<wbr>Bucket<wbr>Versioning]</a></span>
+    </dt>
+    <dd>{{% md %}}A state of versioning (documented below)
+{{% /md %}}</dd>
+
 </dl>
 {{% /choosable %}}
 
@@ -986,7 +1166,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>Spaces<wbr>Bucket<wbr>Cors<wbr>Rule</h4>
+
+<h4 id="spacesbucketcorsrule">Spaces<wbr>Bucket<wbr>Cors<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#SpacesBucketCorsRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#SpacesBucketCorsRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1173,11 +1354,595 @@ The following state arguments are supported:
 
 
 
+<h4 id="spacesbucketlifecyclerule">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#SpacesBucketLifecycleRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#SpacesBucketLifecycleRule">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#SpacesBucketLifecycleRuleArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#SpacesBucketLifecycleRuleOutput">output</a> API doc for this type.
+{{% /choosable %}}
 
 
 
 
-<h3>Package Details</h3>
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies lifecycle rule status.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Days</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days after initiating a multipart
+upload when the multipart upload must be completed or else Spaces will abort the upload.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Expiration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spacesbucketlifecycleruleexpiration">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a time period after which applicable objects expire (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Unique identifier for the rule.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Noncurrent<wbr>Version<wbr>Expiration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spacesbucketlifecyclerulenoncurrentversionexpiration">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies when non-current object versions expire (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Object key prefix identifying one or more objects to which the rule applies.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies lifecycle rule status.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Days</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days after initiating a multipart
+upload when the multipart upload must be completed or else Spaces will abort the upload.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Expiration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spacesbucketlifecycleruleexpiration">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a time period after which applicable objects expire (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Unique identifier for the rule.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Noncurrent<wbr>Version<wbr>Expiration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spacesbucketlifecyclerulenoncurrentversionexpiration">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies when non-current object versions expire (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Object key prefix identifying one or more objects to which the rule applies.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies lifecycle rule status.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Days</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days after initiating a multipart
+upload when the multipart upload must be completed or else Spaces will abort the upload.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>expiration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spacesbucketlifecycleruleexpiration">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a time period after which applicable objects expire (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Unique identifier for the rule.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>noncurrent<wbr>Version<wbr>Expiration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spacesbucketlifecyclerulenoncurrentversionexpiration">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies when non-current object versions expire (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Object key prefix identifying one or more objects to which the rule applies.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies lifecycle rule status.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>abort<wbr>Incomplete<wbr>Multipart<wbr>Upload<wbr>Days</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days after initiating a multipart
+upload when the multipart upload must be completed or else Spaces will abort the upload.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>expiration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spacesbucketlifecycleruleexpiration">Dict[Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies a time period after which applicable objects expire (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Unique identifier for the rule.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>noncurrent<wbr>Version<wbr>Expiration</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#spacesbucketlifecyclerulenoncurrentversionexpiration">Dict[Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration]</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies when non-current object versions expire (documented below).
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>prefix</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Object key prefix identifying one or more objects to which the rule applies.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="spacesbucketlifecycleruleexpiration">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#SpacesBucketLifecycleRuleExpiration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#SpacesBucketLifecycleRuleExpiration">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#SpacesBucketLifecycleRuleExpirationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#SpacesBucketLifecycleRuleExpirationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Date</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the date/time after which you want applicable objects to expire. The argument uses
+RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Days</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days after object creation when the applicable objects will expire.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Expired<wbr>Object<wbr>Delete<wbr>Marker</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended
+bucket), setting this to true directs Spaces to delete expired object delete markers.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Date</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the date/time after which you want applicable objects to expire. The argument uses
+RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Days</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days after object creation when the applicable objects will expire.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Expired<wbr>Object<wbr>Delete<wbr>Marker</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended
+bucket), setting this to true directs Spaces to delete expired object delete markers.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>date</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the date/time after which you want applicable objects to expire. The argument uses
+RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>days</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days after object creation when the applicable objects will expire.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>expired<wbr>Object<wbr>Delete<wbr>Marker</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended
+bucket), setting this to true directs Spaces to delete expired object delete markers.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>date</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the date/time after which you want applicable objects to expire. The argument uses
+RFC3339 format, e.g. "2020-03-22T15:03:55Z" or parts thereof e.g. "2019-02-28".
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>days</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days after object creation when the applicable objects will expire.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>expired<wbr>Object<wbr>Delete<wbr>Marker</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}On a versioned bucket (versioning-enabled or versioning-suspended
+bucket), setting this to true directs Spaces to delete expired object delete markers.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="spacesbucketlifecyclerulenoncurrentversionexpiration">Spaces<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Noncurrent<wbr>Version<wbr>Expiration</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#SpacesBucketLifecycleRuleNoncurrentVersionExpiration">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#SpacesBucketLifecycleRuleNoncurrentVersionExpiration">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#SpacesBucketLifecycleRuleNoncurrentVersionExpirationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#SpacesBucketLifecycleRuleNoncurrentVersionExpirationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Days</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days after which an object's non-current versions expire.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Days</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#integer">int</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days after which an object's non-current versions expire.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>days</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days after which an object's non-current versions expire.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>days</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the number of days after which an object's non-current versions expire.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="spacesbucketversioning">Spaces<wbr>Bucket<wbr>Versioning</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#SpacesBucketVersioning">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#SpacesBucketVersioning">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#SpacesBucketVersioningArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v2/go/digitalocean/?tab=doc#SpacesBucketVersioningOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable versioning. Once you version-enable a bucket, it can never return to an unversioned
+state. You can, however, suspend versioning on that bucket.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable versioning. Once you version-enable a bucket, it can never return to an unversioned
+state. You can, however, suspend versioning on that bucket.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}Enable versioning. Once you version-enable a bucket, it can never return to an unversioned
+state. You can, however, suspend versioning on that bucket.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enabled</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}Enable versioning. Once you version-enable a bucket, it can never return to an unversioned
+state. You can, however, suspend versioning on that bucket.
+{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+
+
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-digitalocean">https://github.com/pulumi/pulumi-digitalocean</a></dd>

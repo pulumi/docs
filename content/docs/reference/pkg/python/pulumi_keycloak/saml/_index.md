@@ -8,8 +8,13 @@ notitle: true
 <div class="section" id="module-pulumi_keycloak.saml">
 <span id="saml"></span><h1>saml<a class="headerlink" href="#module-pulumi_keycloak.saml" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
+<dt id="pulumi_keycloak.saml.AwaitableGetClientInstallationProviderResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.saml.</code><code class="sig-name descname">AwaitableGetClientInstallationProviderResult</code><span class="sig-paren">(</span><em class="sig-param">client_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">provider_id=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.saml.AwaitableGetClientInstallationProviderResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_keycloak.saml.Client">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.saml.</code><code class="sig-name descname">Client</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">assertion_consumer_post_url=None</em>, <em class="sig-param">assertion_consumer_redirect_url=None</em>, <em class="sig-param">base_url=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_signature_required=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">force_post_binding=None</em>, <em class="sig-param">front_channel_logout=None</em>, <em class="sig-param">full_scope_allowed=None</em>, <em class="sig-param">idp_initiated_sso_relay_state=None</em>, <em class="sig-param">idp_initiated_sso_url_name=None</em>, <em class="sig-param">include_authn_statement=None</em>, <em class="sig-param">logout_service_post_binding_url=None</em>, <em class="sig-param">logout_service_redirect_binding_url=None</em>, <em class="sig-param">master_saml_processing_url=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_id_format=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">root_url=None</em>, <em class="sig-param">sign_assertions=None</em>, <em class="sig-param">sign_documents=None</em>, <em class="sig-param">signing_certificate=None</em>, <em class="sig-param">signing_private_key=None</em>, <em class="sig-param">valid_redirect_uris=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.saml.Client" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.saml.</code><code class="sig-name descname">Client</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">assertion_consumer_post_url=None</em>, <em class="sig-param">assertion_consumer_redirect_url=None</em>, <em class="sig-param">base_url=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_signature_required=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">force_name_id_format=None</em>, <em class="sig-param">force_post_binding=None</em>, <em class="sig-param">front_channel_logout=None</em>, <em class="sig-param">full_scope_allowed=None</em>, <em class="sig-param">idp_initiated_sso_relay_state=None</em>, <em class="sig-param">idp_initiated_sso_url_name=None</em>, <em class="sig-param">include_authn_statement=None</em>, <em class="sig-param">logout_service_post_binding_url=None</em>, <em class="sig-param">logout_service_redirect_binding_url=None</em>, <em class="sig-param">master_saml_processing_url=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_id_format=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">root_url=None</em>, <em class="sig-param">sign_assertions=None</em>, <em class="sig-param">sign_documents=None</em>, <em class="sig-param">signing_certificate=None</em>, <em class="sig-param">signing_private_key=None</em>, <em class="sig-param">valid_redirect_uris=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.saml.Client" title="Permalink to this definition">¶</a></dt>
 <dd><p>Allows for creating and managing Keycloak clients that use the SAML protocol.</p>
 <p>Clients are entities that can use Keycloak for user authentication. Typically,
 clients are applications that redirect users to Keycloak for authentication
@@ -52,7 +57,7 @@ in order to take advantage of Keycloak’s user sessions for SSO.</p>
 </dl>
 <dl class="method">
 <dt id="pulumi_keycloak.saml.Client.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">assertion_consumer_post_url=None</em>, <em class="sig-param">assertion_consumer_redirect_url=None</em>, <em class="sig-param">base_url=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_signature_required=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">force_post_binding=None</em>, <em class="sig-param">front_channel_logout=None</em>, <em class="sig-param">full_scope_allowed=None</em>, <em class="sig-param">idp_initiated_sso_relay_state=None</em>, <em class="sig-param">idp_initiated_sso_url_name=None</em>, <em class="sig-param">include_authn_statement=None</em>, <em class="sig-param">logout_service_post_binding_url=None</em>, <em class="sig-param">logout_service_redirect_binding_url=None</em>, <em class="sig-param">master_saml_processing_url=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_id_format=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">root_url=None</em>, <em class="sig-param">sign_assertions=None</em>, <em class="sig-param">sign_documents=None</em>, <em class="sig-param">signing_certificate=None</em>, <em class="sig-param">signing_private_key=None</em>, <em class="sig-param">valid_redirect_uris=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.saml.Client.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">assertion_consumer_post_url=None</em>, <em class="sig-param">assertion_consumer_redirect_url=None</em>, <em class="sig-param">base_url=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">client_signature_required=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">enabled=None</em>, <em class="sig-param">force_name_id_format=None</em>, <em class="sig-param">force_post_binding=None</em>, <em class="sig-param">front_channel_logout=None</em>, <em class="sig-param">full_scope_allowed=None</em>, <em class="sig-param">idp_initiated_sso_relay_state=None</em>, <em class="sig-param">idp_initiated_sso_url_name=None</em>, <em class="sig-param">include_authn_statement=None</em>, <em class="sig-param">logout_service_post_binding_url=None</em>, <em class="sig-param">logout_service_redirect_binding_url=None</em>, <em class="sig-param">master_saml_processing_url=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_id_format=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">root_url=None</em>, <em class="sig-param">sign_assertions=None</em>, <em class="sig-param">sign_documents=None</em>, <em class="sig-param">signing_certificate=None</em>, <em class="sig-param">signing_private_key=None</em>, <em class="sig-param">valid_redirect_uris=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.saml.Client.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Client resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -100,6 +105,18 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_keycloak.saml.GetClientInstallationProviderResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.saml.</code><code class="sig-name descname">GetClientInstallationProviderResult</code><span class="sig-paren">(</span><em class="sig-param">client_id=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">provider_id=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">value=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.saml.GetClientInstallationProviderResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getClientInstallationProvider.</p>
+<dl class="attribute">
+<dt id="pulumi_keycloak.saml.GetClientInstallationProviderResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.saml.GetClientInstallationProviderResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
 </dd></dl>
 
 </dd></dl>
@@ -594,6 +611,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_keycloak.saml.get_client_installation_provider">
+<code class="sig-prename descclassname">pulumi_keycloak.saml.</code><code class="sig-name descname">get_client_installation_provider</code><span class="sig-paren">(</span><em class="sig-param">client_id=None</em>, <em class="sig-param">provider_id=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.saml.get_client_installation_provider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
 </dd></dl>
 
 </div>

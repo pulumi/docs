@@ -17,7 +17,7 @@ resources.
 
 
 
-## Using GetVolumeSnapshot
+## Using GetVolumeSnapshot {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -227,7 +227,7 @@ The following arguments are supported:
 
 
 
-## GetVolumeSnapshot Result
+## GetVolumeSnapshot Result {#result}
 
 The following output properties are available:
 

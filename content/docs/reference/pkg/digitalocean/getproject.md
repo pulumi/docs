@@ -30,7 +30,7 @@ const staging = digitalocean.getProject({
 
 
 
-## Using GetProject
+## Using GetProject {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -172,7 +172,7 @@ one project has the provided name or if no project has that name.
 
 
 
-## GetProject Result
+## GetProject Result {#result}
 
 The following output properties are available:
 

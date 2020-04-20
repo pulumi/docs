@@ -17,7 +17,7 @@ modify, and delete Firewalls.
 
 
 
-## Create a Firewall Resource
+## Create a Firewall Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -107,7 +107,7 @@ modify, and delete Firewalls.
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -184,7 +184,13 @@ modify, and delete Firewalls.
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## Firewall Resource Properties {#properties}
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The Firewall resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -413,10 +419,9 @@ The `outbound_rule` block is documented below.
 
 
 
+### Outputs
 
-## Firewall Output Properties
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the Firewall resource produces the following output properties:
 
 
 
@@ -433,6 +438,14 @@ The following output properties are available:
     <dd>{{% md %}}A time value given in ISO8601 combined date and time format
 that represents when the Firewall was created.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -475,6 +488,14 @@ that represents when the Firewall was created.
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Pending<wbr>Changes</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpendingchange">[]Firewall<wbr>Pending<wbr>Change</a></span>
@@ -511,6 +532,14 @@ This can be "waiting", "succeeded", or "failed".
     <dd>{{% md %}}A time value given in ISO8601 combined date and time format
 that represents when the Firewall was created.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -553,6 +582,14 @@ that represents when the Firewall was created.
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>pending_<wbr>changes</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#firewallpendingchange">List[Firewall<wbr>Pending<wbr>Change]</a></span>
@@ -582,8 +619,7 @@ This can be "waiting", "succeeded", or "failed".
 
 
 
-
-## Look up an Existing Firewall Resource
+## Look up an Existing Firewall Resource {#look-up}
 
 Get an existing Firewall resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1062,7 +1098,8 @@ This can be "waiting", "succeeded", or "failed".
 
 ## Supporting Types
 
-<h4>Firewall<wbr>Inbound<wbr>Rule</h4>
+
+<h4 id="firewallinboundrule">Firewall<wbr>Inbound<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#FirewallInboundRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#FirewallInboundRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1361,7 +1398,7 @@ will be accepted.
 
 
 
-<h4>Firewall<wbr>Outbound<wbr>Rule</h4>
+<h4 id="firewalloutboundrule">Firewall<wbr>Outbound<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/input/#FirewallOutboundRule">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#FirewallOutboundRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1664,7 +1701,7 @@ or "1-65535" to open all ports for a protocol. Required for when protocol is
 
 
 
-<h4>Firewall<wbr>Pending<wbr>Change</h4>
+<h4 id="firewallpendingchange">Firewall<wbr>Pending<wbr>Change</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#FirewallPendingChange">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1815,7 +1852,7 @@ This can be "waiting", "succeeded", or "failed".
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-digitalocean">https://github.com/pulumi/pulumi-digitalocean</a></dd>
