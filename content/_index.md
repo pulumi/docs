@@ -24,7 +24,7 @@ carousel:
             Define infrastructure in JavaScript, TypeScript, Python, Go, or
             any .NET language, including C#, F#, and VB.
         - title: Your favorite tools.
-          description: Use familiar IDEs, test frameworks, and tools. Resource mocking for easy verification.
+          description: Use familiar IDEs, test frameworks, and tools.
         - title: Share and reuse.
           description: Codify best practices and policies then share them with your team or community as self-service architectures.
 
