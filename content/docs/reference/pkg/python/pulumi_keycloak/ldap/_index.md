@@ -224,6 +224,98 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_keycloak.ldap.HardcodedGroupMapper">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.ldap.</code><code class="sig-name descname">HardcodedGroupMapper</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">group=None</em>, <em class="sig-param">ldap_user_federation_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedGroupMapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a HardcodedGroupMapper resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] group: Group to grant to user.
+:param pulumi.Input[str] ldap_user_federation_id: The ldap user federation provider to attach this mapper to.
+:param pulumi.Input[str] name: Display name of the mapper when displayed in the console.
+:param pulumi.Input[str] realm_id: The realm in which the ldap user federation provider exists.</p>
+<dl class="attribute">
+<dt id="pulumi_keycloak.ldap.HardcodedGroupMapper.group">
+<code class="sig-name descname">group</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedGroupMapper.group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Group to grant to user.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.ldap.HardcodedGroupMapper.ldap_user_federation_id">
+<code class="sig-name descname">ldap_user_federation_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedGroupMapper.ldap_user_federation_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ldap user federation provider to attach this mapper to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.ldap.HardcodedGroupMapper.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedGroupMapper.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of the mapper when displayed in the console.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.ldap.HardcodedGroupMapper.realm_id">
+<code class="sig-name descname">realm_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedGroupMapper.realm_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The realm in which the ldap user federation provider exists.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_keycloak.ldap.HardcodedGroupMapper.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">group=None</em>, <em class="sig-param">ldap_user_federation_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedGroupMapper.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing HardcodedGroupMapper resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>group</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Group to grant to user.</p></li>
+<li><p><strong>ldap_user_federation_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ldap user federation provider to attach this mapper to.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Display name of the mapper when displayed in the console.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm in which the ldap user federation provider exists.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_keycloak.ldap.HardcodedGroupMapper.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedGroupMapper.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_keycloak.ldap.HardcodedGroupMapper.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedGroupMapper.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_keycloak.ldap.HardcodedRoleMapper">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.ldap.</code><code class="sig-name descname">HardcodedRoleMapper</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">ldap_user_federation_id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">role=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.HardcodedRoleMapper" title="Permalink to this definition">¶</a></dt>
 <dd><p>This mapper will grant a specified Keycloak role to each Keycloak user linked with LDAP.</p>
@@ -497,6 +589,90 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_keycloak.ldap.MsadUserAccountControlMapper.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.MsadUserAccountControlMapper.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_keycloak.ldap.RoleMapper">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_keycloak.ldap.</code><code class="sig-name descname">RoleMapper</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">ldap_roles_dn=None</em>, <em class="sig-param">ldap_user_federation_id=None</em>, <em class="sig-param">memberof_ldap_attribute=None</em>, <em class="sig-param">membership_attribute_type=None</em>, <em class="sig-param">membership_ldap_attribute=None</em>, <em class="sig-param">membership_user_ldap_attribute=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">role_name_ldap_attribute=None</em>, <em class="sig-param">role_object_classes=None</em>, <em class="sig-param">roles_ldap_filter=None</em>, <em class="sig-param">use_realm_roles_mapping=None</em>, <em class="sig-param">user_roles_retrieve_strategy=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.RoleMapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a RoleMapper resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] ldap_user_federation_id: The ldap user federation provider to attach this mapper to.
+:param pulumi.Input[str] name: Display name of the mapper when displayed in the console.
+:param pulumi.Input[str] realm_id: The realm in which the ldap user federation provider exists.</p>
+<dl class="attribute">
+<dt id="pulumi_keycloak.ldap.RoleMapper.ldap_user_federation_id">
+<code class="sig-name descname">ldap_user_federation_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.RoleMapper.ldap_user_federation_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ldap user federation provider to attach this mapper to.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.ldap.RoleMapper.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.RoleMapper.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display name of the mapper when displayed in the console.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_keycloak.ldap.RoleMapper.realm_id">
+<code class="sig-name descname">realm_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_keycloak.ldap.RoleMapper.realm_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The realm in which the ldap user federation provider exists.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_keycloak.ldap.RoleMapper.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">client_id=None</em>, <em class="sig-param">ldap_roles_dn=None</em>, <em class="sig-param">ldap_user_federation_id=None</em>, <em class="sig-param">memberof_ldap_attribute=None</em>, <em class="sig-param">membership_attribute_type=None</em>, <em class="sig-param">membership_ldap_attribute=None</em>, <em class="sig-param">membership_user_ldap_attribute=None</em>, <em class="sig-param">mode=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">realm_id=None</em>, <em class="sig-param">role_name_ldap_attribute=None</em>, <em class="sig-param">role_object_classes=None</em>, <em class="sig-param">roles_ldap_filter=None</em>, <em class="sig-param">use_realm_roles_mapping=None</em>, <em class="sig-param">user_roles_retrieve_strategy=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.RoleMapper.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing RoleMapper resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>ldap_user_federation_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ldap user federation provider to attach this mapper to.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Display name of the mapper when displayed in the console.</p></li>
+<li><p><strong>realm_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The realm in which the ldap user federation provider exists.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_keycloak.ldap.RoleMapper.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.RoleMapper.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_keycloak.ldap.RoleMapper.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_keycloak.ldap.RoleMapper.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">

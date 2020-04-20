@@ -28,7 +28,7 @@ The following arguments are supported:
 
 
 
-## Using GetRealmKeys
+## Using GetRealmKeys {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -190,7 +190,7 @@ The following arguments are supported:
 
 
 
-## GetRealmKeys Result
+## GetRealmKeys Result {#result}
 
 The following output properties are available:
 
@@ -397,7 +397,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Realm<wbr>Keys<wbr>Key</h4>
+
+<h4 id="getrealmkeyskey">Get<wbr>Realm<wbr>Keys<wbr>Key</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#GetRealmKeysKey">output</a> API doc for this type.
 {{% /choosable %}}
@@ -651,17 +652,17 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>provider_<wbr>id</span>
+        <span>provider<wbr>Priority</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span>provider<wbr>Priority</span>
+        <span>provider_<wbr>id</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 

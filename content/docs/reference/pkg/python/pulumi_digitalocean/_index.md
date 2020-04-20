@@ -25,7 +25,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_digitalocean.AwaitableGetDatabaseClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetDatabaseClusterResult</code><span class="sig-paren">(</span><em class="sig-param">database=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">maintenance_windows=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">private_host=None</em>, <em class="sig-param">private_uri=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uri=None</em>, <em class="sig-param">urn=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetDatabaseClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetDatabaseClusterResult</code><span class="sig-paren">(</span><em class="sig-param">database=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">maintenance_windows=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">private_host=None</em>, <em class="sig-param">private_network_uuid=None</em>, <em class="sig-param">private_uri=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uri=None</em>, <em class="sig-param">urn=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetDatabaseClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -35,7 +35,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_digitalocean.AwaitableGetDropletResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetDropletResult</code><span class="sig-paren">(</span><em class="sig-param">backups=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">disk=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">ipv4_address=None</em>, <em class="sig-param">ipv4_address_private=None</em>, <em class="sig-param">ipv6=None</em>, <em class="sig-param">ipv6_address=None</em>, <em class="sig-param">ipv6_address_private=None</em>, <em class="sig-param">locked=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">price_hourly=None</em>, <em class="sig-param">price_monthly=None</em>, <em class="sig-param">private_networking=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tag=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">urn=None</em>, <em class="sig-param">vcpus=None</em>, <em class="sig-param">volume_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetDropletResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetDropletResult</code><span class="sig-paren">(</span><em class="sig-param">backups=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">disk=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">ipv4_address=None</em>, <em class="sig-param">ipv4_address_private=None</em>, <em class="sig-param">ipv6=None</em>, <em class="sig-param">ipv6_address=None</em>, <em class="sig-param">ipv6_address_private=None</em>, <em class="sig-param">locked=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">price_hourly=None</em>, <em class="sig-param">price_monthly=None</em>, <em class="sig-param">private_networking=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tag=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">urn=None</em>, <em class="sig-param">vcpus=None</em>, <em class="sig-param">volume_ids=None</em>, <em class="sig-param">vpc_uuid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetDropletResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -60,7 +60,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_digitalocean.AwaitableGetKubernetesClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetKubernetesClusterResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_subnet=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ipv4_address=None</em>, <em class="sig-param">kube_configs=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_pools=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">service_subnet=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetKubernetesClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetKubernetesClusterResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_subnet=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ipv4_address=None</em>, <em class="sig-param">kube_configs=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_pools=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">service_subnet=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vpc_uuid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetKubernetesClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -70,7 +70,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_digitalocean.AwaitableGetLoadBalancerResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetLoadBalancerResult</code><span class="sig-paren">(</span><em class="sig-param">algorithm=None</em>, <em class="sig-param">droplet_ids=None</em>, <em class="sig-param">droplet_tag=None</em>, <em class="sig-param">enable_proxy_protocol=None</em>, <em class="sig-param">forwarding_rules=None</em>, <em class="sig-param">healthcheck=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ip=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">redirect_http_to_https=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">sticky_sessions=None</em>, <em class="sig-param">urn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetLoadBalancerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetLoadBalancerResult</code><span class="sig-paren">(</span><em class="sig-param">algorithm=None</em>, <em class="sig-param">droplet_ids=None</em>, <em class="sig-param">droplet_tag=None</em>, <em class="sig-param">enable_proxy_protocol=None</em>, <em class="sig-param">forwarding_rules=None</em>, <em class="sig-param">healthcheck=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ip=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">redirect_http_to_https=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">sticky_sessions=None</em>, <em class="sig-param">urn=None</em>, <em class="sig-param">vpc_uuid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetLoadBalancerResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -121,6 +121,11 @@ anything, please consult the source <a class="reference external" href="https://
 <dl class="class">
 <dt id="pulumi_digitalocean.AwaitableGetVolumeSnapshotResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetVolumeSnapshotResult</code><span class="sig-paren">(</span><em class="sig-param">created_at=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">min_disk_size=None</em>, <em class="sig-param">most_recent=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">regions=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">volume_id=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetVolumeSnapshotResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.AwaitableGetVpcResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">AwaitableGetVpcResult</code><span class="sig-paren">(</span><em class="sig-param">created_at=None</em>, <em class="sig-param">default=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ip_range=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">urn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.AwaitableGetVpcResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -400,7 +405,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.DatabaseCluster">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">DatabaseCluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">eviction_policy=None</em>, <em class="sig-param">maintenance_windows=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">sql_mode=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseCluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">DatabaseCluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">eviction_policy=None</em>, <em class="sig-param">maintenance_windows=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">private_network_uuid=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">sql_mode=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean database cluster resource.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -412,6 +417,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>maintenance_windows</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – Defines when the automatic maintenance should be performed for the database cluster.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the database cluster.</p></li>
 <li><p><strong>node_count</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Number of nodes that will be included in the cluster.</p></li>
+<li><p><strong>private_network_uuid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC where the database cluster will be located.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – DigitalOcean region where the cluster will reside.</p></li>
 <li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Database Droplet size associated with the cluster (ex. <code class="docutils literal notranslate"><span class="pre">db-s-1vcpu-1gb</span></code>).</p></li>
 <li><p><strong>sql_mode</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A comma separated string specifying the  SQL modes for a MySQL cluster.</p></li>
@@ -490,6 +496,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_digitalocean.DatabaseCluster.private_network_uuid">
+<code class="sig-name descname">private_network_uuid</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseCluster.private_network_uuid" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the VPC where the database cluster will be located.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_digitalocean.DatabaseCluster.private_uri">
 <code class="sig-name descname">private_uri</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.DatabaseCluster.private_uri" title="Permalink to this definition">¶</a></dt>
 <dd><p>Same as <code class="docutils literal notranslate"><span class="pre">uri</span></code>, but only accessible from resources within the account and in the same region.</p>
@@ -545,7 +557,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="method">
 <dt id="pulumi_digitalocean.DatabaseCluster.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">database=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">eviction_policy=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">maintenance_windows=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">private_host=None</em>, <em class="sig-param">private_uri=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">sql_mode=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uri=None</em>, <em class="sig-param">urn=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseCluster.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">database=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">eviction_policy=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">maintenance_windows=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">private_host=None</em>, <em class="sig-param">private_network_uuid=None</em>, <em class="sig-param">private_uri=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">sql_mode=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uri=None</em>, <em class="sig-param">urn=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.DatabaseCluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing DatabaseCluster resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -564,6 +576,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>password</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Password for the cluster’s default user.</p></li>
 <li><p><strong>port</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Network port that the database cluster is listening on.</p></li>
 <li><p><strong>private_host</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Same as <code class="docutils literal notranslate"><span class="pre">host</span></code>, but only accessible from resources within the account and in the same region.</p></li>
+<li><p><strong>private_network_uuid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC where the database cluster will be located.</p></li>
 <li><p><strong>private_uri</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Same as <code class="docutils literal notranslate"><span class="pre">uri</span></code>, but only accessible from resources within the account and in the same region.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – DigitalOcean region where the cluster will reside.</p></li>
 <li><p><strong>size</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Database Droplet size associated with the cluster (ex. <code class="docutils literal notranslate"><span class="pre">db-s-1vcpu-1gb</span></code>).</p></li>
@@ -1484,7 +1497,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.Droplet">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">Droplet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backups=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">ipv6=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">private_networking=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">resize_disk=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">ssh_keys=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">volume_ids=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Droplet" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">Droplet</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backups=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">ipv6=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">private_networking=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">resize_disk=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">ssh_keys=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">volume_ids=None</em>, <em class="sig-param">vpc_uuid=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Droplet" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean Droplet resource. This can be used to create,
 modify, and delete Droplets. Droplets also support
 <a class="reference external" href="https://www.terraform.io/docs/provisioners/index.html">provisioning</a>.</p>
@@ -1500,8 +1513,10 @@ false.</p></li>
 <li><p><strong>monitoring</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean controlling whether monitoring agent is installed.
 Defaults to false.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Droplet name.</p></li>
-<li><p><strong>private_networking</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean controlling if private networks are
-enabled. Defaults to false.</p></li>
+<li><p><strong>private_networking</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean controlling if private networking
+is enabled. When VPC is enabled on an account, this will provision the
+Droplet inside of your account’s default VPC for the region. Use the
+<code class="docutils literal notranslate"><span class="pre">vpc_uuid</span></code> attribute to specify a different VPC.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region to start in.</p></li>
 <li><p><strong>resize_disk</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean controlling whether to increase the disk
 size when resizing a Droplet. It defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. When set to <code class="docutils literal notranslate"><span class="pre">false</span></code>,
@@ -1515,6 +1530,7 @@ to retrieve them.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of the tags to be applied to this Droplet.</p></li>
 <li><p><strong>user_data</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A string of the desired User Data for the Droplet.</p></li>
 <li><p><strong>volume_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of the IDs of each <a class="reference external" href="https://www.terraform.io/docs/providers/do/r/volume.html">block storage volume</a> to be attached to the Droplet.</p></li>
+<li><p><strong>vpc_uuid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC where the Droplet will be located.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1595,8 +1611,10 @@ Defaults to false.</p>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.Droplet.private_networking">
 <code class="sig-name descname">private_networking</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Droplet.private_networking" title="Permalink to this definition">¶</a></dt>
-<dd><p>Boolean controlling if private networks are
-enabled. Defaults to false.</p>
+<dd><p>Boolean controlling if private networking
+is enabled. When VPC is enabled on an account, this will provision the
+Droplet inside of your account’s default VPC for the region. Use the
+<code class="docutils literal notranslate"><span class="pre">vpc_uuid</span></code> attribute to specify a different VPC.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1668,9 +1686,15 @@ to retrieve them.</p>
 <dd><p>A list of the IDs of each <a class="reference external" href="https://www.terraform.io/docs/providers/do/r/volume.html">block storage volume</a> to be attached to the Droplet.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_digitalocean.Droplet.vpc_uuid">
+<code class="sig-name descname">vpc_uuid</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Droplet.vpc_uuid" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the VPC where the Droplet will be located.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_digitalocean.Droplet.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backups=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">disk=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">ipv4_address=None</em>, <em class="sig-param">ipv4_address_private=None</em>, <em class="sig-param">ipv6=None</em>, <em class="sig-param">ipv6_address=None</em>, <em class="sig-param">locked=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">price_hourly=None</em>, <em class="sig-param">price_monthly=None</em>, <em class="sig-param">private_networking=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">resize_disk=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">ssh_keys=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">urn=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">vcpus=None</em>, <em class="sig-param">volume_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Droplet.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">backups=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">disk=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">ipv4_address=None</em>, <em class="sig-param">ipv4_address_private=None</em>, <em class="sig-param">ipv6=None</em>, <em class="sig-param">ipv6_address=None</em>, <em class="sig-param">locked=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">price_hourly=None</em>, <em class="sig-param">price_monthly=None</em>, <em class="sig-param">private_networking=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">resize_disk=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">ssh_keys=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">urn=None</em>, <em class="sig-param">user_data=None</em>, <em class="sig-param">vcpus=None</em>, <em class="sig-param">volume_ids=None</em>, <em class="sig-param">vpc_uuid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Droplet.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Droplet resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1693,8 +1717,10 @@ Defaults to false.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Droplet name.</p></li>
 <li><p><strong>price_hourly</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Droplet hourly price</p></li>
 <li><p><strong>price_monthly</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – Droplet monthly price</p></li>
-<li><p><strong>private_networking</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean controlling if private networks are
-enabled. Defaults to false.</p></li>
+<li><p><strong>private_networking</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean controlling if private networking
+is enabled. When VPC is enabled on an account, this will provision the
+Droplet inside of your account’s default VPC for the region. Use the
+<code class="docutils literal notranslate"><span class="pre">vpc_uuid</span></code> attribute to specify a different VPC.</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region to start in.</p></li>
 <li><p><strong>resize_disk</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Boolean controlling whether to increase the disk
 size when resizing a Droplet. It defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>. When set to <code class="docutils literal notranslate"><span class="pre">false</span></code>,
@@ -1723,6 +1749,7 @@ to retrieve them.</p>
 <li><p><strong>vcpus</strong> (<em>pulumi.Input</em><em>[</em><em>float</em><em>]</em>) – The number of the instance’s virtual CPUs</p></li>
 <li><p><strong>volume_ids</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – <p>A list of the IDs of each <a class="reference external" href="https://www.terraform.io/docs/providers/do/r/volume.html">block storage volume</a> to be attached to the Droplet.</p>
 </p></li>
+<li><p><strong>vpc_uuid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC where the Droplet will be located.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2361,7 +2388,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.GetDatabaseClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetDatabaseClusterResult</code><span class="sig-paren">(</span><em class="sig-param">database=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">maintenance_windows=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">private_host=None</em>, <em class="sig-param">private_uri=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uri=None</em>, <em class="sig-param">urn=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetDatabaseClusterResult</code><span class="sig-paren">(</span><em class="sig-param">database=None</em>, <em class="sig-param">engine=None</em>, <em class="sig-param">host=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">maintenance_windows=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_count=None</em>, <em class="sig-param">password=None</em>, <em class="sig-param">port=None</em>, <em class="sig-param">private_host=None</em>, <em class="sig-param">private_network_uuid=None</em>, <em class="sig-param">private_uri=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">uri=None</em>, <em class="sig-param">urn=None</em>, <em class="sig-param">user=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDatabaseCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetDatabaseClusterResult.database">
@@ -2415,6 +2442,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.GetDatabaseClusterResult.private_host">
 <code class="sig-name descname">private_host</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult.private_host" title="Permalink to this definition">¶</a></dt>
 <dd><p>Same as <code class="docutils literal notranslate"><span class="pre">host</span></code>, but only accessible from resources within the account and in the same region.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetDatabaseClusterResult.private_network_uuid">
+<code class="sig-name descname">private_network_uuid</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDatabaseClusterResult.private_network_uuid" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the VPC where the database cluster is located.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -2484,7 +2517,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.GetDropletResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetDropletResult</code><span class="sig-paren">(</span><em class="sig-param">backups=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">disk=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">ipv4_address=None</em>, <em class="sig-param">ipv4_address_private=None</em>, <em class="sig-param">ipv6=None</em>, <em class="sig-param">ipv6_address=None</em>, <em class="sig-param">ipv6_address_private=None</em>, <em class="sig-param">locked=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">price_hourly=None</em>, <em class="sig-param">price_monthly=None</em>, <em class="sig-param">private_networking=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tag=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">urn=None</em>, <em class="sig-param">vcpus=None</em>, <em class="sig-param">volume_ids=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetDropletResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetDropletResult</code><span class="sig-paren">(</span><em class="sig-param">backups=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">disk=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">image=None</em>, <em class="sig-param">ipv4_address=None</em>, <em class="sig-param">ipv4_address_private=None</em>, <em class="sig-param">ipv6=None</em>, <em class="sig-param">ipv6_address=None</em>, <em class="sig-param">ipv6_address_private=None</em>, <em class="sig-param">locked=None</em>, <em class="sig-param">memory=None</em>, <em class="sig-param">monitoring=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">price_hourly=None</em>, <em class="sig-param">price_monthly=None</em>, <em class="sig-param">private_networking=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">size=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tag=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">urn=None</em>, <em class="sig-param">vcpus=None</em>, <em class="sig-param">volume_ids=None</em>, <em class="sig-param">vpc_uuid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetDropletResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getDroplet.</p>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetDropletResult.backups">
@@ -2610,6 +2643,12 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dt id="pulumi_digitalocean.GetDropletResult.volume_ids">
 <code class="sig-name descname">volume_ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDropletResult.volume_ids" title="Permalink to this definition">¶</a></dt>
 <dd><p>List of the IDs of each volumes attached to the Droplet.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetDropletResult.vpc_uuid">
+<code class="sig-name descname">vpc_uuid</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetDropletResult.vpc_uuid" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the VPC where the Droplet is located.</p>
 </dd></dl>
 
 </dd></dl>
@@ -2743,7 +2782,7 @@ snapshots and backups and are only available within your account.</p></li>
 
 <dl class="class">
 <dt id="pulumi_digitalocean.GetKubernetesClusterResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetKubernetesClusterResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_subnet=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ipv4_address=None</em>, <em class="sig-param">kube_configs=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_pools=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">service_subnet=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetKubernetesClusterResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetKubernetesClusterResult</code><span class="sig-paren">(</span><em class="sig-param">cluster_subnet=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ipv4_address=None</em>, <em class="sig-param">kube_configs=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_pools=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">service_subnet=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vpc_uuid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetKubernetesClusterResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getKubernetesCluster.</p>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetKubernetesClusterResult.cluster_subnet">
@@ -2845,6 +2884,12 @@ snapshots and backups and are only available within your account.</p></li>
 <dd><p>The slug identifier for the version of Kubernetes used for the cluster.</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetKubernetesClusterResult.vpc_uuid">
+<code class="sig-name descname">vpc_uuid</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetKubernetesClusterResult.vpc_uuid" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the VPC where the Kubernetes cluster is located.</p>
+</dd></dl>
+
 </dd></dl>
 
 <dl class="class">
@@ -2873,7 +2918,7 @@ snapshots and backups and are only available within your account.</p></li>
 
 <dl class="class">
 <dt id="pulumi_digitalocean.GetLoadBalancerResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetLoadBalancerResult</code><span class="sig-paren">(</span><em class="sig-param">algorithm=None</em>, <em class="sig-param">droplet_ids=None</em>, <em class="sig-param">droplet_tag=None</em>, <em class="sig-param">enable_proxy_protocol=None</em>, <em class="sig-param">forwarding_rules=None</em>, <em class="sig-param">healthcheck=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ip=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">redirect_http_to_https=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">sticky_sessions=None</em>, <em class="sig-param">urn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetLoadBalancerResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetLoadBalancerResult</code><span class="sig-paren">(</span><em class="sig-param">algorithm=None</em>, <em class="sig-param">droplet_ids=None</em>, <em class="sig-param">droplet_tag=None</em>, <em class="sig-param">enable_proxy_protocol=None</em>, <em class="sig-param">forwarding_rules=None</em>, <em class="sig-param">healthcheck=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ip=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">redirect_http_to_https=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">sticky_sessions=None</em>, <em class="sig-param">urn=None</em>, <em class="sig-param">vpc_uuid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetLoadBalancerResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getLoadBalancer.</p>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.GetLoadBalancerResult.id">
@@ -3180,8 +3225,62 @@ the following attributes:</p>
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_digitalocean.GetVpcResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">GetVpcResult</code><span class="sig-paren">(</span><em class="sig-param">created_at=None</em>, <em class="sig-param">default=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ip_range=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">urn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.GetVpcResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getVpc.</p>
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetVpcResult.created_at">
+<code class="sig-name descname">created_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetVpcResult.created_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date and time of when the VPC was created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetVpcResult.default">
+<code class="sig-name descname">default</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetVpcResult.default" title="Permalink to this definition">¶</a></dt>
+<dd><p>A boolean indicating whether or not the VPC is the default one for the region.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetVpcResult.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetVpcResult.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A free-form text field describing the VPC.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetVpcResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetVpcResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique identifier for the VPC.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetVpcResult.ip_range">
+<code class="sig-name descname">ip_range</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetVpcResult.ip_range" title="Permalink to this definition">¶</a></dt>
+<dd><p>The range of IP addresses for the VPC in CIDR notation.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetVpcResult.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetVpcResult.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the VPC.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetVpcResult.region">
+<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetVpcResult.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>The DigitalOcean region slug for the VPC’s location.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.GetVpcResult.urn">
+<code class="sig-name descname">urn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.GetVpcResult.urn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The uniform resource name (URN) for the VPC.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="pulumi_digitalocean.KubernetesCluster">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">KubernetesCluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_pool=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesCluster" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">KubernetesCluster</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_pool=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vpc_uuid=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesCluster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean Kubernetes cluster resource. This can be used to create, delete, and modify clusters. For more information see the <a class="reference external" href="https://www.digitalocean.com/docs/kubernetes/">official documentation</a>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -3209,6 +3308,7 @@ the following attributes:</p>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The slug identifier for the region where the Kubernetes cluster will be created.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A list of tag names to be applied to the Kubernetes cluster.</p></li>
 <li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The slug identifier for the version of Kubernetes used for the cluster. Use <a class="reference external" href="https://github.com/digitalocean/doctl">doctl</a> to find the available versions <code class="docutils literal notranslate"><span class="pre">doctl</span> <span class="pre">kubernetes</span> <span class="pre">options</span> <span class="pre">versions</span></code>. (<strong>Note:</strong> A cluster may only be upgraded to newer versions in-place. If the version is decreased, a new resource will be created.)</p></li>
+<li><p><strong>vpc_uuid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC where the Kubernetes cluster will be located.</p></li>
 </ul>
 </dd>
 </dl>
@@ -3372,9 +3472,15 @@ the following attributes:</p>
 <dd><p>The slug identifier for the version of Kubernetes used for the cluster. Use <a class="reference external" href="https://github.com/digitalocean/doctl">doctl</a> to find the available versions <code class="docutils literal notranslate"><span class="pre">doctl</span> <span class="pre">kubernetes</span> <span class="pre">options</span> <span class="pre">versions</span></code>. (<strong>Note:</strong> A cluster may only be upgraded to newer versions in-place. If the version is decreased, a new resource will be created.)</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_digitalocean.KubernetesCluster.vpc_uuid">
+<code class="sig-name descname">vpc_uuid</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.KubernetesCluster.vpc_uuid" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the VPC where the Kubernetes cluster will be located.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_digitalocean.KubernetesCluster.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_subnet=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">ipv4_address=None</em>, <em class="sig-param">kube_configs=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_pool=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">service_subnet=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">version=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesCluster.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">cluster_subnet=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">endpoint=None</em>, <em class="sig-param">ipv4_address=None</em>, <em class="sig-param">kube_configs=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">node_pool=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">service_subnet=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">updated_at=None</em>, <em class="sig-param">version=None</em>, <em class="sig-param">vpc_uuid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.KubernetesCluster.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing KubernetesCluster resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -3425,8 +3531,11 @@ properties used to qualify the lookup.</p>
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The slug identifier for the version of Kubernetes used for the cluster. Use <a class="reference external" href="https://github.com/digitalocean/doctl">doctl</a> to find the available versions <code class="docutils literal notranslate"><span class="pre">doctl</span> <span class="pre">kubernetes</span> <span class="pre">options</span> <span class="pre">versions</span></code>. (<strong>Note:</strong> A cluster may only be upgraded to newer versions in-place. If the version is decreased, a new resource will be created.)</p>
-</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>version</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The slug identifier for the version of Kubernetes used for the cluster. Use <a class="reference external" href="https://github.com/digitalocean/doctl">doctl</a> to find the available versions <code class="docutils literal notranslate"><span class="pre">doctl</span> <span class="pre">kubernetes</span> <span class="pre">options</span> <span class="pre">versions</span></code>. (<strong>Note:</strong> A cluster may only be upgraded to newer versions in-place. If the version is decreased, a new resource will be created.)</p>
+</p></li>
+<li><p><strong>vpc_uuid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC where the Kubernetes cluster will be located.</p></li>
+</ul>
 </dd>
 </dl>
 <p>The <strong>kube_configs</strong> object supports the following:</p>
@@ -3709,7 +3818,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.LoadBalancer">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">LoadBalancer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">algorithm=None</em>, <em class="sig-param">droplet_ids=None</em>, <em class="sig-param">droplet_tag=None</em>, <em class="sig-param">enable_proxy_protocol=None</em>, <em class="sig-param">forwarding_rules=None</em>, <em class="sig-param">healthcheck=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">redirect_http_to_https=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">sticky_sessions=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.LoadBalancer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">LoadBalancer</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">algorithm=None</em>, <em class="sig-param">droplet_ids=None</em>, <em class="sig-param">droplet_tag=None</em>, <em class="sig-param">enable_proxy_protocol=None</em>, <em class="sig-param">forwarding_rules=None</em>, <em class="sig-param">healthcheck=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">redirect_http_to_https=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">sticky_sessions=None</em>, <em class="sig-param">vpc_uuid=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.LoadBalancer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a DigitalOcean Load Balancer resource. This can be used to create,
 modify, and delete Load Balancers.</p>
 <dl class="field-list simple">
@@ -3736,6 +3845,7 @@ Default value is <code class="docutils literal notranslate"><span class="pre">fa
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region to start in</p></li>
 <li><p><strong>sticky_sessions</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">sticky_sessions</span></code> block to be assigned to the
 Load Balancer. The <code class="docutils literal notranslate"><span class="pre">sticky_sessions</span></code> block is documented below. Only 1 sticky_sessions block is allowed.</p></li>
+<li><p><strong>vpc_uuid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC where the load balancer will be located.</p></li>
 </ul>
 </dd>
 </dl>
@@ -3861,9 +3971,15 @@ Load Balancer. The <code class="docutils literal notranslate"><span class="pre">
 <dd><p>The uniform resource name for the Load Balancer</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_digitalocean.LoadBalancer.vpc_uuid">
+<code class="sig-name descname">vpc_uuid</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.LoadBalancer.vpc_uuid" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ID of the VPC where the load balancer will be located.</p>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_digitalocean.LoadBalancer.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">algorithm=None</em>, <em class="sig-param">droplet_ids=None</em>, <em class="sig-param">droplet_tag=None</em>, <em class="sig-param">enable_proxy_protocol=None</em>, <em class="sig-param">forwarding_rules=None</em>, <em class="sig-param">healthcheck=None</em>, <em class="sig-param">ip=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">redirect_http_to_https=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">sticky_sessions=None</em>, <em class="sig-param">urn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.LoadBalancer.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">algorithm=None</em>, <em class="sig-param">droplet_ids=None</em>, <em class="sig-param">droplet_tag=None</em>, <em class="sig-param">enable_proxy_protocol=None</em>, <em class="sig-param">forwarding_rules=None</em>, <em class="sig-param">healthcheck=None</em>, <em class="sig-param">ip=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">redirect_http_to_https=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">sticky_sessions=None</em>, <em class="sig-param">urn=None</em>, <em class="sig-param">vpc_uuid=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.LoadBalancer.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LoadBalancer resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -3892,6 +4008,7 @@ Default value is <code class="docutils literal notranslate"><span class="pre">fa
 <li><p><strong>sticky_sessions</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A <code class="docutils literal notranslate"><span class="pre">sticky_sessions</span></code> block to be assigned to the
 Load Balancer. The <code class="docutils literal notranslate"><span class="pre">sticky_sessions</span></code> block is documented below. Only 1 sticky_sessions block is allowed.</p></li>
 <li><p><strong>urn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The uniform resource name for the Load Balancer</p></li>
+<li><p><strong>vpc_uuid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The ID of the VPC where the load balancer will be located.</p></li>
 </ul>
 </dd>
 </dl>
@@ -4090,7 +4207,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.Provider">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">Provider</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_endpoint=None</em>, <em class="sig-param">spaces_access_id=None</em>, <em class="sig-param">spaces_secret_key=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Provider" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">Provider</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">api_endpoint=None</em>, <em class="sig-param">spaces_access_id=None</em>, <em class="sig-param">spaces_endpoint=None</em>, <em class="sig-param">spaces_secret_key=None</em>, <em class="sig-param">token=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Provider" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider type for the digitalocean package. By default, resources use package-wide configuration
 settings, however an explicit <code class="docutils literal notranslate"><span class="pre">Provider</span></code> instance may be created and passed during resource
 construction to achieve fine-grained programmatic control over provider settings. See the
@@ -4102,6 +4219,7 @@ construction to achieve fine-grained programmatic control over provider settings
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>api_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL to use for the DigitalOcean API.</p></li>
 <li><p><strong>spaces_access_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The access key ID for Spaces API operations.</p></li>
+<li><p><strong>spaces_endpoint</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL to use for the DigitalOcean Spaces API.</p></li>
 <li><p><strong>spaces_secret_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The secret access key for Spaces API operations.</p></li>
 <li><p><strong>token</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The token key for API operations.</p></li>
 </ul>
@@ -4147,7 +4265,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_digitalocean.SpacesBucket">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">SpacesBucket</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acl=None</em>, <em class="sig-param">cors_rules=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.SpacesBucket" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">SpacesBucket</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acl=None</em>, <em class="sig-param">cors_rules=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">lifecycle_rules=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">versioning=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.SpacesBucket" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a bucket resource for Spaces, DigitalOcean’s object storage product.</p>
 <p>The <a class="reference external" href="https://developers.digitalocean.com/documentation/spaces/">Spaces API</a> was
 designed to be interoperable with Amazon’s AWS S3 API. This allows users to
@@ -4166,10 +4284,12 @@ example:</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Canned ACL applied on bucket creation (<code class="docutils literal notranslate"><span class="pre">private</span></code> or <code class="docutils literal notranslate"><span class="pre">public-read</span></code>)</p></li>
-<li><p><strong>cors_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A container holding a list of elements describing allowed methods for a specific origin.</p></li>
+<li><p><strong>cors_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A rule of Cross-Origin Resource Sharing (documented below).</p></li>
 <li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Unless <code class="docutils literal notranslate"><span class="pre">true</span></code>, the bucket will only be destroyed if empty (Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>)</p></li>
+<li><p><strong>lifecycle_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A configuration of object lifecycle management (documented below).</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region where the bucket resides (Defaults to <code class="docutils literal notranslate"><span class="pre">nyc3</span></code>)</p></li>
+<li><p><strong>versioning</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A state of versioning (documented below)</p></li>
 </ul>
 </dd>
 </dl>
@@ -4179,6 +4299,33 @@ example:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of HTTP methods (e.g. <code class="docutils literal notranslate"><span class="pre">GET</span></code>) which are allowed from the specified origin.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of hosts from which requests using the specified methods are allowed. A host may contain one wildcard (e.g. <a class="reference external" href="http://">http://</a><a href="#id13"><span class="problematic" id="id14">*</span></a>.example.com).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxAgeSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The time in seconds that browser can cache the response for a preflight request.</p></li>
+</ul>
+<p>The <strong>lifecycle_rules</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">abortIncompleteMultipartUploadDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days after initiating a multipart
+upload when the multipart upload must be completed or else Spaces will abort the upload.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies lifecycle rule status.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expiration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies a time period after which applicable objects expire (documented below).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">date</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the date/time after which you want applicable objects to expire. The argument uses
+RFC3339 format, e.g. “2020-03-22T15:03:55Z” or parts thereof e.g. “2019-02-28”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days after object creation when the applicable objects will expire.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expiredObjectDeleteMarker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - On a versioned bucket (versioning-enabled or versioning-suspended
+bucket), setting this to true directs Spaces to delete expired object delete markers.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Unique identifier for the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">noncurrentVersionExpiration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies when non-current object versions expire (documented below).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days after which an object’s non-current versions expire.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Object key prefix identifying one or more objects to which the rule applies.</p></li>
+</ul>
+<p>The <strong>versioning</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable versioning. Once you version-enable a bucket, it can never return to an unversioned
+state. You can, however, suspend versioning on that bucket.</p></li>
 </ul>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.SpacesBucket.acl">
@@ -4195,7 +4342,7 @@ example:</p>
 <dl class="attribute">
 <dt id="pulumi_digitalocean.SpacesBucket.cors_rules">
 <code class="sig-name descname">cors_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SpacesBucket.cors_rules" title="Permalink to this definition">¶</a></dt>
-<dd><p>A container holding a list of elements describing allowed methods for a specific origin.</p>
+<dd><p>A rule of Cross-Origin Resource Sharing (documented below).</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">allowedHeaders</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of headers that will be included in the CORS preflight request’s <code class="docutils literal notranslate"><span class="pre">Access-Control-Request-Headers</span></code>. A header may contain one wildcard (e.g. <code class="docutils literal notranslate"><span class="pre">x-amz-*</span></code>).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">list</span></code>) - A list of HTTP methods (e.g. <code class="docutils literal notranslate"><span class="pre">GET</span></code>) which are allowed from the specified origin.</p></li>
@@ -4208,6 +4355,33 @@ example:</p>
 <dt id="pulumi_digitalocean.SpacesBucket.force_destroy">
 <code class="sig-name descname">force_destroy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SpacesBucket.force_destroy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Unless <code class="docutils literal notranslate"><span class="pre">true</span></code>, the bucket will only be destroyed if empty (Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.SpacesBucket.lifecycle_rules">
+<code class="sig-name descname">lifecycle_rules</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SpacesBucket.lifecycle_rules" title="Permalink to this definition">¶</a></dt>
+<dd><p>A configuration of object lifecycle management (documented below).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">abortIncompleteMultipartUploadDays</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the number of days after initiating a multipart
+upload when the multipart upload must be completed or else Spaces will abort the upload.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Specifies lifecycle rule status.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expiration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies a time period after which applicable objects expire (documented below).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">date</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Specifies the date/time after which you want applicable objects to expire. The argument uses
+RFC3339 format, e.g. “2020-03-22T15:03:55Z” or parts thereof e.g. “2019-02-28”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the number of days after object creation when the applicable objects will expire.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expiredObjectDeleteMarker</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - On a versioned bucket (versioning-enabled or versioning-suspended
+bucket), setting this to true directs Spaces to delete expired object delete markers.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Unique identifier for the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">noncurrentVersionExpiration</span></code> (<code class="docutils literal notranslate"><span class="pre">dict</span></code>) - Specifies when non-current object versions expire (documented below).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - Specifies the number of days after which an object’s non-current versions expire.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - Object key prefix identifying one or more objects to which the rule applies.</p></li>
+</ul>
 </dd></dl>
 
 <dl class="attribute">
@@ -4228,9 +4402,19 @@ example:</p>
 <dd><p>The uniform resource name for the bucket</p>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="pulumi_digitalocean.SpacesBucket.versioning">
+<code class="sig-name descname">versioning</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SpacesBucket.versioning" title="Permalink to this definition">¶</a></dt>
+<dd><p>A state of versioning (documented below)</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable versioning. Once you version-enable a bucket, it can never return to an unversioned
+state. You can, however, suspend versioning on that bucket.</p></li>
+</ul>
+</dd></dl>
+
 <dl class="method">
 <dt id="pulumi_digitalocean.SpacesBucket.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acl=None</em>, <em class="sig-param">bucket_domain_name=None</em>, <em class="sig-param">cors_rules=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">urn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.SpacesBucket.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acl=None</em>, <em class="sig-param">bucket_domain_name=None</em>, <em class="sig-param">cors_rules=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">lifecycle_rules=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">urn=None</em>, <em class="sig-param">versioning=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.SpacesBucket.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SpacesBucket resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -4241,11 +4425,13 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Canned ACL applied on bucket creation (<code class="docutils literal notranslate"><span class="pre">private</span></code> or <code class="docutils literal notranslate"><span class="pre">public-read</span></code>)</p></li>
 <li><p><strong>bucket_domain_name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The FQDN of the bucket (e.g. bucket-name.nyc3.digitaloceanspaces.com)</p></li>
-<li><p><strong>cors_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A container holding a list of elements describing allowed methods for a specific origin.</p></li>
+<li><p><strong>cors_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A rule of Cross-Origin Resource Sharing (documented below).</p></li>
 <li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Unless <code class="docutils literal notranslate"><span class="pre">true</span></code>, the bucket will only be destroyed if empty (Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>)</p></li>
+<li><p><strong>lifecycle_rules</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – A configuration of object lifecycle management (documented below).</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket</p></li>
 <li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region where the bucket resides (Defaults to <code class="docutils literal notranslate"><span class="pre">nyc3</span></code>)</p></li>
 <li><p><strong>urn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The uniform resource name for the bucket</p></li>
+<li><p><strong>versioning</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A state of versioning (documented below)</p></li>
 </ul>
 </dd>
 </dl>
@@ -4255,6 +4441,33 @@ properties used to qualify the lookup.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowedMethods</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of HTTP methods (e.g. <code class="docutils literal notranslate"><span class="pre">GET</span></code>) which are allowed from the specified origin.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">allowedOrigins</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[list]</span></code>) - A list of hosts from which requests using the specified methods are allowed. A host may contain one wildcard (e.g. <a class="reference external" href="http://">http://</a><a href="#id17"><span class="problematic" id="id18">*</span></a>.example.com).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">maxAgeSeconds</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The time in seconds that browser can cache the response for a preflight request.</p></li>
+</ul>
+<p>The <strong>lifecycle_rules</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">abortIncompleteMultipartUploadDays</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days after initiating a multipart
+upload when the multipart upload must be completed or else Spaces will abort the upload.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Specifies lifecycle rule status.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expiration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies a time period after which applicable objects expire (documented below).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">date</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Specifies the date/time after which you want applicable objects to expire. The argument uses
+RFC3339 format, e.g. “2020-03-22T15:03:55Z” or parts thereof e.g. “2019-02-28”.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days after object creation when the applicable objects will expire.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">expiredObjectDeleteMarker</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - On a versioned bucket (versioning-enabled or versioning-suspended
+bucket), setting this to true directs Spaces to delete expired object delete markers.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Unique identifier for the rule.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">noncurrentVersionExpiration</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[dict]</span></code>) - Specifies when non-current object versions expire (documented below).</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">days</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - Specifies the number of days after which an object’s non-current versions expire.</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">prefix</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - Object key prefix identifying one or more objects to which the rule applies.</p></li>
+</ul>
+<p>The <strong>versioning</strong> object supports the following:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">enabled</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable versioning. Once you version-enable a bucket, it can never return to an unversioned
+state. You can, however, suspend versioning on that bucket.</p></li>
 </ul>
 </dd></dl>
 
@@ -4279,6 +4492,223 @@ into a format of their choosing before writing those properties to the resource 
 <dl class="method">
 <dt id="pulumi_digitalocean.SpacesBucket.translate_input_property">
 <code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.SpacesBucket.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_digitalocean.SpacesBucketObject">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">SpacesBucketObject</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acl=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">cache_control=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">content_base64=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_language=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">source=None</em>, <em class="sig-param">website_redirect=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.SpacesBucketObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a SpacesBucketObject resource with the given unique name, props, and options.
+:param str resource_name: The name of the resource.
+:param pulumi.ResourceOptions opts: Options for the resource.
+:param pulumi.Input[str] acl: The canned ACL to apply. DigitalOcean supports “private” and “public-read”. (Defaults to “private”.)
+:param pulumi.Input[str] bucket: The name of the bucket to put the file in.
+:param pulumi.Input[str] cache_control: Specifies caching behavior along the request/reply chain Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9">w3c cache_control</a> for further details.
+:param pulumi.Input[str] content: Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.
+:param pulumi.Input[str] content_base64: Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the <code class="docutils literal notranslate"><span class="pre">gzipbase64</span></code> function with small text strings. For larger objects, use <code class="docutils literal notranslate"><span class="pre">source</span></code> to stream the content from a disk file.
+:param pulumi.Input[str] content_disposition: Specifies presentational information for the object. Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1">w3c content_disposition</a> for further information.
+:param pulumi.Input[str] content_encoding: Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11">w3c content encoding</a> for further information.
+:param pulumi.Input[str] content_language: The language the content is in e.g. en-US or en-GB.
+:param pulumi.Input[str] content_type: A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.
+:param pulumi.Input[str] etag: the ETag generated for the object (an MD5 sum of the object content). The hash is an MD5 digest of the</p>
+<blockquote>
+<div><p>object data. For objects created by either the Multipart Upload or Part Copy operation, the hash is not an MD5
+digest. More information on possible values can be found on <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/API/RESTCommonResponseHeaders.html">Common Response Headers</a>.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the object to be deleted by removing any legal hold on any object version.
+Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>. This value should be set to <code class="docutils literal notranslate"><span class="pre">true</span></code> only if the bucket has S3 object lock enabled.</p></li>
+<li><p><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the object once it is in the bucket.</p></li>
+<li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of keys/values to provision metadata (will be automatically prefixed by <code class="docutils literal notranslate"><span class="pre">x-amz-meta-</span></code>, note that only lowercase label are currently supported by the AWS Go API).</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region where the bucket resides (Defaults to <code class="docutils literal notranslate"><span class="pre">nyc3</span></code>)</p></li>
+<li><p><strong>source</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path to a file that will be read and uploaded as raw bytes for the object content.</p></li>
+<li><p><strong>website_redirect</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Specifies a target URL for <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html">website redirect</a>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="pulumi_digitalocean.SpacesBucketObject.acl">
+<code class="sig-name descname">acl</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SpacesBucketObject.acl" title="Permalink to this definition">¶</a></dt>
+<dd><p>The canned ACL to apply. DigitalOcean supports “private” and “public-read”. (Defaults to “private”.)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.SpacesBucketObject.bucket">
+<code class="sig-name descname">bucket</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SpacesBucketObject.bucket" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the bucket to put the file in.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.SpacesBucketObject.cache_control">
+<code class="sig-name descname">cache_control</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SpacesBucketObject.cache_control" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies caching behavior along the request/reply chain Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9">w3c cache_control</a> for further details.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.SpacesBucketObject.content">
+<code class="sig-name descname">content</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SpacesBucketObject.content" title="Permalink to this definition">¶</a></dt>
+<dd><p>Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.SpacesBucketObject.content_base64">
+<code class="sig-name descname">content_base64</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SpacesBucketObject.content_base64" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the <code class="docutils literal notranslate"><span class="pre">gzipbase64</span></code> function with small text strings. For larger objects, use <code class="docutils literal notranslate"><span class="pre">source</span></code> to stream the content from a disk file.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.SpacesBucketObject.content_disposition">
+<code class="sig-name descname">content_disposition</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SpacesBucketObject.content_disposition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies presentational information for the object. Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1">w3c content_disposition</a> for further information.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.SpacesBucketObject.content_encoding">
+<code class="sig-name descname">content_encoding</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SpacesBucketObject.content_encoding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11">w3c content encoding</a> for further information.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.SpacesBucketObject.content_language">
+<code class="sig-name descname">content_language</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SpacesBucketObject.content_language" title="Permalink to this definition">¶</a></dt>
+<dd><p>The language the content is in e.g. en-US or en-GB.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.SpacesBucketObject.content_type">
+<code class="sig-name descname">content_type</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SpacesBucketObject.content_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.SpacesBucketObject.etag">
+<code class="sig-name descname">etag</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SpacesBucketObject.etag" title="Permalink to this definition">¶</a></dt>
+<dd><p>the ETag generated for the object (an MD5 sum of the object content). The hash is an MD5 digest of the
+object data. For objects created by either the Multipart Upload or Part Copy operation, the hash is not an MD5
+digest. More information on possible values can be found on <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/API/RESTCommonResponseHeaders.html">Common Response Headers</a>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.SpacesBucketObject.force_destroy">
+<code class="sig-name descname">force_destroy</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SpacesBucketObject.force_destroy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Allow the object to be deleted by removing any legal hold on any object version.
+Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>. This value should be set to <code class="docutils literal notranslate"><span class="pre">true</span></code> only if the bucket has S3 object lock enabled.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.SpacesBucketObject.key">
+<code class="sig-name descname">key</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SpacesBucketObject.key" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the object once it is in the bucket.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.SpacesBucketObject.metadata">
+<code class="sig-name descname">metadata</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SpacesBucketObject.metadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of keys/values to provision metadata (will be automatically prefixed by <code class="docutils literal notranslate"><span class="pre">x-amz-meta-</span></code>, note that only lowercase label are currently supported by the AWS Go API).</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.SpacesBucketObject.region">
+<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SpacesBucketObject.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>The region where the bucket resides (Defaults to <code class="docutils literal notranslate"><span class="pre">nyc3</span></code>)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.SpacesBucketObject.source">
+<code class="sig-name descname">source</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SpacesBucketObject.source" title="Permalink to this definition">¶</a></dt>
+<dd><p>The path to a file that will be read and uploaded as raw bytes for the object content.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.SpacesBucketObject.version_id">
+<code class="sig-name descname">version_id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SpacesBucketObject.version_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>A unique version ID value for the object, if bucket versioning is enabled.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.SpacesBucketObject.website_redirect">
+<code class="sig-name descname">website_redirect</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.SpacesBucketObject.website_redirect" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specifies a target URL for <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html">website redirect</a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_digitalocean.SpacesBucketObject.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">acl=None</em>, <em class="sig-param">bucket=None</em>, <em class="sig-param">cache_control=None</em>, <em class="sig-param">content=None</em>, <em class="sig-param">content_base64=None</em>, <em class="sig-param">content_disposition=None</em>, <em class="sig-param">content_encoding=None</em>, <em class="sig-param">content_language=None</em>, <em class="sig-param">content_type=None</em>, <em class="sig-param">etag=None</em>, <em class="sig-param">force_destroy=None</em>, <em class="sig-param">key=None</em>, <em class="sig-param">metadata=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">source=None</em>, <em class="sig-param">version_id=None</em>, <em class="sig-param">website_redirect=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.SpacesBucketObject.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing SpacesBucketObject resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>acl</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The canned ACL to apply. DigitalOcean supports “private” and “public-read”. (Defaults to “private”.)</p></li>
+<li><p><strong>bucket</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the bucket to put the file in.</p></li>
+<li><p><strong>cache_control</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies caching behavior along the request/reply chain Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9">w3c cache_control</a> for further details.</p>
+</p></li>
+<li><p><strong>content</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Literal string value to use as the object content, which will be uploaded as UTF-8-encoded text.</p></li>
+<li><p><strong>content_base64</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Base64-encoded data that will be decoded and uploaded as raw bytes for the object content. This allows safely uploading non-UTF8 binary data, but is recommended only for small content such as the result of the <code class="docutils literal notranslate"><span class="pre">gzipbase64</span></code> function with small text strings. For larger objects, use <code class="docutils literal notranslate"><span class="pre">source</span></code> to stream the content from a disk file.</p></li>
+<li><p><strong>content_disposition</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies presentational information for the object. Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec19.html#sec19.5.1">w3c content_disposition</a> for further information.</p>
+</p></li>
+<li><p><strong>content_encoding</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies what content encodings have been applied to the object and thus what decoding mechanisms must be applied to obtain the media-type referenced by the Content-Type header field. Read <a class="reference external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11">w3c content encoding</a> for further information.</p>
+</p></li>
+<li><p><strong>content_language</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The language the content is in e.g. en-US or en-GB.</p></li>
+<li><p><strong>content_type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A standard MIME type describing the format of the object data, e.g. application/octet-stream. All Valid MIME Types are valid for this input.</p></li>
+<li><p><strong>etag</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>the ETag generated for the object (an MD5 sum of the object content). The hash is an MD5 digest of the
+object data. For objects created by either the Multipart Upload or Part Copy operation, the hash is not an MD5
+digest. More information on possible values can be found on <a class="reference external" href="https://docs.aws.amazon.com/AmazonS3/latest/API/RESTCommonResponseHeaders.html">Common Response Headers</a>.</p>
+</p></li>
+<li><p><strong>force_destroy</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Allow the object to be deleted by removing any legal hold on any object version.
+Default is <code class="docutils literal notranslate"><span class="pre">false</span></code>. This value should be set to <code class="docutils literal notranslate"><span class="pre">true</span></code> only if the bucket has S3 object lock enabled.</p></li>
+<li><p><strong>key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the object once it is in the bucket.</p></li>
+<li><p><strong>metadata</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of keys/values to provision metadata (will be automatically prefixed by <code class="docutils literal notranslate"><span class="pre">x-amz-meta-</span></code>, note that only lowercase label are currently supported by the AWS Go API).</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The region where the bucket resides (Defaults to <code class="docutils literal notranslate"><span class="pre">nyc3</span></code>)</p></li>
+<li><p><strong>source</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The path to a file that will be read and uploaded as raw bytes for the object content.</p></li>
+<li><p><strong>version_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A unique version ID value for the object, if bucket versioning is enabled.</p></li>
+<li><p><strong>website_redirect</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>Specifies a target URL for <a class="reference external" href="http://docs.aws.amazon.com/AmazonS3/latest/dev/how-to-page-redirect.html">website redirect</a>.</p>
+</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_digitalocean.SpacesBucketObject.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.SpacesBucketObject.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_digitalocean.SpacesBucketObject.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.SpacesBucketObject.translate_input_property" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
 a format of their choosing before sending those properties to the Pulumi engine.</p>
 <dl class="field-list simple">
@@ -4830,6 +5260,127 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 </dd></dl>
 
+<dl class="class">
+<dt id="pulumi_digitalocean.Vpc">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">Vpc</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ip_range=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Vpc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a <a class="reference external" href="https://developers.digitalocean.com/documentation/v2/#vpcs">DigitalOcean VPC</a> resource.</p>
+<p>VPCs are virtual networks containing resources that can communicate with each
+other in full isolation, using private IP addresses.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A free-form text field up to a limit of 255 characters to describe the VPC.</p></li>
+<li><p><strong>ip_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The range of IP addresses for the VPC in CIDR notation. Network ranges cannot overlap with other networks in the same account and must be in range of private addresses as defined in RFC1918. It may not be larger than <code class="docutils literal notranslate"><span class="pre">/16</span></code> or smaller than <code class="docutils literal notranslate"><span class="pre">/24</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for the VPC. Must be unique and contain alphanumeric characters, dashes, and periods only.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DigitalOcean region slug for the VPC’s location.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="pulumi_digitalocean.Vpc.created_at">
+<code class="sig-name descname">created_at</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Vpc.created_at" title="Permalink to this definition">¶</a></dt>
+<dd><p>The date and time of when the VPC was created.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.Vpc.default">
+<code class="sig-name descname">default</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Vpc.default" title="Permalink to this definition">¶</a></dt>
+<dd><p>A boolean indicating whether or not the VPC is the default one for the region.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.Vpc.description">
+<code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Vpc.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>A free-form text field up to a limit of 255 characters to describe the VPC.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.Vpc.ip_range">
+<code class="sig-name descname">ip_range</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Vpc.ip_range" title="Permalink to this definition">¶</a></dt>
+<dd><p>The range of IP addresses for the VPC in CIDR notation. Network ranges cannot overlap with other networks in the same account and must be in range of private addresses as defined in RFC1918. It may not be larger than <code class="docutils literal notranslate"><span class="pre">/16</span></code> or smaller than <code class="docutils literal notranslate"><span class="pre">/24</span></code>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.Vpc.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Vpc.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>A name for the VPC. Must be unique and contain alphanumeric characters, dashes, and periods only.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.Vpc.region">
+<code class="sig-name descname">region</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Vpc.region" title="Permalink to this definition">¶</a></dt>
+<dd><p>The DigitalOcean region slug for the VPC’s location.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_digitalocean.Vpc.urn">
+<code class="sig-name descname">urn</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_digitalocean.Vpc.urn" title="Permalink to this definition">¶</a></dt>
+<dd><p>The uniform resource name (URN) for the VPC.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_digitalocean.Vpc.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">created_at=None</em>, <em class="sig-param">default=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ip_range=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">urn=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Vpc.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing Vpc resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>str</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>created_at</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The date and time of when the VPC was created.</p></li>
+<li><p><strong>default</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether or not the VPC is the default one for the region.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A free-form text field up to a limit of 255 characters to describe the VPC.</p></li>
+<li><p><strong>ip_range</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The range of IP addresses for the VPC in CIDR notation. Network ranges cannot overlap with other networks in the same account and must be in range of private addresses as defined in RFC1918. It may not be larger than <code class="docutils literal notranslate"><span class="pre">/16</span></code> or smaller than <code class="docutils literal notranslate"><span class="pre">/24</span></code>.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for the VPC. Must be unique and contain alphanumeric characters, dashes, and periods only.</p></li>
+<li><p><strong>region</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The DigitalOcean region slug for the VPC’s location.</p></li>
+<li><p><strong>urn</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The uniform resource name (URN) for the VPC.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_digitalocean.Vpc.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Vpc.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pulumi_digitalocean.Vpc.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param">prop</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.Vpc.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 <dl class="function">
 <dt id="pulumi_digitalocean.get_account">
 <code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_account</code><span class="sig-paren">(</span><em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_account" title="Permalink to this definition">¶</a></dt>
@@ -5186,6 +5737,21 @@ resources.</p>
 <li><p><strong>name</strong> (<em>str</em>) – The name of the volume snapshot.</p></li>
 <li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to apply to the volume snapshot list returned by DigitalOcean. This allows more advanced filtering not supported from the DigitalOcean API. This filtering is done locally on what DigitalOcean returns.</p></li>
 <li><p><strong>region</strong> (<em>str</em>) – A “slug” representing a DigitalOcean region (e.g. <code class="docutils literal notranslate"><span class="pre">nyc1</span></code>). If set, only volume snapshots available in the region will be returned.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_digitalocean.get_vpc">
+<code class="sig-prename descclassname">pulumi_digitalocean.</code><code class="sig-name descname">get_vpc</code><span class="sig-paren">(</span><em class="sig-param">id=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">region=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_digitalocean.get_vpc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Use this data source to access information about an existing resource.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> (<em>str</em>) – The unique identifier of an existing VPC.</p></li>
+<li><p><strong>name</strong> (<em>str</em>) – The name of an existing VPC.</p></li>
+<li><p><strong>region</strong> (<em>str</em>) – The DigitalOcean region slug for the VPC’s location.</p></li>
 </ul>
 </dd>
 </dl>

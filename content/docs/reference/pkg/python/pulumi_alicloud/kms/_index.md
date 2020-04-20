@@ -99,6 +99,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="class">
+<dt id="pulumi_alicloud.kms.AwaitableGetAliasesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">AwaitableGetAliasesResult</code><span class="sig-paren">(</span><em class="sig-param">aliases=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.AwaitableGetAliasesResult" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="class">
 <dt id="pulumi_alicloud.kms.AwaitableGetCiphertextResult">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">AwaitableGetCiphertextResult</code><span class="sig-paren">(</span><em class="sig-param">ciphertext_blob=None</em>, <em class="sig-param">encryption_context=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">key_id=None</em>, <em class="sig-param">plaintext=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.AwaitableGetCiphertextResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -212,6 +217,36 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><p>str</p>
 </dd>
 </dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="pulumi_alicloud.kms.GetAliasesResult">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">GetAliasesResult</code><span class="sig-paren">(</span><em class="sig-param">aliases=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.GetAliasesResult" title="Permalink to this definition">¶</a></dt>
+<dd><p>A collection of values returned by getAliases.</p>
+<dl class="attribute">
+<dt id="pulumi_alicloud.kms.GetAliasesResult.aliases">
+<code class="sig-name descname">aliases</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.GetAliasesResult.aliases" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of KMS User alias. Each element contains the following attributes:</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.kms.GetAliasesResult.id">
+<code class="sig-name descname">id</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.GetAliasesResult.id" title="Permalink to this definition">¶</a></dt>
+<dd><p>id is the provider-assigned unique ID for this managed resource.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.kms.GetAliasesResult.ids">
+<code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.GetAliasesResult.ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of kms aliases IDs. The value is same as KMS alias_name.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.kms.GetAliasesResult.names">
+<code class="sig-name descname">names</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.kms.GetAliasesResult.names" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of KMS alias name.</p>
 </dd></dl>
 
 </dd></dl>
@@ -557,6 +592,23 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 </dd></dl>
 
+</dd></dl>
+
+<dl class="function">
+<dt id="pulumi_alicloud.kms.get_aliases">
+<code class="sig-prename descclassname">pulumi_alicloud.kms.</code><code class="sig-name descname">get_aliases</code><span class="sig-paren">(</span><em class="sig-param">ids=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.kms.get_aliases" title="Permalink to this definition">¶</a></dt>
+<dd><p>This data source provides a list of KMS aliases in an Alibaba Cloud account according to the specified filters.</p>
+<blockquote>
+<div><p><strong>NOTE:</strong> Available in v1.79.0+.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ids</strong> (<em>list</em>) – A list of KMS aliases IDs. The value is same as KMS alias_name.</p></li>
+<li><p><strong>name_regex</strong> (<em>str</em>) – A regex string to filter the results by the KMS alias name.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="function">

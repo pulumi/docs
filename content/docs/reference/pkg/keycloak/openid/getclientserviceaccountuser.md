@@ -11,7 +11,7 @@ block_external_search_index: true
 
 
 
-## Using GetClientServiceAccountUser
+## Using GetClientServiceAccountUser {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -141,7 +141,7 @@ The following arguments are supported:
 
 
 
-## GetClientServiceAccountUser Result
+## GetClientServiceAccountUser Result {#result}
 
 The following output properties are available:
 
@@ -508,7 +508,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Client<wbr>Service<wbr>Account<wbr>User<wbr>Federated<wbr>Identity</h4>
+
+<h4 id="getclientserviceaccountuserfederatedidentity">Get<wbr>Client<wbr>Service<wbr>Account<wbr>User<wbr>Federated<wbr>Identity</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/keycloak/types/output/#GetClientServiceAccountUserFederatedIdentity">output</a> API doc for this type.
 {{% /choosable %}}

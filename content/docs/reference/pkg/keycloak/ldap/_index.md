@@ -8,18 +8,20 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="fullnamemapper" title="FullNameMapper"><span class="symbol resource"></span>FullNameMapper</a></li>
     <li><a href="groupmapper" title="GroupMapper"><span class="symbol resource"></span>GroupMapper</a></li>
+    <li><a href="hardcodedgroupmapper" title="HardcodedGroupMapper"><span class="symbol resource"></span>HardcodedGroupMapper</a></li>
     <li><a href="hardcodedrolemapper" title="HardcodedRoleMapper"><span class="symbol resource"></span>HardcodedRoleMapper</a></li>
     <li><a href="msadldsuseraccountcontrolmapper" title="MsadLdsUserAccountControlMapper"><span class="symbol resource"></span>MsadLdsUserAccountControlMapper</a></li>
     <li><a href="msaduseraccountcontrolmapper" title="MsadUserAccountControlMapper"><span class="symbol resource"></span>MsadUserAccountControlMapper</a></li>
+    <li><a href="rolemapper" title="RoleMapper"><span class="symbol resource"></span>RoleMapper</a></li>
     <li><a href="userattributemapper" title="UserAttributeMapper"><span class="symbol resource"></span>UserAttributeMapper</a></li>
     <li><a href="userfederation" title="UserFederation"><span class="symbol resource"></span>UserFederation</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-keycloak">https://github.com/pulumi/pulumi-keycloak</a></dd>
@@ -28,6 +30,6 @@ block_external_search_index: true
     <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).</dd>
 	<dt>Version</dt>
-	<dd>2.0.0</dd>
+	<dd>2.1.0</dd>
 </dl>
 

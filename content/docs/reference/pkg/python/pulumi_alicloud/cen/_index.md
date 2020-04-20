@@ -25,7 +25,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="class">
 <dt id="pulumi_alicloud.cen.AwaitableGetFlowlogsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cen.</code><code class="sig-name descname">AwaitableGetFlowlogsResult</code><span class="sig-paren">(</span><em class="sig-param">cen_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">flowlogs=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">log_store_name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">project_name=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.AwaitableGetFlowlogsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cen.</code><code class="sig-name descname">AwaitableGetFlowlogsResult</code><span class="sig-paren">(</span><em class="sig-param">cen_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">flowlogs=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">log_store_name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">project_name=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.AwaitableGetFlowlogsResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="class">
@@ -510,7 +510,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.cen.GetFlowlogsResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cen.</code><code class="sig-name descname">GetFlowlogsResult</code><span class="sig-paren">(</span><em class="sig-param">cen_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">flowlogs=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">log_store_name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">project_name=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.GetFlowlogsResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cen.</code><code class="sig-name descname">GetFlowlogsResult</code><span class="sig-paren">(</span><em class="sig-param">cen_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">flowlogs=None</em>, <em class="sig-param">id=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">log_store_name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">names=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">project_name=None</em>, <em class="sig-param">status=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.GetFlowlogsResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getFlowlogs.</p>
 <dl class="attribute">
 <dt id="pulumi_alicloud.cen.GetFlowlogsResult.cen_id">
@@ -648,7 +648,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="class">
 <dt id="pulumi_alicloud.cen.Instance">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cen.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">protection_level=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.Instance" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_alicloud.cen.</code><code class="sig-name descname">Instance</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">protection_level=None</em>, <em class="sig-param">tags=None</em>, <em class="sig-param">__props__=None</em>, <em class="sig-param">__name__=None</em>, <em class="sig-param">__opts__=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.Instance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a CEN instance resource. Cloud Enterprise Network (CEN) is a service that allows you to create a global network for rapidly building a distributed business system with a hybrid cloud computing solution. CEN enables you to build a secure, private, and enterprise-class interconnected network between VPCs in different regions and your local data centers. CEN provides enterprise-class scalability that automatically responds to your dynamic computing requirements.</p>
 <p>For information about CEN and how to use it, see <a class="reference external" href="https://www.alibabacloud.com/help/doc-detail/59870.htm">What is Cloud Enterprise Network</a>.</p>
 <dl class="field-list simple">
@@ -659,14 +659,11 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the CEN instance. Defaults to null. The description must be 2 to 256 characters in length. It must start with a letter, and cannot start with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the CEN instance. Defaults to null. The name must be 2 to 128 characters in length and can contain letters, numbers, periods (.), underscores (<a href="#id3"><span class="problematic" id="id4">*</span></a>), and hyphens (-). The name must start with a letter, but cannot start with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>.</p></li>
-<li><p><strong>protection_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Available in 1.76.0+) Indicates the allowed level of CIDR block overlapping. Valid values:</p></li>
+<li><p><strong>protection_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Available in 1.76.0+) Indicates the allowed level of CIDR block overlapping.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">FULL</span><span class="p">:</span> <span class="n">No</span> <span class="n">overlapping</span> <span class="n">CIDR</span> <span class="n">blocks</span> <span class="n">are</span> <span class="n">allowed</span><span class="o">.</span>
-<span class="o">-</span> <span class="n">REDUCE</span><span class="p">:</span> <span class="n">Overlapping</span> <span class="n">CIDR</span> <span class="n">blocks</span> <span class="n">are</span> <span class="n">allowed</span><span class="o">.</span> <span class="n">However</span><span class="p">,</span> <span class="n">the</span> <span class="n">overlapping</span> <span class="n">CIDR</span> <span class="n">blocks</span> <span class="n">cannot</span> <span class="n">be</span> <span class="n">identical</span><span class="o">.</span>
-</pre></div>
-</div>
 <dl class="attribute">
 <dt id="pulumi_alicloud.cen.Instance.description">
 <code class="sig-name descname">description</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.Instance.description" title="Permalink to this definition">¶</a></dt>
@@ -682,16 +679,24 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dl class="attribute">
 <dt id="pulumi_alicloud.cen.Instance.protection_level">
 <code class="sig-name descname">protection_level</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.Instance.protection_level" title="Permalink to this definition">¶</a></dt>
-<dd><p>(Available in 1.76.0+) Indicates the allowed level of CIDR block overlapping. Valid values:</p>
-<ul class="simple">
-<li><p>FULL: No overlapping CIDR blocks are allowed.</p></li>
-<li><p>REDUCE: Overlapping CIDR blocks are allowed. However, the overlapping CIDR blocks cannot be identical.</p></li>
-</ul>
+<dd><p>(Available in 1.76.0+) Indicates the allowed level of CIDR block overlapping.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.cen.Instance.status">
+<code class="sig-name descname">status</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.Instance.status" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Cen Instance current status.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="pulumi_alicloud.cen.Instance.tags">
+<code class="sig-name descname">tags</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_alicloud.cen.Instance.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping of tags to assign to the resource.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="pulumi_alicloud.cen.Instance.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">protection_level=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.Instance.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">protection_level=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">tags=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.Instance.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Instance resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -703,14 +708,12 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The description of the CEN instance. Defaults to null. The description must be 2 to 256 characters in length. It must start with a letter, and cannot start with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the CEN instance. Defaults to null. The name must be 2 to 128 characters in length and can contain letters, numbers, periods (.), underscores (<a href="#id7"><span class="problematic" id="id8">*</span></a>), and hyphens (-). The name must start with a letter, but cannot start with <a class="reference external" href="http://">http://</a> or <a class="reference external" href="https://">https://</a>.</p></li>
-<li><p><strong>protection_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Available in 1.76.0+) Indicates the allowed level of CIDR block overlapping. Valid values:</p></li>
+<li><p><strong>protection_level</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Available in 1.76.0+) Indicates the allowed level of CIDR block overlapping.</p></li>
+<li><p><strong>status</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The Cen Instance current status.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>dict</em><em>]</em>) – A mapping of tags to assign to the resource.</p></li>
 </ul>
 </dd>
 </dl>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">FULL</span><span class="p">:</span> <span class="n">No</span> <span class="n">overlapping</span> <span class="n">CIDR</span> <span class="n">blocks</span> <span class="n">are</span> <span class="n">allowed</span><span class="o">.</span>
-<span class="o">-</span> <span class="n">REDUCE</span><span class="p">:</span> <span class="n">Overlapping</span> <span class="n">CIDR</span> <span class="n">blocks</span> <span class="n">are</span> <span class="n">allowed</span><span class="o">.</span> <span class="n">However</span><span class="p">,</span> <span class="n">the</span> <span class="n">overlapping</span> <span class="n">CIDR</span> <span class="n">blocks</span> <span class="n">cannot</span> <span class="n">be</span> <span class="n">identical</span><span class="o">.</span>
-</pre></div>
-</div>
 </dd></dl>
 
 <dl class="method">
@@ -1059,7 +1062,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="function">
 <dt id="pulumi_alicloud.cen.get_flowlogs">
-<code class="sig-prename descclassname">pulumi_alicloud.cen.</code><code class="sig-name descname">get_flowlogs</code><span class="sig-paren">(</span><em class="sig-param">cen_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">log_store_name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">project_name=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.get_flowlogs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">pulumi_alicloud.cen.</code><code class="sig-name descname">get_flowlogs</code><span class="sig-paren">(</span><em class="sig-param">cen_id=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">ids=None</em>, <em class="sig-param">log_store_name=None</em>, <em class="sig-param">name_regex=None</em>, <em class="sig-param">output_file=None</em>, <em class="sig-param">project_name=None</em>, <em class="sig-param">status=None</em>, <em class="sig-param">opts=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_alicloud.cen.get_flowlogs" title="Permalink to this definition">¶</a></dt>
 <dd><p>This data source provides CEN flow logs available to the user.</p>
 <blockquote>
 <div><p><strong>NOTE:</strong> Available in 1.78.0+</p>
