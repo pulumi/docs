@@ -32,6 +32,7 @@ lint_markdown:
 .PHONY: serve
 serve:
 	@echo -e "\033[0;32mSERVE:\033[0m"
+	./scripts/check-hugo-version.sh
 	yarn lint-markdown --no-error
 	yarn --cwd components run build
 	$(MAKE) copy_static_prebuilt
