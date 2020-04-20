@@ -100,6 +100,9 @@ rpa = aws.iam.RolePolicyAttachment('task-exec-policy',
 )
 ```
 
+To learn more about creating [reusable components]({{< relref "/docs/intro/concepts/programming-model/#components" >}}), read about Pulumi's programming model which shows how to author components.
+
+
 ## Polyglot applications
 
 This example shows how to deploy multiple functions in Google Cloud Functions. Note that we have one function written in Python and another in Go. The code that deploys the function is written in python and creates a Buckets to hold the function code and deploys both functions in the same script.
