@@ -28,7 +28,7 @@ const example = aws.workspaces.getBundle({
 
 
 
-## Using GetBundle
+## Using GetBundle {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -130,7 +130,7 @@ The following arguments are supported:
 
 
 
-## GetBundle Result
+## GetBundle Result {#result}
 
 The following output properties are available:
 
@@ -457,7 +457,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Bundle<wbr>Compute<wbr>Type</h4>
+
+<h4 id="getbundlecomputetype">Get<wbr>Bundle<wbr>Compute<wbr>Type</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBundleComputeType">output</a> API doc for this type.
 {{% /choosable %}}
@@ -536,7 +537,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Bundle<wbr>Root<wbr>Storage</h4>
+<h4 id="getbundlerootstorage">Get<wbr>Bundle<wbr>Root<wbr>Storage</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBundleRootStorage">output</a> API doc for this type.
 {{% /choosable %}}
@@ -615,7 +616,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Bundle<wbr>User<wbr>Storage</h4>
+<h4 id="getbundleuserstorage">Get<wbr>Bundle<wbr>User<wbr>Storage</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetBundleUserStorage">output</a> API doc for this type.
 {{% /choosable %}}

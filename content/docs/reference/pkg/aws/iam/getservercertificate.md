@@ -42,7 +42,7 @@ It will not retrieve the private key which is not available through the AWS API.
 
 
 
-## Using GetServerCertificate
+## Using GetServerCertificate {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -252,7 +252,7 @@ The following arguments are supported:
 
 
 
-## GetServerCertificate Result
+## GetServerCertificate Result {#result}
 
 The following output properties are available:
 

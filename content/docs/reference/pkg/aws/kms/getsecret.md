@@ -12,7 +12,7 @@ block_external_search_index: true
 
 
 
-## Using GetSecret
+## Using GetSecret {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -110,7 +110,7 @@ The following arguments are supported:
 
 
 
-## GetSecret Result
+## GetSecret Result {#result}
 
 The following output properties are available:
 
@@ -221,7 +221,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Secret<wbr>Secret</h4>
+
+<h4 id="getsecretsecret">Get<wbr>Secret<wbr>Secret</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSecretSecret">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSecretSecret">output</a> API doc for this type.
 {{% /choosable %}}

@@ -32,7 +32,7 @@ const dset = aws.route53.getDelegationSet({
 
 
 
-## Using GetDelegationSet
+## Using GetDelegationSet {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -134,7 +134,7 @@ The following arguments are supported:
 
 
 
-## GetDelegationSet Result
+## GetDelegationSet Result {#result}
 
 The following output properties are available:
 

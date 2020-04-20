@@ -15,7 +15,7 @@ Decrypt multiple secrets from data encrypted with the AWS KMS service.
 
 
 
-## Using GetSecrets
+## Using GetSecrets {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -117,7 +117,7 @@ The following arguments are supported:
 
 
 
-## GetSecrets Result
+## GetSecrets Result {#result}
 
 The following output properties are available:
 
@@ -264,7 +264,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Secrets<wbr>Secret</h4>
+
+<h4 id="getsecretssecret">Get<wbr>Secrets<wbr>Secret</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSecretsSecret">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSecretsSecret">output</a> API doc for this type.
 {{% /choosable %}}

@@ -39,7 +39,7 @@ const foo = aws.ec2.getInstance({
 
 
 
-## Using GetInstance
+## Using GetInstance {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -333,7 +333,7 @@ exactly match a pair on the desired Instance.
 
 
 
-## GetInstance Result
+## GetInstance Result {#result}
 
 The following output properties are available:
 
@@ -1744,7 +1744,8 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 ## Supporting Types
 
-<h4>Get<wbr>Instance<wbr>Credit<wbr>Specification</h4>
+
+<h4 id="getinstancecreditspecification">Get<wbr>Instance<wbr>Credit<wbr>Specification</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstanceCreditSpecification">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1819,7 +1820,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 
 
-<h4>Get<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device</h4>
+<h4 id="getinstanceebsblockdevice">Get<wbr>Instance<wbr>Ebs<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstanceEbsBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2147,6 +2148,15 @@ is only available if you've enabled DNS hostnames for your VPC.
 
     <dt class="property-required"
             title="Required">
+        <span>volume<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the volume.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>volume_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2162,15 +2172,6 @@ is only available if you've enabled DNS hostnames for your VPC.
     <dd>{{% md %}}The size of the volume, in GiB.
 {{% /md %}}</dd>
 
-    <dt class="property-required"
-            title="Required">
-        <span>volume<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The type of the volume.
-{{% /md %}}</dd>
-
 </dl>
 {{% /choosable %}}
 
@@ -2178,7 +2179,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 
 
-<h4>Get<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device</h4>
+<h4 id="getinstanceephemeralblockdevice">Get<wbr>Instance<wbr>Ephemeral<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstanceEphemeralBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2329,7 +2330,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 
 
-<h4>Get<wbr>Instance<wbr>Filter</h4>
+<h4 id="getinstancefilter">Get<wbr>Instance<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetInstanceFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstanceFilter">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2436,7 +2437,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 
 
-<h4>Get<wbr>Instance<wbr>Metadata<wbr>Option</h4>
+<h4 id="getinstancemetadataoption">Get<wbr>Instance<wbr>Metadata<wbr>Option</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstanceMetadataOption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2587,7 +2588,7 @@ is only available if you've enabled DNS hostnames for your VPC.
 
 
 
-<h4>Get<wbr>Instance<wbr>Root<wbr>Block<wbr>Device</h4>
+<h4 id="getinstancerootblockdevice">Get<wbr>Instance<wbr>Root<wbr>Block<wbr>Device</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetInstanceRootBlockDevice">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2609,6 +2610,15 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
     </dt>
     <dd>{{% md %}}If the root block device will be deleted on termination.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Device<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The physical name of the device.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2677,6 +2687,15 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
     </dt>
     <dd>{{% md %}}If the root block device will be deleted on termination.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>Device<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The physical name of the device.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2745,6 +2764,15 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
     </dt>
     <dd>{{% md %}}If the root block device will be deleted on termination.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>device<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The physical name of the device.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -2817,6 +2845,15 @@ is only available if you've enabled DNS hostnames for your VPC.
 
     <dt class="property-required"
             title="Required">
+        <span>device_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The physical name of the device.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>encrypted</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
@@ -2843,6 +2880,15 @@ is only available if you've enabled DNS hostnames for your VPC.
 
     <dt class="property-required"
             title="Required">
+        <span>volume<wbr>Type</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the volume.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
         <span>volume_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -2856,15 +2902,6 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}The size of the volume, in GiB.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>volume<wbr>Type</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The type of the volume.
 {{% /md %}}</dd>
 
 </dl>

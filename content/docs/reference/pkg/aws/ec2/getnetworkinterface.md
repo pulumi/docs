@@ -28,7 +28,7 @@ const bar = aws.ec2.getNetworkInterface({
 
 
 
-## Using GetNetworkInterface
+## Using GetNetworkInterface {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -202,7 +202,7 @@ The following arguments are supported:
 
 
 
-## GetNetworkInterface Result
+## GetNetworkInterface Result {#result}
 
 The following output properties are available:
 
@@ -881,7 +881,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Network<wbr>Interface<wbr>Association</h4>
+
+<h4 id="getnetworkinterfaceassociation">Get<wbr>Network<wbr>Interface<wbr>Association</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetNetworkInterfaceAssociation">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1104,7 +1105,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Network<wbr>Interface<wbr>Attachment</h4>
+<h4 id="getnetworkinterfaceattachment">Get<wbr>Network<wbr>Interface<wbr>Attachment</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetNetworkInterfaceAttachment">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1275,7 +1276,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Network<wbr>Interface<wbr>Filter</h4>
+<h4 id="getnetworkinterfacefilter">Get<wbr>Network<wbr>Interface<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetNetworkInterfaceFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetNetworkInterfaceFilter">output</a> API doc for this type.
 {{% /choosable %}}

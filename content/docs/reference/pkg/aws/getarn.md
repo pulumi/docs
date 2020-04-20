@@ -28,7 +28,7 @@ const dbInstance = aws.getArn({
 
 
 
-## Using GetArn
+## Using GetArn {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -130,7 +130,7 @@ The following arguments are supported:
 
 
 
-## GetArn Result
+## GetArn Result {#result}
 
 The following output properties are available:
 

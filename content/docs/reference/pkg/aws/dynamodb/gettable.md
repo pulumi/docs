@@ -28,7 +28,7 @@ const tableName = aws.dynamodb.getTable({
 
 
 
-## Using GetTable
+## Using GetTable {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -194,7 +194,7 @@ The following arguments are supported:
 
 
 
-## GetTable Result
+## GetTable Result {#result}
 
 The following output properties are available:
 
@@ -290,6 +290,14 @@ The following output properties are available:
         <span>Read<wbr>Capacity</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">int</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Replicas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gettablereplica">List&lt;Get<wbr>Table<wbr>Replica&gt;</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -455,6 +463,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Replicas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gettablereplica">[]Get<wbr>Table<wbr>Replica</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Server<wbr>Side<wbr>Encryption</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettableserversideencryption">Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption</a></span>
@@ -610,6 +626,14 @@ The following output properties are available:
         <span>read<wbr>Capacity</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/integer">number</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>replicas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gettablereplica">Get<wbr>Table<wbr>Replica[]</a></span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
 
@@ -775,6 +799,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>replicas</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#gettablereplica">List[Get<wbr>Table<wbr>Replica]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>server_<wbr>side_<wbr>encryption</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#gettableserversideencryption">Dict[Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption]</a></span>
@@ -849,7 +881,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Table<wbr>Attribute</h4>
+
+<h4 id="gettableattribute">Get<wbr>Table<wbr>Attribute</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableAttribute">output</a> API doc for this type.
 {{% /choosable %}}
@@ -960,7 +993,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Table<wbr>Global<wbr>Secondary<wbr>Index</h4>
+<h4 id="gettableglobalsecondaryindex">Get<wbr>Table<wbr>Global<wbr>Secondary<wbr>Index</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableGlobalSecondaryIndex">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1231,7 +1264,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Table<wbr>Local<wbr>Secondary<wbr>Index</h4>
+<h4 id="gettablelocalsecondaryindex">Get<wbr>Table<wbr>Local<wbr>Secondary<wbr>Index</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableLocalSecondaryIndex">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1406,7 +1439,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</h4>
+<h4 id="gettablepointintimerecovery">Get<wbr>Table<wbr>Point<wbr>In<wbr>Time<wbr>Recovery</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTablePointInTimeRecovery">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1481,7 +1514,82 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption</h4>
+<h4 id="gettablereplica">Get<wbr>Table<wbr>Replica</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableReplica">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v2/go/aws/dynamodb?tab=doc#GetTableReplica">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Region<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>Region<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>region<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span>region<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+<h4 id="gettableserversideencryption">Get<wbr>Table<wbr>Server<wbr>Side<wbr>Encryption</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetTableServerSideEncryption">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableServerSideEncryption">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1588,7 +1696,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Table<wbr>Ttl</h4>
+<h4 id="gettablettl">Get<wbr>Table<wbr>Ttl</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetTableTtl">output</a> API doc for this type.
 {{% /choosable %}}

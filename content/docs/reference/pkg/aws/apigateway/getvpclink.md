@@ -31,7 +31,7 @@ const myApiGatewayVpcLink = aws.apigateway.getVpcLink({
 
 
 
-## Using GetVpcLink
+## Using GetVpcLink {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -173,7 +173,7 @@ If multiple API Gateway VPC Links are found with this name, an error will be ret
 
 
 
-## GetVpcLink Result
+## GetVpcLink Result {#result}
 
 The following output properties are available:
 

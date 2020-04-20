@@ -50,7 +50,7 @@ const test = aws.ec2.getSecurityGroups({
 
 
 
-## Using GetSecurityGroups
+## Using GetSecurityGroups {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -200,7 +200,7 @@ desired security groups.
 
 
 
-## GetSecurityGroups Result
+## GetSecurityGroups Result {#result}
 
 The following output properties are available:
 
@@ -419,7 +419,8 @@ unless the `vpc-id` filter is also used.
 
 ## Supporting Types
 
-<h4>Get<wbr>Security<wbr>Groups<wbr>Filter</h4>
+
+<h4 id="getsecuritygroupsfilter">Get<wbr>Security<wbr>Groups<wbr>Filter</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetSecurityGroupsFilter">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetSecurityGroupsFilter">output</a> API doc for this type.
 {{% /choosable %}}

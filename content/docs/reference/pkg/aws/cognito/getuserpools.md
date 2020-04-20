@@ -36,7 +36,7 @@ const cognito = new aws.apigateway.Authorizer("cognito", {
 
 
 
-## Using GetUserPools
+## Using GetUserPools {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -138,7 +138,7 @@ The following arguments are supported:
 
 
 
-## GetUserPools Result
+## GetUserPools Result {#result}
 
 The following output properties are available:
 

@@ -28,7 +28,7 @@ const sfnActivity = aws.sfn.getActivity({
 
 
 
-## Using GetActivity
+## Using GetActivity {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -166,7 +166,7 @@ The following arguments are supported:
 
 
 
-## GetActivity Result
+## GetActivity Result {#result}
 
 The following output properties are available:
 

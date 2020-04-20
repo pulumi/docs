@@ -29,7 +29,7 @@ export const accountId = current.accountAlias;
 
 
 
-## Using GetAccountAlias
+## Using GetAccountAlias {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -58,7 +58,7 @@ export const accountId = current.accountAlias;
 
 
 
-## GetAccountAlias Result
+## GetAccountAlias Result {#result}
 
 The following output properties are available:
 

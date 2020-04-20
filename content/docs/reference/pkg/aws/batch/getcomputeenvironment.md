@@ -29,7 +29,7 @@ const batch_mongo = aws.batch.getComputeEnvironment({
 
 
 
-## Using GetComputeEnvironment
+## Using GetComputeEnvironment {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -131,7 +131,7 @@ The following arguments are supported:
 
 
 
-## GetComputeEnvironment Result
+## GetComputeEnvironment Result {#result}
 
 The following output properties are available:
 

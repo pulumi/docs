@@ -28,7 +28,7 @@ const example = aws.wafregional.getRule({
 
 
 
-## Using GetRule
+## Using GetRule {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -130,7 +130,7 @@ The following arguments are supported:
 
 
 
-## GetRule Result
+## GetRule Result {#result}
 
 The following output properties are available:
 

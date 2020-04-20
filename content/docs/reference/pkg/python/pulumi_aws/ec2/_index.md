@@ -4105,7 +4105,7 @@ Interfaces below for more details.</p>
 <dl class="attribute">
 <dt id="pulumi_aws.ec2.GetRouteTablesResult.ids">
 <code class="sig-name descname">ids</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_aws.ec2.GetRouteTablesResult.ids" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of all the route table ids found. This data source will fail if none are found.</p>
+<dd><p>A set of all the route table ids found. This data source will fail if none are found.</p>
 </dd></dl>
 
 </dd></dl>
@@ -4629,6 +4629,7 @@ Name</a>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the volume should be destroyed
 on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the device to mount.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable volume encryption. (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>). Must be configured to perform drift detection.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of provisioned
 <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
@@ -4888,6 +4889,7 @@ device of the instance. See Block Devices below for details.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether the volume should be destroyed
 on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the device to mount.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable volume encryption. (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>). Must be configured to perform drift detection.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The amount of provisioned
 <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
@@ -5096,6 +5098,7 @@ Name</a>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the volume should be destroyed
 on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the device to mount.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable volume encryption. (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>). Must be configured to perform drift detection.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of provisioned
 <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
@@ -9303,6 +9306,7 @@ Name</a>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the volume should be destroyed
 on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the device to mount.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable volume encryption. (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>). Must be configured to perform drift detection.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of provisioned
 <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
@@ -9555,6 +9559,7 @@ device of the instance. See Block Devices below for details.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Whether the volume should be destroyed
 on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">str</span></code>) - The name of the device to mount.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) - Enable volume encryption. (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>). Must be configured to perform drift detection.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">float</span></code>) - The amount of provisioned
 <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.
@@ -9839,6 +9844,7 @@ Name</a>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">deleteOnTermination</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Whether the volume should be destroyed
 on instance termination (Default: <code class="docutils literal notranslate"><span class="pre">true</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">device_name</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[str]</span></code>) - The name of the device to mount.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">encrypted</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[bool]</span></code>) - Enable volume encryption. (Default: <code class="docutils literal notranslate"><span class="pre">false</span></code>). Must be configured to perform drift detection.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">iops</span></code> (<code class="docutils literal notranslate"><span class="pre">pulumi.Input[float]</span></code>) - The amount of provisioned
 <a class="reference external" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html">IOPS</a>.

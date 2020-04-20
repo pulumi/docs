@@ -28,7 +28,7 @@ const example = aws.waf.getWebAcl({
 
 
 
-## Using GetWebAcl
+## Using GetWebAcl {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -130,7 +130,7 @@ The following arguments are supported:
 
 
 
-## GetWebAcl Result
+## GetWebAcl Result {#result}
 
 The following output properties are available:
 
