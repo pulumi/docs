@@ -11,7 +11,7 @@ block_external_search_index: true
 
 
 
-## Using GetMongoInstances
+## Using GetMongoInstances {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -301,7 +301,7 @@ The following arguments are supported:
 
 
 
-## GetMongoInstances Result
+## GetMongoInstances Result {#result}
 
 The following output properties are available:
 
@@ -668,7 +668,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Mongo<wbr>Instances<wbr>Instance</h4>
+
+<h4 id="getmongoinstancesinstance">Get<wbr>Mongo<wbr>Instances<wbr>Instance</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetMongoInstancesInstance">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1319,7 +1320,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Mongo<wbr>Instances<wbr>Instance<wbr>Mongo</h4>
+<h4 id="getmongoinstancesinstancemongo">Get<wbr>Mongo<wbr>Instances<wbr>Instance<wbr>Mongo</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetMongoInstancesInstanceMongo">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1458,7 +1459,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Mongo<wbr>Instances<wbr>Instance<wbr>Shard</h4>
+<h4 id="getmongoinstancesinstanceshard">Get<wbr>Mongo<wbr>Instances<wbr>Instance<wbr>Shard</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetMongoInstancesInstanceShard">output</a> API doc for this type.
 {{% /choosable %}}

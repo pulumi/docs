@@ -8,7 +8,7 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="bandwidthlimit" title="BandwidthLimit"><span class="symbol resource"></span>BandwidthLimit</a></li>
     <li><a href="bandwidthpackage" title="BandwidthPackage"><span class="symbol resource"></span>BandwidthPackage</a></li>
@@ -20,7 +20,7 @@ block_external_search_index: true
     <li><a href="routeentry" title="RouteEntry"><span class="symbol resource"></span>RouteEntry</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getbandwidthlimits" title="GetBandwidthLimits"><span class="symbol function"></span>GetBandwidthLimits</a></li>
     <li><a href="getbandwidthpackages" title="GetBandwidthPackages"><span class="symbol function"></span>GetBandwidthPackages</a></li>
@@ -30,7 +30,7 @@ block_external_search_index: true
     <li><a href="getrouteentries" title="GetRouteEntries"><span class="symbol function"></span>GetRouteEntries</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
@@ -39,6 +39,6 @@ block_external_search_index: true
     <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.0.0</dd>
+	<dd>2.1.0</dd>
 </dl>
 

@@ -34,7 +34,7 @@ export const nasProtocolsProtocol = defaultProtocols.protocols[0];
 
 
 
-## Using GetProtocols
+## Using GetProtocols {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -204,7 +204,7 @@ The following arguments are supported:
 
 
 
-## GetProtocols Result
+## GetProtocols Result {#result}
 
 The following output properties are available:
 

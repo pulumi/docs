@@ -33,7 +33,7 @@ const foo = alicloud.vpn.getCustomerGateways({
 
 
 
-## Using GetCustomerGateways
+## Using GetCustomerGateways {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -207,7 +207,7 @@ The following arguments are supported:
 
 
 
-## GetCustomerGateways Result
+## GetCustomerGateways Result {#result}
 
 The following output properties are available:
 
@@ -450,7 +450,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Customer<wbr>Gateways<wbr>Gateway</h4>
+
+<h4 id="getcustomergatewaysgateway">Get<wbr>Customer<wbr>Gateways<wbr>Gateway</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetCustomerGatewaysGateway">output</a> API doc for this type.
 {{% /choosable %}}

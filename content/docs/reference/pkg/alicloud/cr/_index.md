@@ -8,19 +8,19 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
     <li><a href="repo" title="Repo"><span class="symbol resource"></span>Repo</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getnamespaces" title="GetNamespaces"><span class="symbol function"></span>GetNamespaces</a></li>
     <li><a href="getrepos" title="GetRepos"><span class="symbol function"></span>GetRepos</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
@@ -29,6 +29,6 @@ block_external_search_index: true
     <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.0.0</dd>
+	<dd>2.1.0</dd>
 </dl>
 

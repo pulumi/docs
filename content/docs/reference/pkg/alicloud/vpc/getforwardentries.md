@@ -61,7 +61,7 @@ const defaultForwardEntries = defaultForwardEntry.forwardTableId.apply(forwardTa
 
 
 
-## Using GetForwardEntries
+## Using GetForwardEntries {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -375,7 +375,7 @@ The following arguments are supported:
 
 
 
-## GetForwardEntries Result
+## GetForwardEntries Result {#result}
 
 The following output properties are available:
 
@@ -730,7 +730,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Forward<wbr>Entries<wbr>Entry</h4>
+
+<h4 id="getforwardentriesentry">Get<wbr>Forward<wbr>Entries<wbr>Entry</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetForwardEntriesEntry">output</a> API doc for this type.
 {{% /choosable %}}

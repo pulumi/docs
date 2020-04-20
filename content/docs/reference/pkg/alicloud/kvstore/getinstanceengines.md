@@ -39,7 +39,7 @@ export const firstKvstoreInstanceClass = resourcesInstanceEngines.instanceEngine
 
 
 
-## Using GetInstanceEngines
+## Using GetInstanceEngines {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -281,7 +281,7 @@ The following arguments are supported:
 
 
 
-## GetInstanceEngines Result
+## GetInstanceEngines Result {#result}
 
 The following output properties are available:
 
@@ -568,7 +568,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Instance<wbr>Engines<wbr>Instance<wbr>Engine</h4>
+
+<h4 id="getinstanceenginesinstanceengine">Get<wbr>Instance<wbr>Engines<wbr>Instance<wbr>Engine</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstanceEnginesInstanceEngine">output</a> API doc for this type.
 {{% /choosable %}}

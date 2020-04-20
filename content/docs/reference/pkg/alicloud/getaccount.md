@@ -28,7 +28,7 @@ export const currentAccountId = current.id;
 
 
 
-## Using GetAccount
+## Using GetAccount {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -57,7 +57,7 @@ export const currentAccountId = current.id;
 
 
 
-## GetAccount Result
+## GetAccount Result {#result}
 
 The following output properties are available:
 

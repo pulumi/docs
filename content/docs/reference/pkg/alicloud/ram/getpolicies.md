@@ -33,7 +33,7 @@ export const firstPolicyName = policiesDs.policies[0].name;
 
 
 
-## Using GetPolicies
+## Using GetPolicies {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -311,7 +311,7 @@ The following arguments are supported:
 
 
 
-## GetPolicies Result
+## GetPolicies Result {#result}
 
 The following output properties are available:
 
@@ -658,7 +658,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Policies<wbr>Policy</h4>
+
+<h4 id="getpoliciespolicy">Get<wbr>Policies<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetPoliciesPolicy">output</a> API doc for this type.
 {{% /choosable %}}

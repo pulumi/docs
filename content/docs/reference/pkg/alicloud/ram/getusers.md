@@ -34,7 +34,7 @@ export const firstUserId = usersDs.users[0].id;
 
 
 
-## Using GetUsers
+## Using GetUsers {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -316,7 +316,7 @@ The following arguments are supported:
 
 
 
-## GetUsers Result
+## GetUsers Result {#result}
 
 The following output properties are available:
 
@@ -663,7 +663,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Users<wbr>User</h4>
+
+<h4 id="getusersuser">Get<wbr>Users<wbr>User</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetUsersUser">output</a> API doc for this type.
 {{% /choosable %}}
@@ -698,15 +699,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>Last<wbr>Login<wbr>Date</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}Last login date of the user.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -737,15 +729,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}The original id is user name, but it is user id in 1.37.0+.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>Last<wbr>Login<wbr>Date</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Last login date of the user.
 {{% /md %}}</dd>
 
     <dt class="property-required"
@@ -784,15 +767,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>last<wbr>Login<wbr>Date</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}Last login date of the user.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -823,15 +797,6 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The original id is user name, but it is user id in 1.37.0+.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
-        <span>last<wbr>Login<wbr>Date</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Last login date of the user.
 {{% /md %}}</dd>
 
     <dt class="property-required"

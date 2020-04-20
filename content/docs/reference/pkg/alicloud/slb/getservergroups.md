@@ -30,7 +30,7 @@ export const firstSlbServerGroupId = sampleDs.slbServerGroups[0].id;
 
 
 
-## Using GetServerGroups
+## Using GetServerGroups {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -236,7 +236,7 @@ The following arguments are supported:
 
 
 
-## GetServerGroups Result
+## GetServerGroups Result {#result}
 
 The following output properties are available:
 
@@ -519,7 +519,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Server<wbr>Groups<wbr>Slb<wbr>Server<wbr>Group</h4>
+
+<h4 id="getservergroupsslbservergroup">Get<wbr>Server<wbr>Groups<wbr>Slb<wbr>Server<wbr>Group</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetServerGroupsSlbServerGroup">output</a> API doc for this type.
 {{% /choosable %}}
@@ -670,7 +671,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Server<wbr>Groups<wbr>Slb<wbr>Server<wbr>Group<wbr>Server</h4>
+<h4 id="getservergroupsslbservergroupserver">Get<wbr>Server<wbr>Groups<wbr>Slb<wbr>Server<wbr>Group<wbr>Server</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetServerGroupsSlbServerGroupServer">output</a> API doc for this type.
 {{% /choosable %}}
