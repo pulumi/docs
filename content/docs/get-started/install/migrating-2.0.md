@@ -87,7 +87,7 @@ Then run `go mod download`
 Update your package reference to the latest version of the SDK:
 
 ```csharp
-<PackageReference Include="Pulumi" Version="2.0.0" />
+<PackageReference Include="Pulumi" Version="2.*" />
 ```
 
 ### Update Invokes
