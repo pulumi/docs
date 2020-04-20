@@ -30,7 +30,7 @@ export const firstOssBucketName = ossBucketsDs.buckets[0].name;
 
 
 
-## Using GetBuckets
+## Using GetBuckets {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -164,7 +164,7 @@ The following arguments are supported:
 
 
 
-## GetBuckets Result
+## GetBuckets Result {#result}
 
 The following output properties are available:
 
@@ -379,7 +379,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Buckets<wbr>Bucket</h4>
+
+<h4 id="getbucketsbucket">Get<wbr>Buckets<wbr>Bucket</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetBucketsBucket">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1030,7 +1031,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Buckets<wbr>Bucket<wbr>Cors<wbr>Rule</h4>
+<h4 id="getbucketsbucketcorsrule">Get<wbr>Buckets<wbr>Bucket<wbr>Cors<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetBucketsBucketCorsRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1253,7 +1254,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Buckets<wbr>Bucket<wbr>Lifecycle<wbr>Rule</h4>
+<h4 id="getbucketsbucketlifecyclerule">Get<wbr>Buckets<wbr>Bucket<wbr>Lifecycle<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetBucketsBucketLifecycleRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1440,7 +1441,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Buckets<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration</h4>
+<h4 id="getbucketsbucketlifecycleruleexpiration">Get<wbr>Buckets<wbr>Bucket<wbr>Lifecycle<wbr>Rule<wbr>Expiration</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetBucketsBucketLifecycleRuleExpiration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1555,7 +1556,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Buckets<wbr>Bucket<wbr>Logging</h4>
+<h4 id="getbucketsbucketlogging">Get<wbr>Buckets<wbr>Bucket<wbr>Logging</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetBucketsBucketLogging">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1670,7 +1671,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Buckets<wbr>Bucket<wbr>Referer<wbr>Config</h4>
+<h4 id="getbucketsbucketrefererconfig">Get<wbr>Buckets<wbr>Bucket<wbr>Referer<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetBucketsBucketRefererConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1785,7 +1786,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Buckets<wbr>Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Rule</h4>
+<h4 id="getbucketsbucketserversideencryptionrule">Get<wbr>Buckets<wbr>Bucket<wbr>Server<wbr>Side<wbr>Encryption<wbr>Rule</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetBucketsBucketServerSideEncryptionRule">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1864,7 +1865,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Buckets<wbr>Bucket<wbr>Versioning</h4>
+<h4 id="getbucketsbucketversioning">Get<wbr>Buckets<wbr>Bucket<wbr>Versioning</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetBucketsBucketVersioning">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1943,7 +1944,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Buckets<wbr>Bucket<wbr>Website</h4>
+<h4 id="getbucketsbucketwebsite">Get<wbr>Buckets<wbr>Bucket<wbr>Website</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetBucketsBucketWebsite">output</a> API doc for this type.
 {{% /choosable %}}

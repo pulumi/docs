@@ -35,7 +35,7 @@ export const firstCenFlowlogId = alicloud_cen_instances_default.flowlogs.0.id;
 
 
 
-## Using GetFlowlogs
+## Using GetFlowlogs {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -46,7 +46,7 @@ export const firstCenFlowlogId = alicloud_cen_instances_default.flowlogs.0.id;
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_flowlogs(</span>cen_id=None<span class="p">, </span>description=None<span class="p">, </span>ids=None<span class="p">, </span>log_store_name=None<span class="p">, </span>name_regex=None<span class="p">, </span>project_name=None<span class="p">, </span>status=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_flowlogs(</span>cen_id=None<span class="p">, </span>description=None<span class="p">, </span>ids=None<span class="p">, </span>log_store_name=None<span class="p">, </span>name_regex=None<span class="p">, </span>output_file=None<span class="p">, </span>project_name=None<span class="p">, </span>status=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -114,6 +114,14 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}A regex string to filter CEN flow logs by name.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Output<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -187,6 +195,14 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Output<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Project<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -254,6 +270,14 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}A regex string to filter CEN flow logs by name.
 {{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>output<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -327,6 +351,14 @@ The following arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>output_<wbr>file</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>project_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -353,7 +385,7 @@ The following arguments are supported:
 
 
 
-## GetFlowlogs Result
+## GetFlowlogs Result {#result}
 
 The following output properties are available:
 
@@ -428,6 +460,14 @@ The following output properties are available:
     <dt class="property-"
             title="">
         <span>Name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Output<wbr>File</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -530,6 +570,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Output<wbr>File</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Project<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -618,6 +666,14 @@ The following output properties are available:
     <dt class="property-"
             title="">
         <span>name<wbr>Regex</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>output<wbr>File</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -720,6 +776,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>output_<wbr>file</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>project_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -748,7 +812,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Flowlogs<wbr>Flowlog</h4>
+
+<h4 id="getflowlogsflowlog">Get<wbr>Flowlogs<wbr>Flowlog</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetFlowlogsFlowlog">output</a> API doc for this type.
 {{% /choosable %}}

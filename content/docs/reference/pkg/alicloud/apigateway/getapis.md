@@ -30,7 +30,7 @@ export const firstApiId = alicloud_api_gateway_apis_data_apigatway.apis.0.id;
 
 
 
-## Using GetApis
+## Using GetApis {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -272,7 +272,7 @@ The following arguments are supported:
 
 
 
-## GetApis Result
+## GetApis Result {#result}
 
 The following output properties are available:
 
@@ -591,7 +591,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Apis<wbr>Api</h4>
+
+<h4 id="getapisapi">Get<wbr>Apis<wbr>Api</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetApisApi">output</a> API doc for this type.
 {{% /choosable %}}

@@ -72,7 +72,7 @@ The following arguments are supported:
 
 
 
-## Using GetSnapshots
+## Using GetSnapshots {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -550,7 +550,7 @@ The following arguments are supported:
 
 
 
-## GetSnapshots Result
+## GetSnapshots Result {#result}
 
 The following output properties are available:
 
@@ -1113,7 +1113,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Snapshots<wbr>Snapshot</h4>
+
+<h4 id="getsnapshotssnapshot">Get<wbr>Snapshots<wbr>Snapshot</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetSnapshotsSnapshot">output</a> API doc for this type.
 {{% /choosable %}}

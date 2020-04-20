@@ -32,7 +32,7 @@ export const firstSlbBackendServerId = sampleDs.backendServers.0.id;
 
 
 
-## Using GetBackendServers
+## Using GetBackendServers {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -202,7 +202,7 @@ The following arguments are supported:
 
 
 
-## GetBackendServers Result
+## GetBackendServers Result {#result}
 
 The following output properties are available:
 
@@ -409,7 +409,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Backend<wbr>Servers<wbr>Backend<wbr>Server</h4>
+
+<h4 id="getbackendserversbackendserver">Get<wbr>Backend<wbr>Servers<wbr>Backend<wbr>Server</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetBackendServersBackendServer">output</a> API doc for this type.
 {{% /choosable %}}

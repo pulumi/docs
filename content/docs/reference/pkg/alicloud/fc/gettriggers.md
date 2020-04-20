@@ -32,7 +32,7 @@ export const firstFcTriggerName = fcTriggersDs.triggers[0].name;
 
 
 
-## Using GetTriggers
+## Using GetTriggers {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -278,7 +278,7 @@ The following arguments are supported:
 
 
 
-## GetTriggers Result
+## GetTriggers Result {#result}
 
 The following output properties are available:
 
@@ -593,7 +593,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Triggers<wbr>Trigger</h4>
+
+<h4 id="gettriggerstrigger">Get<wbr>Triggers<wbr>Trigger</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetTriggersTrigger">output</a> API doc for this type.
 {{% /choosable %}}

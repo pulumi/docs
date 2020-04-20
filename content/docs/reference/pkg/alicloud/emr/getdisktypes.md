@@ -37,7 +37,7 @@ export const dataDiskType = defaultDiskTypes.types[0].value;
 
 
 
-## Using GetDiskTypes
+## Using GetDiskTypes {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -315,7 +315,7 @@ The following arguments are supported:
 
 
 
-## GetDiskTypes Result
+## GetDiskTypes Result {#result}
 
 The following output properties are available:
 
@@ -658,7 +658,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Disk<wbr>Types<wbr>Type</h4>
+
+<h4 id="getdisktypestype">Get<wbr>Disk<wbr>Types<wbr>Type</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetDiskTypesType">output</a> API doc for this type.
 {{% /choosable %}}

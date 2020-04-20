@@ -35,7 +35,7 @@ export const firstScalingRule = scalingconfigurationsDs.configurations[0].id;
 
 
 
-## Using GetScalingConfigurations
+## Using GetScalingConfigurations {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -241,7 +241,7 @@ The following arguments are supported:
 
 
 
-## GetScalingConfigurations Result
+## GetScalingConfigurations Result {#result}
 
 The following output properties are available:
 
@@ -528,7 +528,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Scaling<wbr>Configurations<wbr>Configuration</h4>
+
+<h4 id="getscalingconfigurationsconfiguration">Get<wbr>Scaling<wbr>Configurations<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetScalingConfigurationsConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1075,7 +1076,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Scaling<wbr>Configurations<wbr>Configuration<wbr>Data<wbr>Disk</h4>
+<h4 id="getscalingconfigurationsconfigurationdatadisk">Get<wbr>Scaling<wbr>Configurations<wbr>Configuration<wbr>Data<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetScalingConfigurationsConfigurationDataDisk">output</a> API doc for this type.
 {{% /choosable %}}

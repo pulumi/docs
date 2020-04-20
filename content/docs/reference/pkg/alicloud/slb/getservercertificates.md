@@ -28,7 +28,7 @@ export const firstSlbServerCertificateId = sampleDs.certificates[0].id;
 
 
 
-## Using GetServerCertificates
+## Using GetServerCertificates {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -270,7 +270,7 @@ The following arguments are supported:
 
 
 
-## GetServerCertificates Result
+## GetServerCertificates Result {#result}
 
 The following output properties are available:
 
@@ -593,7 +593,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Server<wbr>Certificates<wbr>Certificate</h4>
+
+<h4 id="getservercertificatescertificate">Get<wbr>Server<wbr>Certificates<wbr>Certificate</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetServerCertificatesCertificate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1055,20 +1056,20 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>expired_<wbr>time</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Server certificate expired time.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>expired<wbr>Timestamp</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">float</a></span>
     </dt>
     <dd>{{% md %}}Server certificate expired timestamp.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>expired_<wbr>time</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Server certificate expired time.
 {{% /md %}}</dd>
 
     <dt class="property-required"

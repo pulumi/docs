@@ -34,7 +34,7 @@ export const firstGroupName = consumerGroupsDs.consumerIds[0];
 
 
 
-## Using GetConsumerGroups
+## Using GetConsumerGroups {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -204,7 +204,7 @@ The following arguments are supported:
 
 
 
-## GetConsumerGroups Result
+## GetConsumerGroups Result {#result}
 
 The following output properties are available:
 

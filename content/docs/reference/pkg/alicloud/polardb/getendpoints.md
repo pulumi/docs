@@ -18,7 +18,7 @@ Filters support regular expression for the cluster name, searches by clusterId, 
 
 
 
-## Using GetEndpoints
+## Using GetEndpoints {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -156,7 +156,7 @@ The following arguments are supported:
 
 
 
-## GetEndpoints Result
+## GetEndpoints Result {#result}
 
 The following output properties are available:
 
@@ -339,7 +339,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Endpoints<wbr>Endpoint</h4>
+
+<h4 id="getendpointsendpoint">Get<wbr>Endpoints<wbr>Endpoint</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetEndpointsEndpoint">output</a> API doc for this type.
 {{% /choosable %}}
@@ -575,7 +576,7 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>auto<wbr>Add<wbr>New<wbr>Nodes</span>
+        <span>auto_<wbr>add_<wbr>new_<wbr>nodes</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -593,7 +594,7 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>endpoint<wbr>Config</span>
+        <span>endpoint_<wbr>config</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -602,7 +603,7 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>endpoint<wbr>Type</span>
+        <span>endpoint_<wbr>type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -620,7 +621,7 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>read<wbr>Write<wbr>Mode</span>
+        <span>read_<wbr>write_<wbr>mode</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -634,7 +635,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Endpoints<wbr>Endpoint<wbr>Address<wbr>Item</h4>
+<h4 id="getendpointsendpointaddressitem">Get<wbr>Endpoints<wbr>Endpoint<wbr>Address<wbr>Item</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetEndpointsEndpointAddressItem">output</a> API doc for this type.
 {{% /choosable %}}

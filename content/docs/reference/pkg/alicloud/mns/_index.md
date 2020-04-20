@@ -8,21 +8,21 @@ block_external_search_index: true
 
 
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="queue" title="Queue"><span class="symbol resource"></span>Queue</a></li>
     <li><a href="topic" title="Topic"><span class="symbol resource"></span>Topic</a></li>
     <li><a href="topicsubscription" title="TopicSubscription"><span class="symbol resource"></span>TopicSubscription</a></li>
 </ul>
 
-<h3>Functions</h3>
+<h2 id="functions">Functions</h2>
 <ul class="api">
     <li><a href="getqueues" title="GetQueues"><span class="symbol function"></span>GetQueues</a></li>
     <li><a href="gettopicsubscriptions" title="GetTopicSubscriptions"><span class="symbol function"></span>GetTopicSubscriptions</a></li>
     <li><a href="gettopics" title="GetTopics"><span class="symbol function"></span>GetTopics</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-alicloud">https://github.com/pulumi/pulumi-alicloud</a></dd>
@@ -31,6 +31,6 @@ block_external_search_index: true
     <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/terraform-providers/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.0.0</dd>
+	<dd>2.1.0</dd>
 </dl>
 

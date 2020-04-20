@@ -34,7 +34,7 @@ export const output = k8sClusters.clusters;
 
 
 
-## Using GetManagedKubernetesClusters
+## Using GetManagedKubernetesClusters {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -236,7 +236,7 @@ The following arguments are supported:
 
 
 
-## GetManagedKubernetesClusters Result
+## GetManagedKubernetesClusters Result {#result}
 
 The following output properties are available:
 
@@ -519,7 +519,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster</h4>
+
+<h4 id="getmanagedkubernetesclusterscluster">Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetManagedKubernetesClustersCluster">output</a> API doc for this type.
 {{% /choosable %}}
@@ -850,7 +851,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Connections</h4>
+<h4 id="getmanagedkubernetesclustersclusterconnections">Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Connections</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetManagedKubernetesClustersClusterConnections">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1037,7 +1038,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Worker<wbr>Node</h4>
+<h4 id="getmanagedkubernetesclustersclusterworkernode">Get<wbr>Managed<wbr>Kubernetes<wbr>Clusters<wbr>Cluster<wbr>Worker<wbr>Node</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetManagedKubernetesClustersClusterWorkerNode">output</a> API doc for this type.
 {{% /choosable %}}

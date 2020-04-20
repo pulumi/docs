@@ -16,7 +16,7 @@ Filters support regular expression for the instance name, searches by tags, and 
 
 
 
-## Using GetInstances
+## Using GetInstances {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -406,7 +406,7 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
 
 
-## GetInstances Result
+## GetInstances Result {#result}
 
 The following output properties are available:
 
@@ -869,7 +869,8 @@ For more information, see [Instance type table](https://www.alibabacloud.com/hel
 
 ## Supporting Types
 
-<h4>Get<wbr>Instances<wbr>Instance</h4>
+
+<h4 id="getinstancesinstance">Get<wbr>Instances<wbr>Instance</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetInstancesInstance">output</a> API doc for this type.
 {{% /choosable %}}
