@@ -15,7 +15,7 @@ Use this data source to access information about an existing Data Lake Store.
 
 
 
-## Using GetStore
+## Using GetStore {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetStore Result
+## GetStore Result {#result}
 
 The following output properties are available:
 

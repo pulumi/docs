@@ -15,7 +15,7 @@ Use this data source to access information about all the Subscriptions currently
 
 
 
-## Using GetSubscriptions
+## Using GetSubscriptions {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetSubscriptions Result
+## GetSubscriptions Result {#result}
 
 The following output properties are available:
 
@@ -332,7 +332,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Subscriptions<wbr>Subscription</h4>
+
+<h4 id="getsubscriptionssubscription">Get<wbr>Subscriptions<wbr>Subscription</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetSubscriptionsSubscription">output</a> API doc for this type.
 {{% /choosable %}}

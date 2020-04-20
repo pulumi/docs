@@ -15,7 +15,7 @@ Use this data source to access information about an existing Management Group.
 
 
 
-## Using GetGroup
+## Using GetGroup {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -57,7 +57,7 @@ The following arguments are supported:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name or UUID of this Management Group.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `name`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -82,7 +82,7 @@ The following arguments are supported:
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name or UUID of this Management Group.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `name`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -107,7 +107,7 @@ The following arguments are supported:
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name or UUID of this Management Group.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `name`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -132,7 +132,7 @@ The following arguments are supported:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Specifies the name or UUID of this Management Group.
-{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `name`{{% /md %}}</p></dd>
 
     <dt class="property-optional"
             title="Optional">
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetGroup Result
+## GetGroup Result {#result}
 
 The following output properties are available:
 
@@ -178,7 +178,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `name`{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -237,7 +237,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `name`{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -296,7 +296,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `name`{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">
@@ -355,7 +355,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `name`{{% /md %}}</p></dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `name`{{% /md %}}</p></dd>
 
     <dt class="property-"
             title="">

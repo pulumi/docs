@@ -15,7 +15,7 @@ Use this data source to access information about an existing DNS Zone.
 
 
 
-## Using GetZone
+## Using GetZone {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -161,7 +161,7 @@ in your subscription that matches `name` will be returned.
 
 
 
-## GetZone Result
+## GetZone Result {#result}
 
 The following output properties are available:
 

@@ -17,7 +17,7 @@ Use this data source to access information about an existing Private Link Servic
 
 
 
-## Using GetService
+## Using GetService {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -155,7 +155,7 @@ The following arguments are supported:
 
 
 
-## GetService Result
+## GetService Result {#result}
 
 The following output properties are available:
 
@@ -590,7 +590,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Service<wbr>Nat<wbr>Ip<wbr>Configuration</h4>
+
+<h4 id="getservicenatipconfiguration">Get<wbr>Service<wbr>Nat<wbr>Ip<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetServiceNatIpConfiguration">output</a> API doc for this type.
 {{% /choosable %}}
@@ -781,20 +782,20 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>private_<wbr>ip_<wbr>address</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}The private IP address of the NAT IP configuration.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>private<wbr>Ip<wbr>Address<wbr>Version</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}The version of the IP Protocol.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>private_<wbr>ip_<wbr>address</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP address of the NAT IP configuration.
 {{% /md %}}</dd>
 
     <dt class="property-required"

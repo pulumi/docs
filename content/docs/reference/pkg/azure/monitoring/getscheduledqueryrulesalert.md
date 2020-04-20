@@ -31,7 +31,7 @@ export const queryRuleId = example.id;
 
 
 
-## Using GetScheduledQueryRulesAlert
+## Using GetScheduledQueryRulesAlert {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -169,7 +169,7 @@ The following arguments are supported:
 
 
 
-## GetScheduledQueryRulesAlert Result
+## GetScheduledQueryRulesAlert Result {#result}
 
 The following output properties are available:
 
@@ -804,7 +804,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Action</h4>
+
+<h4 id="getscheduledqueryrulesalertaction">Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Action</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetScheduledQueryRulesAlertAction">output</a> API doc for this type.
 {{% /choosable %}}
@@ -955,7 +956,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Trigger</h4>
+<h4 id="getscheduledqueryrulesalerttrigger">Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Trigger</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetScheduledQueryRulesAlertTrigger">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1102,7 +1103,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Trigger<wbr>Metric<wbr>Trigger</h4>
+<h4 id="getscheduledqueryrulesalerttriggermetrictrigger">Get<wbr>Scheduled<wbr>Query<wbr>Rules<wbr>Alert<wbr>Trigger<wbr>Metric<wbr>Trigger</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetScheduledQueryRulesAlertTriggerMetricTrigger">output</a> API doc for this type.
 {{% /choosable %}}

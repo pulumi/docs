@@ -15,7 +15,7 @@ Use this data source to access information about an existing App Service Certifi
 
 
 
-## Using GetCertificateOrder
+## Using GetCertificateOrder {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetCertificateOrder Result
+## GetCertificateOrder Result {#result}
 
 The following output properties are available:
 
@@ -908,7 +908,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Certificate<wbr>Order<wbr>Certificate</h4>
+
+<h4 id="getcertificateordercertificate">Get<wbr>Certificate<wbr>Order<wbr>Certificate</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetCertificateOrderCertificate">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1063,20 +1064,20 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span>key_<wbr>vault_<wbr>id</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}Key Vault resource Id.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>key<wbr>Vault<wbr>Secret<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
     <dd>{{% md %}}Key Vault secret name.
+{{% /md %}}</dd>
+
+    <dt class="property-required"
+            title="Required">
+        <span>key_<wbr>vault_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Key Vault resource Id.
 {{% /md %}}</dd>
 
     <dt class="property-required"

@@ -15,7 +15,7 @@ Use this data source to access information about an existing SQL elastic pool.
 
 
 
-## Using GetElasticPool
+## Using GetElasticPool {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetElasticPool Result
+## GetElasticPool Result {#result}
 
 The following output properties are available:
 

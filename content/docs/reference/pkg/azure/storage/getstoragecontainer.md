@@ -29,7 +29,7 @@ const example = azure.storage.getStorageContainer({
 
 
 
-## Using GetStorageContainer
+## Using GetStorageContainer {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -203,7 +203,7 @@ The following arguments are supported:
 
 
 
-## GetStorageContainer Result
+## GetStorageContainer Result {#result}
 
 The following output properties are available:
 

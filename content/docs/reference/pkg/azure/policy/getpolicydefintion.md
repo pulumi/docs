@@ -15,7 +15,7 @@ Use this data source to access information about a Policy Definition, both custo
 
 
 
-## Using GetPolicyDefintion
+## Using GetPolicyDefintion {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -26,7 +26,7 @@ Use this data source to access information about a Policy Definition, both custo
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_policy_defintion(</span>display_name=None<span class="p">, </span>management_group_id=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">function </span> get_policy_defintion(</span>display_name=None<span class="p">, </span>management_group_id=None<span class="p">, </span>management_group_name=None<span class="p">, </span>name=None<span class="p">, </span>opts=None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 
@@ -50,22 +50,39 @@ The following arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Policy Definition.
+    <dd>{{% md %}}Specifies the display name of the Policy Definition. Conflicts with `name`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>Management<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Management<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
     <dd>{{% md %}}Only retrieve Policy Definitions from this Management Group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the Policy Definition. Conflicts with `display_name`.
 {{% /md %}}</dd>
 
 </dl>
@@ -75,22 +92,39 @@ The following arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span>Display<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Policy Definition.
+    <dd>{{% md %}}Specifies the display name of the Policy Definition. Conflicts with `name`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>Management<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Management<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
     <dd>{{% md %}}Only retrieve Policy Definitions from this Management Group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the Policy Definition. Conflicts with `display_name`.
 {{% /md %}}</dd>
 
 </dl>
@@ -100,22 +134,39 @@ The following arguments are supported:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span>display<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Policy Definition.
+    <dd>{{% md %}}Specifies the display name of the Policy Definition. Conflicts with `name`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>management<wbr>Group<wbr>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>management<wbr>Group<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
     <dd>{{% md %}}Only retrieve Policy Definitions from this Management Group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the Policy Definition. Conflicts with `display_name`.
 {{% /md %}}</dd>
 
 </dl>
@@ -125,22 +176,39 @@ The following arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span>display_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Specifies the name of the Policy Definition.
+    <dd>{{% md %}}Specifies the display name of the Policy Definition. Conflicts with `name`.
 {{% /md %}}</dd>
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span>management_<wbr>group_<wbr>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>management_<wbr>group_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
     <dd>{{% md %}}Only retrieve Policy Definitions from this Management Group.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the name of the Policy Definition. Conflicts with `display_name`.
 {{% /md %}}</dd>
 
 </dl>
@@ -153,7 +221,7 @@ The following arguments are supported:
 
 
 
-## GetPolicyDefintion Result
+## GetPolicyDefintion Result {#result}
 
 The following output properties are available:
 
@@ -204,8 +272,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Name of the Policy Definition.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -231,7 +298,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}The Type of the Policy, such as `Microsoft.Authorization/policyDefinitions`.
+    <dd>{{% md %}}The Type of the Policy. Possible values are "BuiltIn", "Custom" and "NotSpecified".
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -243,9 +310,17 @@ The following output properties are available:
     <dd>{{% md %}}The Type of Policy.
 {{% /md %}}</dd>
 
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span>Management<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd>
+
     <dt class="property-"
             title="">
-        <span>Management<wbr>Group<wbr>Id</span>
+        <span>Management<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
@@ -299,8 +374,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Name of the Policy Definition.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -326,7 +400,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Type of the Policy, such as `Microsoft.Authorization/policyDefinitions`.
+    <dd>{{% md %}}The Type of the Policy. Possible values are "BuiltIn", "Custom" and "NotSpecified".
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -338,9 +412,17 @@ The following output properties are available:
     <dd>{{% md %}}The Type of Policy.
 {{% /md %}}</dd>
 
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span>Management<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd>
+
     <dt class="property-"
             title="">
-        <span>Management<wbr>Group<wbr>Id</span>
+        <span>Management<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
@@ -394,8 +476,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Name of the Policy Definition.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -421,7 +502,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}The Type of the Policy, such as `Microsoft.Authorization/policyDefinitions`.
+    <dd>{{% md %}}The Type of the Policy. Possible values are "BuiltIn", "Custom" and "NotSpecified".
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -433,9 +514,17 @@ The following output properties are available:
     <dd>{{% md %}}The Type of Policy.
 {{% /md %}}</dd>
 
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span>management<wbr>Group<wbr>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd>
+
     <dt class="property-"
             title="">
-        <span>management<wbr>Group<wbr>Id</span>
+        <span>management<wbr>Group<wbr>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
@@ -489,8 +578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Name of the Policy Definition.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -516,7 +604,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}The Type of the Policy, such as `Microsoft.Authorization/policyDefinitions`.
+    <dd>{{% md %}}The Type of the Policy. Possible values are "BuiltIn", "Custom" and "NotSpecified".
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -528,9 +616,17 @@ The following output properties are available:
     <dd>{{% md %}}The Type of Policy.
 {{% /md %}}</dd>
 
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
+        <span>management_<wbr>group_<wbr>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favour of `management_group_name`{{% /md %}}</p></dd>
+
     <dt class="property-"
             title="">
-        <span>management_<wbr>group_<wbr>id</span>
+        <span>management_<wbr>group_<wbr>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>

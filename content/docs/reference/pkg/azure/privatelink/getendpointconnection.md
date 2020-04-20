@@ -17,7 +17,7 @@ Use this data source to access the connection status information about an existi
 
 
 
-## Using GetEndpointConnection
+## Using GetEndpointConnection {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -155,7 +155,7 @@ The following arguments are supported:
 
 
 
-## GetEndpointConnection Result
+## GetEndpointConnection Result {#result}
 
 The following output properties are available:
 
@@ -370,7 +370,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Endpoint<wbr>Connection<wbr>Private<wbr>Service<wbr>Connection</h4>
+
+<h4 id="getendpointconnectionprivateserviceconnection">Get<wbr>Endpoint<wbr>Connection<wbr>Private<wbr>Service<wbr>Connection</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetEndpointConnectionPrivateServiceConnection">output</a> API doc for this type.
 {{% /choosable %}}

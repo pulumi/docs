@@ -15,7 +15,7 @@ Use this data source to access information about an existing API Management Prod
 
 
 
-## Using GetProduct
+## Using GetProduct {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetProduct Result
+## GetProduct Result {#result}
 
 The following output properties are available:
 

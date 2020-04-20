@@ -15,7 +15,7 @@ Use this data source to access information about an existing Image.
 
 
 
-## Using GetImage
+## Using GetImage {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -225,7 +225,7 @@ The following arguments are supported:
 
 
 
-## GetImage Result
+## GetImage Result {#result}
 
 The following output properties are available:
 
@@ -616,7 +616,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Image<wbr>Data<wbr>Disk</h4>
+
+<h4 id="getimagedatadisk">Get<wbr>Image<wbr>Data<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetImageDataDisk">output</a> API doc for this type.
 {{% /choosable %}}
@@ -839,7 +840,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>Image<wbr>Os<wbr>Disk</h4>
+<h4 id="getimageosdisk">Get<wbr>Image<wbr>Os<wbr>Disk</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetImageOsDisk">output</a> API doc for this type.
 {{% /choosable %}}

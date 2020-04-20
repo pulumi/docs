@@ -15,7 +15,7 @@ Use this data source to access information about an existing Azure Firewall.
 
 
 
-## Using GetFirewall
+## Using GetFirewall {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetFirewall Result
+## GetFirewall Result {#result}
 
 The following output properties are available:
 
@@ -396,7 +396,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>Firewall<wbr>Ip<wbr>Configuration</h4>
+
+<h4 id="getfirewallipconfiguration">Get<wbr>Firewall<wbr>Ip<wbr>Configuration</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetFirewallIpConfiguration">output</a> API doc for this type.
 {{% /choosable %}}

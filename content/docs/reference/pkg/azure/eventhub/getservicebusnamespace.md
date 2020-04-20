@@ -15,7 +15,7 @@ Use this data source to access information about an existing ServiceBus Namespac
 
 
 
-## Using GetServiceBusNamespace
+## Using GetServiceBusNamespace {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetServiceBusNamespace Result
+## GetServiceBusNamespace Result {#result}
 
 The following output properties are available:
 

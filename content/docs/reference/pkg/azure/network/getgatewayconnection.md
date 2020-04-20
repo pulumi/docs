@@ -15,7 +15,7 @@ Use this data source to access information about an existing Virtual Network Gat
 
 
 
-## Using GetGatewayConnection
+## Using GetGatewayConnection {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetGatewayConnection Result
+## GetGatewayConnection Result {#result}
 
 The following output properties are available:
 
@@ -972,7 +972,8 @@ in which the connection is created.
 
 ## Supporting Types
 
-<h4>Get<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy</h4>
+
+<h4 id="getgatewayconnectionipsecpolicy">Get<wbr>Gateway<wbr>Connection<wbr>Ipsec<wbr>Policy</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetGatewayConnectionIpsecPolicy">output</a> API doc for this type.
 {{% /choosable %}}

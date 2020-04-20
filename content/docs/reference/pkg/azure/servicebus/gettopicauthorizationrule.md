@@ -33,7 +33,7 @@ export const servicebusAuthorizationRuleId = azurem_servicebus_topic_authorizati
 
 
 
-## Using GetTopicAuthorizationRule
+## Using GetTopicAuthorizationRule {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -243,7 +243,7 @@ The following arguments are supported:
 
 
 
-## GetTopicAuthorizationRule Result
+## GetTopicAuthorizationRule Result {#result}
 
 The following output properties are available:
 

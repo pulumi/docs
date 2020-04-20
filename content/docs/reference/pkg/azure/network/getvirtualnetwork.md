@@ -15,7 +15,7 @@ Use this data source to access information about an existing Virtual Network.
 
 
 
-## Using GetVirtualNetwork
+## Using GetVirtualNetwork {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetVirtualNetwork Result
+## GetVirtualNetwork Result {#result}
 
 The following output properties are available:
 
@@ -179,6 +179,15 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">List&lt;string&gt;</a></span>
     </dt>
     <dd>{{% md %}}The list of DNS servers used by the virtual network.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Guid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The GUID of the virtual network.
 {{% /md %}}</dd>
 
     <dt class="property-"
@@ -260,6 +269,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Guid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The GUID of the virtual network.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -337,6 +355,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>guid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The GUID of the virtual network.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>id</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -410,6 +437,15 @@ The following output properties are available:
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">List[str]</a></span>
     </dt>
     <dd>{{% md %}}The list of DNS servers used by the virtual network.
+{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>guid</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The GUID of the virtual network.
 {{% /md %}}</dd>
 
     <dt class="property-"

@@ -15,7 +15,7 @@ Use this data source to access information about an existing PostgreSQL Azure Da
 
 
 
-## Using GetServer
+## Using GetServer {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetServer Result
+## GetServer Result {#result}
 
 The following output properties are available:
 

@@ -15,7 +15,7 @@ Use this data source to access information about an existing Availability Set.
 
 
 
-## Using GetAvailabilitySet
+## Using GetAvailabilitySet {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetAvailabilitySet Result
+## GetAvailabilitySet Result {#result}
 
 The following output properties are available:
 

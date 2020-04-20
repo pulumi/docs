@@ -15,7 +15,7 @@ Use this data source to access information about an existing App Service.
 
 
 
-## Using GetAppService
+## Using GetAppService {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetAppService Result
+## GetAppService Result {#result}
 
 The following output properties are available:
 
@@ -832,7 +832,8 @@ The following output properties are available:
 
 ## Supporting Types
 
-<h4>Get<wbr>App<wbr>Service<wbr>Connection<wbr>String</h4>
+
+<h4 id="getappserviceconnectionstring">Get<wbr>App<wbr>Service<wbr>Connection<wbr>String</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAppServiceConnectionString">output</a> API doc for this type.
 {{% /choosable %}}
@@ -983,7 +984,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>App<wbr>Service<wbr>Site<wbr>Config</h4>
+<h4 id="getappservicesiteconfig">Get<wbr>App<wbr>Service<wbr>Site<wbr>Config</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAppServiceSiteConfig">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1854,7 +1855,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Cor</h4>
+<h4 id="getappservicesiteconfigcor">Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Cor</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAppServiceSiteConfigCor">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1969,7 +1970,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction</h4>
+<h4 id="getappservicesiteconfigiprestriction">Get<wbr>App<wbr>Service<wbr>Site<wbr>Config<wbr>Ip<wbr>Restriction</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAppServiceSiteConfigIpRestriction">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2080,7 +2081,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>App<wbr>Service<wbr>Site<wbr>Credential</h4>
+<h4 id="getappservicesitecredential">Get<wbr>App<wbr>Service<wbr>Site<wbr>Credential</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAppServiceSiteCredential">output</a> API doc for this type.
 {{% /choosable %}}
@@ -2187,7 +2188,7 @@ The following output properties are available:
 
 
 
-<h4>Get<wbr>App<wbr>Service<wbr>Source<wbr>Control</h4>
+<h4 id="getappservicesourcecontrol">Get<wbr>App<wbr>Service<wbr>Source<wbr>Control</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#GetAppServiceSourceControl">output</a> API doc for this type.
 {{% /choosable %}}

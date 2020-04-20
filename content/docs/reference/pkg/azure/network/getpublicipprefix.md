@@ -12,7 +12,7 @@ Use this data source to access information about an existing Public IP Prefix.
 
 
 
-## Using GetPublicIpPrefix
+## Using GetPublicIpPrefix {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -182,7 +182,7 @@ The following arguments are supported:
 
 
 
-## GetPublicIpPrefix Result
+## GetPublicIpPrefix Result {#result}
 
 The following output properties are available:
 

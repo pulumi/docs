@@ -15,7 +15,7 @@ Use this data source to access information about an existing Subnet within a Vir
 
 
 
-## Using GetSubnet
+## Using GetSubnet {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -189,7 +189,7 @@ The following arguments are supported:
 
 
 
-## GetSubnet Result
+## GetSubnet Result {#result}
 
 The following output properties are available:
 

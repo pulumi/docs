@@ -15,7 +15,7 @@ Uses this data source to access information about an existing Managed Applicatio
 
 
 
-## Using GetDefinition
+## Using GetDefinition {#using}
 
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
@@ -153,7 +153,7 @@ The following arguments are supported:
 
 
 
-## GetDefinition Result
+## GetDefinition Result {#result}
 
 The following output properties are available:
 
