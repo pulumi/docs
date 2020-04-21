@@ -1,7 +1,8 @@
 
 ---
 title: "SamlKey"
-block_external_search_index: true
+title_tag: "Resource SamlKey | Module idp | Package Okta"
+meta_desc: "Explore the SamlKey resource of the idp module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a SAML Identity Provider Signing Key."
 ---
 
 
@@ -31,7 +32,7 @@ const example = new okta.idp.SamlKey("example", {
 
 
 
-## Create a SamlKey Resource
+## Create a SamlKey Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -121,7 +122,7 @@ const example = new okta.idp.SamlKey("example", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -198,7 +199,13 @@ const example = new okta.idp.SamlKey("example", {
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## SamlKey Resource Properties {#properties}
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The SamlKey resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -271,10 +278,9 @@ const example = new okta.idp.SamlKey("example", {
 
 
 
+### Outputs
 
-## SamlKey Output Properties
-
-The following output properties are available:
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the SamlKey resource produces the following output properties:
 
 
 
@@ -299,6 +305,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Date the cert expires.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -363,6 +377,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>Kid</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -421,6 +443,14 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Date the cert expires.
 {{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
 
     <dt class="property-"
             title="">
@@ -485,6 +515,14 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+    <dt class="property-"
+            title="">
         <span>kid</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -528,8 +566,7 @@ The following output properties are available:
 
 
 
-
-## Look up an Existing SamlKey Resource
+## Look up an Existing SamlKey Resource {#look-up}
 
 Get an existing SamlKey resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -939,14 +976,13 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-okta">https://github.com/pulumi/pulumi-okta</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/articulate/terraform-provider-okta).</dd>
-	
 </dl>
 

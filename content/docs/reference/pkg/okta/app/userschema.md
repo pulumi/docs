@@ -1,7 +1,8 @@
 
 ---
 title: "UserSchema"
-block_external_search_index: true
+title_tag: "Resource UserSchema | Module app | Package Okta"
+meta_desc: "Explore the UserSchema resource of the app module, including examples, input properties, output properties, lookup functions, and supporting types. Creates an Application User Schema property."
 ---
 
 
@@ -37,7 +38,7 @@ const example = new okta.app.UserSchema("example", {
 
 
 
-## Create a UserSchema Resource
+## Create a UserSchema Resource {#create}
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
 
 
@@ -127,7 +128,7 @@ const example = new okta.app.UserSchema("example", {
         <span class="property-type"><a href="https://pkg.go.dev/github.com/pulumi/pulumi/sdk/v2/go/pulumi?tab=doc#Context">Context</a></span>
     </dt>
     <dd>
-      Context object for the current deployment
+      Context object for the current deployment.
     </dd>
   
     <dt
@@ -204,7 +205,13 @@ const example = new okta.app.UserSchema("example", {
 
 {{% /choosable %}}
 
-#### Resource Arguments
+## UserSchema Resource Properties {#properties}
+
+To learn more about resource properties and how to use them, see [Inputs and Outputs]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) in the Programming Model docs.
+
+### Inputs
+
+The UserSchema resource accepts the following [input]({{< relref "/docs/intro/concepts/programming-model#outputs" >}}) properties:
 
 
 
@@ -853,11 +860,79 @@ const example = new okta.app.UserSchema("example", {
 
 
 
+### Outputs
+
+All [input](#inputs) properties are implicitly available as output properties. Additionally, the UserSchema resource produces the following output properties:
 
 
 
 
-## Look up an Existing UserSchema Resource
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>Id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-"
+            title="">
+        <span>id</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
+
+
+## Look up an Existing UserSchema Resource {#look-up}
 
 Get an existing UserSchema resource's state with the given name, ID, and optional extra properties used to qualify the lookup.
 {{< chooser language "javascript,typescript,python,go,csharp" / >}}
@@ -1628,7 +1703,8 @@ The following state arguments are supported:
 
 ## Supporting Types
 
-<h4>User<wbr>Schema<wbr>Array<wbr>One<wbr>Of</h4>
+
+<h4 id="userschemaarrayoneof">User<wbr>Schema<wbr>Array<wbr>One<wbr>Of</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#UserSchemaArrayOneOf">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#UserSchemaArrayOneOf">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1743,7 +1819,7 @@ The following state arguments are supported:
 
 
 
-<h4>User<wbr>Schema<wbr>One<wbr>Of</h4>
+<h4 id="userschemaoneof">User<wbr>Schema<wbr>One<wbr>Of</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/input/#UserSchemaOneOf">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/okta/types/output/#UserSchemaOneOf">output</a> API doc for this type.
 {{% /choosable %}}
@@ -1862,14 +1938,13 @@ The following state arguments are supported:
 
 
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-okta">https://github.com/pulumi/pulumi-okta</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/articulate/terraform-provider-okta).</dd>
-	
 </dl>
 

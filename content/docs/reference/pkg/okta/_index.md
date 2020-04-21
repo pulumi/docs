@@ -1,6 +1,7 @@
 ---
 title: "Okta"
-block_external_search_index: true
+title_tag: "Package Okta"
+meta_desc: "A Pulumi package for creating and managing okta resources."
 menu:
     reference:
         parent: API Reference
@@ -11,7 +12,7 @@ menu:
 
 A Pulumi package for creating and managing okta resources.
 
-<h3>Modules</h3>
+<h2 id="modules">Modules</h2>
 <ul class="api">
     <li><a href="app/" title="app"><span class="symbol module"></span>app</a></li>
     <li><a href="auth/" title="auth"><span class="symbol module"></span>auth</a></li>
@@ -28,18 +29,18 @@ A Pulumi package for creating and managing okta resources.
     <li><a href="user/" title="user"><span class="symbol module"></span>user</a></li>
 </ul>
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-okta">https://github.com/pulumi/pulumi-okta</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/articulate/terraform-provider-okta).</dd>
 	<dt>Version</dt>
 	<dd>2.0.0</dd>
