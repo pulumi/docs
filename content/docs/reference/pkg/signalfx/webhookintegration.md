@@ -1,7 +1,8 @@
 
 ---
 title: "WebhookIntegration"
-block_external_search_index: true
+title_tag: "Resource WebhookIntegration | Package SignalFx"
+meta_desc: "Explore the WebhookIntegration resource of the SignalFx package, including examples, input properties, output properties, lookup functions, and supporting types. SignalFx Webhook integration."
 ---
 
 
@@ -957,8 +958,7 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-signalfx">https://github.com/pulumi/pulumi-signalfx</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/terraform-providers/terraform-provider-signalfx).</dd>
-	
 </dl>
 
