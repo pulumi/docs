@@ -12,15 +12,13 @@ function localizeDateTime(date) {
  * This function parses the cookie string and returns an object of the current cookies.
  */
 function parseCookie() {
-    var cookieObject = {};
-    var cookieString = document.cookie;
-    var parsedCookie = cookieString.split(";").map(function(cookie) {
-        var parts = cookie.split("=");
-        cookieObject[parts[0]] = parts[1];
-        return cookie;
-    });
-
-    return cookieObject
+    return document.cookie.split(";").reduce(function(obj, cookie) {
+        var index = cookie.indexOf("=");
+        var key = cookie.substring(0, index).trim();
+        var value = cookie.substring(index + 1).trim();
+        obj[key] = value;
+        return obj;
+    }, {});
 }
 
 /**
@@ -29,17 +27,11 @@ function parseCookie() {
  * @param {string} utmCookieString The value of the '__utmzz' cookie. Values are separated by '|'.
  */
 function parseUTMCookie(utmCookieString) {
-    var cookie = utmCookieString ? utmCookieString : "";
-    var parts = cookie.split("|");
-    var utmObj = {};
-
-    for (let i = 0; i < parts.length; i++) {
-        var value = parts[i];
-        var valueParts = value.split("=");
-        utmObj[valueParts[0]] = utmObj[1];
-    }
-
-    return parseUTMCookie;
+    return (utmCookieString || "").split("|").reduce(function(obj, utm) {
+        var parts = utm.split("=");
+        obj[parts[0]] = parts[1];
+        return obj;
+    }, {});
 }
 
 $(function() {
@@ -85,24 +77,29 @@ $(function() {
                              (typeof window.analytics.track === "function");
 
     if (webinarDetails && analyticsAvailable) {
-        var form = $(".hbspt-form form");
-
         // Parse the cookie and grab the UTM cookie values.
         var cookies = parseCookie();
         var utmCookie = parseUTMCookie(cookies["__utmzz"]);
 
-        // When the form is submitted build the submissionData object and
-        // fire an event to Segment with the data.
-        form.submit(function() {
-            var submissionData = {
-                formId: form.attr("data-form-id"),
-                email: $(".hbspt-form form input[name='email']").val(),
-                utmCampaign: utmCookie.utmccn || "(not set)",
-                utmSource: utmCookie.utmcsr || "(direct)",
-                utmMedium: utmCookie.utmcmd || "(none)",
-            };
+        // Listen for the HubSpot form to be loaded.
+        window.addEventListener('message', event => {
+            if(event.data.type === 'hsFormCallback' && event.data.eventName === 'onFormReady') {
+                var form = $(".hbspt-form form");
+                console.log(form);
 
-            window.analytics.track("form-submission", submissionData);
+                // Send an analytics event with the UTM values when the form is submitted.
+                form.submit(function() {
+                    var submissionData = {
+                        formId: form.attr("data-form-id"),
+                        email: $(".hbspt-form form input[name='email']").val(),
+                        utmCampaign: utmCookie.utmccn || "(not set)",
+                        utmSource: utmCookie.utmcsr || "(direct)",
+                        utmMedium: utmCookie.utmcmd || "(none)",
+                    };
+
+                    window.analytics.track("form-submission", submissionData);
+                });
+            }
         });
     }
 });
