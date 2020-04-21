@@ -26,6 +26,10 @@ aliases: ["/docs/quickstart/kubernetes/install-language-runtime/"]
 {{< install-python >}}
 {{% /choosable %}}
 
+{{% choosable language go %}}
+{{< install-go >}}
+{{% /choosable %}}
+
 {{% choosable language "csharp,fsharp,visualbasic" %}}
 {{< install-dotnet >}}
 {{% /choosable %}}
