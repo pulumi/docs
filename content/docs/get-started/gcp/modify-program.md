@@ -25,21 +25,9 @@ Replace the entire contents of {{< langfile >}} with the following:
 const pulumi = require("@pulumi/pulumi");
 const gcp = require("@pulumi/gcp");
 
-// Let's create a customer managed key and use that for encryption instead of the default Google-managed key.
-const keyRing = new gcp.kms.KeyRing("my-keyring", {
-    location: "global",
-});
-
-const cryptoKey = new gcp.kms.CryptoKey("my-cryptokey", {
-    keyRing: keyRing.selfLink,
-    rotationPeriod: "100000s",
-});
-
 // Create a GCP resource (Storage Bucket)
 const bucket = new gcp.storage.Bucket("my-bucket", {
-    encryption: {
-        defaultKmsKeyName: cryptoKey.selfLink,
-    }
+    labels: { "environment": "dev" }
 });
 
 // Export the DNS name of the bucket
@@ -53,21 +41,9 @@ exports.bucketName = bucket.url;
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-// Let's create a customer managed key and use that for encryption instead of the default Google-managed key.
-const keyRing = new gcp.kms.KeyRing("my-keyring", {
-    location: "global",
-});
-
-const cryptoKey = new gcp.kms.CryptoKey("my-cryptokey", {
-    keyRing: keyRing.selfLink,
-    rotationPeriod: "100000s",
-});
-
 // Create a GCP resource (Storage Bucket)
 const bucket = new gcp.storage.Bucket("my-bucket", {
-    encryption: {
-        defaultKmsKeyName: cryptoKey.selfLink,
-    }
+    labels: { "environment": "dev" } 
 });
 
 // Export the DNS name of the bucket
