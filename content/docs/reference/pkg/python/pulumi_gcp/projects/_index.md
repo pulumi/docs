@@ -367,6 +367,12 @@ List of possible stages is <a class="reference external" href="https://cloud.goo
 </dd></dl>
 
 <dl class="attribute">
+<dt id="pulumi_gcp.projects.IAMCustomRole.name">
+<code class="sig-name descname">name</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.IAMCustomRole.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the role in the format <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/roles/{{role_id}}</span></code>. Like <code class="docutils literal notranslate"><span class="pre">id</span></code>, this field can be used as a reference in other resources such as IAM role bindings.</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="pulumi_gcp.projects.IAMCustomRole.permissions">
 <code class="sig-name descname">permissions</code><em class="property"> = None</em><a class="headerlink" href="#pulumi_gcp.projects.IAMCustomRole.permissions" title="Permalink to this definition">¶</a></dt>
 <dd><p>The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.</p>
@@ -401,7 +407,7 @@ List of possible stages is <a class="reference external" href="https://cloud.goo
 
 <dl class="method">
 <dt id="pulumi_gcp.projects.IAMCustomRole.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">deleted=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role_id=None</em>, <em class="sig-param">stage=None</em>, <em class="sig-param">title=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.IAMCustomRole.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param">resource_name</em>, <em class="sig-param">id</em>, <em class="sig-param">opts=None</em>, <em class="sig-param">deleted=None</em>, <em class="sig-param">description=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">permissions=None</em>, <em class="sig-param">project=None</em>, <em class="sig-param">role_id=None</em>, <em class="sig-param">stage=None</em>, <em class="sig-param">title=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_gcp.projects.IAMCustomRole.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing IAMCustomRole resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -412,6 +418,7 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>deleted</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – (Optional) The current deleted state of the role.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A human-readable description for the role.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the role in the format <code class="docutils literal notranslate"><span class="pre">projects/{{project}}/roles/{{role_id}}</span></code>. Like <code class="docutils literal notranslate"><span class="pre">id</span></code>, this field can be used as a reference in other resources such as IAM role bindings.</p></li>
 <li><p><strong>permissions</strong> (<em>pulumi.Input</em><em>[</em><em>list</em><em>]</em>) – The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.</p></li>
 <li><p><strong>project</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The project that the service account will be created in.
 Defaults to the provider project configuration.</p></li>
