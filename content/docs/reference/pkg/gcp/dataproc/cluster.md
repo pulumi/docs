@@ -1,8 +1,7 @@
 
 ---
 title: "Cluster"
-title_tag: "Resource Cluster | Module dataproc | Package GCP"
-meta_desc: "Explore the Cluster resource of the dataproc module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a Cloud Dataproc cluster resource within GCP. For more information see"
+block_external_search_index: true
 ---
 
 
@@ -4829,7 +4828,8 @@ attached to each preemptible worker node. Defaults to 0.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

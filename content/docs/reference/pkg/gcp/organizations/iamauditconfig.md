@@ -1,8 +1,7 @@
 
 ---
 title: "IamAuditConfig"
-title_tag: "Resource IamAuditConfig | Module organizations | Package GCP"
-meta_desc: "Explore the IamAuditConfig resource of the organizations module, including examples, input properties, output properties, lookup functions, and supporting types. Allows management of audit logging config for a given service for a Google Cloud Platform Organization."
+block_external_search_index: true
 ---
 
 
@@ -902,7 +901,8 @@ Each entry can have one of the following values:
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

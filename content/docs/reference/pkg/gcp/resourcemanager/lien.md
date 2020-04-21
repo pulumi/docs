@@ -1,8 +1,7 @@
 
 ---
 title: "Lien"
-title_tag: "Resource Lien | Module resourcemanager | Package GCP"
-meta_desc: "Explore the Lien resource of the resourcemanager module, including examples, input properties, output properties, lookup functions, and supporting types. A Lien represents an encumbrance on the actions that can be performed on a resource."
+block_external_search_index: true
 ---
 
 
@@ -960,7 +959,8 @@ meaningless and will be rejected. e.g. ['resourcemanager.projects.delete']
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

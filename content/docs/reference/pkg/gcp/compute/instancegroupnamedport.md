@@ -1,8 +1,7 @@
 
 ---
 title: "InstanceGroupNamedPort"
-title_tag: "Resource InstanceGroupNamedPort | Module compute | Package GCP"
-meta_desc: "Explore the InstanceGroupNamedPort resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Mange the named ports setting for a managed instance group without"
+block_external_search_index: true
 ---
 
 
@@ -838,7 +837,8 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

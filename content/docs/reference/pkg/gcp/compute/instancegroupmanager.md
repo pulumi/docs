@@ -1,8 +1,7 @@
 
 ---
 title: "InstanceGroupManager"
-title_tag: "Resource InstanceGroupManager | Module compute | Package GCP"
-meta_desc: "Explore the InstanceGroupManager resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. The Google Compute Engine Instance Group Manager API creates and manages pools"
+block_external_search_index: true
 ---
 
 
@@ -2498,7 +2497,8 @@ one of which has a `target_size.percent` of `60` will create 2 instances of that
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

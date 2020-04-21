@@ -1,8 +1,7 @@
 
 ---
 title: "HealthCheck"
-title_tag: "Resource HealthCheck | Module compute | Package GCP"
-meta_desc: "Explore the HealthCheck resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Health Checks determine whether instances are responsive and able to do work."
+block_external_search_index: true
 ---
 
 
@@ -229,7 +228,7 @@ const http2_health_check = new gcp.compute.HealthCheck("http2-health-check", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">HealthCheck</span><span class="p">(resource_name, opts=None, </span>check_interval_sec=None<span class="p">, </span>description=None<span class="p">, </span>healthy_threshold=None<span class="p">, </span>http2_health_check=None<span class="p">, </span>http_health_check=None<span class="p">, </span>https_health_check=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>ssl_health_check=None<span class="p">, </span>tcp_health_check=None<span class="p">, </span>timeout_sec=None<span class="p">, </span>unhealthy_threshold=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nf">HealthCheck</span><span class="p">(resource_name, opts=None, </span>check_interval_sec=None<span class="p">, </span>description=None<span class="p">, </span>healthy_threshold=None<span class="p">, </span>http2_health_check=None<span class="p">, </span>http_health_check=None<span class="p">, </span>https_health_check=None<span class="p">, </span>log_config=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>ssl_health_check=None<span class="p">, </span>tcp_health_check=None<span class="p">, </span>timeout_sec=None<span class="p">, </span>unhealthy_threshold=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -457,6 +456,15 @@ The HealthCheck resource accepts the following [input]({{< relref "/docs/intro/c
 
     <dt class="property-optional"
             title="Optional">
+        <span>Log<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configure logging on this health check.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -573,6 +581,15 @@ have greater value than checkIntervalSec.
         <span class="property-type"><a href="#healthcheckhttpshealthcheck">Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Log<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configure logging on this health check.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -697,6 +714,15 @@ have greater value than checkIntervalSec.
 
     <dt class="property-optional"
             title="Optional">
+        <span>log<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configure logging on this health check.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -813,6 +839,15 @@ have greater value than checkIntervalSec.
         <span class="property-type"><a href="#healthcheckhttpshealthcheck">Dict[Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check]</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>log_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthchecklogconfig">Dict[Health<wbr>Check<wbr>Log<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}Configure logging on this health check.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1072,7 +1107,7 @@ Get an existing HealthCheck resource's state with the given name, ID, and option
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>check_interval_sec=None<span class="p">, </span>creation_timestamp=None<span class="p">, </span>description=None<span class="p">, </span>healthy_threshold=None<span class="p">, </span>http2_health_check=None<span class="p">, </span>http_health_check=None<span class="p">, </span>https_health_check=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>self_link=None<span class="p">, </span>ssl_health_check=None<span class="p">, </span>tcp_health_check=None<span class="p">, </span>timeout_sec=None<span class="p">, </span>type=None<span class="p">, </span>unhealthy_threshold=None<span class="p">, __props__=None);</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">static </span><span class="nf">get</span><span class="p">(resource_name, id, opts=None, </span>check_interval_sec=None<span class="p">, </span>creation_timestamp=None<span class="p">, </span>description=None<span class="p">, </span>healthy_threshold=None<span class="p">, </span>http2_health_check=None<span class="p">, </span>http_health_check=None<span class="p">, </span>https_health_check=None<span class="p">, </span>log_config=None<span class="p">, </span>name=None<span class="p">, </span>project=None<span class="p">, </span>self_link=None<span class="p">, </span>ssl_health_check=None<span class="p">, </span>tcp_health_check=None<span class="p">, </span>timeout_sec=None<span class="p">, </span>type=None<span class="p">, </span>unhealthy_threshold=None<span class="p">, __props__=None);</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1251,6 +1286,15 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span>Log<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Configure logging on this health check.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>Name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -1394,6 +1438,15 @@ have greater value than checkIntervalSec.
         <span class="property-type"><a href="#healthcheckhttpshealthcheck">Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Log<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configure logging on this health check.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1545,6 +1598,15 @@ have greater value than checkIntervalSec.
 
     <dt class="property-optional"
             title="Optional">
+        <span>log<wbr>Config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config</a></span>
+    </dt>
+    <dd>{{% md %}}Configure logging on this health check.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
         <span>name</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -1688,6 +1750,15 @@ have greater value than checkIntervalSec.
         <span class="property-type"><a href="#healthcheckhttpshealthcheck">Dict[Health<wbr>Check<wbr>Https<wbr>Health<wbr>Check]</a></span>
     </dt>
     <dd>{{% md %}}A nested object resource
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>log_<wbr>config</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#healthchecklogconfig">Dict[Health<wbr>Check<wbr>Log<wbr>Config]</a></span>
+    </dt>
+    <dd>{{% md %}}Configure logging on this health check.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -2583,6 +2654,81 @@ have greater value than checkIntervalSec.
 
 
 
+<h4 id="healthchecklogconfig">Health<wbr>Check<wbr>Log<wbr>Config</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckLogConfig">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#HealthCheckLogConfig">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckLogConfigArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/compute?tab=doc#HealthCheckLogConfigOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Enable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#boolean">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean">boolean</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>enable</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">bool</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+
+</dl>
+{{% /choosable %}}
+
+
+
+
+
 <h4 id="healthchecksslhealthcheck">Health<wbr>Check<wbr>Ssl<wbr>Health<wbr>Check</h4>
 {{% choosable language nodejs %}}
 > See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#HealthCheckSslHealthCheck">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#HealthCheckSslHealthCheck">output</a> API doc for this type.
@@ -3063,7 +3209,8 @@ have greater value than checkIntervalSec.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

@@ -1,8 +1,7 @@
 
 ---
 title: "Dataset"
-title_tag: "Resource Dataset | Module healthcare | Package GCP"
-meta_desc: "Explore the Dataset resource of the healthcare module, including examples, input properties, output properties, lookup functions, and supporting types. A Healthcare `Dataset` is a toplevel logical grouping of `dicomStores`, `fhirStores` and `hl7V2Stores`."
+block_external_search_index: true
 ---
 
 
@@ -850,7 +849,8 @@ timezone is specified.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

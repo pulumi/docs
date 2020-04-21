@@ -1,8 +1,7 @@
 
 ---
 title: "Dataset"
-title_tag: "Resource Dataset | Module bigquery | Package GCP"
-meta_desc: "Explore the Dataset resource of the bigquery module, including examples, input properties, output properties, lookup functions, and supporting types. Datasets allow you to organize and control access to your tables."
+block_external_search_index: true
 ---
 
 
@@ -11,6 +10,13 @@ meta_desc: "Explore the Dataset resource of the bigquery module, including examp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Datasets allow you to organize and control access to your tables.
+
+
+To get more information about Dataset, see:
+
+* [API documentation](https://cloud.google.com/bigquery/docs/reference/rest/v2/datasets)
+* How-to Guides
+    * [Datasets Intro](https://cloud.google.com/bigquery/docs/datasets-intro)
 
 
 
@@ -339,7 +345,7 @@ underscores (_). The maximum length is 1,024 characters.
             title="Optional">
         <span>Accesses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetaccess">[]Dataset<wbr>Access</a></span>
+        <span class="property-type"><a href="#datasetaccess">[]Dataset<wbr>Access<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
 {{% /md %}}</dd>
@@ -1226,7 +1232,7 @@ If it is not provided, the provider project is used.
             title="Optional">
         <span>Accesses</span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#datasetaccess">[]Dataset<wbr>Access</a></span>
+        <span class="property-type"><a href="#datasetaccess">[]Dataset<wbr>Access<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}An array of objects that define dataset access for one or more entities.
 {{% /md %}}</dd>
@@ -1734,7 +1740,7 @@ If it is not provided, the provider project is used.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#DatasetAccessArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#DatasetAccessOutput">output</a> API doc for this type.
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#DatasetAccessTypeArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v3/go/gcp/bigquery?tab=doc#DatasetAccessTypeOutput">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1918,7 +1924,7 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>group<wbr>By<wbr>Email</span>
+        <span>group_<wbr>by_<wbr>email</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1934,7 +1940,7 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>special<wbr>Group</span>
+        <span>special_<wbr>group</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -1942,7 +1948,7 @@ If it is not provided, the provider project is used.
 
     <dt class="property-optional"
             title="Optional">
-        <span>user<wbr>By<wbr>Email</span>
+        <span>user_<wbr>by_<wbr>email</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
@@ -2187,7 +2193,8 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

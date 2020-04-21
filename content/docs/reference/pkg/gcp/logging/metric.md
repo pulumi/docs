@@ -1,8 +1,7 @@
 
 ---
 title: "Metric"
-title_tag: "Resource Metric | Module logging | Package GCP"
-meta_desc: "Explore the Metric resource of the logging module, including examples, input properties, output properties, lookup functions, and supporting types. Logs-based metric can also be used to extract values from logs and create a a distribution"
+block_external_search_index: true
 ---
 
 
@@ -2061,7 +2060,8 @@ to specify a regex that does not include exactly one capture group.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

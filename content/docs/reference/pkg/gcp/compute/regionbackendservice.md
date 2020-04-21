@@ -1,8 +1,7 @@
 
 ---
 title: "RegionBackendService"
-title_tag: "Resource RegionBackendService | Module compute | Package GCP"
-meta_desc: "Explore the RegionBackendService resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. A Region Backend Service defines a regionally-scoped group of virtual"
+block_external_search_index: true
 ---
 
 
@@ -4315,7 +4314,8 @@ errors if used with the GA API.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

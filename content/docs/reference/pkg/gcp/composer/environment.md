@@ -1,8 +1,7 @@
 
 ---
 title: "Environment"
-title_tag: "Resource Environment | Module composer | Package GCP"
-meta_desc: "Explore the Environment resource of the composer module, including examples, input properties, output properties, lookup functions, and supporting types. An environment for running orchestration tasks."
+block_external_search_index: true
 ---
 
 
@@ -2021,7 +2020,8 @@ Can be set to '2' or '3'. If not specified, the default is '2'. Cannot be update
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

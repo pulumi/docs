@@ -1,8 +1,7 @@
 
 ---
 title: "GCPolicy"
-title_tag: "Resource GCPolicy | Module bigtable | Package GCP"
-meta_desc: "Explore the GCPolicy resource of the bigtable module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a Google Cloud Bigtable GC Policy inside a family. For more information see"
+block_external_search_index: true
 ---
 
 
@@ -1134,7 +1133,8 @@ The following state arguments are supported:
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

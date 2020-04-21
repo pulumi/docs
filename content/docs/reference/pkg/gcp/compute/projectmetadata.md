@@ -1,8 +1,7 @@
 
 ---
 title: "ProjectMetadata"
-title_tag: "Resource ProjectMetadata | Module compute | Package GCP"
-meta_desc: "Explore the ProjectMetadata resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Authoritatively manages metadata common to all instances for a project in GCE. For more information see"
+block_external_search_index: true
 ---
 
 
@@ -640,7 +639,8 @@ is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

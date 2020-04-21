@@ -1,8 +1,7 @@
 
 ---
 title: "SecurityPolicy"
-title_tag: "Resource SecurityPolicy | Module compute | Package GCP"
-meta_desc: "Explore the SecurityPolicy resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. A Security Policy defines an IP blacklist or whitelist that protects load balanced Google Cloud services by denying or permitting traffic from specified IP ranges. For more information"
+block_external_search_index: true
 ---
 
 
@@ -1551,7 +1550,8 @@ The application context of the containing message determines which well-known fe
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

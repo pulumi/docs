@@ -1,7 +1,6 @@
 ---
 title: "GCP"
-title_tag: "Package GCP"
-meta_desc: "A Pulumi package for creating and managing Google Cloud Platform resources."
+block_external_search_index: true
 menu:
     reference:
         parent: API Reference
@@ -46,11 +45,13 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
     <li><a href="iam/" title="iam"><span class="symbol module"></span>iam</a></li>
     <li><a href="iap/" title="iap"><span class="symbol module"></span>iap</a></li>
     <li><a href="identityplatform/" title="identityplatform"><span class="symbol module"></span>identityplatform</a></li>
+    <li><a href="iot/" title="iot"><span class="symbol module"></span>iot</a></li>
     <li><a href="kms/" title="kms"><span class="symbol module"></span>kms</a></li>
     <li><a href="logging/" title="logging"><span class="symbol module"></span>logging</a></li>
     <li><a href="ml/" title="ml"><span class="symbol module"></span>ml</a></li>
     <li><a href="monitoring/" title="monitoring"><span class="symbol module"></span>monitoring</a></li>
     <li><a href="organizations/" title="organizations"><span class="symbol module"></span>organizations</a></li>
+    <li><a href="oslogin/" title="oslogin"><span class="symbol module"></span>oslogin</a></li>
     <li><a href="projects/" title="projects"><span class="symbol module"></span>projects</a></li>
     <li><a href="pubsub/" title="pubsub"><span class="symbol module"></span>pubsub</a></li>
     <li><a href="redis/" title="redis"><span class="symbol module"></span>redis</a></li>
@@ -80,9 +81,9 @@ A Pulumi package for creating and managing Google Cloud Platform resources.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>3.0.1</dd>
+	<dd>3.1.0</dd>
 </dl>
 

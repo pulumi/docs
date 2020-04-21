@@ -1,8 +1,7 @@
 
 ---
 title: "Folder"
-title_tag: "Resource Folder | Module organizations | Package GCP"
-meta_desc: "Explore the Folder resource of the organizations module, including examples, input properties, output properties, lookup functions, and supporting types. Allows management of a Google Cloud Platform folder. For more information see "
+block_external_search_index: true
 ---
 
 
@@ -859,7 +858,8 @@ Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

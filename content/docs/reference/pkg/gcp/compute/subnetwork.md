@@ -1,8 +1,7 @@
 
 ---
 title: "Subnetwork"
-title_tag: "Resource Subnetwork | Module compute | Package GCP"
-meta_desc: "Explore the Subnetwork resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. A VPC network is a virtual version of the traditional physical networks"
+block_external_search_index: true
 ---
 
 
@@ -1965,7 +1964,8 @@ section](https://www.terraform.io/docs/configuration/attr-as-blocks.html#definin
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

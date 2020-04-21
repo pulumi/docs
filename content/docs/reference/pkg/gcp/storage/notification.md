@@ -1,8 +1,7 @@
 
 ---
 title: "Notification"
-title_tag: "Resource Notification | Module storage | Package GCP"
-meta_desc: "Explore the Notification resource of the storage module, including examples, input properties, output properties, lookup functions, and supporting types. Creates a new notification configuration on a specified bucket, establishing a flow of event notifications from GCS to a Cloud Pub/Sub topic."
+block_external_search_index: true
 ---
 
 
@@ -1076,7 +1075,8 @@ you will need to use the project-level name.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

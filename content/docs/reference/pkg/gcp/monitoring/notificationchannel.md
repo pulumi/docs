@@ -1,8 +1,7 @@
 
 ---
 title: "NotificationChannel"
-title_tag: "Resource NotificationChannel | Module monitoring | Package GCP"
-meta_desc: "Explore the NotificationChannel resource of the monitoring module, including examples, input properties, output properties, lookup functions, and supporting types. A NotificationChannel is a medium through which an alert is delivered"
+block_external_search_index: true
 ---
 
 
@@ -254,17 +253,6 @@ The NotificationChannel resource accepts the following [input]({{< relref "/docs
 
     <dt class="property-required"
             title="Required">
-        <span>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
-    </dt>
-    <dd>{{% md %}}An optional human-readable name for this notification channel. It is recommended that you specify a non-empty and unique
-name in order to make it easier to identify the channels in your project, though this is not enforced. The display name
-is limited to 512 Unicode characters.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
@@ -282,6 +270,17 @@ valid values such as "email", "slack", etc...
     </dt>
     <dd>{{% md %}}An optional human-readable description of this notification channel. This description may provide additional details,
 beyond the display name, for the channel. This may not exceed 1024 Unicode characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Display<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional human-readable name for this notification channel. It is recommended that you specify a non-empty and unique
+name in order to make it easier to identify the channels in your project, though this is not enforced. The display name
+is limited to 512 Unicode characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -353,17 +352,6 @@ begin with a letter.
 
     <dt class="property-required"
             title="Required">
-        <span>Display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
-    </dt>
-    <dd>{{% md %}}An optional human-readable name for this notification channel. It is recommended that you specify a non-empty and unique
-name in order to make it easier to identify the channels in your project, though this is not enforced. The display name
-is limited to 512 Unicode characters.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>Type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
@@ -381,6 +369,17 @@ valid values such as "email", "slack", etc...
     </dt>
     <dd>{{% md %}}An optional human-readable description of this notification channel. This description may provide additional details,
 beyond the display name, for the channel. This may not exceed 1024 Unicode characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>Display<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional human-readable name for this notification channel. It is recommended that you specify a non-empty and unique
+name in order to make it easier to identify the channels in your project, though this is not enforced. The display name
+is limited to 512 Unicode characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -452,17 +451,6 @@ begin with a letter.
 
     <dt class="property-required"
             title="Required">
-        <span>display<wbr>Name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
-    </dt>
-    <dd>{{% md %}}An optional human-readable name for this notification channel. It is recommended that you specify a non-empty and unique
-name in order to make it easier to identify the channels in your project, though this is not enforced. The display name
-is limited to 512 Unicode characters.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
@@ -480,6 +468,17 @@ valid values such as "email", "slack", etc...
     </dt>
     <dd>{{% md %}}An optional human-readable description of this notification channel. This description may provide additional details,
 beyond the display name, for the channel. This may not exceed 1024 Unicode characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>display<wbr>Name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
+    </dt>
+    <dd>{{% md %}}An optional human-readable name for this notification channel. It is recommended that you specify a non-empty and unique
+name in order to make it easier to identify the channels in your project, though this is not enforced. The display name
+is limited to 512 Unicode characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -551,17 +550,6 @@ begin with a letter.
 
     <dt class="property-required"
             title="Required">
-        <span>display_<wbr>name</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
-    </dt>
-    <dd>{{% md %}}An optional human-readable name for this notification channel. It is recommended that you specify a non-empty and unique
-name in order to make it easier to identify the channels in your project, though this is not enforced. The display name
-is limited to 512 Unicode characters.
-{{% /md %}}</dd>
-
-    <dt class="property-required"
-            title="Required">
         <span>type</span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
@@ -579,6 +567,17 @@ valid values such as "email", "slack", etc...
     </dt>
     <dd>{{% md %}}An optional human-readable description of this notification channel. This description may provide additional details,
 beyond the display name, for the channel. This may not exceed 1024 Unicode characters.
+{{% /md %}}</dd>
+
+    <dt class="property-optional"
+            title="Optional">
+        <span>display_<wbr>name</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
+    </dt>
+    <dd>{{% md %}}An optional human-readable name for this notification channel. It is recommended that you specify a non-empty and unique
+name in order to make it easier to identify the channels in your project, though this is not enforced. The display name
+is limited to 512 Unicode characters.
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1598,7 +1597,8 @@ UpdateNotificationChannel operation. To change the value of this field, you must
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

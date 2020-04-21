@@ -1,8 +1,7 @@
 
 ---
 title: "DicomStore"
-title_tag: "Resource DicomStore | Module healthcare | Package GCP"
-meta_desc: "Explore the DicomStore resource of the healthcare module, including examples, input properties, output properties, lookup functions, and supporting types. A DicomStore is a datastore inside a Healthcare dataset that conforms to the DICOM"
+block_external_search_index: true
 ---
 
 
@@ -956,7 +955,8 @@ UTF-8 encoding of maximum 128 bytes, and must conform to the following PCRE regu
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

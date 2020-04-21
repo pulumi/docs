@@ -1,8 +1,7 @@
 
 ---
 title: "Hl7StoreIamPolicy"
-title_tag: "Resource Hl7StoreIamPolicy | Module healthcare | Package GCP"
-meta_desc: "Explore the Hl7StoreIamPolicy resource of the healthcare module, including examples, input properties, output properties, lookup functions, and supporting types. Three different resources help you manage your IAM policy for Healthcare HL7v2 store. Each of these resources serves a different use case:"
+block_external_search_index: true
 ---
 
 
@@ -742,7 +741,8 @@ a `gcp.organizations.getIAMPolicy` data source.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

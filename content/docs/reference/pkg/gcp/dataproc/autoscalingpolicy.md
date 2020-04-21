@@ -1,8 +1,7 @@
 
 ---
 title: "AutoscalingPolicy"
-title_tag: "Resource AutoscalingPolicy | Module dataproc | Package GCP"
-meta_desc: "Explore the AutoscalingPolicy resource of the dataproc module, including examples, input properties, output properties, lookup functions, and supporting types. Describes an autoscaling policy for Dataproc cluster autoscaler."
+block_external_search_index: true
 ---
 
 
@@ -1574,7 +1573,8 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

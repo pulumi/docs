@@ -1,8 +1,7 @@
 
 ---
 title: "NodePool"
-title_tag: "Resource NodePool | Module container | Package GCP"
-meta_desc: "Explore the NodePool resource of the container module, including examples, input properties, output properties, lookup functions, and supporting types. Manages a node pool in a Google Kubernetes Engine (GKE) cluster separately from"
+block_external_search_index: true
 ---
 
 
@@ -12,7 +11,7 @@ meta_desc: "Explore the NodePool resource of the container module, including exa
 
 Manages a node pool in a Google Kubernetes Engine (GKE) cluster separately from
 the cluster control plane. For more information see [the official documentation](https://cloud.google.com/container-engine/docs/node-pools)
-and [the API reference](https://cloud.google.com/container-engine/reference/rest/v1/projects.zones.clusters.nodePools).
+and [the API reference](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters.nodePools).
 
 
 
@@ -3227,7 +3226,8 @@ parallel. Can be set to 0 or greater.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

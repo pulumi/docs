@@ -1,8 +1,7 @@
 
 ---
 title: "TargetSSLProxy"
-title_tag: "Resource TargetSSLProxy | Module compute | Package GCP"
-meta_desc: "Explore the TargetSSLProxy resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Represents a TargetSslProxy resource, which is used by one or more"
+block_external_search_index: true
 ---
 
 
@@ -1245,7 +1244,8 @@ TargetSslProxy resource will not have any SSL policy configured.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

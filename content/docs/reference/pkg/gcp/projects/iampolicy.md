@@ -1,8 +1,7 @@
 
 ---
 title: "IAMPolicy"
-title_tag: "Resource IAMPolicy | Module projects | Package GCP"
-meta_desc: "Explore the IAMPolicy resource of the projects module, including examples, input properties, output properties, lookup functions, and supporting types. Four different resources help you manage your IAM policy for a project. Each of these resources serves a different use case:"
+block_external_search_index: true
 ---
 
 
@@ -803,7 +802,8 @@ will not be inferred from the provider.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

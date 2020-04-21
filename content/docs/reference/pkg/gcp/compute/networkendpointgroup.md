@@ -1,8 +1,7 @@
 
 ---
 title: "NetworkEndpointGroup"
-title_tag: "Resource NetworkEndpointGroup | Module compute | Package GCP"
-meta_desc: "Explore the NetworkEndpointGroup resource of the compute module, including examples, input properties, output properties, lookup functions, and supporting types. Network endpoint groups (NEGs) are zonal resources that represent"
+block_external_search_index: true
 ---
 
 
@@ -256,7 +255,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Currently the only supported value is GCE_VM_IP_PORT.
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group. The only supported value is GCE_VM_IP_PORT
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -339,7 +338,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Currently the only supported value is GCE_VM_IP_PORT.
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group. The only supported value is GCE_VM_IP_PORT
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -422,7 +421,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Currently the only supported value is GCE_VM_IP_PORT.
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group. The only supported value is GCE_VM_IP_PORT
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -505,7 +504,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Currently the only supported value is GCE_VM_IP_PORT.
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group. The only supported value is GCE_VM_IP_PORT
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -857,7 +856,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Currently the only supported value is GCE_VM_IP_PORT.
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group. The only supported value is GCE_VM_IP_PORT
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -958,7 +957,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://golang.org/pkg/builtin/#string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Currently the only supported value is GCE_VM_IP_PORT.
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group. The only supported value is GCE_VM_IP_PORT
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1059,7 +1058,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string">string</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Currently the only supported value is GCE_VM_IP_PORT.
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group. The only supported value is GCE_VM_IP_PORT
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1160,7 +1159,7 @@ must be a dash, lowercase letter, or digit, except the last character, which can
         <span class="property-indicator"></span>
         <span class="property-type"><a href="https://docs.python.org/3/library/stdtypes.html">str</a></span>
     </dt>
-    <dd>{{% md %}}Type of network endpoints in this network endpoint group. Currently the only supported value is GCE_VM_IP_PORT.
+    <dd>{{% md %}}Type of network endpoints in this network endpoint group. The only supported value is GCE_VM_IP_PORT
 {{% /md %}}</dd>
 
     <dt class="property-optional"
@@ -1228,7 +1227,8 @@ If it is not provided, the provider project is used.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

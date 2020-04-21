@@ -1,8 +1,7 @@
 
 ---
 title: "Service"
-title_tag: "Resource Service | Module cloudrun | Package GCP"
-meta_desc: "Explore the Service resource of the cloudrun module, including examples, input properties, output properties, lookup functions, and supporting types. Service acts as a top-level container that manages a set of Routes and"
+block_external_search_index: true
 ---
 
 
@@ -3594,7 +3593,8 @@ source.
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

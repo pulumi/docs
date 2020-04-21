@@ -1,8 +1,7 @@
 
 ---
 title: "UptimeCheckConfig"
-title_tag: "Resource UptimeCheckConfig | Module monitoring | Package GCP"
-meta_desc: "Explore the UptimeCheckConfig resource of the monitoring module, including examples, input properties, output properties, lookup functions, and supporting types. This message configures which resources and services to monitor for availability."
+block_external_search_index: true
 ---
 
 
@@ -2218,7 +2217,8 @@ https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#go
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 

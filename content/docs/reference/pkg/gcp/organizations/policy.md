@@ -1,8 +1,7 @@
 
 ---
 title: "Policy"
-title_tag: "Resource Policy | Module organizations | Package GCP"
-meta_desc: "Explore the Policy resource of the organizations module, including examples, input properties, output properties, lookup functions, and supporting types. Allows management of Organization policies for a Google Organization. For more information see"
+block_external_search_index: true
 ---
 
 
@@ -1689,7 +1688,8 @@ are inherited, meaning the values set in this Policy are added to the values inh
 	<dd><a href="https://github.com/pulumi/pulumi-gcp">https://github.com/pulumi/pulumi-gcp</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-	<dt>Notes</dt>
+    <dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/terraform-providers/terraform-provider-google-beta).</dd>
+	
 </dl>
 
