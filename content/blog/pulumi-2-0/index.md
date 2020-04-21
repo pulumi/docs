@@ -28,7 +28,7 @@ Pulumi's approach to modern infrastructure as code is unique:
 
 * **Multi-Cloud**. Adopt consistent workflows across any cloud(s) &mdash; public, private, or hybrid &mdash; while still using the full breadth and depth of your target cloud's services.
 
-* **Modern Architectures**. Although Pulumi works great for legacy workloads, it was born in a world of modern container, serverless, and cloud native architectures. Feel free to mix and match these approaches as you modernize over time.
+* **Modern Architectures**. Although Pulumi works great for legacy workloads, it was born in a world of modern container, serverless, and cloud-native architectures. Feel free to mix and match these approaches as you modernize over time.
 
 * **Cloud Engineering Teams**. By choosing Pulumi, you're betting on your team. The whole team, in fact: developers, infrastructure and operations teams, and security engineers alike. Tackle cloud solutions together without technology or team silos.
 
@@ -42,7 +42,7 @@ The main theme of 2.0 is something we've taken to calling "superpowers." This is
 
 ## What is Pulumi 2.0?
 
-Ater [shipping 1.0 last year]({{< relref "/blog/pulumi-1-0" >}}), we've been working hard at work helping customers to succeed at their modern cloud projects. This has taken us beyond the basics to include:
+After [shipping 1.0 last year]({{< relref "/blog/pulumi-1-0" >}}), we've been working hard at work helping customers to succeed at their modern cloud projects. This has taken us beyond the basics to include:
 
 * **Provisioning**. All core language SDKs are now at parity, including all existing languages &mdash; [Node.js (JavaScript, TypeScript)]({{< relref "/docs/intro/languages/javascript" >}}) and [Python](({{< relref "/docs/intro/languages/python" >}})) &mdash; as well as the new additions to the family &mdash; [.NET (C#, F#, etc)](({{< relref "/docs/intro/languages/dotnet" >}})) and [Go](({{< relref "/docs/intro/languages/go" >}})). We've also significantly expanded upon the [supported cloud resource providers]({{< relref "/docs/intro/cloud-providers" >}}), totalling above three dozen, and rolled out [entirely new API documentation]({{< relref "/docs/reference/pkg" >}}).
 
@@ -64,7 +64,7 @@ Expect The Pulumipus to pop up from time to time to help you out with your infra
 
 ## Give it a Try Today
 
-Today is an exciting day for us, our customers, and our community &mdash; your passionate support and feedback shaped this release and we thank you.
+Today is an exciting day for us, our customers, and our community &mdash; your passionate support and feedback shaped this release, and we thank you.
 
 To learn more, [join us for our launch event next Wednesday]({{< relref "/webinars/pulumi-update-2020-04-29" >}}), [check out the new superpowers page]({{< relref "/" >}}) with more details and videos, or just [download Pulumi and give it a try]({{< relref "/docs/get-started" >}}). If you're upgrading from Pulumi 1.0, [please see our migration guide]({{< relref "/docs/get-started/install/migrating-2.0" >}}).
 
@@ -77,6 +77,6 @@ To learn more, [join us for our launch event next Wednesday]({{< relref "/webina
     </a>
 </div>
 
-Please tell your friends and colleagues &mdash; we will see you in [the Community Slack](https://slack.pulumi.com) where we look forward to hearing what you're doing with your new superpowers!
+Please tell your friends and colleagues &mdash; we will see you in [the Community Slack](https://slack.pulumi.com), where we look forward to hearing what you're doing with your new superpowers!
 
 Joe
