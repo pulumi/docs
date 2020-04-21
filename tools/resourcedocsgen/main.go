@@ -101,12 +101,12 @@ func mergeOverlaySchemaSpec(mainSpec *pschema.PackageSpec, overlaySpec *pschema.
 	for lang, overlayLanguageInfo := range overlaySpec.Language {
 		switch lang {
 		case "go":
-			var mainSchemaPkgInfo go_gen.GoInfo
+			var mainSchemaPkgInfo go_gen.GoPackageInfo
 			if err := json.Unmarshal(mainSpec.Language[lang], &mainSchemaPkgInfo); err != nil {
 				return errors.Wrap(err, "error un-marshalling Go package info from the main schema spec")
 			}
 
-			var overlaySchemaPkgInfo go_gen.GoInfo
+			var overlaySchemaPkgInfo go_gen.GoPackageInfo
 			if err := json.Unmarshal(overlayLanguageInfo, &overlaySchemaPkgInfo); err != nil {
 				return errors.Wrap(err, "error un-marshalling Go package info from the overlay schema spec")
 			}
@@ -181,7 +181,7 @@ func mergeOverlaySchemaSpec(mainSpec *pschema.PackageSpec, overlaySpec *pschema.
 }
 
 func generateDocsFromSchema(outDir string, spec *pschema.PackageSpec) error {
-	pulPkg, err := pschema.ImportSpec(*spec)
+	pulPkg, err := pschema.ImportSpec(*spec, nil)
 	if err != nil {
 		return errors.Wrapf(err, "error importing package spec: %v", err)
 	}
