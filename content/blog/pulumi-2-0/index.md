@@ -42,7 +42,7 @@ The main theme of 2.0 is something we've taken to calling "superpowers." This is
 
 ## What is Pulumi 2.0?
 
-After [shipping 1.0 last year]({{< relref "/blog/pulumi-1-0" >}}), we've been working hard at work helping customers to succeed at their modern cloud projects. This has taken us beyond the basics to include:
+After [shipping 1.0 last year]({{< relref "/blog/pulumi-1-0" >}}), we've been hard at work helping customers to succeed at their modern cloud projects. This has taken us beyond the basics to include:
 
 * **Provisioning**. All core language SDKs are now at parity, including all existing languages &mdash; [Node.js (JavaScript, TypeScript)]({{< relref "/docs/intro/languages/javascript" >}}) and [Python](({{< relref "/docs/intro/languages/python" >}})) &mdash; as well as the new additions to the family &mdash; [.NET (C#, F#, etc)](({{< relref "/docs/intro/languages/dotnet" >}})) and [Go](({{< relref "/docs/intro/languages/go" >}})). We've also significantly expanded upon the [supported cloud resource providers]({{< relref "/docs/intro/cloud-providers" >}}), totalling above three dozen, and rolled out [entirely new API documentation]({{< relref "/docs/reference/pkg" >}}).
 
