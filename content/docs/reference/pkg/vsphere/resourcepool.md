@@ -1,7 +1,8 @@
 
 ---
 title: "ResourcePool"
-block_external_search_index: true
+title_tag: "Resource ResourcePool | Package vSphere"
+meta_desc: "Explore the ResourcePool resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. The `vsphere..ResourcePool` resource can be used to create and manage"
 ---
 
 
@@ -33,13 +34,13 @@ const config = new pulumi.Config();
 const datacenter = config.get("datacenter") || "dc1";
 const cluster = config.get("cluster") || "cluster1";
 
-const dc = vsphere.getDatacenter({
+const dc = pulumi.output(vsphere.getDatacenter({
     name: datacenter,
-});
-const computeCluster = vsphere.getComputeCluster({
+}, { async: true }));
+const computeCluster = dc.apply(dc => vsphere.getComputeCluster({
     datacenterId: dc.id,
     name: cluster,
-});
+}, { async: true }));
 const resourcePool = new vsphere.ResourcePool("resource_pool", {
     parentResourcePoolId: computeCluster.resourcePoolId,
 });
@@ -1720,8 +1721,7 @@ resource pool or the move will fail.
 	<dd><a href="https://github.com/pulumi/pulumi-vsphere">https://github.com/pulumi/pulumi-vsphere</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
-	
 </dl>
 

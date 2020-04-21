@@ -1,7 +1,8 @@
 
 ---
 title: "VappContainer"
-block_external_search_index: true
+title_tag: "Resource VappContainer | Package vSphere"
+meta_desc: "Explore the VappContainer resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. The `vsphere..VappContainer` resource can be used to create and manage"
 ---
 
 
@@ -33,13 +34,13 @@ const config = new pulumi.Config();
 const datacenter = config.get("datacenter") || "dc1";
 const cluster = config.get("cluster") || "cluster1";
 
-const dc = vsphere.getDatacenter({
+const dc = pulumi.output(vsphere.getDatacenter({
     name: datacenter,
-});
-const computeCluster = vsphere.getComputeCluster({
+}, { async: true }));
+const computeCluster = dc.apply(dc => vsphere.getComputeCluster({
     datacenterId: dc.id,
     name: cluster,
-});
+}, { async: true }));
 const vappContainer = new vsphere.VappContainer("vapp_container", {
     parentResourcePoolId: computeCluster.id,
 });
@@ -61,21 +62,21 @@ const config = new pulumi.Config();
 const datacenter = config.get("datacenter") || "dc1";
 const cluster = config.get("cluster") || "cluster1";
 
-const dc = vsphere.getDatacenter({
+const dc = pulumi.output(vsphere.getDatacenter({
     name: datacenter,
-});
-const computeCluster = vsphere.getComputeCluster({
+}, { async: true }));
+const computeCluster = dc.apply(dc => vsphere.getComputeCluster({
     datacenterId: dc.id,
     name: cluster,
-});
-const network = vsphere.getNetwork({
+}, { async: true }));
+const network = dc.apply(dc => vsphere.getNetwork({
     datacenterId: dc.id,
     name: "network1",
-});
-const datastore = vsphere.getDatastore({
+}, { async: true }));
+const datastore = dc.apply(dc => vsphere.getDatastore({
     datacenterId: dc.id,
     name: "datastore1",
-});
+}, { async: true }));
 const vappContainer = new vsphere.VappContainer("vapp_container", {
     parentResourcePoolId: computeCluster.id,
 });
@@ -1866,8 +1867,7 @@ resource pool or the move will fail.
 	<dd><a href="https://github.com/pulumi/pulumi-vsphere">https://github.com/pulumi/pulumi-vsphere</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
-	
 </dl>
 

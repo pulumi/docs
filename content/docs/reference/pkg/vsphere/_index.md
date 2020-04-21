@@ -1,6 +1,7 @@
 ---
 title: "vSphere"
-block_external_search_index: true
+title_tag: "Module vSphere | Package vSphere"
+meta_desc: "A Pulumi package for creating vsphere resources"
 menu:
     reference:
         parent: API Reference
@@ -80,7 +81,7 @@ A Pulumi package for creating vsphere resources
 	<dd><a href="https://github.com/pulumi/pulumi-vsphere">https://github.com/pulumi/pulumi-vsphere</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
 	<dt>Version</dt>
 	<dd>2.1.0</dd>

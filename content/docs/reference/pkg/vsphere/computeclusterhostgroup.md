@@ -1,7 +1,8 @@
 
 ---
 title: "ComputeClusterHostGroup"
-block_external_search_index: true
+title_tag: "Resource ComputeClusterHostGroup | Package vSphere"
+meta_desc: "Explore the ComputeClusterHostGroup resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. The `vsphere..ComputeClusterHostGroup` resource can be used to manage groups"
 ---
 
 
@@ -53,15 +54,15 @@ const hosts = config.get("hosts") || [
     "esxi3",
 ];
 
-const dc = vsphere.getDatacenter({
+const dc = pulumi.output(vsphere.getDatacenter({
     name: datacenter,
-});
-const hostsHost: vsphere.GetHostResult[] = [];
+}, { async: true }));
+const hostsHost: pulumi.Output<vsphere.GetHostResult>[] = [];
 for (let i = 0; i < hosts.length; i++) {
-    hostsHost.push(vsphere.getHost({
+    hostsHost.push(dc.apply(dc => vsphere.getHost({
         datacenterId: dc.id,
         name: hosts[i],
-    }));
+    }, { async: true })));
 }
 const computeCluster = new vsphere.ComputeCluster("compute_cluster", {
     datacenterId: dc.id,
@@ -775,8 +776,7 @@ cluster. Forces a new resource if changed.
 	<dd><a href="https://github.com/pulumi/pulumi-vsphere">https://github.com/pulumi/pulumi-vsphere</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
-	
 </dl>
 

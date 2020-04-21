@@ -1,7 +1,8 @@
 
 ---
 title: "DistributedPortGroup"
-block_external_search_index: true
+title_tag: "Resource DistributedPortGroup | Package vSphere"
+meta_desc: "Explore the DistributedPortGroup resource of the vSphere package, including examples, input properties, output properties, lookup functions, and supporting types. The `vsphere..DistributedPortGroup` resource can be used to manage vSphere"
 ---
 
 
@@ -55,15 +56,15 @@ const networkInterfaces = config.get("networkInterfaces") || [
     "vmnic3",
 ];
 
-const dc = vsphere.getDatacenter({
+const dc = pulumi.output(vsphere.getDatacenter({
     name: "dc1",
-});
-const host: vsphere.GetHostResult[] = [];
+}, { async: true }));
+const host: pulumi.Output<vsphere.GetHostResult>[] = [];
 for (let i = 0; i < esxiHosts.length; i++) {
-    host.push(vsphere.getHost({
+    host.push(dc.apply(dc => vsphere.getHost({
         datacenterId: dc.id,
         name: esxiHosts[i],
-    }));
+    }, { async: true })));
 }
 const dvs = new vsphere.DistributedVirtualSwitch("dvs", {
     activeUplinks: [
@@ -4379,8 +4380,7 @@ on this port group to be overridden on an individual port.
 	<dd><a href="https://github.com/pulumi/pulumi-vsphere">https://github.com/pulumi/pulumi-vsphere</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vsphere` Terraform Provider](https://github.com/terraform-providers/terraform-provider-vsphere).</dd>
-	
 </dl>
 
