@@ -1,6 +1,7 @@
 ---
 title: "DNSimple"
-block_external_search_index: true
+title_tag: "Module DNSimple | Package DNSimple"
+meta_desc: "A Pulumi package for creating and managing dnsimple cloud resources."
 menu:
     reference:
         parent: API Reference
@@ -11,19 +12,19 @@ menu:
 
 A Pulumi package for creating and managing dnsimple cloud resources.
 
-<h3>Resources</h3>
+<h2 id="resources">Resources</h2>
 <ul class="api">
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="record" title="Record"><span class="symbol resource"></span>Record</a></li>
 </ul>
 
-<h3>Package Details</h3>
+<h2 id="package-details">Package Details</h2>
 <dl class="package-details">
 	<dt>Repository</dt>
 	<dd><a href="https://github.com/pulumi/pulumi-dnsimple">https://github.com/pulumi/pulumi-dnsimple</a></dd>
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
-    <dt>Notes</dt>
+	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`dnsimple` Terraform Provider](https://github.com/terraform-providers/terraform-provider-dnsimple).</dd>
 	<dt>Version</dt>
 	<dd>2.0.0</dd>
