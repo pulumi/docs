@@ -24,29 +24,29 @@ You'll be prompted to make sure you really want to delete these resources.
 
 ```
 Previewing destroy (dev):
+     Type                   Name       Plan
+ -   pulumi:pulumi:Stack    quickstart-dev  delete
+ -   └─ gcp:storage:Bucket  my-bucket  delete
 
-     Type                   Name            Plan
- -   pulumi:pulumi:Stack    gcp-bucket-dev  delete
- -   ├─ gcp:storage:Bucket  my-bucket       delete
- -   ├─ gcp:kms:CryptoKey   my-cryptokey    delete
- -   └─ gcp:kms:KeyRing     my-keyring      delete
+Outputs:
+  - BucketName: "gs://my-bucket-b93323e"
 
 Resources:
-    - 4 to delete
+    - 2 to delete
 
 Do you want to perform this destroy? yes
 Destroying (dev):
+     Type                   Name       Status
+ -   pulumi:pulumi:Stack    quickstart-dev  deleted
+ -   └─ gcp:storage:Bucket  my-bucket  deleted
 
-     Type                   Name            Status
- -   pulumi:pulumi:Stack    gcp-bucket-dev  deleted
- -   ├─ gcp:storage:Bucket  my-bucket       deleted
- -   ├─ gcp:kms:CryptoKey   my-cryptokey    deleted
- -   └─ gcp:kms:KeyRing     my-keyring      deleted
+Outputs:
+  - BucketName: "gs://my-bucket-b93323e"
 
 Resources:
-    - 4 deleted
+    - 2 deleted
 
-Duration: 3s
+Duration: 2s
 ```
 
 To delete the stack itself, run [`pulumi stack rm`]({{< relref "/docs/reference/cli/pulumi_stack_rm" >}}).
